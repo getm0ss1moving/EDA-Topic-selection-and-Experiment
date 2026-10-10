@@ -145,6 +145,11 @@ class DomainOnboardingTests(unittest.TestCase):
         self.assertNotIn('private/secret',m['files'])
         self.assertEqual(json.loads((out/'ASSIGNMENT.json').read_text())['actor_id'],'DeepSeek-P01-ARCH')
         self.assertEqual(json.loads((out/'PACKET.json').read_text())['actor_id'],'DeepSeek-P01-ARCH')
+        manifest=json.loads((out/'PACKET.json').read_text())
+        import hashlib as _h
+        self.assertEqual(manifest['generated']['ASSIGNMENT.json'],_h.sha256((out/'ASSIGNMENT.json').read_bytes()).hexdigest())
+        for name,digest in manifest['files'].items():
+            self.assertEqual(digest,_h.sha256((out/name).read_bytes()).hexdigest(),name)
         with self.assertRaises(ValueError):p.export_domain_packet('challenger','D01','DeepSeek-P01-ARCH',self.sha,out)
         with self.assertRaises(ValueError):p.export_domain_packet('proposer','D02','DeepSeek-P01-ARCH',self.sha,self.td/'x')
         with self.assertRaises(ValueError):p.export_domain_packet('proposer','D01','DeepSeek-P09-AGENTIC',self.sha,self.td/'y')

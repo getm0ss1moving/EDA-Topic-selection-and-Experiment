@@ -3,6 +3,13 @@
   "platform": "DeepSeek",
   "allocation_doc": "docs/TEAM-DEEPSEEK.md",
   "coordinator": "DeepSeek platform lead; transport only, not an extra scientific voter",
+  "execution_observation": {
+    "observed_at_utc": "2026-10-10T20:24:02Z",
+    "finding": "The host runtime used for the R0 onboarding wave exposes no per-agent model override. All 21 onboarding runs therefore executed on the host default model deepseek-flash, while this registry requests deepseek-v4-pro at reasoning effort max for proposers.",
+    "detected_by": "The proposer and challenger actors reported the discrepancy themselves in their readiness records rather than accepting the substitution silently.",
+    "consequence": "model_requested describes the intended independent launch, not the model that produced the R0 drafts. The proposer tier is unexercised. Before an R1 proposal is treated as a proposer-quality contribution, the operator must either confirm the substitution in writing or relaunch the proposer sessions on a host that actually exposes deepseek-v4-pro.",
+    "status": "open_operator_decision"
+  },
   "model_catalog_observed": [
     "deepseek-v4-pro",
     "deepseek-flash"
@@ -31,11 +38,35 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "planned",
+      "status": "onboarded",
       "github_review_identity": null,
       "packet": null,
-      "input_commit": null,
-      "packet_sha256": null
+      "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+      "packet_sha256": null,
+      "packets": [
+        {
+          "domain_id": "D01",
+          "dir": "DeepSeek-P01-ARCH__D01",
+          "packet_sha256": "460aeeaef851f80478169f2de0025a462d280cf7a16a8a4bade619d8c3178294",
+          "commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+          "listed_files": 40,
+          "unlisted_files": [
+            "ASSIGNMENT.json",
+            "PACKET.json"
+          ]
+        }
+      ],
+      "onboarding": {
+        "run_id": "DSK-ONBOARD-0001",
+        "outbox": {
+          "DeepSeek-P01-ARCH__D01": {
+            "first-pass-plan.md": "ed86736aee0333180d3d4e378b224d47fac279208ca3d022470b3f85bb0d5444",
+            "readiness.json": "252b2308da680deaa81c2ea72d2a202ad4d366628ae74277470f46f48abf5145"
+          }
+        },
+        "verdict_state": "onboarding_complete",
+        "unlisted_context_exposed": true
+      }
     },
     {
       "actor_id": "DeepSeek-C01-ARCH",
@@ -51,11 +82,35 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "planned",
+      "status": "onboarded",
       "github_review_identity": null,
       "packet": null,
-      "input_commit": null,
-      "packet_sha256": null
+      "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+      "packet_sha256": null,
+      "packets": [
+        {
+          "domain_id": "D01",
+          "dir": "DeepSeek-C01-ARCH__D01",
+          "packet_sha256": "ef2cc5dd26e53010e5417dcac6afbd6ac844711f5c93bff5078db118d9341c68",
+          "commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+          "listed_files": 40,
+          "unlisted_files": [
+            "ASSIGNMENT.json",
+            "PACKET.json"
+          ]
+        }
+      ],
+      "onboarding": {
+        "run_id": "DSK-ONBOARD-0001",
+        "outbox": {
+          "DeepSeek-C01-ARCH__D01": {
+            "first-pass-plan.md": "e35cc14ffe2dbfecf99aff34ac52e3433a04d3f923ba5b72e1102178fa6a9d75",
+            "readiness.json": "4475214bcca382bf01c6d777bc4b15d53813b5a73a1aa6106827e09901e5faf9"
+          }
+        },
+        "verdict_state": "onboarding_complete",
+        "unlisted_context_exposed": false
+      }
     },
     {
       "actor_id": "DeepSeek-P02-VERIFY",
@@ -71,11 +126,40 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "planned",
+      "status": "onboarded",
       "github_review_identity": null,
       "packet": null,
-      "input_commit": null,
-      "packet_sha256": null
+      "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+      "packet_sha256": null,
+      "packets": [
+        {
+          "domain_id": "D02",
+          "dir": "DeepSeek-P02-VERIFY__D02",
+          "packet_sha256": "ab0663a419fb3c40a6030288fa7e4934d3e3227d2633c0d6ebb5387ccd77fcbf",
+          "commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+          "listed_files": 40,
+          "unlisted_files": [
+            "ASSIGNMENT.json",
+            "PACKET.json"
+          ]
+        }
+      ],
+      "onboarding": {
+        "run_id": "DSK-ONBOARD-0001",
+        "outbox": {
+          "DeepSeek-P02-VERIFY__D02": {
+            "first-pass-plan.md": "a24d9b895dfd1f8e772fe326cbccc584b44bf09ffc409eaf97a24da49f031db9",
+            "readiness.json": "2d351132e9f509e1655ab93749384271b030e784d9fc6af42956d33cb710c3b5"
+          }
+        },
+        "verdict_state": "onboarding_complete",
+        "unlisted_context_exposed": {
+          "boolean": true,
+          "detail": "Two categories of material outside the hash-manifested allowlist were exposed to this actor. (1) ASSIGNMENT.json and PACKET.json themselves, present in the packet directory and named by harness/ONBOARDING.md and the task prompt but absent from PACKET.json.files. (2) The delegating-agent (Team Lead) prompt carried task framing, an explicit read order, output-contract fields and named external paths (this actor's outbox, the shared checkout at /Users/duanzeyu/Documents/ChatGPT/EDA-Topic-selection-and-Experiment, and the worktree at /Users/duanzeyu/Documents/ChatGPT/EDA-Topic-selection-DeepSeek). Those three external paths were named but not read. No contamination of scientific content occurred: no other role harness, no other actor's outbox, no other session, no shared memory and no private reasoning of another role was read. No cross-task inspection or agent messaging was performed.",
+          "contamination_assessment": "no_scientific_contamination_detected",
+          "independence_caveat": "This actor runs in a shared host session with a shared filesystem and shared credentials. Nothing here establishes independence from any other actor."
+        }
+      }
     },
     {
       "actor_id": "DeepSeek-C02-VERIFY",
@@ -91,11 +175,35 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "planned",
+      "status": "onboarded",
       "github_review_identity": null,
       "packet": null,
-      "input_commit": null,
-      "packet_sha256": null
+      "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+      "packet_sha256": null,
+      "packets": [
+        {
+          "domain_id": "D02",
+          "dir": "DeepSeek-C02-VERIFY__D02",
+          "packet_sha256": "65324ae4b67a3afb7bb7ab2a51e71da4a3aa8d2f917a6427e11fed3cbeb45c3e",
+          "commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+          "listed_files": 40,
+          "unlisted_files": [
+            "ASSIGNMENT.json",
+            "PACKET.json"
+          ]
+        }
+      ],
+      "onboarding": {
+        "run_id": "DSK-ONBOARD-0001",
+        "outbox": {
+          "DeepSeek-C02-VERIFY__D02": {
+            "first-pass-plan.md": "ac0dfbee1d0d3185a68b8751c2cce93117f115023c49491f22bbef0c103bf86c",
+            "readiness.json": "ecaae2d151c09b56fd19ef9c26cfa68371077f9518e288e32bd6c2b8a0ae845e"
+          }
+        },
+        "verdict_state": "onboarding_complete",
+        "unlisted_context_exposed": true
+      }
     },
     {
       "actor_id": "DeepSeek-P03-SYNTH",
@@ -111,11 +219,35 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "planned",
+      "status": "onboarded",
       "github_review_identity": null,
       "packet": null,
-      "input_commit": null,
-      "packet_sha256": null
+      "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+      "packet_sha256": null,
+      "packets": [
+        {
+          "domain_id": "D03",
+          "dir": "DeepSeek-P03-SYNTH__D03",
+          "packet_sha256": "668245160e1f5fd8e54f4d49e5c493dfbb75d5d722528267f891096cb3f49ded",
+          "commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+          "listed_files": 40,
+          "unlisted_files": [
+            "ASSIGNMENT.json",
+            "PACKET.json"
+          ]
+        }
+      ],
+      "onboarding": {
+        "run_id": "DSK-ONBOARD-0001",
+        "outbox": {
+          "DeepSeek-P03-SYNTH__D03": {
+            "first-pass-plan.md": "faeb3dc5f71a17d91bab8dfa55419885656821d07f044a68bb8563aa0773b4ef",
+            "readiness.json": "59d3ed8d75d7e28da63170da82bdaeb3b50875cc61fdc647a01593e6bc58487f"
+          }
+        },
+        "verdict_state": "onboarding_complete",
+        "unlisted_context_exposed": true
+      }
     },
     {
       "actor_id": "DeepSeek-C03-SYNTH",
@@ -131,11 +263,35 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "planned",
+      "status": "onboarded",
       "github_review_identity": null,
       "packet": null,
-      "input_commit": null,
-      "packet_sha256": null
+      "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+      "packet_sha256": null,
+      "packets": [
+        {
+          "domain_id": "D03",
+          "dir": "DeepSeek-C03-SYNTH__D03",
+          "packet_sha256": "8efff082be632a268a150563d8246657130936140b77f4bbc4e6fd3e18e7f58e",
+          "commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+          "listed_files": 40,
+          "unlisted_files": [
+            "ASSIGNMENT.json",
+            "PACKET.json"
+          ]
+        }
+      ],
+      "onboarding": {
+        "run_id": "DSK-ONBOARD-0001",
+        "outbox": {
+          "DeepSeek-C03-SYNTH__D03": {
+            "first-pass-plan.md": "cdb9785f3da0f1be75e572acec139f7a26294b1a6e78c54331c1acc67b99caed",
+            "readiness.json": "d918252fd6f070785e147240a7647f1ab742e7e060026796efe7cf04a28f085a"
+          }
+        },
+        "verdict_state": "onboarding_complete",
+        "unlisted_context_exposed": true
+      }
     },
     {
       "actor_id": "DeepSeek-P04-PHYSICAL",
@@ -151,11 +307,38 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "planned",
+      "status": "onboarded",
       "github_review_identity": null,
       "packet": null,
-      "input_commit": null,
-      "packet_sha256": null
+      "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+      "packet_sha256": null,
+      "packets": [
+        {
+          "domain_id": "D04",
+          "dir": "DeepSeek-P04-PHYSICAL__D04",
+          "packet_sha256": "1da5e72a35a9bf1755138cacf6c35f3305fd151899774c6a235b2ddafb584445",
+          "commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+          "listed_files": 40,
+          "unlisted_files": [
+            "ASSIGNMENT.json",
+            "PACKET.json"
+          ]
+        }
+      ],
+      "onboarding": {
+        "run_id": "DSK-ONBOARD-0001",
+        "outbox": {
+          "DeepSeek-P04-PHYSICAL__D04": {
+            "first-pass-plan.md": "795dd7a9f03076fc5c2b9fd31c09c2db7c2b9e460bcfbe7cc183e90369a3a390",
+            "readiness.json": "83834def3025a4e0c1d699e934449dfbfd96579639af0de734a068184185a19f"
+          }
+        },
+        "verdict_state": "onboarding_complete",
+        "unlisted_context_exposed": {
+          "boolean": true,
+          "detail": "Scientific input is confined to the frozen packet. However, this session's operator scaffolding inserted unlisted operational text before the packet was read: (a) the host instruction block naming the EDA-Topic-selection-and-Experiment shared checkout and its absolute path; (b) the EDA-Topic-selection-DeepSeek worktree path; (c) a DeepSeek Harness 'dsh-super-injector' / dev_* capability notice unrelated to D04; (d) a skill catalog; (e) the team-lead routing header naming the lead teammate handle. Additionally, the packet's own runs/DSK-ALLOC-0001/manifest.json is a listed file and contains a coordinator contamination note about a concurrent Codex-platform commit and the worktree path. No file was read from any other actor's outbox, no other role harness was read, no parent conversation, shared memory, hidden branch or agent message was opened, and no scientific artifact of another role was inspected. The listed-but-not-required policy files (docs/DEPLOYMENT.md, docs/EXPERIMENTS.md, docs/FORMATS.md, docs/GITHUB.md, docs/LAUNCH.md, docs/TEAM.md, config/agents.json, scripts/project.py, README.md, domains/D04/README.md, runs/DSK-ALLOC-0001/manifest.json) were only grep-scanned for the outbox/launch convention, not mined for scientific content. Net assessment: no cross-role or cross-language scientific contamination; one operational path-name disclosure, disclosed here rather than denied."
+        }
+      }
     },
     {
       "actor_id": "DeepSeek-C04-PHYSICAL",
@@ -171,11 +354,35 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "planned",
+      "status": "onboarded",
       "github_review_identity": null,
       "packet": null,
-      "input_commit": null,
-      "packet_sha256": null
+      "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+      "packet_sha256": null,
+      "packets": [
+        {
+          "domain_id": "D04",
+          "dir": "DeepSeek-C04-PHYSICAL__D04",
+          "packet_sha256": "f8869a007d2c20373d4f07e6dfa2f83ce40e76543c5d99905251d8fc75210533",
+          "commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+          "listed_files": 40,
+          "unlisted_files": [
+            "ASSIGNMENT.json",
+            "PACKET.json"
+          ]
+        }
+      ],
+      "onboarding": {
+        "run_id": "DSK-ONBOARD-0001",
+        "outbox": {
+          "DeepSeek-C04-PHYSICAL__D04": {
+            "first-pass-plan.md": "26ae5fae85cc0b5b73fa78e6673d7a4cb245f57dfb1dfa75b808f0ff0ec59862",
+            "readiness.json": "0fed130544090b0f595c5efd1126f2dc861279c1e734f5b310cb0ef57cbdc068"
+          }
+        },
+        "verdict_state": "onboarding_complete",
+        "unlisted_context_exposed": false
+      }
     },
     {
       "actor_id": "DeepSeek-P05-TIMING",
@@ -191,11 +398,45 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "planned",
+      "status": "onboarded",
       "github_review_identity": null,
       "packet": null,
-      "input_commit": null,
-      "packet_sha256": null
+      "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+      "packet_sha256": null,
+      "packets": [
+        {
+          "domain_id": "D05",
+          "dir": "DeepSeek-P05-TIMING__D05",
+          "packet_sha256": "ceb456a626e00be15a453480cacf8667b6b7fe675ffdb053d871f18e2014f5fc",
+          "commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+          "listed_files": 40,
+          "unlisted_files": [
+            "ASSIGNMENT.json",
+            "PACKET.json"
+          ]
+        }
+      ],
+      "onboarding": {
+        "run_id": "DSK-ONBOARD-0001",
+        "outbox": {
+          "DeepSeek-P05-TIMING__D05": {
+            "first-pass-plan.md": "2763203011810f17136808c08a88de891ef5495ca3c9a037a8ede12d05f9e15e",
+            "readiness.json": "da33bc8cffae06e1d3eb5d7333ef9f38aa12b7201f52489a874855415fd615d5"
+          }
+        },
+        "verdict_state": "onboarding_complete",
+        "unlisted_context_exposed": {
+          "boolean": true,
+          "detail": "Yes, in the limited sense that the packet directory contains files present on disk but absent from the PACKET.json allowlist. A plain `find` over the packet enumerated 47 files; 40 are manifest-listed and 7 are not: ASSIGNMENT.json, docs/DEPLOYMENT.md, docs/FORMATS.md, docs/GITHUB.md, docs/LAUNCH.md, docs/TEAM.md, and config/agents.json (the Codex-platform allocation). ASSIGNMENT.json is named as required reading by harness/ONBOARDING.md and was read. docs/TEAM.md and config/agents.json are the Codex-platform counterparts of the DeepSeek allocation; only their existence and role in the directory map were observed, and they describe the other platform's assignments, not D05 science. No content from outside the packet path was read.",
+          "not_exposed": [
+            "any other actor's outbox (the sibling directories under eda-dsk/outbox/ were only seen as directory names in one `ls` of the parent outbox directory; no file inside any of them was opened)",
+            "any other role harness (this packet contains only harness/ONBOARDING.md and harness/PROPOSER.md; CHALLENGER.md and VERIFIER.md are not present and were not sought)",
+            "any session transcript, shared memory, agent message, parent conversation or private chain-of-thought",
+            "the shared checkout /Users/duanzeyu/Documents/ChatGPT/EDA-Topic-selection-and-Experiment and the worktree .../EDA-Topic-selection-DeepSeek",
+            "the network: no web search, web fetch or external retrieval was performed in this turn"
+          ]
+        }
+      }
     },
     {
       "actor_id": "DeepSeek-C05-TIMING",
@@ -211,11 +452,38 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "planned",
+      "status": "onboarded",
       "github_review_identity": null,
       "packet": null,
-      "input_commit": null,
-      "packet_sha256": null
+      "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+      "packet_sha256": null,
+      "packets": [
+        {
+          "domain_id": "D05",
+          "dir": "DeepSeek-C05-TIMING__D05",
+          "packet_sha256": "42ba4948568a304b664e3271da6d8748da6f4ab032254c70aa80477207851a1a",
+          "commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+          "listed_files": 40,
+          "unlisted_files": [
+            "ASSIGNMENT.json",
+            "PACKET.json"
+          ]
+        }
+      ],
+      "onboarding": {
+        "run_id": "DSK-ONBOARD-0001",
+        "outbox": {
+          "DeepSeek-C05-TIMING__D05": {
+            "first-pass-plan.md": "49cb98afc93bcea70c5e7cec3d1aa1a16e10ca811c703c4d8de0189121e7a969",
+            "readiness.json": "5f6f3b5fe108c66a74eb5eeffb3c5a7ef9ffc593b1207141c4a3f08be5664d08"
+          }
+        },
+        "verdict_state": "onboarding_complete",
+        "unlisted_context_exposed": {
+          "boolean": false,
+          "detail": "No file outside the packet allowlist was opened, and no content belonging to another actor, another role, another domain, another session or any shared memory was read. One disclosure for auditability: a single `ls -la` of the parent outbox directory (/Users/duanzeyu/Documents/ChatGPT/eda-dsk/outbox/) returned directory NAMES only for sibling actor outboxes (DeepSeek-C01..C09, P01..P09, V01..V03). No sibling outbox contents were listed or opened, and the challenge/plan below is not informed by them. I did not read, and did not attempt to read: another role harness, another domain brief, another actor's outbox content, any transcript or chain-of-thought, any shared agent memory, or any repository worktree outside this packet."
+        }
+      }
     },
     {
       "actor_id": "DeepSeek-P06-RELIABILITY",
@@ -231,11 +499,35 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "planned",
+      "status": "onboarded",
       "github_review_identity": null,
       "packet": null,
-      "input_commit": null,
-      "packet_sha256": null
+      "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+      "packet_sha256": null,
+      "packets": [
+        {
+          "domain_id": "D06",
+          "dir": "DeepSeek-P06-RELIABILITY__D06",
+          "packet_sha256": "e420e6a991ead434f3bda9ef7429876f86a56a4aaaffa723ba9371c9cdccf96b",
+          "commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+          "listed_files": 40,
+          "unlisted_files": [
+            "ASSIGNMENT.json",
+            "PACKET.json"
+          ]
+        }
+      ],
+      "onboarding": {
+        "run_id": "DSK-ONBOARD-0001",
+        "outbox": {
+          "DeepSeek-P06-RELIABILITY__D06": {
+            "first-pass-plan.md": "f3e55f40016d25d0c07b53365eb0fdd8c3b87bd86ebb0e9b1e48a6ebca02f81f",
+            "readiness.json": "80f905f499cec2f49a29baacc8da7d4f35af5c49610a744ed6ea9f02b695763b"
+          }
+        },
+        "verdict_state": "onboarding_complete",
+        "unlisted_context_exposed": true
+      }
     },
     {
       "actor_id": "DeepSeek-C06-RELIABILITY",
@@ -251,11 +543,38 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "planned",
+      "status": "onboarded",
       "github_review_identity": null,
       "packet": null,
-      "input_commit": null,
-      "packet_sha256": null
+      "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+      "packet_sha256": null,
+      "packets": [
+        {
+          "domain_id": "D06",
+          "dir": "DeepSeek-C06-RELIABILITY__D06",
+          "packet_sha256": "b3b60f2f978b46a60a36d50841261c9f3c8965925f5e265ece3936c01b1368ab",
+          "commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+          "listed_files": 40,
+          "unlisted_files": [
+            "ASSIGNMENT.json",
+            "PACKET.json"
+          ]
+        }
+      ],
+      "onboarding": {
+        "run_id": "DSK-ONBOARD-0001",
+        "outbox": {
+          "DeepSeek-C06-RELIABILITY__D06": {
+            "first-pass-plan.md": "3b4bc65b1da09c8e6673169337c9e7609f18d197edd953ffab864bf093461f51",
+            "readiness.json": "fc394bfe437a2ca996d30a0c1c91929dd28fd5ec149b89022a9f292699414bd2"
+          }
+        },
+        "verdict_state": "onboarding_complete",
+        "unlisted_context_exposed": {
+          "boolean": true,
+          "detail": "No file outside the packet directory was read. Three things beyond the manifest file list entered this session: (1) the packet's own manifest PACKET.json and ASSIGNMENT.json are physically present but are not listed inside PACKET.json.files; the onboarding harness explicitly requires reading both, so this is expected by design and not a leak of another role's material; (2) a single directory listing of the parent outbox path revealed the names of sibling output directories (other actor outboxes). Only directory names were observable, no sibling file or dossier content was opened or read; (3) ambient session runtime context (harness system reminders describing tool availability and file policy) is present in the session and is common policy, not scientific material. No proposer scratch, no verifier notes, no other role harness, no shared memory, no other session transcript and no agent message was read."
+        }
+      }
     },
     {
       "actor_id": "DeepSeek-P07-ANALOG",
@@ -271,11 +590,43 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "planned",
+      "status": "onboarded",
       "github_review_identity": null,
       "packet": null,
-      "input_commit": null,
-      "packet_sha256": null
+      "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+      "packet_sha256": null,
+      "packets": [
+        {
+          "domain_id": "D07",
+          "dir": "DeepSeek-P07-ANALOG__D07",
+          "packet_sha256": "c6e9b327a966c4c71ddba69dc2e3e656020186d5490feab7b07c802a8c6d0e7e",
+          "commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+          "listed_files": 40,
+          "unlisted_files": [
+            "ASSIGNMENT.json",
+            "PACKET.json"
+          ]
+        }
+      ],
+      "onboarding": {
+        "run_id": "DSK-ONBOARD-0001",
+        "outbox": {
+          "DeepSeek-P07-ANALOG__D07": {
+            "first-pass-plan.md": "c7cb9c7c8535834e308ca47cf00c2f5b15514d985bda02750c8ebfc6dc6a417a",
+            "readiness.json": "4455ca5e84bad553e33f086450809f2d321cd32523f587ce5fd36dfeed2d630d"
+          }
+        },
+        "verdict_state": "onboarding_complete",
+        "unlisted_context_exposed": {
+          "boolean": true,
+          "detail": [
+            "ASSIGNMENT.json exists in the packet root and was read because the required read order and harness/ONBOARDING.md instruct reading it first, but PACKET.json does not list or hash it (PACKET.json also does not hash itself). It contains only this actor's own assignment; it exposes no other role, domain, session or memory.",
+            "Ambient host context was present and is not packet content: the runtime workspace/system instructions, the DSH tool environment notice, the checkout path of the DSH implementation, and the parent agent id supplied in the task prompt. None of it is another role's scientific artifact.",
+            "No other role harness (CHALLENGER.md, VERIFIER.md, COORDINATOR.md), no other actor's outbox, no other session, no shared memory, no parent conversation and no unreleased challenge/verifier material was read or listed.",
+            "No repository file outside the packet directory was read except the session workspace instruction text supplied by the host; the shared checkout at /Users/duanzeyu/Documents/ChatGPT/EDA-Topic-selection-and-Experiment and the worktree /Users/duanzeyu/Documents/ChatGPT/EDA-Topic-selection-DeepSeek were not opened."
+          ]
+        }
+      }
     },
     {
       "actor_id": "DeepSeek-C07-ANALOG",
@@ -291,11 +642,54 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "planned",
+      "status": "onboarded",
       "github_review_identity": null,
       "packet": null,
-      "input_commit": null,
-      "packet_sha256": null
+      "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+      "packet_sha256": null,
+      "packets": [
+        {
+          "domain_id": "D07",
+          "dir": "DeepSeek-C07-ANALOG__D07",
+          "packet_sha256": "18b4e2df986435b790f2e899100ad431f11f3c4f9a35dea4d9f4e5ce97516010",
+          "commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+          "listed_files": 40,
+          "unlisted_files": [
+            "ASSIGNMENT.json",
+            "PACKET.json"
+          ]
+        }
+      ],
+      "onboarding": {
+        "run_id": "DSK-ONBOARD-0001",
+        "outbox": {
+          "DeepSeek-C07-ANALOG__D07": {
+            "first-pass-plan.md": "67cb3753882d927f10cc7befd9437e778affa8cc762e17ea051ff4e7ce7ca8cc",
+            "readiness.json": "f6b22fb9faaade7c4250c0608be157db51b91a5be2a0c52745ea11d5ee74a762"
+          }
+        },
+        "verdict_state": "onboarding_complete",
+        "unlisted_context_exposed": {
+          "exposed": true,
+          "detail": [
+            "A plain directory listing of the parent outbox /Users/duanzeyu/Documents/ChatGPT/eda-dsk/outbox/ was executed once to determine whether my own output directory existed. This exposed only the NAMES of sibling actor outbox directories (e.g. DeepSeek-C01..C09, DeepSeek-P01..P09, DeepSeek-V01..V03). No contents of any other actor's outbox were read.",
+            "The host runtime injected workspace instructions originating from the shared checkout /Users/duanzeyu/Documents/ChatGPT/EDA-Topic-selection-and-Experiment (a copy of AGENTS.md) plus the DSH tool catalogue to this session. That text is identical in substance to the packet's own AGENTS.md and was treated as policy, not as another role's private artifact.",
+            "The host exposed the coordinator session id (session-780334ea-950c-481d-8a0a-1f439380c022) and the instruction to message it. No message was sent, and no other session, memory, transcript or agent was inspected.",
+            "The packet contains config/agents.json and docs/TEAM.md, which describe the Codex-platform allocation. These are public governance files listed in the manifest and were read as policy only.",
+            "The packet contains config/roles.json, which is empty (sessions: []) and therefore exposed no other session's private material."
+          ],
+          "no_cross_role_scientific_context": true,
+          "other_role_harnesses_in_packet": false,
+          "other_role_harness_note": "harness/ contains only CHALLENGER.md and ONBOARDING.md. No proposer or verifier harness is present in this packet, and none was sought.",
+          "did_not_inspect": [
+            "another actor's outbox contents",
+            "another role's harness",
+            "another session or shared memory",
+            "the shared checkout at /Users/duanzeyu/Documents/ChatGPT/EDA-Topic-selection-and-Experiment",
+            "the DeepSeek worktree at /Users/duanzeyu/Documents/ChatGPT/EDA-Topic-selection-DeepSeek"
+          ]
+        }
+      }
     },
     {
       "actor_id": "DeepSeek-P08-CHIPLETS",
@@ -311,11 +705,45 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "planned",
+      "status": "onboarded",
       "github_review_identity": null,
       "packet": null,
-      "input_commit": null,
-      "packet_sha256": null
+      "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+      "packet_sha256": null,
+      "packets": [
+        {
+          "domain_id": "D08",
+          "dir": "DeepSeek-P08-CHIPLETS__D08",
+          "packet_sha256": "8334d00323fcb8fed7b37e450911b89d684baf20b13c92fbd63f9e6ddae30c08",
+          "commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+          "listed_files": 40,
+          "unlisted_files": [
+            "ASSIGNMENT.json",
+            "PACKET.json"
+          ]
+        }
+      ],
+      "onboarding": {
+        "run_id": "DSK-ONBOARD-0001",
+        "outbox": {
+          "DeepSeek-P08-CHIPLETS__D08": {
+            "first-pass-plan.md": "ce50c96618cec4b608394e4b57f0a7827ba0c75b25f57ef0abf17a2aca6e4268",
+            "readiness.json": "3a5a64cc1c2ba9faad44f483b7338918dcd9bb43c7c8837aabced62193c2eea5"
+          }
+        },
+        "verdict_state": "onboarding_complete",
+        "unlisted_context_exposed": {
+          "boolean": true,
+          "detail": [
+            "One unlisted file was present on disk in the packet and was read: ASSIGNMENT.json (not in PACKET.json.files). Content corroborates PACKET.json (actor_id, call_sign, role, domain_ids, input_commit, stage, required_outputs) and adds no other actor's material. Its hash is therefore unverified against a manifest.",
+            "Documentation describing the other platform (Codex) allocation is inside listed policy files and was read as governance policy, not as another role's work: docs/TEAM-DEEPSEEK.md contains a cross-platform review matrix naming Codex-* actor IDs, and runs/DSK-ALLOC-0001/manifest.json names Codex allocation commit 67fb73b9f197e412791b0daf5ec7861336492604 in its contamination_events. These are public governance/provenance records inside the allowlist, not scientific artifacts of another role.",
+            "No other-role harness was opened (no CHALLENGER.md, no VERIFIER.md, no COORDINATOR.md), no other actor's outbox was listed or read, no other session or shared memory was accessed, no agent messaging was used, and no subordinate agent was created.",
+            "The runtime environment did surface host-level context to this session that is outside the packet: the harness system context identifies the parent/coordinator agent id session-780334ea-950c-481d-8a0a-1f439380c022 (also the session_id recorded in runs/DSK-ALLOC-0001/manifest.json), includes workspace instructions from the shared checkout /Users/duanzeyu/Documents/ChatGPT/EDA-Topic-selection-and-Experiment, and exposes unrelated tooling (lark-* skills, dsh-super-injector dev_* tools) and unrelated repository paths. This is host/operator context, not packet content. It was not used as scientific input. It does weaken any claim that exposure was restricted to the packet allowlist, which is why this flag is `true` rather than `false`."
+          ],
+          "exposure_used_as_scientific_input": false,
+          "contamination_events": []
+        }
+      }
     },
     {
       "actor_id": "DeepSeek-C08-CHIPLETS",
@@ -331,11 +759,55 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "planned",
+      "status": "onboarded",
       "github_review_identity": null,
       "packet": null,
-      "input_commit": null,
-      "packet_sha256": null
+      "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+      "packet_sha256": null,
+      "packets": [
+        {
+          "domain_id": "D08",
+          "dir": "DeepSeek-C08-CHIPLETS__D08",
+          "packet_sha256": "3ce3f071e849d554862043b45cf49025b68504ce8dc5945c5ea784fa735e3fc7",
+          "commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+          "listed_files": 40,
+          "unlisted_files": [
+            "ASSIGNMENT.json",
+            "PACKET.json"
+          ]
+        }
+      ],
+      "onboarding": {
+        "run_id": "DSK-ONBOARD-0001",
+        "outbox": {
+          "DeepSeek-C08-CHIPLETS__D08": {
+            "first-pass-plan.md": "90d98f204cca405a0e439d9cc3d2cbc20b2e6f98fb8d270be8c32521f40550ff",
+            "readiness.json": "9f3f4a5870ef2c8b6f4fdfb880afce683ed30016f86dc60aa099354f342c203d"
+          }
+        },
+        "verdict_state": "onboarding_complete",
+        "unlisted_context_exposed": {
+          "boolean": true,
+          "detail": "The packet directory contained two regular files present on disk but absent from PACKET.json.files: (1) 'ASSIGNMENT.json' and (2) 'PACKET.json' itself. Both are the protocol-required self-describing inputs that harness/ONBOARDING.md step 1 and the assignment instructions direct this role to read first, so they were read. Neither is another role's private artifact: both describe only this actor's own assignment and this actor's own packet manifest. No other-role harness, no other-actor outbox, no other session, no shared memory, no agent message and no repository-governance or credential file was read. Detail is recorded here rather than omitted because the manifest allowlist did not enumerate them, so the exposure is declared instead of assumed benign.",
+          "files_read_that_were_not_in_the_manifest": [
+            "ASSIGNMENT.json",
+            "PACKET.json"
+          ],
+          "other_role_artifacts_exposed": false,
+          "other_session_artifacts_exposed": false,
+          "shared_memory_exposed": false,
+          "agent_messages_received_or_read": false,
+          "contamination_assessment": "Declared, bounded, and not a cross-role contamination event. The unlisted files are this actor's own assignment and manifest. If the coordinator judges the allowlist must be exhaustive, the correct remedy is an exporter fix, not a rerun: the exposed content contains no proposer, challenger, verifier or other-domain scientific material.",
+          "cross_role_context_intentionally_withheld_and_not_sought": [
+            "proposer forecasts (forecast.json) - withheld on first pass per docs/ISOLATION.md",
+            "proposer scratch and search logs",
+            "verifier scratch and adjudications",
+            "other role harnesses",
+            "other actors' outboxes",
+            "other sessions and shared memory"
+          ]
+        }
+      }
     },
     {
       "actor_id": "DeepSeek-P09-AGENTIC",
@@ -351,11 +823,35 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "planned",
+      "status": "onboarded",
       "github_review_identity": null,
       "packet": null,
-      "input_commit": null,
-      "packet_sha256": null
+      "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+      "packet_sha256": null,
+      "packets": [
+        {
+          "domain_id": "D09",
+          "dir": "DeepSeek-P09-AGENTIC__D09",
+          "packet_sha256": "758ca3d4d343e54ff4d10491a2d67400aa3669cb50766fc10905ef1f5b29417e",
+          "commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+          "listed_files": 40,
+          "unlisted_files": [
+            "ASSIGNMENT.json",
+            "PACKET.json"
+          ]
+        }
+      ],
+      "onboarding": {
+        "run_id": "DSK-ONBOARD-0001",
+        "outbox": {
+          "DeepSeek-P09-AGENTIC__D09": {
+            "first-pass-plan.md": "eec3f610d566ebb95d1cb2c38fee55caf1d5da00e2707ee7423182f4d9ea9ef8",
+            "readiness.json": "89de32d17ac2e48c90b9558b64a64321647d985dce033ee776fc0965e869a48c"
+          }
+        },
+        "verdict_state": "onboarding_complete",
+        "unlisted_context_exposed": true
+      }
     },
     {
       "actor_id": "DeepSeek-C09-AGENTIC",
@@ -371,11 +867,39 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "planned",
+      "status": "onboarded",
       "github_review_identity": null,
       "packet": null,
-      "input_commit": null,
-      "packet_sha256": null
+      "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+      "packet_sha256": null,
+      "packets": [
+        {
+          "domain_id": "D09",
+          "dir": "DeepSeek-C09-AGENTIC__D09",
+          "packet_sha256": "6af145aaacdc184aba110c860acc5d987f066c0e127d4959c54c34606eb830c8",
+          "commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+          "listed_files": 40,
+          "unlisted_files": [
+            "ASSIGNMENT.json",
+            "PACKET.json"
+          ]
+        }
+      ],
+      "onboarding": {
+        "run_id": "DSK-ONBOARD-0001",
+        "outbox": {
+          "DeepSeek-C09-AGENTIC__D09": {
+            "first-pass-plan.md": "f29d1d97ff66a7a510a46e01a89e4fed2a9d644fc998caa21ad28ad3868c6217",
+            "readiness.json": "a0086d840d3fd464096908e551f280280c65d50bf50bf7fd749f68ada761e081"
+          }
+        },
+        "verdict_state": "onboarding_complete",
+        "unlisted_context_exposed": {
+          "boolean": true,
+          "answer": true,
+          "detail": "No unlisted PACKET content was read. All files I opened belong to the packet and are listed in PACKET.json.files, except ASSIGNMENT.json and PACKET.json themselves (both in the packet root). However, this is an unrestricted desktop session, not a sandboxed one, so the following context was unavoidably visible to me outside the packet surface: (1) the session runtime note naming the parent agent id session-780334ea-950c-481d-8a0a-1f439380c022; (2) a live tool catalog (dev_* plugin injector tools and unrelated skill catalog) that is not part of the scientific task; (3) the current file policy string 'danger-full-access' and the environment description of the dsh-super-injector; (4) repository-level AGENTS.md instructions injected by the runtime; (5) the derived output path .../eda-dsk/outbox, whose sibling directories expose the names of the other 20 actor tasks and the sibling packet directory names. I did not open any other actor's outbox, any other role harness, the shared checkout, the worktree, another session, or any shared memory. Item (5) is the only incidental cross-task information, and it is path-level naming only, not content."
+        }
+      }
     },
     {
       "actor_id": "DeepSeek-V01-DIGITAL",
@@ -393,11 +917,60 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "planned",
+      "status": "onboarded",
       "github_review_identity": null,
       "packet": null,
-      "input_commit": null,
-      "packet_sha256": null
+      "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+      "packet_sha256": null,
+      "packets": [
+        {
+          "domain_id": "D01",
+          "dir": "DeepSeek-V01-DIGITAL__D01",
+          "packet_sha256": "8fdd39039bd67c9156eb95af719be8bf65e80bfe56f6470a103f43834455c8bf",
+          "commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+          "listed_files": 40,
+          "unlisted_files": [
+            "ASSIGNMENT.json",
+            "PACKET.json"
+          ]
+        },
+        {
+          "domain_id": "D02",
+          "dir": "DeepSeek-V01-DIGITAL__D02",
+          "packet_sha256": "538a1e011b63faf98f8c312ec4b8e8797062e31384613c92b90f9346ccfab9b0",
+          "commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+          "listed_files": 40,
+          "unlisted_files": [
+            "ASSIGNMENT.json",
+            "PACKET.json"
+          ]
+        },
+        {
+          "domain_id": "D03",
+          "dir": "DeepSeek-V01-DIGITAL__D03",
+          "packet_sha256": "4dbf88a09e3755326701380289e39d863993d4696cc031e423a257bb9c527f10",
+          "commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+          "listed_files": 40,
+          "unlisted_files": [
+            "ASSIGNMENT.json",
+            "PACKET.json"
+          ]
+        }
+      ],
+      "onboarding": {
+        "run_id": "DSK-ONBOARD-0001",
+        "outbox": {
+          "DeepSeek-V01-DIGITAL": {
+            "first-pass-plan.md": "9c2101a28dee460611b391aea89e3af388aaf7403932db1c71e7549883f23f5d",
+            "readiness.json": "0cbaf03f6e62c99909ac9fa3af2dbdebd6478f042cafa3e58c6c5e6a239164a6"
+          }
+        },
+        "verdict_state": "waiting_for_evidence",
+        "unlisted_context_exposed": {
+          "boolean": false,
+          "detail": "No context outside the three frozen packets was read. Within each packet, the only files present that are not in the PACKET.json 'files' allowlist are that packet's own framing files ASSIGNMENT.json and PACKET.json, which the onboarding task explicitly directs the actor to read first. No other actor's packet, outbox, harness, session, memory, transcript or repository working tree was inspected. No agent messages were exchanged. The shared checkout and the DeepSeek worktree were not read or written."
+        }
+      }
     },
     {
       "actor_id": "DeepSeek-V02-PHYSICAL",
@@ -415,11 +988,64 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "planned",
+      "status": "onboarded",
       "github_review_identity": null,
       "packet": null,
-      "input_commit": null,
-      "packet_sha256": null
+      "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+      "packet_sha256": null,
+      "packets": [
+        {
+          "domain_id": "D04",
+          "dir": "DeepSeek-V02-PHYSICAL__D04",
+          "packet_sha256": "00e9fed7137b9362894a751040ed7ec242fe5cedbce975e2e8497d55e763b85f",
+          "commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+          "listed_files": 40,
+          "unlisted_files": [
+            "ASSIGNMENT.json",
+            "PACKET.json"
+          ]
+        },
+        {
+          "domain_id": "D05",
+          "dir": "DeepSeek-V02-PHYSICAL__D05",
+          "packet_sha256": "bfd3ed5069db19ad387c65e6eca38ce2159e8bd6fd5927c852c8cc78a301a2f7",
+          "commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+          "listed_files": 40,
+          "unlisted_files": [
+            "ASSIGNMENT.json",
+            "PACKET.json"
+          ]
+        },
+        {
+          "domain_id": "D06",
+          "dir": "DeepSeek-V02-PHYSICAL__D06",
+          "packet_sha256": "8dd09161b80e00b5e2e289089cd1df25aeafa1918a8a381b1b808954249a69f9",
+          "commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+          "listed_files": 40,
+          "unlisted_files": [
+            "ASSIGNMENT.json",
+            "PACKET.json"
+          ]
+        }
+      ],
+      "onboarding": {
+        "run_id": "DSK-ONBOARD-0001",
+        "outbox": {
+          "DeepSeek-V02-PHYSICAL": {
+            "first-pass-plan.md": "b2ac4b165341e682764214e2a85e52c66c1bcd2728e04c1ec78efcd60e96a706",
+            "readiness.json": "36e2805ce8f63310bbd2716745b75212934ce4e0b0d704629669a514f1b8776a"
+          }
+        },
+        "verdict_state": "waiting_for_evidence",
+        "unlisted_context_exposed": {
+          "value": false,
+          "detail": "No artifact outside the three frozen packet directories was read for scientific input. The session's own injected environment text explicitly quotes the shared checkout path /Users/duanzeyu/Documents/ChatGPT/EDA-Topic-selection-and-Experiment and the worktree path /Users/duanzeyu/Documents/ChatGPT/EDA-Topic-selection-DeepSeek as paths I must not write to; those two paths were named in my task text and deliberately NOT inspected or read. I did not open another actor's outbox, another role's harness, another session, any shared memory, or any governance/credentials file. Consequence: this onboarding run carries no unlisted scientific context, but it is also not OS-enforced isolation (see isolation_claim).",
+          "disclosed_non_packet_reads": [
+            "The session environment (system-level workspace instructions and the delegated-subagent notice) is visible to me by construction and is not part of any packet; it is treated as policy/transport, not as scientific evidence.",
+            "Path existence of sibling packet directories under /Users/duanzeyu/Documents/ChatGPT/eda-dsk/packets/ was observable from a directory listing; no sibling packet's contents were read. Only the three allowlisted packets were parsed."
+          ]
+        }
+      }
     },
     {
       "actor_id": "DeepSeek-V03-SYSTEMS",
@@ -437,11 +1063,60 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "planned",
+      "status": "onboarded",
       "github_review_identity": null,
       "packet": null,
-      "input_commit": null,
-      "packet_sha256": null
+      "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+      "packet_sha256": null,
+      "packets": [
+        {
+          "domain_id": "D07",
+          "dir": "DeepSeek-V03-SYSTEMS__D07",
+          "packet_sha256": "439fce9183ccdd75e47fd34580464760b23664ea89a56880ebb6f4fa8d59a2cd",
+          "commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+          "listed_files": 40,
+          "unlisted_files": [
+            "ASSIGNMENT.json",
+            "PACKET.json"
+          ]
+        },
+        {
+          "domain_id": "D08",
+          "dir": "DeepSeek-V03-SYSTEMS__D08",
+          "packet_sha256": "e1052c0724ab2d3308ec89cf316aca47120eaeeb98fa7ee8c5d3e30d5364a0c8",
+          "commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+          "listed_files": 40,
+          "unlisted_files": [
+            "ASSIGNMENT.json",
+            "PACKET.json"
+          ]
+        },
+        {
+          "domain_id": "D09",
+          "dir": "DeepSeek-V03-SYSTEMS__D09",
+          "packet_sha256": "b0bf745cddb9e8a5e54f25e21c4a7b6646e1d8e2b62c7477c0f356c98019810e",
+          "commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
+          "listed_files": 40,
+          "unlisted_files": [
+            "ASSIGNMENT.json",
+            "PACKET.json"
+          ]
+        }
+      ],
+      "onboarding": {
+        "run_id": "DSK-ONBOARD-0001",
+        "outbox": {
+          "DeepSeek-V03-SYSTEMS": {
+            "first-pass-plan.md": "9a07ea2a289fb544b7117bf4c65805d0b64381563a8a306583e81ccc30970a71",
+            "readiness.json": "97c3752c2d8f8b7a35fb478c2641d4a3defc70b22a7861862f733e4449586d5a"
+          }
+        },
+        "verdict_state": "waiting_for_evidence",
+        "unlisted_context_exposed": {
+          "boolean": false,
+          "detail": "No file content outside the three packet allowlists was read. Specifically: no other actor's harness, no other actor's packet contents, no other actor's outbox contents, no other session or transcript, no shared memory, and no agent messages. Two honest disclosures of non-scientific ambient exposure: (1) an `ls` of the parent `packets/` and `outbox/` directories displayed sibling directory NAMES only (for example DeepSeek-C07-ANALOG__D07, DeepSeek-V01-DIGITAL__D01, an empty DeepSeek-V03-SYSTEMS outbox entry); no file inside any sibling directory was opened. (2) The host runtime injected a session-level system context containing a workspace AGENTS.md contract and tool inventory; its research-policy content is materially identical to the packet's own AGENTS.md, and it was treated as policy, not as another role's private artifact and not as scientific evidence. Neither disclosure affects independence: no unadjudicated scientific claim, forecast, challenge or proposal was seen."
+        }
+      }
     }
   ]
 }

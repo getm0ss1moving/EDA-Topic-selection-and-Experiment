@@ -426,7 +426,7 @@ def export_domain_packet(role, domain, actor, ref, out):
         raise ValueError('Role packet must not contain another role harness')
     manifest = {'role': role, 'topic': None, 'domain': domain, 'actor_id': actor,
                 'call_sign': record.get('call_sign'), 'commit': ref, 'stage': 'onboarding',
-                'governance': False, 'files': {}}
+                'governance': False, 'files': {}, 'generated': {}}
     out.mkdir(parents=True)
     for name, body in selected:
         target = out/name
@@ -443,8 +443,10 @@ def export_domain_packet(role, domain, actor, ref, out):
                   'output_location': 'the coordinator-designated outbox outside this packet; never write into the packet',
                   'forbidden': ['other role harnesses', 'other domains', 'another session or memory',
                                 'agent messaging', 'editing the shared checkout', 'self-approval']}
-    (out/'ASSIGNMENT.json').write_text(json.dumps(assignment, indent=2)+'\n')
+    assignment_body = (json.dumps(assignment, indent=2)+'\n').encode()
+    (out/'ASSIGNMENT.json').write_bytes(assignment_body)
     (out/'ASSIGNMENT.json').chmod(0o444)
+    manifest['generated']['ASSIGNMENT.json'] = hashlib.sha256(assignment_body).hexdigest()
     (out/'PACKET.json').write_text(json.dumps(manifest, indent=2)+'\n')
     (out/'PACKET.json').chmod(0o444)
     return manifest

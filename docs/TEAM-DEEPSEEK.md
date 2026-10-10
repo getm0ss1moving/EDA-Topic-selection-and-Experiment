@@ -38,6 +38,8 @@ Two consequences are binding:
 - The lower tiers may not adjudicate difficult science. Per `harness/VERIFIER.md`, novel mathematical arguments, disputed impossibility claims, ambiguous mechanisms, conflicting source interpretation or a contested impossibility-of-improvement claim must return `needs_expert_review`. A fresh stronger verifier or a human then adjudicates. Escalation is the correct output, not a confident guess.
 - Model IDs are recorded as requested, not as guaranteed. If a host does not expose the requested model, the operator records the actual model in `config/agents-deepseek.json` and the run manifest. Silent substitution is prohibited. These are workload choices, not measured EDA benchmark rankings or price guarantees.
 
+A first onboarding wave was executed on the DeepSeek host as a bounded rehearsal. That runtime exposes no per-agent model override, so all 21 onboarding runs executed on the host default model `deepseek-flash` even though the registry requests `deepseek-v4-pro` at `max` for proposers. The actors detected and reported this themselves. `model_requested` therefore describes the intended independent launch, and the proposer tier remains unexercised: before any R1 proposal round is treated as a proposer-quality contribution, either the operator confirms the substitution in writing or the proposer sessions are launched on a host that actually exposes `deepseek-v4-pro`. This is recorded in `config/agents-deepseek.json` and in the onboarding run manifest.
+
 Model diversity between proposer and challenger is intentional, but `docs/ISOLATION.md` is explicit that model diversity is not proof of independence.
 
 ## Assignment table
@@ -73,8 +75,7 @@ Dialogue is file-mediated. Chat, agent messaging and shared memory are not admis
 
 | Round | Actor | Reads | Writes |
 |---|---|---|---|
-| R0 onboarding | every actor | own frozen packet: common policy, own harness, `harness/ONBOARDING.md`, own domain brief, own assignment | `readiness.json`, `first-pass-plan.md` in own outbox |
-| R1 proposal | proposer | own R0 packet plus the released research brief | full dossier from `templates/topic/`; dossier state `submitted` |
+| R0 onboarding | every actor | own frozen packet: common policy, own harness, `harness/ONBOARDING.md`, own domain brief, own assignment | `readiness.json`, `first-pass-plan.md` in own outbox || R1 proposal | proposer | own R0 packet plus the released research brief | full dossier from `templates/topic/`; dossier state `submitted` |
 | R2 challenge | challenger | frozen R1 proposal, prior-art evidence and experiment plan, with `forecast.json` withheld until its own headroom estimate is recorded | `challenges.md` with `OBJ-NNN` entries and evidence updates |
 | R3 adjudication | verifier | submitted dossier plus published challenges; opens original sources independently | `verification.md` adjudicating every objection |
 | R4 response | proposer | only adjudicated objections released by the coordinator | `responses.md`; mechanism, hypothesis, plan and forecast revised together |
@@ -92,6 +93,8 @@ The DeepSeek actors run on one desktop host with shared filesystem, shared cache
 - Agent Teams members share one host session. Their outputs are role drafts and are never independent verification of each other.
 - Packet-based isolation is enforced by the exporter's allowlist (`scripts/project.py packet --domain`), not by filesystem permissions.
 - No member of this allocation may approve a PR containing its own output.
+
+A domain packet directory contains two files that are not part of the frozen git tree: `ASSIGNMENT.json`, which the exporter generates, and `PACKET.json`, which is the manifest itself. The exporter records the SHA-256 of `ASSIGNMENT.json` under the manifest's `generated` map so the envelope is hash-covered too; `PACKET.json` cannot list its own digest. An actor that finds any packet file absent from both maps must report it rather than assume it is legitimate.
 
 Stronger isolation requires separate containers or accounts with only the packet mounted read-only, as described in `docs/ISOLATION.md`.
 
