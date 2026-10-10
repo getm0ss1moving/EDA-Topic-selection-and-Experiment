@@ -19,5 +19,23 @@
     "readiness.json",
     "first-pass-plan.md"
   ],
-  "not_a_topic": true
+  "not_a_topic": true,
+  "platform_roles": {
+    "codex": {
+      "proposer": "Codex-P03-SYNTH",
+      "challenger": "Codex-C03-SYNTH",
+      "verifier": "Codex-V01-DIGITAL"
+    },
+    "deepseek": {
+      "proposer": "DeepSeek-P03-SYNTH",
+      "proposer_call_sign": "DSK-Spark-SYNTH",
+      "challenger": "DeepSeek-C03-SYNTH",
+      "challenger_call_sign": "DSK-Forge-SYNTH",
+      "verifier": "DeepSeek-V01-DIGITAL",
+      "verifier_call_sign": "DSK-Ledger-DIGITAL",
+      "allocation_doc": "docs/TEAM-DEEPSEEK.md",
+      "stage": "onboarding",
+      "research_budget": "No broad research run authorized by this onboarding packet. Prepare a bounded search plan. Compute, tool, PDK and design access remain unknown until the human owner fills config/research-brief.json."
+    }
+  }
 }

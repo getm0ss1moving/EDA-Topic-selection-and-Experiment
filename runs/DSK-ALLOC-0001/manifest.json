@@ -1,0 +1,38 @@
+{
+  "run_id": "DSK-ALLOC-0001",
+  "session_id": "session-780334ea-950c-481d-8a0a-1f439380c022",
+  "role": "coordinator",
+  "platform": "DeepSeek",
+  "input_commit": "67fb73b9f197e412791b0daf5ec7861336492604",
+  "packet_sha256": null,
+  "model": "deepseek-flash",
+  "operator": "getm0ss1moving",
+  "started_at_utc": "2026-10-10T20:24:02Z",
+  "completed_at_utc": "2026-10-10T20:24:02Z",
+  "output_paths": [
+    "docs/TEAM-DEEPSEEK.md",
+    "config/agents-deepseek.json",
+    "domains/D01/brief.json",
+    "domains/D02/brief.json",
+    "domains/D03/brief.json",
+    "domains/D04/brief.json",
+    "domains/D05/brief.json",
+    "domains/D06/brief.json",
+    "domains/D07/brief.json",
+    "domains/D08/brief.json",
+    "domains/D09/brief.json",
+    "domains/README.md",
+    "docs/LAUNCH.md",
+    "docs/DEPLOYMENT.md",
+    "README.md",
+    "scripts/project.py",
+    "tests/test_project.py"
+  ],
+  "source_ids": [],
+  "contamination_events": [
+    "A concurrent Codex-platform session committed 67fb73b (Codex allocation) into the shared checkout while this run was reading it; the shared working tree was restored to codex/eda-role-allocation and this run continued in the isolated worktree /Users/duanzeyu/Documents/ChatGPT/EDA-Topic-selection-DeepSeek.",
+    "No scientific artifact of another role was read. docs/TEAM.md and config/agents.json (Codex allocation) are public governance files and were read as policy, not as another role's private notes."
+  ],
+  "independence_attestation": "Allocation and tooling authored by the DeepSeek platform lead on the owner's single GitHub account. This is a governance/transport run. It is not independent verification of any scientific claim, and it cannot satisfy the GitHub confirmation gate, which requires an approving account listed in VERIFIER_LOGINS that differs from the PR author.",
+  "notes": "Model IDs deepseek-v4-pro and deepseek-flash were observed in the active host profile on 2026-10-11; requested settings are workload choices, not benchmark rankings and not a guarantee that another host exposes the same IDs."
+}

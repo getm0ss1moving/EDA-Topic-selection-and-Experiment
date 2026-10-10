@@ -33,6 +33,8 @@ All research artifacts, role interactions, and technical reviews use English. Hu
 
 The repository began empty. `main` contains a minimal trusted review-gate bootstrap; this framework is delivered as a PR. No topic, literature survey, experimental result, or scientific approval is claimed. `M0nitor-EDA` is enrolled as an independent GitHub review identity, but no review or scientific confirmation is implied by enrollment. See [deployment status](docs/DEPLOYMENT.md).
 
+Two platform allocations exist on top of the shared `D01`-`D09` territories: [docs/TEAM.md](docs/TEAM.md) for the Codex platform and [docs/TEAM-DEEPSEEK.md](docs/TEAM-DEEPSEEK.md) for the DeepSeek platform. Both are governance artifacts awaiting independent review; neither is a survey result.
+
 Repository: https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment
 
 ## Assigned Codex team

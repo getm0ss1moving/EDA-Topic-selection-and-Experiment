@@ -95,6 +95,68 @@ class PacketTests(unittest.TestCase):
                 with self.assertRaises(ValueError):p.export_packet('challenger','EDA-0001',tree,Path(td)/'tree')
             finally:p.ROOT=original
 
+LIVE_ROOT=Path(__file__).resolve().parents[1]
+
+class DomainOnboardingTests(unittest.TestCase):
+    def setUp(self):
+        self.tmp=tempfile.TemporaryDirectory();self.td=Path(self.tmp.name)
+        self.root=self.td/'repo';self.root.mkdir()
+        def write(name,body):
+            f=self.root/name;f.parent.mkdir(parents=True,exist_ok=True)
+            f.write_text(body if isinstance(body,str) else json.dumps(body))
+        trio=[('DeepSeek-P01-ARCH','DSK-Spark-ARCH','proposer','D01'),
+              ('DeepSeek-C01-ARCH','DSK-Forge-ARCH','challenger','D01'),
+              ('DeepSeek-V01-DIGITAL','DSK-Ledger-DIGITAL','verifier','D01'),
+              ('DeepSeek-P02-VERIFY','DSK-Spark-VERIFY','proposer','D02'),
+              ('DeepSeek-C02-VERIFY','DSK-Forge-VERIFY','challenger','D02'),
+              ('DeepSeek-V01-DIGITAL','DSK-Ledger-DIGITAL','verifier','D02')]
+        merged={}
+        for a,c,r,d in trio:
+            e=merged.setdefault(a,{'actor_id':a,'call_sign':c,'platform':'DeepSeek','role':r,
+                                   'domain_ids':[],'model_requested':'deepseek-v4-pro','reasoning_requested':'max'})
+            e['domain_ids'].append(d)
+        write('config/agents-deepseek.json',{'schema_version':1,'actors':list(merged.values())})
+        write('config/roles.json',{'sessions':[]})
+        for name in ['AGENTS.md','docs/CHARTER.md','harness/PROPOSER.md','harness/CHALLENGER.md',
+                     'harness/VERIFIER.md','harness/ONBOARDING.md','domains/README.md',
+                     'runs/keep/manifest.json','private/secret']:
+            write(name,'public')
+        def brief(domain,slug,verifier):
+            return {'domain_id':domain,'platform_roles':{'deepseek':{
+                'proposer':f'DeepSeek-P{domain[1:]}-{slug}','proposer_call_sign':f'DSK-Spark-{slug}',
+                'challenger':f'DeepSeek-C{domain[1:]}-{slug}','challenger_call_sign':f'DSK-Forge-{slug}',
+                'verifier':verifier,'verifier_call_sign':'DSK-Ledger-DIGITAL'}}}
+        write('domains/D01/brief.json',brief('D01','ARCH','DeepSeek-V01-DIGITAL'))
+        write('domains/D02/brief.json',brief('D02','VERIFY','DeepSeek-V01-DIGITAL'))
+        def git(*a):return subprocess.check_output(['git','-C',str(self.root),*a],stderr=subprocess.DEVNULL)
+        git('init');git('add','.');git('-c','user.name=t','-c','user.email=t@e.com','commit','-m','fixture')
+        self.sha=git('rev-parse','HEAD').decode().strip()
+        self.original=p.ROOT;p.ROOT=self.root
+        self.addCleanup(setattr,p,'ROOT',self.original);self.addCleanup(self.tmp.cleanup)
+    def test_packet_is_actor_and_domain_scoped(self):
+        out=self.td/'packet'
+        m=p.export_domain_packet('proposer','D01','DeepSeek-P01-ARCH',self.sha,out)
+        self.assertIn('harness/PROPOSER.md',m['files'])
+        self.assertNotIn('harness/CHALLENGER.md',m['files'])
+        self.assertNotIn('harness/VERIFIER.md',m['files'])
+        self.assertIn('harness/ONBOARDING.md',m['files'])
+        self.assertIn('domains/D01/brief.json',m['files'])
+        self.assertNotIn('domains/D02/brief.json',m['files'])
+        self.assertNotIn('private/secret',m['files'])
+        self.assertEqual(json.loads((out/'ASSIGNMENT.json').read_text())['actor_id'],'DeepSeek-P01-ARCH')
+        self.assertEqual(json.loads((out/'PACKET.json').read_text())['actor_id'],'DeepSeek-P01-ARCH')
+        with self.assertRaises(ValueError):p.export_domain_packet('challenger','D01','DeepSeek-P01-ARCH',self.sha,out)
+        with self.assertRaises(ValueError):p.export_domain_packet('proposer','D02','DeepSeek-P01-ARCH',self.sha,self.td/'x')
+        with self.assertRaises(ValueError):p.export_domain_packet('proposer','D01','DeepSeek-P09-AGENTIC',self.sha,self.td/'y')
+    def test_registry_drift_is_reported(self):
+        self.assertEqual(p.validate_registry(self.root),[])
+        brief=self.root/'domains/D01/brief.json'
+        d=json.loads(brief.read_text());d['platform_roles']['deepseek']['verifier']='DeepSeek-V09-GHOST'
+        brief.write_text(json.dumps(d))
+        self.assertTrue(any('absent from DeepSeek registry' in e for e in p.validate_registry(self.root)))
+    def test_live_allocation_matches_domain_briefs(self):
+        self.assertEqual(p.validate_registry(LIVE_ROOT),[])
+
 if __name__=='__main__':unittest.main()
 
 class AcceptanceTests(DossierTests):

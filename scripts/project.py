@@ -30,6 +30,9 @@ def read_json(path):
 def file_sha256(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
+def read_json_bytes(body):
+    return json.loads(body.decode())
+
 def digest(path):
     h = hashlib.sha256()
     for p in sorted(path.rglob('*')):
@@ -244,6 +247,7 @@ def validate_topic(path, area, sessions):
 
 def validate(root=ROOT):
     errors = []
+    errors.extend(validate_registry(root))
     roles = read_json(root/'config/roles.json')
     sessions = {}
     for s in roles['sessions']:
@@ -371,6 +375,122 @@ def export_packet(role, topic, ref, out, stage='initial', governance=False, evid
     (out/'PACKET.json').chmod(0o444)
     return manifest
 
+def export_domain_packet(role, domain, actor, ref, out):
+    """Export a frozen onboarding packet for one platform actor on one domain.
+
+    The actor record is read from the frozen commit, never from the working tree,
+    so a packet cannot silently describe an assignment that was never committed.
+    """
+    if not re.fullmatch(r'[0-9a-f]{40}', ref):
+        raise ValueError('Use a full frozen commit SHA')
+    if role not in {'proposer', 'challenger', 'verifier'}:
+        raise ValueError('Invalid role')
+    if not domain or not re.fullmatch(r'D\d{2}', domain):
+        raise ValueError('Valid domain ID required (DNN)')
+    if not actor:
+        raise ValueError('--actor is required with --domain')
+    out = out.resolve()
+    if out == ROOT or ROOT in out.parents:
+        raise ValueError('Packet must be outside the repository')
+    if out.exists():
+        raise ValueError('Output must not exist; packets are immutable snapshots')
+    match = [a for a in read_json_bytes(git('cat-file', 'blob', f'{ref}:config/agents-deepseek.json'))['actors']
+             if a.get('actor_id') == actor]
+    if len(match) != 1:
+        raise ValueError(f'Actor not in frozen registry: {actor}')
+    record = match[0]
+    if record.get('role') != role:
+        raise ValueError(f'Actor {actor} has role {record.get("role")}, not {role}')
+    if domain not in record.get('domain_ids', []):
+        raise ValueError(f'Actor {actor} is not assigned to {domain}')
+    owned = {f'domains/README.md', f'domains/{domain}/brief.json', f'domains/{domain}/README.md',
+             f'harness/{role.upper()}.md', 'harness/ONBOARDING.md'}
+    entries = git('ls-tree', '-r', '-z', ref).split(b'\0')
+    selected = []
+    for entry in entries:
+        if not entry:
+            continue
+        meta, rawname = entry.split(b'\t', 1)
+        mode, kind, oid = meta.decode().split()
+        name = rawname.decode()
+        allowed = (name in {'AGENTS.md', 'README.md', 'scripts/project.py'} or name.startswith('templates/')
+                   or name.startswith('docs/') or name.startswith('config/')
+                   or (name.startswith('runs/') and name.endswith('/manifest.json')) or name in owned)
+        if allowed:
+            if mode not in {'100644', '100755'} or kind != 'blob':
+                raise ValueError(f'Unsafe tracked entry: {name}')
+            selected.append((name, git('cat-file', 'blob', oid)))
+    if not any(name == f'domains/{domain}/brief.json' for name, _ in selected):
+        raise ValueError(f'Domain brief not found at requested revision: {domain}')
+    if any(name.endswith('.md') and name.startswith('harness/') and name not in owned for name, _ in selected):
+        raise ValueError('Role packet must not contain another role harness')
+    manifest = {'role': role, 'topic': None, 'domain': domain, 'actor_id': actor,
+                'call_sign': record.get('call_sign'), 'commit': ref, 'stage': 'onboarding',
+                'governance': False, 'files': {}}
+    out.mkdir(parents=True)
+    for name, body in selected:
+        target = out/name
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_bytes(body)
+        target.chmod(0o444)
+        manifest['files'][name] = hashlib.sha256(body).hexdigest()
+    assignment = {'actor_id': actor, 'call_sign': record.get('call_sign'), 'platform': record.get('platform'),
+                  'role': role, 'domain_id': domain, 'domain_ids': record.get('domain_ids'),
+                  'model_requested': record.get('model_requested'),
+                  'reasoning_requested': record.get('reasoning_requested'),
+                  'input_commit': ref, 'stage': 'onboarding',
+                  'required_outputs': ['readiness.json', 'first-pass-plan.md'],
+                  'output_location': 'the coordinator-designated outbox outside this packet; never write into the packet',
+                  'forbidden': ['other role harnesses', 'other domains', 'another session or memory',
+                                'agent messaging', 'editing the shared checkout', 'self-approval']}
+    (out/'ASSIGNMENT.json').write_text(json.dumps(assignment, indent=2)+'\n')
+    (out/'ASSIGNMENT.json').chmod(0o444)
+    (out/'PACKET.json').write_text(json.dumps(manifest, indent=2)+'\n')
+    (out/'PACKET.json').chmod(0o444)
+    return manifest
+
+def validate_registry(root=ROOT):
+    """Cross-check the platform registry against the domain briefs. Structure only."""
+    errors = []
+    path = root/'config/agents-deepseek.json'
+    if not path.is_file():
+        return errors
+    try:
+        actors = read_json(path)['actors']
+    except (ValueError, KeyError, TypeError) as exc:
+        return [f'config/agents-deepseek.json: malformed data: {exc}']
+    if not isinstance(actors, list):
+        return ['config/agents-deepseek.json: actors must be a list']
+    ids = [a.get('actor_id') for a in actors]
+    if len(ids) != len(set(ids)):
+        errors.append('config/agents-deepseek.json: duplicate actor_id')
+    by = {a.get('actor_id'): a for a in actors}
+    for a in actors:
+        for key in ['actor_id', 'call_sign', 'platform', 'role', 'domain_ids', 'model_requested', 'reasoning_requested']:
+            if not a.get(key):
+                errors.append(f'agent {a.get("actor_id")}: missing {key}')
+        if a.get('role') not in {'proposer', 'challenger', 'verifier'}:
+            errors.append(f'agent {a.get("actor_id")}: invalid role')
+    for p in sorted((root/'domains').glob('D*/brief.json')):
+        try:
+            d = read_json(p)
+            roles = d['platform_roles']['deepseek']
+        except (ValueError, KeyError, TypeError):
+            errors.append(f'{p.parent.name}/brief.json: missing platform_roles.deepseek binding')
+            continue
+        for role in ['proposer', 'challenger', 'verifier']:
+            aid = roles.get(role)
+            if aid not in by:
+                errors.append(f'{p.parent.name}/brief.json: {role} {aid} absent from DeepSeek registry')
+                continue
+            if by[aid].get('role') != role:
+                errors.append(f'{p.parent.name}/brief.json: {aid} registered as {by[aid].get("role")}')
+            if d.get('domain_id') not in by[aid].get('domain_ids', []):
+                errors.append(f'{p.parent.name}/brief.json: {aid} not assigned to {d.get("domain_id")}')
+            if roles.get(f'{role}_call_sign') != by[aid].get('call_sign'):
+                errors.append(f'{p.parent.name}/brief.json: {role} call sign mismatch for {aid}')
+    return errors
+
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     sub=p.add_subparsers(dest='command', required=True)
@@ -382,6 +502,8 @@ def main():
     e.add_argument('--ref',required=True);e.add_argument('--out',type=Path,required=True)
     e.add_argument('--evidence-run', action='append', default=[], help='Explicit public run directory for governance evidence')
     e.add_argument('--stage',choices=['initial','full'],default='initial');e.add_argument('--governance',action='store_true')
+    e.add_argument('--domain',help='DNN domain onboarding packet instead of a topic dossier packet')
+    e.add_argument('--actor',help='actor_id from config/agents-deepseek.json; required with --domain')
     a=p.parse_args()
     try:
         if a.command=='init':
@@ -403,7 +525,12 @@ def main():
                 raise ValueError('Expected a dossier directory or tasklist.md')
             print(file_sha256(target))
         elif a.command=='packet':
-            m=export_packet(a.role,a.topic,a.ref,a.out,a.stage,a.governance,a.evidence_run)
+            if a.domain:
+                if a.topic or a.governance or a.evidence_run:
+                    raise ValueError('Do not combine --domain with a topic ID, --governance or --evidence-run')
+                m=export_domain_packet(a.role,a.domain,a.actor,a.ref,a.out)
+            else:
+                m=export_packet(a.role,a.topic,a.ref,a.out,a.stage,a.governance,a.evidence_run)
             print(f'Exported {len(m["files"])} files to {a.out}')
     except (ValueError, OSError, subprocess.CalledProcessError) as exc:
         p.exit(1,str(exc)+'\n')
