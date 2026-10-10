@@ -1,0 +1,413 @@
+{
+  "schema_version": 1,
+  "coordinator": "Current project creation task; transport only",
+  "model_confirmation": "User selected proposer gpt-6-astra high; challenger gpt-6-sol medium and verifier gpt-6-luna medium retained.",
+  "research_phase": "onboarding",
+  "actors": [
+    {
+      "actor_id": "Codex-P01-ARCH",
+      "platform": "OpenAI Codex",
+      "role": "proposer",
+      "domain_ids": [
+        "D01"
+      ],
+      "task_title": "Codex-P01-ARCH",
+      "model_requested": "gpt-6-astra",
+      "reasoning_requested": "high",
+      "thread_id": null,
+      "client_thread_id": null,
+      "host_id": null,
+      "status": "planned",
+      "github_review_identity": null,
+      "packet": null,
+      "input_commit": null,
+      "packet_sha256": null
+    },
+    {
+      "actor_id": "Codex-C01-ARCH",
+      "platform": "OpenAI Codex",
+      "role": "challenger",
+      "domain_ids": [
+        "D01"
+      ],
+      "task_title": "Codex-C01-ARCH",
+      "model_requested": "gpt-6-sol",
+      "reasoning_requested": "medium",
+      "thread_id": null,
+      "client_thread_id": null,
+      "host_id": null,
+      "status": "planned",
+      "github_review_identity": null,
+      "packet": null,
+      "input_commit": null,
+      "packet_sha256": null
+    },
+    {
+      "actor_id": "Codex-P02-VERIFY",
+      "platform": "OpenAI Codex",
+      "role": "proposer",
+      "domain_ids": [
+        "D02"
+      ],
+      "task_title": "Codex-P02-VERIFY",
+      "model_requested": "gpt-6-astra",
+      "reasoning_requested": "high",
+      "thread_id": null,
+      "client_thread_id": null,
+      "host_id": null,
+      "status": "planned",
+      "github_review_identity": null,
+      "packet": null,
+      "input_commit": null,
+      "packet_sha256": null
+    },
+    {
+      "actor_id": "Codex-C02-VERIFY",
+      "platform": "OpenAI Codex",
+      "role": "challenger",
+      "domain_ids": [
+        "D02"
+      ],
+      "task_title": "Codex-C02-VERIFY",
+      "model_requested": "gpt-6-sol",
+      "reasoning_requested": "medium",
+      "thread_id": null,
+      "client_thread_id": null,
+      "host_id": null,
+      "status": "planned",
+      "github_review_identity": null,
+      "packet": null,
+      "input_commit": null,
+      "packet_sha256": null
+    },
+    {
+      "actor_id": "Codex-P03-SYNTH",
+      "platform": "OpenAI Codex",
+      "role": "proposer",
+      "domain_ids": [
+        "D03"
+      ],
+      "task_title": "Codex-P03-SYNTH",
+      "model_requested": "gpt-6-astra",
+      "reasoning_requested": "high",
+      "thread_id": null,
+      "client_thread_id": null,
+      "host_id": null,
+      "status": "planned",
+      "github_review_identity": null,
+      "packet": null,
+      "input_commit": null,
+      "packet_sha256": null
+    },
+    {
+      "actor_id": "Codex-C03-SYNTH",
+      "platform": "OpenAI Codex",
+      "role": "challenger",
+      "domain_ids": [
+        "D03"
+      ],
+      "task_title": "Codex-C03-SYNTH",
+      "model_requested": "gpt-6-sol",
+      "reasoning_requested": "medium",
+      "thread_id": null,
+      "client_thread_id": null,
+      "host_id": null,
+      "status": "planned",
+      "github_review_identity": null,
+      "packet": null,
+      "input_commit": null,
+      "packet_sha256": null
+    },
+    {
+      "actor_id": "Codex-P04-PHYSICAL",
+      "platform": "OpenAI Codex",
+      "role": "proposer",
+      "domain_ids": [
+        "D04"
+      ],
+      "task_title": "Codex-P04-PHYSICAL",
+      "model_requested": "gpt-6-astra",
+      "reasoning_requested": "high",
+      "thread_id": null,
+      "client_thread_id": null,
+      "host_id": null,
+      "status": "planned",
+      "github_review_identity": null,
+      "packet": null,
+      "input_commit": null,
+      "packet_sha256": null
+    },
+    {
+      "actor_id": "Codex-C04-PHYSICAL",
+      "platform": "OpenAI Codex",
+      "role": "challenger",
+      "domain_ids": [
+        "D04"
+      ],
+      "task_title": "Codex-C04-PHYSICAL",
+      "model_requested": "gpt-6-sol",
+      "reasoning_requested": "medium",
+      "thread_id": null,
+      "client_thread_id": null,
+      "host_id": null,
+      "status": "planned",
+      "github_review_identity": null,
+      "packet": null,
+      "input_commit": null,
+      "packet_sha256": null
+    },
+    {
+      "actor_id": "Codex-P05-TIMING",
+      "platform": "OpenAI Codex",
+      "role": "proposer",
+      "domain_ids": [
+        "D05"
+      ],
+      "task_title": "Codex-P05-TIMING",
+      "model_requested": "gpt-6-astra",
+      "reasoning_requested": "high",
+      "thread_id": null,
+      "client_thread_id": null,
+      "host_id": null,
+      "status": "planned",
+      "github_review_identity": null,
+      "packet": null,
+      "input_commit": null,
+      "packet_sha256": null
+    },
+    {
+      "actor_id": "Codex-C05-TIMING",
+      "platform": "OpenAI Codex",
+      "role": "challenger",
+      "domain_ids": [
+        "D05"
+      ],
+      "task_title": "Codex-C05-TIMING",
+      "model_requested": "gpt-6-sol",
+      "reasoning_requested": "medium",
+      "thread_id": null,
+      "client_thread_id": null,
+      "host_id": null,
+      "status": "planned",
+      "github_review_identity": null,
+      "packet": null,
+      "input_commit": null,
+      "packet_sha256": null
+    },
+    {
+      "actor_id": "Codex-P06-RELIABILITY",
+      "platform": "OpenAI Codex",
+      "role": "proposer",
+      "domain_ids": [
+        "D06"
+      ],
+      "task_title": "Codex-P06-RELIABILITY",
+      "model_requested": "gpt-6-astra",
+      "reasoning_requested": "high",
+      "thread_id": null,
+      "client_thread_id": null,
+      "host_id": null,
+      "status": "planned",
+      "github_review_identity": null,
+      "packet": null,
+      "input_commit": null,
+      "packet_sha256": null
+    },
+    {
+      "actor_id": "Codex-C06-RELIABILITY",
+      "platform": "OpenAI Codex",
+      "role": "challenger",
+      "domain_ids": [
+        "D06"
+      ],
+      "task_title": "Codex-C06-RELIABILITY",
+      "model_requested": "gpt-6-sol",
+      "reasoning_requested": "medium",
+      "thread_id": null,
+      "client_thread_id": null,
+      "host_id": null,
+      "status": "planned",
+      "github_review_identity": null,
+      "packet": null,
+      "input_commit": null,
+      "packet_sha256": null
+    },
+    {
+      "actor_id": "Codex-P07-ANALOG",
+      "platform": "OpenAI Codex",
+      "role": "proposer",
+      "domain_ids": [
+        "D07"
+      ],
+      "task_title": "Codex-P07-ANALOG",
+      "model_requested": "gpt-6-astra",
+      "reasoning_requested": "high",
+      "thread_id": null,
+      "client_thread_id": null,
+      "host_id": null,
+      "status": "planned",
+      "github_review_identity": null,
+      "packet": null,
+      "input_commit": null,
+      "packet_sha256": null
+    },
+    {
+      "actor_id": "Codex-C07-ANALOG",
+      "platform": "OpenAI Codex",
+      "role": "challenger",
+      "domain_ids": [
+        "D07"
+      ],
+      "task_title": "Codex-C07-ANALOG",
+      "model_requested": "gpt-6-sol",
+      "reasoning_requested": "medium",
+      "thread_id": null,
+      "client_thread_id": null,
+      "host_id": null,
+      "status": "planned",
+      "github_review_identity": null,
+      "packet": null,
+      "input_commit": null,
+      "packet_sha256": null
+    },
+    {
+      "actor_id": "Codex-P08-CHIPLETS",
+      "platform": "OpenAI Codex",
+      "role": "proposer",
+      "domain_ids": [
+        "D08"
+      ],
+      "task_title": "Codex-P08-CHIPLETS",
+      "model_requested": "gpt-6-astra",
+      "reasoning_requested": "high",
+      "thread_id": null,
+      "client_thread_id": null,
+      "host_id": null,
+      "status": "planned",
+      "github_review_identity": null,
+      "packet": null,
+      "input_commit": null,
+      "packet_sha256": null
+    },
+    {
+      "actor_id": "Codex-C08-CHIPLETS",
+      "platform": "OpenAI Codex",
+      "role": "challenger",
+      "domain_ids": [
+        "D08"
+      ],
+      "task_title": "Codex-C08-CHIPLETS",
+      "model_requested": "gpt-6-sol",
+      "reasoning_requested": "medium",
+      "thread_id": null,
+      "client_thread_id": null,
+      "host_id": null,
+      "status": "planned",
+      "github_review_identity": null,
+      "packet": null,
+      "input_commit": null,
+      "packet_sha256": null
+    },
+    {
+      "actor_id": "Codex-P09-AGENTIC",
+      "platform": "OpenAI Codex",
+      "role": "proposer",
+      "domain_ids": [
+        "D09"
+      ],
+      "task_title": "Codex-P09-AGENTIC",
+      "model_requested": "gpt-6-astra",
+      "reasoning_requested": "high",
+      "thread_id": null,
+      "client_thread_id": null,
+      "host_id": null,
+      "status": "planned",
+      "github_review_identity": null,
+      "packet": null,
+      "input_commit": null,
+      "packet_sha256": null
+    },
+    {
+      "actor_id": "Codex-C09-AGENTIC",
+      "platform": "OpenAI Codex",
+      "role": "challenger",
+      "domain_ids": [
+        "D09"
+      ],
+      "task_title": "Codex-C09-AGENTIC",
+      "model_requested": "gpt-6-sol",
+      "reasoning_requested": "medium",
+      "thread_id": null,
+      "client_thread_id": null,
+      "host_id": null,
+      "status": "planned",
+      "github_review_identity": null,
+      "packet": null,
+      "input_commit": null,
+      "packet_sha256": null
+    },
+    {
+      "actor_id": "Codex-V01-DIGITAL",
+      "platform": "OpenAI Codex",
+      "role": "verifier",
+      "domain_ids": [
+        "D01",
+        "D02",
+        "D03"
+      ],
+      "task_title": "Codex-V01-DIGITAL",
+      "model_requested": "gpt-6-luna",
+      "reasoning_requested": "medium",
+      "thread_id": null,
+      "client_thread_id": null,
+      "host_id": null,
+      "status": "planned",
+      "github_review_identity": null,
+      "packet": null,
+      "input_commit": null,
+      "packet_sha256": null
+    },
+    {
+      "actor_id": "Codex-V02-PHYSICAL",
+      "platform": "OpenAI Codex",
+      "role": "verifier",
+      "domain_ids": [
+        "D04",
+        "D05",
+        "D06"
+      ],
+      "task_title": "Codex-V02-PHYSICAL",
+      "model_requested": "gpt-6-luna",
+      "reasoning_requested": "medium",
+      "thread_id": null,
+      "client_thread_id": null,
+      "host_id": null,
+      "status": "planned",
+      "github_review_identity": null,
+      "packet": null,
+      "input_commit": null,
+      "packet_sha256": null
+    },
+    {
+      "actor_id": "Codex-V03-SYSTEMS",
+      "platform": "OpenAI Codex",
+      "role": "verifier",
+      "domain_ids": [
+        "D07",
+        "D08",
+        "D09"
+      ],
+      "task_title": "Codex-V03-SYSTEMS",
+      "model_requested": "gpt-6-luna",
+      "reasoning_requested": "medium",
+      "thread_id": null,
+      "client_thread_id": null,
+      "host_id": null,
+      "status": "planned",
+      "github_review_identity": null,
+      "packet": null,
+      "input_commit": null,
+      "packet_sha256": null
+    }
+  ]
+}

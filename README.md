@@ -32,3 +32,7 @@ All research artifacts, role interactions, and technical reviews use English. Hu
 The repository began empty. `main` contains a minimal trusted review-gate bootstrap; this framework is delivered as a PR. No topic, literature survey, experimental result, or scientific approval is claimed. No independent verifier account has been enrolled. See [deployment status](docs/DEPLOYMENT.md).
 
 Repository: https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment
+
+## Assigned Codex team
+
+See [team allocation](docs/TEAM.md) for nine proposer/challenger pairs and three shared verifiers, and `config/agents.json` for task identities and model settings. These roles start with bounded onboarding and independent search plans.
