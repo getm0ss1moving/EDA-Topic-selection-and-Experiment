@@ -1,0 +1,46 @@
+name: Independent verifier
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened, ready_for_review]
+  pull_request_review:
+    types: [submitted, edited, dismissed]
+  workflow_dispatch:
+    inputs:
+      pr:
+        description: Pull request number to recheck
+        required: true
+permissions:
+  contents: read
+  pull-requests: read
+  statuses: write
+jobs:
+  verifier:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b
+        env:
+          VERIFIER_LOGINS: ${{ vars.VERIFIER_LOGINS }}
+        with:
+          script: |
+            // API data only. Never checkout or execute pull-request content.
+            const number = context.payload.pull_request?.number || Number(context.payload.inputs?.pr);
+            const {owner, repo} = context.repo;
+            const {data: pr} = await github.rest.pulls.get({owner, repo, pull_number: number});
+            const trusted = new Set((process.env.VERIFIER_LOGINS || '').split(',').map(x => x.trim().toLowerCase()).filter(Boolean));
+            const reviews = await github.paginate(github.rest.pulls.listReviews, {owner, repo, pull_number: number});
+            const latest = new Map();
+            for (const r of reviews) {
+              if (['APPROVED', 'CHANGES_REQUESTED', 'DISMISSED'].includes(r.state)) latest.set(r.user.login.toLowerCase(), r);
+            }
+            const approved = [...latest.entries()].some(([login, r]) =>
+              trusted.has(login) && login !== pr.user.login.toLowerCase() &&
+              r.state === 'APPROVED' && r.commit_id === pr.head.sha &&
+              (r.body || '').trim() === `CONFIRM ${pr.head.sha}`);
+            const blocking = [...latest.entries()].some(([login, r]) => trusted.has(login) && r.state === 'CHANGES_REQUESTED');
+            const ok = approved && !blocking && !pr.draft;
+            const description = ok ? 'Independent registered verifier confirmed this exact revision' :
+              trusted.size ? 'Waiting for independent verifier confirmation of current SHA' : 'No independent verifier enrolled; merge is blocked';
+            await github.rest.repos.createCommitStatus({owner, repo, sha: pr.head.sha,
+              state: ok ? 'success' : 'failure', context: 'independent-verifier', description,
+              target_url: `https://github.com/${owner}/${repo}/actions/runs/${context.runId}`});
+            if (!ok) core.setFailed(description);
