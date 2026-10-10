@@ -1,0 +1,23 @@
+{
+  "domain_id": "D04",
+  "slug": "PHYSICAL",
+  "title": "Floorplanning, placement and routing",
+  "scope": "Partitioning, floorplanning, macro placement, standard-cell placement, legalization, clock-tree synthesis and global/detailed routing.",
+  "engineering_metrics": "Legal routable outcomes, post-route PPA, congestion, timing, wirelength, runtime and memory.",
+  "boundary": "Report physical substage boundaries; HPWL is not a substitute for final timing or routability. Timing-model methodology belongs to D05.",
+  "tracks": [
+    "Traditional EDA",
+    "AI for EDA",
+    "Agentic EDA where justified"
+  ],
+  "proposer": "Codex-P04-PHYSICAL",
+  "challenger": "Codex-C04-PHYSICAL",
+  "verifier": "Codex-V02-PHYSICAL",
+  "stage": "onboarding",
+  "research_budget": "No broad research run authorized by this onboarding packet. Prepare a bounded search plan; tool/data/compute access remains unknown.",
+  "first_outputs": [
+    "readiness.json",
+    "first-pass-plan.md"
+  ],
+  "not_a_topic": true
+}

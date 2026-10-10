@@ -1,0 +1,23 @@
+{
+  "domain_id": "D06",
+  "slug": "RELIABILITY",
+  "title": "Power, reliability and manufacturability",
+  "scope": "Power estimation/optimization, activity modeling, IR drop, EM, aging, thermal reliability, DRC/LVS, DFM and computational lithography interfaces.",
+  "engineering_metrics": "Constraint satisfaction, yield/reliability, power/thermal accuracy, false negatives, verification cost and manufacturing realism.",
+  "boundary": "Do not treat typical-condition success as robust signoff. Multi-die coupling belongs jointly to D08 through explicit file contracts.",
+  "tracks": [
+    "Traditional EDA",
+    "AI for EDA",
+    "Agentic EDA where justified"
+  ],
+  "proposer": "Codex-P06-RELIABILITY",
+  "challenger": "Codex-C06-RELIABILITY",
+  "verifier": "Codex-V02-PHYSICAL",
+  "stage": "onboarding",
+  "research_budget": "No broad research run authorized by this onboarding packet. Prepare a bounded search plan; tool/data/compute access remains unknown.",
+  "first_outputs": [
+    "readiness.json",
+    "first-pass-plan.md"
+  ],
+  "not_a_topic": true
+}

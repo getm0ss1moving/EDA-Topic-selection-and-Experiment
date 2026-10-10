@@ -1,0 +1,23 @@
+{
+  "domain_id": "D01",
+  "slug": "ARCH",
+  "title": "Architecture, specification and HLS",
+  "scope": "Hardware/software co-design, architecture exploration, HLS scheduling/binding, specification-to-hardware, memory hierarchy and accelerator design.",
+  "engineering_metrics": "Functional correctness, throughput/latency, energy, area, compilation/search cost.",
+  "boundary": "Do not conflate code-generation pass rate with post-implementation quality. Logic mapping belongs to D03; whole-flow agents belong to D09.",
+  "tracks": [
+    "Traditional EDA",
+    "AI for EDA",
+    "Agentic EDA where justified"
+  ],
+  "proposer": "Codex-P01-ARCH",
+  "challenger": "Codex-C01-ARCH",
+  "verifier": "Codex-V01-DIGITAL",
+  "stage": "onboarding",
+  "research_budget": "No broad research run authorized by this onboarding packet. Prepare a bounded search plan; tool/data/compute access remains unknown.",
+  "first_outputs": [
+    "readiness.json",
+    "first-pass-plan.md"
+  ],
+  "not_a_topic": true
+}

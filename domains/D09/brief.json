@@ -1,0 +1,23 @@
+{
+  "domain_id": "D09",
+  "slug": "AGENTIC",
+  "title": "Agentic EDA and flow orchestration",
+  "scope": "EDA tool-use agents, multi-step planning, flow optimization, reproducible tool interfaces, constrained autonomy, debugging and artifact-grounded benchmarks.",
+  "engineering_metrics": "Correct completed engineering tasks, artifact validity, total compute/API cost, wall time, repeatability and human intervention.",
+  "boundary": "Include script, search and non-agent baselines. Other teams study AI for their own domains; D09 owns cross-stage agent mechanisms.",
+  "tracks": [
+    "Traditional EDA",
+    "AI for EDA",
+    "Agentic EDA where justified"
+  ],
+  "proposer": "Codex-P09-AGENTIC",
+  "challenger": "Codex-C09-AGENTIC",
+  "verifier": "Codex-V03-SYSTEMS",
+  "stage": "onboarding",
+  "research_budget": "No broad research run authorized by this onboarding packet. Prepare a bounded search plan; tool/data/compute access remains unknown.",
+  "first_outputs": [
+    "readiness.json",
+    "first-pass-plan.md"
+  ],
+  "not_a_topic": true
+}

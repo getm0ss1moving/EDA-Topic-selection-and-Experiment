@@ -1,0 +1,23 @@
+{
+  "domain_id": "D07",
+  "slug": "ANALOG",
+  "title": "Analog, RF and mixed-signal automation",
+  "scope": "Analog/RF topology and sizing, layout/parasitic co-optimization, mixed-signal verification, simulation acceleration and yield-aware design.",
+  "engineering_metrics": "Specification satisfaction, PVT/Monte Carlo yield, parasitic-aware quality, simulator calls and engineer effort.",
+  "boundary": "Compare against established numerical/heuristic methods; account for PDK access and simulation noise.",
+  "tracks": [
+    "Traditional EDA",
+    "AI for EDA",
+    "Agentic EDA where justified"
+  ],
+  "proposer": "Codex-P07-ANALOG",
+  "challenger": "Codex-C07-ANALOG",
+  "verifier": "Codex-V03-SYSTEMS",
+  "stage": "onboarding",
+  "research_budget": "No broad research run authorized by this onboarding packet. Prepare a bounded search plan; tool/data/compute access remains unknown.",
+  "first_outputs": [
+    "readiness.json",
+    "first-pass-plan.md"
+  ],
+  "not_a_topic": true
+}
