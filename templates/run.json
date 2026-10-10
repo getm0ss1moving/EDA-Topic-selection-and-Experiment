@@ -1,0 +1,15 @@
+{
+  "run_id": null,
+  "session_id": null,
+  "role": null,
+  "input_commit": null,
+  "packet_sha256": null,
+  "model": null,
+  "operator": null,
+  "started_at_utc": null,
+  "completed_at_utc": null,
+  "output_paths": [],
+  "source_ids": [],
+  "contamination_events": [],
+  "independence_attestation": null
+}

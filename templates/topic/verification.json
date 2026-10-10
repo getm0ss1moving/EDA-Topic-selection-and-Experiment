@@ -1,0 +1,15 @@
+{
+  "decision": "pending",
+  "verifier_session": null,
+  "dossier_digest": null,
+  "gates": {
+    "novelty": false,
+    "mechanism": false,
+    "utility": false,
+    "contest_originality": false,
+    "headroom": false,
+    "feasibility": false
+  },
+  "source_checks": [],
+  "objections": []
+}

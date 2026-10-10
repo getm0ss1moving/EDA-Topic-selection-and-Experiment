@@ -1,0 +1,25 @@
+{
+  "scope": null,
+  "tracks": [
+    "Agentic EDA",
+    "AI for EDA",
+    "Traditional EDA"
+  ],
+  "target_venues": [],
+  "timeline_weeks": null,
+  "compute": {
+    "cpu_hours": null,
+    "gpu_hours": null,
+    "memory_gb": null,
+    "api_budget_usd": null
+  },
+  "available_tools": [],
+  "available_pdks": [],
+  "available_designs": [],
+  "license_constraints": [],
+  "engineering_user": null,
+  "primary_metric": null,
+  "minimum_meaningful_effect": null,
+  "human_owner": "getm0ss1moving",
+  "max_review_rounds": 3
+}

@@ -1,5 +1,34 @@
 # EDA Topic Selection and Experiment
 
-Research governance bootstrap. The project framework is introduced through a pull request and requires an independent verifier before merging. No research topic has been accepted.
+A file-mediated research program for Agentic EDA, AI for EDA, and traditional EDA. The goal is falsifiable, useful research questions supported by literature, contest, implementation, and engineering evidence—not a stream of plausible ideas.
 
-The bootstrap installs only a trusted, API-only review gate. Register independent verifier GitHub identities in the repository Actions variable `VERIFIER_LOGINS` (comma-separated). An empty list blocks approval. Scientific arguments belong in versioned files; GitHub reviews carry only the confirmation signal `CONFIRM <full-head-sha>`.
+## Start here
+
+1. Read [the charter](docs/CHARTER.md), [workflow](docs/WORKFLOW.md), and [isolation policy](docs/ISOLATION.md).
+2. The human owner fills [the research brief](config/research-brief.json), including domain, compute, tools, datasets, and publication constraints. Unknown constraints remain explicitly unknown.
+3. Enroll independent sessions using [the coordinator runbook](harness/COORDINATOR.md). Proposer, challenger, and verifier have separate harnesses and file packets.
+4. Create a draft: `python3 scripts/project.py init EDA-0001`.
+5. Produce and contest evidence through PRs. Only confirmed dossiers enter `topics/`.
+6. Validate with `python3 scripts/project.py validate` and `python3 -m unittest discover -s tests -v`.
+
+## Project map
+
+| Path | Purpose |
+|---|---|
+| `harness/` | Role-specific executable work instructions |
+| `docs/` | Governance, evidence standards, EDA scope, experimental policy |
+| `config/` | Human constraints and session registration |
+| `templates/topic/` | Complete dossier template |
+| `candidates/` | Submitted proposals, challenges, responses, verification; no acceptance implied |
+| `topics/` | Independently confirmed research topics; experimental claims remain labeled |
+| `archive/` | Rejected/parked ideas and resurrection criteria |
+| `runs/` | Public run manifests and packet provenance; never private reasoning |
+| `scripts/` | Dossier creation, checks, hashing, role packet export |
+
+All research artifacts, role interactions, and technical reviews use English. Human-facing setup explanations may follow the human's language preference. Agents communicate through committed files only; reviews carry machine confirmation, not scientific arguments.
+
+## Current status
+
+The repository began empty. `main` contains a minimal trusted review-gate bootstrap; this framework is delivered as a PR. No topic, literature survey, experimental result, or scientific approval is claimed. No independent verifier account has been enrolled. See [deployment status](docs/DEPLOYMENT.md).
+
+Repository: https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment
