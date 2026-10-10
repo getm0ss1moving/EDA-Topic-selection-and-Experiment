@@ -1,0 +1,92 @@
+import importlib.util
+import json
+import shutil
+import subprocess
+import tempfile
+import unittest
+from pathlib import Path
+
+spec=importlib.util.spec_from_file_location('project',Path(__file__).resolve().parents[1]/'scripts/project.py')
+p=importlib.util.module_from_spec(spec);spec.loader.exec_module(p)
+
+class DossierTests(unittest.TestCase):
+    def setUp(self):
+        self.tmp=tempfile.TemporaryDirectory()
+        self.root=Path(self.tmp.name)
+        self.d=self.root/'EDA-0001'
+        shutil.copytree(p.ROOT/'templates/topic',self.d)
+        self.update('dossier.json',id='EDA-0001')
+    def tearDown(self):self.tmp.cleanup()
+    def update(self,name,**updates):
+        f=self.d/name;data=json.loads(f.read_text());data.update(updates);f.write_text(json.dumps(data))
+    def test_draft_is_not_accepted(self):
+        self.assertEqual(p.validate_topic(self.d,'candidates',{}),[])
+        self.assertTrue(p.validate_topic(self.d,'topics',{}))
+    def test_hash_binds_content_not_verdict(self):
+        before=p.digest(self.d)
+        self.update('verification.json',decision='revise')
+        self.assertEqual(before,p.digest(self.d))
+        (self.d/'proposal.md').write_text('new mechanism')
+        self.assertNotEqual(before,p.digest(self.d))
+    def test_template_cannot_be_submitted(self):
+        self.update('dossier.json',status='submitted')
+        errors=p.validate_topic(self.d,'candidates',{})
+        self.assertTrue(any('sources' in e for e in errors))
+        self.assertTrue(any('placeholder' in e for e in errors))
+    def test_self_review_rejected(self):
+        self.update('dossier.json',status='accepted',proposer_session='same',challenger_session='same',verifier_session='same')
+        self.assertTrue(any('distinct' in e for e in p.validate_topic(self.d,'topics',{})))
+    def test_symlink_rejected(self):
+        (self.d/'leak').symlink_to('/etc/passwd')
+        with self.assertRaises(ValueError):p.digest(self.d)
+    def test_invalid_source_shape_reported(self):
+        (self.d/'sources.json').write_text('[42]')
+        self.assertTrue(p.validate_topic(self.d,'candidates',{}))
+
+class PacketTests(unittest.TestCase):
+    def test_export_filters_and_uses_frozen_commit(self):
+        with tempfile.TemporaryDirectory() as td:
+            root=Path(td)/'repo';root.mkdir()
+            def write(name,body='public'):
+                f=root/name;f.parent.mkdir(parents=True,exist_ok=True);f.write_text(body)
+            for name in ['AGENTS.md','docs/CHARTER.md','harness/CHALLENGER.md','harness/PROPOSER.md','candidates/EDA-0001/proposal.md','candidates/EDA-0001/forecast.json','private/secret','runs/private.txt']:
+                write(name)
+            def git(*args):return subprocess.check_output(['git','-C',str(root),*args],stderr=subprocess.DEVNULL)
+            git('init');git('add','.');git('-c','user.name=test','-c','user.email=test@example.com','commit','-m','fixture')
+            sha=git('rev-parse','HEAD').decode().strip()
+            write('candidates/EDA-0001/proposal.md','uncommitted private edit')
+            original=p.ROOT;p.ROOT=root
+            try:
+                out=Path(td)/'packet'
+                m=p.export_packet('challenger','EDA-0001',sha,out)
+                self.assertNotIn('harness/PROPOSER.md',m['files'])
+                self.assertNotIn('candidates/EDA-0001/forecast.json',m['files'])
+                self.assertNotIn('private/secret',m['files'])
+                self.assertNotIn('runs/private.txt',m['files'])
+                self.assertFalse((out/'.git').exists())
+                self.assertEqual((out/'candidates/EDA-0001/proposal.md').read_text(),'public')
+                with self.assertRaises(ValueError):p.export_packet('challenger','EDA-0001',sha,out)
+                with self.assertRaises(ValueError):p.export_packet('challenger','EDA-0001','HEAD',Path(td)/'bad')
+            finally:p.ROOT=original
+
+if __name__=='__main__':unittest.main()
+
+class AcceptanceTests(DossierTests):
+    def make_valid(self):
+        self.update('dossier.json',status='accepted',proposer_session='p',challenger_session='c',verifier_session='v')
+        for name in ['proposal.md','search-log.md','contest-audit.md','industry-gap.md','experiment-plan.md']:
+            (self.d/name).write_text('Explicit scientific record; fixture only.')
+        source={'id':'SRC-001','title':'fixture','url':'https://example.org/source','type':'paper','published':'unknown','retrieved':'2026-10-10T00:00:00Z','locator':'Section 1','access':'full','claims':['CLM-001'],'limitations':'fixture'}
+        (self.d/'sources.json').write_text(json.dumps([source]))
+        (self.d/'prior-art.csv').write_text('source_id,task\nSRC-001,fixture\n')
+        self.update('verification.json',decision='accept_for_pilot',verifier_session='v',gates={k:True for k in p.GATES},source_checks=[{'source_id':'SRC-001','locator':'Section 1','verdict':'verified'}],dossier_digest=p.digest(self.d))
+        return {'p':{'role':'proposer'},'c':{'role':'challenger'},'v':{'role':'verifier'}}
+    def test_valid_then_tampered(self):
+        sessions=self.make_valid()
+        self.assertEqual(p.validate_topic(self.d,'topics',sessions),[])
+        (self.d/'proposal.md').write_text('Changed hypothesis')
+        self.assertTrue(any('stale' in e for e in p.validate_topic(self.d,'topics',sessions)))
+    def test_unresolved_objection_blocks(self):
+        sessions=self.make_valid()
+        self.update('verification.json',objections=[{'verdict':'valid','blocking':True,'resolution':'open'}])
+        self.assertTrue(any('blocking' in e for e in p.validate_topic(self.d,'topics',sessions)))

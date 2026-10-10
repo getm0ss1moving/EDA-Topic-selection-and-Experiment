@@ -1,0 +1,15 @@
+{
+  "human_owner": "getm0ss1moving",
+  "sessions": [],
+  "required_session_fields": [
+    "session_id",
+    "role",
+    "model",
+    "operator",
+    "github_login",
+    "input_commit",
+    "packet_sha256",
+    "independence_attestation"
+  ],
+  "note": "Do not fabricate assignments. GitHub verifier authorization is configured separately using VERIFIER_LOGINS."
+}
