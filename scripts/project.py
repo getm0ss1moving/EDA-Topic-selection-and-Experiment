@@ -145,7 +145,7 @@ def export_packet(role, topic, ref, out, stage='initial', governance=False):
         meta, rawname = entry.split(b'\t', 1)
         mode, kind, oid = meta.decode().split()
         name = rawname.decode()
-        common = name == 'AGENTS.md' or name.startswith('docs/') or name.startswith('config/') or (name.startswith('runs/') and name.endswith('/manifest.json')) or name == f'harness/{role.upper()}.md'
+        common = name in {'AGENTS.md', 'scripts/project.py'} or name.startswith('templates/') or name.startswith('docs/') or name.startswith('config/') or (name.startswith('runs/') and name.endswith('/manifest.json')) or name == f'harness/{role.upper()}.md'
         relevant = any(name.startswith(f'{a}/{topic}/') for a in ['candidates','topics','archive']) if topic else False
         allowed = common or relevant
         if governance:
