@@ -19,5 +19,23 @@
     "readiness.json",
     "first-pass-plan.md"
   ],
-  "not_a_topic": true
+  "not_a_topic": true,
+  "platform_roles": {
+    "codex": {
+      "proposer": "Codex-P08-CHIPLETS",
+      "challenger": "Codex-C08-CHIPLETS",
+      "verifier": "Codex-V03-SYSTEMS"
+    },
+    "deepseek": {
+      "proposer": "DeepSeek-P08-CHIPLETS",
+      "proposer_call_sign": "DSK-Spark-CHIPLETS",
+      "challenger": "DeepSeek-C08-CHIPLETS",
+      "challenger_call_sign": "DSK-Forge-CHIPLETS",
+      "verifier": "DeepSeek-V03-SYSTEMS",
+      "verifier_call_sign": "DSK-Ledger-SYSTEMS",
+      "allocation_doc": "docs/TEAM-DEEPSEEK.md",
+      "stage": "onboarding",
+      "research_budget": "No broad research run authorized by this onboarding packet. Prepare a bounded search plan. Compute, tool, PDK and design access remain unknown until the human owner fills config/research-brief.json."
+    }
+  }
 }

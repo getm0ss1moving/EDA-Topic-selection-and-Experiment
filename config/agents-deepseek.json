@@ -1,0 +1,447 @@
+{
+  "schema_version": 1,
+  "platform": "DeepSeek",
+  "allocation_doc": "docs/TEAM-DEEPSEEK.md",
+  "coordinator": "DeepSeek platform lead; transport only, not an extra scientific voter",
+  "model_catalog_observed": [
+    "deepseek-v4-pro",
+    "deepseek-flash"
+  ],
+  "reasoning_effort_values_observed": [
+    "off",
+    "low",
+    "high",
+    "max"
+  ],
+  "model_confirmation": "model IDs observed in the active host profile on 2026-10-11; requested settings are not a promise that a future host exposes them",
+  "research_phase": "onboarding",
+  "actor_count": 21,
+  "actors": [
+    {
+      "actor_id": "DeepSeek-P01-ARCH",
+      "call_sign": "DSK-Spark-ARCH",
+      "platform": "DeepSeek",
+      "role": "proposer",
+      "domain_ids": [
+        "D01"
+      ],
+      "task_title": "DeepSeek-P01-ARCH",
+      "model_requested": "deepseek-v4-pro",
+      "reasoning_requested": "max",
+      "thread_id": null,
+      "client_thread_id": null,
+      "host_id": null,
+      "status": "planned",
+      "github_review_identity": null,
+      "packet": null,
+      "input_commit": null,
+      "packet_sha256": null
+    },
+    {
+      "actor_id": "DeepSeek-C01-ARCH",
+      "call_sign": "DSK-Forge-ARCH",
+      "platform": "DeepSeek",
+      "role": "challenger",
+      "domain_ids": [
+        "D01"
+      ],
+      "task_title": "DeepSeek-C01-ARCH",
+      "model_requested": "deepseek-flash",
+      "reasoning_requested": "max",
+      "thread_id": null,
+      "client_thread_id": null,
+      "host_id": null,
+      "status": "planned",
+      "github_review_identity": null,
+      "packet": null,
+      "input_commit": null,
+      "packet_sha256": null
+    },
+    {
+      "actor_id": "DeepSeek-P02-VERIFY",
+      "call_sign": "DSK-Spark-VERIFY",
+      "platform": "DeepSeek",
+      "role": "proposer",
+      "domain_ids": [
+        "D02"
+      ],
+      "task_title": "DeepSeek-P02-VERIFY",
+      "model_requested": "deepseek-v4-pro",
+      "reasoning_requested": "max",
+      "thread_id": null,
+      "client_thread_id": null,
+      "host_id": null,
+      "status": "planned",
+      "github_review_identity": null,
+      "packet": null,
+      "input_commit": null,
+      "packet_sha256": null
+    },
+    {
+      "actor_id": "DeepSeek-C02-VERIFY",
+      "call_sign": "DSK-Forge-VERIFY",
+      "platform": "DeepSeek",
+      "role": "challenger",
+      "domain_ids": [
+        "D02"
+      ],
+      "task_title": "DeepSeek-C02-VERIFY",
+      "model_requested": "deepseek-flash",
+      "reasoning_requested": "max",
+      "thread_id": null,
+      "client_thread_id": null,
+      "host_id": null,
+      "status": "planned",
+      "github_review_identity": null,
+      "packet": null,
+      "input_commit": null,
+      "packet_sha256": null
+    },
+    {
+      "actor_id": "DeepSeek-P03-SYNTH",
+      "call_sign": "DSK-Spark-SYNTH",
+      "platform": "DeepSeek",
+      "role": "proposer",
+      "domain_ids": [
+        "D03"
+      ],
+      "task_title": "DeepSeek-P03-SYNTH",
+      "model_requested": "deepseek-v4-pro",
+      "reasoning_requested": "max",
+      "thread_id": null,
+      "client_thread_id": null,
+      "host_id": null,
+      "status": "planned",
+      "github_review_identity": null,
+      "packet": null,
+      "input_commit": null,
+      "packet_sha256": null
+    },
+    {
+      "actor_id": "DeepSeek-C03-SYNTH",
+      "call_sign": "DSK-Forge-SYNTH",
+      "platform": "DeepSeek",
+      "role": "challenger",
+      "domain_ids": [
+        "D03"
+      ],
+      "task_title": "DeepSeek-C03-SYNTH",
+      "model_requested": "deepseek-flash",
+      "reasoning_requested": "max",
+      "thread_id": null,
+      "client_thread_id": null,
+      "host_id": null,
+      "status": "planned",
+      "github_review_identity": null,
+      "packet": null,
+      "input_commit": null,
+      "packet_sha256": null
+    },
+    {
+      "actor_id": "DeepSeek-P04-PHYSICAL",
+      "call_sign": "DSK-Spark-PHYSICAL",
+      "platform": "DeepSeek",
+      "role": "proposer",
+      "domain_ids": [
+        "D04"
+      ],
+      "task_title": "DeepSeek-P04-PHYSICAL",
+      "model_requested": "deepseek-v4-pro",
+      "reasoning_requested": "max",
+      "thread_id": null,
+      "client_thread_id": null,
+      "host_id": null,
+      "status": "planned",
+      "github_review_identity": null,
+      "packet": null,
+      "input_commit": null,
+      "packet_sha256": null
+    },
+    {
+      "actor_id": "DeepSeek-C04-PHYSICAL",
+      "call_sign": "DSK-Forge-PHYSICAL",
+      "platform": "DeepSeek",
+      "role": "challenger",
+      "domain_ids": [
+        "D04"
+      ],
+      "task_title": "DeepSeek-C04-PHYSICAL",
+      "model_requested": "deepseek-flash",
+      "reasoning_requested": "max",
+      "thread_id": null,
+      "client_thread_id": null,
+      "host_id": null,
+      "status": "planned",
+      "github_review_identity": null,
+      "packet": null,
+      "input_commit": null,
+      "packet_sha256": null
+    },
+    {
+      "actor_id": "DeepSeek-P05-TIMING",
+      "call_sign": "DSK-Spark-TIMING",
+      "platform": "DeepSeek",
+      "role": "proposer",
+      "domain_ids": [
+        "D05"
+      ],
+      "task_title": "DeepSeek-P05-TIMING",
+      "model_requested": "deepseek-v4-pro",
+      "reasoning_requested": "max",
+      "thread_id": null,
+      "client_thread_id": null,
+      "host_id": null,
+      "status": "planned",
+      "github_review_identity": null,
+      "packet": null,
+      "input_commit": null,
+      "packet_sha256": null
+    },
+    {
+      "actor_id": "DeepSeek-C05-TIMING",
+      "call_sign": "DSK-Forge-TIMING",
+      "platform": "DeepSeek",
+      "role": "challenger",
+      "domain_ids": [
+        "D05"
+      ],
+      "task_title": "DeepSeek-C05-TIMING",
+      "model_requested": "deepseek-flash",
+      "reasoning_requested": "max",
+      "thread_id": null,
+      "client_thread_id": null,
+      "host_id": null,
+      "status": "planned",
+      "github_review_identity": null,
+      "packet": null,
+      "input_commit": null,
+      "packet_sha256": null
+    },
+    {
+      "actor_id": "DeepSeek-P06-RELIABILITY",
+      "call_sign": "DSK-Spark-RELIABILITY",
+      "platform": "DeepSeek",
+      "role": "proposer",
+      "domain_ids": [
+        "D06"
+      ],
+      "task_title": "DeepSeek-P06-RELIABILITY",
+      "model_requested": "deepseek-v4-pro",
+      "reasoning_requested": "max",
+      "thread_id": null,
+      "client_thread_id": null,
+      "host_id": null,
+      "status": "planned",
+      "github_review_identity": null,
+      "packet": null,
+      "input_commit": null,
+      "packet_sha256": null
+    },
+    {
+      "actor_id": "DeepSeek-C06-RELIABILITY",
+      "call_sign": "DSK-Forge-RELIABILITY",
+      "platform": "DeepSeek",
+      "role": "challenger",
+      "domain_ids": [
+        "D06"
+      ],
+      "task_title": "DeepSeek-C06-RELIABILITY",
+      "model_requested": "deepseek-flash",
+      "reasoning_requested": "max",
+      "thread_id": null,
+      "client_thread_id": null,
+      "host_id": null,
+      "status": "planned",
+      "github_review_identity": null,
+      "packet": null,
+      "input_commit": null,
+      "packet_sha256": null
+    },
+    {
+      "actor_id": "DeepSeek-P07-ANALOG",
+      "call_sign": "DSK-Spark-ANALOG",
+      "platform": "DeepSeek",
+      "role": "proposer",
+      "domain_ids": [
+        "D07"
+      ],
+      "task_title": "DeepSeek-P07-ANALOG",
+      "model_requested": "deepseek-v4-pro",
+      "reasoning_requested": "max",
+      "thread_id": null,
+      "client_thread_id": null,
+      "host_id": null,
+      "status": "planned",
+      "github_review_identity": null,
+      "packet": null,
+      "input_commit": null,
+      "packet_sha256": null
+    },
+    {
+      "actor_id": "DeepSeek-C07-ANALOG",
+      "call_sign": "DSK-Forge-ANALOG",
+      "platform": "DeepSeek",
+      "role": "challenger",
+      "domain_ids": [
+        "D07"
+      ],
+      "task_title": "DeepSeek-C07-ANALOG",
+      "model_requested": "deepseek-flash",
+      "reasoning_requested": "max",
+      "thread_id": null,
+      "client_thread_id": null,
+      "host_id": null,
+      "status": "planned",
+      "github_review_identity": null,
+      "packet": null,
+      "input_commit": null,
+      "packet_sha256": null
+    },
+    {
+      "actor_id": "DeepSeek-P08-CHIPLETS",
+      "call_sign": "DSK-Spark-CHIPLETS",
+      "platform": "DeepSeek",
+      "role": "proposer",
+      "domain_ids": [
+        "D08"
+      ],
+      "task_title": "DeepSeek-P08-CHIPLETS",
+      "model_requested": "deepseek-v4-pro",
+      "reasoning_requested": "max",
+      "thread_id": null,
+      "client_thread_id": null,
+      "host_id": null,
+      "status": "planned",
+      "github_review_identity": null,
+      "packet": null,
+      "input_commit": null,
+      "packet_sha256": null
+    },
+    {
+      "actor_id": "DeepSeek-C08-CHIPLETS",
+      "call_sign": "DSK-Forge-CHIPLETS",
+      "platform": "DeepSeek",
+      "role": "challenger",
+      "domain_ids": [
+        "D08"
+      ],
+      "task_title": "DeepSeek-C08-CHIPLETS",
+      "model_requested": "deepseek-flash",
+      "reasoning_requested": "max",
+      "thread_id": null,
+      "client_thread_id": null,
+      "host_id": null,
+      "status": "planned",
+      "github_review_identity": null,
+      "packet": null,
+      "input_commit": null,
+      "packet_sha256": null
+    },
+    {
+      "actor_id": "DeepSeek-P09-AGENTIC",
+      "call_sign": "DSK-Spark-AGENTIC",
+      "platform": "DeepSeek",
+      "role": "proposer",
+      "domain_ids": [
+        "D09"
+      ],
+      "task_title": "DeepSeek-P09-AGENTIC",
+      "model_requested": "deepseek-v4-pro",
+      "reasoning_requested": "max",
+      "thread_id": null,
+      "client_thread_id": null,
+      "host_id": null,
+      "status": "planned",
+      "github_review_identity": null,
+      "packet": null,
+      "input_commit": null,
+      "packet_sha256": null
+    },
+    {
+      "actor_id": "DeepSeek-C09-AGENTIC",
+      "call_sign": "DSK-Forge-AGENTIC",
+      "platform": "DeepSeek",
+      "role": "challenger",
+      "domain_ids": [
+        "D09"
+      ],
+      "task_title": "DeepSeek-C09-AGENTIC",
+      "model_requested": "deepseek-flash",
+      "reasoning_requested": "max",
+      "thread_id": null,
+      "client_thread_id": null,
+      "host_id": null,
+      "status": "planned",
+      "github_review_identity": null,
+      "packet": null,
+      "input_commit": null,
+      "packet_sha256": null
+    },
+    {
+      "actor_id": "DeepSeek-V01-DIGITAL",
+      "call_sign": "DSK-Ledger-DIGITAL",
+      "platform": "DeepSeek",
+      "role": "verifier",
+      "domain_ids": [
+        "D01",
+        "D02",
+        "D03"
+      ],
+      "task_title": "DeepSeek-V01-DIGITAL",
+      "model_requested": "deepseek-flash",
+      "reasoning_requested": "low",
+      "thread_id": null,
+      "client_thread_id": null,
+      "host_id": null,
+      "status": "planned",
+      "github_review_identity": null,
+      "packet": null,
+      "input_commit": null,
+      "packet_sha256": null
+    },
+    {
+      "actor_id": "DeepSeek-V02-PHYSICAL",
+      "call_sign": "DSK-Ledger-PHYSICAL",
+      "platform": "DeepSeek",
+      "role": "verifier",
+      "domain_ids": [
+        "D04",
+        "D05",
+        "D06"
+      ],
+      "task_title": "DeepSeek-V02-PHYSICAL",
+      "model_requested": "deepseek-flash",
+      "reasoning_requested": "low",
+      "thread_id": null,
+      "client_thread_id": null,
+      "host_id": null,
+      "status": "planned",
+      "github_review_identity": null,
+      "packet": null,
+      "input_commit": null,
+      "packet_sha256": null
+    },
+    {
+      "actor_id": "DeepSeek-V03-SYSTEMS",
+      "call_sign": "DSK-Ledger-SYSTEMS",
+      "platform": "DeepSeek",
+      "role": "verifier",
+      "domain_ids": [
+        "D07",
+        "D08",
+        "D09"
+      ],
+      "task_title": "DeepSeek-V03-SYSTEMS",
+      "model_requested": "deepseek-flash",
+      "reasoning_requested": "low",
+      "thread_id": null,
+      "client_thread_id": null,
+      "host_id": null,
+      "status": "planned",
+      "github_review_identity": null,
+      "packet": null,
+      "input_commit": null,
+      "packet_sha256": null
+    }
+  ]
+}
