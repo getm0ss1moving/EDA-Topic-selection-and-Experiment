@@ -1,0 +1,18 @@
+[
+  {
+    "commit": "ac3207ec184c2f156f12e66024dd58199cec35b3",
+    "method": "Fresh git archive of complete tracked tree, no added directories",
+    "command": "python3 scripts/project.py validate",
+    "exit_code": 0,
+    "stdout": "Structural checks passed; scientific verification remains independent.\n",
+    "stderr": ""
+  },
+  {
+    "commit": "38fdcf02b1eed6a53fc27224cd209c6b4ba63c0c",
+    "method": "Fresh git archive of complete tracked tree, no added directories",
+    "command": "python3 scripts/project.py validate",
+    "exit_code": 0,
+    "stdout": "Structural checks passed; scientific verification remains independent.\n",
+    "stderr": ""
+  }
+]

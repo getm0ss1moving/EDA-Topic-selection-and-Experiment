@@ -36,7 +36,7 @@ Five assignments remain in scope; some failed on subscription quota. No automati
 
 ## Independent GitHub review
 
-`M0nitor-EDA` (GitHub user ID 341092537) is enrolled in `VERIFIER_LOGINS`. A write collaborator invitation was sent (invitation 337230623); acceptance and actual review remain pending. Write access supports GitHub's required review mechanism; no admin access was requested. This account is distinct from the PR author `getm0ss1moving`, but its scientific verifier session must still be bound to a file-based run and evidence record. A name in the allowlist is not an approval.
+`M0nitor-EDA` (GitHub user ID 341092537) is enrolled in `VERIFIER_LOGINS`. A write collaborator invitation was sent (invitation 337230623); acceptance was verified on 2026-10-11; actual approval remains pending. Write access supports GitHub's required review mechanism; no admin access was requested. This account is distinct from the PR author `getm0ss1moving`, but its scientific verifier session must still be bound to a file-based run and evidence record. A name in the allowlist is not an approval.
 
 After accepting the repository invitation, the reviewer examines the final diff and submits an APPROVE review with exactly `CONFIRM <full current head SHA>`. Any subsequent push requires a new confirmation. Never use the author's token to impersonate this account. PR #2's confirmation gate has been rerun with the registered identity and still requires a genuine review. PR #1, #3 and #2 form a stacked sequence; rebase/retarget and recheck each current head as preceding changes land.
 
