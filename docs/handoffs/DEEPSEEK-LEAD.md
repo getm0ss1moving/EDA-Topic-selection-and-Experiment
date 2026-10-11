@@ -1,0 +1,37 @@
+# Handoff to the DeepSeek platform lead
+
+You are the DeepSeek coordinator for the EDA Topic Selection and Experiment project. Read [the platform lead contract](PLATFORM-LEAD-CONTRACT.md), then `AGENTS.md`, `docs/CHARTER.md`, `docs/WORKFLOW.md`, `docs/EVIDENCE.md`, `docs/ISOLATION.md`, `docs/PHYSICAL-PILOT.md` and `harness/COORDINATOR.md`. Your job is to maintain independent, evidence-driven file exchanges—not to produce a simulated debate in one shared conversation.
+
+## Your current team
+
+Reuse these stable IDs from the existing DeepSeek roster:
+
+| Actor | Role | Assignment |
+|---|---|---|
+| DeepSeek-P04-PHYSICAL | Proposer | D04: floorplan, placement, CTS, routing |
+| DeepSeek-C04-PHYSICAL | Challenger | Independent D04 prior-art and failure analysis |
+| DeepSeek-P05-TIMING | Proposer | D05: extraction, STA, signoff methodology |
+| DeepSeek-C05-TIMING | Challenger | Independent D05 prior-art and validity analysis |
+| DeepSeek-V02-PHYSICAL | Shared verifier | D04/D05 queues, sequentially |
+
+Pause/archive the other 16 assignments in your own runtime and registry. Preserve their released files. Remove D06 from V02's current assignment without rewriting historical packet manifests. Do not silently change Codex's or Claude's task state.
+
+## Model policy clarification
+
+The user has now specified platform families: all DeepSeek proposers, challengers and verifiers must use DeepSeek models. The prior unresolved request to approve Flash in place of V4 Pro is superseded by this family rule. If your host exposes only `deepseek-flash`, it is an allowed family member for all three roles; document the actual configuration and its limitations. Do not state that an output was produced by `deepseek-v4-pro` unless the runtime proves that it was.
+
+Prefer your strongest affordable exposed DeepSeek option for proposers, medium-cost search/critique settings for challengers and lightweight bounded source checks for the verifier. Do not default every actor to maximum effort. If per-agent overrides do not exist, record that fact; do not invent a tier separation. Keep historical requested/actual model records intact and append the new policy resolution.
+
+## Reconcile existing onboarding before R1
+
+Your public PR #2 registry records the original 21-actor onboarding and a requested-versus-actual model discrepancy. Update its current allocation and policy through a PR. Do not retroactively relabel those runs as a stronger model or as completed research.
+
+Inspect the released packet manifests for unlisted assignment content and any disclosed context exposure. Put future `ASSIGNMENT.json` content in the hashed input inventory. For any contaminated scientific review, create a clean replacement session; do not dismiss the issue because the source was another agent on the same platform.
+
+Read the new research brief: resources are no longer wholly unspecified, but the GCD smoke is only infrastructure evidence. Macro-rich designs, representative benchmarks, additional corners and the relevant signoff oracle remain topic-dependent prerequisites. Replace historical onboarding packets with new immutable role-specific packets; do not mutate old packets in place.
+
+## Next delivery
+
+Submit an English update to `config/agents-deepseek.json`, your team/run documentation and the appropriate PR, recording five current assignments, observed model IDs, actual pause/archive state, packet hashes and isolation controls. Then prepare one bounded D04 proposal and one bounded D05 proposal when capacity permits, routing each through independent challenge and verification files under the shared contract. No accepted-topic promotion, self-approval or broad new actor wave.
+
+Coordinate across platforms only using released repository artifacts. Do not import Codex/Claude private conversations, imitate their hypotheses to manufacture agreement, or treat three platform votes as evidence. A cross-platform review still needs a new, independent verifier session with an explicit packet and claim-level source checks.
