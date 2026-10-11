@@ -169,6 +169,9 @@ def validate_topic(path, area, sessions):
                     'proposer and challenger must sign the same experiment revision')
             require(len(set(consensus_hashes)) == 1,
                     'proposer and challenger must sign the same experiment task list')
+            if len(set(consensus_revisions)) == 1:
+                require(revision_tasklist_digest(consensus_revisions[0], d['id']) == tasklist_hash,
+                        'experiment revision does not contain the consented task list')
             checked = v.get('source_checks', [])
             require(bool(checked), 'no independently checked sources')
             require(all(s.get('source_id') in ids and s.get('locator') and s.get('verdict') == 'verified' for s in checked), 'invalid source checks')
@@ -184,6 +187,8 @@ def validate_topic(path, area, sessions):
         if d['status'] == 'abandoned' or direction.get('state') == 'jointly_abandoned':
             require(area == 'archive' and d['status'] == 'abandoned',
                     'joint abandonment must be stored as archive/abandoned')
+            require(direction.get('state') == 'jointly_abandoned',
+                    'abandoned dossier requires jointly_abandoned direction state')
             abandonment = direction.get('abandonment', {})
             require(bool(abandonment.get('decision_id')), 'abandonment decision ID missing')
             grounds = abandonment.get('grounds', [])
@@ -191,9 +196,23 @@ def validate_topic(path, area, sessions):
                     'invalid abandonment grounds')
             require(bool(abandonment.get('rationale')) and bool(abandonment.get('evidence_refs')),
                     'abandonment requires rationale and evidence')
+            evidence_refs = abandonment.get('evidence_refs', [])
+            require(set(evidence_refs) <= ids, 'abandonment evidence references unknown sources')
+            verifier_sid = d.get('verifier_session')
+            require(verifier_sid in sessions and sessions[verifier_sid].get('role') == 'verifier',
+                    'abandonment verifier session not registered')
+            require(v.get('verifier_session') == verifier_sid,
+                    'abandonment verifier identity mismatch')
+            require(v.get('abandonment_process_checked') is True,
+                    'verifier did not check abandonment evidence and process')
+            verified_source_ids = {check.get('source_id') for check in v.get('source_checks', [])
+                                   if check.get('verdict') == 'verified' and check.get('locator')}
+            require(set(evidence_refs) <= verified_source_ids,
+                    'abandonment evidence lacks independent source verification')
             consents = abandonment.get('consents', {})
             people = []
             signed_revisions = []
+            signed_digests = []
             for role in ['proposer', 'challenger']:
                 consent = consents.get(role, {})
                 sid = consent.get('session_id')
@@ -202,11 +221,18 @@ def validate_topic(path, area, sessions):
                 require(re.fullmatch(r'[0-9a-f]{40}', str(consent.get('signed_revision', ''))),
                         f'{role} abandonment consent lacks a full signed revision')
                 signed_revisions.append(consent.get('signed_revision'))
+                signed_digests.append(consent.get('signed_dossier_digest'))
                 require(sid in sessions and sessions[sid].get('role') == role,
                         f'{role} abandonment session not registered')
             require(len(set(people)) == 2, 'abandonment requires distinct proposer and challenger')
             require(len(set(signed_revisions)) == 1,
                     'proposer and challenger must sign the same frozen revision')
+            require(len(set(signed_digests)) == 1 and
+                    re.fullmatch(r'[0-9a-f]{64}', str(signed_digests[0] or '')),
+                    'proposer and challenger must sign the same dossier digest')
+            if len(set(signed_revisions)) == 1 and len(set(signed_digests)) == 1:
+                require(revision_topic_digest(signed_revisions[0], d['id']) == signed_digests[0],
+                        'abandonment revision does not contain the consented dossier')
             successor = abandonment.get('successor_topic_id')
             require(successor is None or (bool(ID.fullmatch(str(successor))) and successor != d['id']),
                     'successor must be a distinct topic ID')
@@ -241,6 +267,50 @@ def validate(root=ROOT):
 
 def git(*args):
     return subprocess.check_output(['git', '-C', str(ROOT), *args])
+
+def revision_topic_blobs(ref, topic):
+    """Return one frozen topic tree as relative-path -> blob bytes, or None."""
+    try:
+        if git('cat-file', '-t', ref).decode().strip() != 'commit':
+            return None
+        matches = []
+        for area in ['candidates', 'topics', 'archive']:
+            prefix = f'{area}/{topic}/'
+            entries = git('ls-tree', '-r', '-z', ref, '--', prefix).split(b'\0')
+            blobs = {}
+            for entry in entries:
+                if not entry:
+                    continue
+                meta, rawname = entry.split(b'\t', 1)
+                mode, kind, oid = meta.decode().split()
+                name = rawname.decode()
+                if mode not in {'100644', '100755'} or kind != 'blob' or not name.startswith(prefix):
+                    return None
+                blobs[name[len(prefix):]] = git('cat-file', 'blob', oid)
+            if blobs:
+                matches.append(blobs)
+        return matches[0] if len(matches) == 1 else None
+    except (subprocess.CalledProcessError, UnicodeDecodeError, ValueError):
+        return None
+
+def revision_topic_digest(ref, topic):
+    blobs = revision_topic_blobs(ref, topic)
+    if blobs is None:
+        return None
+    h = hashlib.sha256()
+    for name in sorted(blobs):
+        if Path(name).name in {'verification.json', 'verification.md'}:
+            continue
+        rawname = name.encode()
+        body = blobs[name]
+        h.update(len(rawname).to_bytes(8, 'big') + rawname + len(body).to_bytes(8, 'big') + body)
+    return h.hexdigest()
+
+def revision_tasklist_digest(ref, topic):
+    blobs = revision_topic_blobs(ref, topic)
+    if blobs is None or 'tasklist.md' not in blobs:
+        return None
+    return hashlib.sha256(blobs['tasklist.md']).hexdigest()
 
 def export_packet(role, topic, ref, out, stage='initial', governance=False, evidence_runs=()):
     if evidence_runs and not governance:
