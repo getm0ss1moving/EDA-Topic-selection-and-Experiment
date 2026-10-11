@@ -11,6 +11,8 @@ A file-mediated research program for Agentic EDA, AI for EDA, and traditional ED
 5. Produce and contest evidence through PRs. Only confirmed dossiers enter `topics/`.
 6. Validate with `python3 scripts/project.py validate` and `python3 -m unittest discover -s tests -v`.
 
+Before confirming a topic or starting experiments, proposer and challenger must jointly finalize `tasklist.md` and separately bind its digest in `experiment-consensus.json`. Compute the digest with `python3 scripts/project.py tasklist-digest candidates/EDA-NNNN`.
+
 ## Project map
 
 | Path | Purpose |

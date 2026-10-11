@@ -99,6 +99,16 @@ class AcceptanceTests(DossierTests):
         for key in ['combination_drift','demand_drift']:
             direction['penalties'][key]['rationale']='No drift in fixture.'
         (self.d/'direction-control.json').write_text(json.dumps(direction))
+        tasklist_hash=p.file_sha256(self.d/'tasklist.md')
+        consensus=json.loads((self.d/'experiment-consensus.json').read_text())
+        consensus['status']='agreed'
+        consensus['tasklist_sha256']=tasklist_hash
+        consensus['readiness_checks']={key:True for key in consensus['readiness_checks']}
+        consensus['consents']['proposer']={'session_id':'p','decision':'agree','signed_revision':'a'*40,
+                                            'tasklist_sha256':tasklist_hash,'rationale':'Reasonable fixture plan.'}
+        consensus['consents']['challenger']={'session_id':'c','decision':'agree','signed_revision':'a'*40,
+                                              'tasklist_sha256':tasklist_hash,'rationale':'Reasonable fixture plan.'}
+        (self.d/'experiment-consensus.json').write_text(json.dumps(consensus))
         self.update('verification.json',decision='accept_for_pilot',verifier_session='v',gates={k:True for k in p.GATES},source_checks=[{'source_id':'SRC-001','locator':'Section 1','verdict':'verified'}],dossier_digest=p.digest(self.d))
         return {'p':{'role':'proposer'},'c':{'role':'challenger'},'v':{'role':'verifier'}}
     def test_valid_then_tampered(self):
@@ -118,6 +128,22 @@ class AcceptanceTests(DossierTests):
         (self.d/'direction-control.json').write_text(json.dumps(direction))
         self.update('verification.json',dossier_digest=p.digest(self.d))
         self.assertTrue(any('direction drift penalty' in e for e in p.validate_topic(self.d,'topics',sessions)))
+    def test_missing_experiment_consensus_blocks_promotion(self):
+        sessions=self.make_valid()
+        consensus=json.loads((self.d/'experiment-consensus.json').read_text())
+        consensus['status']='revision_requested'
+        consensus['consents']['challenger']['decision']='changes_requested'
+        (self.d/'experiment-consensus.json').write_text(json.dumps(consensus))
+        self.update('verification.json',dossier_digest=p.digest(self.d))
+        errors=p.validate_topic(self.d,'topics',sessions)
+        self.assertTrue(any('lacks proposer/challenger consensus' in e for e in errors))
+    def test_tasklist_edit_invalidates_experiment_consensus(self):
+        sessions=self.make_valid()
+        with (self.d/'tasklist.md').open('a') as stream:
+            stream.write('\n- [ ] EXP-010: New task after signatures.\n')
+        self.update('verification.json',dossier_digest=p.digest(self.d))
+        errors=p.validate_topic(self.d,'topics',sessions)
+        self.assertTrue(any('stale task list' in e for e in errors))
     def test_joint_abandonment_requires_two_consents(self):
         sessions=self.make_valid()
         self.update('dossier.json',status='abandoned')

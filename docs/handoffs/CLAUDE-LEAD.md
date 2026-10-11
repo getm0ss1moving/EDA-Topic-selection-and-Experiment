@@ -30,6 +30,8 @@ Use a separate worktree for coordination and one packet/outbox per actor. Disabl
 
 Start with packet validation and an English readiness record. Wait for the explicit governance-pause release before assigning candidates. After release, assign at most one candidate per domain, enforce the direction anchor and drift penalties, and use joint abandonment rather than forcing a replacement mechanism into the same topic. The challenger must make its own nearest-work/headroom assessment before seeing the proposer's forecast. The verifier receives released evidence, not either role's private reasoning. Follow the file-only cycle in the shared contract.
 
+Before topic confirmation or experiment scheduling, require the Claude proposer and challenger to co-produce and separately sign the exact final experiment task list. Any edit resets consensus; the verifier checks the gate but cannot supply either signature.
+
 ## Next delivery
 
 Return an English, versioned readiness report with actual model availability, five planned or real actor identities, role-to-domain mapping, isolation controls, packet provenance, shared-budget allocation and unresolved prerequisites. Submit it through a PR. Do not report sessions as launched until they have actually started, and do not report a GitHub review as independent merely because the actor has a different display name.

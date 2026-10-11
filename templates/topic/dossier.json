@@ -6,5 +6,6 @@
   "challenger_session": null,
   "verifier_session": null,
   "round": 0,
-  "direction_control": "direction-control.json"
+  "direction_control": "direction-control.json",
+  "experiment_consensus": "experiment-consensus.json"
 }

@@ -1,0 +1,31 @@
+{
+  "status": "pending",
+  "tasklist_sha256": null,
+  "readiness_checks": {
+    "dependencies": false,
+    "resources": false,
+    "baselines": false,
+    "metrics": false,
+    "correctness_oracle": false,
+    "stop_rules": false,
+    "owners": false,
+    "reproducible_procedures": false
+  },
+  "consents": {
+    "proposer": {
+      "session_id": null,
+      "decision": "pending",
+      "signed_revision": null,
+      "tasklist_sha256": null,
+      "rationale": null
+    },
+    "challenger": {
+      "session_id": null,
+      "decision": "pending",
+      "signed_revision": null,
+      "tasklist_sha256": null,
+      "rationale": null
+    }
+  },
+  "open_conditions": []
+}

@@ -24,6 +24,12 @@ For every mechanism or objective change, show whether the original problem, engi
 
 If the anchored topic no longer has a defensible innovative path, record the evidence-backed proposer position. Joint abandonment requires a matching challenger decision on the same frozen revision.
 
+## Final experiment task-list reconciliation
+
+- Challenger-required changes incorporated:
+- Remaining disagreements:
+- Exact task-list SHA-256 proposed for dual consent:
+
 ## Revision history
 
 TBD

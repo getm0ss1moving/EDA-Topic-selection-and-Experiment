@@ -26,6 +26,8 @@ Prefer your strongest affordable exposed DeepSeek option for proposers, medium-c
 
 Your public PR #2 registry records the original 21-actor onboarding and a requested-versus-actual model discrepancy. Update its current allocation and policy through a PR. Do not retroactively relabel those runs as a stronger model or as completed research.
 
+After the pause is released, require the DeepSeek proposer and challenger to co-produce and separately sign the exact final experiment task list before any topic confirmation or experiment scheduling. A verifier checks this consensus but does not create it.
+
 Inspect the released packet manifests for unlisted assignment content and any disclosed context exposure. Put future `ASSIGNMENT.json` content in the hashed input inventory. For any contaminated scientific review, create a clean replacement session; do not dismiss the issue because the source was another agent on the same platform.
 
 Read the new research brief: resources are no longer wholly unspecified, but the GCD smoke is only infrastructure evidence. Macro-rich designs, representative benchmarks, additional corners and the relevant signoff oracle remain topic-dependent prerequisites. Replace historical onboarding packets with new immutable role-specific packets; do not mutate old packets in place.
