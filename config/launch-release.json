@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "release_id": "PHYSICAL-ROLE-CREATION-0001",
+  "state": "ready_for_role_creation",
+  "scope_domains": [
+    "D04",
+    "D05"
+  ],
+  "topic_containers": {
+    "D04": "EDA-0001",
+    "D05": "EDA-0002"
+  },
+  "active_platforms": ["codex", "deepseek", "claude"],
+  "assignments": {
+    "EDA-0001": {
+      "domain": "D04",
+      "proposer": "Codex-P04-PHYSICAL",
+      "challenger": "DeepSeek-C04-PHYSICAL",
+      "verifier": "Claude-V02-PHYSICAL"
+    },
+    "EDA-0002": {
+      "domain": "D05",
+      "proposer": "Claude-P05-TIMING",
+      "challenger": "DeepSeek-C05-TIMING",
+      "verifier": "Codex-V02-PHYSICAL"
+    }
+  },
+  "released_actors": [
+    "Codex-P04-PHYSICAL",
+    "Claude-P05-TIMING",
+    "DeepSeek-C04-PHYSICAL",
+    "DeepSeek-C05-TIMING",
+    "Claude-V02-PHYSICAL",
+    "Codex-V02-PHYSICAL"
+  ],
+  "first_wave": [
+    "Codex-P04-PHYSICAL",
+    "Claude-P05-TIMING"
+  ],
+  "max_concurrent_scientific_sessions": 2,
+  "fresh_sessions_required": true,
+  "old_sessions_are_inputs": false,
+  "packet_ref_policy": "After this release is merged, export each packet from the resulting full main commit. Never reuse a historical packet or PR #4 output.",
+  "communication": "Files only through immutable packets and private outboxes; no role-to-role messages or shared memory.",
+  "research_sequence": [
+    "Create the Codex D04 proposer and Claude D05 proposer from separate frozen packets.",
+    "Commit each complete proposal before creating or releasing a challenger scientific packet.",
+    "Require each challenger to record an independent search and headroom estimate before receiving the proposer forecast.",
+    "Create the verifier session only after proposal and challenge artifacts are frozen and released.",
+    "Release only adjudicated objections back to the proposer."
+  ],
+  "platform_readiness": {
+    "codex": {
+      "state": "ready_after_merge_and_packet_export",
+      "models_verified": true,
+      "roles": ["D04 proposer", "D05 verifier"]
+    },
+    "deepseek": {
+      "state": "ready_after_merge_and_packet_export",
+      "models_verified": true,
+      "model_policy": "Use the observed deepseek-flash model for both challengers; record the actual host model and effort at creation.",
+      "roles": ["D04 challenger", "D05 challenger"]
+    },
+    "claude": {
+      "state": "ready_for_host_bound_creation",
+      "models_verified": false,
+      "model_policy": "Use only a Claude-family model exposed by the destination host. Record the exact model before the session receives scientific input; abort creation if no Claude model is exposed.",
+      "roles": ["D05 proposer", "D04 verifier"]
+    }
+  },
+  "experiment_authorization": false,
+  "experiment_blockers": [
+    "No accepted topic or agreed experiment task list exists.",
+    "Representative designs, macro-rich cases, additional corners and a qualified signoff oracle remain incomplete."
+  ]
+}

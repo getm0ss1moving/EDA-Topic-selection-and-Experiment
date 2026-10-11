@@ -248,6 +248,7 @@ def validate_topic(path, area, sessions):
 def validate(root=ROOT):
     errors = []
     errors.extend(validate_registry(root))
+    errors.extend(validate_launch_release(root))
     roles = read_json(root/'config/roles.json')
     sessions = {}
     for s in roles['sessions']:
@@ -267,6 +268,87 @@ def validate(root=ROOT):
                     errors.append(f'Duplicate dossier: {path.name}')
                 seen.add(path.name)
                 errors.extend(validate_topic(path, area, sessions))
+    return errors
+
+def validate_launch_release(root=ROOT):
+    """Validate an explicit role-creation release without claiming sessions exist."""
+    path = root/'config/launch-release.json'
+    if not path.is_file():
+        return []
+    errors = []
+    try:
+        release = read_json(path)
+        registries = [read_json(root/name) for name in
+                      ['config/agents.json','config/agents-deepseek.json','config/agents-claude.json']]
+        actor_list = [a for registry in registries for a in registry.get('actors', [])]
+        actors = {a.get('actor_id'): a for a in actor_list}
+        if len(actors) != len(actor_list):
+            errors.append('config/launch-release.json: actor IDs collide across platform registries')
+        released = release.get('released_actors')
+        first_wave = release.get('first_wave')
+        scopes = set(release.get('scope_domains', []))
+        if release.get('state') != 'ready_for_role_creation':
+            errors.append('config/launch-release.json: release is not ready_for_role_creation')
+        if scopes != {'D04', 'D05'}:
+            errors.append('config/launch-release.json: only D04/D05 may be released')
+        if release.get('topic_containers') != {'D04': 'EDA-0001', 'D05': 'EDA-0002'}:
+            errors.append('config/launch-release.json: physical topic-container mapping is invalid')
+        if not isinstance(released, list) or len(released) != 6 or len(set(released)) != 6:
+            errors.append('config/launch-release.json: exactly six distinct cross-platform actors must be released')
+            released = []
+        expected = {'Codex-P04-PHYSICAL', 'Claude-P05-TIMING',
+                    'DeepSeek-C04-PHYSICAL', 'DeepSeek-C05-TIMING',
+                    'Claude-V02-PHYSICAL', 'Codex-V02-PHYSICAL'}
+        if set(released) != expected:
+            errors.append('config/launch-release.json: released actor set does not match the cross-platform physical slice')
+        for actor_id in released:
+            actor = actors.get(actor_id)
+            if not actor:
+                errors.append(f'config/launch-release.json: unknown released actor {actor_id}')
+                continue
+            if actor.get('status') != 'ready_for_fresh_session' or actor.get('active_scope') is not True:
+                errors.append(f'config/launch-release.json: {actor_id} is not ready for fresh session creation')
+            if actor.get('fresh_session_required') is not True:
+                errors.append(f'config/launch-release.json: {actor_id} may accidentally reuse a historical session')
+            if not set(actor.get('domain_ids', [])).issubset(scopes):
+                errors.append(f'config/launch-release.json: {actor_id} exceeds released domains')
+            if not actor.get('model_requested') or not actor.get('reasoning_requested'):
+                errors.append(f'config/launch-release.json: {actor_id} lacks an explicit model/effort policy')
+        expected_assignments = {
+            'EDA-0001': {'domain':'D04','proposer':'Codex-P04-PHYSICAL',
+                         'challenger':'DeepSeek-C04-PHYSICAL','verifier':'Claude-V02-PHYSICAL'},
+            'EDA-0002': {'domain':'D05','proposer':'Claude-P05-TIMING',
+                         'challenger':'DeepSeek-C05-TIMING','verifier':'Codex-V02-PHYSICAL'}}
+        if release.get('assignments') != expected_assignments:
+            errors.append('config/launch-release.json: cross-platform assignment matrix is invalid')
+        else:
+            for topic, assignment in expected_assignments.items():
+                for role in ['proposer', 'challenger', 'verifier']:
+                    actor = actors.get(assignment[role], {})
+                    if actor.get('role') != role or assignment['domain'] not in actor.get('domain_ids', []):
+                        errors.append(f'config/launch-release.json: {topic} {role} registry binding is invalid')
+        if not isinstance(first_wave, list) or set(first_wave) != {'Codex-P04-PHYSICAL','Claude-P05-TIMING'}:
+            errors.append('config/launch-release.json: invalid first wave')
+        elif any(actors.get(a, {}).get('role') != 'proposer' for a in first_wave):
+            errors.append('config/launch-release.json: first wave must contain proposers only')
+        cap = release.get('max_concurrent_scientific_sessions')
+        if type(cap) is not int or not 1 <= cap <= 2:
+            errors.append('config/launch-release.json: concurrency cap must be one or two')
+        if release.get('fresh_sessions_required') is not True or release.get('old_sessions_are_inputs') is not False:
+            errors.append('config/launch-release.json: historical sessions must remain isolated')
+        if release.get('experiment_authorization') is not False:
+            errors.append('config/launch-release.json: role creation must not authorize experiments')
+        readiness = release.get('platform_readiness', {})
+        for platform in ['codex','deepseek']:
+            item = readiness.get(platform, {})
+            if item.get('state') != 'ready_after_merge_and_packet_export' or item.get('models_verified') is not True:
+                errors.append(f'config/launch-release.json: {platform} readiness is incomplete')
+        claude = readiness.get('claude', {})
+        if (claude.get('state') != 'ready_for_host_bound_creation' or
+                claude.get('models_verified') is not False or not claude.get('model_policy')):
+            errors.append('config/launch-release.json: Claude host-bound readiness policy is incomplete')
+    except (ValueError, KeyError, TypeError, AttributeError) as exc:
+        errors.append(f'config/launch-release.json: malformed data: {exc}')
     return errors
 
 def git(*args):
@@ -476,17 +558,24 @@ def validate_registry(root=ROOT):
     activation = read_json(path).get('activation')
     if activation:
         activation_state = activation.get('state', 'active')
-        if activation_state not in {'active', 'paused_governance'}:
+        if activation_state not in {'active', 'paused_governance', 'ready_for_role_creation'}:
             errors.append(f'config/agents-deepseek.json: unknown activation state {activation_state}')
         active = activation.get('active_actors')
         deferred = activation.get('deferred_actors')
         if not isinstance(active, list):
             errors.append('config/agents-deepseek.json: activation.active_actors must be a list')
             active = []
-        elif not active and activation_state != 'paused_governance':
-            errors.append('config/agents-deepseek.json: activation.active_actors may be empty only during paused_governance')
-        if activation_state == 'paused_governance' and activation.get('active_domains'):
-            errors.append('config/agents-deepseek.json: paused_governance cannot have active domains')
+        elif not active and activation_state == 'active':
+            errors.append('config/agents-deepseek.json: active state requires active actors')
+        if activation_state != 'active' and activation.get('active_domains'):
+            errors.append(f'config/agents-deepseek.json: {activation_state} cannot have active domains')
+        released = activation.get('released_actors', [])
+        if activation_state == 'ready_for_role_creation':
+            if not isinstance(released, list) or not released:
+                errors.append('config/agents-deepseek.json: role-creation release needs released actors')
+            for aid in released:
+                if aid not in by or by[aid].get('status') != 'ready_for_fresh_session':
+                    errors.append(f'config/agents-deepseek.json: released actor {aid} is not ready')
         if len(active) != len(set(active)):
             errors.append('config/agents-deepseek.json: duplicate active actor')
         for aid in active:

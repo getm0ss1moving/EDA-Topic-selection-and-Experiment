@@ -31,16 +31,16 @@ All research artifacts, role interactions, and technical reviews use English. Hu
 
 ## Current status
 
-The repository began empty. `main` contains a minimal trusted review-gate bootstrap; this framework is delivered as a PR. No topic, literature survey, experimental result, or scientific approval is claimed. `M0nitor-EDA` is enrolled as an independent GitHub review identity, but no review or scientific confirmation is implied by enrollment. See [deployment status](docs/DEPLOYMENT.md).
+The governance framework and platform allocations are on `main`. No topic, literature survey, experimental result, or scientific approval is claimed. `M0nitor-EDA` is enrolled as an independent GitHub review identity, but account enrollment is not scientific confirmation. The physical-slice role-creation release is recorded in `config/launch-release.json`: after that release is merged, six fresh cross-platform role sessions may be created in workflow order from packets exported at the resulting full `main` SHA.
 
-Two platform allocations exist on top of the shared `D01`-`D09` territories: [docs/TEAM.md](docs/TEAM.md) for the Codex platform and [docs/TEAM-DEEPSEEK.md](docs/TEAM-DEEPSEEK.md) for the DeepSeek platform. Both are governance artifacts awaiting independent review; neither is a survey result.
+The released D04/D05 assignment is documented separately for [Codex](docs/platforms/CODEX-PHYSICAL.md), [DeepSeek](docs/platforms/DEEPSEEK-PHYSICAL.md), and [Claude](docs/platforms/CLAUDE-PHYSICAL.md). These are execution contracts, not survey results.
 
 Repository: https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment
 
-## Assigned Codex team
+## Released physical team
 
-See [team allocation](docs/TEAM.md) for the role identities and `config/agents.json` for their model settings and runtime status. All scientific role conversations are paused during governance hardening.
+See [team allocation](docs/TEAM.md), the three platform documents above, and `config/agents*.json` for role identities and runtime status. Codex and Claude each supply one proposer and one cross-topic verifier; DeepSeek supplies both challengers. This does not resume archived historical sessions and does not authorize experiments.
 
-Current future scope and reproducible resource checks: [Physical pilot](docs/PHYSICAL-PILOT.md). Five Codex assignments remain planned for D04/D05, but the active actor count is zero; see [actor registry](config/agents.json).
+Current scope and reproducible resource checks: [Physical pilot](docs/PHYSICAL-PILOT.md). The first wave contains the D04 and D05 proposers only; challenger and verifier scientific inputs are released later in workflow order.
 
 Platform lead handoffs: [DeepSeek](docs/handoffs/DEEPSEEK-LEAD.md), [Claude](docs/handoffs/CLAUDE-LEAD.md), and the [shared coordinator contract](docs/handoffs/PLATFORM-LEAD-CONTRACT.md). These documents describe assignments; they do not by themselves launch or message external agents.

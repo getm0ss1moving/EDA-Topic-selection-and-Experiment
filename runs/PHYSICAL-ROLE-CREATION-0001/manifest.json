@@ -1,0 +1,37 @@
+{
+  "run_id": "PHYSICAL-ROLE-CREATION-0001",
+  "kind": "governance_role_creation_release",
+  "status": "awaiting_merge_and_post_merge_packet_export",
+  "scope_domains": ["D04", "D05"],
+  "released_platforms": ["codex", "deepseek", "claude"],
+  "released_actor_ids": [
+    "Codex-P04-PHYSICAL",
+    "Claude-P05-TIMING",
+    "DeepSeek-C04-PHYSICAL",
+    "DeepSeek-C05-TIMING",
+    "Claude-V02-PHYSICAL",
+    "Codex-V02-PHYSICAL"
+  ],
+  "assignments": {
+    "EDA-0001": {"domain": "D04", "proposer": "Codex-P04-PHYSICAL", "challenger": "DeepSeek-C04-PHYSICAL", "verifier": "Claude-V02-PHYSICAL"},
+    "EDA-0002": {"domain": "D05", "proposer": "Claude-P05-TIMING", "challenger": "DeepSeek-C05-TIMING", "verifier": "Codex-V02-PHYSICAL"}
+  },
+  "first_wave": ["Codex-P04-PHYSICAL", "Claude-P05-TIMING"],
+  "session_count_created": 0,
+  "scientific_output_paths": [],
+  "packet_export": {
+    "state": "pending_post_merge",
+    "ref_policy": "Use the full main SHA produced by merging this release; external immutable directories only."
+  },
+  "platform_creation_conditions": {
+    "codex": "record exact configured model and isolation before scientific input",
+    "deepseek": "record observed DeepSeek model and isolation; challenger packet waits for frozen proposal",
+    "claude": "record exact host-exposed Claude model and isolation; abort if no Claude-family model is exposed"
+  },
+  "experiment_authorization": false,
+  "notes": [
+    "This record authorizes role creation only after independent review and merge.",
+    "Historical sessions and PR #4 are excluded from scientific inputs.",
+    "Actual session IDs, model IDs, packet hashes and isolation attestations are recorded only after sessions are created."
+  ]
+}

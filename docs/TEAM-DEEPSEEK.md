@@ -69,7 +69,7 @@ The only planned post-release research slice is the physical-design and signoff 
 | D04 | Partitioning, floorplanning, macro and standard-cell placement, legalization, clock-tree synthesis, global and detailed routing | DeepSeek-P04-PHYSICAL | DeepSeek-C04-PHYSICAL | DeepSeek-V02-PHYSICAL | `EDA-0001` |
 | D05 | STA, multi-mode/multi-corner analysis, extraction, crosstalk and signal integrity, timing closure and ECO, signoff fidelity | DeepSeek-P05-TIMING | DeepSeek-C05-TIMING | DeepSeek-V02-PHYSICAL | `EDA-0002` |
 
-No scientific actor is currently active. All 21 actors are in the deferred partition while governance hardening is in progress. The five D04/D05 actors are marked `paused_governance`; the other sixteen remain budget-deferred as well. The historical `DSK-R1-READY` records show that packets were prepared at an earlier revision; they do not authorize launch and are superseded by the current hold.
+No scientific actor is currently active. The cross-platform release permits creation of only `DeepSeek-C04-PHYSICAL` and `DeepSeek-C05-TIMING`, both as challengers after their corresponding proposals are frozen. Every DeepSeek proposer and verifier remains deferred, as do all non-D04/D05 actors. The historical `DSK-R1-READY` records show that packets were prepared at an earlier revision; they do not authorize launch and are superseded by the current release matrix.
 
 Budget deferral is a resourcing decision, not a scientific judgement: it says nothing about whether D01, D02, D03, D06, D07, D08 or D09 contain better problems. Deferred actors keep their identity, domain binding, packet and onboarding record, so releasing them later needs no reassignment and no new identity.
 
@@ -119,7 +119,7 @@ Stronger isolation requires separate containers or accounts with only the packet
 
 Each task's first turn is bounded onboarding: verify every listed packet file hash, adopt the role, and write `readiness.json` plus a domain-specific `first-pass-plan.md`. Do not start 21 unbounded searches merely to instantiate the tasks. A later direct human request or released file packet starts a research round.
 
-`config/research-brief.json` is unfilled: compute, tools, PDKs, designs, target venue, primary metric and minimum meaningful effect are all unknown. Until the human owner supplies them, actors must record those constraints as unknown, must not invent tool access, baselines or acceptance thresholds, and must list resolving them as tasks. A landscape survey may proceed; an experiment-ready topic may not be declared feasible on unknown resources.
+`config/research-brief.json` now records a measured local smoke path and provisional coordinator caps, metrics and thresholds. It does not establish representative publication designs, macro-floorplanning coverage, multi-corner signoff or practitioner-validated effect sizes. Actors must preserve those limitations and may not promote a topic or start experiments until the dossier-specific feasibility and consensus gates pass.
 
 ## Status
 

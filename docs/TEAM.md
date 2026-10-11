@@ -2,9 +2,11 @@
 
 This allocation creates nine EDA survey territories, each with one proposer and one challenger, plus three shared verifiers: 21 independent tasks in total. Names use the stable platform prefix `Codex`, role letter `P`/`C`/`V`, numeric identity and domain suffix. These are identities, not credentials. Other AI platforms must use their own platform prefixes and must not reuse these IDs.
 
-## Current paused allocation
+## Physical-slice role-creation release
 
-The user narrowed the eventual research scope to floorplanning, placement, CTS, routing and signoff, then paused all scientific role conversations until governance tooling and constraints are reviewed. Codex-P04-PHYSICAL, Codex-C04-PHYSICAL, Codex-P05-TIMING, Codex-C05-TIMING and Codex-V02-PHYSICAL are the only planned assignments in that future scope, but all five are currently archived and inactive. Their released files remain historical records. Do not resume them or create replacements without an explicit pause release. During governance hardening, at most one synthetic test role may exist at a time; its output cannot be treated as scientific evidence.
+The user narrowed the research scope to floorplanning, placement, CTS, routing and signoff, then paused scientific conversations until governance tooling and constraints were reviewed. `config/launch-release.json` is the explicit cross-platform release for role creation. The released identities are `Codex-P04-PHYSICAL`, `Claude-P05-TIMING`, `DeepSeek-C04-PHYSICAL`, `DeepSeek-C05-TIMING`, `Claude-V02-PHYSICAL`, and `Codex-V02-PHYSICAL`. Their old sessions and packets remain archived historical records and may not be resumed or used as input. Create fresh sessions from new packets exported at the full post-merge `main` SHA.
+
+Role creation is not simultaneous scientific release. The first wave contains the Codex D04 proposer and Claude D05 proposer. DeepSeek challenger scientific packets are created only after proposals are committed and frozen. Claude verifies D04 and Codex verifies D05 only after the relevant proposal and challenge artifacts exist. At most two scientific sessions run concurrently. No experiment is authorized by this release.
 
 Platform families are fixed: Codex uses GPT, DeepSeek uses DeepSeek, Claude uses Claude. Actual model IDs must be recorded. DeepSeek Flash is permitted under the user's family rule; it must never be reported as V4 Pro.
 
@@ -30,6 +32,13 @@ These are workload choices, not measured EDA benchmark rankings or price guarant
 | D08 Packaging, chiplets and 3D systems | Codex-P08-CHIPLETS | Codex-C08-CHIPLETS | Codex-V03-SYSTEMS |
 | D09 Agentic EDA and flow orchestration | Codex-P09-AGENTIC | Codex-C09-AGENTIC | Codex-V03-SYSTEMS |
 
+The table above preserves the full Codex identity namespace. For the active physical slice, the binding in `config/launch-release.json` overrides its D04/D05 rows:
+
+| Topic | Territory | Proposer | Challenger | Verifier |
+|---|---|---|---|---|
+| EDA-0001 | D04 floorplan, placement, CTS, routing | Codex-P04-PHYSICAL | DeepSeek-C04-PHYSICAL | Claude-V02-PHYSICAL |
+| EDA-0002 | D05 extraction, STA, signoff | Claude-P05-TIMING | DeepSeek-C05-TIMING | Codex-V02-PHYSICAL |
+
 ## Startup and cost control
 
 Each task initially verifies its packet, adopts its role, and writes a readiness record and a domain-specific first-pass plan. Do not start 21 unbounded searches just to instantiate the tasks. Further research rounds use explicit bounded file assignments. Domain scoping is preliminary and may be split after evidence shows the bottlenecks.
@@ -44,4 +53,4 @@ Use fresh project worktrees and frozen actor packets. Do not fork conversations.
 
 Tasks write only their own outbox and return paths. The coordinator transports released files, not chat summaries or hidden reasoning. Neither a task ID nor the user's shared GitHub credential constitutes an independent GitHub reviewer. `github_review_identity` stays null until separately enrolled; this does not prevent research onboarding, but still prevents approved merging.
 
-Project governance is still under PR review. These tasks may use its frozen draft for onboarding; that is not acceptance of the draft or permission to merge scientific topics. The agents may flag governance issues in their own output files.
+Project governance has been reviewed and merged. Every fresh role still starts from an immutable packet and must record the actual model, packet hash, full input commit and isolation controls in `config/roles.json`. The agents may flag governance issues in their own output files.

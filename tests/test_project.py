@@ -188,6 +188,58 @@ class DomainOnboardingTests(unittest.TestCase):
     def test_live_allocation_matches_domain_briefs(self):
         self.assertEqual(p.validate_registry(LIVE_ROOT),[])
 
+class LaunchReleaseTests(unittest.TestCase):
+    def setUp(self):
+        self.tmp=tempfile.TemporaryDirectory();self.addCleanup(self.tmp.cleanup)
+        self.root=Path(self.tmp.name);(self.root/'config').mkdir()
+        specs={
+            'agents.json':[
+                ('Codex-P04-PHYSICAL','proposer',['D04']),
+                ('Codex-V02-PHYSICAL','verifier',['D04','D05'])],
+            'agents-deepseek.json':[
+                ('DeepSeek-C04-PHYSICAL','challenger',['D04']),
+                ('DeepSeek-C05-TIMING','challenger',['D05'])],
+            'agents-claude.json':[
+                ('Claude-P05-TIMING','proposer',['D05']),
+                ('Claude-V02-PHYSICAL','verifier',['D04','D05'])]}
+        actors=[]
+        for filename, rows in specs.items():
+            registry=[]
+            for actor_id,role,domains in rows:
+                actor={'actor_id':actor_id,'role':role,'domain_ids':domains,
+                           'status':'ready_for_fresh_session','active_scope':True,
+                           'fresh_session_required':True,
+                           'model_requested':'fixture-model','reasoning_requested':'fixture-effort'}
+                registry.append(actor);actors.append(actor)
+            (self.root/f'config/{filename}').write_text(json.dumps({'actors':registry}))
+        self.release={
+            'state':'ready_for_role_creation','scope_domains':['D04','D05'],
+            'topic_containers':{'D04':'EDA-0001','D05':'EDA-0002'},
+            'assignments':{
+                'EDA-0001':{'domain':'D04','proposer':'Codex-P04-PHYSICAL','challenger':'DeepSeek-C04-PHYSICAL','verifier':'Claude-V02-PHYSICAL'},
+                'EDA-0002':{'domain':'D05','proposer':'Claude-P05-TIMING','challenger':'DeepSeek-C05-TIMING','verifier':'Codex-V02-PHYSICAL'}},
+            'released_actors':[a['actor_id'] for a in actors],
+            'first_wave':['Codex-P04-PHYSICAL','Claude-P05-TIMING'],
+            'max_concurrent_scientific_sessions':2,'fresh_sessions_required':True,
+            'old_sessions_are_inputs':False,'experiment_authorization':False,
+            'platform_readiness':{
+                'codex':{'state':'ready_after_merge_and_packet_export','models_verified':True},
+                'deepseek':{'state':'ready_after_merge_and_packet_export','models_verified':True},
+                'claude':{'state':'ready_for_host_bound_creation','models_verified':False,
+                          'model_policy':'use host-exposed Claude family'}}}
+        self.path=self.root/'config/launch-release.json'
+        self.path.write_text(json.dumps(self.release))
+    def test_valid_release(self):
+        self.assertEqual(p.validate_launch_release(self.root),[])
+    def test_historical_session_reuse_is_rejected(self):
+        self.release['old_sessions_are_inputs']=True
+        self.path.write_text(json.dumps(self.release))
+        self.assertTrue(any('historical sessions' in e for e in p.validate_launch_release(self.root)))
+    def test_nonphysical_actor_is_rejected(self):
+        self.release['released_actors'][0]='Codex-P01-ARCH'
+        self.path.write_text(json.dumps(self.release))
+        self.assertTrue(any('physical slice' in e for e in p.validate_launch_release(self.root)))
+
 if __name__=='__main__':unittest.main()
 
 class AcceptanceTests(DossierTests):
