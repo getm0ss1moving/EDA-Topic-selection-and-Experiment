@@ -14,7 +14,7 @@ Use the following platform-qualified IDs, unless an existing Claude registry alr
 | Claude-C05-TIMING | Challenger | Independent D05 prior-art and validity analysis |
 | Claude-V02-PHYSICAL | Shared verifier | D04/D05 queues, sequentially |
 
-These are proposed identities, not a claim that Claude sessions already exist. Create separate fresh sessions only within the user's current scope and available quota. Five logical actors do not require five simultaneous model calls. Do not recreate nine-domain/21-actor onboarding. Pause any existing out-of-scope Claude assignments without deleting their outputs.
+These are proposed identities, not a claim that Claude sessions already exist. Do not create scientific sessions while the governance pause is active. If an infrastructure test is indispensable, create only one synthetic test role, archive it before any later test, and do not use its output as a topic claim. Five logical actors never require five simultaneous model calls. Do not recreate nine-domain/21-actor onboarding. Pause existing Claude assignments without deleting their outputs.
 
 ## Model selection on your host
 
@@ -28,7 +28,7 @@ Create a platform-owned registry such as `config/agents-claude.json`, a team doc
 
 Use a separate worktree for coordination and one packet/outbox per actor. Disable cross-session memory. Do not fork this coordinator's conversation into scientific actors. Export only common policies, the actor's own harness, its assigned brief and the released evidence for that stage; include generated assignment files in the manifest. The Codex-specific onboarding exporter does not automatically load a Claude registry, so adapt it through reviewed governance or use validated generic dossier packets.
 
-Start with packet validation and an English readiness record. Then assign at most one candidate per domain. The proposer may research gaps before every experiment dependency is resolved, but must label feasibility as conditional. The challenger must make its own nearest-work/headroom assessment before seeing the proposer's forecast. The verifier receives released evidence, not either role's private reasoning. Follow the file-only cycle in the shared contract.
+Start with packet validation and an English readiness record. Wait for the explicit governance-pause release before assigning candidates. After release, assign at most one candidate per domain, enforce the direction anchor and drift penalties, and use joint abandonment rather than forcing a replacement mechanism into the same topic. The challenger must make its own nearest-work/headroom assessment before seeing the proposer's forecast. The verifier receives released evidence, not either role's private reasoning. Follow the file-only cycle in the shared contract.
 
 ## Next delivery
 

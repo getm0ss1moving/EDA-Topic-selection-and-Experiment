@@ -24,6 +24,10 @@ TBD
 
 TBD
 
+## Direction anchor and prohibited pivots
+
+Record the fixed problem, engineering user, downstream need, causal mechanism and mechanism invariants in `direction-control.json`. A response to criticism may narrow assumptions or repair the same mechanism. It must not replace the contribution with a straightforward prior-method combination, change to an unsupported proxy objective, or invent a different user need under the same topic ID.
+
 ## Structural or nontrivial combination contribution
 
 TBD
@@ -41,5 +45,9 @@ TBD
 TBD
 
 ## Known unknowns and kill criteria
+
+TBD
+
+## Abandonment conditions
 
 TBD

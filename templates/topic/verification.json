@@ -8,8 +8,11 @@
     "utility": false,
     "contest_originality": false,
     "headroom": false,
-    "feasibility": false
+    "feasibility": false,
+    "direction_integrity": false
   },
+  "direction_penalty_checked": false,
+  "abandonment_process_checked": false,
   "source_checks": [],
   "objections": []
 }

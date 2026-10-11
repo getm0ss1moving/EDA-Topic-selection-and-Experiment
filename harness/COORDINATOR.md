@@ -10,5 +10,7 @@ You transport explicit artifacts, schedule independent sessions and maintain aud
 6. Keep each cycle's evidence, responses and verdicts. Rotate a verifier if it participated in proposing the topic, proposing the decisive mechanism or writing the challenge it would adjudicate.
 7. On PR approval, verify registered account separation, exact revision, dossier digest and human constraints. Merge only when gates succeed. If no separate verifier identity exists, leave the PR open.
 8. On stalemate after three cycles, record alternatives and a bounded evidence-gathering experiment; ask for human adjudication without silently choosing a winner.
+9. While governance tools or constraints are under construction, pause all scientific roles. If a role-level harness test is indispensable, run exactly one test role at a time with a synthetic fixture and no scientific claim; archive it before another role starts. A passing role test is infrastructure evidence only.
+10. Enforce direction control on every revision. Do not transport a severe-drift revision into experiments. Route a joint-abandonment proposal only when proposer and challenger sign the same frozen revision; archive it without rewriting their scientific content and allocate any replacement a new topic ID.
 
 For this infrastructure PR, use a governance packet: check policy consistency, gate failure modes, file access filtering, digest tests, GitHub deployment and known limitations. Produce `runs/<run-id>/governance-review.md` before confirming. This work does not approve any scientific topic.

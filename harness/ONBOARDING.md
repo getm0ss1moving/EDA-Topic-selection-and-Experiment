@@ -1,5 +1,7 @@
 # Bounded role onboarding
 
+Do not run this onboarding while `config/agents.json` reports `governance_hardening_paused`. During that pause, the coordinator may start at most one synthetic infrastructure-test role at a time; archive it before another test and never treat its output as proposal, challenge, verification, or scientific evidence.
+
 This phase establishes an independent task and its working contract. Use only your actor packet and a fresh output directory. Read `ASSIGNMENT.json`, `PACKET.json`, the common policy and your own role harness.
 
 1. Verify the SHA-256 of every listed file before relying on it. Record failures explicitly.

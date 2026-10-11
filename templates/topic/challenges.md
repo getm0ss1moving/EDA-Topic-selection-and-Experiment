@@ -20,6 +20,14 @@ TBD
 
 TBD
 
+## Direction-drift assessment
+
+Independently score combination drift and demand drift from 0 to 3 using the project rubric. A suggested repair must preserve the anchored problem, engineering need and causal mechanism; otherwise propose a new topic ID rather than steering this dossier into a replacement topic.
+
+## Joint-abandonment position
+
+State `continue`, `abandonment_proposed`, or `agree_to_abandon`, with evidence for any claim of exhausted novelty, theoretical saturation, dead end, or immutable direction block.
+
 ## Revision and withdrawal history
 
 TBD

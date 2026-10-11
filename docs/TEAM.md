@@ -2,9 +2,9 @@
 
 This allocation creates nine EDA survey territories, each with one proposer and one challenger, plus three shared verifiers: 21 independent tasks in total. Names use the stable platform prefix `Codex`, role letter `P`/`C`/`V`, numeric identity and domain suffix. These are identities, not credentials. Other AI platforms must use their own platform prefixes and must not reuse these IDs.
 
-## Current active allocation
+## Current paused allocation
 
-The user narrowed the active scope to floorplanning, placement, CTS, routing and signoff. Only Codex-P04-PHYSICAL, Codex-C04-PHYSICAL, Codex-P05-TIMING, Codex-C05-TIMING and Codex-V02-PHYSICAL remain active assignments. The other 16 tasks are archived, preserving their files. V02 currently covers D04/D05 only. Active assignment does not mean an inference is running: see the registry for quota failures. Do not resume archived actors or create per-stage duplicates without a new instruction.
+The user narrowed the eventual research scope to floorplanning, placement, CTS, routing and signoff, then paused all scientific role conversations until governance tooling and constraints are reviewed. Codex-P04-PHYSICAL, Codex-C04-PHYSICAL, Codex-P05-TIMING, Codex-C05-TIMING and Codex-V02-PHYSICAL are the only planned assignments in that future scope, but all five are currently archived and inactive. Their released files remain historical records. Do not resume them or create replacements without an explicit pause release. During governance hardening, at most one synthetic test role may exist at a time; its output cannot be treated as scientific evidence.
 
 Platform families are fixed: Codex uses GPT, DeepSeek uses DeepSeek, Claude uses Claude. Actual model IDs must be recorded. DeepSeek Flash is permitted under the user's family rule; it must never be reported as V4 Pro.
 
