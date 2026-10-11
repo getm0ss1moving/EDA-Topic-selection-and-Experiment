@@ -1,9 +1,16 @@
 {
   "run_id": "PHYSICAL-ROLE-CREATION-0001",
   "kind": "governance_role_creation_release",
-  "status": "awaiting_merge_and_post_merge_packet_export",
-  "scope_domains": ["D04", "D05"],
-  "released_platforms": ["codex", "deepseek", "claude"],
+  "status": "first_wave_packets_exported",
+  "scope_domains": [
+    "D04",
+    "D05"
+  ],
+  "released_platforms": [
+    "codex",
+    "deepseek",
+    "claude"
+  ],
   "released_actor_ids": [
     "Codex-P04-PHYSICAL",
     "Claude-P05-TIMING",
@@ -13,15 +20,49 @@
     "Codex-V02-PHYSICAL"
   ],
   "assignments": {
-    "EDA-0001": {"domain": "D04", "proposer": "Codex-P04-PHYSICAL", "challenger": "DeepSeek-C04-PHYSICAL", "verifier": "Claude-V02-PHYSICAL"},
-    "EDA-0002": {"domain": "D05", "proposer": "Claude-P05-TIMING", "challenger": "DeepSeek-C05-TIMING", "verifier": "Codex-V02-PHYSICAL"}
+    "EDA-0001": {
+      "domain": "D04",
+      "proposer": "Codex-P04-PHYSICAL",
+      "challenger": "DeepSeek-C04-PHYSICAL",
+      "verifier": "Claude-V02-PHYSICAL"
+    },
+    "EDA-0002": {
+      "domain": "D05",
+      "proposer": "Claude-P05-TIMING",
+      "challenger": "DeepSeek-C05-TIMING",
+      "verifier": "Codex-V02-PHYSICAL"
+    }
   },
-  "first_wave": ["Codex-P04-PHYSICAL", "Claude-P05-TIMING"],
+  "first_wave": [
+    "Codex-P04-PHYSICAL",
+    "Claude-P05-TIMING"
+  ],
   "session_count_created": 0,
   "scientific_output_paths": [],
   "packet_export": {
-    "state": "pending_post_merge",
-    "ref_policy": "Use the full main SHA produced by merging this release; external immutable directories only."
+    "state": "completed",
+    "input_commit": "d437c2f660906efe9351a90451905826d00b63e3",
+    "ref_policy": "Full post-merge main commit; external immutable directories only.",
+    "packets": [
+      {
+        "actor_id": "Codex-P04-PHYSICAL",
+        "topic": "EDA-0001",
+        "stage": "initial",
+        "file_count": 31,
+        "packet_sha256": "aebf88b6238def212eef99a83ec638a4b9de85e28f9fd91fa171919e7c501010",
+        "packet_path": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/physical-release-d437c2f66090/Codex-P04-PHYSICAL",
+        "outbox": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/physical-release-d437c2f66090/Codex-P04-PHYSICAL"
+      },
+      {
+        "actor_id": "Claude-P05-TIMING",
+        "topic": "EDA-0002",
+        "stage": "initial",
+        "file_count": 31,
+        "packet_sha256": "ff20816f623585d4bf7ba7b13d79db58aab90a2e947cd05c719cd93f3574602d",
+        "packet_path": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/physical-release-d437c2f66090/Claude-P05-TIMING",
+        "outbox": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/physical-release-d437c2f66090/Claude-P05-TIMING"
+      }
+    ]
   },
   "platform_creation_conditions": {
     "codex": "record exact configured model and isolation before scientific input",
@@ -32,6 +73,7 @@
   "notes": [
     "This record authorizes role creation only after independent review and merge.",
     "Historical sessions and PR #4 are excluded from scientific inputs.",
-    "Actual session IDs, model IDs, packet hashes and isolation attestations are recorded only after sessions are created."
+    "Actual session IDs, model IDs, packet hashes and isolation attestations are recorded only after sessions are created.",
+    "Every PACKET.json entry and the PACKET.json digest were recomputed after export; no role session was created."
   ]
 }
