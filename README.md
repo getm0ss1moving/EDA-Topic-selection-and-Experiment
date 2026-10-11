@@ -38,3 +38,5 @@ Repository: https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment
 See [team allocation](docs/TEAM.md) for nine proposer/challenger pairs and three shared verifiers, and `config/agents.json` for task identities and model settings. These roles start with bounded onboarding and independent search plans.
 
 Current limited scope and reproducible resource checks: [Physical pilot](docs/PHYSICAL-PILOT.md). Only five Codex assignments remain active; see [actor registry](config/agents.json).
+
+Platform lead handoffs: [DeepSeek](docs/handoffs/DEEPSEEK-LEAD.md), [Claude](docs/handoffs/CLAUDE-LEAD.md), and the [shared coordinator contract](docs/handoffs/PLATFORM-LEAD-CONTRACT.md). These documents describe assignments; they do not by themselves launch or message external agents.
