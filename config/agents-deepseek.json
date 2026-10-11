@@ -313,7 +313,7 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "onboarded",
+      "status": "ready_to_launch",
       "github_review_identity": null,
       "packet": null,
       "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
@@ -345,7 +345,28 @@
           "detail": "Scientific input is confined to the frozen packet. However, this session's operator scaffolding inserted unlisted operational text before the packet was read: (a) the host instruction block naming the EDA-Topic-selection-and-Experiment shared checkout and its absolute path; (b) the EDA-Topic-selection-DeepSeek worktree path; (c) a DeepSeek Harness 'dsh-super-injector' / dev_* capability notice unrelated to D04; (d) a skill catalog; (e) the team-lead routing header naming the lead teammate handle. Additionally, the packet's own runs/DSK-ALLOC-0001/manifest.json is a listed file and contains a coordinator contamination note about a concurrent Codex-platform commit and the worktree path. No file was read from any other actor's outbox, no other role harness was read, no parent conversation, shared memory, hidden branch or agent message was opened, and no scientific artifact of another role was inspected. The listed-but-not-required policy files (docs/DEPLOYMENT.md, docs/EXPERIMENTS.md, docs/FORMATS.md, docs/GITHUB.md, docs/LAUNCH.md, docs/TEAM.md, config/agents.json, scripts/project.py, README.md, domains/D04/README.md, runs/DSK-ALLOC-0001/manifest.json) were only grep-scanned for the outbox/launch convention, not mined for scientific content. Net assessment: no cross-role or cross-language scientific contamination; one operational path-name disclosure, disclosed here rather than denied."
         }
       },
-      "activation": "active"
+      "activation": "active",
+      "launch_readiness": {
+        "run_id": "DSK-R1-READY",
+        "state": "ready_to_launch",
+        "input_commit": "4b9452e84b3caf57bb5c97ab37039a096ace3643",
+        "r1_packets": [
+          {
+            "dir": "DeepSeek-P04-PHYSICAL__EDA-0001",
+            "packet_sha256": "965dc154e5b44bff69cdf7bc43d07617cea9f38d15be341bfd8582d7702e4233",
+            "files": 47
+          },
+          {
+            "dir": "DeepSeek-P04-PHYSICAL__D04",
+            "packet_sha256": "489df170d68b664968ea7138777595ca83581c8187886e3eaed4433c57c61365",
+            "files": 41
+          }
+        ],
+        "topic_containers": [
+          "EDA-0001"
+        ],
+        "blocked_by": "github_independent_review_not_passed"
+      }
     },
     {
       "actor_id": "DeepSeek-C04-PHYSICAL",
@@ -361,7 +382,7 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "onboarded",
+      "status": "ready_to_launch",
       "github_review_identity": null,
       "packet": null,
       "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
@@ -390,7 +411,23 @@
         "verdict_state": "onboarding_complete",
         "unlisted_context_exposed": false
       },
-      "activation": "active"
+      "activation": "active",
+      "launch_readiness": {
+        "run_id": "DSK-R1-READY",
+        "state": "ready_to_launch",
+        "input_commit": "4b9452e84b3caf57bb5c97ab37039a096ace3643",
+        "r1_packets": [
+          {
+            "dir": "DeepSeek-C04-PHYSICAL__D04",
+            "packet_sha256": "4b7e1087b05bd7429db0f4f0c1c90982190978cfdea12b9bbe2bcedcea123283",
+            "files": 41
+          }
+        ],
+        "topic_containers": [
+          "EDA-0001"
+        ],
+        "blocked_by": "github_independent_review_not_passed"
+      }
     },
     {
       "actor_id": "DeepSeek-P05-TIMING",
@@ -406,7 +443,7 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "onboarded",
+      "status": "ready_to_launch",
       "github_review_identity": null,
       "packet": null,
       "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
@@ -445,7 +482,28 @@
           ]
         }
       },
-      "activation": "active"
+      "activation": "active",
+      "launch_readiness": {
+        "run_id": "DSK-R1-READY",
+        "state": "ready_to_launch",
+        "input_commit": "4b9452e84b3caf57bb5c97ab37039a096ace3643",
+        "r1_packets": [
+          {
+            "dir": "DeepSeek-P05-TIMING__EDA-0002",
+            "packet_sha256": "aa72a303f3ab0db25a70c4ef03740f5f2ef6a75e77569d12ee5583c3ec88c011",
+            "files": 47
+          },
+          {
+            "dir": "DeepSeek-P05-TIMING__D05",
+            "packet_sha256": "193a5baa3bf89ac1de5895cdd1dfe7b7057c1f79b24fab36bbf6429a61a88649",
+            "files": 41
+          }
+        ],
+        "topic_containers": [
+          "EDA-0002"
+        ],
+        "blocked_by": "github_independent_review_not_passed"
+      }
     },
     {
       "actor_id": "DeepSeek-C05-TIMING",
@@ -461,7 +519,7 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "onboarded",
+      "status": "ready_to_launch",
       "github_review_identity": null,
       "packet": null,
       "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
@@ -493,7 +551,23 @@
           "detail": "No file outside the packet allowlist was opened, and no content belonging to another actor, another role, another domain, another session or any shared memory was read. One disclosure for auditability: a single `ls -la` of the parent outbox directory (/Users/duanzeyu/Documents/ChatGPT/eda-dsk/outbox/) returned directory NAMES only for sibling actor outboxes (DeepSeek-C01..C09, P01..P09, V01..V03). No sibling outbox contents were listed or opened, and the challenge/plan below is not informed by them. I did not read, and did not attempt to read: another role harness, another domain brief, another actor's outbox content, any transcript or chain-of-thought, any shared agent memory, or any repository worktree outside this packet."
         }
       },
-      "activation": "active"
+      "activation": "active",
+      "launch_readiness": {
+        "run_id": "DSK-R1-READY",
+        "state": "ready_to_launch",
+        "input_commit": "4b9452e84b3caf57bb5c97ab37039a096ace3643",
+        "r1_packets": [
+          {
+            "dir": "DeepSeek-C05-TIMING__D05",
+            "packet_sha256": "0f34813d8166a7c59ab9fe621f97a991004288250207f56129e21d72d04b6b4d",
+            "files": 41
+          }
+        ],
+        "topic_containers": [
+          "EDA-0002"
+        ],
+        "blocked_by": "github_independent_review_not_passed"
+      }
     },
     {
       "actor_id": "DeepSeek-P06-RELIABILITY",
@@ -1007,7 +1081,7 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "onboarded",
+      "status": "ready_to_launch",
       "github_review_identity": null,
       "packet": null,
       "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
@@ -1065,7 +1139,29 @@
           ]
         }
       },
-      "activation": "active"
+      "activation": "active",
+      "launch_readiness": {
+        "run_id": "DSK-R1-READY",
+        "state": "ready_to_launch",
+        "input_commit": "4b9452e84b3caf57bb5c97ab37039a096ace3643",
+        "r1_packets": [
+          {
+            "dir": "DeepSeek-V02-PHYSICAL__D04",
+            "packet_sha256": "dc093d9da2e197bb07283771c5db6ef7b179bd95dfb0e43cc6ad387e42f4586a",
+            "files": 41
+          },
+          {
+            "dir": "DeepSeek-V02-PHYSICAL__D05",
+            "packet_sha256": "1ce23a416e24bd56465b6e050c7ae1a94228cc48f8a5fd7fa5a7c7f5c6da99f4",
+            "files": 41
+          }
+        ],
+        "topic_containers": [
+          "EDA-0001",
+          "EDA-0002"
+        ],
+        "blocked_by": "github_independent_review_not_passed"
+      }
     },
     {
       "actor_id": "DeepSeek-V03-SYSTEMS",

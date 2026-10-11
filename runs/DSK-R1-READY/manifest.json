@@ -1,0 +1,169 @@
+{
+  "run_id": "DSK-R1-READY",
+  "session_id": "session-780334ea-950c-481d-8a0a-1f439380c022",
+  "role": "coordinator",
+  "platform": "DeepSeek",
+  "stage": "launch_readiness",
+  "input_commit": "4b9452e84b3caf57bb5c97ab37039a096ace3643",
+  "packet_sha256": null,
+  "model": "deepseek-flash",
+  "operator": "getm0ss1moving",
+  "started_at_utc": "2026-10-11T03:28:50Z",
+  "completed_at_utc": "2026-10-11T03:28:50Z",
+  "output_paths": [
+    "runs/DSK-R1-READY/manifest.json",
+    "runs/DSK-R1-READY/launch-readiness.md",
+    "config/agents-deepseek.json"
+  ],
+  "source_ids": [],
+  "contamination_events": [
+    "No research round was started. No actor was launched for R1; this record only freezes launch readiness.",
+    "Raw role outputs are not committed because they embed absolute host paths."
+  ],
+  "independence_attestation": "Coordinator verification of readiness only. No role output was authored, reviewed or approved by this run. All five actors share one host and one GitHub account, so none can satisfy the VERIFIER_LOGINS confirmation gate.",
+  "hold_reason": "The GitHub independent-review gate has not passed. The owner instructed the DeepSeek lead to confirm the three role types are ready to run and then stop without starting a research round.",
+  "active_slice": {
+    "domains": [
+      "D04",
+      "D05"
+    ],
+    "topic_containers": {
+      "D04": "EDA-0001",
+      "D05": "EDA-0002"
+    }
+  },
+  "roles": [
+    {
+      "actor_id": "DeepSeek-P04-PHYSICAL",
+      "call_sign": "DSK-Spark-PHYSICAL",
+      "role": "proposer",
+      "domains": [
+        "D04"
+      ],
+      "topic_containers": [
+        "EDA-0001"
+      ],
+      "r0_onboarding_complete": true,
+      "r0_readiness_sha256": "83834def3025a4e0c1d699e934449dfbfd96579639af0de734a068184185a19f",
+      "r0_plan_sha256": "795dd7a9f03076fc5c2b9fd31c09c2db7c2b9e460bcfbe7cc183e90369a3a390",
+      "r1_packets": [
+        {
+          "dir": "DeepSeek-P04-PHYSICAL__EDA-0001",
+          "packet_sha256": "965dc154e5b44bff69cdf7bc43d07617cea9f38d15be341bfd8582d7702e4233",
+          "files": 47
+        },
+        {
+          "dir": "DeepSeek-P04-PHYSICAL__D04",
+          "packet_sha256": "489df170d68b664968ea7138777595ca83581c8187886e3eaed4433c57c61365",
+          "files": 41
+        }
+      ],
+      "launch_state": "ready_to_launch",
+      "blocked_by": "github_independent_review_not_passed"
+    },
+    {
+      "actor_id": "DeepSeek-C04-PHYSICAL",
+      "call_sign": "DSK-Forge-PHYSICAL",
+      "role": "challenger",
+      "domains": [
+        "D04"
+      ],
+      "topic_containers": [
+        "EDA-0001"
+      ],
+      "r0_onboarding_complete": true,
+      "r0_readiness_sha256": "0fed130544090b0f595c5efd1126f2dc861279c1e734f5b310cb0ef57cbdc068",
+      "r0_plan_sha256": "26ae5fae85cc0b5b73fa78e6673d7a4cb245f57dfb1dfa75b808f0ff0ec59862",
+      "r1_packets": [
+        {
+          "dir": "DeepSeek-C04-PHYSICAL__D04",
+          "packet_sha256": "4b7e1087b05bd7429db0f4f0c1c90982190978cfdea12b9bbe2bcedcea123283",
+          "files": 41
+        }
+      ],
+      "launch_state": "ready_to_launch",
+      "blocked_by": "github_independent_review_not_passed"
+    },
+    {
+      "actor_id": "DeepSeek-P05-TIMING",
+      "call_sign": "DSK-Spark-TIMING",
+      "role": "proposer",
+      "domains": [
+        "D05"
+      ],
+      "topic_containers": [
+        "EDA-0002"
+      ],
+      "r0_onboarding_complete": true,
+      "r0_readiness_sha256": "da33bc8cffae06e1d3eb5d7333ef9f38aa12b7201f52489a874855415fd615d5",
+      "r0_plan_sha256": "2763203011810f17136808c08a88de891ef5495ca3c9a037a8ede12d05f9e15e",
+      "r1_packets": [
+        {
+          "dir": "DeepSeek-P05-TIMING__EDA-0002",
+          "packet_sha256": "aa72a303f3ab0db25a70c4ef03740f5f2ef6a75e77569d12ee5583c3ec88c011",
+          "files": 47
+        },
+        {
+          "dir": "DeepSeek-P05-TIMING__D05",
+          "packet_sha256": "193a5baa3bf89ac1de5895cdd1dfe7b7057c1f79b24fab36bbf6429a61a88649",
+          "files": 41
+        }
+      ],
+      "launch_state": "ready_to_launch",
+      "blocked_by": "github_independent_review_not_passed"
+    },
+    {
+      "actor_id": "DeepSeek-C05-TIMING",
+      "call_sign": "DSK-Forge-TIMING",
+      "role": "challenger",
+      "domains": [
+        "D05"
+      ],
+      "topic_containers": [
+        "EDA-0002"
+      ],
+      "r0_onboarding_complete": true,
+      "r0_readiness_sha256": "5f6f3b5fe108c66a74eb5eeffb3c5a7ef9ffc593b1207141c4a3f08be5664d08",
+      "r0_plan_sha256": "49cb98afc93bcea70c5e7cec3d1aa1a16e10ca811c703c4d8de0189121e7a969",
+      "r1_packets": [
+        {
+          "dir": "DeepSeek-C05-TIMING__D05",
+          "packet_sha256": "0f34813d8166a7c59ab9fe621f97a991004288250207f56129e21d72d04b6b4d",
+          "files": 41
+        }
+      ],
+      "launch_state": "ready_to_launch",
+      "blocked_by": "github_independent_review_not_passed"
+    },
+    {
+      "actor_id": "DeepSeek-V02-PHYSICAL",
+      "call_sign": "DSK-Ledger-PHYSICAL",
+      "role": "verifier",
+      "domains": [
+        "D04",
+        "D05"
+      ],
+      "topic_containers": [
+        "EDA-0001",
+        "EDA-0002"
+      ],
+      "r0_onboarding_complete": true,
+      "r0_readiness_sha256": "36e2805ce8f63310bbd2716745b75212934ce4e0b0d704629669a514f1b8776a",
+      "r0_plan_sha256": "b2ac4b165341e682764214e2a85e52c66c1bcd2728e04c1ec78efcd60e96a706",
+      "r1_packets": [
+        {
+          "dir": "DeepSeek-V02-PHYSICAL__D04",
+          "packet_sha256": "dc093d9da2e197bb07283771c5db6ef7b179bd95dfb0e43cc6ad387e42f4586a",
+          "files": 41
+        },
+        {
+          "dir": "DeepSeek-V02-PHYSICAL__D05",
+          "packet_sha256": "1ce23a416e24bd56465b6e050c7ae1a94228cc48f8a5fd7fa5a7c7f5c6da99f4",
+          "files": 41
+        }
+      ],
+      "launch_state": "ready_to_launch",
+      "blocked_by": "github_independent_review_not_passed"
+    }
+  ]
+}
