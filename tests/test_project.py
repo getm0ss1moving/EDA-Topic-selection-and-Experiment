@@ -159,6 +159,19 @@ class DomainOnboardingTests(unittest.TestCase):
         d=json.loads(brief.read_text());d['platform_roles']['deepseek']['verifier']='DeepSeek-V09-GHOST'
         brief.write_text(json.dumps(d))
         self.assertTrue(any('absent from DeepSeek registry' in e for e in p.validate_registry(self.root)))
+    def test_activation_partition_is_checked(self):
+        cfg=self.root/'config/agents-deepseek.json'
+        reg=json.loads(cfg.read_text());ids=[a['actor_id'] for a in reg['actors']]
+        reg['activation']={'active_actors':[ids[0]],'deferred_actors':ids[1:],'active_domains':['D01'],
+                           'topic_containers':{'D01':'EDA-0001'}}
+        cfg.write_text(json.dumps(reg))
+        self.assertEqual(p.validate_registry(self.root),[])
+        reg['activation']['deferred_actors']=ids[2:]
+        cfg.write_text(json.dumps(reg))
+        self.assertTrue(any('partition' in e for e in p.validate_registry(self.root)))
+        reg['activation']['deferred_actors']=ids[1:];reg['activation']['topic_containers']={'D01':'NOT-A-TOPIC'}
+        cfg.write_text(json.dumps(reg))
+        self.assertTrue(any('topic container' in e for e in p.validate_registry(self.root)))
     def test_live_allocation_matches_domain_briefs(self):
         self.assertEqual(p.validate_registry(LIVE_ROOT),[])
 

@@ -1,0 +1,13 @@
+{
+  "kind": "forecast_not_measurement",
+  "metric": null,
+  "unit": null,
+  "baseline_source": null,
+  "direction": null,
+  "pessimistic": null,
+  "base": null,
+  "optimistic": null,
+  "confidence": null,
+  "assumptions": [],
+  "calibration_plan": null
+}
