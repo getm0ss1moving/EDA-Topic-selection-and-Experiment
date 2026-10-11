@@ -1,0 +1,57 @@
+{
+  "state": "continue",
+  "anchor": {
+    "problem": "TBD",
+    "engineering_user": "TBD",
+    "downstream_need": "TBD",
+    "causal_mechanism": "TBD",
+    "mechanism_invariants": ["TBD"],
+    "forbidden_pivots": [
+      "Replacing the mechanism with a straightforward combination of prior methods",
+      "Optimizing a proxy without a demonstrated engineering need",
+      "Changing the user or downstream objective to avoid a valid objection"
+    ]
+  },
+  "penalties": {
+    "combination_drift": {
+      "score": 0,
+      "rationale": "TBD",
+      "evidence_refs": []
+    },
+    "demand_drift": {
+      "score": 0,
+      "rationale": "TBD",
+      "evidence_refs": []
+    },
+    "total": 0
+  },
+  "revision_assessment": {
+    "preserves_problem": true,
+    "preserves_engineering_need": true,
+    "preserves_causal_mechanism": true,
+    "changes": [],
+    "reason": "Initial anchor"
+  },
+  "abandonment": {
+    "decision_id": null,
+    "grounds": [],
+    "rationale": null,
+    "evidence_refs": [],
+    "consents": {
+      "proposer": {
+        "session_id": null,
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      },
+      "challenger": {
+        "session_id": null,
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      }
+    },
+    "successor_topic_id": null,
+    "resurrection_conditions": []
+  }
+}
