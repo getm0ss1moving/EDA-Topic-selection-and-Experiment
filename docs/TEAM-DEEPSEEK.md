@@ -58,6 +58,21 @@ Model diversity between proposer and challenger is intentional, but `docs/ISOLAT
 
 Shared verifiers service three domain queues sequentially. They keep per-domain evidence ledgers and never transfer an unpublished claim from one queue to another. A verifier that participated in proposing a topic, proposing its decisive mechanism or writing a challenge it would adjudicate must be rotated out.
 
+## Slice activation
+
+The allocation above is the full nine-territory roster. Which part of it actually runs is a separate, explicitly recorded decision, because starting all 21 actors would spend budget without producing a bounded result. `config/agents-deepseek.json` carries an `activation` block; `scripts/project.py validate` checks that active and deferred actors partition the registry and that every active domain has an active actor.
+
+Phase 1 activates only the physical-design slice, on the owner's budget directive:
+
+| Domain | Column | Proposer | Challenger | Verifier | Topic container |
+|---|---|---|---|---|---|
+| D04 | Partitioning, floorplanning, macro and standard-cell placement, legalization, clock-tree synthesis, global and detailed routing | DeepSeek-P04-PHYSICAL | DeepSeek-C04-PHYSICAL | DeepSeek-V02-PHYSICAL | `EDA-0001` |
+| D05 | STA, multi-mode/multi-corner analysis, extraction, crosstalk and signal integrity, timing closure and ECO, signoff fidelity | DeepSeek-P05-TIMING | DeepSeek-C05-TIMING | DeepSeek-V02-PHYSICAL | `EDA-0002` |
+
+The other sixteen actors are marked `deferred_budget`. That is a resourcing decision, not a scientific judgement: it says nothing about whether D01, D02, D03, D06, D07, D08 or D09 contain better problems. Deferred actors keep their identity, domain binding, packet and onboarding record, so activating them later needs no reassignment and no new identity.
+
+D04 and D05 are activated together on purpose. The two territories share a boundary that a single-territory survey tends to hide: a placement, CTS or routing objective is only meaningful against the timing model and signoff oracle that grade it, and a signoff study is only meaningful against the physical implementation it measures. `domains/D04/brief.json` and `domains/D05/brief.json` assign the boundary explicitly, and any cross-boundary claim must be carried through a released file rather than an agent message.
+
 ## Cross-platform review matrix
 
 The strongest available review for a DeepSeek proposal is a Codex challenger, and vice versa. The coordinator should prefer the opposite platform whenever a suitable opposite-platform actor exists and has not touched the artifact:

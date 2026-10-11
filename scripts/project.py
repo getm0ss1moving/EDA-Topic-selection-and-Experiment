@@ -473,6 +473,26 @@ def validate_registry(root=ROOT):
                 errors.append(f'agent {a.get("actor_id")}: missing {key}')
         if a.get('role') not in {'proposer', 'challenger', 'verifier'}:
             errors.append(f'agent {a.get("actor_id")}: invalid role')
+    activation = read_json(path).get('activation')
+    if activation:
+        active = activation.get('active_actors')
+        deferred = activation.get('deferred_actors')
+        if not isinstance(active, list) or not active:
+            errors.append('config/agents-deepseek.json: activation.active_actors must be a nonempty list')
+            active = []
+        if len(active) != len(set(active)):
+            errors.append('config/agents-deepseek.json: duplicate active actor')
+        for aid in active:
+            if aid not in by:
+                errors.append(f'config/agents-deepseek.json: active actor {aid} absent from registry')
+        if sorted(list(active) + list(deferred or [])) != sorted(ids):
+            errors.append('config/agents-deepseek.json: active and deferred actors must partition the registry')
+        for d in activation.get('active_domains', []):
+            if not any(d in by[aid].get('domain_ids', []) for aid in active if aid in by):
+                errors.append(f'config/agents-deepseek.json: active domain {d} has no active actor')
+        for d, tid in activation.get('topic_containers', {}).items():
+            if not ID.fullmatch(str(tid)):
+                errors.append(f'config/agents-deepseek.json: activation topic container {tid} is not a valid topic ID')
     for p in sorted((root/'domains').glob('D*/brief.json')):
         try:
             d = read_json(p)
