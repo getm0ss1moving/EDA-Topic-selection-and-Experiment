@@ -271,7 +271,9 @@ def git(*args):
 def revision_topic_blobs(ref, topic):
     """Return one frozen topic tree as relative-path -> blob bytes, or None."""
     try:
-        if git('cat-file', '-t', ref).decode().strip() != 'commit':
+        object_type = subprocess.check_output(
+            ['git', '-C', str(ROOT), 'cat-file', '-t', ref], stderr=subprocess.DEVNULL)
+        if object_type.decode().strip() != 'commit':
             return None
         matches = []
         for area in ['candidates', 'topics', 'archive']:
