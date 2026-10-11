@@ -109,7 +109,11 @@ class AcceptanceTests(DossierTests):
         consensus['consents']['challenger']={'session_id':'c','decision':'agree','signed_revision':'a'*40,
                                               'tasklist_sha256':tasklist_hash,'rationale':'Reasonable fixture plan.'}
         (self.d/'experiment-consensus.json').write_text(json.dumps(consensus))
-        self.update('verification.json',decision='accept_for_pilot',verifier_session='v',gates={k:True for k in p.GATES},source_checks=[{'source_id':'SRC-001','locator':'Section 1','verdict':'verified'}],dossier_digest=p.digest(self.d))
+        self.update('verification.json',decision='accept_for_pilot',verifier_session='v',
+                    gates={k:True for k in p.GATES},direction_penalty_checked=True,
+                    experiment_consensus_checked=True,
+                    source_checks=[{'source_id':'SRC-001','locator':'Section 1','verdict':'verified'}],
+                    dossier_digest=p.digest(self.d))
         return {'p':{'role':'proposer'},'c':{'role':'challenger'},'v':{'role':'verifier'}}
     def test_valid_then_tampered(self):
         sessions=self.make_valid()
