@@ -36,3 +36,5 @@ Repository: https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment
 ## Assigned Codex team
 
 See [team allocation](docs/TEAM.md) for nine proposer/challenger pairs and three shared verifiers, and `config/agents.json` for task identities and model settings. These roles start with bounded onboarding and independent search plans.
+
+Current limited scope and reproducible resource checks: [Physical pilot](docs/PHYSICAL-PILOT.md). Only five Codex assignments remain active; see [actor registry](config/agents.json).

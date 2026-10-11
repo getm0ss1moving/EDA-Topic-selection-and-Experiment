@@ -9,7 +9,8 @@ from pathlib import Path
 
 COMMON = {'AGENTS.md', 'harness/ONBOARDING.md', 'config/research-brief.json',
           'docs/CHARTER.md', 'docs/WORKFLOW.md', 'docs/EVIDENCE.md', 'docs/ISOLATION.md',
-          'docs/EXPERIMENTS.md', 'docs/FORMATS.md', 'docs/GITHUB.md', 'templates/run.json'}
+          'docs/EXPERIMENTS.md', 'docs/FORMATS.md', 'docs/GITHUB.md', 'templates/run.json',
+          'docs/PHYSICAL-PILOT.md', 'config/physical-resources.lock.json'}
 
 def make_packet(root, actor_id, ref, out, outbox):
     root, out = root.resolve(), out.resolve()

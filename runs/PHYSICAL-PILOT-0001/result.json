@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-11",
+  "kind": "infrastructure_smoke_not_research_result",
+  "flow_completed": true,
+  "exit_code": 0,
+  "original_flow_failure": "flow.tcl:229 getconf missing; upstream Tcl reported Error despite zero exit status",
+  "applied_patch": {
+    "file": "test/flow.tcl",
+    "before": "set_thread_count [exec getconf _NPROCESSORS_ONLN]",
+    "after": "set_thread_count 2"
+  },
+  "final_reports": {
+    "setup_worst_slack_ns": -0.054,
+    "hold_worst_slack_ns": 0.051,
+    "setup_tns_ns": -0.88,
+    "design_area_um2": 583,
+    "router_drc_report_bytes": 0
+  },
+  "timing_closed": false,
+  "limitations": [
+    "One tiny standard-cell design, one typical corner, one run.",
+    "Router DRC output is not independent foundry signoff.",
+    "No LVS, multi-corner validation, macro placement, or commercial oracle."
+  ],
+  "artifacts": {
+    "results/gcd_nangate45_route_drc-tcl.rpt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "results/gcd_nangate45_cts-tcl.db": {
+      "sha256": "80040018ee6b3cc9a143857cb0fab64f0bf56e948f52328030ddb89794595f03",
+      "bytes": 672740
+    },
+    "results/gcd_nangate45_fill-tcl.db": {
+      "sha256": "b4919cf3afcacc7e6d8e39c7677fed9a5ca6565683cbd7c39cf720e406c4822b",
+      "bytes": 1177507
+    },
+    "results/gcd_nangate45_dpl-tcl.db": {
+      "sha256": "a384ece4c8f09062c1c9f1149354a7c6cd4948a9f8f2ad6d655a7b7a7ba21d02",
+      "bytes": 681801
+    },
+    "results/gcd_nangate45_route-tcl.def": {
+      "sha256": "cdd535c9e0c9a683a6913b8800c6c2b32ee0b863e8ba3350f1ed78825c729bfd",
+      "bytes": 400113
+    },
+    "results/gcd_nangate45-tcl.v": {
+      "sha256": "afd5ec684d585d15730abf75e0c503c1824846b6c42be141a89c822c37e00847",
+      "bytes": 37937
+    },
+    "results/gcd_nangate45_global_place-tcl.db": {
+      "sha256": "3655efadcb8f36d93736836a6b6f053bef6095bb6ec9528fe949421d6ea3cd03",
+      "bytes": 670171
+    },
+    "results/gcd_nangate45-tcl.route_guide": {
+      "sha256": "ea9a2e066c167f33cbfcda6a7164b623f3487b4a3655be921565c452c8026ce7",
+      "bytes": 108472
+    },
+    "results/gcd_nangate45_route-tcl.db": {
+      "sha256": "23c61becbfca33ca9959969ea8ba2a089e6db5f527cac6242f6e21301c061fab",
+      "bytes": 1276607
+    },
+    "results/gcd_nangate45-tcl.spef": {
+      "sha256": "83cd1873a56f2cfe0fbc123bdfff5772b8dc033895cbe73992c448be801a8057",
+      "bytes": 305445
+    },
+    "results/gcd_nangate45_output_guide-tcl.mod": {
+      "sha256": "a8e4288c96d4f50fd5faeb394d29c98a1c6a5a2c7c310855f67c7eabd1cf1f85",
+      "bytes": 89702
+    }
+  }
+}
