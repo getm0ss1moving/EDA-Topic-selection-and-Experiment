@@ -1,0 +1,258 @@
+{
+  "kind": "onboarding_metadata_only",
+  "scientific_verdicts": false,
+  "actors": [
+    {
+      "actor_id": "Codex-P01-ARCH",
+      "thread_id": "01a1272b-90d6-7bc2-b42e-25a300fbcfd7",
+      "status": "archived_out_of_scope",
+      "model": "gpt-6-astra",
+      "reasoning": "high",
+      "input_commit": "67fb73b9f197e412791b0daf5ec7861336492604",
+      "packet_sha256": "76c2b7443f7e5f48a6eb10d8caa456ca28c40cdae7b016cc5ba8606440d40dff",
+      "released_output_hashes": {}
+    },
+    {
+      "actor_id": "Codex-C01-ARCH",
+      "thread_id": "01a1272b-f466-7291-ba34-5d7c3e21d588",
+      "status": "archived_out_of_scope",
+      "model": "gpt-6-sol",
+      "reasoning": "medium",
+      "input_commit": "67fb73b9f197e412791b0daf5ec7861336492604",
+      "packet_sha256": "00398cfc3d475de46541566c6ab70fdc44cdb8cf3db6243f89e2b524a9d046bb",
+      "released_output_hashes": {
+        "readiness.json": "99aaa96e0112d6543cb1602cd6c662ff00b8e8aebb2ec109474bc63ad4d24a34",
+        "first-pass-plan.md": "13cb795c804f4d04cb5a94b47201c50e8a262a05aa56ae9fc4715d1230162977"
+      }
+    },
+    {
+      "actor_id": "Codex-P02-VERIFY",
+      "thread_id": "01a1272b-f4a5-7a52-967b-80fc7b516c7f",
+      "status": "archived_out_of_scope",
+      "model": "gpt-6-astra",
+      "reasoning": "high",
+      "input_commit": "67fb73b9f197e412791b0daf5ec7861336492604",
+      "packet_sha256": "a435bcb08c02baf4766657b349e68dab27ccfe520c8defb4636c95072562503d",
+      "released_output_hashes": {
+        "readiness.json": "b9762d952eed731bf204b8df3313b7f28845d059ab2ecfdfa3c6037fee6bb2e0",
+        "first-pass-plan.md": "a8cc3ad67726b5e0926d9a42833651139ddb8d19d221777feade752827da013d"
+      }
+    },
+    {
+      "actor_id": "Codex-C02-VERIFY",
+      "thread_id": "01a1272b-f510-7360-b5b6-9811306a1406",
+      "status": "archived_out_of_scope",
+      "model": "gpt-6-sol",
+      "reasoning": "medium",
+      "input_commit": "67fb73b9f197e412791b0daf5ec7861336492604",
+      "packet_sha256": "3db60e70a019da6f5537cf71bcb9ee9d7b62bb781996b202cea6521100503925",
+      "released_output_hashes": {}
+    },
+    {
+      "actor_id": "Codex-P03-SYNTH",
+      "thread_id": "01a1272b-f7a0-7ee0-99ce-2c4e44ee2e3e",
+      "status": "archived_out_of_scope",
+      "model": "gpt-6-astra",
+      "reasoning": "high",
+      "input_commit": "67fb73b9f197e412791b0daf5ec7861336492604",
+      "packet_sha256": "d008d8a386de02befd432cc0ce13a8e278285576bcdb5f190974d9f0bc5b9839",
+      "released_output_hashes": {
+        "readiness.json": "8f89a13e1910b871e30c70fc51086ee1ab705649deb972f19566b37e6e15cb05",
+        "first-pass-plan.md": "aec45f00caf6e42dc984f39f0bbad3bf573c30e6707e62aecefb566c130f2eb9"
+      }
+    },
+    {
+      "actor_id": "Codex-C03-SYNTH",
+      "thread_id": "01a1272b-f827-7421-9e5b-3bae49ebc0e2",
+      "status": "archived_out_of_scope",
+      "model": "gpt-6-sol",
+      "reasoning": "medium",
+      "input_commit": "67fb73b9f197e412791b0daf5ec7861336492604",
+      "packet_sha256": "2be32770eb4ad0d3c6847eae56471a983c694fa7a2f17dfc647fdab695f00f3c",
+      "released_output_hashes": {
+        "readiness.json": "7515987f7b738a6678c2559eb5eacc51d7df40e22ff7773ba2981a2e00c26498",
+        "first-pass-plan.md": "9ee37cd9cab0a3bd38166afd7d6cb6667d2cd63f9f9f4a77db9117d13d8fa64c"
+      }
+    },
+    {
+      "actor_id": "Codex-P04-PHYSICAL",
+      "thread_id": "01a1272b-fb2e-7cc1-a6e3-8f4290be9769",
+      "status": "blocked_usage_limit",
+      "model": "gpt-6-astra",
+      "reasoning": "high",
+      "input_commit": "67fb73b9f197e412791b0daf5ec7861336492604",
+      "packet_sha256": "77ec2cc6c9f83bf147e40566f1e2c7f85b702333cdf7827b4e0af723042ff8f2",
+      "released_output_hashes": {
+        "readiness.json": "22d93ea79f11d0442c0a2f7fbf4eb5247a9912a50c375022ea7c77c026a153cd",
+        "first-pass-plan.md": "a30a653e78888c94255972d0d36c6c122288c41918508bcadff7067e066e9ec8"
+      }
+    },
+    {
+      "actor_id": "Codex-C04-PHYSICAL",
+      "thread_id": "01a1272b-fe2d-7571-af1a-6cb84f61c3d0",
+      "status": "onboarding_completed",
+      "model": "gpt-6-sol",
+      "reasoning": "medium",
+      "input_commit": "67fb73b9f197e412791b0daf5ec7861336492604",
+      "packet_sha256": "5790c0975ceacbfbbfcc57e54547f0bd7cfd59eca714f06559a19f133858bce1",
+      "released_output_hashes": {
+        "readiness.json": "cf1d52adddfac8de79f8e9a97a64de056ace9175a484a6aea6f88eaf7cd4e735",
+        "first-pass-plan.md": "3ee1a4630db66d41e88f1d5bad36b8d3011211b823edcd384aabf12cca2789e8"
+      }
+    },
+    {
+      "actor_id": "Codex-P05-TIMING",
+      "thread_id": "01a1272c-0241-7ce0-9c77-80dd05665d65",
+      "status": "blocked_usage_limit",
+      "model": "gpt-6-astra",
+      "reasoning": "high",
+      "input_commit": "67fb73b9f197e412791b0daf5ec7861336492604",
+      "packet_sha256": "40e43b59a1c623d8fe32359d083bb1cb880c5c88c779b26c91f5e58a188c344a",
+      "released_output_hashes": {
+        "readiness.json": "47e7b1f00d3286a429b7dd74ca94c8d20a58d6b8aa1e953727d6a3ac58817d13",
+        "first-pass-plan.md": "820a105e102f875a3a1443879e89928b837ac6f233fa79f7788be5c62e1733be"
+      }
+    },
+    {
+      "actor_id": "Codex-C05-TIMING",
+      "thread_id": "01a1272c-0344-7ea3-91eb-db37a9a39137",
+      "status": "blocked_usage_limit",
+      "model": "gpt-6-sol",
+      "reasoning": "medium",
+      "input_commit": "67fb73b9f197e412791b0daf5ec7861336492604",
+      "packet_sha256": "cf5f2be073a188b466d5f603cc19f9a722f89f51667f0d613b280f7dfaa647c8",
+      "released_output_hashes": {
+        "readiness.json": "ce2091ff738826bfa8fa94e4b547e7928adf9ca94b019d79fd37f5fec5409990",
+        "first-pass-plan.md": "b3d4faff8fd617f814b7555127d55bca8fe7dcd282319cce0609fa6c82fa9da3"
+      }
+    },
+    {
+      "actor_id": "Codex-P06-RELIABILITY",
+      "thread_id": "01a1272c-0600-7461-a44a-4af41f332c96",
+      "status": "archived_out_of_scope",
+      "model": "gpt-6-astra",
+      "reasoning": "high",
+      "input_commit": "67fb73b9f197e412791b0daf5ec7861336492604",
+      "packet_sha256": "40b216dcf533df04a605e7961989709f72062e181fc714b566d075892fd16b8e",
+      "released_output_hashes": {
+        "readiness.json": "eaa124e171ec5a48244e4fa7b76e1139386d99dd0d48741571ed7cfdc4e94cd2",
+        "first-pass-plan.md": "a32c8769421049197daf4f6869e24eb3f78b013b979f8b90501116e83c7d9970"
+      }
+    },
+    {
+      "actor_id": "Codex-C06-RELIABILITY",
+      "thread_id": "01a1272c-07c5-7483-95e9-2d69d6a93e0d",
+      "status": "archived_out_of_scope",
+      "model": "gpt-6-sol",
+      "reasoning": "medium",
+      "input_commit": "67fb73b9f197e412791b0daf5ec7861336492604",
+      "packet_sha256": "84f5bdfa0725f4d7cff379f2c9be2d64e70afc80b3df79c6dc0b78506f1f8492",
+      "released_output_hashes": {
+        "readiness.json": "034348da658b56461e3db6c8f950897c40f8d36c45195a082aa1b19d00c830b5",
+        "first-pass-plan.md": "3f9d642c6e424fc7a0651dd4db29a30d557b7bff075780a35277caef578b0891"
+      }
+    },
+    {
+      "actor_id": "Codex-P07-ANALOG",
+      "thread_id": "01a1272c-0913-7621-9e0c-b2507cd39f09",
+      "status": "archived_out_of_scope",
+      "model": "gpt-6-astra",
+      "reasoning": "high",
+      "input_commit": "67fb73b9f197e412791b0daf5ec7861336492604",
+      "packet_sha256": "db34b2c57dc1165c00ef3e4bd2313e917e5690dfdf956944ce19d8caf48fb492",
+      "released_output_hashes": {
+        "readiness.json": "05a7f02ea3c34e78465d4aa14c63355bf6fbbec2d6a24b90878abcfba69aa232",
+        "first-pass-plan.md": "814197a2f5462e6462d7e925bc3e989b6ebfc2a94320a983e308b714d9a134d1"
+      }
+    },
+    {
+      "actor_id": "Codex-C07-ANALOG",
+      "thread_id": "01a1272c-0d8b-7c73-a512-4201017da08c",
+      "status": "archived_out_of_scope",
+      "model": "gpt-6-sol",
+      "reasoning": "medium",
+      "input_commit": "67fb73b9f197e412791b0daf5ec7861336492604",
+      "packet_sha256": "273108d81b20af9fc23a497c4bd307abb69c83f9577b529e6eba0212ad91bdc5",
+      "released_output_hashes": {}
+    },
+    {
+      "actor_id": "Codex-P08-CHIPLETS",
+      "thread_id": "01a1272c-1120-70f1-aeda-7f01d9bcd8fc",
+      "status": "archived_out_of_scope",
+      "model": "gpt-6-astra",
+      "reasoning": "high",
+      "input_commit": "67fb73b9f197e412791b0daf5ec7861336492604",
+      "packet_sha256": "9f242cdea5a5f53e9f1e3c98d94800b1e10cdf3d859ed87868fedd03a51fa016",
+      "released_output_hashes": {}
+    },
+    {
+      "actor_id": "Codex-C08-CHIPLETS",
+      "thread_id": "01a1272c-129b-7341-b73f-1c3234705ae1",
+      "status": "archived_out_of_scope",
+      "model": "gpt-6-sol",
+      "reasoning": "medium",
+      "input_commit": "67fb73b9f197e412791b0daf5ec7861336492604",
+      "packet_sha256": "acf90064c11a4e223edb0561a2dca277fbe71e2c5b422be50557140020814d92",
+      "released_output_hashes": {}
+    },
+    {
+      "actor_id": "Codex-P09-AGENTIC",
+      "thread_id": "01a1272c-1507-7b03-8489-7fa5a8d7db44",
+      "status": "archived_out_of_scope",
+      "model": "gpt-6-astra",
+      "reasoning": "high",
+      "input_commit": "67fb73b9f197e412791b0daf5ec7861336492604",
+      "packet_sha256": "35dc5b7074d77d4b1ea79889ada8d640e7be5fc7a3da37c544fa96943d94cd24",
+      "released_output_hashes": {}
+    },
+    {
+      "actor_id": "Codex-C09-AGENTIC",
+      "thread_id": "01a1272c-1823-79f3-8394-896b40906d61",
+      "status": "archived_out_of_scope",
+      "model": "gpt-6-sol",
+      "reasoning": "medium",
+      "input_commit": "67fb73b9f197e412791b0daf5ec7861336492604",
+      "packet_sha256": "63c5104aefd78a5bc45ddfa1c38919aed72cfa6a4aaeefe2aed81823880708ee",
+      "released_output_hashes": {}
+    },
+    {
+      "actor_id": "Codex-V01-DIGITAL",
+      "thread_id": "01a1272c-1b59-7f32-8c82-66997dc5d087",
+      "status": "archived_out_of_scope",
+      "model": "gpt-6-luna",
+      "reasoning": "medium",
+      "input_commit": "67fb73b9f197e412791b0daf5ec7861336492604",
+      "packet_sha256": "e856a891c6f126e409692140299a313303e914f256c994a818476f440dddf6e0",
+      "released_output_hashes": {
+        "readiness.json": "aa392719bcff752e94ea8264b082417783a614119f25c1a9206a32ae17d234d2",
+        "first-pass-plan.md": "86fd3f8bf8a06e9d2ce0ee20b076ea83d72e49b8f4f14ebaeb61837a5cbde431"
+      }
+    },
+    {
+      "actor_id": "Codex-V02-PHYSICAL",
+      "thread_id": "01a1272c-1ca7-7383-a1c9-2c985f4942e0",
+      "status": "onboarding_completed",
+      "model": "gpt-6-luna",
+      "reasoning": "medium",
+      "input_commit": "67fb73b9f197e412791b0daf5ec7861336492604",
+      "packet_sha256": "4df0a5eb5036392e4b8ae865e982056b96fe06cec81f69b0e380f26caae8ea93",
+      "released_output_hashes": {
+        "readiness.json": "7c027e7409d4b1de3c7cb153030f911c45c5bcf0a4b2a8e1b7223457f762d8d7",
+        "first-pass-plan.md": "a8288536e4804d16aec32ea82030afd85ad5b29c8027599eaa40f58d4dc98e9a"
+      }
+    },
+    {
+      "actor_id": "Codex-V03-SYSTEMS",
+      "thread_id": "01a1272c-1f72-7952-9297-e8c0b2284649",
+      "status": "archived_out_of_scope",
+      "model": "gpt-6-luna",
+      "reasoning": "medium",
+      "input_commit": "67fb73b9f197e412791b0daf5ec7861336492604",
+      "packet_sha256": "2eec197fd193acd36f2ad670f0d5582f5dcdfdb14a4a646b82d1fe2759974cd6",
+      "released_output_hashes": {
+        "readiness.json": "4b06cac848c5b0205fceae55caa3500cb375cd970fcdfb0ab142285341e9838d",
+        "first-pass-plan.md": "faf8e6d7796786aee46e8baa1067d6bf2de2891caf946f406766108e91202ada"
+      }
+    }
+  ]
+}

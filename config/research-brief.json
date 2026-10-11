@@ -1,25 +1,83 @@
 {
-  "scope": null,
+  "scope": "Floorplanning, placement, CTS, routing, and extraction/STA/signoff research (D04/D05).",
   "tracks": [
     "Agentic EDA",
     "AI for EDA",
     "Traditional EDA"
   ],
   "target_venues": [],
-  "timeline_weeks": null,
+  "timeline_weeks": 2,
   "compute": {
-    "cpu_hours": null,
-    "gpu_hours": null,
-    "memory_gb": null,
-    "api_budget_usd": null
+    "cpu_hours": 8,
+    "gpu_hours": 0,
+    "memory_gb": 4,
+    "api_budget_usd": 0,
+    "status": "Coordinator-selected provisional pilot caps, not user-provided resource commitments",
+    "local_host": {
+      "architecture": "arm64",
+      "logical_cpus": 10,
+      "physical_memory_gib": 16
+    },
+    "per_job_cpus": 2,
+    "concurrent_experiment_jobs": 1,
+    "smoke_timeout_seconds": 600,
+    "remote_resources": "None supplied",
+    "agent_usage": "Existing subscription only; no paid API calls, automatic retries, or cloud purchase."
   },
-  "available_tools": [],
-  "available_pdks": [],
-  "available_designs": [],
-  "license_constraints": [],
-  "engineering_user": null,
-  "primary_metric": null,
-  "minimum_meaningful_effect": null,
+  "available_tools": [
+    {
+      "name": "OpenROAD/OpenSTA/OpenRCX",
+      "version": "b16bda7e82721d10566ff7e2b68f1ff0be9f9e38",
+      "container": "efabless/openlane@sha256:840fe28388494220dae9e2be6cf3c7cb2dadfa0eabae4144f0873b9ee949597f",
+      "status": "GCD flow smoke completed; see runs/PHYSICAL-PILOT-0001"
+    },
+    {
+      "name": "Yosys",
+      "version": "0.68+post c12172fbae8af5e20f6fb52e3d4e92d56ed587b6",
+      "status": "Native executable verified"
+    },
+    {
+      "name": "KLayout/Magic",
+      "status": "Executables present in container; independent DRC/LVS not validated"
+    }
+  ],
+  "available_pdks": [
+    {
+      "name": "Nangate45 Open Cell Library / OpenROAD test technology files",
+      "status": "Acquired with hash lock; research technology, not a foundry-qualified manufacturing PDK",
+      "corners": [
+        "typical"
+      ],
+      "lock": "config/physical-resources.lock.json"
+    }
+  ],
+  "available_designs": [
+    {
+      "name": "OpenROAD gcd_nangate45",
+      "status": "Pinned netlist and SDC acquired; full smoke completed",
+      "purpose": "Small standard-cell flow fixture, not macro-floorplanning or publication benchmark",
+      "lock": "config/physical-resources.lock.json"
+    }
+  ],
+  "license_constraints": [
+    "Public upstream fixtures retain their original license notices; source licenses must be checked per additional dataset.",
+    "No proprietary PDK, design, or commercial signoff license established.",
+    "No claim of silicon signoff, multi-corner coverage, or commercial-tool parity from this pilot."
+  ],
+  "engineering_user": "Physical-design and timing-closure engineer; practitioner validation remains pending.",
+  "primary_metric": {
+    "status": "Provisional research screening contract; each topic must preregister its own endpoint before experiments",
+    "D04": "Post-route extracted maximum setup slack (ns) at fixed SDC, cell library and die area; report TNS, hold, area, power estimate and flow failures as guardrails.",
+    "D05": "Wall time to obtain the same timing decisions as pinned full OpenSTA analysis; report maximum endpoint slack error and false-negative violating endpoints.",
+    "floorplan": "Post-route outcomes required; macro-rich designs still missing, so macro-floorplanning feasibility remains conditional."
+  },
+  "minimum_meaningful_effect": {
+    "status": "Provisional thresholds, not measured gains or proven engineer requirements",
+    "D04": "At least +0.02 ns paired improvement in worst setup slack with no new hold violations, no added route DRC, <=2% cell-area and estimated-power regression, <=20% runtime regression.",
+    "D05": "At least 20% wall-time reduction; maximum absolute endpoint slack error <=0.005 ns and zero missed violating endpoints against the reference on evaluated cases.",
+    "evidence": "Require >=3 independently selected designs and >=5 paired seeds per stochastic condition, confidence intervals and all failures. GCD alone cannot establish success. Revise thresholds after baseline variance and practitioner input, before candidate evaluation."
+  },
   "human_owner": "getm0ss1moving",
-  "max_review_rounds": 3
+  "max_review_rounds": 3,
+  "feasibility_status": "Infrastructure smoke verified; topic-level R1 feasibility remains conditional on representative designs, baseline reproduction, domain oracle and role review."
 }

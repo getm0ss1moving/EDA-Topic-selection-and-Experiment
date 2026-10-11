@@ -13,8 +13,8 @@
   "proposer": "Codex-P05-TIMING",
   "challenger": "Codex-C05-TIMING",
   "verifier": "Codex-V02-PHYSICAL",
-  "stage": "onboarding",
-  "research_budget": "No broad research run authorized by this onboarding packet. Prepare a bounded search plan; tool/data/compute access remains unknown.",
+  "stage": "pilot_ready_pending_role_capacity",
+  "research_budget": "Active scope. Use config/research-brief.json and docs/PHYSICAL-PILOT.md. At most one hypothesis per domain in the next round; no paid API or GPU budget. Existing frozen packets remain historical and must be replaced before research.",
   "first_outputs": [
     "readiness.json",
     "first-pass-plan.md"
