@@ -7,3 +7,7 @@ This release permits creation of six fresh cross-platform sessions for the D04/D
 DeepSeek is released only for `DeepSeek-C04-PHYSICAL` and `DeepSeek-C05-TIMING`. Claude is released only for `Claude-P05-TIMING` and `Claude-V02-PHYSICAL`. Each coordinator must record the actual model, session ID, packet hash and isolation state before scientific input. Claude creation aborts if the selected host does not expose a Claude-family model; no substitute may be reported as Claude.
 
 The local OpenROAD smoke path and provisional resource caps are sufficient to begin literature and opportunity research. They are insufficient to claim topic-level feasibility: representative designs, macro-rich cases, additional corners, strongest-baseline reproduction, practitioner-calibrated thresholds and a qualified signoff oracle remain dossier-level prerequisites.
+
+## Post-merge packet export
+
+The two first-wave proposer packets were exported from full `main` commit `d437c2f660906efe9351a90451905826d00b63e3`. Their external paths and recomputed SHA-256 values are recorded in `manifest.json`. No role session has been created. Challenger and verifier exports remain blocked by the dossier-stage checks in `scripts/actor_packet.py`.
