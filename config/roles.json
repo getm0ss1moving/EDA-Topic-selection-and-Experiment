@@ -14,13 +14,23 @@
   "note": "Do not fabricate assignments. GitHub verifier authorization is configured separately using VERIFIER_LOGINS.",
   "github_verifier_registry": [
     {
-      "login": "M0nitor",
-      "user_id": 21146308,
+      "login": "M0nitor-EDA",
+      "user_id": 341092537,
       "distinct_from_owner": true,
-      "invitation_id": 337209548,
+      "invitation_id": 337230623,
       "invitation_status": "pending",
       "permission_requested": "write",
       "scientific_session_binding": "Unassigned: a GitHub account is not an AI session or scientific verdict."
+    }
+  ],
+  "verifier_identity_corrections": [
+    {
+      "previous_login": "M0nitor",
+      "previous_invitation_id": 337209548,
+      "action": "Incorrect-account invitation revoked; removed from VERIFIER_LOGINS",
+      "replacement_login": "M0nitor-EDA",
+      "reason": "User corrected the supplied reviewer username",
+      "account_separation_only": true
     }
   ]
 }
