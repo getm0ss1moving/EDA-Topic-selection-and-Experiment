@@ -54,6 +54,7 @@ class PacketTests(unittest.TestCase):
             def git(*args):return subprocess.check_output(['git','-C',str(root),*args],stderr=subprocess.DEVNULL)
             git('init');git('add','.');git('-c','user.name=test','-c','user.email=test@example.com','commit','-m','fixture')
             sha=git('rev-parse','HEAD').decode().strip()
+            tree=git('rev-parse','HEAD^{tree}').decode().strip()
             write('candidates/EDA-0001/proposal.md','uncommitted private edit')
             original=p.ROOT;p.ROOT=root
             try:
@@ -72,6 +73,7 @@ class PacketTests(unittest.TestCase):
                 self.assertEqual((out/'candidates/EDA-0001/proposal.md').read_text(),'public')
                 with self.assertRaises(ValueError):p.export_packet('challenger','EDA-0001',sha,out)
                 with self.assertRaises(ValueError):p.export_packet('challenger','EDA-0001','HEAD',Path(td)/'bad')
+                with self.assertRaises(ValueError):p.export_packet('challenger','EDA-0001',tree,Path(td)/'tree')
             finally:p.ROOT=original
 
 if __name__=='__main__':unittest.main()
@@ -79,7 +81,8 @@ if __name__=='__main__':unittest.main()
 class AcceptanceTests(DossierTests):
     def make_valid(self):
         self.update('dossier.json',status='accepted',proposer_session='p',challenger_session='c',verifier_session='v')
-        for name in ['proposal.md','search-log.md','contest-audit.md','industry-gap.md','experiment-plan.md']:
+        for name in ['proposal.md','search-log.md','contest-audit.md','industry-gap.md','experiment-plan.md',
+                     'challenges.md','responses.md','verification.md']:
             (self.d/name).write_text('Explicit scientific record; fixture only.')
         source={'id':'SRC-001','title':'fixture','url':'https://example.org/source','type':'paper','published':'unknown','retrieved':'2026-10-10T00:00:00Z','locator':'Section 1','access':'full','claims':['CLM-001'],'limitations':'fixture'}
         (self.d/'sources.json').write_text(json.dumps([source]))

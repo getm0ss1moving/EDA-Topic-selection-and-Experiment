@@ -76,6 +76,9 @@ def validate_topic(path, area, sessions):
         if area == 'topics' or d['status'] in {'accepted', 'verified'}:
             require(area == 'topics' if d['status'] == 'accepted' else area != 'topics', 'state/storage mismatch')
             require(d['status'] in {'accepted', 'verified'}, 'topics require accepted state')
+            for name in ['challenges.md', 'responses.md', 'verification.md']:
+                require(not re.search(r'\bTBD\b', (path/name).read_text()),
+                        f'unresolved review placeholder: {name}')
             people = [d.get(k+'_session') for k in ['proposer', 'challenger', 'verifier']]
             require(all(people) and len(set(people)) == 3, 'three distinct sessions required')
             for role, sid in zip(['proposer', 'challenger', 'verifier'], people):
@@ -128,6 +131,8 @@ def git(*args):
 def export_packet(role, topic, ref, out, stage='initial', governance=False):
     if not re.fullmatch(r'[0-9a-f]{40}', ref):
         raise ValueError('Use a full frozen commit SHA')
+    if git('cat-file', '-t', ref).decode().strip() != 'commit':
+        raise ValueError('Frozen reference must resolve to a commit object')
     if role not in {'proposer', 'challenger', 'verifier'}:
         raise ValueError('Invalid role')
     if not governance and (not topic or not ID.fullmatch(topic)):
