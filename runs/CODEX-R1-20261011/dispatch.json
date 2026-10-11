@@ -1,6 +1,6 @@
 {
   "run_id": "CODEX-R1-20261011",
-  "phase": "proposal_research",
+  "phase": "blocked_at_proposer_inference",
   "dispatched_at_utc": "2026-10-11T03:22:20.546100+00:00",
   "scope": [
     "D04",
@@ -13,7 +13,7 @@
       "topic_id": "EDA-0104",
       "input_commit": "229ebde304c85328847705610d48db339d324bb7",
       "packet_sha256": "f95166b464d50ab5c8552fd5f7d39867a111749d108ce6e48c752ff3ecbec3a5",
-      "status": "dispatched",
+      "status": "failed_usage_limit",
       "packet": "CODEX-R1-20261011/Codex-P04-PHYSICAL",
       "model": "gpt-6-astra",
       "reasoning": "high"
@@ -24,7 +24,7 @@
       "topic_id": "EDA-0105",
       "input_commit": "229ebde304c85328847705610d48db339d324bb7",
       "packet_sha256": "b8e65d150f6a6bb356c48dbbb83486e750d9236b6abd7a8eb2b316445a75dd58",
-      "status": "dispatched",
+      "status": "failed_usage_limit",
       "packet": "CODEX-R1-20261011/Codex-P05-TIMING",
       "model": "gpt-6-astra",
       "reasoning": "high"
@@ -34,5 +34,10 @@
   "governance_status": "Frozen unmerged draft; no promotion or merge",
   "compute_allocation": "No experiment jobs or paid API calls in this round",
   "role_exchange": "Files only; no cross-role messages or shared memory",
-  "completion": false
+  "completion": false,
+  "last_checked_at_utc": "2026-10-11T08:56:22.272876+00:00",
+  "blocker": "Both Astra high proposer calls failed with an explicit usage-limit error despite the aggregate usage endpoint reporting ordinary usage allowed. No automatic retry or model substitution.",
+  "runtime_retry_message": "try again at Oct 12th, 2026 7:05 AM (timezone not specified by error)",
+  "research_outputs_created": false,
+  "challenger_verifier_dispatched": false
 }
