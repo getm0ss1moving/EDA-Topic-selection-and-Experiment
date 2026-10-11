@@ -124,6 +124,10 @@ def validate_topic(path, area, sessions):
             require(v.get('verifier_session') == d.get('verifier_session'), 'verifier identity mismatch')
             require(v.get('dossier_digest') == digest(path), 'stale dossier digest')
             require(all(v.get('gates', {}).get(k) is True for k in GATES), 'admission gate incomplete')
+            require(v.get('direction_penalty_checked') is True,
+                    'verifier did not check direction penalties')
+            require(v.get('experiment_consensus_checked') is True,
+                    'verifier did not check experiment consensus')
             require(direction.get('state') in {'continue', 'revise_same_problem'},
                     'abandonment state cannot be promoted')
             require(sum(penalty_scores) == 0, 'direction drift penalty blocks promotion')
