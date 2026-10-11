@@ -41,12 +41,14 @@
       "proposer": {
         "session_id": null,
         "decision": "pending",
-        "signed_revision": null
+        "signed_revision": null,
+        "signed_dossier_digest": null
       },
       "challenger": {
         "session_id": null,
         "decision": "pending",
-        "signed_revision": null
+        "signed_revision": null,
+        "signed_dossier_digest": null
       }
     },
     "successor_topic_id": null,
