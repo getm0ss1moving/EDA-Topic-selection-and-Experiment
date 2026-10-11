@@ -1,0 +1,11 @@
+{
+  "flow_completed": true,
+  "elapsed_seconds": 4.3103641249999995,
+  "returncode": 0,
+  "image": "efabless/openlane@sha256:840fe28388494220dae9e2be6cf3c7cb2dadfa0eabae4144f0873b9ee949597f",
+  "upstream_commit": "b16bda7e82721d10566ff7e2b68f1ff0be9f9e38",
+  "patch": {
+    "set_thread_count [exec getconf _NPROCESSORS_ONLN]": "set_thread_count 2"
+  },
+  "not_a_timing_closure_verdict": true
+}

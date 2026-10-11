@@ -11,5 +11,16 @@
     "packet_sha256",
     "independence_attestation"
   ],
-  "note": "Do not fabricate assignments. GitHub verifier authorization is configured separately using VERIFIER_LOGINS."
+  "note": "Do not fabricate assignments. GitHub verifier authorization is configured separately using VERIFIER_LOGINS.",
+  "github_verifier_registry": [
+    {
+      "login": "M0nitor",
+      "user_id": 21146308,
+      "distinct_from_owner": true,
+      "invitation_id": 337209548,
+      "invitation_status": "pending",
+      "permission_requested": "write",
+      "scientific_session_binding": "Unassigned: a GitHub account is not an AI session or scientific verdict."
+    }
+  ]
 }
