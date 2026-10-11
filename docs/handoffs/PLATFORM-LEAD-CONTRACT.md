@@ -67,7 +67,7 @@ Make a platform-specific branch/worktree and submit PRs for governance and scien
 
 Register real scientific sessions in `config/roles.json`; a platform roster or task title alone is not a scientific-session registration. Record model requested versus model used, packet hashes, operator and independence attestation. Do not invent a GitHub login for an AI actor.
 
-`M0nitor` is the registered independent GitHub account, distinct from PR author `getm0ss1moving`. At this handoff's preparation its write invitation is pending. Verify current status before use. The account must actually review the final files and submit an APPROVE review with exactly `CONFIRM <full current PR head SHA>`. Registration is not consent, account access, a scientific verdict or approval. Never impersonate the account or ask actors to share its credentials.
+`M0nitor-EDA` is the registered independent GitHub account, distinct from PR author `getm0ss1moving`. At this handoff's preparation its write invitation is pending. Verify current status before use. The account must actually review the final files and submit an APPROVE review with exactly `CONFIRM <full current PR head SHA>`. Registration is not consent, account access, a scientific verdict or approval. Never impersonate the account or ask actors to share its credentials.
 
 Both dossier-level scientific verification and the current-head GitHub confirmation are required. Every new PR head invalidates the old confirmation. PR #1 is governance, PR #3 is Codex allocation/pilot configuration, and PR #2 is DeepSeek allocation stacked on that work; inspect current bases and SHAs instead of assuming a pending draft is merged. Keep dependent PRs coherent and rerun checks after rebasing. Run:
 
@@ -81,3 +81,5 @@ The current `scripts/actor_packet.py` reads the Codex roster. Do not pass a Deep
 ## First return from each platform lead
 
 Submit a versioned, English readiness report containing the five actor IDs, actual model availability, session/isolation controls, frozen input revisions, output locations, cost allocation, current blocking prerequisites and the next bounded file exchange. Label planned sessions as planned. Do not claim tasks were launched or reviews completed merely because this handoff describes them.
+
+Reviewer identity correction: the user corrected the earlier username to `M0nitor-EDA`. The invitation to the unrelated `M0nitor` account was revoked and that login removed from the allowlist. Separate GitHub accounts satisfy account separation only; independent scientific review still requires a distinct verifier session and evidence record, even when both accounts belong to the same human.
