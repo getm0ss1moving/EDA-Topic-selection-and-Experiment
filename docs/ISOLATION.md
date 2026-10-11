@@ -24,3 +24,5 @@ Run `python3 scripts/project.py packet ROLE EDA-0001 --ref FULL_SHA --out /absol
 ## Contamination response
 
 Stop the affected role, log the exposed artifact/session IDs (not private reasoning), discard its independence claim, start a clean replacement session and rerun the affected review. The human records an exception if continuing; an exception cannot be called independent confirmation.
+
+Governance packets include the three tracked dossier-area README files so offline structural validation has the same empty-area scaffolding as a clean checkout. To release additional public audit evidence, append `--evidence-run RUN_ID` (repeatable, governance only); this exports only named committed run directories and still excludes other dossiers/runs. Check manifests and review the chosen run contents before export.
