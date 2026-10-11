@@ -21,7 +21,7 @@
     "max"
   ],
   "model_confirmation": "model IDs observed in the active host profile on 2026-10-11; requested settings are not a promise that a future host exposes them",
-  "research_phase": "governance_hardening_paused",
+  "research_phase": "cross_platform_role_creation_released",
   "actor_count": 21,
   "actors": [
     {
@@ -379,11 +379,11 @@
       ],
       "task_title": "DeepSeek-C04-PHYSICAL",
       "model_requested": "deepseek-flash",
-      "reasoning_requested": "max",
+      "reasoning_requested": "medium",
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "paused_governance",
+      "status": "ready_for_fresh_session",
       "github_review_identity": null,
       "packet": null,
       "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
@@ -412,7 +412,7 @@
         "verdict_state": "onboarding_complete",
         "unlisted_context_exposed": false
       },
-      "activation": "paused_governance",
+      "activation": "ready_for_fresh_session",
       "launch_readiness": {
         "run_id": "DSK-R1-READY",
         "state": "ready_to_launch",
@@ -427,9 +427,11 @@
         "topic_containers": [
           "EDA-0001"
         ],
-        "blocked_by": "governance_hardening_and_github_independent_review",
-        "current_hold": "Historical packet readiness is preserved, but no scientific role may start until the governance stack is merged and explicitly released."
-      }
+        "blocked_by": "proposal_not_yet_frozen",
+        "current_hold": "The identity may be created after release merge and fresh packet export, but it receives scientific proposal content only after the assigned proposer output is frozen."
+      },
+      "active_scope": true,
+      "fresh_session_required": true
     },
     {
       "actor_id": "DeepSeek-P05-TIMING",
@@ -518,11 +520,11 @@
       ],
       "task_title": "DeepSeek-C05-TIMING",
       "model_requested": "deepseek-flash",
-      "reasoning_requested": "max",
+      "reasoning_requested": "medium",
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "paused_governance",
+      "status": "ready_for_fresh_session",
       "github_review_identity": null,
       "packet": null,
       "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
@@ -554,7 +556,7 @@
           "detail": "No file outside the packet allowlist was opened, and no content belonging to another actor, another role, another domain, another session or any shared memory was read. One disclosure for auditability: a single `ls -la` of the parent outbox directory (/Users/duanzeyu/Documents/ChatGPT/eda-dsk/outbox/) returned directory NAMES only for sibling actor outboxes (DeepSeek-C01..C09, P01..P09, V01..V03). No sibling outbox contents were listed or opened, and the challenge/plan below is not informed by them. I did not read, and did not attempt to read: another role harness, another domain brief, another actor's outbox content, any transcript or chain-of-thought, any shared agent memory, or any repository worktree outside this packet."
         }
       },
-      "activation": "paused_governance",
+      "activation": "ready_for_fresh_session",
       "launch_readiness": {
         "run_id": "DSK-R1-READY",
         "state": "ready_to_launch",
@@ -569,9 +571,11 @@
         "topic_containers": [
           "EDA-0002"
         ],
-        "blocked_by": "governance_hardening_and_github_independent_review",
-        "current_hold": "Historical packet readiness is preserved, but no scientific role may start until the governance stack is merged and explicitly released."
-      }
+        "blocked_by": "proposal_not_yet_frozen",
+        "current_hold": "The identity may be created after release merge and fresh packet export, but it receives scientific proposal content only after the assigned proposer output is frozen."
+      },
+      "active_scope": true,
+      "fresh_session_required": true
     },
     {
       "actor_id": "DeepSeek-P06-RELIABILITY",
@@ -1242,9 +1246,13 @@
     }
   ],
   "activation": {
-    "state": "paused_governance",
+    "state": "ready_for_role_creation",
     "decision_utc": "2026-10-11T03:27:55Z",
-    "directive": "Preserve D04/D05 as the only planned research slice, but pause every scientific role while governance, confirmation gates and experiment-consensus controls are completed.",
+    "directive": "Release only DeepSeek-C04-PHYSICAL and DeepSeek-C05-TIMING as cross-platform challengers. They use fresh sessions and receive no proposal until the corresponding proposer artifact is frozen.",
+    "released_actors": [
+      "DeepSeek-C04-PHYSICAL",
+      "DeepSeek-C05-TIMING"
+    ],
     "active_domains": [],
     "active_actors": [],
     "topic_containers": {
@@ -1274,12 +1282,12 @@
       "DeepSeek-V02-PHYSICAL",
       "DeepSeek-V03-SYSTEMS"
     ],
-    "deferral_reason": "All scientific conversations are paused during governance hardening. D04/D05 remain the only planned post-release slice; all other domains are additionally deferred by the owner budget directive.",
+    "deferral_reason": "Only the two D04/D05 challenger identities are released. DeepSeek proposer and verifier identities remain deferred under the cross-platform division of work; all other domains remain budget-deferred.",
     "column_scope": {
       "D04": "partitioning, floorplanning, macro placement, standard-cell placement, legalization, clock-tree synthesis, global and detailed routing",
       "D05": "STA, multi-mode/multi-corner analysis, parasitic extraction, crosstalk/signal integrity, timing closure, incremental analysis and ECO, signoff fidelity"
     },
     "verifier_note": "DeepSeek-V02-PHYSICAL is registered for D04-D06. Its D04 and D05 queues are planned but currently closed.",
-    "resource_note": "config/research-brief.json remains unfilled. Compute, tools, PDKs, designs, target venue, primary metric and minimum meaningful effect are UNKNOWN and must be recorded as unknown."
+    "resource_note": "config/research-brief.json records a measured local smoke path and provisional coordinator caps. Representative publication designs, macro-rich cases, additional corners, practitioner-validated thresholds and a qualified signoff oracle remain unresolved."
   }
 }

@@ -14,7 +14,7 @@ Use the following platform-qualified IDs, unless an existing Claude registry alr
 | Claude-C05-TIMING | Challenger | Independent D05 prior-art and validity analysis |
 | Claude-V02-PHYSICAL | Shared verifier | D04/D05 queues, sequentially |
 
-These are proposed identities, not a claim that Claude sessions already exist. Do not create scientific sessions while the governance pause is active. If an infrastructure test is indispensable, create only one synthetic test role, archive it before any later test, and do not use its output as a topic claim. Five logical actors never require five simultaneous model calls. Do not recreate nine-domain/21-actor onboarding. Pause existing Claude assignments without deleting their outputs.
+These are registered identities, not a claim that Claude sessions already exist. The current release permits only `Claude-P05-TIMING` as proposer and `Claude-V02-PHYSICAL` as D04 verifier. Record the actual Claude model before any scientific input; if the host exposes no Claude-family model, abort the creation transaction. Do not recreate nine-domain/21-actor onboarding or reuse historical conversations.
 
 ## Model selection on your host
 
@@ -28,12 +28,12 @@ Create a platform-owned registry such as `config/agents-claude.json`, a team doc
 
 Use a separate worktree for coordination and one packet/outbox per actor. Disable cross-session memory. Do not fork this coordinator's conversation into scientific actors. Export only common policies, the actor's own harness, its assigned brief and the released evidence for that stage; include generated assignment files in the manifest. The Codex-specific onboarding exporter does not automatically load a Claude registry, so adapt it through reviewed governance or use validated generic dossier packets.
 
-Start with packet validation and an English readiness record. Wait for the explicit governance-pause release before assigning candidates. After release, assign at most one candidate per domain, enforce the direction anchor and drift penalties, and use joint abandonment rather than forcing a replacement mechanism into the same topic. The challenger must make its own nearest-work/headroom assessment before seeing the proposer's forecast. The verifier receives released evidence, not either role's private reasoning. Follow the file-only cycle in the shared contract.
+Start with packet validation and an English readiness record. The D05 proposer enforces the direction anchor and drift penalties and uses joint abandonment rather than forcing a replacement mechanism into the same topic. The D04 verifier receives only released proposal/challenge evidence, not either role's private reasoning, and must not inspect D05 proposer scratch. Follow the file-only cycle in the shared contract.
 
 Before topic confirmation or experiment scheduling, require the Claude proposer and challenger to co-produce and separately sign the exact final experiment task list. Any edit resets consensus; the verifier checks the gate but cannot supply either signature.
 
 ## Next delivery
 
-Return an English, versioned readiness report with actual model availability, five planned or real actor identities, role-to-domain mapping, isolation controls, packet provenance, shared-budget allocation and unresolved prerequisites. Submit it through a PR. Do not report sessions as launched until they have actually started, and do not report a GitHub review as independent merely because the actor has a different display name.
+Return an English, versioned readiness report with actual model availability, the two released actor identities, role-to-topic mapping, isolation controls, packet provenance, shared-budget allocation and unresolved prerequisites. Submit it through a PR. Do not report sessions as launched until they have actually started, and do not report a GitHub review as independent merely because the actor has a different display name.
 
 Use existing public Codex/DeepSeek artifacts as cited inputs only when explicitly released in the assignment. Independent discovery is valuable; artificial consensus is not. Your contribution should survive source verification, nearest-work comparisons, engineering constraints and reproducible experiments even when another platform disagrees.

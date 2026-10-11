@@ -26,7 +26,7 @@ Prefer your strongest affordable exposed DeepSeek option for proposers, medium-c
 
 Your public PR #2 registry records the original 21-actor onboarding and a requested-versus-actual model discrepancy. Update its current allocation and policy through a PR. Do not retroactively relabel those runs as a stronger model or as completed research.
 
-After the pause is released, require the DeepSeek proposer and challenger to co-produce and separately sign the exact final experiment task list before any topic confirmation or experiment scheduling. A verifier checks this consensus but does not create it.
+After DeepSeek's platform readiness block is cleared in a reviewed launch release, require the DeepSeek proposer and challenger to co-produce and separately sign the exact final experiment task list before any topic confirmation or experiment scheduling. A verifier checks this consensus but does not create it.
 
 Inspect the released packet manifests for unlisted assignment content and any disclosed context exposure. Put future `ASSIGNMENT.json` content in the hashed input inventory. For any contaminated scientific review, create a clean replacement session; do not dismiss the issue because the source was another agent on the same platform.
 
@@ -34,6 +34,6 @@ Read the new research brief: resources are no longer wholly unspecified, but the
 
 ## Next delivery
 
-Submit an English update to `config/agents-deepseek.json`, your team/run documentation and the appropriate PR, recording the five intended assignments, observed model IDs, actual paused/archive state, packet hashes and isolation controls. Do not prepare or continue D04/D05 proposals until the governance pause is explicitly lifted. No accepted-topic promotion, self-approval or broad new actor wave.
+Create only `DeepSeek-C04-PHYSICAL` and `DeepSeek-C05-TIMING`, after the corresponding proposal is frozen. Record the observed DeepSeek model ID, session state, packet hashes and isolation controls in an English run record and PR. These sessions are challengers: they must independently search prior art, estimate headroom before seeing the proposer forecast, and issue evidence-backed objections. Do not create DeepSeek proposers or verifiers, promote a topic, self-approve, or start a broad actor wave.
 
 Coordinate across platforms only using released repository artifacts. Do not import Codex/Claude private conversations, imitate their hypotheses to manufacture agreement, or treat three platform votes as evidence. A cross-platform review still needs a new, independent verifier session with an explicit packet and claim-level source checks.

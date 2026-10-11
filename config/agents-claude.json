@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "platform": "Claude",
+  "allocation_doc": "docs/platforms/CLAUDE-PHYSICAL.md",
+  "research_phase": "cross_platform_role_creation_released",
+  "model_policy": "Every session must use a Claude-family model exposed by its destination host. The exact actual model and supported effort are recorded before scientific input is released; creation aborts if the host exposes no Claude model.",
+  "actors": [
+    {
+      "actor_id": "Claude-P04-PHYSICAL",
+      "call_sign": "CLD-Origin-PHYSICAL",
+      "platform": "Claude",
+      "role": "proposer",
+      "domain_ids": ["D04"],
+      "model_requested": "claude-family:strongest-exposed",
+      "reasoning_requested": "highest-supported-within-budget",
+      "status": "deferred_cross_platform_assignment",
+      "active_scope": false,
+      "fresh_session_required": false
+    },
+    {
+      "actor_id": "Claude-C04-PHYSICAL",
+      "call_sign": "CLD-Audit-PHYSICAL",
+      "platform": "Claude",
+      "role": "challenger",
+      "domain_ids": ["D04"],
+      "model_requested": "claude-family:balanced-exposed",
+      "reasoning_requested": "medium-supported",
+      "status": "deferred_cross_platform_assignment",
+      "active_scope": false,
+      "fresh_session_required": false
+    },
+    {
+      "actor_id": "Claude-P05-TIMING",
+      "call_sign": "CLD-Origin-TIMING",
+      "platform": "Claude",
+      "role": "proposer",
+      "domain_ids": ["D05"],
+      "model_requested": "claude-family:strongest-exposed",
+      "reasoning_requested": "highest-supported-within-budget",
+      "status": "ready_for_fresh_session",
+      "active_scope": true,
+      "fresh_session_required": true
+    },
+    {
+      "actor_id": "Claude-C05-TIMING",
+      "call_sign": "CLD-Audit-TIMING",
+      "platform": "Claude",
+      "role": "challenger",
+      "domain_ids": ["D05"],
+      "model_requested": "claude-family:balanced-exposed",
+      "reasoning_requested": "medium-supported",
+      "status": "deferred_cross_platform_assignment",
+      "active_scope": false,
+      "fresh_session_required": false
+    },
+    {
+      "actor_id": "Claude-V02-PHYSICAL",
+      "call_sign": "CLD-Proof-PHYSICAL",
+      "platform": "Claude",
+      "role": "verifier",
+      "domain_ids": ["D04", "D05"],
+      "model_requested": "claude-family:lightweight-exposed",
+      "reasoning_requested": "low-or-medium-supported",
+      "status": "ready_for_fresh_session",
+      "active_scope": true,
+      "fresh_session_required": true,
+      "released_queue": ["D04"]
+    }
+  ]
+}

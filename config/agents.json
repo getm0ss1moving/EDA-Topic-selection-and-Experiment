@@ -2,7 +2,7 @@
   "schema_version": 1,
   "coordinator": "Current project creation task; transport only",
   "model_confirmation": "User selected proposer gpt-6-astra high; challenger gpt-6-sol medium and verifier gpt-6-luna medium retained.",
-  "research_phase": "governance_hardening_paused",
+  "research_phase": "physical_role_creation_released",
   "actors": [
     {
       "actor_id": "Codex-P01-ARCH",
@@ -167,7 +167,7 @@
       "thread_id": "01a1272b-fb2e-7cc1-a6e3-8f4290be9769",
       "client_thread_id": "client-new-thread:0b8eb7aa-f813-4fdd-8060-0cd0f8dcc356",
       "host_id": "local",
-      "status": "paused_governance",
+      "status": "ready_for_fresh_session",
       "github_review_identity": null,
       "packet": "role-allocation-20261011/Codex-P04-PHYSICAL",
       "input_commit": "67fb73b9f197e412791b0daf5ec7861336492604",
@@ -175,9 +175,10 @@
       "model_actual": "gpt-6-astra",
       "reasoning_actual": "high",
       "memory_mode": "disabled",
-      "active_scope": false,
+      "active_scope": true,
       "archived": true,
-      "run_status": "failed"
+      "run_status": "historical_failed",
+      "fresh_session_required": true
     },
     {
       "actor_id": "Codex-C04-PHYSICAL",
@@ -192,7 +193,7 @@
       "thread_id": "01a1272b-fe2d-7571-af1a-6cb84f61c3d0",
       "client_thread_id": "client-new-thread:ed88b966-5c33-477a-a971-86eb1f08d58d",
       "host_id": "local",
-      "status": "paused_governance",
+      "status": "deferred_cross_platform_assignment",
       "github_review_identity": null,
       "packet": "role-allocation-20261011/Codex-C04-PHYSICAL",
       "input_commit": "67fb73b9f197e412791b0daf5ec7861336492604",
@@ -202,7 +203,8 @@
       "memory_mode": "disabled",
       "active_scope": false,
       "archived": true,
-      "run_status": "completed"
+      "run_status": "historical_completed",
+      "fresh_session_required": false
     },
     {
       "actor_id": "Codex-P05-TIMING",
@@ -217,7 +219,7 @@
       "thread_id": "01a1272c-0241-7ce0-9c77-80dd05665d65",
       "client_thread_id": "client-new-thread:ceff1199-57ca-4964-b9ce-36f7d07fe449",
       "host_id": "local",
-      "status": "paused_governance",
+      "status": "deferred_cross_platform_assignment",
       "github_review_identity": null,
       "packet": "role-allocation-20261011/Codex-P05-TIMING",
       "input_commit": "67fb73b9f197e412791b0daf5ec7861336492604",
@@ -227,7 +229,8 @@
       "memory_mode": "disabled",
       "active_scope": false,
       "archived": true,
-      "run_status": "failed"
+      "run_status": "historical_failed",
+      "fresh_session_required": false
     },
     {
       "actor_id": "Codex-C05-TIMING",
@@ -242,7 +245,7 @@
       "thread_id": "01a1272c-0344-7ea3-91eb-db37a9a39137",
       "client_thread_id": "client-new-thread:caba3deb-7305-42a4-8505-772a67230cbe",
       "host_id": "local",
-      "status": "paused_governance",
+      "status": "deferred_cross_platform_assignment",
       "github_review_identity": null,
       "packet": "role-allocation-20261011/Codex-C05-TIMING",
       "input_commit": "67fb73b9f197e412791b0daf5ec7861336492604",
@@ -252,7 +255,8 @@
       "memory_mode": "disabled",
       "active_scope": false,
       "archived": true,
-      "run_status": "failed"
+      "run_status": "historical_failed",
+      "fresh_session_required": false
     },
     {
       "actor_id": "Codex-P06-RELIABILITY",
@@ -495,7 +499,7 @@
       "thread_id": "01a1272c-1ca7-7383-a1c9-2c985f4942e0",
       "client_thread_id": "client-new-thread:303413a7-4e56-47b3-b6af-d3e023faff0b",
       "host_id": "local",
-      "status": "paused_governance",
+      "status": "ready_for_fresh_session",
       "github_review_identity": null,
       "packet": "role-allocation-20261011/Codex-V02-PHYSICAL",
       "input_commit": "67fb73b9f197e412791b0daf5ec7861336492604",
@@ -503,9 +507,10 @@
       "model_actual": "gpt-6-luna",
       "reasoning_actual": "medium",
       "memory_mode": "disabled",
-      "active_scope": false,
+      "active_scope": true,
       "archived": true,
-      "run_status": "completed"
+      "run_status": "historical_completed",
+      "fresh_session_required": true
     },
     {
       "actor_id": "Codex-V03-SYSTEMS",
@@ -536,7 +541,8 @@
     }
   ],
   "active_actor_count": 0,
-  "scope_policy": "All scientific roles are paused and archived while governance tools and constraints are completed. At most one synthetic test role may run at a time; it cannot produce or adjudicate a scientific topic. D04/D05 remain the intended future scope. No automatic retries.",
+  "released_actor_count": 2,
+  "scope_policy": "Codex supplies the D04 proposer and D05 verifier in the cross-platform release. Historical sessions remain archived and are not inputs. Claude supplies the D05 proposer and D04 verifier; DeepSeek supplies both challengers. No experiment or automatic retry is authorized.",
   "max_concurrent_test_roles": 1,
   "role_test_policy": "Synthetic infrastructure fixtures only; archive the test role before another role starts; no scientific claims or approvals.",
   "platform_model_policy": {
