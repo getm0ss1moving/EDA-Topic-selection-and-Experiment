@@ -49,7 +49,7 @@ class PacketTests(unittest.TestCase):
             root=Path(td)/'repo';root.mkdir()
             def write(name,body='public'):
                 f=root/name;f.parent.mkdir(parents=True,exist_ok=True);f.write_text(body)
-            for name in ['AGENTS.md','docs/CHARTER.md','harness/CHALLENGER.md','harness/PROPOSER.md','candidates/EDA-0001/proposal.md','candidates/EDA-0001/forecast.json','private/secret','runs/private.txt']:
+            for name in ['AGENTS.md','docs/CHARTER.md','harness/CHALLENGER.md','harness/PROPOSER.md','candidates/EDA-0001/proposal.md','candidates/EDA-0001/forecast.json','private/secret','runs/private.txt','candidates/README.md','topics/README.md','archive/README.md']:
                 write(name)
             def git(*args):return subprocess.check_output(['git','-C',str(root),*args],stderr=subprocess.DEVNULL)
             git('init');git('add','.');git('-c','user.name=test','-c','user.email=test@example.com','commit','-m','fixture')
@@ -64,6 +64,11 @@ class PacketTests(unittest.TestCase):
                 self.assertNotIn('private/secret',m['files'])
                 self.assertNotIn('runs/private.txt',m['files'])
                 self.assertFalse((out/'.git').exists())
+                gov=p.export_packet('verifier',None,sha,Path(td)/'governance',governance=True)
+                for area in ['candidates','topics','archive']:
+                    self.assertIn(area+'/README.md',gov['files'])
+                self.assertNotIn('candidates/EDA-0001/proposal.md',gov['files'])
+                self.assertNotIn('private/secret',gov['files'])
                 self.assertEqual((out/'candidates/EDA-0001/proposal.md').read_text(),'public')
                 with self.assertRaises(ValueError):p.export_packet('challenger','EDA-0001',sha,out)
                 with self.assertRaises(ValueError):p.export_packet('challenger','EDA-0001','HEAD',Path(td)/'bad')
