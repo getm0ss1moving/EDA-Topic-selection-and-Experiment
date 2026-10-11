@@ -14,7 +14,7 @@ Reuse these stable IDs from the existing DeepSeek roster:
 | DeepSeek-C05-TIMING | Challenger | Independent D05 prior-art and validity analysis |
 | DeepSeek-V02-PHYSICAL | Shared verifier | D04/D05 queues, sequentially |
 
-Pause/archive the other 16 assignments in your own runtime and registry. Preserve their released files. Remove D06 from V02's current assignment without rewriting historical packet manifests. Do not silently change Codex's or Claude's task state.
+Pause/archive every scientific assignment in your own runtime and registry while governance construction is active. Preserve their released files. Remove D06 from V02's future assignment without rewriting historical packet manifests. If a harness test is required, run only one synthetic role at a time and do not create a scientific verdict. Do not silently change Codex's or Claude's task state.
 
 ## Model policy clarification
 
@@ -32,6 +32,6 @@ Read the new research brief: resources are no longer wholly unspecified, but the
 
 ## Next delivery
 
-Submit an English update to `config/agents-deepseek.json`, your team/run documentation and the appropriate PR, recording five current assignments, observed model IDs, actual pause/archive state, packet hashes and isolation controls. Then prepare one bounded D04 proposal and one bounded D05 proposal when capacity permits, routing each through independent challenge and verification files under the shared contract. No accepted-topic promotion, self-approval or broad new actor wave.
+Submit an English update to `config/agents-deepseek.json`, your team/run documentation and the appropriate PR, recording the five intended assignments, observed model IDs, actual paused/archive state, packet hashes and isolation controls. Do not prepare or continue D04/D05 proposals until the governance pause is explicitly lifted. No accepted-topic promotion, self-approval or broad new actor wave.
 
 Coordinate across platforms only using released repository artifacts. Do not import Codex/Claude private conversations, imitate their hypotheses to manufacture agreement, or treat three platform votes as evidence. A cross-platform review still needs a new, independent verifier session with an explicit packet and claim-level source checks.

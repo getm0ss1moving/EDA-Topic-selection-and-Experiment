@@ -21,3 +21,5 @@ Choose repeated seeds and sample sizes from pilot variance and an effect-size/po
 Forecasts contain pessimistic/base/optimistic effect estimates, units, baseline reference, assumptions, confidence, and reasons for each range. Unknown values remain null with an evidence-collection task; never present them as measured improvements. Calibrate previous forecasts against measured results using the same metric and budget.
 
 Stop or revise when correctness fails, meaningful effect is below threshold, claimed novelty collapses, compute exceeds budget, or dependencies remain inaccessible. Negative results are valid artifacts. The task list must include dependency order, owner role, budget, command or procedure, output and pass/fail criterion for every experiment.
+
+No experiment may begin while either direction-drift penalty is 2 or above, their total is 3 or above, or `direction_integrity` is false. These are governance blockers and cannot be traded against forecast PPA, runtime, benchmark or model improvements. Restore the frozen anchor or complete the joint-abandonment process first.

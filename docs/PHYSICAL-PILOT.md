@@ -2,7 +2,7 @@
 
 ## Scope and resource contract
 
-Only D04 (floorplan, placement, CTS, routing) and D05 (extraction, STA, signoff methodology) are active. Keep one proposer/challenger pair per territory and one shared verifier; do not multiply sessions per flow stage. Existing archived tasks retain their history. All platforms follow this scope, including future DeepSeek/Claude dispatches; their externally running sessions must be paused by their own coordinator. This repository update does not assert control over another platform's runtime.
+D04 (floorplan, placement, CTS, routing) and D05 (extraction, STA, signoff methodology) are the only planned territories after the governance pause is released. All scientific roles are currently paused and archived. Keep one proposer/challenger pair per territory and one shared verifier after release; do not multiply sessions per flow stage. Existing archived tasks retain their history. All platforms follow this scope, including future DeepSeek/Claude dispatches; their externally running sessions must be paused by their own coordinator. This repository update does not assert control over another platform's runtime.
 
 `config/research-brief.json` distinguishes measured local capability from provisional caps and acceptance thresholds. The local host has 10 logical CPUs and 16 GiB RAM. The pilot defaults to one two-CPU, 4 GiB container at a time, eight CPU-hours total, no GPU or paid API allocation. These are conservative coordinator choices, not a claim that the user supplied a budget. The two-week planning horizon is provisional. Stop experiments at the cap; do not acquire paid infrastructure.
 
@@ -32,7 +32,7 @@ The script fetches about 7 MB of public data, checks every checksum, runs withou
 
 The 21 original tasks were created without conversation forks. Memory mode was initially enabled; it was subsequently disabled through the Codex app-server API, and each worktree received `[memories] use_memories=false, generate_memories=false`. This does not prove earlier context was absent. No scientific verdict from onboarding is accepted. If an actor reports contamination, replace it with a fresh packet-only session. Worktree separation and file rules are not an OS sandbox.
 
-Five assignments remain in scope; some failed on subscription quota. No automatic retries or model downgrades are scheduled. The coordinator reads released files and metadata only, never private transcripts or hidden reasoning.
+Five assignments remain in the future scope, but none is active while governance hardening is in progress. Some earlier runs failed on subscription quota. No automatic retries or model downgrades are scheduled. The coordinator reads released files and metadata only, never private transcripts or hidden reasoning. Infrastructure testing is limited to one synthetic role at a time and cannot create a scientific verdict.
 
 ## Independent GitHub review
 

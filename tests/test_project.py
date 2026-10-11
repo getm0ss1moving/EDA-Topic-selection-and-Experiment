@@ -92,6 +92,13 @@ class AcceptanceTests(DossierTests):
         source={'id':'SRC-001','title':'fixture','url':'https://example.org/source','type':'paper','published':'unknown','retrieved':'2026-10-10T00:00:00Z','locator':'Section 1','access':'full','claims':['CLM-001'],'limitations':'fixture'}
         (self.d/'sources.json').write_text(json.dumps([source]))
         (self.d/'prior-art.csv').write_text('source_id,task\nSRC-001,fixture\n')
+        direction=json.loads((self.d/'direction-control.json').read_text())
+        direction['anchor'].update(problem='fixture problem',engineering_user='fixture engineer',
+                                   downstream_need='fixture need',causal_mechanism='fixture mechanism',
+                                   mechanism_invariants=['fixture invariant'])
+        for key in ['combination_drift','demand_drift']:
+            direction['penalties'][key]['rationale']='No drift in fixture.'
+        (self.d/'direction-control.json').write_text(json.dumps(direction))
         self.update('verification.json',decision='accept_for_pilot',verifier_session='v',gates={k:True for k in p.GATES},source_checks=[{'source_id':'SRC-001','locator':'Section 1','verdict':'verified'}],dossier_digest=p.digest(self.d))
         return {'p':{'role':'proposer'},'c':{'role':'challenger'},'v':{'role':'verifier'}}
     def test_valid_then_tampered(self):
@@ -103,3 +110,49 @@ class AcceptanceTests(DossierTests):
         sessions=self.make_valid()
         self.update('verification.json',objections=[{'verdict':'valid','blocking':True,'resolution':'open'}])
         self.assertTrue(any('blocking' in e for e in p.validate_topic(self.d,'topics',sessions)))
+    def test_direction_penalty_blocks_promotion(self):
+        sessions=self.make_valid()
+        direction=json.loads((self.d/'direction-control.json').read_text())
+        direction['penalties']['combination_drift'].update(score=1,rationale='Minor drift')
+        direction['penalties']['total']=1
+        (self.d/'direction-control.json').write_text(json.dumps(direction))
+        self.update('verification.json',dossier_digest=p.digest(self.d))
+        self.assertTrue(any('direction drift penalty' in e for e in p.validate_topic(self.d,'topics',sessions)))
+    def test_joint_abandonment_requires_two_consents(self):
+        sessions=self.make_valid()
+        self.update('dossier.json',status='abandoned')
+        direction=json.loads((self.d/'direction-control.json').read_text())
+        direction['state']='jointly_abandoned'
+        direction['abandonment'].update(decision_id='ABN-001',grounds=['dead_end'],
+                                        rationale='Fixture dead end.',evidence_refs=['SRC-001'],
+                                        resurrection_conditions=['New counterexample'])
+        (self.d/'direction-control.json').write_text(json.dumps(direction))
+        errors=p.validate_topic(self.d,'archive',sessions)
+        self.assertTrue(any('has not agreed' in e for e in errors))
+    def test_joint_abandonment_valid_with_distinct_consents(self):
+        sessions=self.make_valid()
+        self.update('dossier.json',status='abandoned')
+        direction=json.loads((self.d/'direction-control.json').read_text())
+        direction['state']='jointly_abandoned'
+        direction['abandonment'].update(decision_id='ABN-001',grounds=['novelty_exhausted'],
+                                        rationale='Nearest work leaves no distinct mechanism.',
+                                        evidence_refs=['SRC-001'],successor_topic_id='EDA-0002',
+                                        resurrection_conditions=['New mechanism evidence'])
+        direction['abandonment']['consents']['proposer']={'session_id':'p','decision':'agree','signed_revision':'a'*40}
+        direction['abandonment']['consents']['challenger']={'session_id':'c','decision':'agree','signed_revision':'a'*40}
+        (self.d/'direction-control.json').write_text(json.dumps(direction))
+        self.assertEqual(p.validate_topic(self.d,'archive',sessions),[])
+    def test_joint_abandonment_rejects_mismatched_revisions(self):
+        sessions=self.make_valid()
+        self.update('dossier.json',status='abandoned')
+        direction=json.loads((self.d/'direction-control.json').read_text())
+        direction['state']='jointly_abandoned'
+        direction['abandonment'].update(decision_id='ABN-002',grounds=['dead_end'],
+                                        rationale='The mechanism cannot satisfy the invariant.',
+                                        evidence_refs=['SRC-001'],
+                                        resurrection_conditions=['A new causal mechanism'])
+        direction['abandonment']['consents']['proposer']={'session_id':'p','decision':'agree','signed_revision':'a'*40}
+        direction['abandonment']['consents']['challenger']={'session_id':'c','decision':'agree','signed_revision':'b'*40}
+        (self.d/'direction-control.json').write_text(json.dumps(direction))
+        errors=p.validate_topic(self.d,'archive',sessions)
+        self.assertTrue(any('same frozen revision' in e for e in errors))

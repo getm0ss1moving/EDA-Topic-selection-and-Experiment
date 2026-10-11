@@ -20,7 +20,11 @@ TBD
 
 TBD
 
-## Six admission gates
+## Seven admission gates, including direction integrity
+
+TBD
+
+## Direction penalties and abandonment-process check
 
 TBD
 

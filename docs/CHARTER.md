@@ -13,8 +13,17 @@ Identify a concrete EDA bottleneck; map the closest prior solutions; locate a de
 - Contest originality: implementing a supplied baseline, organizer hint, known winner approach, or unfinished task is not by itself a research contribution. A new limitation beyond the given idea may qualify if explicitly demonstrated.
 - Feasibility: baseline, data rights, tool access, compute budget and correctness oracle must be identified before accepting an experiment-ready topic.
 - Evaluation integrity: no train/test leakage, cherry-picked designs, uncharged search budget, or inconsistent PDK/tool/corner conditions.
+- Direction integrity: freeze the problem, engineering user, downstream need, causal mechanism and mechanism invariants before challenge response. A proposer may narrow or repair that mechanism, but cannot escape a valid objection by replacing it with a straightforward combination or an optimization with no demonstrated engineering demand under the same topic ID.
 
-Failure of an unsupported premise means revise or collect evidence, not automatic rejection. Acceptance authorizes a research plan; it does not establish novelty universally or promise publication.
+## Direction-drift penalty
+
+Score two penalties independently on every substantive revision: `combination_drift` and `demand_drift`, each from 0 to 3. Zero preserves the anchor. One is a minor implementation-level drift that still preserves the causal mechanism and downstream need. Two means the proposed contribution has materially become a straightforward composition, or its objective has shifted to a weakly justified proxy/user need. Three means the original research question has effectively been replaced. Penalties are lexicographic governance constraints: reported PPA, runtime, model score, or search convenience cannot compensate for them. Any component at 2 or above, or total at 3 or above, blocks further experimental advancement until the original anchor is restored or a joint-abandonment review begins. Accepted topics require a total of zero.
+
+## Joint abandonment
+
+A topic may be abandoned when evidence supports at least one of four grounds: no innovative mechanism remains after verified prior-art challenges; relevant headroom is close to a theoretical limit under applicable assumptions; the causal approach is a documented dead end; or the anchored direction cannot change without becoming a different or demand-free topic. The proposer and challenger must independently agree on the same frozen revision and sign the same decision record. Abandonment is not failure concealment: archive the full dossier, objections, evidence, penalties and resurrection conditions. A replacement starts under a new topic ID and repeats novelty search; it cannot silently inherit acceptance or erase negative evidence. The verifier checks evidence and process but cannot force either scientific role to consent.
+
+Failure of an unsupported premise means revise or collect evidence, not automatic rejection. When the evidence instead establishes a dead end and both scientific roles agree, use joint abandonment. Acceptance authorizes a research plan; it does not establish novelty universally or promise publication.
 
 ## Decision rights
 

@@ -13,9 +13,15 @@ ROOT = Path(__file__).resolve().parents[1]
 ID = re.compile(r'EDA-\d{4,}')
 REQUIRED = ['dossier.json', 'proposal.md', 'sources.json', 'search-log.md', 'prior-art.csv',
             'contest-audit.md', 'industry-gap.md', 'experiment-plan.md', 'forecast.json',
-            'tasklist.md', 'challenges.md', 'responses.md', 'verification.md', 'verification.json']
-STATES = {'draft', 'submitted', 'revision_requested', 'verified', 'accepted', 'parked', 'rejected'}
-GATES = {'novelty', 'mechanism', 'utility', 'contest_originality', 'headroom', 'feasibility'}
+            'tasklist.md', 'challenges.md', 'responses.md', 'direction-control.json',
+            'verification.md', 'verification.json']
+STATES = {'draft', 'submitted', 'revision_requested', 'verified', 'accepted', 'parked',
+          'rejected', 'abandoned'}
+GATES = {'novelty', 'mechanism', 'utility', 'contest_originality', 'headroom',
+         'feasibility', 'direction_integrity'}
+DIRECTION_STATES = {'continue', 'revise_same_problem', 'abandonment_proposed', 'jointly_abandoned'}
+ABANDONMENT_GROUNDS = {'novelty_exhausted', 'theoretical_headroom_exhausted',
+                       'dead_end', 'immutable_direction_blocked'}
 
 def read_json(path):
     return json.loads(path.read_text())
@@ -46,10 +52,32 @@ def validate_topic(path, area, sessions):
         d = read_json(path / 'dossier.json')
         sources = read_json(path / 'sources.json')
         forecast = read_json(path / 'forecast.json')
+        direction = read_json(path / 'direction-control.json')
         v = read_json(path / 'verification.json')
         require(d['id'] == path.name and bool(ID.fullmatch(path.name)), 'invalid ID')
         require(d['status'] in STATES, 'invalid state')
         require(forecast.get('kind') == 'forecast_not_measurement', 'forecast label missing')
+        require(direction.get('state') in DIRECTION_STATES, 'invalid direction-control state')
+        anchor = direction.get('anchor', {})
+        for field in ['problem', 'engineering_user', 'downstream_need', 'causal_mechanism',
+                      'mechanism_invariants', 'forbidden_pivots']:
+            require(bool(anchor.get(field)), f'direction anchor missing {field}')
+        penalties = direction.get('penalties', {})
+        penalty_scores = []
+        for key in ['combination_drift', 'demand_drift']:
+            item = penalties.get(key, {})
+            score = item.get('score')
+            require(type(score) is int and 0 <= score <= 3, f'invalid {key} penalty')
+            if type(score) is int:
+                penalty_scores.append(score)
+            require('rationale' in item and 'evidence_refs' in item,
+                    f'incomplete {key} penalty record')
+        total = penalties.get('total')
+        require(type(total) is int and total == sum(penalty_scores),
+                'direction penalty total mismatch')
+        if any(score >= 2 for score in penalty_scores) or sum(penalty_scores) >= 3:
+            require(direction.get('state') in {'abandonment_proposed', 'jointly_abandoned'},
+                    'severe direction drift requires abandonment review')
         require(isinstance(sources, list), 'sources must be an array')
         if not isinstance(sources, list):
             return errors
@@ -69,6 +97,8 @@ def validate_topic(path, area, sessions):
             require(d.get('proposer_session') in sessions and sessions[d['proposer_session']].get('role') == 'proposer', 'proposer not registered')
             for name in ['proposal.md', 'search-log.md', 'contest-audit.md', 'industry-gap.md', 'experiment-plan.md']:
                 require(not re.search(r'\bTBD\b', (path/name).read_text()), f'unresolved template placeholder: {name}')
+            require(not re.search(r'\bTBD\b', (path/'direction-control.json').read_text()),
+                    'unresolved template placeholder: direction-control.json')
             with (path/'prior-art.csv').open() as stream:
                 rows = list(csv.DictReader(stream))
             require(bool(rows), 'prior-art matrix empty')
@@ -87,6 +117,9 @@ def validate_topic(path, area, sessions):
             require(v.get('verifier_session') == d.get('verifier_session'), 'verifier identity mismatch')
             require(v.get('dossier_digest') == digest(path), 'stale dossier digest')
             require(all(v.get('gates', {}).get(k) is True for k in GATES), 'admission gate incomplete')
+            require(direction.get('state') in {'continue', 'revise_same_problem'},
+                    'abandonment state cannot be promoted')
+            require(sum(penalty_scores) == 0, 'direction drift penalty blocks promotion')
             checked = v.get('source_checks', [])
             require(bool(checked), 'no independently checked sources')
             require(all(s.get('source_id') in ids and s.get('locator') and s.get('verdict') == 'verified' for s in checked), 'invalid source checks')
@@ -97,7 +130,39 @@ def validate_topic(path, area, sessions):
                     require(obj.get('verdict') in {'valid', 'partially_valid', 'unsupported', 'refuted', 'unresolved'}, 'invalid adjudication')
                     require(not (obj.get('blocking') is True and obj.get('resolution') != 'resolved'), 'unresolved blocking objection')
         if area == 'archive':
-            require(d['status'] in {'parked', 'rejected'}, 'archive needs parked/rejected state')
+            require(d['status'] in {'parked', 'rejected', 'abandoned'},
+                    'archive needs parked/rejected/abandoned state')
+        if d['status'] == 'abandoned' or direction.get('state') == 'jointly_abandoned':
+            require(area == 'archive' and d['status'] == 'abandoned',
+                    'joint abandonment must be stored as archive/abandoned')
+            abandonment = direction.get('abandonment', {})
+            require(bool(abandonment.get('decision_id')), 'abandonment decision ID missing')
+            grounds = abandonment.get('grounds', [])
+            require(bool(grounds) and set(grounds) <= ABANDONMENT_GROUNDS,
+                    'invalid abandonment grounds')
+            require(bool(abandonment.get('rationale')) and bool(abandonment.get('evidence_refs')),
+                    'abandonment requires rationale and evidence')
+            consents = abandonment.get('consents', {})
+            people = []
+            signed_revisions = []
+            for role in ['proposer', 'challenger']:
+                consent = consents.get(role, {})
+                sid = consent.get('session_id')
+                people.append(sid)
+                require(consent.get('decision') == 'agree', f'{role} has not agreed to abandonment')
+                require(re.fullmatch(r'[0-9a-f]{40}', str(consent.get('signed_revision', ''))),
+                        f'{role} abandonment consent lacks a full signed revision')
+                signed_revisions.append(consent.get('signed_revision'))
+                require(sid in sessions and sessions[sid].get('role') == role,
+                        f'{role} abandonment session not registered')
+            require(len(set(people)) == 2, 'abandonment requires distinct proposer and challenger')
+            require(len(set(signed_revisions)) == 1,
+                    'proposer and challenger must sign the same frozen revision')
+            successor = abandonment.get('successor_topic_id')
+            require(successor is None or (bool(ID.fullmatch(str(successor))) and successor != d['id']),
+                    'successor must be a distinct topic ID')
+            require(bool(abandonment.get('resurrection_conditions')),
+                    'abandonment needs resurrection conditions')
     except (ValueError, KeyError, TypeError, AttributeError) as exc:
         errors.append(f'{path.name}: malformed data: {exc}')
     return errors
