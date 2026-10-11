@@ -9,9 +9,11 @@
     "contest_originality": false,
     "headroom": false,
     "feasibility": false,
-    "direction_integrity": false
+    "direction_integrity": false,
+    "experiment_consensus": false
   },
   "direction_penalty_checked": false,
+  "experiment_consensus_checked": false,
   "abandonment_process_checked": false,
   "source_checks": [],
   "objections": []

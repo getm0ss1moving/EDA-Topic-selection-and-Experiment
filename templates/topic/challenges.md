@@ -28,6 +28,13 @@ Independently score combination drift and demand drift from 0 to 3 using the pro
 
 State `continue`, `abandonment_proposed`, or `agree_to_abandon`, with evidence for any claim of exhausted novelty, theoretical saturation, dead end, or immutable direction block.
 
+## Experiment task-list contribution
+
+- Required falsification tests and negative controls:
+- Baseline and budget-fairness corrections:
+- Missing dependencies, owners, artifacts or stop rules:
+- Conditions required before challenger consent:
+
 ## Revision and withdrawal history
 
 TBD

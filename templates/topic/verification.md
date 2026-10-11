@@ -20,11 +20,15 @@ TBD
 
 TBD
 
-## Seven admission gates, including direction integrity
+## Eight admission gates, including direction integrity and experiment consensus
 
 TBD
 
 ## Direction penalties and abandonment-process check
+
+TBD
+
+## Experiment task-list consensus check
 
 TBD
 

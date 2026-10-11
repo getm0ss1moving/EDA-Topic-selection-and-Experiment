@@ -14,17 +14,21 @@ ID = re.compile(r'EDA-\d{4,}')
 REQUIRED = ['dossier.json', 'proposal.md', 'sources.json', 'search-log.md', 'prior-art.csv',
             'contest-audit.md', 'industry-gap.md', 'experiment-plan.md', 'forecast.json',
             'tasklist.md', 'challenges.md', 'responses.md', 'direction-control.json',
+            'experiment-consensus.json',
             'verification.md', 'verification.json']
 STATES = {'draft', 'submitted', 'revision_requested', 'verified', 'accepted', 'parked',
           'rejected', 'abandoned'}
 GATES = {'novelty', 'mechanism', 'utility', 'contest_originality', 'headroom',
-         'feasibility', 'direction_integrity'}
+         'feasibility', 'direction_integrity', 'experiment_consensus'}
 DIRECTION_STATES = {'continue', 'revise_same_problem', 'abandonment_proposed', 'jointly_abandoned'}
 ABANDONMENT_GROUNDS = {'novelty_exhausted', 'theoretical_headroom_exhausted',
                        'dead_end', 'immutable_direction_blocked'}
 
 def read_json(path):
     return json.loads(path.read_text())
+
+def file_sha256(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
 
 def digest(path):
     h = hashlib.sha256()
@@ -53,6 +57,7 @@ def validate_topic(path, area, sessions):
         sources = read_json(path / 'sources.json')
         forecast = read_json(path / 'forecast.json')
         direction = read_json(path / 'direction-control.json')
+        experiment_consensus = read_json(path / 'experiment-consensus.json')
         v = read_json(path / 'verification.json')
         require(d['id'] == path.name and bool(ID.fullmatch(path.name)), 'invalid ID')
         require(d['status'] in STATES, 'invalid state')
@@ -78,6 +83,8 @@ def validate_topic(path, area, sessions):
         if any(score >= 2 for score in penalty_scores) or sum(penalty_scores) >= 3:
             require(direction.get('state') in {'abandonment_proposed', 'jointly_abandoned'},
                     'severe direction drift requires abandonment review')
+        require(experiment_consensus.get('status') in {'pending', 'revision_requested', 'agreed'},
+                'invalid experiment consensus status')
         require(isinstance(sources, list), 'sources must be an array')
         if not isinstance(sources, list):
             return errors
@@ -120,6 +127,44 @@ def validate_topic(path, area, sessions):
             require(direction.get('state') in {'continue', 'revise_same_problem'},
                     'abandonment state cannot be promoted')
             require(sum(penalty_scores) == 0, 'direction drift penalty blocks promotion')
+            require(experiment_consensus.get('status') == 'agreed',
+                    'experiment task list lacks proposer/challenger consensus')
+            tasklist_hash = file_sha256(path / 'tasklist.md')
+            require(experiment_consensus.get('tasklist_sha256') == tasklist_hash,
+                    'experiment consensus binds a stale task list')
+            readiness = experiment_consensus.get('readiness_checks', {})
+            required_readiness = {'dependencies', 'resources', 'baselines', 'metrics',
+                                  'correctness_oracle', 'stop_rules', 'owners',
+                                  'reproducible_procedures'}
+            require(all(readiness.get(k) is True for k in required_readiness),
+                    'experiment readiness checks incomplete')
+            require(experiment_consensus.get('open_conditions') == [],
+                    'experiment consensus still has open conditions')
+            consensus_people = []
+            consensus_revisions = []
+            consensus_hashes = []
+            for role in ['proposer', 'challenger']:
+                consent = experiment_consensus.get('consents', {}).get(role, {})
+                sid = consent.get('session_id')
+                consensus_people.append(sid)
+                consensus_revisions.append(consent.get('signed_revision'))
+                consensus_hashes.append(consent.get('tasklist_sha256'))
+                require(consent.get('decision') == 'agree',
+                        f'{role} has not agreed that the experiment task list is reasonable')
+                require(bool(consent.get('rationale')),
+                        f'{role} experiment consent lacks rationale')
+                require(re.fullmatch(r'[0-9a-f]{40}', str(consent.get('signed_revision', ''))),
+                        f'{role} experiment consent lacks a full signed revision')
+                require(consent.get('tasklist_sha256') == tasklist_hash,
+                        f'{role} experiment consent binds a stale task list')
+                require(sid in sessions and sessions[sid].get('role') == role,
+                        f'{role} experiment-consensus session not registered')
+            require(len(set(consensus_people)) == 2,
+                    'experiment consensus requires distinct proposer and challenger')
+            require(len(set(consensus_revisions)) == 1,
+                    'proposer and challenger must sign the same experiment revision')
+            require(len(set(consensus_hashes)) == 1,
+                    'proposer and challenger must sign the same experiment task list')
             checked = v.get('source_checks', [])
             require(bool(checked), 'no independently checked sources')
             require(all(s.get('source_id') in ids and s.get('locator') and s.get('verdict') == 'verified' for s in checked), 'invalid source checks')
@@ -256,6 +301,7 @@ def main():
     i=sub.add_parser('init');i.add_argument('id')
     sub.add_parser('validate')
     d=sub.add_parser('digest');d.add_argument('path',type=Path)
+    t=sub.add_parser('tasklist-digest');t.add_argument('path',type=Path)
     e=sub.add_parser('packet');e.add_argument('role',choices=['proposer','challenger','verifier']);e.add_argument('topic',nargs='?')
     e.add_argument('--ref',required=True);e.add_argument('--out',type=Path,required=True)
     e.add_argument('--evidence-run', action='append', default=[], help='Explicit public run directory for governance evidence')
@@ -275,6 +321,11 @@ def main():
             print('\n'.join(errors) if errors else 'Structural checks passed; scientific verification remains independent.')
             raise SystemExit(bool(errors))
         elif a.command=='digest':print(digest(a.path))
+        elif a.command=='tasklist-digest':
+            target = a.path/'tasklist.md' if a.path.is_dir() else a.path
+            if target.name != 'tasklist.md' or not target.is_file():
+                raise ValueError('Expected a dossier directory or tasklist.md')
+            print(file_sha256(target))
         elif a.command=='packet':
             m=export_packet(a.role,a.topic,a.ref,a.out,a.stage,a.governance,a.evidence_run)
             print(f'Exported {len(m["files"])} files to {a.out}')

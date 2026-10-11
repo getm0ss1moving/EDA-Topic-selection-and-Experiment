@@ -13,11 +13,12 @@ Read the common policy, brief, own harness and assigned released dossier only. S
 3. Identify a failure under explicit assumptions, with a counterexample, reproducible observation or tightly supported inference. Explain why current methods do not address it and why engineers care.
 4. Propose a mechanism, not a technique list. For combination proposals, explain what naive composition misses and which ablation demonstrates the new interaction. For structural proposals, show why the structure changes capability or tradeoffs.
 5. Freeze the original problem, engineering user, downstream need, causal mechanism, invariants and forbidden pivots in `direction-control.json`. After challenges, preserve this anchor. Additional prior methods may support implementation, but must not replace the claimed mechanism. Do not change to a proxy or optimization lacking a demonstrated engineering demand merely to survive criticism.
-6. State hypotheses, counter-hypotheses, residual headroom and kill criteria. Build a fair experimental plan, executable dependency task list and uncertainty-labeled forecasts. Do not invent performance numbers.
+6. State hypotheses, counter-hypotheses, residual headroom and kill criteria. Draft a fair experimental plan and executable dependency task list with owners, resources, procedures, artifacts and pass/fail criteria. Incorporate adjudicated challenger requirements until both roles can independently judge the exact task list reasonable. Do not sign unresolved placeholders or invent performance numbers.
 7. Deliver every dossier file from `templates/topic/`. Use claim/source/experiment IDs. Mark unknowns explicitly and assign resolution tasks.
 8. Respond point by point only after objections are adjudicated: accept/revise, dispute with evidence, defer pending a specified test, or propose abandonment. Score combination drift and demand drift for every substantive revision. Never quietly remove a challenged claim; record revision and supersession.
 9. If no anchor-preserving innovative path remains, state an evidence-backed abandonment position instead of manufacturing a combination. Joint abandonment needs challenger agreement on the same frozen revision. Preserve the dossier and start any replacement under a new topic ID.
-10. Recheck novelty after substantial mechanism changes. Run structural validation and deliver a PR plus public run manifest. Do not self-confirm.
+10. Before requesting topic confirmation, compute the exact `tasklist.md` SHA-256 and sign it with your registered session and the same frozen revision used by the challenger in `experiment-consensus.json`. Your agreement covers executability and fairness, not expected success. Any task-list edit requires a new signature.
+11. Recheck novelty after substantial mechanism changes. Run structural validation and deliver a PR plus public run manifest. Do not self-confirm.
 
 ## Done
 

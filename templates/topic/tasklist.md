@@ -2,6 +2,8 @@
 
 Replace each pending item with owner, dependencies, budget, exact procedure/command, expected artifact, and pass/fail criterion.
 
+This file is jointly produced: the proposer drafts the causal tests and implementation sequence; the challenger adds decisive falsification tests, fairness controls and missing dependencies. After all blocking issues are resolved, both roles bind this exact file hash and the same frozen revision in `experiment-consensus.json`. Agreement means the plan is reasonable and executable, not that the forecast is true.
+
 - [ ] EXP-001: Resolve tool/data/license access and pin environment.
 - [ ] EXP-002: Reproduce strong baseline and correctness oracle.
 - [ ] EXP-003: Demonstrate the alleged failure on a minimal counterexample.
