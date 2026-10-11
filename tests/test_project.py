@@ -172,6 +172,19 @@ class DomainOnboardingTests(unittest.TestCase):
         reg['activation']['deferred_actors']=ids[1:];reg['activation']['topic_containers']={'D01':'NOT-A-TOPIC'}
         cfg.write_text(json.dumps(reg))
         self.assertTrue(any('topic container' in e for e in p.validate_registry(self.root)))
+    def test_governance_pause_allows_zero_active_actors(self):
+        cfg=self.root/'config/agents-deepseek.json'
+        reg=json.loads(cfg.read_text());ids=[a['actor_id'] for a in reg['actors']]
+        reg['activation']={'state':'paused_governance','active_actors':[],'deferred_actors':ids,
+                           'active_domains':[],'topic_containers':{'D01':'EDA-0001'}}
+        cfg.write_text(json.dumps(reg))
+        self.assertEqual(p.validate_registry(self.root),[])
+        reg['activation']['active_domains']=['D01']
+        cfg.write_text(json.dumps(reg))
+        self.assertTrue(any('cannot have active domains' in e for e in p.validate_registry(self.root)))
+        reg['activation']['active_domains']=[];reg['activation']['state']='unknown'
+        cfg.write_text(json.dumps(reg))
+        self.assertTrue(any('unknown activation state' in e for e in p.validate_registry(self.root)))
     def test_live_allocation_matches_domain_briefs(self):
         self.assertEqual(p.validate_registry(LIVE_ROOT),[])
 

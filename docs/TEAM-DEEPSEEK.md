@@ -58,20 +58,22 @@ Model diversity between proposer and challenger is intentional, but `docs/ISOLAT
 
 Shared verifiers service three domain queues sequentially. They keep per-domain evidence ledgers and never transfer an unpublished claim from one queue to another. A verifier that participated in proposing a topic, proposing its decisive mechanism or writing a challenge it would adjudicate must be rotated out.
 
-## Slice activation
+## Planned slice and current hold
 
-The allocation above is the full nine-territory roster. Which part of it actually runs is a separate, explicitly recorded decision, because starting all 21 actors would spend budget without producing a bounded result. `config/agents-deepseek.json` carries an `activation` block; `scripts/project.py validate` checks that active and deferred actors partition the registry and that every active domain has an active actor.
+The allocation above is the full nine-territory roster. Which part of it may run is a separate, explicitly recorded decision, because starting all 21 actors would spend budget without producing a bounded result. `config/agents-deepseek.json` carries an `activation` block; `scripts/project.py validate` checks that active and deferred actors partition the registry. An explicit `paused_governance` state permits zero active actors and forbids active domains.
 
-Phase 1 activates only the physical-design slice, on the owner's budget directive:
+The only planned post-release research slice is the physical-design and signoff slice, on the owner's budget directive:
 
 | Domain | Column | Proposer | Challenger | Verifier | Topic container |
 |---|---|---|---|---|---|
 | D04 | Partitioning, floorplanning, macro and standard-cell placement, legalization, clock-tree synthesis, global and detailed routing | DeepSeek-P04-PHYSICAL | DeepSeek-C04-PHYSICAL | DeepSeek-V02-PHYSICAL | `EDA-0001` |
 | D05 | STA, multi-mode/multi-corner analysis, extraction, crosstalk and signal integrity, timing closure and ECO, signoff fidelity | DeepSeek-P05-TIMING | DeepSeek-C05-TIMING | DeepSeek-V02-PHYSICAL | `EDA-0002` |
 
-The other sixteen actors are marked `deferred_budget`. That is a resourcing decision, not a scientific judgement: it says nothing about whether D01, D02, D03, D06, D07, D08 or D09 contain better problems. Deferred actors keep their identity, domain binding, packet and onboarding record, so activating them later needs no reassignment and no new identity.
+No scientific actor is currently active. All 21 actors are in the deferred partition while governance hardening is in progress. The five D04/D05 actors are marked `paused_governance`; the other sixteen remain budget-deferred as well. The historical `DSK-R1-READY` records show that packets were prepared at an earlier revision; they do not authorize launch and are superseded by the current hold.
 
-D04 and D05 are activated together on purpose. The two territories share a boundary that a single-territory survey tends to hide: a placement, CTS or routing objective is only meaningful against the timing model and signoff oracle that grade it, and a signoff study is only meaningful against the physical implementation it measures. `domains/D04/brief.json` and `domains/D05/brief.json` assign the boundary explicitly, and any cross-boundary claim must be carried through a released file rather than an agent message.
+Budget deferral is a resourcing decision, not a scientific judgement: it says nothing about whether D01, D02, D03, D06, D07, D08 or D09 contain better problems. Deferred actors keep their identity, domain binding, packet and onboarding record, so releasing them later needs no reassignment and no new identity.
+
+D04 and D05 are planned together on purpose. The two territories share a boundary that a single-territory survey tends to hide: a placement, CTS or routing objective is only meaningful against the timing model and signoff oracle that grade it, and a signoff study is only meaningful against the physical implementation it measures. `domains/D04/brief.json` and `domains/D05/brief.json` assign the boundary explicitly, and any cross-boundary claim must be carried through a released file rather than an agent message.
 
 ## Cross-platform review matrix
 
@@ -121,4 +123,4 @@ Each task's first turn is bounded onboarding: verify every listed packet file ha
 
 ## Status
 
-Allocation only. No DeepSeek actor has produced a survey, a proposal, a challenge or a verification. No topic is claimed. The DeepSeek allocation is itself a governance change and requires independent review before merge.
+Governance hold. No DeepSeek actor has produced a survey, a proposal, a challenge or a verification. No topic is claimed. The D04/D05 topic containers are empty draft scaffolds, and their direction-control and experiment-consensus records remain pending. No R1 role may start until the governance stack is merged, the current head passes independent GitHub confirmation and the coordinator records an explicit release.

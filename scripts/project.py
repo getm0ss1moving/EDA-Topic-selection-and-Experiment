@@ -475,11 +475,18 @@ def validate_registry(root=ROOT):
             errors.append(f'agent {a.get("actor_id")}: invalid role')
     activation = read_json(path).get('activation')
     if activation:
+        activation_state = activation.get('state', 'active')
+        if activation_state not in {'active', 'paused_governance'}:
+            errors.append(f'config/agents-deepseek.json: unknown activation state {activation_state}')
         active = activation.get('active_actors')
         deferred = activation.get('deferred_actors')
-        if not isinstance(active, list) or not active:
-            errors.append('config/agents-deepseek.json: activation.active_actors must be a nonempty list')
+        if not isinstance(active, list):
+            errors.append('config/agents-deepseek.json: activation.active_actors must be a list')
             active = []
+        elif not active and activation_state != 'paused_governance':
+            errors.append('config/agents-deepseek.json: activation.active_actors may be empty only during paused_governance')
+        if activation_state == 'paused_governance' and activation.get('active_domains'):
+            errors.append('config/agents-deepseek.json: paused_governance cannot have active domains')
         if len(active) != len(set(active)):
             errors.append('config/agents-deepseek.json: duplicate active actor')
         for aid in active:
