@@ -1,0 +1,41 @@
+{
+  "status": "prepared_not_dispatched",
+  "reason": "Preserve quota; historical task turns read older frozen packets. Supply the new packet path on next authorized resume.",
+  "packets": [
+    {
+      "actor_id": "Codex-P04-PHYSICAL",
+      "input_commit": "3b1f8b4772b963b58702705531baf8200a45ac95",
+      "packet_sha256": "4050ff63bd3c439d9db0dc9543785ca36fc85c1c2a80abc6614804fe03da7acb",
+      "file_count": 17,
+      "packet": "physical-pilot-20261011/Codex-P04-PHYSICAL"
+    },
+    {
+      "actor_id": "Codex-C04-PHYSICAL",
+      "input_commit": "3b1f8b4772b963b58702705531baf8200a45ac95",
+      "packet_sha256": "39655d1915dfba2e03ffa29fde642afafa141a823764c85da32118c10a8f89a2",
+      "file_count": 17,
+      "packet": "physical-pilot-20261011/Codex-C04-PHYSICAL"
+    },
+    {
+      "actor_id": "Codex-P05-TIMING",
+      "input_commit": "3b1f8b4772b963b58702705531baf8200a45ac95",
+      "packet_sha256": "d3eeadf09568ab70185cc60c830e768132e65dd42b62a53aded558a8944e663c",
+      "file_count": 17,
+      "packet": "physical-pilot-20261011/Codex-P05-TIMING"
+    },
+    {
+      "actor_id": "Codex-C05-TIMING",
+      "input_commit": "3b1f8b4772b963b58702705531baf8200a45ac95",
+      "packet_sha256": "d530ccb0f32a71e79e48571792a0fc73cda88e507e25e08430b64a66814a18a1",
+      "file_count": 17,
+      "packet": "physical-pilot-20261011/Codex-C05-TIMING"
+    },
+    {
+      "actor_id": "Codex-V02-PHYSICAL",
+      "input_commit": "3b1f8b4772b963b58702705531baf8200a45ac95",
+      "packet_sha256": "737957145c634c57b6e91509cd138d430e93cefcfe43f8505a3f9dda2806972e",
+      "file_count": 19,
+      "packet": "physical-pilot-20261011/Codex-V02-PHYSICAL"
+    }
+  ]
+}
