@@ -149,7 +149,7 @@ def export_packet(role, topic, ref, out, stage='initial', governance=False):
         relevant = any(name.startswith(f'{a}/{topic}/') for a in ['candidates','topics','archive']) if topic else False
         allowed = common or relevant
         if governance:
-            allowed = common or name.startswith(('scripts/', 'tests/', '.github/', 'harness/', 'templates/')) or name in {'README.md', 'CONTRIBUTING.md'}
+            allowed = common or name.startswith(('scripts/', 'tests/', '.github/', 'harness/', 'templates/')) or name in {'README.md', 'CONTRIBUTING.md', 'candidates/README.md', 'topics/README.md', 'archive/README.md'}
         if relevant and stage == 'initial':
             base = Path(name).name
             if role == 'challenger' and base in {'forecast.json','responses.md','verification.md','verification.json'}:
