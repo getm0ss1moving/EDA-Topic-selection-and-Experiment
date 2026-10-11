@@ -1,0 +1,16 @@
+{
+  "kind": "released_evidence_manifest",
+  "run_id": "PHYSICAL-PILOT-0001",
+  "source_commit": "3b1f8b4772b963b58702705531baf8200a45ac95",
+  "files": {
+    "result.json": "8f265f138af8b387be3c168d4af0b7bbc8c41a0eee75262e7bb84e2f2ca8f709",
+    "openroad.log": "1f30ad1aba05098513b73c60966099a7c60a20ac0113bbd40ecdbd98fbd2193b",
+    "reproduction-check.json": "7a2ff095b190d59653a21d2a0fafc16cf467143d359cea3a92d49b29a7490bb7",
+    "role-packets.json": "8b338381c5cba6bcc6d98c9046c3d92db992d4d73bf513c54f8fde1c38f66bbf"
+  },
+  "command": "python3 scripts/physical_smoke.py --out <new-external-directory>",
+  "image": "efabless/openlane@sha256:840fe28388494220dae9e2be6cf3c7cb2dadfa0eabae4144f0873b9ee949597f",
+  "input_lock": "config/physical-resources.lock.json",
+  "patch": "Replace getconf-based thread detection with set_thread_count 2",
+  "result": "Flow completed; timing not closed; not scientific feasibility"
+}

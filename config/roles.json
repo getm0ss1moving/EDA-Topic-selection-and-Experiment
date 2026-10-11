@@ -18,7 +18,7 @@
       "user_id": 341092537,
       "distinct_from_owner": true,
       "invitation_id": 337230623,
-      "invitation_status": "pending",
+      "invitation_status": "accepted",
       "permission_requested": "write",
       "scientific_session_binding": "Unassigned: a GitHub account is not an AI session or scientific verdict."
     }
