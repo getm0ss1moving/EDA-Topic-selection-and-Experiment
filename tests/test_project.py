@@ -49,7 +49,7 @@ class PacketTests(unittest.TestCase):
             root=Path(td)/'repo';root.mkdir()
             def write(name,body='public'):
                 f=root/name;f.parent.mkdir(parents=True,exist_ok=True);f.write_text(body)
-            for name in ['AGENTS.md','docs/CHARTER.md','harness/CHALLENGER.md','harness/PROPOSER.md','candidates/EDA-0001/proposal.md','candidates/EDA-0001/forecast.json','private/secret','runs/private.txt','candidates/README.md','topics/README.md','archive/README.md']:
+            for name in ['AGENTS.md','docs/CHARTER.md','harness/CHALLENGER.md','harness/PROPOSER.md','candidates/EDA-0001/proposal.md','candidates/EDA-0001/forecast.json','private/secret','runs/private.txt','candidates/README.md','topics/README.md','archive/README.md','runs/SMOKE/result.json','runs/OTHER/result.json']:
                 write(name)
             def git(*args):return subprocess.check_output(['git','-C',str(root),*args],stderr=subprocess.DEVNULL)
             git('init');git('add','.');git('-c','user.name=test','-c','user.email=test@example.com','commit','-m','fixture')
@@ -70,6 +70,11 @@ class PacketTests(unittest.TestCase):
                     self.assertIn(area+'/README.md',gov['files'])
                 self.assertNotIn('candidates/EDA-0001/proposal.md',gov['files'])
                 self.assertNotIn('private/secret',gov['files'])
+                self.assertNotIn('runs/SMOKE/result.json',gov['files'])
+                evidence=p.export_packet('verifier',None,sha,Path(td)/'evidence',governance=True,evidence_runs=['SMOKE'])
+                self.assertIn('runs/SMOKE/result.json',evidence['files'])
+                self.assertNotIn('runs/OTHER/result.json',evidence['files'])
+                with self.assertRaises(ValueError):p.export_packet('verifier',None,sha,Path(td)/'unsafe',governance=True,evidence_runs=['../private'])
                 self.assertEqual((out/'candidates/EDA-0001/proposal.md').read_text(),'public')
                 with self.assertRaises(ValueError):p.export_packet('challenger','EDA-0001',sha,out)
                 with self.assertRaises(ValueError):p.export_packet('challenger','EDA-0001','HEAD',Path(td)/'bad')

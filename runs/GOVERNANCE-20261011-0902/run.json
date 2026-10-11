@@ -1,0 +1,74 @@
+{
+  "run_id": "GOVERNANCE-20261011-0902-CODEX-V02-PHYSICAL",
+  "session_id": null,
+  "role": "verifier_governance_review",
+  "actor_id": "Codex-V02-PHYSICAL",
+  "operator": null,
+  "platform": "OpenAI Codex",
+  "model": "gpt-6-luna",
+  "reasoning": "medium",
+  "started_at_utc": "2026-10-11",
+  "completed_at_utc": "2026-10-11",
+  "reviewed_snapshots": [
+    {
+      "name": "pr1",
+      "input_commit": "ac3207ec184c2f156f12e66024dd58199cec35b3",
+      "packet_sha256": "96c6764f99486d8663661e6ab2bb36b711933c60e768026d79a7f9fb9d58ebae",
+      "listed_file_count": 39,
+      "hash_mismatches": 0,
+      "verdict": "revise"
+    },
+    {
+      "name": "pr3",
+      "input_commit": "38fdcf02b1eed6a53fc27224cd209c6b4ba63c0c",
+      "packet_sha256": "f983336b59b7c85d84da1221a1d30cc4a68c0f64a90c8d2617bebc6cff11f0d4",
+      "listed_file_count": 51,
+      "hash_mismatches": 0,
+      "verdict": "revise"
+    }
+  ],
+  "tests_run": [
+    {
+      "command": "python3 -m unittest discover -s tests -v",
+      "snapshot": "pr1",
+      "result": "passed: 15 tests in private writable scratch copy"
+    },
+    {
+      "command": "python3 -m unittest discover -s tests -v",
+      "snapshot": "pr3",
+      "result": "passed: 16 tests in private writable scratch copy"
+    },
+    {
+      "command": "python3 scripts/project.py validate",
+      "snapshot": "pr1",
+      "result": "failed in unmodified scratch copy: FileNotFoundError for missing candidates directory"
+    },
+    {
+      "command": "python3 scripts/project.py validate",
+      "snapshot": "pr3",
+      "result": "failed in unmodified scratch copy: FileNotFoundError for missing candidates directory"
+    },
+    {
+      "command": "python3 scripts/project.py validate after creating empty candidates, topics, archive in scratch",
+      "snapshot": "pr1 and pr3",
+      "result": "passed for both"
+    }
+  ],
+  "output_paths": [
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/Codex-V02-PHYSICAL/GOVERNANCE-20261011-0902/governance-review-pr1.md",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/Codex-V02-PHYSICAL/GOVERNANCE-20261011-0902/governance-review-pr3.md",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/Codex-V02-PHYSICAL/GOVERNANCE-20261011-0902/run.json"
+  ],
+  "source_ids": [],
+  "network_or_live_services_used": false,
+  "physical_eda_run_performed": false,
+  "github_identity_claimed": false,
+  "github_approval_or_merge_performed": false,
+  "contamination_events": [],
+  "independence_attestation": "Governance findings were derived from the two hash-verified frozen packets and isolated scratch tests. No other conversations, shared memories, agent messages, private notes, live repository state, or GitHub credentials were inspected. File-policy/worktree separation is not an enforced OS sandbox.",
+  "limitations": [
+    "Live branch protection and Actions variables were not accessible from the frozen packets.",
+    "PR3 physical smoke artifacts are not included in the provided packet; reported results remain unverified here.",
+    "No code or governance finding was repaired in these outputs."
+  ]
+}

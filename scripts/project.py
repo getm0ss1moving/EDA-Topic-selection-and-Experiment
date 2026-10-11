@@ -128,7 +128,11 @@ def validate(root=ROOT):
 def git(*args):
     return subprocess.check_output(['git', '-C', str(ROOT), *args])
 
-def export_packet(role, topic, ref, out, stage='initial', governance=False):
+def export_packet(role, topic, ref, out, stage='initial', governance=False, evidence_runs=()):
+    if evidence_runs and not governance:
+        raise ValueError('Explicit evidence runs require a governance packet')
+    if any(not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_-]*', run) for run in evidence_runs):
+        raise ValueError('Invalid evidence run ID')
     if not re.fullmatch(r'[0-9a-f]{40}', ref):
         raise ValueError('Use a full frozen commit SHA')
     if git('cat-file', '-t', ref).decode().strip() != 'commit':
@@ -161,6 +165,8 @@ def export_packet(role, topic, ref, out, stage='initial', governance=False):
                 allowed = False
             if role == 'proposer' and base in {'challenges.md','verification.md','verification.json'}:
                 allowed = False
+        if governance and any(name.startswith(f'runs/{run}/') for run in evidence_runs):
+            allowed = True
         if allowed:
             if mode not in {'100644','100755'} or kind != 'blob':
                 raise ValueError(f'Unsafe tracked entry: {name}')
@@ -187,6 +193,7 @@ def main():
     d=sub.add_parser('digest');d.add_argument('path',type=Path)
     e=sub.add_parser('packet');e.add_argument('role',choices=['proposer','challenger','verifier']);e.add_argument('topic',nargs='?')
     e.add_argument('--ref',required=True);e.add_argument('--out',type=Path,required=True)
+    e.add_argument('--evidence-run', action='append', default=[], help='Explicit public run directory for governance evidence')
     e.add_argument('--stage',choices=['initial','full'],default='initial');e.add_argument('--governance',action='store_true')
     a=p.parse_args()
     try:
@@ -204,7 +211,7 @@ def main():
             raise SystemExit(bool(errors))
         elif a.command=='digest':print(digest(a.path))
         elif a.command=='packet':
-            m=export_packet(a.role,a.topic,a.ref,a.out,a.stage,a.governance)
+            m=export_packet(a.role,a.topic,a.ref,a.out,a.stage,a.governance,a.evidence_run)
             print(f'Exported {len(m["files"])} files to {a.out}')
     except (ValueError, OSError, subprocess.CalledProcessError) as exc:
         p.exit(1,str(exc)+'\n')
