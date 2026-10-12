@@ -1,0 +1,52 @@
+{
+  "run_id": "DSK-C05-PACKET-0001",
+  "type": "packet_export",
+  "exported_by": "DeepSeek platform lead (coordinator role; transport only, not a scientific voter)",
+  "session_id": "04fe4881-0c22-4292-ac03-ab73f00eaf29",
+  "exported_at_utc": "2026-10-13T09:32:42Z",
+  "clock_note": "Host clock runs 54000 s behind NTP and the api.deepseek.com Date headers; this timestamp is corrected to true UTC.",
+  "actor_id": "DeepSeek-C05-TIMING",
+  "call_sign": "DSK-Forge-TIMING",
+  "role": "challenger",
+  "topic": "EDA-0002",
+  "domain": "D05",
+  "stage": "initial",
+  "proposal_freeze": {
+    "merge_commit": "4b666c04b0eaa089934f736fab4db2309ce7d36a",
+    "merge_pr": 13,
+    "dossier_status_at_freeze": "submitted",
+    "proposer_session": "76d0bf61-78f7-4b93-a557-7c29f1a2cbe8",
+    "dossier_content_digest": "8d6bd047232a17a1ba985d156c831e76e3212772667309dffc9cdf1a934ff03b",
+    "tasklist_sha256": "d115fcc69b1b65610311aa0b95554f4fe26bdac8a966f606f30fb6c0ca7efd56"
+  },
+  "exporter": "scripts/actor_packet.py DeepSeek-C05-TIMING --ref 4b666c04b0eaa089934f736fab4db2309ce7d36a --phase research --topic EDA-0002 --stage initial",
+  "packet_path": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/challenger-release-20261013/DeepSeek-C05-TIMING",
+  "packet_sha256": "e6c53f61ca815c2e69c1ab2f68cb2c667290f634cc49ea4ff5900d8e535332cf",
+  "file_count": 30,
+  "withheld_by_stage_initial": [
+    "forecast.json",
+    "responses.md",
+    "verification.md",
+    "verification.json"
+  ],
+  "post_export_verification": {
+    "hash_mismatches": 0,
+    "extra_files": 0,
+    "symlinks": 0,
+    "withheld_files_confirmed_absent": true,
+    "dossier_files_in_packet": 12,
+    "packet_made_read_only": "directories 0555, files 0444",
+    "outbox": "re-created empty, mode 0700 (the pre-created empty outbox was removed first because the exporter requires a fresh outbox path)"
+  },
+  "assignment_observed": {
+    "model_requested": "deepseek-flash",
+    "reasoning_requested": "max",
+    "platform": "DeepSeek"
+  },
+  "launcher_check": "passed 2026-10-13T09:33:30Z (true UTC): launch.sh --actor DeepSeek-C05-TIMING --check reached All preconditions hold, nothing was launched, exit 0",
+  "next_steps": [
+    "Operator runs launch.sh --actor DeepSeek-C05-TIMING --check, then the launch itself, from their own Terminal.app.",
+    "The onboarding prompt is the filled template in runs/DSK-C04C05-LAUNCH-0001/readiness.md; the session writes readiness.json and first-pass-plan.md and stops.",
+    "The coordinator registers the session in config/roles.json after the onboarding turn, then releases the stage-initial research prompt."
+  ]
+}

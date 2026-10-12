@@ -1,26 +1,36 @@
 {
   "state": "continue",
   "anchor": {
-    "problem": "TBD",
-    "engineering_user": "TBD",
-    "downstream_need": "TBD",
-    "causal_mechanism": "TBD",
-    "mechanism_invariants": ["TBD"],
+    "problem": "Multi-corner (MCMM) static timing analysis cost grows with the number of declared scenarios, and existing reductions save runtime only by skipping scenarios on estimated, empirical, learned or experience-based criteria that cannot guarantee zero missed violations.",
+    "engineering_user": "Timing-closure and signoff engineers (and closure-flow owners) who must obtain timing decisions at every scenario of a declared scenario set during closure iterations and before signoff.",
+    "downstream_need": "The complete decision set of full MCMM analysis of the declared scenario set: every violating (endpoint, scenario, check) triple, exact slacks below a reporting margin M, and WNS/TNS per scenario. It must come with zero missed violations relative to full analysis and with lower end-to-end turnaround.",
+    "causal_mechanism": "Per scenario, an exact clock-network pass plus a cheap data-network bound pass. The bound pass uses only that scenario's own characterized tables and parasitics, and its bounds are sound with respect to the reference engine's delay-calculation semantics. Together they certify (endpoint, scenario, check) triples whose slack lower bound clears M. Exact analysis is then restricted to the fan-in cones of uncertified triples. Decisions equal full analysis by construction; runtime falls because most triples in non-dominant scenarios have margins larger than the bound band.",
+    "mechanism_invariants": [
+      "Zero missed violations relative to full reference analysis of the declared scenario set, by construction under audited soundness properties; never by estimation, calibration or learning",
+      "Exact slack values for every reported triple below the margin M, plus exact WNS/TNS when negative",
+      "No parametric, monotone-in-PVT or learned cross-scenario model; each scenario is bounded from its own characterized data",
+      "Evaluation against the strongest full-MCMM baseline (all scenarios in one pinned OpenSTA run) under equal resources",
+      "One pinned reference engine and delay calculator define soundness; any new calculator needs its own audit"
+    ],
     "forbidden_pivots": [
       "Replacing the mechanism with a straightforward combination of prior methods",
       "Optimizing a proxy without a demonstrated engineering need",
-      "Changing the user or downstream objective to avoid a valid objection"
+      "Changing the user or downstream objective to avoid a valid objection",
+      "Replacing sound certificates with estimated cutoffs, learned predictors or calibrated safety margins while keeping a guarantee claim",
+      "Dropping exact refinement and reporting only bounds as if they were slacks",
+      "Redefining success as average slack error or correlation instead of decision equivalence",
+      "Attributing speedup to parallelism or hardware scaling rather than to certification"
     ]
   },
   "penalties": {
     "combination_drift": {
       "score": 0,
-      "rationale": "TBD",
+      "rationale": "Initial anchor (round 0); no revision has occurred.",
       "evidence_refs": []
     },
     "demand_drift": {
       "score": 0,
-      "rationale": "TBD",
+      "rationale": "Initial anchor (round 0); no revision has occurred.",
       "evidence_refs": []
     },
     "total": 0

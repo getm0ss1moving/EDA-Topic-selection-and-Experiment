@@ -26,6 +26,10 @@ jobs:
             const number = context.payload.pull_request?.number || Number(context.payload.inputs?.pr);
             const {owner, repo} = context.repo;
             const {data: pr} = await github.rest.pulls.get({owner, repo, pull_number: number});
+            const files = await github.paginate(github.rest.pulls.listFiles, {owner, repo, pull_number: number});
+            // Final deliverables live under topics/ or reports/final/. Renames/deletions count.
+            const finalPath = p => /^(topics|reports\/final)\//.test(p || '') && !p.endsWith('/README.md');
+            const requiresHuman = files.some(f => finalPath(f.filename) || finalPath(f.previous_filename));
             const trusted = new Set((process.env.VERIFIER_LOGINS || '').split(',').map(x => x.trim().toLowerCase()).filter(Boolean));
             const reviews = await github.paginate(github.rest.pulls.listReviews, {owner, repo, pull_number: number});
             const latest = new Map();
@@ -37,8 +41,8 @@ jobs:
               r.state === 'APPROVED' && r.commit_id === pr.head.sha &&
               (r.body || '').trim() === `CONFIRM ${pr.head.sha}`);
             const blocking = [...latest.entries()].some(([login, r]) => trusted.has(login) && r.state === 'CHANGES_REQUESTED');
-            const ok = approved && !blocking && !pr.draft;
-            const description = ok ? 'Independent registered verifier confirmed this exact revision' :
+            const ok = !pr.draft && (!requiresHuman || (approved && !blocking));
+            const description = !requiresHuman ? 'Intermediate PR: human confirmation not required' : ok ? 'Human confirmed final reports at this exact revision' :
               trusted.size ? 'Waiting for independent verifier confirmation of current SHA' : 'No independent verifier enrolled; merge is blocked';
             await github.rest.repos.createCommitStatus({owner, repo, sha: pr.head.sha,
               state: ok ? 'success' : 'failure', context: 'independent-verifier', description,

@@ -1,0 +1,38 @@
+{
+  "run_id": "CLD-P05-RESEARCH-0001",
+  "session_id": "76d0bf61-78f7-4b93-a557-7c29f1a2cbe8",
+  "role": "proposer",
+  "input_commit": "d437c2f660906efe9351a90451905826d00b63e3",
+  "packet_sha256": "ff20816f623585d4bf7ba7b13d79db58aab90a2e947cd05c719cd93f3574602d",
+  "model": "claude-opus-5-5 (Opus 5.5), host-reported and confirmed host-side by the coordinator (DQ-06). Reasoning effort is not observable from inside the session: this turn's /model record states no effort, and the coordinator states that the launcher requests xhigh for this resumed session.",
+  "operator": "Not asserted by the actor (human operator of the Claude Code session)",
+  "started_at_utc": "2026-10-12T16:02:57Z",
+  "completed_at_utc": "2026-10-12T17:16:00Z",
+  "output_paths": [
+    "candidates/EDA-0002/contest-audit.md",
+    "candidates/EDA-0002/direction-control.json",
+    "candidates/EDA-0002/dossier.json",
+    "candidates/EDA-0002/experiment-consensus.json",
+    "candidates/EDA-0002/experiment-plan.md",
+    "candidates/EDA-0002/forecast.json",
+    "candidates/EDA-0002/industry-gap.md",
+    "candidates/EDA-0002/prior-art.csv",
+    "candidates/EDA-0002/proposal.md",
+    "candidates/EDA-0002/responses.md",
+    "candidates/EDA-0002/search-log.md",
+    "candidates/EDA-0002/sources.json",
+    "candidates/EDA-0002/tasklist.md",
+    "runs/CLD-P05-RESEARCH-0001/manifest.json",
+    "role-output-manifest.json"
+  ],
+  "source_ids": [
+    "SRC-001", "SRC-002", "SRC-003", "SRC-004", "SRC-005", "SRC-006", "SRC-007", "SRC-008", "SRC-009", "SRC-010",
+    "SRC-011", "SRC-012", "SRC-013", "SRC-014", "SRC-015", "SRC-016", "SRC-017", "SRC-018", "SRC-019", "SRC-020",
+    "SRC-021", "SRC-022", "SRC-023", "SRC-024", "SRC-025", "SRC-026", "SRC-027", "SRC-028", "SRC-029", "SRC-030",
+    "SRC-031", "SRC-032", "SRC-033", "SRC-034", "SRC-035", "SRC-036", "SRC-037", "SRC-038", "SRC-039", "SRC-040",
+    "SRC-041", "SRC-042", "SRC-043", "SRC-044", "SRC-045", "SRC-046", "SRC-047", "SRC-048", "SRC-049", "SRC-050",
+    "SRC-051", "SRC-052"
+  ],
+  "contamination_events": [],
+  "independence_attestation": "Proposer self-attestation, not proof of independence (docs/PHYSICAL-PILOT.md line 33). This resumed session's only project input was the hash-verified packet. Its other inputs were: the coordinator's administrative answers to readiness questions DQ-01 to DQ-09 in the launch prompt (run CLD-P05-SESSION-0001), this session's own prior onboarding outputs, public web sources listed in sources.json, and the actor's pretrained knowledge (used only for terminology and search leads). No other role's files, conversations, memories or private notes were read, and no agent messages were sent or received."
+}

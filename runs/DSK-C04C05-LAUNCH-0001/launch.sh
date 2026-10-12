@@ -26,7 +26,9 @@ CLI_VERSION="2.1.293"
 # The signed native binary is executed directly, so npm's postinstall copy step is not needed.
 CLAUDE_BIN="$HOME/.local/claude-code-$CLI_VERSION/node_modules/@anthropic-ai/claude-code-darwin-arm64/claude"
 CLI_SHA256="4e21122a227857da1178aca3299700c1fd7f2b77c93f12e73c2c76db796a105e"
-MODEL="deepseek-v4-flash[1m]"
+# Canonical API model ID served by api.deepseek.com/models (owner decision 2026-10-13):
+# pin deepseek-flash itself, not the operator's shell alias deepseek-v4-flash[1m].
+MODEL="deepseek-flash"
 EFFORT="max"
 BASE_URL="https://api.deepseek.com/anthropic"
 HELPER="$RUN_DIR/keychain-token.sh"
