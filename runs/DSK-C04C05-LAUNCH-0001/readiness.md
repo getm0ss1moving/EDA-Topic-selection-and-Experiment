@@ -1,6 +1,6 @@
 # DeepSeek challenger launch readiness: DeepSeek-C04-PHYSICAL and DeepSeek-C05-TIMING
 
-Run `DSK-C04C05-LAUNCH-0001` prepares the two released DeepSeek challenger sessions. It does not create them, release scientific input, accept a topic or authorize an experiment. Coordinator: DeepSeek platform lead, session `04fe4881-0c22-4292-ac03-ab73f00eaf29`, model `deepseek-v4-flash[1m]`, operator `getm0ss1moving`, prepared 2026-10-13 (true UTC; see the clock note). Input commit: `main` at `8f365d39cd5b05fd90024f999cfb409d06148245`, the base of this branch. The coordinator is a transport and scheduling role, not a scientific voter.
+Run `DSK-C04C05-LAUNCH-0001` prepares the two released DeepSeek challenger sessions. It does not create them, release scientific input, accept a topic or authorize an experiment. Coordinator: DeepSeek platform lead, session `04fe4881-0c22-4292-ac03-ab73f00eaf29`, model `deepseek-flash[1m]`, operator `getm0ss1moving`, prepared 2026-10-13 (true UTC; see the clock note). Input commit: `main` at `8f365d39cd5b05fd90024f999cfb409d06148245`, the base of this branch. The coordinator is a transport and scheduling role, not a scientific voter.
 
 The session IDs were pre-assigned; no session exists. Actor state is `prepared_not_started`, recorded in `actor-launch.json`.
 
@@ -13,6 +13,15 @@ The proposals are not frozen: `Claude-P05-TIMING` (session `76d0bf61-78f7-4b93-a
 
 Governance observed on 2026-10-13: PRs #1-#3 and #5-#10 are merged; PR #4 is an open historical draft and is excluded from every input. `config/roles.json` registers only the Claude D05 proposer. On a clean tree, `python3 scripts/project.py validate` passes and all 33 unit tests pass. `config/launch-release.json` releases exactly the six-actor cross-platform slice and caps concurrent scientific sessions at two.
 
+## Amendments after merge (2026-10-13)
+
+PR #11 merged as `main` `075863da392c42e2cfc7079b327c57e2d4565c4d`. Two changes were made on top of it:
+
+1. **Model pin.** On the human owner's decision (2026-10-13) the challenger sessions pin the canonical API model ID `deepseek-flash` directly instead of the operator's shell alias `deepseek-v4-flash[1m]`. `launch.sh`, `isolation_smoke.py`, `actor-launch.json` and `config/agents-deepseek.json` were updated, and new isolated runs 4-5 re-validated the full configuration for both actors with the new pin (all checks pass; only `deepseek-flash` billed).
+2. **Working folder.** The DeepSeek platform lead moved its working folder from the shared main checkout to the repository's registered `EDA-Topic-selection-DeepSeek` worktree (branch `deepseek/flash-pin`), so concurrent platform work cannot collide. No committed path changed: packet and outbox paths live outside every checkout, and the Keychain helper path stays valid because both checkouts carry identical committed bytes. The main checkout is back on `main`.
+
+No scientific content, session or topic state changed.
+
 ## Model and effort (DeepSeek API observation)
 
 Observed 2026-10-13T08:04:31Z at `GET https://api.deepseek.com/models`:
@@ -22,7 +31,7 @@ Observed 2026-10-13T08:04:31Z at `GET https://api.deepseek.com/models`:
 | `deepseek-flash` | DeepSeek-V4.1-Flash | 1,048,576 tokens | low / high / max (default high) |
 | `deepseek-v4-pro` | DeepSeek-V4-Pro | 1,048,576 tokens | low / high / max (default high) |
 
-The operator's Claude Code DeepSeek route (declared in `~/.zshrc`, base URL `https://api.deepseek.com/anthropic`) remaps every model alias to `deepseek-v4-flash[1m]`, the 1M-context variant of the `deepseek-flash` family. The launch kit pins `--model deepseek-v4-flash[1m]` and maps `opus`, `sonnet`, `haiku` and the subagent alias to the same value, so no request can reach a model outside the DeepSeek family. Both smoke runs observed the session model as exactly `deepseek-v4-flash[1m]` and billed no other model. This is Flash; it is never reported as V4 Pro.
+The operator's Claude Code DeepSeek route (declared in `~/.zshrc`, base URL `https://api.deepseek.com/anthropic`) remaps every model alias to `deepseek-v4-flash[1m]`, the 1M-context variant of the `deepseek-flash` family. Since the owner's decision of 2026-10-13 the launch kit pins `--model deepseek-flash` — the canonical API ID — and maps `opus`, `sonnet`, `haiku` and the subagent alias to the same value, so no request can reach a model outside the DeepSeek family. Smoke runs 2-3 validated the earlier alias pin; runs 4-5 observed the session model as exactly `deepseek-flash` and billed no other model. This is Flash; it is never reported as V4 Pro.
 
 Registry correction (the task of this run): `config/agents-deepseek.json` requested `reasoning_requested: medium` for both challengers, a level the host does not expose (`docs/TEAM-DEEPSEEK.md`; the API reports low/high/max). Both entries now request `max`, the challenger tier in `docs/TEAM-DEEPSEEK.md`, and a top-level `challenger_launch_policy` block records the platform-family rule, the effort correction and this API observation. Neither actor has ever run a scientific session, so no executed run is relabelled; the deferred proposer tier keeps its historical requested/actual record.
 
@@ -41,15 +50,17 @@ The 3.77 CNY delta covers the three smoke turns and this coordinator session's o
 
 | File | SHA-256 | Purpose |
 |---|---|---|
-| `launch.sh` | `7f8b7c792ec793f7807b2b05292b606ec042846c728f5227fd2674cbf3cc735b` | Fail-closed launcher; reads the per-actor binding from `actor-launch.json` |
+| `launch.sh` | `7c04ee92a128d32b1c9307106559a0436f7d2ab986c4c33c982f0bdc4ac0a407` | Fail-closed launcher; reads the per-actor binding from `actor-launch.json` |
 | `launch-settings-C04.json` | `3eace9a6ac10a4e6040fd3fbb0cf741137ca37175159fe212fdac673c390613a` | Isolation surface for `DeepSeek-C04-PHYSICAL` (digest pinned by the launcher) |
 | `launch-settings-C05.json` | `2c1984b1e329cc8c4ba8921ba461407a228b68a9a668fbd49c905dbbbafdbf72` | Isolation surface for `DeepSeek-C05-TIMING` (digest pinned by the launcher) |
 | `keychain-token.sh` | `b719c94ceb6d5108807ba0e3c79215cd989687ea6d8edb084800f46a271fa5de` | `apiKeyHelper`: reads the DeepSeek key from the macOS Keychain (`deepseek-api-key`) |
-| `actor-launch.json` | `f689aee08e0ebc35e4842c2b7c0c5d5eab5ece0c63a59c8b32509c90cbec1ef8` | Per-actor binding: packet path and digest (PENDING), outbox, settings digest, session ID |
-| `isolation_smoke.py` | `5d05d66397bada76c493ca24bc2e9f394df735e7b3eb3329cff4872543d1a4bc` | Synthetic isolation test; records pass/fail flags only |
+| `actor-launch.json` | `134b06d987df3805b737ca3eeced466b88dd4369dd1d30e0aab5184d46944ef1` | Per-actor binding: packet path and digest (PENDING), outbox, settings digest, session ID, pinned model |
+| `isolation_smoke.py` | `85ef4f6443e8f4383acc15144cc9bbd4241721998ff75ccaf0138f41d88be4b8` | Synthetic isolation test; records pass/fail flags only |
 | `isolation-smoke-run1-writable.json` | — | Run 1 result (writable fixture, earlier script revision) |
-| `isolation-smoke-run2-readonly.json` | — | Run 2 result: final C05 configuration, all checks pass |
-| `isolation-smoke-run3-readonly-C04.json` | — | Run 3 result: final C04 configuration, all checks pass |
+| `isolation-smoke-run2-readonly.json` | — | Run 2 result: C05, previous alias pin, all checks pass |
+| `isolation-smoke-run3-readonly-C04.json` | — | Run 3 result: C04, previous alias pin, all checks pass |
+| `isolation-smoke-run4-readonly-flash.json` | — | Run 4 result: C05, final `deepseek-flash` pin, all checks pass |
+| `isolation-smoke-run5-readonly-C04-flash.json` | — | Run 5 result: C04, final `deepseek-flash` pin, all checks pass |
 
 CLI pinned: Claude Code 2.1.293, native binary `~/.local/claude-code-2.1.293/node_modules/@anthropic-ai/claude-code-darwin-arm64/claude`, SHA-256 `4e21122a227857da1178aca3299700c1fd7f2b77c93f12e73c2c76db796a105e` (identical to the binary the Claude launch smoke-tested; reused rather than reinstalled, and hash-checked by the launcher). The nvm-global 2.1.296 install remains a placeholder and is not used.
 
@@ -66,7 +77,7 @@ Credential handling: the Keychain entry `deepseek-api-key` (account `$USER`) was
 - packet digest and every listed file hash match `PACKET.json`, with no extra file, no symlink and no writable path (once the packet exists); while any packet field is PENDING the launcher refuses to start;
 - the outbox exists with mode 0700 and is empty for a fresh session; a `--resume` requires the registered session's transcript.
 
-It then starts the CLI with `env -i` (only `HOME`, `USER`, `LOGNAME`, `SHELL=/bin/bash`, `TERM`, `LANG`, `PATH`, `CLAUDE_CODE_DISABLE_AUTO_MEMORY=1` and the five routing variables), `--safe-mode`, `--strict-mcp-config`, `--setting-sources project`, `--settings`, `--tools Bash,Read,Write,Edit,WebSearch,WebFetch`, the packet as working directory, the outbox via `--add-dir`, `--model deepseek-v4-flash[1m]` and `--effort max`.
+It then starts the CLI with `env -i` (only `HOME`, `USER`, `LOGNAME`, `SHELL=/bin/bash`, `TERM`, `LANG`, `PATH`, `CLAUDE_CODE_DISABLE_AUTO_MEMORY=1` and the five routing variables), `--safe-mode`, `--strict-mcp-config`, `--setting-sources project`, `--settings`, `--tools Bash,Read,Write,Edit,WebSearch,WebFetch`, the packet as working directory, the outbox via `--add-dir`, `--model deepseek-flash` and `--effort max`.
 
 Each settings file additionally: denies the administrative/messaging/remote tool set; allows writes only in the actor's own outbox; denies reads of every repository checkout, every other actor's packet and outbox on both the `physical-release-*` and `challenger-release-*` trees (including the proposer's `Claude-P05-TIMING` / `Codex-P04-PHYSICAL` paths and the sibling challenger), the historical `eda-dsk` workspace and packet trees, `EDA-Resources`, every home dot-directory, `~/Library` and the coordinator temp trees; and runs Bash in the seatbelt sandbox (`failIfUnavailable`, no unsandboxed escape) that denies reading anything under the home directory except the actor's own packet and outbox, denies writing the packet, and has no network. Web tools remain available for literature search.
 
@@ -85,10 +96,12 @@ Three findings from testing, recorded rather than hidden:
 | Run | Configuration | Result |
 |---|---|---|
 | 1 (`isolation-smoke-run1-writable.json`) | Earlier script revision, writable fixture | All DeepSeek checks passed (billed model `deepseek-v4-flash[1m]` only, `apiKeySource: apiKeyHelper`, key never in output). Two defects drove fixes: the CLI created `.claude/.cc-writes` in the writable packet, and the broad environment-name check matched the CLI's own messaging token and a host proxy variable, which are not the project credential. |
-| 2 (`isolation-smoke-run2-readonly.json`) | Final C05 settings, read-only fixture | All 19 environment checks and all 26 step checks passed. |
-| 3 (`isolation-smoke-run3-readonly-C04.json`) | Final C04 settings, read-only fixture | All 19 environment checks and all 26 step checks passed. |
+| 2 (`isolation-smoke-run2-readonly.json`) | C05 settings, previous alias pin, read-only fixture | All 19 environment checks and all 26 step checks passed. |
+| 3 (`isolation-smoke-run3-readonly-C04.json`) | C04 settings, previous alias pin, read-only fixture | All 19 environment checks and all 26 step checks passed. |
+| 4 (`isolation-smoke-run4-readonly-flash.json`) | Final C05 settings, final `--model deepseek-flash` pin, read-only fixture | All 19 environment checks and all 26 step checks passed; session model and the only billed model: `deepseek-flash`. |
+| 5 (`isolation-smoke-run5-readonly-C04-flash.json`) | Final C04 settings, final `deepseek-flash` pin, read-only fixture | All 19 environment checks and all 26 step checks passed; the only billed model: `deepseek-flash`. |
 
-Run 2-3 verified, among others: exactly the six allowed tools; no MCP server; no third-party plugin; auto-memory off; read-only packet unmodified; outbox writes landed; Bash sandbox denied reads of the repository, other packets, `~/.claude`, `~/Library` and the sibling canary, denied network, denied writes to the packet, and could not read the Keychain credential; `WebFetch` and `WebSearch` both succeeded on this route; the session model was exactly the pinned `deepseek-v4-flash[1m]`, every billed model was DeepSeek, and no `claude-*` model was billed. The static checks confirm the sibling challenger's and the proposer's packet paths are covered by deny rules. Smoke report timestamps come from the host clock (see below).
+Runs 2-5 verified, among others: exactly the six allowed tools; no MCP server; no third-party plugin; auto-memory off; read-only packet unmodified; outbox writes landed; Bash sandbox denied reads of the repository, other packets, `~/.claude`, `~/Library` and the sibling canary, denied network, denied writes to the packet, and could not read the Keychain credential; `WebFetch` and `WebSearch` both succeeded on this route; the session model was exactly the pinned model (`deepseek-v4-flash[1m]` in runs 2-3, `deepseek-flash` in runs 4-5), every billed model was DeepSeek, and no `claude-*` model was billed. The static checks confirm the sibling challenger's and the proposer's packet paths are covered by deny rules. Smoke report timestamps come from the host clock (see below).
 
 The launcher's post-freeze path was additionally exercised against a scratch copy with a synthetic, correctly hashed packet fixture (no real packet, no session): with the packet fields filled it reached `All preconditions hold. Nothing was launched.` (exit 0), after which a tampered file made it abort with `packet contents do not match PACKET.json` (exit 1), flagging both the hash mismatch and the writable paths. The simulated config and fixture live in private scratch and are not committed.
 
@@ -101,7 +114,7 @@ The host clock runs 54,000 s (15 h) behind NTP and the API server `Date` headers
 1. Done: operator approval for the Keychain-based credential, entry created and helper verified.
 2. Done: pinned CLI installed, hash recorded, launcher enforces it.
 3. Done: registry effort correction, model/effort confirmed against the API, balance recorded.
-4. Done: smoke tests 2 and 3 pass against the final, digest-pinned settings for both actors.
+4. Done: smoke tests 2 and 3 pass against the final, digest-pinned settings for both actors; after the owner's `deepseek-flash` pin decision, runs 4 and 5 re-validate both actors with the final pin.
 5. Pending — proposal freeze: when the corresponding dossier is submitted and frozen and its proposer session is registered, export the challenger packet from the then-current full `main` commit:
    `python3 scripts/actor_packet.py <ACTOR> --ref <MAIN_SHA> --out /Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/challenger-release-20261013/<ACTOR> --outbox /Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/challenger-release-20261013/<ACTOR> --phase research --topic <EDA-NNNN> --stage initial`
    then record its `PACKET.json` SHA-256 and file count in `actor-launch.json`, set the packet directory to 0555, and re-run `launch.sh --actor <ACTOR> --check`.
