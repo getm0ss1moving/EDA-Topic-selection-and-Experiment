@@ -1,0 +1,46 @@
+{
+  "at_utc": "2026-10-11T09:03:43.948077+00:00",
+  "authorization": "User accepted M0nitor-EDA invitation and requested next step",
+  "reviewer": {
+    "login": "M0nitor-EDA",
+    "permission_observed": "write",
+    "invitation_status": "accepted",
+    "approval_status": "No approval inferred from invitation acceptance"
+  },
+  "reason_for_single_retry": "Explicit user request and changed usage window; no model substitution",
+  "attempts": [
+    {
+      "actor": "Codex-P04-PHYSICAL",
+      "thread": "01a1272b-fb2e-7cc1-a6e3-8f4290be9769",
+      "sha256": "ee3b888ed5428ee426367ae459ce1f2c9d019e4138937b75dbed19e1ea34d9e2",
+      "input_commit": "38fdcf02b1eed6a53fc27224cd209c6b4ba63c0c",
+      "packet": "CODEX-RESUME-20261011-0902/Codex-P04-PHYSICAL",
+      "status": "dispatched"
+    },
+    {
+      "actor": "Codex-P05-TIMING",
+      "thread": "01a1272c-0241-7ce0-9c77-80dd05665d65",
+      "sha256": "b41e2f94d2b816b8b6dd08cf6293d67961eeb20b39040cb12d37c709c5e51936",
+      "input_commit": "38fdcf02b1eed6a53fc27224cd209c6b4ba63c0c",
+      "packet": "CODEX-RESUME-20261011-0902/Codex-P05-TIMING",
+      "status": "dispatched"
+    },
+    {
+      "actor": "Codex-V02-PHYSICAL",
+      "pr": 1,
+      "input_commit": "ac3207ec184c2f156f12e66024dd58199cec35b3",
+      "sha256": "96c6764f99486d8663661e6ab2bb36b711933c60e768026d79a7f9fb9d58ebae",
+      "packet": "CODEX-RESUME-20261011-0902/Codex-V02-PHYSICAL/pr1",
+      "status": "dispatched"
+    },
+    {
+      "actor": "Codex-V02-PHYSICAL",
+      "pr": 3,
+      "input_commit": "38fdcf02b1eed6a53fc27224cd209c6b4ba63c0c",
+      "sha256": "f983336b59b7c85d84da1221a1d30cc4a68c0f64a90c8d2617bebc6cff11f0d4",
+      "packet": "CODEX-RESUME-20261011-0902/Codex-V02-PHYSICAL/pr3",
+      "status": "dispatched"
+    }
+  ],
+  "completion": false
+}
