@@ -1,0 +1,89 @@
+{
+  "autoMemoryEnabled": false,
+  "permissions": {
+    "defaultMode": "default",
+    "allow": [
+      "WebSearch",
+      "WebFetch",
+      "Edit(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/physical-release-d437c2f66090/Claude-P05-TIMING/**)"
+    ],
+    "deny": [
+      "Task",
+      "Agent",
+      "SendMessage",
+      "ListAgents",
+      "Workflow",
+      "Skill",
+      "CronCreate",
+      "CronDelete",
+      "CronList",
+      "ScheduleWakeup",
+      "Monitor",
+      "PushNotification",
+      "Artifact",
+      "ArtifactComments",
+      "ArtifactData",
+      "DesignSync",
+      "ReportFindings",
+      "EnterWorktree",
+      "ExitWorktree",
+      "NotebookEdit",
+      "Edit(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/physical-release-d437c2f66090/Claude-P05-TIMING/**)",
+      "Edit(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/**)",
+      "Edit(//Users/duanzeyu/Documents/ChatGPT/EDA-Topic-selection-*/**)",
+      "Edit(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/Codex-*/**)",
+      "Edit(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/physical-release-*/Codex-*/**)",
+      "Edit(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/physical-release-*/DeepSeek-*/**)",
+      "Edit(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/physical-release-*/Claude-V02-*/**)",
+      "Read(//Users/duanzeyu/Documents/ChatGPT/EDA-Topic-selection-*/**)",
+      "Read(//Users/duanzeyu/Documents/ChatGPT/EDA-Resources/**)",
+      "Read(//Users/duanzeyu/Documents/ChatGPT/eda-dsk/**)",
+      "Read(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/CODEX-*/**)",
+      "Read(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/GOVERNANCE-*/**)",
+      "Read(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/foundation-*/**)",
+      "Read(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/physical-pilot-*/**)",
+      "Read(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/role-allocation-*/**)",
+      "Read(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/physical-release-*/Codex-*/**)",
+      "Read(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/physical-release-*/DeepSeek-*/**)",
+      "Read(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/physical-release-*/Claude-V02-*/**)",
+      "Read(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/physical-release-*/*.json)",
+      "Read(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/Codex-*/**)",
+      "Read(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/physical-release-*/Codex-*/**)",
+      "Read(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/physical-release-*/DeepSeek-*/**)",
+      "Read(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/physical-release-*/Claude-V02-*/**)",
+      "Read(~/.*)",
+      "Read(~/.*/**)",
+      "Read(~/Library/**)",
+      "Read(//private/tmp/claude-501/-Users-duanzeyu-Documents-ChatGPT-EDA-Topic-selection-*/**)",
+      "Read(//tmp/claude-501/-Users-duanzeyu-Documents-ChatGPT-EDA-Topic-selection-*/**)",
+      "Read(//private/tmp/claude-501/-Users-duanzeyu-Documents-ChatGPT-eda-dsk*/**)",
+      "Read(//private/tmp/claude-501/*Codex*/**)",
+      "Read(//private/tmp/claude-501/*DeepSeek*/**)",
+      "Read(//private/tmp/claude-501/*Claude-V02*/**)"
+    ]
+  },
+  "sandbox": {
+    "enabled": true,
+    "failIfUnavailable": true,
+    "allowUnsandboxedCommands": false,
+    "autoAllowBashIfSandboxed": true,
+    "filesystem": {
+      "denyRead": [
+        "/Users/duanzeyu"
+      ],
+      "allowRead": [
+        "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/physical-release-d437c2f66090/Claude-P05-TIMING",
+        "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/physical-release-d437c2f66090/Claude-P05-TIMING"
+      ],
+      "denyWrite": [
+        "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/physical-release-d437c2f66090/Claude-P05-TIMING"
+      ],
+      "allowWrite": [
+        "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/physical-release-d437c2f66090/Claude-P05-TIMING"
+      ]
+    },
+    "network": {
+      "allowedDomains": []
+    }
+  }
+}

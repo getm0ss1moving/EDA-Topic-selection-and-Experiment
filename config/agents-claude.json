@@ -35,8 +35,19 @@
       "platform": "Claude",
       "role": "proposer",
       "domain_ids": ["D05"],
-      "model_requested": "claude-family:strongest-exposed",
-      "reasoning_requested": "highest-supported-within-budget",
+      "model_requested": "claude-opus-5-5",
+      "reasoning_requested": "xhigh",
+      "model_policy": "claude-family:strongest-affordable-exposed",
+      "model_decision": {
+        "decided_by": "getm0ss1moving (human owner; resource decision)",
+        "date": "2026-10-12",
+        "host_models_exposed": ["claude-fable-5-1", "claude-opus-5-5", "claude-sonnet-5-5", "claude-haiku-5-5"],
+        "declined": "claude-fable-5-1 is the strongest exposed model but uses about 2.5x the per-token usage of claude-opus-5-5; the subscription-only budget and earlier quota failures favoured Opus 5.5 at xhigh effort.",
+        "record": "runs/CLD-P05-LAUNCH-0001/readiness.md"
+      },
+      "model_observed": null,
+      "session_id_planned": "76d0bf61-78f7-4b93-a557-7c29f1a2cbe8",
+      "launch_run": "CLD-P05-LAUNCH-0001",
       "status": "ready_for_fresh_session",
       "active_scope": true,
       "fresh_session_required": true

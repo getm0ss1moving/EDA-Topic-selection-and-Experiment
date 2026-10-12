@@ -1,0 +1,84 @@
+{
+  "run_id": "CLD-P05-LAUNCH-0001",
+  "session_id": "9273c928-a2eb-46ba-890d-9dedad60ac78",
+  "role": "coordinator",
+  "platform": "Claude",
+  "stage": "launch_readiness",
+  "status": "awaiting_operator_cli_login",
+  "input_commit": "7c9771196db41fab1593ceead9ebb93d935a3508",
+  "packet_sha256": "ff20816f623585d4bf7ba7b13d79db58aab90a2e947cd05c719cd93f3574602d",
+  "model": "claude-opus-5-5",
+  "host": "Claude desktop app 2.31226.0 (Claude Code 2.1.293), macOS arm64",
+  "operator": "getm0ss1moving",
+  "started_at_utc": "2026-10-12T12:23:50Z",
+  "completed_at_utc": null,
+  "clock_note": "The host clock runs 54000 s behind NTP (sntp time.apple.com), GitHub and Anthropic server Date headers. Timestamps in this manifest are corrected by that offset; git commit dates written on this host are not.",
+  "output_paths": [
+    "runs/CLD-P05-LAUNCH-0001/manifest.json",
+    "runs/CLD-P05-LAUNCH-0001/readiness.md",
+    "runs/CLD-P05-LAUNCH-0001/launch-settings.json",
+    "runs/CLD-P05-LAUNCH-0001/launch.sh",
+    "runs/CLD-P05-LAUNCH-0001/isolation_smoke.py",
+    "config/agents-claude.json"
+  ],
+  "source_ids": [],
+  "sources_consulted": [
+    "GitHub REST API: pull requests #1-#7, reviews on #6 and #7, main branch protection, workflow runs on main",
+    "Bundled Claude API skill model table (cached 2026-10-06) for Claude model IDs, tiers and list prices",
+    "npm registry metadata for @anthropic-ai/claude-code (dist-tags; version 2.1.293)",
+    "Local Claude Code 2.1.241 and 2.1.293 help text and settings schema strings"
+  ],
+  "contamination_events": [
+    "None. No role session was created and no scientific input was released.",
+    "Two coordinator probes ran headless in an empty scratch directory with no project content; neither reached a model."
+  ],
+  "independence_attestation": "Coordinator readiness record only. It authors no scientific content and approves nothing. The coordinator did not read other actors' outboxes, transcripts or private notes; it listed directory names only to build deny rules.",
+  "actor": {
+    "actor_id": "Claude-P05-TIMING",
+    "call_sign": "CLD-Origin-TIMING",
+    "role": "proposer",
+    "topic": "EDA-0002",
+    "domain": "D05",
+    "packet_path": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/physical-release-d437c2f66090/Claude-P05-TIMING",
+    "packet_input_commit": "d437c2f660906efe9351a90451905826d00b63e3",
+    "packet_file_count": 31,
+    "outbox": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/physical-release-d437c2f66090/Claude-P05-TIMING",
+    "model_requested": "claude-opus-5-5",
+    "effort_requested": "xhigh",
+    "model_observed": null,
+    "session_id_planned": "76d0bf61-78f7-4b93-a557-7c29f1a2cbe8",
+    "session_state": "not_created",
+    "cli_pinned": "@anthropic-ai/claude-code@2.1.293",
+    "launcher": "runs/CLD-P05-LAUNCH-0001/launch.sh",
+    "settings": "runs/CLD-P05-LAUNCH-0001/launch-settings.json"
+  },
+  "host_model_catalog": {
+    "observed_on": "Claude desktop host model list exposed to the coordinator session",
+    "claude_family": ["claude-fable-5-1", "claude-opus-5-5", "claude-sonnet-5-5", "claude-haiku-5-5"],
+    "abort_condition_triggered": false
+  },
+  "model_decision": {
+    "decided_by": "getm0ss1moving (human owner)",
+    "selected": {"model": "claude-opus-5-5", "effort": "xhigh"},
+    "declined": {"model": "claude-fable-5-1", "reason": "About 2.5x per-token usage of Opus 5.5 under a subscription-only budget; earlier Codex runs failed on subscription quota."},
+    "nature": "Resource decision under human decision rights; not a scientific judgement."
+  },
+  "budget": {
+    "cpu_hours_requested": 0,
+    "gpu_hours_requested": 0,
+    "api_usd_requested": 0,
+    "agent_usage": "Existing Claude subscription only; no automatic retries."
+  },
+  "isolation_smoke": {
+    "state": "pending_cli_login",
+    "script": "runs/CLD-P05-LAUNCH-0001/isolation_smoke.py",
+    "result_path": null
+  },
+  "blocking_prerequisites": [
+    "Operator installs @anthropic-ai/claude-code@2.1.293.",
+    "Operator signs the CLI in with the Claude subscription via launch.sh --login.",
+    "Coordinator runs the synthetic isolation smoke test and commits a passing result.",
+    "Independent exact-head confirmation by M0nitor-EDA and merge."
+  ],
+  "experiment_authorization": false
+}
