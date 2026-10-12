@@ -26,6 +26,7 @@ PACKET="/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/physical-release-d43
 PACKET_SHA256="ff20816f623585d4bf7ba7b13d79db58aab90a2e947cd05c719cd93f3574602d"
 OUTBOX="/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/physical-release-d437c2f66090/Claude-P05-TIMING"
 SETTINGS="$RUN_DIR/launch-settings.json"
+SETTINGS_SHA256="f5622a13e7275540a87bfd12baa7972a2a38545103659faf14b3460645ee16de"
 CLEAN_ENV=(HOME="$HOME" USER="$USER" LOGNAME="${LOGNAME:-$USER}" SHELL=/bin/bash
            TERM="${TERM:-xterm-256color}" LANG=en_US.UTF-8 PATH=/usr/bin:/bin:/usr/sbin:/sbin
            CLAUDE_CODE_DISABLE_AUTO_MEMORY=1)
@@ -87,7 +88,9 @@ fi
 ok "outbox $OUTBOX"
 
 [ -f "$SETTINGS" ] || die "settings file missing: $SETTINGS"
-echo "info  settings sha256 $(shasum -a 256 "$SETTINGS" | awk '{print $1}')"
+[ "$(shasum -a 256 "$SETTINGS" | awk '{print $1}')" = "$SETTINGS_SHA256" ] || \
+  die "launch-settings.json differs from the reviewed and smoke-tested $SETTINGS_SHA256"
+ok "settings $SETTINGS_SHA256 (reviewed and smoke-tested)"
 echo "info  launch record commit $(git -C "$RUN_DIR" rev-parse HEAD 2>/dev/null || echo unknown)"
 
 flags=(--safe-mode --strict-mcp-config --setting-sources project --settings "$SETTINGS"

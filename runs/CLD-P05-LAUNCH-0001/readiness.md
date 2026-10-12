@@ -52,7 +52,8 @@ Decision by the human owner on 2026-10-12: `claude-opus-5-5` at effort `xhigh`. 
 
 The operator runs `launch.sh` from Terminal.app. It aborts unless every check passes:
 
-- CLI version 2.1.293.
+- CLI version 2.1.293 and the reviewed SHA-256 of the native binary.
+- `launch-settings.json` byte-identical to the reviewed and smoke-tested digest `f5622a13e7275540a87bfd12baa7972a2a38545103659faf14b3460645ee16de`. A Codex review comment on `7a99ca1` noted that the launcher only printed this digest; it now aborts on mismatch.
 - First-party Claude subscription sign-in (`authMethod` `claude.ai`, `apiProvider` `firstParty`). After the operator signed in, `auth status` reported subscription type `pro`.
 - Packet digest and all 31 file hashes, with no extra file and no writable path.
 - An empty outbox with mode 0700.
