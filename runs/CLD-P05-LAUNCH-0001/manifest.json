@@ -4,14 +4,15 @@
   "role": "coordinator",
   "platform": "Claude",
   "stage": "launch_readiness",
-  "status": "amended_awaiting_final_isolation_smoke_and_independent_review",
+  "status": "amended_and_smoke_tested_ready_to_merge",
   "input_commit": "7c9771196db41fab1593ceead9ebb93d935a3508",
   "packet_sha256": "ff20816f623585d4bf7ba7b13d79db58aab90a2e947cd05c719cd93f3574602d",
   "model": "claude-opus-5-5",
   "host": "Claude desktop app 2.31226.0 (Claude Code 2.1.293), macOS arm64",
   "operator": "getm0ss1moving",
   "started_at_utc": "2026-10-12T12:23:50Z",
-  "completed_at_utc": "2026-10-13T18:28:50Z",
+  "completed_at_utc": "2026-10-13T11:10:00Z",
+  "completed_at_note": "Corrected on 2026-10-13: the previously recorded 2026-10-13T18:28:50Z lay in the future relative to GitHub server time (11:04Z when checked).",
   "clock_note": "The host clock runs 54000 s behind NTP (sntp time.apple.com), GitHub and Anthropic server Date headers. Timestamps in this manifest are corrected by that offset; git commit dates and the isolation test reports use the uncorrected host clock.",
   "output_paths": [
     "runs/CLD-P05-LAUNCH-0001/manifest.json",
@@ -23,6 +24,8 @@
     "runs/CLD-P05-LAUNCH-0001/isolation-smoke-run2-readonly.json",
     "config/agents-claude.json",
     "runs/CLD-P05-LAUNCH-0001/isolation-smoke-run3-lab-results.json",
+    "runs/CLD-P05-LAUNCH-0001/isolation-smoke-run4-lab-results.json",
+    "runs/CLD-P05-LAUNCH-0001/isolation-smoke-run5-lab-results.json",
     "runs/CLD-LAB-0001/manifest.json",
     "runs/CLD-LAB-0001/governance-decision.md",
     "runs/CLD-LAB-0001/proposer-instructions.md",
@@ -103,7 +106,7 @@
     "agent_usage": "Existing Claude subscription (Pro) only; no automatic retries."
   },
   "isolation_smoke": {
-    "state": "previous_configuration_passed; amended_configuration_retry_blocked_by_subscription_limit",
+    "state": "passed: run 5 against the final settings e628d5f72faa76d06c7922e7d673e8d8e4ee7be2a175fdcf27958715988fc3d8",
     "script": "runs/CLD-P05-LAUNCH-0001/isolation_smoke.py",
     "runs": [
       {
@@ -120,6 +123,16 @@
         "result": "runs/CLD-P05-LAUNCH-0001/isolation-smoke-run3-lab-results.json",
         "configuration": "intermediate amended settings (sha256 199c3879bb38dfa1fd10433eb9c39d6ed2127f3dbe935d0e90fa2e2891bda4a4), read-only lab results and GitHub/arXiv fail-closed network rules; final settings later added the explicit outbox Write allow rule",
         "outcome": "Configuration initialized with the expected model, exact tool list, dontAsk mode, no MCP servers or third-party plugins, but the subscription session limit stopped the model before every tool step. Retry after 2026-10-13 18:10 Asia/Shanghai; this run is not a pass."
+      },
+      {
+        "result": "runs/CLD-P05-LAUNCH-0001/isolation-smoke-run4-lab-results.json",
+        "configuration": "final settings (sha256 e628d5f72faa76d06c7922e7d673e8d8e4ee7be2a175fdcf27958715988fc3d8), read-only fixture packet and lab results, dontAsk",
+        "outcome": "A first attempt crashed in the harness parser on a CLI status event with a plain-text message and wrote no report; the parser was fixed and the run repeated. The repeat passed all 13 environment checks and 25 of 26 steps. R2 failed only because its expectation predated blockReadsOutsideWorkingDirectories: the read outside the working directories was denied despite an allow rule, which is the intended fail-closed behaviour."
+      },
+      {
+        "result": "runs/CLD-P05-LAUNCH-0001/isolation-smoke-run5-lab-results.json",
+        "configuration": "same final settings; harness with the parser fix and R2 expecting denial",
+        "outcome": "All 26 step checks and all 13 environment checks passed: claude-opus-5-5 (claude-haiku-5-5 helper) in dontAsk mode with exactly the six allowed tools, no MCP servers or third-party plugins, auto-memory off, reads outside working directories and listed sensitive paths denied, lab results readable but not writable, packet unmodified, Bash network limited to GitHub and arXiv, WebFetch denied outside GitHub and arXiv."
       }
     ],
     "settings_load_probe": "launch-settings.json loaded from its repository path; a Bash read of ~/.claude was denied by the sandbox."
@@ -127,8 +140,8 @@
   "prerequisites": [
     "Done: pinned Claude Code 2.1.293 is installed and first-party subscription authentication is present.",
     "Done: the lab runner end-to-end test passed on lab231 and lab234, including an attempted CPU-affinity escape.",
-    "Pending: rerun the amended Claude isolation smoke after the subscription limit resets.",
-    "Pending: independent exact-head confirmation by M0nitor-EDA and merge."
+    "Done: the amended Claude isolation smoke passed (run 5) against the pinned settings digest.",
+    "Pending: merge of PR #14. Under PR #16, intermediate governance PRs need passing automated checks, not a human CONFIRM."
   ],
   "experiment_authorization": false,
   "property_check_authorization": true

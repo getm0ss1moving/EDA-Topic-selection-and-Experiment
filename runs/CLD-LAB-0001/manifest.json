@@ -2,9 +2,10 @@
   "run_id": "CLD-LAB-0001",
   "role": "coordinator",
   "stage": "governance_and_runner_readiness",
-  "status": "awaiting_final_claude_isolation_smoke_and_independent_review",
+  "status": "smoke_tested_ready_to_merge",
   "actor": "Claude-P05-TIMING",
   "input_commit": "075863da392c42e2cfc7079b327c57e2d4565c4d",
+  "synced_with_main": "ed52e1b8 (after PR #16); no file overlap with this run",
   "decision_owner": "getm0ss1moving",
   "scientific_decision": false,
   "experiment_authorization": false,
@@ -25,7 +26,9 @@
     "runs/CLD-P05-LAUNCH-0001/launch-settings.json",
     "runs/CLD-P05-LAUNCH-0001/launch.sh",
     "runs/CLD-P05-LAUNCH-0001/isolation_smoke.py",
-    "runs/CLD-P05-LAUNCH-0001/isolation-smoke-run3-lab-results.json"
+    "runs/CLD-P05-LAUNCH-0001/isolation-smoke-run3-lab-results.json",
+    "runs/CLD-P05-LAUNCH-0001/isolation-smoke-run4-lab-results.json",
+    "runs/CLD-P05-LAUNCH-0001/isolation-smoke-run5-lab-results.json"
   ],
   "sources_consulted": [
     "Released Claude-P05-TIMING role-output-manifest.json and EDA-0002 dossier for U1-U9 labels",
@@ -35,6 +38,6 @@
   "independence_attestation": "Coordinator infrastructure and owner-decision record only. It does not adjudicate scientific claims or replace proposer, challenger, or verifier review.",
   "tests": {
     "remote_runner_e2e": "passed on lab231 and lab234; see e2e-result.json",
-    "claude_isolation_smoke": "attempted after settings update but blocked before any tool step by Claude subscription session limit; retry after 2026-10-13 18:10 Asia/Shanghai"
+    "claude_isolation_smoke": "passed: run 5 (26/26 steps, 13/13 environment checks) against settings e628d5f72faa76d06c7922e7d673e8d8e4ee7be2a175fdcf27958715988fc3d8; run 3 was blocked by the subscription limit and run 4 isolated a stale R2 expectation; see runs/CLD-P05-LAUNCH-0001/manifest.json"
   }
 }

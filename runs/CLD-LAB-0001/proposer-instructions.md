@@ -34,6 +34,8 @@ The runner processes one job at a time. Read results from the read-only folder:
 
 Each result contains `result.json`, log tails and eligible regular outputs. Treat exit code 124 or 137 as a timeout. Do not modify result files. Correct a failed request by submitting a new ID; never overwrite the evidence from an earlier request.
 
+Claude Code saves very large local tool output to a location this session cannot read. Keep local output small, for example with `head`, `grep` or `wc`. Otherwise redirect large output to a file in your outbox and read that file instead.
+
 ## Required P3-P5 record
 
 For every property, save the pinned source revision, build commands, generated fixtures, exact check command, expected invariant, observed counterexamples and the scope of the conclusion. Label the result as one of: `proved`, `code-argument-only`, `finite-tests-pass`, `falsified`, or `unresolved`. A passing finite test suite is not a proof. If P3-P5 cannot support the certificate without an empirical safety margin, activate K2 and revise or withdraw the guarantee claim rather than converting it into an unlabelled heuristic.

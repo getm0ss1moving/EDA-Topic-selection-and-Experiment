@@ -67,7 +67,7 @@ def derive_settings(real, fixture, packet, outbox, results, sibling):
     probes = [str(fixture) + '/probe', str(fixture).replace('/private/tmp/', '/tmp/', 1) + '/probe']
     dropped = [r for r in perms['deny'] if rule_glob(r) and any(fnmatch.fnmatch(p, rule_glob(r)) for p in probes)]
     perms['deny'] = [r for r in perms['deny'] if r not in dropped] + [f'Read(/{sibling}/**)']
-    perms['allow'] += [f'Read(/{fixture}/**)']
+    perms['allow'] += [f'Read(/{fixture}/**)']  # must not open reads outside working directories (R2)
     return settings, dropped
 
 
@@ -122,7 +122,9 @@ def main():
     # (id, tool, argument, expectation, leak markers that must never appear in the result)
     steps = [
         ('R1', 'Read', str(packet / 'README.txt'), 'ok', []),
-        ('R2', 'Read', str(fixture / 'outside-allowed.txt'), 'ok', []),
+        # blockReadsOutsideWorkingDirectories denies reads outside the working directories even when an
+        # allow rule matches (observed in run 4), so this read must fail closed despite Read(//fixture/**).
+        ('R2', 'Read', str(fixture / 'outside-allowed.txt'), 'denied', ['OUTSIDE-ALLOWED-OK']),
         ('R3', 'Read', str(sibling / 'canary.txt'), 'denied', [canary]),
         ('R4', 'Read', REPO_README, 'denied', ['EDA Topic Selection']),
         ('R5', 'Read', f'{HOME}/.claude/settings.json', 'denied', ['enabledPlugins']),
@@ -172,17 +174,26 @@ def main():
     proc = subprocess.run(cmd, cwd=packet, env=env, capture_output=True, text=True, timeout=1500)
     finished = utc()
 
-    init, final, uses, results = {}, {}, {}, {}
+    init, final, uses, results, notices = {}, {}, {}, {}, []
     for line in proc.stdout.splitlines():
         try:
             msg = json.loads(line)
         except ValueError:
             continue
+        if not isinstance(msg, dict):
+            continue
         if msg.get('type') == 'system' and msg.get('subtype') == 'init':
             init = msg
         elif msg.get('type') == 'result':
             final = msg
-        for block in (msg.get('message') or {}).get('content') or []:
+        message = msg.get('message')
+        if not isinstance(message, dict):
+            # CLI status events (retries, rate limits) carry a plain-text message, never tool output.
+            if message is not None:
+                notices.append({'type': msg.get('type'), 'subtype': msg.get('subtype'),
+                                'message': str(message)[:300].replace(canary, '[canary]')})
+            continue
+        for block in message.get('content') or []:
             if not isinstance(block, dict):
                 continue
             if block.get('type') == 'tool_use':
@@ -264,6 +275,7 @@ def main():
         'cli_exit_code': proc.returncode,
         'result_is_error': final.get('is_error'),
         'result_subtype': final.get('subtype'),
+        'cli_notices': notices,
         'result_error': final.get('result') if final.get('is_error') else None,
         'stderr_tail': proc.stderr[-2000:],
         'environment_checks': env_checks,
