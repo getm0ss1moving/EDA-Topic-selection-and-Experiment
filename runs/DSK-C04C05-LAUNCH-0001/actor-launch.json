@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "run_id": "DSK-C04C05-LAUNCH-0001",
+  "prepared_utc": "2026-10-13T08:09:26Z",
+  "prepared_by": "DeepSeek platform lead (coordinator role; transport only, not a scientific voter)",
+  "state": "prepared_not_started",
+  "note": "Launch binding for the two released DeepSeek challengers. The packet fields stay null until the corresponding proposal is frozen: the challenger packet may only be exported once the proposer dossier is submitted and its session registered (scripts/actor_packet.py enforces this), so an export before that would be refused. The outbox directories exist, empty, mode 0700. The session IDs were pre-assigned on 2026-10-13 and are registered in config/roles.json only after the session actually runs. No scientific session was created by this record.",
+  "packet_root": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/challenger-release-20261013",
+  "outbox_root": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/challenger-release-20261013",
+  "packet_root_note": "The directory name records when this launch kit fixed the paths (2026-10-13). The packets themselves are exported at proposal-freeze time from the then-current full main commit; their PACKET.json digests are recorded below and in launch.sh's run record before any session starts.",
+  "actors": {
+    "DeepSeek-C04-PHYSICAL": {
+      "actor_id": "DeepSeek-C04-PHYSICAL",
+      "call_sign": "DSK-Forge-PHYSICAL",
+      "role": "challenger",
+      "domain": "D04",
+      "topic": "EDA-0001",
+      "stage": "initial",
+      "proposer_actor": "Codex-P04-PHYSICAL (proposer session not yet registered; EDA-0001 proposal not yet frozen)",
+      "packet_dir": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/challenger-release-20261013/DeepSeek-C04-PHYSICAL",
+      "packet_sha256": null,
+      "outbox_dir": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/challenger-release-20261013/DeepSeek-C04-PHYSICAL",
+      "session_id": "6225f73f-b676-44ce-a3a7-ee667e1a68d2",
+      "settings_file": "launch-settings-C04.json",
+      "settings_sha256": "3eace9a6ac10a4e6040fd3fbb0cf741137ca37175159fe212fdac673c390613a"
+    },
+    "DeepSeek-C05-TIMING": {
+      "actor_id": "DeepSeek-C05-TIMING",
+      "call_sign": "DSK-Forge-TIMING",
+      "role": "challenger",
+      "domain": "D05",
+      "topic": "EDA-0002",
+      "stage": "initial",
+      "proposer_actor": "Claude-P05-TIMING (session 76d0bf61-78f7-4b93-a557-7c29f1a2cbe8 registered; EDA-0002 proposal in its research round, not yet frozen)",
+      "packet_dir": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/challenger-release-20261013/DeepSeek-C05-TIMING",
+      "packet_sha256": null,
+      "outbox_dir": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/challenger-release-20261013/DeepSeek-C05-TIMING",
+      "session_id": "af136556-818c-47c7-b514-5a141cb14d85",
+      "settings_file": "launch-settings-C05.json",
+      "settings_sha256": "2c1984b1e329cc8c4ba8921ba461407a228b68a9a668fbd49c905dbbbafdbf72"
+    }
+  }
+}
