@@ -41,7 +41,7 @@ Decision by the human owner on 2026-10-12: `claude-opus-5-5` at effort `xhigh`. 
 ## Host findings that shape the launch
 
 1. Neither standalone CLI on this host is signed in. The desktop app authenticates its own sessions internally.
-2. The CLI on `PATH` is 2.1.241 and flags `claude-haiku-5-5` as an unrecognized model. The desktop app uses 2.1.293, which is published on npm. The launch pins 2.1.293.
+2. The CLI on `PATH` is 2.1.241 and flags `claude-haiku-5-5` as an unrecognized model. The desktop app uses 2.1.293, which is published on npm. The launch pins 2.1.293 in a separate prefix (`~/.local/claude-code-2.1.293`), leaving the global CLI that other platforms' sessions use unchanged.
 3. `~/.zshrc` exports `ANTHROPIC_BASE_URL` with host `api.deepseek.com`, together with an auth token and model-name remaps (values not recorded). A `claude` process started from an ordinary terminal would therefore run DeepSeek models under any requested Claude model name, which is exactly the prohibited "non-Claude model under a Claude identity" path. The role process inherits no environment variable (`env -i`) and must hold first-party OAuth.
 4. Shells spawned by the desktop app export the desktop's cross-session messaging socket and token. A role started from such a shell could reach other local sessions, so the launcher refuses to run inside a Claude session.
 5. `--bare` was rejected because it requires an API key, which means paid API usage. `--safe-mode` keeps subscription authentication while disabling `CLAUDE.md`, third-party plugins (including the globally enabled Codex plugin), skills, hooks and MCP servers.
@@ -90,8 +90,8 @@ This stage requests 0 CPU-hours, 0 GPU-hours and USD 0 of API spend from the sha
 
 ## Blocking prerequisites before launch
 
-1. The operator installs the pinned CLI: `npm install -g @anthropic-ai/claude-code@2.1.293`.
-2. The operator signs in from Terminal.app with `bash launch.sh --login`, choosing the Claude subscription and never the Console option. Correct the host clock first if sign-in fails.
+1. The operator installs the pinned CLI into its own prefix: `npm install --prefix ~/.local/claude-code-2.1.293 @anthropic-ai/claude-code@2.1.293`. This downloads about 236 MB, mostly the native macOS arm64 binary, from the npm registry.
+2. The operator signs in from Terminal.app with `bash launch.sh --login`, choosing the Claude subscription and never the Console option. Correct the host clock first if sign-in fails. The sign-in is stored in the shared Claude Code configuration. Sessions that export their own `ANTHROPIC_AUTH_TOKEN` (the DeepSeek routing) should keep using that token; the operator should confirm afterwards that DeepSeek sessions still report their DeepSeek model.
 3. The coordinator runs `python3 -I isolation_smoke.py` and commits `isolation-smoke.json`. Any failed check blocks the launch.
 4. `M0nitor-EDA` confirms the final head with `CONFIRM <sha>` and the PR is merged.
 

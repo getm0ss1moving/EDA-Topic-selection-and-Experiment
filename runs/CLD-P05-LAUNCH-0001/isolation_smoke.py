@@ -74,7 +74,7 @@ def q(path):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    ap.add_argument('--cli', default='/Users/duanzeyu/.nvm/versions/node/v22.23.1/bin/claude')
+    ap.add_argument('--cli', default=f'{HOME}/.local/claude-code-2.1.293/node_modules/.bin/claude')
     ap.add_argument('--cli-version', default='2.1.293')
     ap.add_argument('--model', default='claude-opus-5-5')
     ap.add_argument('--effort', default='xhigh')

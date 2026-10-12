@@ -12,8 +12,9 @@
 set -euo pipefail
 
 RUN_DIR="$(cd "$(dirname "$0")" && pwd)"
-CLAUDE_BIN="/Users/duanzeyu/.nvm/versions/node/v22.23.1/bin/claude"
 CLI_VERSION="2.1.293"
+# Separate prefix so the global CLI, which other platforms' sessions also use, stays unchanged.
+CLAUDE_BIN="$HOME/.local/claude-code-$CLI_VERSION/node_modules/.bin/claude"
 MODEL="claude-opus-5-5"
 EFFORT="xhigh"
 SESSION_ID="76d0bf61-78f7-4b93-a557-7c29f1a2cbe8"
@@ -38,7 +39,7 @@ fi
 [ -x "$CLAUDE_BIN" ] || die "CLI not found at $CLAUDE_BIN"
 version="$( (env -i "${CLEAN_ENV[@]}" "$CLAUDE_BIN" --version 2>/dev/null || true) | awk '{print $1}')"
 [ "$version" = "$CLI_VERSION" ] || \
-  die "CLI version '$version' is not $CLI_VERSION; run: npm install -g @anthropic-ai/claude-code@$CLI_VERSION"
+  die "CLI version '$version' is not $CLI_VERSION; run: npm install --prefix ~/.local/claude-code-$CLI_VERSION @anthropic-ai/claude-code@$CLI_VERSION"
 ok "CLI $version at $CLAUDE_BIN"
 
 if [ "$mode" = "--login" ]; then

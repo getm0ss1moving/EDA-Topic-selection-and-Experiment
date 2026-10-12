@@ -49,6 +49,7 @@
     "session_id_planned": "76d0bf61-78f7-4b93-a557-7c29f1a2cbe8",
     "session_state": "not_created",
     "cli_pinned": "@anthropic-ai/claude-code@2.1.293",
+    "cli_path": "~/.local/claude-code-2.1.293/node_modules/.bin/claude (separate prefix; the global CLI is unchanged)",
     "launcher": "runs/CLD-P05-LAUNCH-0001/launch.sh",
     "settings": "runs/CLD-P05-LAUNCH-0001/launch-settings.json"
   },
@@ -75,7 +76,7 @@
     "result_path": null
   },
   "blocking_prerequisites": [
-    "Operator installs @anthropic-ai/claude-code@2.1.293.",
+    "Operator installs @anthropic-ai/claude-code@2.1.293 into ~/.local/claude-code-2.1.293.",
     "Operator signs the CLI in with the Claude subscription via launch.sh --login.",
     "Coordinator runs the synthetic isolation smoke test and commits a passing result.",
     "Independent exact-head confirmation by M0nitor-EDA and merge."
