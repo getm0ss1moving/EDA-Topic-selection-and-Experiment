@@ -49,7 +49,9 @@
     "session_id_planned": "76d0bf61-78f7-4b93-a557-7c29f1a2cbe8",
     "session_state": "not_created",
     "cli_pinned": "@anthropic-ai/claude-code@2.1.293",
-    "cli_path": "~/.local/claude-code-2.1.293/node_modules/.bin/claude (separate prefix; the global CLI is unchanged)",
+    "cli_path": "~/.local/claude-code-2.1.293/node_modules/@anthropic-ai/claude-code-darwin-arm64/claude (separate prefix; the global CLI is unchanged)",
+    "cli_sha256": "4e21122a227857da1178aca3299700c1fd7f2b77c93f12e73c2c76db796a105e",
+    "cli_signature": "Developer ID Application: Anthropic PBC (Q6L2SF6YDW); codesign --verify --strict passed",
     "launcher": "runs/CLD-P05-LAUNCH-0001/launch.sh",
     "settings": "runs/CLD-P05-LAUNCH-0001/launch-settings.json"
   },
@@ -76,7 +78,7 @@
     "result_path": null
   },
   "blocking_prerequisites": [
-    "Operator installs @anthropic-ai/claude-code@2.1.293 into ~/.local/claude-code-2.1.293.",
+    "Done: operator installed @anthropic-ai/claude-code@2.1.293 into ~/.local/claude-code-2.1.293 (postinstall blocked by npm allowScripts; the launcher runs the signed native binary directly).",
     "Operator signs the CLI in with the Claude subscription via launch.sh --login.",
     "Coordinator runs the synthetic isolation smoke test and commits a passing result.",
     "Independent exact-head confirmation by M0nitor-EDA and merge."

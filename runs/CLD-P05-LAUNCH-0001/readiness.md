@@ -90,7 +90,7 @@ This stage requests 0 CPU-hours, 0 GPU-hours and USD 0 of API spend from the sha
 
 ## Blocking prerequisites before launch
 
-1. The operator installs the pinned CLI into its own prefix: `npm install --prefix ~/.local/claude-code-2.1.293 @anthropic-ai/claude-code@2.1.293`. This downloads about 236 MB, mostly the native macOS arm64 binary, from the npm registry.
+1. The operator installs the pinned CLI into its own prefix: `npm install --prefix ~/.local/claude-code-2.1.293 @anthropic-ai/claude-code@2.1.293`. This downloads about 236 MB, mostly the native macOS arm64 binary, from the npm registry. Done on 2026-10-12. The operator's npm `allowScripts` policy blocked the package's postinstall step, which only hard-links the native binary over a placeholder. The launcher therefore executes the native binary directly from `@anthropic-ai/claude-code-darwin-arm64` and requires its SHA-256 `4e21122a227857da1178aca3299700c1fd7f2b77c93f12e73c2c76db796a105e`. The binary is signed by Developer ID Application: Anthropic PBC (Q6L2SF6YDW), and `codesign --verify --strict` passes. No npm policy was changed.
 2. The operator signs in from Terminal.app with `bash launch.sh --login`, choosing the Claude subscription and never the Console option. Correct the host clock first if sign-in fails. The sign-in is stored in the shared Claude Code configuration. Sessions that export their own `ANTHROPIC_AUTH_TOKEN` (the DeepSeek routing) should keep using that token; the operator should confirm afterwards that DeepSeek sessions still report their DeepSeek model.
 3. The coordinator runs `python3 -I isolation_smoke.py` and commits `isolation-smoke.json`. Any failed check blocks the launch.
 4. `M0nitor-EDA` confirms the final head with `CONFIRM <sha>` and the PR is merged.

@@ -14,7 +14,9 @@ set -euo pipefail
 RUN_DIR="$(cd "$(dirname "$0")" && pwd)"
 CLI_VERSION="2.1.293"
 # Separate prefix so the global CLI, which other platforms' sessions also use, stays unchanged.
-CLAUDE_BIN="$HOME/.local/claude-code-$CLI_VERSION/node_modules/.bin/claude"
+# The signed native binary is executed directly, so npm's postinstall copy step is not needed.
+CLAUDE_BIN="$HOME/.local/claude-code-$CLI_VERSION/node_modules/@anthropic-ai/claude-code-darwin-arm64/claude"
+CLI_SHA256="4e21122a227857da1178aca3299700c1fd7f2b77c93f12e73c2c76db796a105e"
 MODEL="claude-opus-5-5"
 EFFORT="xhigh"
 SESSION_ID="76d0bf61-78f7-4b93-a557-7c29f1a2cbe8"
@@ -36,7 +38,8 @@ if [ -n "${CLAUDECODE:-}${CLAUDE_CODE_SESSION_ID:-}${CLAUDE_CODE_MESSAGING_SOCKE
   die "called from inside a Claude session; open Terminal.app and run this script there"
 fi
 
-[ -x "$CLAUDE_BIN" ] || die "CLI not found at $CLAUDE_BIN"
+[ -x "$CLAUDE_BIN" ] || die "CLI not found at $CLAUDE_BIN; run: npm install --prefix ~/.local/claude-code-$CLI_VERSION @anthropic-ai/claude-code@$CLI_VERSION"
+[ "$(shasum -a 256 "$CLAUDE_BIN" | awk '{print $1}')" = "$CLI_SHA256" ] || die "CLI binary SHA-256 differs from the reviewed $CLI_SHA256"
 version="$( (env -i "${CLEAN_ENV[@]}" "$CLAUDE_BIN" --version 2>/dev/null || true) | awk '{print $1}')"
 [ "$version" = "$CLI_VERSION" ] || \
   die "CLI version '$version' is not $CLI_VERSION; run: npm install --prefix ~/.local/claude-code-$CLI_VERSION @anthropic-ai/claude-code@$CLI_VERSION"
