@@ -1,0 +1,61 @@
+{
+  "run_id": "DSK-C05-SESSION-0001",
+  "session_id": "04fe4881-0c22-4292-ac03-ab73f00eaf29",
+  "role": "coordinator",
+  "platform": "DeepSeek",
+  "stage": "session_registration",
+  "status": "ready_for_independent_review",
+  "input_commit": "4b666c04b0eaa089934f736fab4db2309ce7d36a",
+  "model": "deepseek-flash[1m]",
+  "host": "macOS arm64 (Darwin 25.5.0)",
+  "operator": "getm0ss1moving",
+  "started_at_utc": "2026-10-13T10:55:00Z",
+  "completed_at_utc": "2026-10-13T11:01:56Z",
+  "clock_note": "The host clock runs 54000 s behind NTP and the api.deepseek.com Date headers; timestamps in this manifest and in registration.md are corrected to true UTC. The role's onboarding outputs use the uncorrected host clock.",
+  "output_paths": [
+    "runs/DSK-C05-SESSION-0001/manifest.json",
+    "runs/DSK-C05-SESSION-0001/registration.md",
+    "config/roles.json",
+    "config/agents-deepseek.json",
+    "candidates/EDA-0002/dossier.json"
+  ],
+  "source_ids": [
+    "Outbox outputs: /Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/challenger-release-20261013/DeepSeek-C05-TIMING/readiness.json and first-pass-plan.md (digests recorded; contents read only as the coordinator's receipt)",
+    "config/roles.json, config/agents-deepseek.json, config/launch-release.json, candidates/EDA-0002/dossier.json at 4b666c0",
+    "runs/DSK-C04C05-LAUNCH-0001 (launch kit and binding), runs/CLD-P05-SESSION-0001 (registration precedent)"
+  ],
+  "contamination_events": [
+    "None. The role's disclosed context exposure (its own sandbox configuration rendering the deny-rule path list) names only layout that is already public in this repository; no other actor's content was exposed and nothing outside the packet and the role's own outbox was opened.",
+    "The role's readiness quotes a /model message ('saved as your default'). Whether the operator made that selection and whether it changed the user-level default is flagged for operator confirmation at review; the session ran and billed deepseek-flash, so no model-tier change occurred."
+  ],
+  "independence_attestation": "Coordinator registration and receipt only. It authors no scientific content and approves nothing. The coordinator verified digest stability of the two onboarding outputs and read readiness.json as the role's released receipt; it did not read the session transcript, any other actor's outputs, or private notes. All actors share one macOS account, so isolation is layered harness enforcement, not OS-enforced independence.",
+  "actor": {
+    "actor_id": "DeepSeek-C05-TIMING",
+    "call_sign": "DSK-Forge-TIMING",
+    "role": "challenger",
+    "topic": "EDA-0002",
+    "domain": "D05",
+    "session_id": "af136556-818c-47c7-b514-5a141cb14d85",
+    "session_state": "onboarding_complete; research round not started",
+    "packet_path": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/challenger-release-20261013/DeepSeek-C05-TIMING",
+    "packet_sha256": "e6c53f61ca815c2e69c1ab2f68cb2c667290f634cc49ea4ff5900d8e535332cf",
+    "packet_stage": "initial",
+    "packet_hash_verification_by_role": "30/30 listed files match; 0 mismatches, 0 missing, 0 extra, 0 hidden",
+    "outbox": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/challenger-release-20261013/DeepSeek-C05-TIMING",
+    "onboarding_outputs": {
+      "readiness.json": "c1b0573c12ae8d0bc6cab6cc786bd806eb098b4d8b48907f0c840056f19e896f",
+      "first-pass-plan.md": "dc3939f131e55ea7bd4bb74072f6c3f2c19a8bc1417b3986635a3daa681afaac"
+    },
+    "model_observed": "deepseek-flash",
+    "effort_requested": "max",
+    "effort_observed": "not verifiable from inside the session; recorded as requested",
+    "launch_commit": null,
+    "launch_commit_note": "The launcher printed it to the operator's Terminal; not relayed when this record was written."
+  },
+  "experiment_authorization": false,
+  "next_steps": [
+    "Independent exact-head confirmation and merge of this registration.",
+    "Then send the stage-initial research prompt (registration.md) in the session via launch.sh --actor DeepSeek-C05-TIMING --resume.",
+    "After the challenger commits its independent estimate and the coordinator transports the challenge files, export the stage-full packet (forecast.json released)."
+  ]
+}

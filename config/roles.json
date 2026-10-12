@@ -22,6 +22,30 @@
       "started_at_utc": "2026-10-12T18:07:15Z",
       "state": "onboarding_complete; research round not started",
       "independence_attestation": "Fresh Claude Code 2.1.293 session started by the operator from Terminal.app through runs/CLD-P05-LAUNCH-0001/launch.sh: clean environment, --safe-mode, tool allow-list, sandboxed Bash and deny rules. The operator attests that the session received only the setup prompt after a /model selection. The role's readiness.json reports no contamination and discloses its unlisted context. All actors share one macOS account, so this is operator and self attestation, not OS-enforced independence."
+    },
+    {
+      "session_id": "af136556-818c-47c7-b514-5a141cb14d85",
+      "role": "challenger",
+      "actor_id": "DeepSeek-C05-TIMING",
+      "platform": "DeepSeek",
+      "topic": "EDA-0002",
+      "domain": "D05",
+      "model": "deepseek-flash",
+      "model_basis": "Pinned by the launcher (--model deepseek-flash, the canonical API model ID served by api.deepseek.com/models) and reported by the role from its host context (readiness.json model.observed_host_reported); the role also notes that model identity is host-reported and not independently verifiable from inside the session.",
+      "effort_requested": "max",
+      "effort_observed_onboarding": "unverifiable: recorded by the role as requested max; the host does not let the role verify the effective effort (readiness.json model.verification_limit).",
+      "operator": "getm0ss1moving",
+      "github_login": "getm0ss1moving (transport account for this actor's outputs; the AI actor has no GitHub identity)",
+      "input_commit": "4b666c04b0eaa089934f736fab4db2309ce7d36a",
+      "packet_sha256": "e6c53f61ca815c2e69c1ab2f68cb2c667290f634cc49ea4ff5900d8e535332cf",
+      "launch_commit": null,
+      "launch_commit_note": "The launcher printed its record commit to the operator's Terminal at start; it had not been relayed to the coordinator when this registration was written, so it is left null rather than guessed.",
+      "launch_run": "DSK-C04C05-LAUNCH-0001",
+      "registration_run": "DSK-C05-SESSION-0001",
+      "started_at_utc": "2026-10-13T09:37:00Z",
+      "started_at_note": "Observed from the session transcript directory's creation on the host; approximate to the minute. The role's readiness.json was written at true UTC 2026-10-13T09:39:19Z.",
+      "state": "onboarding_complete; research round not started",
+      "independence_attestation": "Fresh Claude Code 2.1.293 session started by the operator from Terminal.app through runs/DSK-C04C05-LAUNCH-0001/launch.sh --actor DeepSeek-C05-TIMING: env -i with only routing variables, --safe-mode, the six-tool allow-list, sandboxed Bash and per-actor deny rules, and the DeepSeek Keychain credential via apiKeyHelper with no claude.ai fallback. The role attests it received only the onboarding prompt text and used no shared memory, messaging, subordinate agents or other sessions, and it verified all 30 packet file hashes with zero mismatches. All actors share one macOS account, so this is operator and self attestation, not OS-enforced independence."
     }
   ],
   "required_session_fields": [
