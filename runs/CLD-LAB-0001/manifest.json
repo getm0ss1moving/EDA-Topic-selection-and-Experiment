@@ -1,0 +1,40 @@
+{
+  "run_id": "CLD-LAB-0001",
+  "role": "coordinator",
+  "stage": "governance_and_runner_readiness",
+  "status": "awaiting_final_claude_isolation_smoke_and_independent_review",
+  "actor": "Claude-P05-TIMING",
+  "input_commit": "075863da392c42e2cfc7079b327c57e2d4565c4d",
+  "decision_owner": "getm0ss1moving",
+  "scientific_decision": false,
+  "experiment_authorization": false,
+  "authorized_scope": [
+    "tooling",
+    "public data acquisition from GitHub and arXiv",
+    "substrate setup",
+    "P3-P5 property checks"
+  ],
+  "output_paths": [
+    "runs/CLD-LAB-0001/manifest.json",
+    "runs/CLD-LAB-0001/governance-decision.md",
+    "runs/CLD-LAB-0001/proposer-instructions.md",
+    "runs/CLD-LAB-0001/lab_runner.py",
+    "runs/CLD-LAB-0001/remote_driver.sh",
+    "runs/CLD-LAB-0001/e2e_test.py",
+    "runs/CLD-LAB-0001/e2e-result.json",
+    "runs/CLD-P05-LAUNCH-0001/launch-settings.json",
+    "runs/CLD-P05-LAUNCH-0001/launch.sh",
+    "runs/CLD-P05-LAUNCH-0001/isolation_smoke.py",
+    "runs/CLD-P05-LAUNCH-0001/isolation-smoke-run3-lab-results.json"
+  ],
+  "sources_consulted": [
+    "Released Claude-P05-TIMING role-output-manifest.json and EDA-0002 dossier for U1-U9 labels",
+    "Local SSH host capabilities on lab231 and lab234",
+    "Pinned Claude Code 2.1.293 settings and synthetic isolation harness"
+  ],
+  "independence_attestation": "Coordinator infrastructure and owner-decision record only. It does not adjudicate scientific claims or replace proposer, challenger, or verifier review.",
+  "tests": {
+    "remote_runner_e2e": "passed on lab231 and lab234; see e2e-result.json",
+    "claude_isolation_smoke": "attempted after settings update but blocked before any tool step by Claude subscription session limit; retry after 2026-10-13 18:10 Asia/Shanghai"
+  }
+}

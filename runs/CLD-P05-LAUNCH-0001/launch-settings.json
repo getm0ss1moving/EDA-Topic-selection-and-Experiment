@@ -1,10 +1,18 @@
 {
   "autoMemoryEnabled": false,
   "permissions": {
-    "defaultMode": "default",
+    "defaultMode": "dontAsk",
+    "blockReadsOutsideWorkingDirectories": true,
     "allow": [
       "WebSearch",
-      "WebFetch",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:*.github.com)",
+      "WebFetch(domain:githubusercontent.com)",
+      "WebFetch(domain:*.githubusercontent.com)",
+      "WebFetch(domain:arxiv.org)",
+      "WebFetch(domain:*.arxiv.org)",
+      "Read(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/physical-release-d437c2f66090/Claude-P05-TIMING/lab-results/**)",
+      "Write(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/physical-release-d437c2f66090/Claude-P05-TIMING/**)",
       "Edit(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/physical-release-d437c2f66090/Claude-P05-TIMING/**)"
     ],
     "deny": [
@@ -30,6 +38,7 @@
       "ExitWorktree",
       "NotebookEdit",
       "Edit(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/physical-release-d437c2f66090/Claude-P05-TIMING/**)",
+      "Edit(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/physical-release-d437c2f66090/Claude-P05-TIMING/lab-results/**)",
       "Edit(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/**)",
       "Edit(//Users/duanzeyu/Documents/ChatGPT/EDA-Topic-selection-*/**)",
       "Edit(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/Codex-*/**)",
@@ -52,8 +61,22 @@
       "Read(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/physical-release-*/Codex-*/**)",
       "Read(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/physical-release-*/DeepSeek-*/**)",
       "Read(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/physical-release-*/Claude-V02-*/**)",
-      "Read(~/.*)",
-      "Read(~/.*/**)",
+      "Read(~/.claude/**)",
+      "Read(~/.codex/**)",
+      "Read(~/.ssh/**)",
+      "Read(~/.config/**)",
+      "Read(~/.local/**)",
+      "Read(~/.aws/**)",
+      "Read(~/.gnupg/**)",
+      "Read(~/.docker/**)",
+      "Read(~/.kube/**)",
+      "Read(~/.zshrc)",
+      "Read(~/.bashrc)",
+      "Read(~/.bash_profile)",
+      "Read(~/.profile)",
+      "Read(~/.gitconfig)",
+      "Read(~/.npmrc)",
+      "Read(~/.netrc)",
       "Read(~/Library/**)",
       "Read(//private/tmp/claude-501/-Users-duanzeyu-Documents-ChatGPT-EDA-Topic-selection-*/**)",
       "Read(//tmp/claude-501/-Users-duanzeyu-Documents-ChatGPT-EDA-Topic-selection-*/**)",
@@ -74,17 +97,27 @@
       ],
       "allowRead": [
         "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/physical-release-d437c2f66090/Claude-P05-TIMING",
-        "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/physical-release-d437c2f66090/Claude-P05-TIMING"
+        "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/physical-release-d437c2f66090/Claude-P05-TIMING",
+        "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/physical-release-d437c2f66090/Claude-P05-TIMING/lab-results"
       ],
       "denyWrite": [
-        "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/physical-release-d437c2f66090/Claude-P05-TIMING"
+        "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/physical-release-d437c2f66090/Claude-P05-TIMING",
+        "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/physical-release-d437c2f66090/Claude-P05-TIMING/lab-results"
       ],
       "allowWrite": [
         "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/physical-release-d437c2f66090/Claude-P05-TIMING"
       ]
     },
     "network": {
-      "allowedDomains": []
+      "allowedDomains": [
+        "github.com",
+        "*.github.com",
+        "githubusercontent.com",
+        "*.githubusercontent.com",
+        "arxiv.org",
+        "*.arxiv.org"
+      ],
+      "strictAllowlist": true
     }
   }
 }

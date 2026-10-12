@@ -126,3 +126,14 @@ Research prompt (sent only after step 3):
 ## Not authorized by this record
 
 No session exists yet. This record creates or approves no topic, survey result, novelty claim, experiment or verifier session.
+
+## 2026-10-13 runner amendment
+
+This amendment supersedes the earlier network, read-rule and session-state descriptions for resume. The proposer completed a first dossier outside the repository and is paused. Resume is permitted only after this governance PR passes independent exact-head review.
+
+- The runner and owner decisions are recorded in `runs/CLD-LAB-0001/governance-decision.md`; exact actor instructions are in `runs/CLD-LAB-0001/proposer-instructions.md`.
+- The session receives the lab-results folder as a second `--add-dir`. Claude permissions and the macOS sandbox allow reads but deny edits and writes there. Each published job directory and file is also mode 0500/0400.
+- The two broad `Read(~/.*)` rules were removed because they also matched the actor's own saved dot-prefixed outputs. Sensitive home locations are now enumerated, and `blockReadsOutsideWorkingDirectories` plus `defaultMode: dontAsk` makes other paths fail closed without asking the operator.
+- WebFetch and sandbox network access are limited to GitHub, GitHub content subdomains and arXiv. Other hosts are denied without a prompt. Network-capable runner jobs are restricted by governance to those same public sources; `lab234` has no network.
+- `CLD-LAB-0001-E2E` passed on both machines. It verified hidden home state, network isolation on `lab234`, network availability on `lab231`, timeout termination, read-only results, no copyback for symlinks or files over 50 MiB, and a seccomp-enforced CPU affinity mask that resisted an in-job `sched_setaffinity` escape attempt.
+- The amended Claude isolation smoke initialized with the expected model, tool list, `dontAsk` mode, no MCP servers and no third-party plugins, but the subscription session limit stopped the model before any tool step. `isolation-smoke-run3-lab-results.json` is therefore a blocked run, not a pass. It must be rerun after the reported reset at 2026-10-13 18:10 Asia/Shanghai.
