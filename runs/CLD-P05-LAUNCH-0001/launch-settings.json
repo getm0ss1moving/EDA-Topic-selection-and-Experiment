@@ -12,6 +12,7 @@
       "Agent",
       "SendMessage",
       "ListAgents",
+      "RemoteTrigger",
       "Workflow",
       "Skill",
       "CronCreate",

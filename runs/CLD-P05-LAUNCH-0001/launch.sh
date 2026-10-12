@@ -19,6 +19,8 @@ CLAUDE_BIN="$HOME/.local/claude-code-$CLI_VERSION/node_modules/@anthropic-ai/cla
 CLI_SHA256="4e21122a227857da1178aca3299700c1fd7f2b77c93f12e73c2c76db796a105e"
 MODEL="claude-opus-5-5"
 EFFORT="xhigh"
+# Built-in tool allow-list; the deny rules in launch-settings.json are a second layer.
+TOOLS="Bash,Read,Write,Edit,WebSearch,WebFetch"
 SESSION_ID="76d0bf61-78f7-4b93-a557-7c29f1a2cbe8"
 PACKET="/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/physical-release-d437c2f66090/Claude-P05-TIMING"
 PACKET_SHA256="ff20816f623585d4bf7ba7b13d79db58aab90a2e947cd05c719cd93f3574602d"
@@ -53,10 +55,10 @@ auth="$(env -i "${CLEAN_ENV[@]}" "$CLAUDE_BIN" auth status 2>/dev/null || true)"
 python3 -I -c '
 import json, sys
 a = json.loads(sys.argv[1] or "{}")
-sys.exit(0 if a.get("loggedIn") is True and a.get("authMethod") == "oauth"
+sys.exit(0 if a.get("loggedIn") is True and a.get("authMethod") == "claude.ai"
          and a.get("apiProvider") == "firstParty" else 1)' "$auth" || \
-  die "not signed in with first-party Claude subscription OAuth; run: bash $0 --login"
-ok "first-party OAuth sign-in (no API key, no third-party base URL in the role environment)"
+  die "not signed in with a first-party Claude subscription; run: bash $0 --login"
+ok "first-party Claude subscription sign-in (no API key, no third-party base URL in the role environment)"
 
 [ "$(shasum -a 256 "$PACKET/PACKET.json" | awk '{print $1}')" = "$PACKET_SHA256" ] || die "PACKET.json digest mismatch"
 python3 -I - "$PACKET" <<'EOF' || die "packet contents do not match PACKET.json"
@@ -89,7 +91,7 @@ echo "info  settings sha256 $(shasum -a 256 "$SETTINGS" | awk '{print $1}')"
 echo "info  launch record commit $(git -C "$RUN_DIR" rev-parse HEAD 2>/dev/null || echo unknown)"
 
 flags=(--safe-mode --strict-mcp-config --setting-sources project --settings "$SETTINGS"
-       --add-dir "$OUTBOX" --model "$MODEL" --effort "$EFFORT")
+       --tools "$TOOLS" --add-dir "$OUTBOX" --model "$MODEL" --effort "$EFFORT")
 if [ "$mode" = "--check" ]; then
   echo "All preconditions hold. Nothing was launched."
   exit 0

@@ -53,7 +53,7 @@ Decision by the human owner on 2026-10-12: `claude-opus-5-5` at effort `xhigh`. 
 The operator runs `launch.sh` from Terminal.app. It aborts unless every check passes:
 
 - CLI version 2.1.293.
-- First-party OAuth sign-in (`authMethod` `oauth`, `apiProvider` `firstParty`).
+- First-party Claude subscription sign-in (`authMethod` `claude.ai`, `apiProvider` `firstParty`). After the operator signed in, `auth status` reported subscription type `pro`.
 - Packet digest and all 31 file hashes, with no extra file and no writable path.
 - An empty outbox with mode 0700.
 - No earlier session for the packet directory.
@@ -64,12 +64,13 @@ It then starts the CLI with:
 - `SHELL=/bin/bash`, so the zsh profile is not sourced;
 - auto-memory off (`CLAUDE_CODE_DISABLE_AUTO_MEMORY=1` and `autoMemoryEnabled: false`);
 - `--safe-mode`, `--strict-mcp-config`, `--setting-sources project` and `--settings launch-settings.json`;
+- `--tools Bash,Read,Write,Edit,WebSearch,WebFetch`, a built-in tool allow-list, so no other tool exists in the session;
 - the packet as the working directory and the outbox via `--add-dir`;
 - `--model claude-opus-5-5`, `--effort xhigh` and the pre-assigned `--session-id 76d0bf61-78f7-4b93-a557-7c29f1a2cbe8`.
 
 `launch-settings.json` adds these controls:
 
-- **Denied tools:** sub-agents (`Task`, `Agent`), messaging (`SendMessage`, `ListAgents`), workflows, skills, scheduling and monitoring, notifications, artifact publishing, worktrees and notebook editing.
+- **Denied tools (second layer behind the allow-list):** sub-agents (`Task`, `Agent`), messaging (`SendMessage`, `ListAgents`), remote routines (`RemoteTrigger`, which appears only after sign-in), workflows, skills, scheduling and monitoring, notifications, artifact publishing, worktrees and notebook editing.
 - **Writes:** allowed only in the outbox. Edits are denied in every packet, every repository checkout and every other actor's outbox.
 - **Reads:** denied for repository checkouts, other packets and export records, other actors' outboxes, every home dot-directory (Claude, Codex and shell state), `~/Library` (desktop transcripts) and the coordinator's temporary tree.
 - **Bash:** runs in the macOS sandbox with `failIfUnavailable` and no unsandboxed escape. The sandbox denies reading anything under the home directory except the packet and outbox, denies writes to the packet and has no network.
@@ -81,23 +82,34 @@ Known limits:
 - The `Read` rules are a deny-list. Reads of unlisted paths outside the packet and outbox still need the operator's interactive approval, which is a human control.
 - Web tools can reach the public repository. The actor is instructed not to inspect other agents' material, and the repository currently holds no proposal or challenge text.
 - The role transcript is stored under `~/.claude/projects/`. The coordinator can technically read it and records here that it will not.
+- `WebFetch` returns page content processed by a Claude helper model: both test runs billed `claude-haiku-5-5` next to `claude-opus-5-5`. Bash has no network, so raw downloads are unavailable. The proposer must record each source's access level and check quoted locators.
+- Claude Code tries to create `.claude/.cc-writes`, a staging folder for atomic writes, in its working directory. The packet directories are read-only, so this fails harmlessly and outbox writes still succeed (verified in run 2). When the CLI asks for a permission, the operator should choose the one-time "Yes"; "don't ask again" would try to save project settings into the read-only packet.
 
-`isolation_smoke.py` checks these controls with a synthetic fixture. The two deny rules that cover the coordinator's own temporary tree are dropped in the fixture because the fixture lives there; the same rule form is exercised by the other path rules.
+## Isolation test results
+
+`isolation_smoke.py` runs one headless session of the pinned CLI on a synthetic fixture with no project content. It records pass/fail flags only, never file contents. The two deny rules that cover the coordinator's own temporary tree are dropped in the fixture because the fixture lives there; the same rule form is exercised by the other path rules.
+
+| Run | Configuration | Result |
+|---|---|---|
+| 1 (`isolation-smoke-run1-writable.json`) | Earlier settings, no `--tools`, writable fixture packet | All 20 step checks passed. Deny rules blocked reads of the repository, other packets, export records, `~/.claude`, `~/Library` and the canary. Bash was sandboxed with no home access, no network and no `ANTHROPIC_*` variables. Writes landed only in the outbox, and `WebFetch` worked. The run also exposed two defects, both since fixed: the CLI itself created `.claude/.cc-writes` in the writable packet, and the signed-in session exposed `RemoteTrigger`. |
+| 2 (`isolation-smoke-run2-readonly.json`) | Final settings, `--tools` allow-list, read-only fixture packet as in the real launch | All 20 step checks and all 12 environment checks passed. The session exposed exactly the six allowed tools, ran `claude-opus-5-5` with no API key source, loaded no MCP server or third-party plugin, kept auto-memory off and left the packet unmodified. |
+
+A follow-up probe loaded `launch-settings.json` from its repository path and confirmed that the sandbox engaged: a Bash read of `~/.claude` was denied. The CLI's own settings load is therefore not blocked by the role's `Read` rules. Test timestamps come from the host clock, which is 15 h slow.
 
 ## Budget
 
 This stage requests 0 CPU-hours, 0 GPU-hours and USD 0 of API spend from the shared 8 CPU-hour cap; it covers literature and design work only. Agent usage comes from the existing subscription, with no automatic retries. Any experiment needs an accepted topic, the signed task list and a separate allocation record.
 
-## Blocking prerequisites before launch
+## Prerequisites before launch
 
 1. The operator installs the pinned CLI into its own prefix: `npm install --prefix ~/.local/claude-code-2.1.293 @anthropic-ai/claude-code@2.1.293`. This downloads about 236 MB, mostly the native macOS arm64 binary, from the npm registry. Done on 2026-10-12. The operator's npm `allowScripts` policy blocked the package's postinstall step, which only hard-links the native binary over a placeholder. The launcher therefore executes the native binary directly from `@anthropic-ai/claude-code-darwin-arm64` and requires its SHA-256 `4e21122a227857da1178aca3299700c1fd7f2b77c93f12e73c2c76db796a105e`. The binary is signed by Developer ID Application: Anthropic PBC (Q6L2SF6YDW), and `codesign --verify --strict` passes. No npm policy was changed.
-2. The operator signs in from Terminal.app with `bash launch.sh --login`, choosing the Claude subscription and never the Console option. Correct the host clock first if sign-in fails. The sign-in is stored in the shared Claude Code configuration. Sessions that export their own `ANTHROPIC_AUTH_TOKEN` (the DeepSeek routing) should keep using that token; the operator should confirm afterwards that DeepSeek sessions still report their DeepSeek model.
-3. The coordinator runs `python3 -I isolation_smoke.py` and commits `isolation-smoke.json`. Any failed check blocks the launch.
-4. `M0nitor-EDA` confirms the final head with `CONFIRM <sha>` and the PR is merged.
+2. The operator signs in from Terminal.app with `bash launch.sh --login`, choosing the Claude subscription and never the Console option. Correct the host clock first if sign-in fails. The sign-in is stored in the shared Claude Code configuration. Sessions that export their own `ANTHROPIC_AUTH_TOKEN` (the DeepSeek routing) should keep using that token; the operator should confirm afterwards that DeepSeek sessions still report their DeepSeek model. Done on 2026-10-12: `auth status` reports `claude.ai`, `firstParty`, subscription `pro`.
+3. The coordinator runs `python3 -I isolation_smoke.py` against the final configuration. Done: run 2 passed every check (see above).
+4. Pending: `M0nitor-EDA` confirms the final head with `CONFIRM <sha>` and the PR is merged.
 
 ## Launch sequence
 
-1. In Terminal.app, run `bash launch.sh --check`, then `bash launch.sh`, and accept the folder-trust prompt for the packet directory.
+1. After the merge, update the main checkout with `git pull`. From it, in Terminal.app, run `bash runs/CLD-P05-LAUNCH-0001/launch.sh --check` and then `bash runs/CLD-P05-LAUNCH-0001/launch.sh`, and accept the folder-trust prompt for the packet directory. The launcher prints the commit it ran from; record that commit with the session registration.
 2. Send the onboarding prompt verbatim. The session writes `readiness.json` and `first-pass-plan.md` to its outbox and stops; no web survey happens in this turn.
 3. The coordinator records the observed model and the session in `config/roles.json` and `config/agents-claude.json` through a PR.
 4. Send the research prompt verbatim. Output returns only through the outbox, and the coordinator transports it by PR without editing scientific content.

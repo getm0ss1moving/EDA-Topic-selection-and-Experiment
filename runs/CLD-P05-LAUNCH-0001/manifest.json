@@ -4,33 +4,36 @@
   "role": "coordinator",
   "platform": "Claude",
   "stage": "launch_readiness",
-  "status": "awaiting_operator_cli_login",
+  "status": "ready_for_independent_review",
   "input_commit": "7c9771196db41fab1593ceead9ebb93d935a3508",
   "packet_sha256": "ff20816f623585d4bf7ba7b13d79db58aab90a2e947cd05c719cd93f3574602d",
   "model": "claude-opus-5-5",
   "host": "Claude desktop app 2.31226.0 (Claude Code 2.1.293), macOS arm64",
   "operator": "getm0ss1moving",
   "started_at_utc": "2026-10-12T12:23:50Z",
-  "completed_at_utc": null,
-  "clock_note": "The host clock runs 54000 s behind NTP (sntp time.apple.com), GitHub and Anthropic server Date headers. Timestamps in this manifest are corrected by that offset; git commit dates written on this host are not.",
+  "completed_at_utc": "2026-10-12T17:35:37Z",
+  "clock_note": "The host clock runs 54000 s behind NTP (sntp time.apple.com), GitHub and Anthropic server Date headers. Timestamps in this manifest are corrected by that offset; git commit dates and the isolation test reports use the uncorrected host clock.",
   "output_paths": [
     "runs/CLD-P05-LAUNCH-0001/manifest.json",
     "runs/CLD-P05-LAUNCH-0001/readiness.md",
     "runs/CLD-P05-LAUNCH-0001/launch-settings.json",
     "runs/CLD-P05-LAUNCH-0001/launch.sh",
     "runs/CLD-P05-LAUNCH-0001/isolation_smoke.py",
+    "runs/CLD-P05-LAUNCH-0001/isolation-smoke-run1-writable.json",
+    "runs/CLD-P05-LAUNCH-0001/isolation-smoke-run2-readonly.json",
     "config/agents-claude.json"
   ],
   "source_ids": [],
   "sources_consulted": [
     "GitHub REST API: pull requests #1-#7, reviews on #6 and #7, main branch protection, workflow runs on main",
     "Bundled Claude API skill model table (cached 2026-10-06) for Claude model IDs, tiers and list prices",
-    "npm registry metadata for @anthropic-ai/claude-code (dist-tags; version 2.1.293)",
-    "Local Claude Code 2.1.241 and 2.1.293 help text and settings schema strings"
+    "npm registry metadata for @anthropic-ai/claude-code and @anthropic-ai/claude-code-darwin-arm64 version 2.1.293",
+    "Local Claude Code 2.1.241 and 2.1.293 help text, settings schema strings and tool descriptions (.cc-writes, RemoteTrigger)",
+    "sntp time.apple.com and GitHub/Anthropic HTTP Date headers for the host clock offset"
   ],
   "contamination_events": [
     "None. No role session was created and no scientific input was released.",
-    "Two coordinator probes ran headless in an empty scratch directory with no project content; neither reached a model."
+    "Coordinator test sessions, all on scratch fixtures with no project content: two pre-login probes (neither reached a model), two synthetic isolation runs (claude-opus-5-5, xhigh) and one settings-load probe (claude-haiku-5-5, low). Each started with a clean environment, so none inherited the desktop messaging socket."
   ],
   "independence_attestation": "Coordinator readiness record only. It authors no scientific content and approves nothing. The coordinator did not read other actors' outboxes, transcripts or private notes; it listed directory names only to build deny rules.",
   "actor": {
@@ -46,14 +49,18 @@
     "model_requested": "claude-opus-5-5",
     "effort_requested": "xhigh",
     "model_observed": null,
+    "helper_model_observed_in_tests": "claude-haiku-5-5 (billed for internal helper work, such as WebFetch page processing, in both isolation runs)",
     "session_id_planned": "76d0bf61-78f7-4b93-a557-7c29f1a2cbe8",
     "session_state": "not_created",
+    "auth_observed": {"authMethod": "claude.ai", "apiProvider": "firstParty", "subscriptionType": "pro"},
     "cli_pinned": "@anthropic-ai/claude-code@2.1.293",
     "cli_path": "~/.local/claude-code-2.1.293/node_modules/@anthropic-ai/claude-code-darwin-arm64/claude (separate prefix; the global CLI is unchanged)",
     "cli_sha256": "4e21122a227857da1178aca3299700c1fd7f2b77c93f12e73c2c76db796a105e",
     "cli_signature": "Developer ID Application: Anthropic PBC (Q6L2SF6YDW); codesign --verify --strict passed",
+    "tools_allowlist": "Bash,Read,Write,Edit,WebSearch,WebFetch",
     "launcher": "runs/CLD-P05-LAUNCH-0001/launch.sh",
-    "settings": "runs/CLD-P05-LAUNCH-0001/launch-settings.json"
+    "settings": "runs/CLD-P05-LAUNCH-0001/launch-settings.json",
+    "settings_sha256": "f5622a13e7275540a87bfd12baa7972a2a38545103659faf14b3460645ee16de"
   },
   "host_model_catalog": {
     "observed_on": "Claude desktop host model list exposed to the coordinator session",
@@ -70,18 +77,30 @@
     "cpu_hours_requested": 0,
     "gpu_hours_requested": 0,
     "api_usd_requested": 0,
-    "agent_usage": "Existing Claude subscription only; no automatic retries."
+    "agent_usage": "Existing Claude subscription (Pro) only; no automatic retries."
   },
   "isolation_smoke": {
-    "state": "pending_cli_login",
+    "state": "passed",
     "script": "runs/CLD-P05-LAUNCH-0001/isolation_smoke.py",
-    "result_path": null
+    "runs": [
+      {
+        "result": "runs/CLD-P05-LAUNCH-0001/isolation-smoke-run1-writable.json",
+        "configuration": "earlier settings (sha256 66a96777fba5054dbd1963c7928a828b585c2a1c10bc08cb9df1ff9661f07dd0), no --tools allow-list, writable fixture packet",
+        "outcome": "All 20 step checks passed. Two defects found and fixed: the CLI created .claude/.cc-writes in the writable packet, and the signed-in session exposed RemoteTrigger."
+      },
+      {
+        "result": "runs/CLD-P05-LAUNCH-0001/isolation-smoke-run2-readonly.json",
+        "configuration": "final settings (sha256 f5622a13e7275540a87bfd12baa7972a2a38545103659faf14b3460645ee16de), --tools allow-list, read-only fixture packet",
+        "outcome": "All 20 step checks and all 12 environment checks passed."
+      }
+    ],
+    "settings_load_probe": "launch-settings.json loaded from its repository path; a Bash read of ~/.claude was denied by the sandbox."
   },
-  "blocking_prerequisites": [
+  "prerequisites": [
     "Done: operator installed @anthropic-ai/claude-code@2.1.293 into ~/.local/claude-code-2.1.293 (postinstall blocked by npm allowScripts; the launcher runs the signed native binary directly).",
-    "Operator signs the CLI in with the Claude subscription via launch.sh --login.",
-    "Coordinator runs the synthetic isolation smoke test and commits a passing result.",
-    "Independent exact-head confirmation by M0nitor-EDA and merge."
+    "Done: operator signed the CLI in with the Claude subscription (claude.ai, firstParty, pro).",
+    "Done: synthetic isolation test passed against the final configuration.",
+    "Pending: independent exact-head confirmation by M0nitor-EDA and merge."
   ],
   "experiment_authorization": false
 }
