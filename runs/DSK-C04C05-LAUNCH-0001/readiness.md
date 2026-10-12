@@ -90,6 +90,8 @@ Three findings from testing, recorded rather than hidden:
 
 Run 2-3 verified, among others: exactly the six allowed tools; no MCP server; no third-party plugin; auto-memory off; read-only packet unmodified; outbox writes landed; Bash sandbox denied reads of the repository, other packets, `~/.claude`, `~/Library` and the sibling canary, denied network, denied writes to the packet, and could not read the Keychain credential; `WebFetch` and `WebSearch` both succeeded on this route; the session model was exactly the pinned `deepseek-v4-flash[1m]`, every billed model was DeepSeek, and no `claude-*` model was billed. The static checks confirm the sibling challenger's and the proposer's packet paths are covered by deny rules. Smoke report timestamps come from the host clock (see below).
 
+The launcher's post-freeze path was additionally exercised against a scratch copy with a synthetic, correctly hashed packet fixture (no real packet, no session): with the packet fields filled it reached `All preconditions hold. Nothing was launched.` (exit 0), after which a tampered file made it abort with `packet contents do not match PACKET.json` (exit 1), flagging both the hash mismatch and the writable paths. The simulated config and fixture live in private scratch and are not committed.
+
 ## Host clock
 
 The host clock runs 54,000 s (15 h) behind NTP and the API server `Date` headers (verified again today against `api.deepseek.com` and `github.com`). Timestamps in this document and in `manifest.json` are corrected to true UTC; the smoke reports and git commit dates written on this host are not, and must be read with the +15 h correction.

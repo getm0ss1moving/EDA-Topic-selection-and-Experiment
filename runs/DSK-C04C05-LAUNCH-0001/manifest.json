@@ -124,6 +124,7 @@
       }
     ],
     "model_observed_in_smoke": "deepseek-v4-flash[1m], the only billed model in every run",
+    "launcher_path_simulation": "Scratch-only synthetic packet fixture against a copy of launch.sh: ready path reached 'All preconditions hold. Nothing was launched.' (exit 0); after tampering it aborted with the packet mismatch (exit 1). No real packet or session involved.",
     "residual_risks_recorded": [
       "Each headless run creates its own child session with a live messaging socket and exposes that session's token to its Bash children; env -i excludes desktop-socket inheritance and messaging tools are denied, but the socket path itself remains reachable only for the session's own endpoint.",
       "Read rules are a deny-list; unlisted reads outside the packet and outbox still need interactive operator approval."
