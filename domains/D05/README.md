@@ -6,6 +6,6 @@ Engineering metrics: WNS/TNS, signoff fidelity, corner robustness, extraction er
 
 Boundary: Distinguish training targets, surrogates and signoff oracles. Physical ECO spans D04 but this team owns signoff validity.
 
-Proposer: `Codex-P05-TIMING`. Challenger: `Codex-C05-TIMING`. Shared verifier: `Codex-V02-PHYSICAL`.
+Active assignment for EDA-0002 under `config/launch-release.json`: proposer `Claude-P05-TIMING`, challenger `DeepSeek-C05-TIMING`, verifier `Codex-V02-PHYSICAL`. The `platform_roles` entries in `brief.json` are identity namespaces for each platform's full roster, not active assignments.
 
 This is a survey territory, not an accepted topic. The first task initializes roles and search plans. Scientific outputs must later enter the reviewed candidate workflow.

@@ -10,11 +10,17 @@
     "AI for EDA",
     "Agentic EDA where justified"
   ],
-  "proposer": "Codex-P05-TIMING",
-  "challenger": "Codex-C05-TIMING",
+  "proposer": "Claude-P05-TIMING",
+  "challenger": "DeepSeek-C05-TIMING",
   "verifier": "Codex-V02-PHYSICAL",
+  "release_binding": {
+    "source": "config/launch-release.json",
+    "release_id": "PHYSICAL-ROLE-CREATION-0001",
+    "topic": "EDA-0002",
+    "note": "The top-level proposer, challenger and verifier fields follow the release. The platform_roles entries below are identity namespaces for each platform's full roster, not active assignments."
+  },
   "stage": "pilot_ready_pending_role_capacity",
-  "research_budget": "Active scope. Use config/research-brief.json and docs/PHYSICAL-PILOT.md. At most one hypothesis per domain in the next round; no paid API or GPU budget. Existing frozen packets remain historical and must be replaced before research.",
+  "research_budget": "Active scope. Use config/research-brief.json and docs/PHYSICAL-PILOT.md. At most one hypothesis per domain in the next round. No GPU budget, and no paid API except the prepaid DeepSeek allowance recorded in config/research-brief.json for the two released DeepSeek challengers. Existing frozen packets remain historical and must be replaced before research.",
   "first_outputs": [
     "readiness.json",
     "first-pass-plan.md"

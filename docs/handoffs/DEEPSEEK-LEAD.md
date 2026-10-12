@@ -34,6 +34,6 @@ Read the new research brief: resources are no longer wholly unspecified, but the
 
 ## Next delivery
 
-Create only `DeepSeek-C04-PHYSICAL` and `DeepSeek-C05-TIMING`, after the corresponding proposal is frozen. Record the observed DeepSeek model ID, session state, packet hashes and isolation controls in an English run record and PR. These sessions are challengers: they must independently search prior art, estimate headroom before seeing the proposer forecast, and issue evidence-backed objections. Do not create DeepSeek proposers or verifiers, promote a topic, self-approve, or start a broad actor wave.
+Create only `DeepSeek-C04-PHYSICAL` and `DeepSeek-C05-TIMING`, after the corresponding proposal is frozen. Before creating either session, work through [the challenger launch checklist](DEEPSEEK-CHALLENGER-CHECKLIST.md). Record the observed DeepSeek model ID, session state, packet hashes and isolation controls in an English run record and PR. These sessions are challengers: they must independently search prior art, estimate headroom before seeing the proposer forecast, and issue evidence-backed objections. Do not create DeepSeek proposers or verifiers, promote a topic, self-approve, or start a broad actor wave.
 
 Coordinate across platforms only using released repository artifacts. Do not import Codex/Claude private conversations, imitate their hypotheses to manufacture agreement, or treat three platform votes as evidence. A cross-platform review still needs a new, independent verifier session with an explicit packet and claim-level source checks.

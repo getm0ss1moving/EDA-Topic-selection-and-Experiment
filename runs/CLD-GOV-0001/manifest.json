@@ -1,0 +1,49 @@
+{
+  "run_id": "CLD-GOV-0001",
+  "session_id": "9273c928-a2eb-46ba-890d-9dedad60ac78",
+  "role": "coordinator",
+  "platform": "Claude",
+  "stage": "governance_update",
+  "input_commit": "97636f3aa0f34ba70aaf9185853e067632672c05",
+  "packet_sha256": null,
+  "model": "claude-opus-5-5",
+  "operator": "getm0ss1moving",
+  "started_at_utc": "2026-10-13T07:05:00Z",
+  "completed_at_utc": null,
+  "clock_note": "UTC corrected for the host clock offset of +54000 s; git commit dates are not corrected.",
+  "human_decisions_recorded": [
+    {
+      "decided_by": "getm0ss1moving (human owner)",
+      "decided_on": "2026-10-13",
+      "decision": "The DeepSeek platform lead, not the Claude coordinator, prepares and coordinates DeepSeek-C04-PHYSICAL and DeepSeek-C05-TIMING.",
+      "nature": "Coordination assignment"
+    },
+    {
+      "decided_by": "getm0ss1moving (human owner)",
+      "decided_on": "2026-10-13",
+      "decision": "The two DeepSeek challengers may spend only the existing prepaid DeepSeek API balance; no top-ups.",
+      "nature": "Resource decision",
+      "recorded_in": "config/research-brief.json compute.deepseek_api_allowance"
+    }
+  ],
+  "output_paths": [
+    "runs/CLD-GOV-0001/manifest.json",
+    "config/research-brief.json",
+    "domains/D04/brief.json",
+    "domains/D04/README.md",
+    "domains/D05/brief.json",
+    "domains/D05/README.md",
+    "docs/handoffs/DEEPSEEK-CHALLENGER-CHECKLIST.md",
+    "docs/handoffs/DEEPSEEK-LEAD.md"
+  ],
+  "source_ids": [],
+  "motivation": [
+    "Claude-P05-TIMING readiness question DQ-01: the D04/D05 briefs named the historical Codex pairs instead of the release binding.",
+    "config/research-brief.json allowed no paid API, which conflicted with any DeepSeek challenger run.",
+    "The Claude launch produced host findings that the DeepSeek lead needs before creating challenger sessions."
+  ],
+  "packet_effect": "domains/D04, domains/D05 and config/research-brief.json are exported in actor packets. Already-exported packets stay frozen at d437c2f; packets exported after this merge carry the corrected files. The running Claude-P05-TIMING session is unaffected.",
+  "contamination_events": [],
+  "independence_attestation": "Governance record only. No scientific content; config/agents-deepseek.json was intentionally left to the DeepSeek lead.",
+  "experiment_authorization": false
+}
