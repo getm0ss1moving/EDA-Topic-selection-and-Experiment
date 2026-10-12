@@ -27,4 +27,13 @@ Proposer/challenger/verifier each author their own output commits or submit an o
 
 ## Update and invalidation
 
-Every content edit invalidates the dossier's previous content digest; every new PR head invalidates its review confirmation. Changes to scientific criteria, check scripts, harnesses or workflows are governance PRs and need independent review. Editing an accepted topic requires rechecking the affected evidence and experiments. New evidence may revoke acceptance through a PR, retaining the old decision in history.
+Every content edit invalidates the dossier's previous content digest; every new PR head invalidates its review confirmation. Changes to scientific criteria, check scripts, harnesses or workflows remain governance PRs with automated checks; human approval is not required for these intermediate updates. Editing an accepted topic requires rechecking the affected evidence and experiments. New evidence may revoke acceptance through a PR, retaining the old decision in history.
+
+
+## Human review scope (owner decision, 2026-10-13)
+
+Human confirmation is required only for final topic and experiment reports. Final topic dossiers and their revisions live under `topics/`; standalone final reports live under `reports/final/`. Any addition, modification, deletion or rename touching these paths requires an approving `CONFIRM <full-head-sha>` review by a registered human reviewer distinct from the PR author. README scaffolding is excluded. A draft report outside these paths is not an approved final deliverable.
+
+Proposer/challenger exchanges, evidence, responses, AI verification records, candidate drafts, project JSON, tools, harnesses and governance updates require PRs and passing automated checks, but no human approval. The coordinator may merge these intermediate PRs after checks pass, without self-approving or claiming independent scientific verification. AI verifiers must still adjudicate evidence before objections become established findings. Proposer/challenger agreement on the exact experiment task list and AI verification remain prerequisites for promotion and experimental execution; human final-topic approval completes the promotion gate. Final experiment reports require human approval again.
+
+Branch protection keeps both required status checks but sets its unconditional approving-review count to zero. The `independent-verifier` check classifies changed paths and enforces human approval only for final deliverables. Human resource decisions and unresolved factual questions are not inferred from this exemption.

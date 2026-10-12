@@ -19,6 +19,6 @@ Governance / proposal / challenge / response / verification / promotion / result
 - [ ] Critical sources checked in versioned files.
 - [ ] Objections adjudicated; unsupported objections do not block.
 - [ ] Correctness, feasibility and meaningful-effect gates checked.
-- [ ] Registered independent verifier will confirm the final head SHA.
+- [ ] If this changes final deliverables under `topics/` or `reports/final/`, the registered human reviewer will confirm the final head SHA. Intermediate PRs require no human approval.
 
 Scientific arguments belong in files. Approval review body: `CONFIRM <full-head-sha>`.
