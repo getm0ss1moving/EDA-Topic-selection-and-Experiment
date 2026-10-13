@@ -231,6 +231,25 @@ class LaunchReleaseTests(unittest.TestCase):
         self.path.write_text(json.dumps(self.release))
     def test_valid_release(self):
         self.assertEqual(p.validate_launch_release(self.root),[])
+    def test_challenger_succession_requires_owner_record(self):
+        self.release['challenger_handoffs']={'EDA-0002':{'from':'DeepSeek-C05-TIMING',
+            'to':'Codex-C05-TIMING-R2','owner_authorized':False,'reason':'fixture'}}
+        self.path.write_text(json.dumps(self.release))
+        self.assertTrue(any('succession' in e for e in p.validate_launch_release(self.root)))
+    def test_challenger_succession_accepts_registered_successor(self):
+        registry_path=self.root/'config/agents.json'
+        registry=json.loads(registry_path.read_text())
+        registry['actors'].append({'actor_id':'Codex-C05-TIMING-R2','role':'challenger',
+            'domain_ids':['D05'],'status':'ready_for_fresh_session','active_scope':True,
+            'fresh_session_required':True,'model_requested':'gpt-6-astra','reasoning_requested':'low'})
+        registry_path.write_text(json.dumps(registry))
+        self.release['challenger_handoffs']={'EDA-0002':{'from':'DeepSeek-C05-TIMING',
+            'to':'Codex-C05-TIMING-R2','owner_authorized':True,'reason':'fixture'}}
+        self.release['released_actors']=['Codex-C05-TIMING-R2' if a=='DeepSeek-C05-TIMING' else a
+                                         for a in self.release['released_actors']]
+        self.release['assignments']['EDA-0002']['challenger']='Codex-C05-TIMING-R2'
+        self.path.write_text(json.dumps(self.release))
+        self.assertEqual(p.validate_launch_release(self.root),[])
     def test_historical_session_reuse_is_rejected(self):
         self.release['old_sessions_are_inputs']=True
         self.path.write_text(json.dumps(self.release))

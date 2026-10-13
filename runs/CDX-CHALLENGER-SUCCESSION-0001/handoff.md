@@ -1,0 +1,13 @@
+# Challenger succession
+
+Owner instruction: replace the DeepSeek challenger with a fresh GPT challenger using `gpt-6-astra`, effort `low`. Start exactly one actor: `Codex-C05-TIMING-R2` / `CDX-Skeptic-TIMING`, EDA-0002 / D05. D04 has no frozen submitted proposal and remains deferred; this record does not launch its challenger.
+
+This actor succeeds the responsibility, not the DeepSeek identity, transcript, memory, model label, verdict or signature. The coordinator is not the scientific challenger. The existing D05 verifier must be a separate clean session and cannot be the successor or coordinator acting as a verifier. Prior historical actors remain registered as history.
+
+Retained controls: English artifacts; frozen inputs; role-only harness; no other roles' scratch, conversations, memories or messages; no credentials; no direct GitHub writes; original-source locators; independent estimates before proposer forecasts; no experiment execution; verifier adjudication before any objection blocks the proposer; joint exact-task-list consent and evidence-backed abandonment.
+
+Adapted controls: GPT subscription instead of prepaid DeepSeek API; no DeepSeek routing/keychain or Claude CLI model aliases. Host tool access is not equivalent to Claude's tested OS sandbox. This Codex subagent has policy-level file isolation and a read-only packet, but shares the coordinator's host permissions; no hard-sandbox claim is made. It must disclose ambient host context and stop on unintended scientific exposure. No automatic retries or added agents. Low effort is the explicit owner choice; hard questions remain unresolved rather than silently changing model/effort.
+
+Initial release is a policy-only onboarding and independent D05 landscape search: no proposal, forecast or predecessor challenge is supplied. This avoids carrying forecast-bearing prose into a claimed blind assessment. Output readiness, independent search/estimate and missing-source questions into its own outbox. Only after that output is frozen may the coordinator release a screened dossier. The latest Claude P3-P5 revision remains awaiting the owner's freeze; do not treat old R0 as the final revised dossier. No final verdict or topic-specific objection may be claimed before the assigned dossier is released.
+
+Scope of permitted public research: STA, multi-corner scenario screening, certified bounds and exact refinement. Public primary papers, code and contest records only. Do not access this project's public repository through the web to retrieve withheld files. All findings remain hypotheses or supported claims pending independent verifier review.
