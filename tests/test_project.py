@@ -274,6 +274,18 @@ class AcceptanceTests(DossierTests):
                     source_checks=[{'source_id':'SRC-001','locator':'Section 1','verdict':'verified'}],
                     dossier_digest=p.digest(self.d))
         return {'p':{'role':'proposer'},'c':{'role':'challenger'},'v':{'role':'verifier'}}
+    def test_foreign_role_consent_rejected(self):
+        sessions=self.make_valid()
+        sessions['other']={'role':'proposer'}
+        consensus=json.loads((self.d/'experiment-consensus.json').read_text())
+        consensus['consents']['proposer']['session_id']='other'
+        self.update('experiment-consensus.json',**consensus)
+        self.update('verification.json',dossier_digest=p.digest(self.d))
+        self.assertTrue(any('assigned dossier session' in e for e in p.validate_topic(self.d,'topics',sessions)))
+    def test_other_topic_session_rejected(self):
+        sessions=self.make_valid()
+        sessions['c']['topic']='EDA-9999'
+        self.assertTrue(any('different topic' in e for e in p.validate_topic(self.d,'topics',sessions)))
     def test_valid_then_tampered(self):
         sessions=self.make_valid()
         self.assertEqual(p.validate_topic(self.d,'topics',sessions),[])
