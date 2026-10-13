@@ -26,3 +26,9 @@ Run `python3 scripts/project.py packet ROLE EDA-0001 --ref FULL_SHA --out /absol
 Stop the affected role, log the exposed artifact/session IDs (not private reasoning), discard its independence claim, start a clean replacement session and rerun the affected review. The human records an exception if continuing; an exception cannot be called independent confirmation.
 
 Governance packets include the three tracked dossier-area README files so offline structural validation has the same empty-area scaffolding as a clean checkout. To release additional public audit evidence, append `--evidence-run RUN_ID` (repeatable, governance only); this exports only named committed run directories and still excludes other dossiers/runs. Check manifests and review the chosen run contents before export.
+
+## Forecast masking and policy amendments
+
+Filename filtering does not guarantee forecast blindness. Before issuing an initial challenger packet, the coordinator must inspect proposal, plan, task list, annotations and manifests for forecast values or conclusions; release a separately hashed redacted packet with a redaction log. Preserve engineering requirements and preregistered success thresholds, but withhold the proposer's predicted outcomes. Do not claim a blind assessment if this semantic screen was not performed. On accidental exposure record the affected files, withdraw the blindness claim and follow contamination handling.
+
+Policy changes do not alter already frozen packets. Release a hashed policy amendment with a run ID and changed-rule list; the actor records receipt and hashes before continuing. Never silently edit the packet or assume a merged harness has changed a running session. Pause affected scientific actions while controls are incomplete; at most one synthetic role test may run. Resume only the authorized scope after the applicable checks pass.

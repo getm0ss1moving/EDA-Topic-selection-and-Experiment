@@ -28,8 +28,8 @@ jobs:
             const {data: pr} = await github.rest.pulls.get({owner, repo, pull_number: number});
             const files = await github.paginate(github.rest.pulls.listFiles, {owner, repo, pull_number: number});
             // Final deliverables live under topics/ or reports/final/. Renames/deletions count.
-            const finalPath = p => /^(topics|reports\/final)\//.test(p || '') && !p.endsWith('/README.md');
-            const requiresHuman = files.some(f => finalPath(f.filename) || finalPath(f.previous_filename));
+            const finalPath = p => /^(topics|reports\/final)\//.test(p || '') && !['topics/README.md', 'reports/final/README.md'].includes(p);
+            const requiresHuman = pr.changed_files > files.length || files.some(f => finalPath(f.filename) || finalPath(f.previous_filename));
             const trusted = new Set((process.env.VERIFIER_LOGINS || '').split(',').map(x => x.trim().toLowerCase()).filter(Boolean));
             const reviews = await github.paginate(github.rest.pulls.listReviews, {owner, repo, pull_number: number});
             const latest = new Map();

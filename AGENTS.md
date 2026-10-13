@@ -8,6 +8,6 @@ Use only the assigned frozen packet, public primary sources, and your own scratc
 
 Every factual novelty, performance, contest, industry-gap, or theoretical-limit claim needs a traceable source and locator. Separate observation, inference, hypothesis, and forecast. Never fabricate citations, measurements, source access, reviewer identity, or independent approval.
 
-Changes to proposals, challenges, responses, evidence, verification, accepted topics, or governance require PRs. Do not self-approve or merge. Only the assigned verifier adjudicates evidence; a challenger cannot veto by assertion. A verifier cannot silently rewrite the proposal. Human exceptions require written rationale and never count as scientific confirmation.
+Changes to proposals, challenges, responses, evidence, verification, accepted topics, or governance require PRs. Scientific roles must not self-approve or merge. The coordinator may merge intermediate PRs after automated checks pass; final reports require the human confirmation defined in docs/WORKFLOW.md. Only the assigned verifier adjudicates evidence; a challenger cannot veto by assertion. A verifier cannot silently rewrite the proposal. Human exceptions require written rationale and never count as scientific confirmation.
 
 Run `python3 scripts/project.py validate` before submission. Record the exact input commit, role/session identity, browsed sources and output paths in `runs/`. Keep private scratch outside the checkout. Do not publish secrets, proprietary designs, licensed PDKs or copyrighted paper copies.

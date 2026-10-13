@@ -123,6 +123,8 @@ def validate_topic(path, area, sessions):
             require(all(people) and len(set(people)) == 3, 'three distinct sessions required')
             for role, sid in zip(['proposer', 'challenger', 'verifier'], people):
                 require(sid in sessions and sessions[sid].get('role') == role, f'{role} session not registered')
+                require(sessions.get(sid, {}).get('topic', d['id']) == d['id'],
+                        f'{role} session is assigned to a different topic')
             require(v.get('decision') == 'accept_for_pilot', 'no independent acceptance decision')
             require(v.get('verifier_session') == d.get('verifier_session'), 'verifier identity mismatch')
             require(v.get('dossier_digest') == digest(path), 'stale dossier digest')
@@ -166,6 +168,8 @@ def validate_topic(path, area, sessions):
                         f'{role} experiment consent binds a stale task list')
                 require(sid in sessions and sessions[sid].get('role') == role,
                         f'{role} experiment-consensus session not registered')
+                require(sid == d.get(role + '_session'),
+                        f'{role} consent must belong to the assigned dossier session')
             require(len(set(consensus_people)) == 2,
                     'experiment consensus requires distinct proposer and challenger')
             require(len(set(consensus_revisions)) == 1,
@@ -227,6 +231,8 @@ def validate_topic(path, area, sessions):
                 signed_digests.append(consent.get('signed_dossier_digest'))
                 require(sid in sessions and sessions[sid].get('role') == role,
                         f'{role} abandonment session not registered')
+                require(sid == d.get(role + '_session'),
+                        f'{role} abandonment consent must belong to the assigned dossier session')
             require(len(set(people)) == 2, 'abandonment requires distinct proposer and challenger')
             require(len(set(signed_revisions)) == 1,
                     'proposer and challenger must sign the same frozen revision')
