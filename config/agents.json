@@ -553,7 +553,8 @@
       "active_scope": true,
       "fresh_session_required": true,
       "predecessor": "DeepSeek-C05-TIMING",
-      "session_state": "awaiting_fresh_creation"
+      "session_state": "independent_landscape_search; dossier not released",
+      "session_id": "/root/codex_c05_timing_r2"
     }
   ],
   "active_actor_count": 0,

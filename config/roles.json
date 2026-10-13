@@ -22,6 +22,22 @@
       "started_at_utc": "2026-10-12T18:07:15Z",
       "state": "first proposal complete; paused pending runner governance and P3-P5 revision",
       "independence_attestation": "Fresh Claude Code 2.1.293 session started by the operator from Terminal.app through runs/CLD-P05-LAUNCH-0001/launch.sh: clean environment, --safe-mode, tool allow-list, sandboxed Bash and deny rules. The operator attests that the session received only the setup prompt after a /model selection. The role's readiness.json reports no contamination and discloses its unlisted context. All actors share one macOS account, so this is operator and self attestation, not OS-enforced independence."
+    },
+    {
+      "session_id": "/root/codex_c05_timing_r2",
+      "role": "challenger",
+      "actor_id": "Codex-C05-TIMING-R2",
+      "platform": "OpenAI Codex",
+      "topic": "EDA-0002",
+      "model": "gpt-6-astra",
+      "effort_requested": "low",
+      "model_basis": "Explicit spawn_agent model and effort request; role self-report pending.",
+      "operator": "getm0ss1moving",
+      "github_login": "getm0ss1moving (transport only)",
+      "input_commit": "27977cb365dab9b3df5193fcd0c2e23804f840cf",
+      "packet_sha256": "5864539a0c2b0378e2fec6a8ea826ebbb330ed2ec3854fdbbb4b791f0d25cdab",
+      "independence_attestation": "Fresh fork_turns=none subagent; policy-only packet and public sources; no predecessor memory/signatures. Shared host, policy isolation only.",
+      "state": "independent_landscape_search; dossier not released"
     }
   ],
   "required_session_fields": [
