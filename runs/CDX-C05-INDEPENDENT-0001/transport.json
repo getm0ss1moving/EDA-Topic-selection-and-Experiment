@@ -1,0 +1,9 @@
+{
+  "role": "coordinator",
+  "source_actor": "Codex-C05-TIMING-R2",
+  "source_session": "/root/codex_c05_timing_r2",
+  "transport": "Byte-identical outputs; no scientific edits or adjudication.",
+  "input_commit": "27977cb365dab9b3df5193fcd0c2e23804f840cf",
+  "output_manifest_sha256": "56e3e2f9f8ec279f6441eee96eb9bd3e6a091dc81d13043e39d0c3fb7c7feecb",
+  "next_gate": "Owner freezes revised proposer dossier; coordinator releases screened input. Initial independent search is incomplete evidence, not novelty verification."
+}

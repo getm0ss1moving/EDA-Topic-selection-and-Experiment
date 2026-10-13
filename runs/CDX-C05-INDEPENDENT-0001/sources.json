@@ -1,0 +1,75 @@
+{
+  "retrieval_note": "Initial retrieval occurred before the continuation; exact original UTC timestamp was not captured. This timestamp records artifact completion and follow-up, not a fabricated initial fetch time.",
+  "sources": [
+    {
+      "id": "S01",
+      "title": "Efficient Block-Based Parameterized Timing Analysis Covering All Potentially Critical Paths",
+      "url": "https://www.eecg.utoronto.ca/~najm/papers/iccad08-khaled.pdf",
+      "source_type": "author-hosted original paper",
+      "publication_date": "2008",
+      "access_level": "full",
+      "locator": "Printed pp. 174\u2013175, sections 2.1, 2.2, 2.2.1 and 2.2.2; equations (2), (5), (6), (9), (10); browser extracted lines 152\u2013319",
+      "supported_claim_ids": [
+        "CLM-001"
+      ],
+      "limitations": "Full PDF accessible; inspected modeling and pruning sections, not all proofs or experiments. Linear parameter model, not an established certificate for arbitrary signoff models.",
+      "retrieved_at_utc": "2026-10-13T17:39:42.064272+00:00"
+    },
+    {
+      "id": "S02",
+      "title": "A Unified Multi-Corner Multi-Mode Static Timing Analysis Engine",
+      "url": "https://scholars.lib.ntu.edu.tw/entities/publication/25bc62e7-f4ee-4d31-a899-8b34f338dfc5",
+      "doi": "10.1109/ASPDAC.2010.5419804",
+      "source_type": "author institution publication record",
+      "publication_date": "2010-01",
+      "access_level": "abstract",
+      "locator": "Abstract, contributions (1)\u2013(3); bibliographic pages 669\u2013674",
+      "supported_claim_ids": [
+        "CLM-002"
+      ],
+      "limitations": "Initial search returned institutional abstract; later page re-open timed out. No theorem, experimental table or full-method inspection.",
+      "retrieved_at_utc": "2026-10-13T17:39:42.064272+00:00"
+    },
+    {
+      "id": "S03",
+      "title": "Efficient Computation of the Exact Worst-Delay Corner",
+      "url": "https://algos.inesc-id.pt/projects/powerplan/IC6.pdf",
+      "source_type": "institution-hosted original paper lead",
+      "publication_date": "unknown",
+      "access_level": "metadata",
+      "locator": "Search-result title and initial PDF response (six pages); substantive section locator unavailable",
+      "supported_claim_ids": [],
+      "limitations": "Initial open exposed page count but no usable method text; follow-up timed out. Excluded from substantive claims.",
+      "retrieved_at_utc": "2026-10-13T17:39:42.064272+00:00"
+    },
+    {
+      "id": "S04",
+      "title": "Static Timing Analysis Acceleration to Attack Process Corner Explosion by Matrix Filling Prediction",
+      "url": "https://doi.org/10.1109/ISEDA62518.2024.10617500",
+      "doi": "10.1109/ISEDA62518.2024.10617500",
+      "source_type": "publisher conference publication record",
+      "publication_date": "2024",
+      "access_level": "metadata",
+      "locator": "IEEE record 10617500 title and truncated abstract shown by search; document sections I\u2013V listed",
+      "supported_claim_ids": [
+        "CLM-003"
+      ],
+      "limitations": "Direct page yielded three lines without substantive method. Title-level lead only; prediction accuracy, certification and exact fallback unknown.",
+      "retrieved_at_utc": "2026-10-13T17:39:42.064272+00:00"
+    },
+    {
+      "id": "S05",
+      "title": "Parallax Static Timing Analyzer \u2014 OpenSTA README",
+      "url": "https://github.com/parallaxsw/OpenSTA",
+      "source_type": "official tool documentation",
+      "publication_date": "unknown",
+      "access_level": "full",
+      "locator": "README: Timing Engine, extracted lines 274\u2013279; formats lines 232\u2013244; licensing lines 284\u2013288",
+      "supported_claim_ids": [
+        "CLM-004"
+      ],
+      "limitations": "Public README only; implementation not inspected or executed. Mutable master, commit not pinned. Does not establish commercial equivalence or numerical correctness for a selected model.",
+      "retrieved_at_utc": "2026-10-13T17:39:42.064272+00:00"
+    }
+  ]
+}

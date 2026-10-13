@@ -37,7 +37,7 @@
       "input_commit": "27977cb365dab9b3df5193fcd0c2e23804f840cf",
       "packet_sha256": "5864539a0c2b0378e2fec6a8ea826ebbb330ed2ec3854fdbbb4b791f0d25cdab",
       "independence_attestation": "Fresh fork_turns=none subagent; policy-only packet and public sources; no predecessor memory/signatures. Shared host, policy isolation only.",
-      "state": "independent_landscape_search; dossier not released"
+      "state": "initial_independent_search_complete; awaiting_frozen_revised_dossier"
     }
   ],
   "required_session_fields": [
