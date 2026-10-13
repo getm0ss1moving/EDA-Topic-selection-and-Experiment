@@ -3,6 +3,7 @@
 #
 # Run from your own Terminal.app, never from inside a Claude desktop session or its terminal tabs:
 #   bash launch.sh --check    verify every precondition and launch nothing
+#   bash launch.sh --check-resume verify resume preconditions and launch nothing
 #   bash launch.sh --login    sign this CLI in with the Claude subscription (clean environment)
 #   bash launch.sh            start the fresh role session with the pre-assigned session ID
 #   bash launch.sh --resume   reopen the same registered session after an interruption
@@ -25,8 +26,9 @@ SESSION_ID="76d0bf61-78f7-4b93-a557-7c29f1a2cbe8"
 PACKET="/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/physical-release-d437c2f66090/Claude-P05-TIMING"
 PACKET_SHA256="ff20816f623585d4bf7ba7b13d79db58aab90a2e947cd05c719cd93f3574602d"
 OUTBOX="/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/physical-release-d437c2f66090/Claude-P05-TIMING"
+RESULTS="/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/physical-release-d437c2f66090/Claude-P05-TIMING/lab-results"
 SETTINGS="$RUN_DIR/launch-settings.json"
-SETTINGS_SHA256="f5622a13e7275540a87bfd12baa7972a2a38545103659faf14b3460645ee16de"
+SETTINGS_SHA256="e628d5f72faa76d06c7922e7d673e8d8e4ee7be2a175fdcf27958715988fc3d8"
 CLEAN_ENV=(HOME="$HOME" USER="$USER" LOGNAME="${LOGNAME:-$USER}" SHELL=/bin/bash
            TERM="${TERM:-xterm-256color}" LANG=en_US.UTF-8 PATH=/usr/bin:/bin:/usr/sbin:/sbin
            CLAUDE_CODE_DISABLE_AUTO_MEMORY=1)
@@ -35,7 +37,7 @@ die() { echo "ABORT: $*" >&2; exit 1; }
 ok() { echo "ok    $*"; }
 
 mode="${1:-launch}"
-case "$mode" in launch|--check|--login|--resume) ;; *) die "unknown mode $mode" ;; esac
+case "$mode" in launch|--check|--check-resume|--login|--resume) ;; *) die "unknown mode $mode" ;; esac
 
 if [ -n "${CLAUDECODE:-}${CLAUDE_CODE_SESSION_ID:-}${CLAUDE_CODE_MESSAGING_SOCKET:-}" ]; then
   die "called from inside a Claude session; open Terminal.app and run this script there"
@@ -79,23 +81,26 @@ ok "packet $PACKET_SHA256: all listed hashes match, no extra files, read-only"
 [ -d "$OUTBOX" ] || die "outbox missing: $OUTBOX"
 [ "$(stat -f '%Lp' "$OUTBOX")" = "700" ] || die "outbox must be mode 700"
 transcripts="$HOME/.claude/projects/$(printf '%s' "$PACKET" | tr '/.' '--')"
-if [ "$mode" = "--resume" ]; then
+if [ "$mode" = "--resume" ] || [ "$mode" = "--check-resume" ]; then
   [ -f "$transcripts/$SESSION_ID.jsonl" ] || die "no existing session $SESSION_ID to resume"
 else
   [ -z "$(ls -A "$OUTBOX")" ] || die "outbox is not empty; a fresh session requires an empty outbox"
   [ ! -e "$transcripts" ] || die "a Claude Code session already exists for this packet directory"
 fi
 ok "outbox $OUTBOX"
+[ -d "$RESULTS" ] || die "read-only lab results folder missing: $RESULTS (initialize the runner first)"
+[ "$(stat -f '%Lp' "$RESULTS")" = "700" ] || die "lab results root must be mode 700"
+ok "read-only lab results $RESULTS"
 
 [ -f "$SETTINGS" ] || die "settings file missing: $SETTINGS"
 [ "$(shasum -a 256 "$SETTINGS" | awk '{print $1}')" = "$SETTINGS_SHA256" ] || \
-  die "launch-settings.json differs from the reviewed and smoke-tested $SETTINGS_SHA256"
-ok "settings $SETTINGS_SHA256 (reviewed and smoke-tested)"
+  die "launch-settings.json differs from the pinned $SETTINGS_SHA256"
+ok "settings $SETTINGS_SHA256 (digest pinned; final smoke is a separate governance gate)"
 echo "info  launch record commit $(git -C "$RUN_DIR" rev-parse HEAD 2>/dev/null || echo unknown)"
 
 flags=(--safe-mode --strict-mcp-config --setting-sources project --settings "$SETTINGS"
-       --tools "$TOOLS" --add-dir "$OUTBOX" --model "$MODEL" --effort "$EFFORT")
-if [ "$mode" = "--check" ]; then
+       --tools "$TOOLS" --add-dir "$OUTBOX" --add-dir "$RESULTS" --model "$MODEL" --effort "$EFFORT")
+if [ "$mode" = "--check" ] || [ "$mode" = "--check-resume" ]; then
   echo "All preconditions hold. Nothing was launched."
   exit 0
 fi

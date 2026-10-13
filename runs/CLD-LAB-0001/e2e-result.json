@@ -1,0 +1,181 @@
+{
+  "actor": "CLD-LAB-SMOKE-20261012182831",
+  "checks": {
+    "core_cap_holds": true,
+    "home_hidden": true,
+    "lab231_core_cap_holds": true,
+    "lab231_network_available": true,
+    "lab234_completed": true,
+    "lab234_network_blocked": true,
+    "normal_file_returned": true,
+    "oversized_not_returned": true,
+    "results_read_only": true,
+    "symlink_not_returned": true,
+    "timeout_kills_job": true
+  },
+  "details": {
+    "lab231": {
+      "cpus_after_escape_attempt": "2-3",
+      "cpus_allowed_list": "2-3",
+      "result": {
+        "actor": "CLD-LAB-SMOKE-20261012182831",
+        "category": "property-check",
+        "core_hours_charged": 0.0028,
+        "cores": 2,
+        "cpus": "2-3",
+        "errors": [],
+        "exit_code": 0,
+        "finished_utc": "2026-10-13T09:28:38Z",
+        "host": "lab231",
+        "id": "REQ-9902",
+        "kept_on_server": [],
+        "load_at_start": "21.41 19.55 20.63",
+        "logs": {
+          "stderr.log": {
+            "bytes": 0,
+            "truncated_to_tail": false
+          },
+          "stdout.log": {
+            "bytes": 0,
+            "truncated_to_tail": false
+          }
+        },
+        "network": true,
+        "purpose": "CLD-LAB-0001 end-to-end isolation test",
+        "request_sha256": {
+          "job.sh": "0214db68400eb4700b94418e63af9213c5631a72fbc87d0d50d10cd31b13ab73"
+        },
+        "returned_files": [
+          {
+            "bytes": 4,
+            "path": "out/cpus-after-escape.txt",
+            "sha256": "e23997b4b84d5687f6af65937f74d0d8558519bcd62f189bc5dd5b04904bbc9d"
+          },
+          {
+            "bytes": 4,
+            "path": "out/cpus.txt",
+            "sha256": "e23997b4b84d5687f6af65937f74d0d8558519bcd62f189bc5dd5b04904bbc9d"
+          },
+          {
+            "bytes": 18,
+            "path": "out/network.txt",
+            "sha256": "ca97c688fe8cac2348b40050dc8002952650197a0061288e3b65bb5d3a52ac4e"
+          }
+        ],
+        "runner": "CLD-LAB-0001",
+        "server_workspace": "/ws inside jobs; files persist across jobs",
+        "started_utc": "2026-10-13T09:28:33Z",
+        "status": "completed",
+        "timed_out": false,
+        "timeout_hours": 0.008333333333333333,
+        "wall_seconds": 5,
+        "workspace_kb_after": 32
+      }
+    },
+    "lab234": {
+      "cpus_after_escape_attempt": "54-55",
+      "cpus_allowed_list": "54-55",
+      "result": {
+        "actor": "CLD-LAB-SMOKE-20261012182831",
+        "category": "property-check",
+        "core_hours_charged": 0.0,
+        "cores": 2,
+        "cpus": "54-55",
+        "errors": [],
+        "exit_code": 0,
+        "finished_utc": "2026-10-13T09:22:17Z",
+        "host": "lab234",
+        "id": "REQ-9901",
+        "kept_on_server": [
+          {
+            "bytes": 52428801,
+            "path": "out/oversized.bin",
+            "sha256": "50dac11b8750f1398495b580e1f6158fef5ddbdc7f6500e7117c2e12f59c88e9"
+          }
+        ],
+        "load_at_start": "0.00 0.18 1.78",
+        "logs": {
+          "stderr.log": {
+            "bytes": 0,
+            "truncated_to_tail": false
+          },
+          "stdout.log": {
+            "bytes": 0,
+            "truncated_to_tail": false
+          }
+        },
+        "network": false,
+        "purpose": "CLD-LAB-0001 end-to-end isolation test",
+        "request_sha256": {
+          "job.sh": "2e75063cf6b7f77fc52b40d20d823fe29728065585c318921e4ebbfd0c37f61b"
+        },
+        "returned_files": [
+          {
+            "bytes": 6,
+            "path": "out/cpus-after-escape.txt",
+            "sha256": "b1195dc1d91a0f20320c6488c91b9a5d8f644a5040468e9bda7ced882ba9b5f1"
+          },
+          {
+            "bytes": 6,
+            "path": "out/cpus.txt",
+            "sha256": "b1195dc1d91a0f20320c6488c91b9a5d8f644a5040468e9bda7ced882ba9b5f1"
+          },
+          {
+            "bytes": 10,
+            "path": "out/normal.txt",
+            "sha256": "aaf954e7bf0982065ebc3be114cd1525517b68fbc325c69bd6f48e093a530414"
+          }
+        ],
+        "runner": "CLD-LAB-0001",
+        "server_workspace": "/ws inside jobs; files persist across jobs",
+        "started_utc": "2026-10-13T09:22:17Z",
+        "status": "completed",
+        "timed_out": false,
+        "timeout_hours": 0.008333333333333333,
+        "wall_seconds": 0,
+        "workspace_kb_after": 16
+      }
+    },
+    "timeout": {
+      "actor": "CLD-LAB-SMOKE-20261012182831",
+      "category": "property-check",
+      "core_hours_charged": 0.0006,
+      "cores": 1,
+      "cpus": "3-3",
+      "errors": [],
+      "exit_code": 124,
+      "finished_utc": "2026-10-13T09:22:26Z",
+      "host": "lab234",
+      "id": "REQ-9903",
+      "kept_on_server": [],
+      "load_at_start": "0.00 0.18 1.77",
+      "logs": {
+        "stderr.log": {
+          "bytes": 0,
+          "truncated_to_tail": false
+        },
+        "stdout.log": {
+          "bytes": 0,
+          "truncated_to_tail": false
+        }
+      },
+      "network": false,
+      "purpose": "CLD-LAB-0001 end-to-end isolation test",
+      "request_sha256": {
+        "job.sh": "a144be294ee76fe9e7112b047de5cfecff49381541d4183228cbfe448da78b39"
+      },
+      "returned_files": [],
+      "runner": "CLD-LAB-0001",
+      "server_workspace": "/ws inside jobs; files persist across jobs",
+      "started_utc": "2026-10-13T09:22:24Z",
+      "status": "completed",
+      "timed_out": true,
+      "timeout_hours": 0.0005555555555555556,
+      "wall_seconds": 2,
+      "workspace_kb_after": 36
+    }
+  },
+  "passed": true,
+  "run_id": "CLD-LAB-0001-E2E",
+  "tested_at_utc": "2026-10-12T18:28:45Z"
+}

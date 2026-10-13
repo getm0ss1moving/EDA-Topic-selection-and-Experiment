@@ -106,7 +106,7 @@ This stage requests 0 CPU-hours, 0 GPU-hours and USD 0 of API spend from the sha
 1. The operator installs the pinned CLI into its own prefix: `npm install --prefix ~/.local/claude-code-2.1.293 @anthropic-ai/claude-code@2.1.293`. This downloads about 236 MB, mostly the native macOS arm64 binary, from the npm registry. Done on 2026-10-12. The operator's npm `allowScripts` policy blocked the package's postinstall step, which only hard-links the native binary over a placeholder. The launcher therefore executes the native binary directly from `@anthropic-ai/claude-code-darwin-arm64` and requires its SHA-256 `4e21122a227857da1178aca3299700c1fd7f2b77c93f12e73c2c76db796a105e`. The binary is signed by Developer ID Application: Anthropic PBC (Q6L2SF6YDW), and `codesign --verify --strict` passes. No npm policy was changed.
 2. The operator signs in from Terminal.app with `bash launch.sh --login`, choosing the Claude subscription and never the Console option. Correct the host clock first if sign-in fails. The sign-in is stored in the shared Claude Code configuration. Sessions that export their own `ANTHROPIC_AUTH_TOKEN` (the DeepSeek routing) should keep using that token; the operator should confirm afterwards that DeepSeek sessions still report their DeepSeek model. Done on 2026-10-12: `auth status` reports `claude.ai`, `firstParty`, subscription `pro`.
 3. The coordinator runs `python3 -I isolation_smoke.py` against the final configuration. Done: run 2 passed every check (see above).
-4. Pending: `M0nitor-EDA` confirms the final head with `CONFIRM <sha>` and the PR is merged.
+4. Done: `M0nitor-EDA` confirmed the final head of PR #8 (`3ee7f9e64c46b706f6d4ea1e9c651dc2c0c7afca`), which merged as `ab600824ab0d65f579977484ec9a8db9dc43bdcc`.
 
 ## Launch sequence
 
@@ -126,3 +126,18 @@ Research prompt (sent only after step 3):
 ## Not authorized by this record
 
 No session exists yet. This record creates or approves no topic, survey result, novelty claim, experiment or verifier session.
+
+## 2026-10-13 runner amendment
+
+This amendment supersedes the earlier network, read-rule and session-state descriptions for resume. The proposer completed a first dossier outside the repository and is paused. Resume is permitted only after this governance PR (#14) is merged with its required checks passing. Under PR #16, an intermediate governance PR needs no human `CONFIRM`; human confirmation is reserved for final dossiers and final reports.
+
+- The runner and owner decisions are recorded in `runs/CLD-LAB-0001/governance-decision.md`; exact actor instructions are in `runs/CLD-LAB-0001/proposer-instructions.md`.
+- The session receives the lab-results folder as a second `--add-dir`. Claude permissions and the macOS sandbox allow reads but deny edits and writes there. Each published job directory and file is also mode 0500/0400.
+- The two broad `Read(~/.*)` rules were removed because they also matched the actor's own saved dot-prefixed outputs. Sensitive home locations are now enumerated, and `blockReadsOutsideWorkingDirectories` plus `defaultMode: dontAsk` makes other paths fail closed without asking the operator.
+- WebFetch and sandbox network access are limited to GitHub, GitHub content subdomains and arXiv. Other hosts are denied without a prompt. Network-capable runner jobs are restricted by governance to those same public sources; `lab234` has no network.
+- `CLD-LAB-0001-E2E` passed on both machines. It verified hidden home state, network isolation on `lab234`, network availability on `lab231`, timeout termination, read-only results, no copyback for symlinks or files over 50 MiB, and a seccomp-enforced CPU affinity mask that resisted an in-job `sched_setaffinity` escape attempt.
+- The amended Claude isolation smoke now passes against the final settings `e628d5f72faa76d06c7922e7d673e8d8e4ee7be2a175fdcf27958715988fc3d8`:
+  - **Run 3** (`isolation-smoke-run3-lab-results.json`) initialized correctly, but the subscription session limit stopped it before any tool step. It is a blocked run, not a pass.
+  - **Run 4** (`isolation-smoke-run4-lab-results.json`) first crashed in the harness parser, on a CLI status event with a plain-text message, and wrote no report. After the parser fix, the repeat passed all 13 environment checks and 25 of 26 steps. R2 failed only because it still expected a read outside the working directories to succeed when an allow rule matched. `blockReadsOutsideWorkingDirectories` denies such reads regardless, which is the intended fail-closed behaviour, so R2 now expects denial.
+  - **Run 5** (`isolation-smoke-run5-lab-results.json`) passed all 26 steps and all 13 environment checks with that harness. The session ran `claude-opus-5-5`, with a `claude-haiku-5-5` helper, in `dontAsk` mode with exactly the six allowed tools and no MCP servers, third-party plugins or auto-memory. Reads outside the working directories and of the listed sensitive paths were denied. Lab results were readable but not writable, and the packet stayed unmodified. Bash reached GitHub but not other hosts, and WebFetch reached GitHub and arXiv but not other hosts.
+- Residual limitation: `Read(~/.claude/**)` and the outside-directory block also hide Claude Code's own spilled tool-result files for this session. The proposer should keep tool output small, or write large output into its outbox and read it there.

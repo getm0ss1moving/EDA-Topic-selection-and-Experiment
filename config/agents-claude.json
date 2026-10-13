@@ -48,7 +48,7 @@
       "model_observed": "claude-opus-5-5",
       "effort_observed": "max during the onboarding turn (operator /model selection before the setup prompt); the launcher requests xhigh again on resume",
       "session_id": "76d0bf61-78f7-4b93-a557-7c29f1a2cbe8",
-      "session_state": "onboarding_complete; research round not started",
+      "session_state": "first proposal complete; paused pending runner governance and P3-P5 revision",
       "launch_run": "CLD-P05-LAUNCH-0001",
       "registration_run": "CLD-P05-SESSION-0001",
       "status_note": "status stays ready_for_fresh_session because scripts/project.py validate_launch_release requires that value for every released actor; session_state carries the actual state.",
