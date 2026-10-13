@@ -95,7 +95,7 @@ def main():
     ap.add_argument('--cli', default=f'{HOME}/.local/claude-code-2.1.293/node_modules/@anthropic-ai/'
                                      'claude-code-darwin-arm64/claude')
     ap.add_argument('--cli-version', default='2.1.293')
-    ap.add_argument('--model', default='deepseek-v4-flash[1m]')
+    ap.add_argument('--model', default='deepseek-flash')
     ap.add_argument('--effort', default='max')
     ap.add_argument('--settings', type=Path, default=None,
                     help='defaults to launch-settings-C04.json / launch-settings-C05.json for the actor')

@@ -30,6 +30,12 @@
       "deepseek_v4_pro": "DeepSeek-V4-Pro, 1048576-token context window, effort levels low/high/max (default high)",
       "route_alias_on_host": "deepseek-v4-flash[1m]: the 1M-context variant of the deepseek-flash family used by the operator's Claude Code DeepSeek route (ANTHROPIC_BASE_URL https://api.deepseek.com/anthropic) on 2026-10-13"
     },
+    "pinning_decision": {
+      "decided_utc": "2026-10-13T09:13:27Z",
+      "decided_by": "getm0ss1moving (human owner)",
+      "decision": "Challenger sessions pin the canonical API model ID deepseek-flash directly, not the operator's shell alias deepseek-v4-flash[1m].",
+      "validation": "Isolation smoke runs 4-5 in runs/DSK-C04C05-LAUNCH-0001 observed the session model as exactly deepseek-flash with no other model billed."
+    },
     "launch_kit": "runs/DSK-C04C05-LAUNCH-0001"
   },
   "model_catalog_observed": [
