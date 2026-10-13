@@ -10,7 +10,11 @@
     "D04": "EDA-0001",
     "D05": "EDA-0002"
   },
-  "active_platforms": ["codex", "deepseek", "claude"],
+  "active_platforms": [
+    "codex",
+    "deepseek",
+    "claude"
+  ],
   "assignments": {
     "EDA-0001": {
       "domain": "D04",
@@ -21,7 +25,7 @@
     "EDA-0002": {
       "domain": "D05",
       "proposer": "Claude-P05-TIMING",
-      "challenger": "DeepSeek-C05-TIMING",
+      "challenger": "Codex-C05-TIMING-R2",
       "verifier": "Codex-V02-PHYSICAL"
     }
   },
@@ -29,7 +33,7 @@
     "Codex-P04-PHYSICAL",
     "Claude-P05-TIMING",
     "DeepSeek-C04-PHYSICAL",
-    "DeepSeek-C05-TIMING",
+    "Codex-C05-TIMING-R2",
     "Claude-V02-PHYSICAL",
     "Codex-V02-PHYSICAL"
   ],
@@ -53,24 +57,41 @@
     "codex": {
       "state": "ready_after_merge_and_packet_export",
       "models_verified": true,
-      "roles": ["D04 proposer", "D05 verifier"]
+      "roles": [
+        "D04 proposer",
+        "D05 verifier"
+      ]
     },
     "deepseek": {
       "state": "ready_after_merge_and_packet_export",
       "models_verified": true,
       "model_policy": "Use the observed deepseek-flash model for both challengers; record the actual host model and effort at creation.",
-      "roles": ["D04 challenger", "D05 challenger"]
+      "roles": [
+        "D04 challenger",
+        "D05 challenger"
+      ]
     },
     "claude": {
       "state": "ready_for_host_bound_creation",
       "models_verified": false,
       "model_policy": "Use only a Claude-family model exposed by the destination host. Record the exact model before the session receives scientific input; abort creation if no Claude model is exposed.",
-      "roles": ["D05 proposer", "D04 verifier"]
+      "roles": [
+        "D05 proposer",
+        "D04 verifier"
+      ]
     }
   },
   "experiment_authorization": false,
   "experiment_blockers": [
     "No accepted topic or agreed experiment task list exists.",
     "Representative designs, macro-rich cases, additional corners and a qualified signoff oracle remain incomplete."
-  ]
+  ],
+  "challenger_handoffs": {
+    "EDA-0002": {
+      "from": "DeepSeek-C05-TIMING",
+      "to": "Codex-C05-TIMING-R2",
+      "owner_authorized": true,
+      "reason": "Owner requests GPT challenger succession with gpt-6-astra low; fresh context, no inherited signatures or private memory."
+    }
+  }
 }

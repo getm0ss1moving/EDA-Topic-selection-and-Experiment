@@ -538,6 +538,22 @@
       "active_scope": false,
       "archived": true,
       "run_status": "completed"
+    },
+    {
+      "actor_id": "Codex-C05-TIMING-R2",
+      "call_sign": "CDX-Skeptic-TIMING",
+      "platform": "OpenAI Codex",
+      "role": "challenger",
+      "domain_ids": [
+        "D05"
+      ],
+      "model_requested": "gpt-6-astra",
+      "reasoning_requested": "low",
+      "status": "ready_for_fresh_session",
+      "active_scope": true,
+      "fresh_session_required": true,
+      "predecessor": "DeepSeek-C05-TIMING",
+      "session_state": "awaiting_fresh_creation"
     }
   ],
   "active_actor_count": 0,

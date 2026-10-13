@@ -305,6 +305,16 @@ def validate_launch_release(root=ROOT):
         expected = {'Codex-P04-PHYSICAL', 'Claude-P05-TIMING',
                     'DeepSeek-C04-PHYSICAL', 'DeepSeek-C05-TIMING',
                     'Claude-V02-PHYSICAL', 'Codex-V02-PHYSICAL'}
+        handoffs = release.get('challenger_handoffs', {})
+        successor = handoffs.get('EDA-0002', {})
+        if handoffs:
+            if (set(handoffs) != {'EDA-0002'} or successor.get('from') != 'DeepSeek-C05-TIMING'
+                    or successor.get('to') != 'Codex-C05-TIMING-R2'
+                    or successor.get('owner_authorized') is not True or not successor.get('reason')):
+                errors.append('config/launch-release.json: invalid challenger succession record')
+            else:
+                expected.remove('DeepSeek-C05-TIMING')
+                expected.add('Codex-C05-TIMING-R2')
         if set(released) != expected:
             errors.append('config/launch-release.json: released actor set does not match the cross-platform physical slice')
         for actor_id in released:
@@ -325,6 +335,8 @@ def validate_launch_release(root=ROOT):
                          'challenger':'DeepSeek-C04-PHYSICAL','verifier':'Claude-V02-PHYSICAL'},
             'EDA-0002': {'domain':'D05','proposer':'Claude-P05-TIMING',
                          'challenger':'DeepSeek-C05-TIMING','verifier':'Codex-V02-PHYSICAL'}}
+        if 'Codex-C05-TIMING-R2' in expected:
+            expected_assignments['EDA-0002']['challenger'] = 'Codex-C05-TIMING-R2'
         if release.get('assignments') != expected_assignments:
             errors.append('config/launch-release.json: cross-platform assignment matrix is invalid')
         else:
