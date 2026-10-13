@@ -31,8 +31,8 @@
       "proposer_call_sign": "DSK-Spark-RELIABILITY",
       "challenger": "DeepSeek-C06-RELIABILITY",
       "challenger_call_sign": "DSK-Forge-RELIABILITY",
-      "verifier": "DeepSeek-V02-PHYSICAL",
-      "verifier_call_sign": "DSK-Ledger-PHYSICAL",
+      "verifier": "DeepSeek-V03-SYSTEMS",
+      "verifier_call_sign": "DSK-Ledger-SYSTEMS",
       "allocation_doc": "docs/TEAM-DEEPSEEK.md",
       "stage": "onboarding",
       "research_budget": "No broad research run authorized by this onboarding packet. Prepare a bounded search plan. Compute, tool, PDK and design access remain unknown until the human owner fills config/research-brief.json."
