@@ -10,6 +10,28 @@
     "consequence": "model_requested describes the intended independent launch, not the model that produced the R0 drafts. The proposer tier is unexercised. Before an R1 proposal is treated as a proposer-quality contribution, the operator must either confirm the substitution in writing or relaunch the proposer sessions on a host that actually exposes deepseek-v4-pro.",
     "status": "open_operator_decision"
   },
+  "challenger_launch_policy": {
+    "recorded_utc": "2026-10-13T08:09:26Z",
+    "decided_by": "getm0ss1moving (human owner)",
+    "platform_family_rule": "Every DeepSeek proposer, challenger and verifier must use a DeepSeek-family model. This supersedes the earlier open request to approve deepseek-flash in place of deepseek-v4-pro: deepseek-flash is an allowed family member for all three roles. The execution_observation above is therefore resolved as a policy matter for the two released challengers, whose sessions have not run; the deferred proposer tier keeps its historical requested/actual record.",
+    "reasoning_effort_correction": {
+      "changed_utc": "2026-10-13T08:09:26Z",
+      "field": "reasoning_requested",
+      "from": "medium",
+      "to": "max",
+      "actors": ["DeepSeek-C04-PHYSICAL", "DeepSeek-C05-TIMING"],
+      "reason": "The host exposes no medium effort tier, so the previous value could not be served. docs/TEAM-DEEPSEEK.md assigns challengers max effort. Neither actor has ever run a scientific session, so no executed run is relabelled."
+    },
+    "api_observation": {
+      "observed_utc": "2026-10-13T08:04:31Z",
+      "endpoint": "GET https://api.deepseek.com/models",
+      "served_model_ids": ["deepseek-flash", "deepseek-v4-pro"],
+      "deepseek_flash": "DeepSeek-V4.1-Flash, 1048576-token context window, effort levels low/high/max (default high)",
+      "deepseek_v4_pro": "DeepSeek-V4-Pro, 1048576-token context window, effort levels low/high/max (default high)",
+      "route_alias_on_host": "deepseek-v4-flash[1m]: the 1M-context variant of the deepseek-flash family used by the operator's Claude Code DeepSeek route (ANTHROPIC_BASE_URL https://api.deepseek.com/anthropic) on 2026-10-13"
+    },
+    "launch_kit": "runs/DSK-C04C05-LAUNCH-0001"
+  },
   "model_catalog_observed": [
     "deepseek-v4-pro",
     "deepseek-flash"
@@ -379,7 +401,7 @@
       ],
       "task_title": "DeepSeek-C04-PHYSICAL",
       "model_requested": "deepseek-flash",
-      "reasoning_requested": "medium",
+      "reasoning_requested": "max",
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
@@ -520,7 +542,7 @@
       ],
       "task_title": "DeepSeek-C05-TIMING",
       "model_requested": "deepseek-flash",
-      "reasoning_requested": "medium",
+      "reasoning_requested": "max",
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,

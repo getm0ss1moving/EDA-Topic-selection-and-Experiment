@@ -1,0 +1,153 @@
+{
+  "run_id": "DSK-C04C05-LAUNCH-0001",
+  "session_id": "04fe4881-0c22-4292-ac03-ab73f00eaf29",
+  "role": "coordinator",
+  "platform": "DeepSeek",
+  "stage": "launch_readiness",
+  "status": "launch_kit_ready; sessions_not_created; pending_independent_review_and_proposal_freeze",
+  "input_commit": "8f365d39cd5b05fd90024f999cfb409d06148245",
+  "model": "deepseek-v4-flash[1m]",
+  "host": "macOS arm64 (Darwin 25.5.0); Claude Code 2.1.293 pinned at ~/.local/claude-code-2.1.293",
+  "operator": "getm0ss1moving",
+  "started_at_utc": "2026-10-13T08:09:26Z",
+  "completed_at_utc": "2026-10-13T08:42:37Z",
+  "clock_note": "The host clock runs 54000 s behind NTP and the api.deepseek.com / github.com Date headers; timestamps in this manifest and in readiness.md are corrected to true UTC. The smoke reports and git commit dates written on this host use the uncorrected clock.",
+  "output_paths": [
+    "runs/DSK-C04C05-LAUNCH-0001/manifest.json",
+    "runs/DSK-C04C05-LAUNCH-0001/readiness.md",
+    "runs/DSK-C04C05-LAUNCH-0001/launch.sh",
+    "runs/DSK-C04C05-LAUNCH-0001/launch-settings-C04.json",
+    "runs/DSK-C04C05-LAUNCH-0001/launch-settings-C05.json",
+    "runs/DSK-C04C05-LAUNCH-0001/keychain-token.sh",
+    "runs/DSK-C04C05-LAUNCH-0001/actor-launch.json",
+    "runs/DSK-C04C05-LAUNCH-0001/isolation_smoke.py",
+    "runs/DSK-C04C05-LAUNCH-0001/isolation-smoke-run1-writable.json",
+    "runs/DSK-C04C05-LAUNCH-0001/isolation-smoke-run2-readonly.json",
+    "runs/DSK-C04C05-LAUNCH-0001/isolation-smoke-run3-readonly-C04.json",
+    "config/agents-deepseek.json"
+  ],
+  "artifact_sha256": {
+    "launch.sh": "7f8b7c792ec793f7807b2b05292b606ec042846c728f5227fd2674cbf3cc735b",
+    "launch-settings-C04.json": "3eace9a6ac10a4e6040fd3fbb0cf741137ca37175159fe212fdac673c390613a",
+    "launch-settings-C05.json": "2c1984b1e329cc8c4ba8921ba461407a228b68a9a668fbd49c905dbbbafdbf72",
+    "keychain-token.sh": "b719c94ceb6d5108807ba0e3c79215cd989687ea6d8edb084800f46a271fa5de",
+    "actor-launch.json": "f689aee08e0ebc35e4842c2b7c0c5d5eab5ece0c63a59c8b32509c90cbec1ef8",
+    "isolation_smoke.py": "5d05d66397bada76c493ca24bc2e9f394df735e7b3eb3329cff4872543d1a4bc"
+  },
+  "source_ids": [
+    "GET https://api.deepseek.com/models (2026-10-13T08:04:31Z)",
+    "GET https://api.deepseek.com/user/balance (2026-10-13T08:04:31Z, 08:41:32Z)",
+    "config/agents-deepseek.json at 8f365d3; docs/TEAM-DEEPSEEK.md; docs/handoffs/DEEPSEEK-CHALLENGER-CHECKLIST.md; docs/handoffs/PLATFORM-LEAD-CONTRACT.md",
+    "runs/CLD-P05-LAUNCH-0001 (launch files adapted); runs/CLD-P05-SESSION-0001 (registration precedent)"
+  ],
+  "sources_consulted": [
+    "api.deepseek.com model catalog and balance endpoints for the served model IDs, effort levels and prepaid balance",
+    "Local Claude Code 2.1.293 --help, auth status behavior probes, and a synthetic child-session environment probe (names only, no values) to identify which variables reach the Bash tool",
+    "Host clock comparison against api.deepseek.com and github.com Date headers",
+    "Repository policy documents, the DeepSeek registry and the Claude launch/registration runs"
+  ],
+  "contamination_events": [
+    "None. No scientific content exists in any fixture, and no scientific session was created.",
+    "Coordinator test activity, all on synthetic fixtures with no project content: three isolation smoke turns, two focused environment probes (Bash variable names and child-session socket state only) and two auth-status probes, each with a clean environment and the DeepSeek route."
+  ],
+  "independence_attestation": "Coordinator readiness record only. It authors no scientific content and approves nothing. The coordinator did not read other actors' outboxes, transcripts or private notes; it listed directory names only to build deny rules and used only repository files that were already released by earlier reviewed runs. All actors share one macOS account, so isolation is layered tool, sandbox and laundering prevention, not OS-enforced independence.",
+  "registry_correction": {
+    "file": "config/agents-deepseek.json",
+    "actor_fields_changed": ["DeepSeek-C04-PHYSICAL.reasoning_requested", "DeepSeek-C05-TIMING.reasoning_requested"],
+    "from": "medium",
+    "to": "max",
+    "reason": "The host exposes no medium effort tier (docs/TEAM-DEEPSEEK.md; api.deepseek.com/models reports low/high/max with default high). docs/TEAM-DEEPSEEK.md assigns challengers max effort. Neither actor has ever run a scientific session.",
+    "policy_record": "config/agents-deepseek.json challenger_launch_policy (platform-family rule, effort correction, API observation)"
+  },
+  "actors": [
+    {
+      "actor_id": "DeepSeek-C04-PHYSICAL",
+      "call_sign": "DSK-Forge-PHYSICAL",
+      "role": "challenger",
+      "topic": "EDA-0001",
+      "domain": "D04",
+      "session_id_planned": "6225f73f-b676-44ce-a3a7-ee667e1a68d2",
+      "session_state": "not_created",
+      "packet_dir": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/challenger-release-20261013/DeepSeek-C04-PHYSICAL",
+      "packet_sha256": null,
+      "packet_state": "PENDING: the EDA-0001 proposal is not frozen and no Codex-P04-PHYSICAL session is registered",
+      "outbox": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/challenger-release-20261013/DeepSeek-C04-PHYSICAL",
+      "settings": "runs/DSK-C04C05-LAUNCH-0001/launch-settings-C04.json",
+      "settings_sha256": "3eace9a6ac10a4e6040fd3fbb0cf741137ca37175159fe212fdac673c390613a",
+      "model_requested": "deepseek-v4-flash[1m]",
+      "effort_requested": "max"
+    },
+    {
+      "actor_id": "DeepSeek-C05-TIMING",
+      "call_sign": "DSK-Forge-TIMING",
+      "role": "challenger",
+      "topic": "EDA-0002",
+      "domain": "D05",
+      "session_id_planned": "af136556-818c-47c7-b514-5a141cb14d85",
+      "session_state": "not_created",
+      "packet_dir": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/challenger-release-20261013/DeepSeek-C05-TIMING",
+      "packet_sha256": null,
+      "packet_state": "PENDING: the EDA-0002 proposal is in its research round and not yet frozen",
+      "outbox": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/challenger-release-20261013/DeepSeek-C05-TIMING",
+      "settings": "runs/DSK-C04C05-LAUNCH-0001/launch-settings-C05.json",
+      "settings_sha256": "2c1984b1e329cc8c4ba8921ba461407a228b68a9a668fbd49c905dbbbafdbf72",
+      "model_requested": "deepseek-v4-flash[1m]",
+      "effort_requested": "max"
+    }
+  ],
+  "auth": {
+    "mechanism": "macOS Keychain entry 'deepseek-api-key' (account $USER) read by runs/DSK-C04C05-LAUNCH-0001/keychain-token.sh via the apiKeyHelper setting",
+    "entry_created_utc": "2026-10-13, approximately 08:23Z, by the operator-approved command, copying the value of the operator's existing ANTHROPIC_AUTH_TOKEN without printing it",
+    "key_recorded_anywhere": false,
+    "observed_helper_output_length_bytes": 36,
+    "auth_status_observed": {"loggedIn": true, "authMethod": "api_key_helper", "apiKeySource": "apiKeyHelper"},
+    "fallback_to_claude_ai_possible_with_this_configuration": false
+  },
+  "isolation_smoke": {
+    "state": "passed",
+    "script": "runs/DSK-C04C05-LAUNCH-0001/isolation_smoke.py",
+    "runs": [
+      {
+        "result": "runs/DSK-C04C05-LAUNCH-0001/isolation-smoke-run1-writable.json",
+        "configuration": "earlier script revision, writable fixture, C05 settings",
+        "outcome": "DeepSeek-specific checks passed; packet_unmodified false because the CLI created .claude/.cc-writes in the writable packet, and one broad environment-name check matched the CLI's own messaging token and a host proxy variable. Both findings drove fixes (read-only packet requirement confirmed; credential-domain checks added)."
+      },
+      {
+        "result": "runs/DSK-C04C05-LAUNCH-0001/isolation-smoke-run2-readonly.json",
+        "configuration": "final C05 settings (2c1984b1...), read-only fixture",
+        "outcome": "All 19 environment checks and all 26 step checks passed."
+      },
+      {
+        "result": "runs/DSK-C04C05-LAUNCH-0001/isolation-smoke-run3-readonly-C04.json",
+        "configuration": "final C04 settings (3eace9a6...), read-only fixture",
+        "outcome": "All 19 environment checks and all 26 step checks passed."
+      }
+    ],
+    "model_observed_in_smoke": "deepseek-v4-flash[1m], the only billed model in every run",
+    "launcher_path_simulation": "Scratch-only synthetic packet fixture against a copy of launch.sh: ready path reached 'All preconditions hold. Nothing was launched.' (exit 0); after tampering it aborted with the packet mismatch (exit 1). No real packet or session involved.",
+    "residual_risks_recorded": [
+      "Each headless run creates its own child session with a live messaging socket and exposes that session's token to its Bash children; env -i excludes desktop-socket inheritance and messaging tools are denied, but the socket path itself remains reachable only for the session's own endpoint.",
+      "Read rules are a deny-list; unlisted reads outside the packet and outbox still need interactive operator approval."
+    ]
+  },
+  "budget": {
+    "cpu_hours_requested": 0,
+    "gpu_hours_requested": 0,
+    "api_usd_requested": 0,
+    "deepseek_prepaid_balance_observed": [
+      {"at_utc": "2026-10-13T08:04:31Z", "balance_cny": 179.38},
+      {"at_utc": "2026-10-13T08:41:32Z", "balance_cny": 175.61}
+    ],
+    "spend_note": "The 3.77 CNY delta covers the three synthetic smoke turns and this coordinator session's own DeepSeek-route usage; the split is not separable and is not claimed. No top-ups, no automatic retries; work stops when the balance is exhausted."
+  },
+  "prerequisites": [
+    "Done: registry effort corrected to max with a policy record; model IDs, effort levels and balance confirmed against the DeepSeek API.",
+    "Done: CLI 2.1.293 pinned and hash-checked (4e21122a227857da1178aca3299700c1fd7f2b77c93f12e73c2c76db796a105e), identical to the Claude launch binary.",
+    "Done: operator-approved Keychain entry; helper resolves; auth status reports apiKeyHelper with no claude.ai fallback.",
+    "Done: both final settings digests smoke-tested (runs 2-3, all checks pass); launcher --check verified in prepared state for both actors.",
+    "Pending: proposal freeze for EDA-0001 / EDA-0002, challenger packet export at the then-current main commit, digest recorded in actor-launch.json.",
+    "Pending: independent exact-head confirmation (CONFIRM <full-head-sha>) and human merge of this branch.",
+    "Scheduling: at most two scientific sessions may run; close a proposer session once its dossier is submitted before starting a challenger."
+  ],
+  "experiment_authorization": false
+}

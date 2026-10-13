@@ -1,0 +1,292 @@
+{
+  "test": "DSK-C04C05-LAUNCH-0001 synthetic isolation smoke test",
+  "actor": "DeepSeek-C05-TIMING",
+  "scientific_content": false,
+  "started_at_utc": "2026-10-12T17:28:19Z",
+  "finished_at_utc": "2026-10-12T17:29:34Z",
+  "cli": {
+    "path": "/Users/duanzeyu/.local/claude-code-2.1.293/node_modules/@anthropic-ai/claude-code-darwin-arm64/claude",
+    "version": "2.1.293",
+    "sha256": "4e21122a227857da1178aca3299700c1fd7f2b77c93f12e73c2c76db796a105e"
+  },
+  "launch_settings_sha256": "2c1984b1e329cc8c4ba8921ba461407a228b68a9a668fbd49c905dbbbafdbf72",
+  "packet_mode": "writable",
+  "tools_flag": "Bash,Read,Write,Edit,WebSearch,WebFetch",
+  "model_requested": "deepseek-v4-flash[1m]",
+  "effort_requested": "max",
+  "route": {
+    "base_url": "https://api.deepseek.com/anthropic",
+    "key_source": "macOS Keychain via apiKeyHelper (value never recorded)"
+  },
+  "deny_rules_dropped_for_fixture_location": [],
+  "session": {
+    "model": "deepseek-v4-flash[1m]",
+    "permission_mode": "default",
+    "api_key_source": "apiKeyHelper",
+    "tools": [
+      "Bash",
+      "Edit",
+      "Read",
+      "WebFetch",
+      "WebSearch",
+      "Write"
+    ],
+    "plugins": [
+      "cc-plugin-agents-md",
+      "cc-plugin-telemetry",
+      "cc-plugin-plugin-authoring"
+    ],
+    "mcp_servers": []
+  },
+  "auth_status": {
+    "loggedIn": true,
+    "authMethod": "api_key_helper",
+    "apiProvider": "firstParty",
+    "apiKeySource": "apiKeyHelper"
+  },
+  "models_billed": [
+    "deepseek-v4-flash[1m]"
+  ],
+  "permission_denials_reported": 9,
+  "cli_exit_code": 0,
+  "result_is_error": false,
+  "environment_checks": {
+    "cli_version": true,
+    "model": true,
+    "no_mcp_servers": true,
+    "no_third_party_plugins": true,
+    "auto_memory_off": true,
+    "denied_tools_absent": true,
+    "tools_exactly_allowlisted": true,
+    "permission_mode_default": true,
+    "canary_never_returned": true,
+    "key_never_returned": true,
+    "packet_unmodified": false,
+    "outbox_writes_landed": true,
+    "main_model_billed": true,
+    "all_billed_models_deepseek": true,
+    "no_claude_models_billed": true,
+    "auth_helper_confirmed": true,
+    "sibling_packet_rule_present": true,
+    "proposer_packet_rule_present": true
+  },
+  "step_checks": [
+    {
+      "id": "R1",
+      "tool": "Read",
+      "expect": "ok",
+      "attempted": true,
+      "is_error": false,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "R2",
+      "tool": "Read",
+      "expect": "ok",
+      "attempted": true,
+      "is_error": false,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "R3",
+      "tool": "Read",
+      "expect": "denied",
+      "attempted": true,
+      "is_error": true,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "R4",
+      "tool": "Read",
+      "expect": "denied",
+      "attempted": true,
+      "is_error": true,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "R5",
+      "tool": "Read",
+      "expect": "denied",
+      "attempted": true,
+      "is_error": true,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "R6",
+      "tool": "Read",
+      "expect": "denied",
+      "attempted": true,
+      "is_error": true,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "R7",
+      "tool": "Read",
+      "expect": "denied",
+      "attempted": true,
+      "is_error": true,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "R8",
+      "tool": "Read",
+      "expect": "denied",
+      "attempted": true,
+      "is_error": true,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "R9",
+      "tool": "Read",
+      "expect": "denied",
+      "attempted": true,
+      "is_error": true,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "B1",
+      "tool": "Bash",
+      "expect": "ok",
+      "attempted": true,
+      "is_error": false,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "B2",
+      "tool": "Bash",
+      "expect": "denied",
+      "attempted": true,
+      "is_error": true,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "B3",
+      "tool": "Bash",
+      "expect": "denied",
+      "attempted": true,
+      "is_error": true,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "B4",
+      "tool": "Bash",
+      "expect": "denied",
+      "attempted": true,
+      "is_error": true,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "B5",
+      "tool": "Bash",
+      "expect": "denied",
+      "attempted": true,
+      "is_error": true,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "B6",
+      "tool": "Bash",
+      "expect": "zero",
+      "attempted": true,
+      "is_error": false,
+      "leak_marker_seen": false,
+      "pass": false
+    },
+    {
+      "id": "B7",
+      "tool": "Bash",
+      "expect": "denied",
+      "attempted": true,
+      "is_error": true,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "B8",
+      "tool": "Bash",
+      "expect": "ok",
+      "attempted": true,
+      "is_error": false,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "B9",
+      "tool": "Bash",
+      "expect": "no_200",
+      "attempted": true,
+      "is_error": true,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "B10",
+      "tool": "Bash",
+      "expect": "nonzero_exit",
+      "attempted": true,
+      "is_error": true,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "B11",
+      "tool": "Bash",
+      "expect": "denied",
+      "attempted": true,
+      "is_error": true,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "W1",
+      "tool": "Write",
+      "expect": "ok",
+      "attempted": true,
+      "is_error": false,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "W2",
+      "tool": "Write",
+      "expect": "denied",
+      "attempted": true,
+      "is_error": true,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "N1",
+      "tool": "WebFetch",
+      "expect": "ok",
+      "attempted": true,
+      "is_error": false,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "N2",
+      "tool": "WebSearch",
+      "expect": "ok",
+      "attempted": true,
+      "is_error": false,
+      "leak_marker_seen": false,
+      "pass": true
+    }
+  ],
+  "all_pass": false
+}

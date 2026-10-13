@@ -1,0 +1,91 @@
+{
+  "autoMemoryEnabled": false,
+  "apiKeyHelper": "/Users/duanzeyu/Documents/ChatGPT/EDA-Topic-selection-and-Experiment/runs/DSK-C04C05-LAUNCH-0001/keychain-token.sh",
+  "permissions": {
+    "defaultMode": "default",
+    "allow": [
+      "WebSearch",
+      "WebFetch",
+      "Edit(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/challenger-release-20261013/DeepSeek-C05-TIMING/**)"
+    ],
+    "deny": [
+      "Task",
+      "Agent",
+      "SendMessage",
+      "ListAgents",
+      "RemoteTrigger",
+      "Workflow",
+      "Skill",
+      "CronCreate",
+      "CronDelete",
+      "CronList",
+      "ScheduleWakeup",
+      "Monitor",
+      "PushNotification",
+      "Artifact",
+      "ArtifactComments",
+      "ArtifactData",
+      "DesignSync",
+      "ReportFindings",
+      "EnterWorktree",
+      "ExitWorktree",
+      "NotebookEdit",
+      "Edit(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/**)",
+      "Edit(//Users/duanzeyu/Documents/ChatGPT/EDA-Topic-selection-*/**)",
+      "Edit(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/Codex-*/**)",
+      "Edit(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/Claude-*/**)",
+      "Edit(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/DeepSeek-C04-*/**)",
+      "Edit(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/DeepSeek-P*/**)",
+      "Edit(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/DeepSeek-V*/**)",
+      "Edit(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/physical-release-*/**)",
+      "Edit(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/challenger-release-*/DeepSeek-C04-*/**)",
+      "Edit(//Users/duanzeyu/Documents/ChatGPT/eda-dsk/**)",
+      "Read(//Users/duanzeyu/Documents/ChatGPT/EDA-Topic-selection-*/**)",
+      "Read(//Users/duanzeyu/Documents/ChatGPT/EDA-Resources/**)",
+      "Read(//Users/duanzeyu/Documents/ChatGPT/eda-dsk/**)",
+      "Read(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/CODEX-*/**)",
+      "Read(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/GOVERNANCE-*/**)",
+      "Read(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/foundation-*/**)",
+      "Read(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/physical-pilot-*/**)",
+      "Read(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/role-allocation-*/**)",
+      "Read(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/physical-release-*/**)",
+      "Read(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/challenger-release-*/DeepSeek-C04-PHYSICAL/**)",
+      "Read(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/Codex-*/**)",
+      "Read(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/Claude-*/**)",
+      "Read(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/DeepSeek-C04-*/**)",
+      "Read(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/DeepSeek-P*/**)",
+      "Read(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/DeepSeek-V*/**)",
+      "Read(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/physical-release-*/**)",
+      "Read(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/challenger-release-*/DeepSeek-C04-PHYSICAL/**)",
+      "Read(~/.*)",
+      "Read(~/.*/**)",
+      "Read(~/Library/**)",
+      "Read(//private/tmp/claude-501/**)",
+      "Read(//tmp/claude-501/**)"
+    ]
+  },
+  "sandbox": {
+    "enabled": true,
+    "failIfUnavailable": true,
+    "allowUnsandboxedCommands": false,
+    "autoAllowBashIfSandboxed": true,
+    "filesystem": {
+      "denyRead": [
+        "/Users/duanzeyu"
+      ],
+      "allowRead": [
+        "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/challenger-release-20261013/DeepSeek-C05-TIMING",
+        "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/challenger-release-20261013/DeepSeek-C05-TIMING"
+      ],
+      "denyWrite": [
+        "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/challenger-release-20261013/DeepSeek-C05-TIMING"
+      ],
+      "allowWrite": [
+        "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/challenger-release-20261013/DeepSeek-C05-TIMING"
+      ]
+    },
+    "network": {
+      "allowedDomains": []
+    }
+  }
+}
