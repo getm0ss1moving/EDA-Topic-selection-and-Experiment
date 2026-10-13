@@ -6,6 +6,6 @@ Engineering metrics: Legal routable outcomes, post-route PPA, congestion, timing
 
 Boundary: Report physical substage boundaries; HPWL is not a substitute for final timing or routability. Timing-model methodology belongs to D05.
 
-Proposer: `Codex-P04-PHYSICAL`. Challenger: `Codex-C04-PHYSICAL`. Shared verifier: `Codex-V02-PHYSICAL`.
+Active assignment for EDA-0001 under `config/launch-release.json`: proposer `Codex-P04-PHYSICAL`, challenger `DeepSeek-C04-PHYSICAL`, verifier `Claude-V02-PHYSICAL`. The `platform_roles` entries in `brief.json` are identity namespaces for each platform's full roster, not active assignments.
 
 This is a survey territory, not an accepted topic. The first task initializes roles and search plans. Scientific outputs must later enter the reviewed candidate workflow.

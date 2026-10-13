@@ -22,7 +22,15 @@
     "concurrent_experiment_jobs": 1,
     "smoke_timeout_seconds": 600,
     "remote_resources": "None supplied",
-    "agent_usage": "Existing subscription only; no paid API calls, automatic retries, or cloud purchase."
+    "agent_usage": "Claude actors use the existing Claude subscription. The two released DeepSeek challengers may use only the DeepSeek API balance already prepaid (see deepseek_api_allowance). No other paid API calls, automatic retries, top-ups or cloud purchase.",
+    "deepseek_api_allowance": {
+      "decided_by": "getm0ss1moving (human owner)",
+      "decided_on": "2026-10-13",
+      "scope": ["DeepSeek-C04-PHYSICAL", "DeepSeek-C05-TIMING"],
+      "limit": "The existing prepaid DeepSeek API balance only; no top-ups or new purchases.",
+      "procedure": "Before each challenger launch the DeepSeek lead records the observed balance in that launch's run record. Work stops when the balance is exhausted; there are no automatic retries.",
+      "relation_to_api_budget_usd": "api_budget_usd 0 means no new money. Spending this already-prepaid balance is the only paid-API exception."
+    }
   },
   "available_tools": [
     {
