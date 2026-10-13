@@ -27,5 +27,11 @@
       "rationale": null
     }
   },
-  "open_conditions": []
+  "open_conditions": [
+    "Challenger independent search, effect estimate and required falsification tests are not yet received (tasklist.md section 'Challenger additions (pending)').",
+    "Open prerequisites are unresolved: multi-corner libraries (ASAP7 provenance; SKY130 hd library license and Liberty generation), pinned design sources and licenses, RC corners (none available), and a compute allocation (EXP-001).",
+    "The decision-critical nearest work SRC-012 has not been inspected in full (kill criterion K1).",
+    "Soundness properties P3-P5 are not established (EXP-002, kill criterion K2).",
+    "The proposer has not signed: the task list is a round-0 draft and contains no agreed revision or digest."
+  ]
 }
