@@ -1,0 +1,45 @@
+{
+  "run_id": "CLD-P05-SESSION-0001",
+  "session_id": "9273c928-a2eb-46ba-890d-9dedad60ac78",
+  "role": "coordinator",
+  "platform": "Claude",
+  "stage": "session_registration",
+  "status": "ready_for_independent_review",
+  "input_commit": "ab600824ab0d65f579977484ec9a8db9dc43bdcc",
+  "packet_sha256": "ff20816f623585d4bf7ba7b13d79db58aab90a2e947cd05c719cd93f3574602d",
+  "model": "claude-opus-5-5",
+  "operator": "getm0ss1moving",
+  "started_at_utc": "2026-10-13T06:47:00Z",
+  "completed_at_utc": "2026-10-13T06:55:48Z",
+  "clock_note": "UTC corrected for the host clock offset of +54000 s (NTP, GitHub and Anthropic Date headers); git commit dates are not corrected.",
+  "output_paths": [
+    "runs/CLD-P05-SESSION-0001/manifest.json",
+    "runs/CLD-P05-SESSION-0001/registration.md",
+    "config/roles.json",
+    "config/agents-claude.json"
+  ],
+  "source_ids": [],
+  "registered_session": {
+    "session_id": "76d0bf61-78f7-4b93-a557-7c29f1a2cbe8",
+    "actor_id": "Claude-P05-TIMING",
+    "role": "proposer",
+    "topic": "EDA-0002",
+    "model": "claude-opus-5-5",
+    "effort_requested": "xhigh",
+    "effort_observed_onboarding": "max",
+    "launch_commit": "ab600824ab0d65f579977484ec9a8db9dc43bdcc",
+    "started_at_utc": "2026-10-12T18:07:15Z",
+    "state": "onboarding_complete; research round not started"
+  },
+  "onboarding_outputs": [
+    {"path": "readiness.json", "bytes": 28278, "sha256": "99985e135b66f10eb95d86738e772050debefdf6e6b4b22a53c21cef6a02afa5"},
+    {"path": "first-pass-plan.md", "bytes": 32302, "sha256": "63e75503d8bc9233b5a06650ccb0053b7956affecab41be272cf8ab6f559bfcf"}
+  ],
+  "excluded_host_artifacts": [".claude/.cc-writes/ (empty; created by Claude Code, not by the actor)"],
+  "coordinator_access": "Read the role's readiness.json, which is addressed to the coordinator, and listed outbox names and sizes. Did not open the session transcript or first-pass-plan.md content beyond its digest.",
+  "contamination_events": [],
+  "operator_attestation": "The role session received only the setup prompt, after a /model selection; the DeepSeek default-model change was made in a separate session.",
+  "independence_attestation": "Coordinator registration record only. It authors no scientific content and approves nothing.",
+  "next_exchange": "After merge, the operator reopens the session with launch.sh --resume and sends the research prompt recorded in registration.md.",
+  "experiment_authorization": false
+}
