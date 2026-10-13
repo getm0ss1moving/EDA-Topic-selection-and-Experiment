@@ -36,3 +36,5 @@ The human owns priorities, resources and exceptions. The proposer owns a hypothe
 ## Research incentives
 
 Reward disconfirmation, corrected citations and useful negative results. Do not reward proposal count, objection count, impressive forecasts or forced consensus. Freeze evaluation criteria before results. Publish uncertainty and archive negative outcomes. Reopen decisions when new prior art or evidence appears.
+
+Human GitHub approval is reserved for final topic and experiment reports, as specified in `docs/WORKFLOW.md`. Intermediate PRs use automated checks and role-specific AI verification without requiring a human approval review.
