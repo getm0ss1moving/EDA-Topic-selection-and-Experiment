@@ -67,3 +67,15 @@ remove CPU, timeout, filesystem or write controls. Configure source reading in t
 actor's research tools; record any host policy that still blocks access as a
 runtime limitation, not a requirement to ask permission again. Frozen packets and
 historical evidence are not edited: existing actors receive a hashed amendment.
+
+## Verified-only challenger release to proposers (owner directive, 2026-10-14)
+
+A proposer sees challenger output only after the verifier has adjudicated it. The
+coordinator releases challenger files to a proposer only inside a verified challenge
+packet: the challenge together with the verifier's adjudication of it. Raw, partial or
+first-pass challenger output is never released to a proposer, including by owner or
+coordinator exception. Transported challenger output is public in this repository
+before adjudication, so the proposer must not open the repository, its branches, forks or
+mirrors, and platform runtimes should block those routes where their controls allow. An
+earlier exposure stays on record under the contamination procedure; it is not undone by
+later adjudication and does not authorize further reads.

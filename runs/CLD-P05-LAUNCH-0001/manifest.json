@@ -4,7 +4,7 @@
   "role": "coordinator",
   "platform": "Claude",
   "stage": "launch_readiness",
-  "status": "amended_and_smoke_tested_ready_to_merge",
+  "status": "amended by CLD-P05-AMEND-0001; isolation smoke run 6 passed",
   "input_commit": "7c9771196db41fab1593ceead9ebb93d935a3508",
   "packet_sha256": "ff20816f623585d4bf7ba7b13d79db58aab90a2e947cd05c719cd93f3574602d",
   "model": "claude-opus-5-5",
@@ -32,7 +32,10 @@
     "runs/CLD-LAB-0001/lab_runner.py",
     "runs/CLD-LAB-0001/remote_driver.sh",
     "runs/CLD-LAB-0001/e2e_test.py",
-    "runs/CLD-LAB-0001/e2e-result.json"
+    "runs/CLD-LAB-0001/e2e-result.json",
+    "runs/CLD-P05-LAUNCH-0001/repo_guard.py",
+    "runs/CLD-P05-LAUNCH-0001/isolation-smoke-run6-amendment.json",
+    "runs/CLD-P05-AMEND-0001/manifest.json"
   ],
   "source_ids": [],
   "sources_consulted": [
@@ -62,7 +65,7 @@
     "model_observed": "claude-opus-5-5",
     "helper_model_observed_in_tests": "claude-haiku-5-5 (billed for internal helper work, such as WebFetch page processing, in both isolation runs)",
     "session_id_planned": "76d0bf61-78f7-4b93-a557-7c29f1a2cbe8",
-    "session_state": "first proposal complete; paused pending runner governance and P3-P5 revision",
+    "session_state": "R1b output frozen for challenger review (runs/CLD-P05-FROZEN-0002, PR #26; exposure record in runs/CLD-P05-AMEND-0001); policy amendment CLD-P05-AMEND-0001 delivered; receipt pending",
     "auth_observed": {
       "authMethod": "claude.ai",
       "apiProvider": "firstParty",
@@ -75,7 +78,8 @@
     "tools_allowlist": "Bash,Read,Write,Edit,WebSearch,WebFetch",
     "launcher": "runs/CLD-P05-LAUNCH-0001/launch.sh",
     "settings": "runs/CLD-P05-LAUNCH-0001/launch-settings.json",
-    "settings_sha256": "e628d5f72faa76d06c7922e7d673e8d8e4ee7be2a175fdcf27958715988fc3d8"
+    "settings_sha256": "a4cd4f1da062b221ee1b0b34a3c760c87fa12b9bee6aa1faaaf3be98c1b65516",
+    "launcher_flags_note": "From CLD-P05-AMEND-0001, --safe-mode is replaced by DISABLE switches so that the repository guard hook runs; see runs/CLD-P05-AMEND-0001/manifest.json."
   },
   "host_model_catalog": {
     "observed_on": "Claude desktop host model list exposed to the coordinator session",
@@ -106,7 +110,7 @@
     "agent_usage": "Existing Claude subscription (Pro) only; no automatic retries."
   },
   "isolation_smoke": {
-    "state": "passed: run 5 against the final settings e628d5f72faa76d06c7922e7d673e8d8e4ee7be2a175fdcf27958715988fc3d8",
+    "state": "passed: run 6 against the amended settings a4cd4f1da062b221ee1b0b34a3c760c87fa12b9bee6aa1faaaf3be98c1b65516",
     "script": "runs/CLD-P05-LAUNCH-0001/isolation_smoke.py",
     "runs": [
       {
@@ -133,6 +137,11 @@
         "result": "runs/CLD-P05-LAUNCH-0001/isolation-smoke-run5-lab-results.json",
         "configuration": "same final settings; harness with the parser fix and R2 expecting denial",
         "outcome": "All 26 step checks and all 13 environment checks passed: claude-opus-5-5 (claude-haiku-5-5 helper) in dontAsk mode with exactly the six allowed tools, no MCP servers or third-party plugins, auto-memory off, reads outside working directories and listed sensitive paths denied, lab results readable but not writable, packet unmodified, Bash network limited to GitHub and arXiv, WebFetch denied outside GitHub and arXiv."
+      },
+      {
+        "result": "runs/CLD-P05-LAUNCH-0001/isolation-smoke-run6-amendment.json",
+        "configuration": "amended settings (sha256 a4cd4f1da062b221ee1b0b34a3c760c87fa12b9bee6aa1faaaf3be98c1b65516): open WebFetch, guard hook, round inbox; no --safe-mode; DISABLE switches; fixture outside any path the guard blocks",
+        "outcome": "All 41 steps and all 19 environment checks passed. The guard blocked and logged six calls: three WebFetch, one WebSearch and two Bash. Self-freeze and transmission worked inside the sandbox; the other inboxes stayed unreadable and the own inbox unwritable; the AGENTS.md probe stayed silent."
       }
     ],
     "settings_load_probe": "launch-settings.json loaded from its repository path; a Bash read of ~/.claude was denied by the sandbox."
@@ -144,5 +153,14 @@
     "Pending: merge of PR #14. Under PR #16, intermediate governance PRs need passing automated checks, not a human CONFIRM."
   ],
   "experiment_authorization": false,
-  "property_check_authorization": true
+  "property_check_authorization": true,
+  "amendments": [
+    {
+      "run": "CLD-P05-AMEND-0001",
+      "date": "2026-10-14",
+      "settings_sha256_before": "e628d5f72faa76d06c7922e7d673e8d8e4ee7be2a175fdcf27958715988fc3d8",
+      "settings_sha256_after": "a4cd4f1da062b221ee1b0b34a3c760c87fa12b9bee6aa1faaaf3be98c1b65516",
+      "amendment_sha256": "4ea6204028f4c279f3f4f955af889a70fa74ce5da334c87dc844cf0d288b68c5"
+    }
+  ]
 }

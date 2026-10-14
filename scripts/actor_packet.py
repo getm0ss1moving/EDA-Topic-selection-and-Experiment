@@ -7,7 +7,8 @@ import re
 import subprocess
 from pathlib import Path
 
-COMMON = {'docs/SELF-SUBMISSION.md', 'scripts/role_submission.py', 'templates/topic/verification.md', 'AGENTS.md', 'harness/ONBOARDING.md', 'config/research-brief.json',
+COMMON = {'docs/SELF-SUBMISSION.md', 'scripts/role_submission.py', 'docs/AUTO-ROUND.md', 'scripts/round_transmit.py',
+          'config/round-transport.json', 'templates/topic/verification.md', 'AGENTS.md', 'harness/ONBOARDING.md', 'config/research-brief.json',
           'config/launch-release.json',
           'docs/CHARTER.md', 'docs/WORKFLOW.md', 'docs/EVIDENCE.md', 'docs/ISOLATION.md',
           'docs/EXPERIMENTS.md', 'docs/FORMATS.md', 'docs/GITHUB.md', 'templates/run.json',

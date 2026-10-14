@@ -41,3 +41,5 @@ Branch protection keeps both required status checks but sets its unconditional a
 ## Actor-owned freeze
 
 Follow `docs/SELF-SUBMISSION.md`. A content-addressed release is a frozen record, not acceptance or an experiment authorization. New revisions create new releases; old packets stay unchanged. Verifiers use the compact table template plus machine-readable `verification.json`. No narrative report is required.
+
+Within a round, roles may exchange releases through local inboxes instead of GitHub; the releasing role transmits after freezing and the coordinator publishes the round afterwards. See `docs/AUTO-ROUND.md`.
