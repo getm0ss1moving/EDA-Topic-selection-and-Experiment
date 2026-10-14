@@ -1,0 +1,67 @@
+{
+  "run_id": "DSK-C05-SESSION-0001",
+  "session_id": "04fe4881-0c22-4292-ac03-ab73f00eaf29",
+  "role": "coordinator",
+  "platform": "DeepSeek",
+  "stage": "session_registration_and_challenge_transport",
+  "status": "ready_for_independent_review",
+  "input_commit": "4b666c04b0eaa089934f736fab4db2309ce7d36a",
+  "transport_base_commit": "22002d2",
+  "model": "deepseek-flash[1m]",
+  "host": "macOS arm64 (Darwin 25.5.0)",
+  "operator": "getm0ss1moving",
+  "started_at_utc": "2026-10-13T17:45:00Z",
+  "completed_at_utc": "2026-10-13T17:54:25Z",
+  "clock_note": "The host clock was 54000 s behind and was resynchronized during 2026-10-13; at transport time it matched the api.deepseek.com Date header. All timestamps in this run are true UTC; intermediate event times (session onboarding and research) are reconciled and marked approximate in registration.md.",
+  "output_paths": [
+    "runs/DSK-C05-SESSION-0001/manifest.json",
+    "runs/DSK-C05-SESSION-0001/registration.md",
+    "runs/DSK-C05-SESSION-0001/received/readiness.json",
+    "runs/DSK-C05-SESSION-0001/received/first-pass-plan.md",
+    "runs/DSK-C05-SESSION-0001/received/submission-packet.md",
+    "runs/DSK-C05-SESSION-0001/received/outbox-hashes.txt",
+    "candidates/EDA-0002/challenges.md",
+    "candidates/EDA-0002/sources-challenger.json",
+    "candidates/EDA-0002/findings-challenger.md",
+    "candidates/EDA-0002/search-log-challenger.md",
+    "candidates/EDA-0002/dossier.json",
+    "config/roles.json",
+    "config/agents-deepseek.json"
+  ],
+  "artifact_sha256": {
+    "candidates/EDA-0002/challenges.md": "751ed4ec860da4e27d0b9b51a24fee746ec9703efc4f1273b8a4dd5ce8893a8d",
+    "candidates/EDA-0002/sources-challenger.json": "d0d3d39d31efff63056c95bf589a51abc88c9529f6e2299631843e35869b420c",
+    "candidates/EDA-0002/findings-challenger.md": "658803fab83efa9d84fe4ff9ce016324e83f213528ede46714a33fb44a3c02ed",
+    "candidates/EDA-0002/search-log-challenger.md": "2f9f561ed41d001561744ab3e8bc9583527844b4d515999ad6016258802ba8a0",
+    "runs/DSK-C05-SESSION-0001/received/readiness.json": "cc3888e56f66002b8509a532540ccb02dd476fe3dce6a4f6af39047572930f1c",
+    "runs/DSK-C05-SESSION-0001/received/first-pass-plan.md": "dc3939f131e55ea7bd4bb74072f6c3f2c19a8bc1417b3986635a3daa681afaac",
+    "runs/DSK-C05-SESSION-0001/received/submission-packet.md": "c79d75466df9c1225aa5b45e178aed380bdf58d5275058ffba85a74bda5246aa",
+    "source_outbox_challenges_sha256": "b57953a2e5aab67677dacc2cd9caee3ce0edef58070f1a85588e29c03407e225"
+  },
+  "source_ids": [
+    "Outbox: /Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/challenger-release-20261013/DeepSeek-C05-TIMING (eight files, hashes in outbox-hashes.txt)",
+    "runs/DSK-C05-SESSION-0001/received/submission-packet.md (the session's transfer instruction, verifier brief and sequencing notes)",
+    "config/launch-release.json, config/roles.json, candidates/EDA-0002 at 22002d2"
+  ],
+  "fidelity_assertions": [
+    "OBJ-001, OBJ-002, open-question and suggestion blocks in the transported challenges.md are byte-identical to the source outbox file; asserted programmatically during assembly.",
+    "All other transported or archived files were copied byte-for-byte and re-hashed against the session's outbox-hashes.txt and the submission packet manifest at transport time.",
+    "No objection or evidence text was edited; the coordinator added only the repository template skeleton and transport metadata."
+  ],
+  "contamination_events": [
+    "None. The challenge content was written from public sources and the frozen packet only; forecast.json was withheld at stage initial and the role states no forecast was exposed.",
+    "The session-era disclosures (its own sandbox configuration rendering deny-rule path names; the /model output line) were recorded in received/readiness.json and, for the earlier registration attempt, in the superseded PR #17; they name only public repository layout and change nothing here."
+  ],
+  "independence_attestation": "Coordinator transport only. The coordinator verified hashes and fidelity mechanically, read the session's released outputs for receipt, and did not read the session transcript, other actors' outputs or private notes. It authors no scientific content and approves nothing; adjudication of the objections belongs to a verifier.",
+  "open_owner_decisions": [
+    "The proposer's round-1 revision can be frozen independently of this packet (harness item 12 gates blocking, not freezing).",
+    "A pre-freeze fix of OBJ-001 is the proposer's and owner's call; it is not required by the challenger.",
+    "When the successor challenger Codex-C05-TIMING-R2 starts, decide whether this record is folded into the dossier or archived; the challenger recommends folding on the record."
+  ],
+  "experiment_authorization": false,
+  "next_steps": [
+    "Independent review and merge of this transport.",
+    "Verifier adjudication of OBJ-001/OBJ-002 against the pinned sources (the submission packet contains the decisive tests).",
+    "Succession: the D05 challenger seat continues with Codex-C05-TIMING-R2 per the owner-authorized handoff; the DeepSeek platform's standing role after this round is recorded in the platform succession change."
+  ]
+}

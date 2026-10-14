@@ -1,0 +1,625 @@
+{
+  "schema": "eda-challenger-sources/1",
+  "actor_id": "DeepSeek-C05-TIMING",
+  "role": "challenger",
+  "topic": "EDA-0002",
+  "packet_hash": "e6c53f61ca815c2e69c1ab2f68cb2c667290f634cc49ea4ff5900d8e535332cf",
+  "input_commit": "4b666c04b0eaa089934f736fab4db2309ce7d36a",
+  "written_utc": "2026-10-13T11:23:14Z",
+  "id_policy": "New records use C-A## and never overwrite the proposer's SRC-### records. Re-reads of proposer sources are recorded as access updates that reference the original ID.",
+  "records": [
+    {
+      "id": "C-A01",
+      "type": "access_update",
+      "updates": "SRC-012",
+      "title": "A Fast Approach for Static Timing Analysis Covering All PVT Corners (Onaissi, Taraporevala, Liu, Najm)",
+      "url": "https://www.eecg.utoronto.ca/~najm/papers/dac11-sari.pdf",
+      "source_type": "paper (author-hosted PDF of the DAC 2011 camera-ready)",
+      "published": "2011 (DAC 2011; author-hosted PDF carries an IEEE PDFeXpress stamp dated 2011-04-04)",
+      "retrieved": "2026-10-12 (UTC session window ~20:20Z-20:45Z; harness artifact ID of the downloaded copy indicates ~20:20Z)",
+      "retrieval_route": "Harness WebFetch, first the author-hosted PDF directly, then the same URL through a third-party text-extraction proxy (see C-A02), because the session cannot extract PDF text locally and cannot read the harness's saved binary.",
+      "access": "full",
+      "access_caveat": "Full text was read through an extraction proxy plus question-driven passes. Section/table locators and claims are reliable at that granularity; exact character-level wording of quoted fragments is not guaranteed and remains for the verifier to confirm against the original PDF or the publisher record.",
+      "proposer_previous_access": "metadata (proposer recorded SRC-012 as 'DECISION-CRITICAL AND NOT INSPECTED'; four fetch attempts timed out)",
+      "venue_metadata": {
+        "venue": "48th Design Automation Conference (DAC 2011), pp. 777-782",
+        "doi": "10.1145/2024724.2024899",
+        "ieee_xplore": "document 5981998",
+        "authors": "Sari Onaissi (University of Toronto), Feroze Taraporevala (Synopsys), Jinfeng Liu (Synopsys), Farid N. Najm (University of Toronto)",
+        "funding_statement_seen": "Synopsys and NSERC (per the paper's acknowledgement, as returned by the extraction pass)",
+        "metadata_access": "venue/DOI/author metadata came from WebSearch result summaries (Q-C01); the author list and acknowledgement detail also appeared in the extracted full text"
+      },
+      "structure_read": [
+        "§1 Introduction (motivation: corner count grows; SSTA alternatives; proposed flow; states the approach targets non-final STA runs)",
+        "§2 Background: §2.1 slack equations for setup (Eq. 2) and hold (Eq. 4); §2.2 corner dominance, endpoint coverage, dominant set, dominance margin, with a 4-endpoint/4-corner example",
+        "§3 Experimental setup: 15 industrial 45nm circuits, 5 reported (T1-T5, 916K-1,419K instances); 15 corners = 3 device settings x 5 interconnect settings; setup/hold derates (+/-5%); CRPR applied; top-25% worst-slack endpoints analyzed; Table 5 clock periods 4, 3.9, 2.2, 3, 1 ns",
+        "§4 Arrival-time dominance: c14/c15 dominate maximum arrivals, c1/c2 dominate minimums",
+        "§5 Slack dominance: §5.1 setup coverage of the slow set CM={c14,c15} (Table 8) at margins 0/10/20/30 ps; §5.2 hold coverage varies per circuit across candidate sets Cm, Cb, Cw (no small fixed set suffices)",
+        "§6 Hold method: §6.1 anchor corner full run plus partial (clock-network-only) runs and the skew-change estimate (Eqs. 6, 8, 9, 10) with error term (Eq. 11); §6.2 accuracy (Table 11), SI effects (Table 12), conservatism (Table 13), runtime (Table 14)",
+        "§7 Conclusion; §8 References (8 entries)"
+      ],
+      "findings_supported": [
+        "F-1 (kill-criterion K1 assessment: not triggered)",
+        "F-2 (setup-coverage, hold-estimate, partial-run cost and benchmark-composition observations)"
+      ],
+      "key_observations": [
+        "Setup result is an empirical coverage measurement with a dominance margin, presented as a reasoned expectation, not a proof or a certificate: worst-case setup slacks are 'expected to occur' at the corners with the largest arrivals (§5.1), and coverage of the two slow corners is 99.9% at a 30 ps margin, 97.9% at 10 ps, with the weakest circuit at 87.6% at 0 ps (Table 8).",
+        "Hold: the estimate replaces the true slack change by the clock-skew change between the anchor corner and a partial (clock-network-only) corner (Eqs. 8-10); the remaining error is the datapath-delay change plus the required-hold-time change (Eq. 11); usefulness requires e_d > 0; no exact refinement or fallback is described and the multi-startpoint remedy is dismissed (§6.1).",
+        "Reported accuracy of the hold estimate: coverage 'very close to' the full set with over 98.6% for T2/T4/T5 at a 5 ps margin (Table 11); with SI, above 98.4% for T1-T4 but 92.1% for T5 (Table 12); conservatism means about -1 to -2 ps with worst cases about -26 to -38 ps, described as 'can be conservative by up to -40ps' (§6.2.3, Table 13).",
+        "Runtime: partial runs 9.0-25.3 s against full runs 490.9-2466.6 s; speedups 2.4x-3.6x including per-run overhead, over 4.1x (up to 4.7x) when overhead is shared (Table 14). The clock-only partial run is therefore roughly 1-5% of a full run per corner on this industrial 45nm setup.",
+        "The paper makes no exactness or guarantee claim anywhere: 'guaranteed' appears only negatively (any set guaranteed to bound hold slacks must include a large number of corners); 'exact' appears only to say that capturing the exact worst case, or knowing the exact slack change, would require full runs; the method is stated to target non-final STA runs, with additional corners added at sign-off.",
+        "Corners vary interconnect (RC and C) as well as device settings: 3 device x 5 interconnect settings. Device settings are best/typical/worst with temperature inversion excluded but described as extendable."
+      ],
+      "limitations": [
+        "Industrial 45nm circuits and an unnamed commercial flow; not reproducible on the packet's open toolchain.",
+        "The extraction route introduces a fidelity risk for quoted wording; section-level structure and numbers were consistent across four independent question passes, but this is not the same as reading the PDF myself.",
+        "Results are restricted to the top-25% worst-slack endpoints and to flop-to-flop paths (ports excluded), so coverage percentages are not statements about all endpoints of the designs.",
+        "Copyright: only bounded fragments are stored; the full text is not copied into this outbox."
+      ]
+    },
+    {
+      "id": "C-A02",
+      "type": "access_route",
+      "title": "Third-party text-extraction proxy used to read the author-hosted SRC-012 PDF",
+      "locator": "https://r.jina.ai/<original-url>",
+      "access": "full (transformative extraction)",
+      "retrieved": "2026-10-12 ~20:3xZ",
+      "purpose": "The session cannot extract PDF text locally (see search-log-challenger.md: shell network filtered; harness-saved binaries unreadable to me). This route returns the PDF's text so the method can be inspected.",
+      "risk_and_mitigation": "A third-party service sits between the original document and me, so character-level fidelity is not guaranteed. Mitigation: four independent question passes over the same extraction produced mutually consistent structure, equations, table numbers and conclusion; quotes are kept short and attributed by section; the verifier is asked to confirm exact wording against the original. Only public material was requested; no private or unpublished content was sent.",
+      "used_for": ["C-A01"]
+    },
+    {
+      "id": "C-A03",
+      "type": "publisher_record",
+      "title": "ACM Digital Library record for 10.1145/2024724.2024899",
+      "url": "https://dl.acm.org/doi/abs/10.1145/2024724.2024899",
+      "access": "metadata (HTTP 403 to the fetch tool; nothing read)",
+      "retrieved": "2026-10-12 ~20:4xZ",
+      "limitations": "Blocked, not bypassed. Recorded so the verifier knows this route was tried and failed."
+    },
+    {
+      "id": "C-A04",
+      "type": "publisher_record",
+      "title": "IEEE Xplore record 5981998 for the same paper",
+      "url": "https://ieeexplore.ieee.org/document/5981998",
+      "access": "metadata (page returned empty to the fetch tool; nothing read)",
+      "retrieved": "2026-10-12 ~20:4xZ",
+      "limitations": "Blocked, not bypassed. Same failure mode the proposer recorded for IEEE Xplore 10419016 (SRC-024)."
+    },
+    {
+      "id": "C-A05",
+      "type": "bibliographic_index",
+      "title": "Search-engine summaries confirming venue, pages and the companion paper",
+      "url": "(search result summaries for Q-C01; Mendeley catalogue record 47f14554-b6e5-3aa9-a80b-f91f4e41225d; DBLP venue index)",
+      "access": "metadata",
+      "retrieved": "2026-10-12 ~20:2xZ",
+      "supports": [
+        "DAC 2011, pp. 777-782, DOI 10.1145/2024724.2024899, IEEE document 5981998",
+        "Companion earlier work: S. Onaissi, F. N. Najm, 'A linear-time approach for static timing analysis covering all process corners', IEEE TCAD 27(7):1291-1304, 2008 (the proposer's SRC-013)"
+      ],
+      "limitations": "Index summaries only; they are discovery aids and cannot by themselves decide novelty or method content."
+    },
+    {
+      "id": "C-A06",
+      "type": "access_update",
+      "updates": "SRC-013",
+      "title": "A Linear-Time Approach for Static Timing Analysis Covering All Process Corners (Onaissi, Najm)",
+      "url": "https://www.eecg.utoronto.ca/~najm/papers/tcad08-sari.pdf",
+      "source_type": "paper (author-hosted PDF of the IEEE TCAD 2008 journal version)",
+      "published": "2008 (IEEE TCAD vol. 27, no. 7, pp. 1291-1304, July 2008; DOI 10.1109/TCAD.2008.923635; ICCAD 2006 conference version pp. 217-224, DOI 10.1145/1233501.1233545)",
+      "retrieved": "2026-10-13 (UTC session window; read through the extraction proxy route of C-A02)",
+      "access": "full",
+      "access_caveat": "Same proxy-extraction fidelity caveat as C-A01: section-level content and claims are reliable at that granularity; exact wording remains for the verifier to confirm.",
+      "proposer_previous_access": "metadata (SRC-013 was 'Not inspected')",
+      "findings_supported": ["F-3"],
+      "key_observations": [
+        "Delay, arrival time and slew are modelled as affine linear functions of normalized process parameters in [-1, +1]; each parameter takes the value -1 or +1, so the parameter space reduces to 2^n discrete corners and the maximum is sought only at corners. Combinational circuits and setup-type constraints are the focus.",
+        "The internal max operation is proven conservative by construction (a hyperplane ceiling over its inputs; the paper states it never wants to underestimate maximum delay or slew at any process corner).",
+        "End-to-end, however, the result is an approximation, not a rigorous bound: the linearized interconnect delay, slew and effective-capacitance inputs 'are not conservative and might underestimate values at certain corners'. This is stated by the authors as a known limitation.",
+        "Accuracy is empirical (ISCAS '85 benchmarks, 90nm library), with a reported runtime speedup of roughly six to seven times over corner analysis and O(mn) complexity against the corner approach's exponential dependence on n.",
+        "No slack formulation, and no exact refinement or per-corner fallback: the minimum-overestimation hyperplane would need an exponential-complexity linear program and is rejected in favour of a linear-time heuristic; accuracy is verified afterwards against exhaustive corner runs.",
+        "Hold is stated to be applicable as is, but the paper develops setup (maximum delay and slew) and shows minimum delay and slew charts; per-corner slack decisions are not its object."
+      ],
+      "limitations": [
+        "Benchmarks are ISCAS '85 with a 90nm library; no industrial designs.",
+        "A soundness claim about the internal max operator does not transfer to the reported delay values, which the paper itself says can be underestimated at some corners.",
+        "Read through the extraction proxy; the two-sentence non-conservatism statement is the load-bearing quote and should be confirmed by the verifier."
+      ]
+    },
+    {
+      "id": "C-A07",
+      "type": "paper",
+      "title": "Design for Variability and Signoff Tips (A. Tetelbaum, Abelite Design Automation)",
+      "url": "https://anysilicon.com/wp-content/uploads/2014/10/Signoff_Tips_paper_Feb_2014a.pdf",
+      "source_type": "vendor white paper (same author and host as the proposer's SRC-019)",
+      "published": "February 2014 (footer 'Abelite 2014')",
+      "retrieved": "2026-10-13 (extraction proxy route)",
+      "access": "full",
+      "access_caveat": "Proxy-extracted; short quotes only.",
+      "findings_supported": ["F-4"],
+      "key_observations": [
+        "Judging a corner 'redundant or dominated' from a single sub-path's max or min is unsafe: minimum slack combines launch, data and capture sub-path delays, and the paper names the concrete pattern SS + Fast-Metal as required for setup when launch and data paths are cell-delay dominated while the capture path is metal-delay dominated; the mirror pattern FF + Vmax + Slow-Metal is also named. It warns of 'risk of missing violations in paths with rare bad structures'.",
+        "Delay is not monotone in temperature: 'sub-path delay is not a monotonic function of T' (temperature inversion), and extreme delays may occur at any temperature, so it recommends more than two or three temperature corners at final signoff.",
+        "Compensation practice for reduced corner counts: start with increased OCV/AOCV derates to find potential violators, then re-run those violators with regular derates to filter false ones; use sufficiently large margins.",
+        "No formal guarantee is claimed for corner removal; the paper states the corner-based approach 'does not guarantee against a silicon failure'."
+      ],
+      "limitations": [
+        "Vendor white paper promoting the author's statistical signoff methods; it supports statements about practice and failure modes, not controlled measurements.",
+        "Predates the pilot by a decade; used for the qualitative structure of the failure mode and the absence-of-guarantee statement."
+      ]
+    },
+    {
+      "id": "C-A08",
+      "type": "practitioner_article_secondary",
+      "title": "MMMC corner pruning: dominance pruning under the PVT x mode combinatorial explosion, and missed-signoff risk control (translated title), 极客工场",
+      "url": "https://geek-doc.cn/eda/corner-pruning-mmmc-reduction",
+      "source_type": "secondary explainer article (Chinese-language site, no named author)",
+      "published": "2026-09-30 (page footer last update)",
+      "retrieved": "2026-10-13",
+      "access": "full",
+      "findings_supported": ["F-4"],
+      "key_observations": [
+        "Defines scenario A dominating B when no path is better at A than at B, so that B's violations are subsumed by A and B can be pruned from the setup signoff list.",
+        "Gives three levels of evidence: (1) library delay monotonicity — a scripted scan of Liberty delay tables showing corner A at least as slow as B for every cell, described as the strongest and cheapest test and treated as a mathematical proof at the cell level; (2) RC-pairing monotonicity, a comparability condition between library and parasitic corners; (3) path-structure sampling, explicitly not a proof but engineering confidence, requiring recorded sample size.",
+        "States that temperature inversion and multi-voltage domains push corners into the non-provable third tier.",
+        "Reports a representative mid-size SoC scenario list shrinking about 5:1 (roughly 320 to 60) and recommends auditable per-pruned-scenario records, automatic re-expansion when a backbone corner shows near-zero slack (|slack| under 30 ps), and a protected golden full-corner re-run before tapeout."
+      ],
+      "limitations": [
+        "Secondary source with no named author; per docs/EVIDENCE.md it can guide discovery but cannot decide novelty or soundness.",
+        "Its claim that cell-level monotonicity is a proof is about the cell level only; C-A07 shows why cell-level dominance does not automatically give slack-level dominance. The article does not resolve that gap.",
+        "Used only as a lead that dominant-corner pruning is practitioner knowledge; a primary source must be found before any objection relies on it."
+      ]
+    },
+    {
+      "id": "C-A09",
+      "type": "citation_index",
+      "title": "Forward citations of SRC-012 (Semantic Scholar graph API)",
+      "url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1145/2024724.2024899/citations?fields=title,year,venue,abstract&limit=100",
+      "source_type": "citation index query",
+      "retrieved": "2026-10-13",
+      "access": "metadata (titles, years, venues and abstracts of 23 citing works)",
+      "findings_supported": ["F-5"],
+      "key_observations": [
+        "23 citing works were returned. By title and abstract, they fall into: learned or statistical cross-corner prediction (One-for-All ICCAD 2024; FACT MLCAD 2024; Unobserved Corner DATE 2019; multi-corner timing macro modeling TCAD 2024; SI-aware wire timing prediction ASP-DAC 2025; several earlier ML OCV works); parallelism (CPU-GPU heterogeneous STA, TCAD 2023); mode merging (A timing graph based approach to mode merging, DAC 2015); library characterization (SetupKit ICCAD 2025); hold fixing and clock-skew work; and unrelated sensors/SoC papers.",
+        "No citing work, at title/abstract level, presents sound per-scenario certification with exact refinement against characterized-table semantics; the dominant theme is prediction without guarantees, which is consistent with the proposer's statement of the gap.",
+        "Shortlist that still deserves a full-text check: 'NIO: A fast and accurate verification method for PVT variations' (2014), 'A timing graph based approach to mode merging' (DAC 2015), and 'Circuit performance verification and optimization in the presence of variability' (2011)."
+      ],
+      "limitations": [
+        "Abstract-level only; cannot decide novelty. The proposer could not run this query (Semantic Scholar returned HTTP 429 during their session); it ran for me, so the proposer's forward-citation gap is now partially closed by a different session.",
+        "The API list is not guaranteed complete."
+      ]
+    },
+    {
+      "id": "C-A10",
+      "type": "access_upgrade",
+      "updates": ["SRC-012", "SRC-013"],
+      "title": "Direct read of the SRC-012 and SRC-013 PDFs from local bytes (fidelity upgrade over the extraction-proxy reads C-A01/C-A06)",
+      "url": "https://www.eecg.utoronto.ca/~najm/papers/dac11-sari.pdf ; https://www.eecg.utoronto.ca/~najm/papers/tcad08-sari.pdf",
+      "source_type": "paper (author-hosted PDFs; same bytes as the human-provided copies in EDA-source-downloads/2026-10-13)",
+      "retrieved": "2026-10-13 ~11:35-11:45Z (local machine time 19:35-19:45)",
+      "retrieval_route": "Shell curl with the host declared in the command's allowed_domains (the session egress proxy then permits it), plus a dependency-free PDF text extractor written for this session (Flate + LZW + TJ-kerning). No third-party extraction service was used for these reads.",
+      "access": "full (local bytes, direct extraction)",
+      "provenance_verification": "SHA-256 of the downloaded DAC 2011 PDF = 399a24613a4d5872d70708546046dbfdefe50d0ccca87ea052a2879f38871072 and of the TCAD 2008 PDF = 666cd07f37482f3abd3dfc85f83705b1509387eb810e914145d4913633fa1f0b. Both equal the hashes recorded in the human's EDA-source-downloads/2026-10-13/PROVENANCE.md, so the human's local copies, the upstream author-hosted files, and the bytes I read are the same.",
+      "findings_supported": ["F-1", "F-2", "F-3"],
+      "verified_quotes": [
+        "SRC-012: 'the worst-case setup slacks are expected to occur at the corners which cause the largest signal arrival times, i.e. the slow corners' (the next sentence names the industrial practice of verifying setup at those corners only).",
+        "SRC-012: 'However, such a solution is not necessary mainly because the estimates of worst-case slack from s will be close enough to the actual worst-case slacks and will still provide good endpoint coverage as our results will show.'",
+        "SRC-012: 'The results also show that estimates can be conservative by up to 40ps (T3-T5).'",
+        "SRC-012: the dominance margin is a coverage relaxation: 'an endpoint is also considered covered if the estimated worst-case slack is optimistic but within the dominance margin from the actual worst-case slack'.",
+        "SRC-012: 'any set that is guaranteed to bound the hold slacks of a circuit has to include a large number of corners' (guaranteed used only negatively; no exactness claim anywhere in the paper).",
+        "SRC-012 Table 8 (setup slack coverage of C_M, margins 0/10/20/30 ps): T4 = 87.6% at 0 ps, 97.9% at 10 ps, 99.9% at 30 ps; other circuits higher.",
+        "SRC-012 Table 12 (coverage with SI): 'it drops to 92.1% for T5'.",
+        "SRC-012 Table 13 (conservatism): means about 0 to -2 ps, worst cases about -26 to -39 ps.",
+        "SRC-012 Table 14 (runtime): L full 490.9-2466.6 s; L partial 9.0-25.3 s; reported speedups 2.4x-3.6x simple, 4.1x-4.7x shared.",
+        "SRC-012 setup results are restricted to 'the top-25% of endpoints with the worst slacks, regardless of whether they fail any timing constraints or not'.",
+        "SRC-013: 'the linearized interconnect delay, slew, and effective capacitance expressions are not conservative and might underestimate values at certain corners. This means that, although our max operation is conservative with respect to its inputs, the inputs themselves might not be conservative with respect to the true values. Finding a conservative linear approximation for interconnect delay, slew, and effective capacitance under process variability is beyond the scope of this paper, and for now, this remains a limitation of our method.'",
+        "SRC-013 conclusion: 'All-corner timing analysis in linear time has been the holy grail in timing analysis for some time... The error is conservative in most cases.'"
+      ],
+      "limitations": [
+        "Residual extraction caveat: my extractor drops some ligatures/symbols and can misplace a space (quotation marks appear as mojibake in the raw text). Wording above was read from the extracted text and cross-checked across occurrences; it is not a page image.",
+        "This record upgrades access fidelity only; the sources are the same ones recorded in C-A01/C-A06."
+      ]
+    },
+    {
+      "id": "C-A11",
+      "type": "paper_deck",
+      "title": "The TAU 2018 Contest (Timing Contest on Path Reporting), presentation deck",
+      "url": "http://www.tauworkshop.com/2018/slides/TAU18_Contest.pdf",
+      "source_type": "workshop contest deck (primary: the contest organizers' own slides)",
+      "retrieved": "2026-10-13 ~11:35Z (local bytes; SHA-256 f043f70659eebb310e9be41d628df3cb5b167761b82cc592c94a9684e3256397, equal to PROVENANCE.md)",
+      "access": "full (direct extraction)",
+      "findings_supported": ["F-6"],
+      "key_observations": [
+        "Contest topic: 'Timing Contest on Path Reporting' - report generation over a pre-built timing graph, with from/through/to query support; graph-based analysis only.",
+        "Benchmarks: TAU 2015 designs vga_lcd (139.5K gates) and leon3mp_iccad (1247.7K gates); about 50K paths per testcase pre-generated by a commercial timer; special constant-delay Liberty models were used 'to reduce delay-calculation impact'.",
+        "Scoring: accuracy 30%, runtime 30%, memory 20%, documentation 20%.",
+        "No multi-corner/multi-scenario problem: corners appear only as 'Early and Late Libraries' supplied as inputs. Nothing asks for scenario coverage, corner reduction or a guarantee across PVT.",
+        "Resolves part of the proposer's U8 (CLM-014 'TAU 2018 and 2019 topics unresolved')."
+      ],
+      "limitations": ["Deck, not a paper; contest scope statements are authoritative but terse."]
+    },
+    {
+      "id": "C-A12",
+      "type": "paper_deck",
+      "title": "TAU 2019 Contest: A Parallel Closure (Design Optimization Contest), presentation deck",
+      "url": "http://www.tauworkshop.com/2019/slides/TAU%202019%20Contest.pdf",
+      "source_type": "workshop contest deck (primary: the contest organizers' own slides)",
+      "retrieved": "2026-10-13 ~11:35Z (local bytes; SHA-256 5df07bbd5ec081139e993a3038ad52263afbfbb62f645a9c390f869c43af085e, equal to PROVENANCE.md)",
+      "access": "full (direct extraction)",
+      "findings_supported": ["F-6"],
+      "key_observations": [
+        "Contest topic: 'Design Optimization Contest' - an optimizer applying buffer insertion/deletion and buffer re-sizing, evaluated by a timer (OpenTimer); the stated goals are to explore incrementality and parallelism of optimizations inside static timers.",
+        "Benchmarks based on TAU 2015: s1196 (641), systemcdes (3441), usb_funct (15743), vga_lcd (139529), leon2_iccad (795371), leon3mp_iccad (659017) gates; Nangate FreePDK45 Generic Open Cell Library with area and power information; several designs are flagged '(no spef)'.",
+        "Inputs include 'Early and Late Libraries' and SPEF; result tables are split into fast-corner and typical-corner columns.",
+        "Scoring: Performance (max clock frequency) 100, Power 50, Area 50, Runtime 70, Memory 30, Documentation 100 (400 total).",
+        "No part of the contest problem asks for multi-corner scenario coverage, reduction, screening or a soundness guarantee across PVT; the multi-library structure is an input-format feature (early/late for min-max analysis), not a scenario-reduction objective.",
+        "Resolves the rest of U8. Side-product: this benchmark package is a candidate source of multi-library, multi-design data (6 designs, Nangate45, SPEF) for the pilot's dataset gap (CLM-013), subject to licence and to the caveat that early/late libraries are not separate PVT scenarios."
+      ],
+      "limitations": ["Deck only; no corner count per benchmark; whether 'fast' and 'typical' are two characterized PVT corners or two analysis views is not stated and must not be assumed."]
+    },
+    {
+      "id": "C-A13",
+      "type": "repository_tree",
+      "title": "Pinned OpenSTA source tree at commit e01d3f163f483f233db00410b6515a767a6ca03b (full tarball); independent verification of the proposer's recorded file hashes and line locators",
+      "url": "https://codeload.github.com/The-OpenROAD-Project/OpenSTA/tar.gz/e01d3f163f483f233db00410b6515a767a6ca03b",
+      "source_type": "source repository (tarball of the pinned commit; C++/Tcl, GPL-3.0 dual-licensed)",
+      "retrieved": "2026-10-13 ~11:38Z",
+      "access": "full",
+      "findings_supported": ["F-7"],
+      "hash_verification": {
+        "dcalc/DmpCeff.cc": "edfadea5d90b929d42eb8aec739f0ca54f8e76d129584ea4a1c8e70b6599d186 = SRC-002 recorded hash, MATCH",
+        "liberty/TableModel.cc": "8326d308abda4e2c8dfd9ac63b9b4bc8d7480c039c9a24f19d4da730c43ed581 = SRC-007 recorded hash, MATCH",
+        "search/Sta.cc": "8da5e45c5820b92a8ea1c91ebea7ad84e6276aca64a121530fe49ed7a82d518f = SRC-003 recorded hash, MATCH",
+        "dcalc/DelayCalc.cc": "42c6e6512f65516a2a17557161c8d6a8d3920904b79f9e360b27691c66a1eb28 = SRC-004 recorded hash, MATCH",
+        "tcl/Sdc.tcl": "34677ea5e8af907dfe3bfef37f68906b2a7e376f302651042b3363ab3e70e5c0 = SRC-005 recorded hash, MATCH",
+        "search/Corner.cc": "68c644f032e26bd3a3828b552481863ec2457650b985e57e3d8c69e3c9b79f08 = SRC-006 recorded hash, MATCH",
+        "dcalc/GraphDelayCalc.cc": "d939d1bb23fd4154528b8847dc1b8b11924c98ad538af6a11988090545f53a2b = SRC-008 recorded hash, MATCH",
+        "search/Search.cc": "0e84880661dbc5953bb6e1cb88774f9227dbe6c6fa08fe555bff30bf7621014a = SRC-009 recorded hash, MATCH"
+      },
+      "locator_spot_check": [
+        "search/Sta.cc:411 = 'arc_delay_calc_ = makeDelayCalc(\"dmp_ceff_elmore\", this);' (exact); :417 is the GraphDelayCalc construction, not a second calculator default - the proposer's '(lines 411 and 417)' is a two-line citation for one fact and is accurate in substance.",
+        "dcalc/DelayCalc.cc:37-43 register unit ... ccs_sim (seven calculators) - confirmed.",
+        "tcl/Sdc.tcl:3663-3672 define_corners command - confirmed.",
+        "search/Corner.cc:88 makeCorners, :174 makeAnalysisPts, :310 dcalcAnalysisPtCount - all confirmed at the cited lines.",
+        "liberty/TableModel.cc:1012 Table2::findValue, :1443 TableAxis::findAxisIndex - both confirmed.",
+        "dcalc/DmpCeff.cc:556 DmpAlg::loadDelaySlew (cited as 555-605; the function name is on the following line), :915 DmpPi::gateDelaySlew, :969-974 the ceff<0 / ceff>c1+c2 throws, :1207 the DmpZeroC2 debug line, :1492 DmpCeffDelayCalc::gateDelay - all confirmed within one line.",
+        "search/Search.cc:1145 arrivalsChanged call, :1208 Search::arrivalsChanged; dcalc/GraphDelayCalc.cc:62 incremental_delay_tolerance_(0.0), :1070 the tolerance comparison - confirmed."
+      ],
+      "consequences": [
+        "The proposer's code OBSERVATIONS (CLM-006, CLM-007) are trustworthy at the citation level; challenges should target their inferences (P2-P5) rather than their reading of the code.",
+        "The earlier provenance gap ('upstream hashes could not be recomputed', search-log-challenger.md) is closed for these eight files."
+      ],
+      "limitations": ["Only the eight cited files were hash-checked; the rest of the tree was not audited for other paths (for example the delay-calculator variants that the proposal scopes out)."]
+    },
+    {
+      "id": "C-A14",
+      "type": "paper",
+      "title": "The Elmore Delay as a Bound for RC Trees with Generalized Input Signals (Gupta, Krauter, Tutuianu, Willis, Pileggi), DAC 1995",
+      "url": "https://cecs.uci.edu/~papers/compendium94-03/papers/1995/dac95/pdffiles/21_2.pdf",
+      "source_type": "paper (UC Irvine DAC compendium archive; the proposer's SRC-026, previously metadata only)",
+      "published": "1995 (DAC 1995; journal version TCAD 1997)",
+      "retrieved": "2026-10-13 ~11:36Z (local bytes; SHA-256 b7cf7a4c45370655dbcfa141fcf4b90e6f1558eee34289257dee521e52edc3e5, equal to PROVENANCE.md)",
+      "access": "full (direct extraction; the PDF's text streams are LZW-compressed, handled by this session's extractor)",
+      "findings_supported": ["F-8"],
+      "verified_quotes": [
+        "Abstract: 'we prove that the Elmore delay is an absolute upper bound on the 50% delay of an RC tree response. Moreover, we prove that this bound holds for input signals other than steps, and that the actual delay asymptotically approaches the Elmore delay as the input signal rise time increases. A lower bound on the delay is also developed using the Elmore delay and the second moment of the impulse response.'",
+        "COROLLARY 2: 'For an RC circuit with a monotonically increasing, piecewise-smooth input u(t) such that u'(t) is a unimodal symmetric function, [delay <= TD] holds for the output response y(t) at any node.'",
+        "COROLLARY 3: 'For a finite sized RC circuit with a monotonically increasing, piecewise-smooth input u(t) with rise-time tr, such that u'(t) is a unimodal symmetric function, as tr -> infinity, TD -> 50% delay.'",
+        "Section IV: 'It has been shown above that the Elmore delay is an upper bound on the 50% step response delay. However, when using the Elmore delay to estimate RC interconnect delays, the signal from a digital gate is generally modeled by a saturated ramp.'",
+        "Author-stated limitations: uncertainty whether the metric is optimistic or pessimistic, and the restriction to step-response delay estimation; accuracy improves with distance from the driving point and with rise time (Table 2: node A 104% error at tr=1ns, 1.54% at 10ns).",
+        "Theorem conditions are stated for RC trees (tree structure is used in the induction proofs); networks with floating capacitors or resistor loops are not covered by any stated theorem; Corollary 3 adds the 'finite sized RC circuit' qualifier."
+      ],
+      "consequences": [
+        "The cited source supports an upper bound on the 50% delay of the TRUE RC tree response under stated waveform conditions. The pinned calculator returns a different quantity: the crossing time of a pi-model waveform model (measured from the driver source waveform's own crossing) at driver thresholds, then possibly adjusted by thresholdAdjust (C-A16). P4 needs an argument connecting the two; the theorem alone does not supply it.",
+        "This record closes the proposer's SRC-026 metadata-only status."
+      ],
+      "limitations": ["Extraction is from a compressed-text PDF; formulas are readable only as scrambled runs. Quoted statements are prose, cross-checked at multiple occurrences."]
+    },
+    {
+      "id": "C-A15",
+      "type": "repository",
+      "title": "CRPR sign in the pinned OpenSTA: clock reconvergence pessimism REDUCES hold slack (basis for OBJ-001)",
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/e01d3f163f483f233db00410b6515a767a6ca03b/search/PathEnd.cc",
+      "source_type": "source code (pinned commit; hash-verified tree, see C-A13)",
+      "retrieved": "2026-10-13 ~11:40Z",
+      "access": "full",
+      "findings_supported": ["F-8", "OBJ-001"],
+      "locators": [
+        "search/PathEnd.cc lines 691-710 (verbatim): commonClkPessimism returns '-crpr_' when checkRole's generic role is hold, '+crpr_' otherwise; requiredTime = requiredTimeNoCrpr + commonClkPessimism.",
+        "search/PathEnd.cc lines 1015-1020: PathEndCheck::clkSkew subtracts crpr_ and subtracts target clock uncertainty, with the comment 'Uncertainty decreases slack, but increases skew'.",
+        "sdc/Sdc.cc lines 226-229: constructor sets analysis_type_ = AnalysisType::ocv and crpr_enabled_ = true (crpr_mode_ = CrprMode::same_pin).",
+        "sdc/Sdc.cc lines 5474-5477: Sdc::crprActive() returns analysis_type_ == AnalysisType::ocv && crpr_enabled_.",
+        "tcl/Variables.tcl lines 50-70: set_crpr_enabled and crpr_mode are the user-visible controls."
+      ],
+      "key_observations": [
+        "With the pinned defaults (OCV analysis type, crpr enabled), the reference engine applies CRPR to every constrained path end: setup slack increases by crpr, hold slack decreases by crpr.",
+        "Therefore 'give no credit in the bound ... CRPR only adds slack' is conservative for setup and UNSOUND for hold: an omitted -crpr term makes the hold bound too large.",
+        "The exact clock pass (pass A of the proposal's mechanism) already computes both clock paths at the check, so crpr is available to the certificate without extra delay calculation."
+      ],
+      "limitations": ["Static code reading; no execution. Whether the pilot's flows leave the defaults untouched is a flow question (EXP-001), not a code question."]
+    },
+    {
+      "id": "C-A16",
+      "type": "repository",
+      "title": "thresholdAdjust in the pinned OpenSTA: the reported wire delay can be raised above the single-pole crossing when driver and load libraries differ (basis for OBJ-002)",
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/e01d3f163f483f233db00410b6515a767a6ca03b/dcalc/DelayCalcBase.cc",
+      "source_type": "source code (pinned commit; hash-verified tree, see C-A13)",
+      "retrieved": "2026-10-13 ~11:42Z",
+      "access": "full",
+      "findings_supported": ["F-9", "OBJ-002"],
+      "locators": [
+        "dcalc/DelayCalcBase.cc lines 126-153: thresholdAdjust applies only when the load pin's library differs from the driver's library; for a rise it adds load_slew * (load_vth - drvr_vth)/(drvr_slew_upper - drvr_slew_lower) to the delay and subtracts the same for a fall; it also rescales the slew by the ratio of slew windows/derates.",
+        "dcalc/DelayCalcBase.cc lines 155-169: thresholdLibrary uses the default (first-read) Liberty library for top-level ports.",
+        "dcalc/DmpCeff.cc lines 569-570: comment stating the load delay/slew are measured at driver thresholds and rely on thresholdAdjust to convert to the load's thresholds.",
+        "dcalc/DmpDelayCalc.cc lines 96, 121, 276, 343 and dcalc/LumpedCapDelayCalc.cc line 162: thresholdAdjust applied to the wire delay after the calculator returns it.",
+        "dcalc/DelayCalcBase.cc lines 107-124: dspfWireDelaySlew (input-port DSPF path) computes wire_delay = -elmore * log(1 - vth) with a load slew from the exponential model - a distinct wire-delay formula for top-level ports."
+      ],
+      "key_observations": [
+        "CLM-007's description ('single-pole crossing with tau = Elmore delay, with Elmore fallbacks') describes the DmpAlg/DmpPi path but omits two code realities: (1) the value returned to the timing engine can be a threshold-adjusted one that is LARGER for rise arcs when load_vth > drvr_vth; (2) top-level ports are served by a different wire-delay formula (dspfWireDelaySlew, delay = -elmore*ln(1-vth), which for vth=0.5 is 0.694*elmore).",
+        "Both realities bear on P4, whose upper bound is 'the Elmore delay of the reduced model'."
+      ],
+      "limitations": ["Static code reading; the magnitude of the adjustment depends on library thresholds and on whether a scenario reads more than one Liberty library (or on port arcs)."]
+    },
+    {
+      "id": "C-A17",
+      "type": "access_update",
+      "updates": "SRC-022",
+      "title": "Machine-Learning-Based Multi-Corner Timing Prediction for Faster Timing Closure (MDPI Electronics 11(10):1571, 12 May 2022; NUDT Changsha)",
+      "url": "https://www.mdpi.com/2079-9292/11/10/1571 (read through the extraction proxy route of C-A02)",
+      "source_type": "journal paper, gold open access",
+      "retrieved": "2026-10-13 ~11:47Z",
+      "access": "full (proxy extraction)",
+      "access_caveat": "Read through the third-party extraction proxy; section-level content is reliable, exact wording is not guaranteed. A direct byte fetch of the publisher mirror (res.mdpi.com path guess) returned an empty body and was recorded as a failed route.",
+      "proposer_previous_access": "abstract-level (SRC-022 was grouped with SRC-023 to SRC-025 as prediction literature)",
+      "findings_supported": ["F-10"],
+      "key_observations": [
+        "Method: a learned multi-corner slack predictor built on a 'dominant corner selection strategy' (the paper's 'iterative increase strategy'). Exact STA is run on the selected dominant corners; a Random Forest model (compared with Ridge and MLP) predicts slack at the remaining corners; a performance assessment form exposes speed-versus-accuracy trade-offs.",
+        "No formal guarantee and no uncertainty-triggered fallback to exact analysis: the industrial flow 'used the model to replace the STA tool on 12 corners', with 2 dominant corners timed exactly.",
+        "Signoff-safety language is a practical-equivalence claim, not a proof: MAE below 3 ps 'can be regarded as having the same effect as the STA tool in practical industrial applications', justified by an observation that predicted results are useful when the error is under 10 ps. The paper does not address undetected violations from a mispredicted corner.",
+        "Hold-centric data: 14 hold corners at a 16nm process; designs are ITC'99 b17/b18/b19 plus in-house cache/peripheral/CPU blocks (ind1 512KB 16-way L2, ind2 out-of-order superscalar); clock periods 2 ns and 0.43 ns.",
+        "Relevance to the candidate: this is the nearest accessed work that sells 'replace the tool on most corners' for HOLD, with no certificate and no refinement. It strengthens CLM-002/L1 at full-text level and is a natural H3 (safety-contrast) comparator; it also shows dominant-corner selection being applied to hold, which bears on F-4's dominance-pruning discussion."
+      ],
+      "limitations": [
+        "Proxy route (C-A02 caveat).",
+        "Author names were not recoverable from the extracted text (contributions list initials only); the affiliation (NUDT) and title are confirmed.",
+        "Not decisive for novelty either way; it is a prediction method, not a screening certificate."
+      ]
+    },
+    {
+      "id": "C-A18",
+      "type": "contest_sweep",
+      "title": "TAU timing-contest series enumerated end to end: 2011/2012 power grid simulation; 2013 variation aware timing; 2014 CPPR; 2015 incremental timing and CPPR; 2016/2017 timing macro-modeling; 2018 timing reports; 2019 design optimization; 2020 delay calculation using current models; 2021 delay calculation (current-source models, single driver to multiple receivers). No multi-corner screening contest anywhere in the series; the series stops after 2021.",
+      "url": "http://www.tauworkshop.com/2021/contest.shtml (prior-year list); http://www.tauworkshop.com/2012/contest_2012.html; http://www.tauworkshop.com/2021/speaker_slides/TAU%202021%20Contest%20-%20final.pdf; http://www.tauworkshop.com/2025/post/program/",
+      "source_type": "contest websites and slide deck, primary",
+      "retrieved": "2026-10-13 ~12:0xZ",
+      "access": "full (live pages; the TAU 2021 deck downloaded, SHA-256 e67ab36167823ea9fd34646e00ee6185b9641fadd3bec73949929775ddbb3ccd, 68 pages, text extracted locally with the session extractor; tau_contest.pdf is byte-identical to the '- final' deck)",
+      "findings_supported": ["F-11", "F-13"],
+      "key_observations": [
+        "The proposer's U8 covered 2013/2018/2019 only. The full series (verbatim prior-year list on the 2021 contest page) adds 2011/2012 power grid simulation, 2014 'Common path pessimism removal (CPPR)', 2015 'Incremental timing and CPPR', 2016/2017 timing macro-modeling, 2020/2021 delay calculation.",
+        "TAU 2021 contest, verbatim from the deck: 'Participants wrote code for computing gate, net, and stage delay/slew from a single driver to multiple receivers', using current-source models (CCS timing), multi-part slew/load-dependent capacitance tables, RC-tree interconnect, ASU ASAP7 v1.7; the deck frames the series as iterating on TAU 2020 (single receiver, pi-model, gate delay only).",
+        "No contest in the series asks for multi-corner scenario screening, signoff-guarantee certification or corner reduction; the nearest are the two CPPR contests (2014, 2015) and the variation-aware-timing contest (2013).",
+        "Latest-contest boundary for TAU: 2021. The site root captured 2024-04-01 (Wayback) still redirected to /2021; /2022/ through /2024/ and /2026/ return 404 today; the TAU 2025 technical program (May 1-2, 2025, Seaside CA) contains no contest session."
+      ],
+      "limitations": [
+        "The 2011/2012 contest pages were not read beyond their titles in the prior-year list; not consequential for this challenge.",
+        "No Wayback snapshots exist under tauworkshop.com/<year>/ for 2022-2024 (CDX search, 2022-01-01 to 2026-01-01); the 2024-04 root redirect to /2021 is the strongest available evidence that no new contest was run before 2025."
+      ]
+    },
+    {
+      "id": "C-A19",
+      "type": "contest_sweep",
+      "title": "ICCAD CAD Contest problem sets 2025 and 2026: timing appears only as optimization on organizer-fixed checks, never as a screening or soundness task",
+      "url": "https://www.iccad-contest.org/Problems.html and https://www.iccad-contest.org/tw/03_problems.html (live 2026 problem list); 2025 titles via invited-paper records (search index)",
+      "source_type": "contest website, primary (2026 page read live); invited-paper metadata, secondary",
+      "retrieved": "2026-10-13 ~12:1xZ",
+      "access": "partial (2026 problem titles and organizers read live; 2025 problem titles and framing from search-index records of the invited papers)",
+      "findings_supported": ["F-11"],
+      "key_observations": [
+        "2026 problems, as listed on the official page: A LLM-Assisted Netlist Exploration and Transformation (Cadence); B Regression Failure Bucketing (Synopsys); C The FloorSet Challenge: Data-Driven SoC Floorplanning (Intel); D Timing Fixing by Useful Skew (Realtek); E Early Floorplanning with Global Route (MediaTek).",
+        "2025: Problem A Hardware Trojan Detection on Gate-Level Netlist (NYCU invited-paper record); Problem C Incremental Placement Optimization Beyond Detailed Placement (NVIDIA invited paper; scored by TNS/WNS computed on organizer-specified corners and constraints); the 2025 overview additionally lists multibit flip-flop optimization.",
+        "The nearest timing-related problems (2025 C, 2026 D) are optimization tasks over an organizer-fixed check set; no problem in 2024-2026 asks to reduce scenarios, certify soundness, or produce exact per-scenario violation lists."
+      ],
+      "limitations": [
+        "The 2026 Problem D description PDF was not read (the page links to Google Drive, which was not fetched); the claim recorded here concerns problem titles and framing only, which the titles themselves support."
+      ]
+    },
+    {
+      "id": "C-A20",
+      "type": "contest_sweep",
+      "title": "ISPD 2026 Contest (Post-Placement Buffering and Sizing): setup-only timing with a single PVT corner and an ideal clock, evaluated with OpenSTA on ASAP7",
+      "url": "https://dl.acm.org/doi/10.1145/3764386.3779616 (invited paper, ISPD 2026); https://sliponline.org/Publications/Conferences/421/c421.pdf (attempted direct read)",
+      "source_type": "contest invited paper (summary via search index; direct PDF route failed)",
+      "retrieved": "2026-10-13 ~12:2xZ",
+      "access": "summary-level only",
+      "access_caveat": "The direct fetch of the sliponline.org PDF returned a 195-byte non-PDF body (recorded as a failed route, not bypassed). Everything below comes from a search-index summary of the invited paper and must be confirmed against the primary before use beyond a lead.",
+      "findings_supported": ["F-11"],
+      "key_observations": [
+        "Problem: post-detailed-placement buffering/sizing/VT-swap with TNS, dynamic and leakage power, ERC-violation and displacement objectives; 8 public + 4 hidden benchmarks, 15K-1.4M instances, ASAP7 7nm multi-Vt; OpenROAD-based infrastructure.",
+        "Timing setup per the summary: 'setup (late-mode) checks with a single PVT corner and ideal clock', with OpenSTA-based timing/power analysis in the evaluation; contest continues in the ISPD 2027 roadmap.",
+        "Consequence for this challenge: the newest contest-adjacent flow cannot exercise multi-scenario or multi-corner machinery at all; it is not a candidate multi-corner dataset, and it reinforces that contests keep reduced, organizer-fixed timing setups."
+      ],
+      "limitations": ["Secondary summary; the single-corner claim is the load-bearing one and is flagged for confirmation."]
+    },
+    {
+      "id": "C-A21",
+      "type": "contest_sweep",
+      "title": "MLCAD 2025 Contest 'ReSynthAI: Physical-aware Logic Resynthesis using AI' — timing optimization, not screening",
+      "url": "https://mlcad.org/symposium/2025/ ; https://dlnext.acm.org/doi/abs/10.1109/MLCAD65511.2025.11189135 ; https://github.com/ASU-VDA-Lab/MLCAD25-Contest",
+      "source_type": "contest website and invited-paper record, secondary",
+      "retrieved": "2026-10-13 ~12:3xZ",
+      "access": "summary-level (search index)",
+      "findings_supported": ["F-11"],
+      "key_observations": [
+        "Problem: post-global-route physical-aware logic resynthesis (gate sizing, buffer insertion, VT swap, gate cloning, combinational restructuring) using AI, judged on timing and routability over OpenROAD + CircuitOps infrastructure; 12 benchmarks, 3-hour single-A100 budget; organized by ASU and NVIDIA, September 2025.",
+        "Again a timing-optimization contest with an organizer-fixed evaluation; no screening, reduction or guarantee element."
+      ],
+      "limitations": ["Summary-level; used only to establish the shape of the newest timing-adjacent contests."]
+    },
+    {
+      "id": "C-A22",
+      "type": "access_update",
+      "updates": "SRC-017",
+      "title": "US 12,675,622 B1 'Signoff-safe multi-corner reduction for static timing analysis' (Synopsys) — claim-level read",
+      "url": "https://patents.google.com/patent/US12675622B1/en",
+      "source_type": "granted patent, primary text",
+      "retrieved": "2026-10-13 ~12:0xZ",
+      "access": "full (claims, description, bibliographic data read live)",
+      "proposer_previous_access": "SRC-017 was in the proposer's source set; this read establishes exactly what the claims cover and what the 'signoff-safe' language is attached to",
+      "findings_supported": ["F-12"],
+      "key_observations": [
+        "Independent claim 1 (method): select a first set of paths; compute slack and component-feature values across a first set of corners; store a path library; pick a dominant corner (the one worst for the most paths); compute slacks for a second path set at the dominant corner; estimate slacks at non-dominant corners by feature matching within a tolerance; choose a second set of corners for each path; mark circuit objects with those corners. Claims 8 (CRM) and 15 (apparatus; second path set larger than the first) mirror claim 1.",
+        "Dependent claim 7: two ML models — a first model decides whether an error in a predicted slack is below a threshold; a second predicts the slack. Claims 3/4: an 'aggressiveness level' controls how many corners are kept; claim 5: selection via a cost function.",
+        "The signoff-safety sentence is in the Description, not the claims: 'Embodiments described herein are designed to be sign-off safe in that if no violations are reported by the embodiments, then no violations exist across all corners that are being considered.'",
+        "TNS is explicitly approximate in the Description: the aggressiveness 'may be set to a level that maintains a consistent TNS error percentage' (worked example: a 1% TNS difference vs. full timing). Nothing in the claims or embodiments requires exact violation lists, exact TNS, or exact refinement of the candidate corner set; results are hedged as 'acceptable differences in quality of results'.",
+        "Bibliographic: assignee Synopsys; inventors Clerkin, Sripada, Ghanta, Tehrani, Li; priority 2022-04-25 (provisional 63/334,566); filed 2023-04-18; granted 2026-07-07; examiner-cited prior art includes Synopsys US8701063B1, 'Compressing scenarios of electronic circuits'."
+      ],
+      "limitations": [
+        "Claim construction is a legal question; the read above reports what the text says, not a validity or freedom-to-operate opinion."
+      ]
+    },
+    {
+      "id": "C-A23",
+      "type": "forward_sweep",
+      "title": "2024-2026 nearest-work set for cross-corner prediction/reduction: uniformly prediction-first with empirical-accuracy claims; no soundness certificate and no exact-refinement disclosure found",
+      "url": "ASAP: DOI 10.1109/TCAD.2025.3581474; FACT: DOI 10.1145/3768166; One-for-All: DOI 10.1145/3676536.3676656; multicorner TCAD 2024: DOI 10.1109/TCAD.2024.3361401; flip-flop timing model: DOI 10.1145/3785294; SetupKit, BLAST, SI-Aware, UQ-GNN: see key_observations",
+      "source_type": "journal/conference records, abstract-level (API reads) and summary-level (search index) as marked",
+      "retrieved": "2026-10-13 ~11:5x-12:4xZ",
+      "access": "abstract-level: ASAP (S2 API), FACT (Crossref API), One-for-All (S2 API), multicorner TCAD 2024 (S2 API), flip-flop TODAES 2025 (S2 API). Summary-level: SetupKit (ICCAD 2025), BLAST (DAC 2025), SI-Aware (ASP-DAC 2025), uncertainty-aware GNN (IEEE 11566436).",
+      "findings_supported": ["F-12"],
+      "key_observations": [
+        "ASAP, TCAD 45(1):480-493, 2026: active self-attention neural process plus active learning for 'self-refinement and self-correction'; claims 18% accuracy gain over prior SOTA; reliability framing is 'confidence-based predictions' (statistical), with no zero-miss guarantee in the abstract.",
+        "FACT, MLCAD 2024 / TODAES 31(4), 2026 (DOI 10.1145/3768166; online 2025-09-15): full-corner metrics from timing analysis 'under only one known corner' via correlations across technology files, targeting near-threshold nonlinearity; no guarantee language in the abstract.",
+        "One-for-All, ICCAD 2024 (DOI 10.1145/3676536.3676656): one known corner predicts all unknown corners; 'average accuracy enhancement of 62.6% and 95.3%' on two processes, MAE under 0.37 ps / 0.01 ps, over 10x ECO speedup; empirical only.",
+        "Multicorner Timing Analysis Acceleration, TCAD 43(7):2151-2162, 2024: Bayesian decision strategy 'to deliver reliable predictions with accuracy close to 100%', improving 'prediction accuracy to 100% with little extra STA executions' — a statistical fallback, not a certificate; no exactness claim.",
+        "SetupKit, ICCAD 2025: multi-corner setup/hold characterization with bias-enhanced interpolation and active learning; 2.4x CPU reduction on industrial 22nm cells across 16 PVT corners — a library-characterization problem, adjacent rather than competing.",
+        "SI-Aware Wire Timing Prediction at Pre-Routing Stage with Multi-Corner Consideration, ASP-DAC 2025: appears as a 2025 citing work of SRC-012; not read (citation only).",
+        "BLAST, DAC 2025 late-breaking: bisection-free statistical timing characterization; relative RMSE 2.21% and worst-case absolute error 0.82 ps across 135 PVT corners (TSMC 12nm) — the rare explicit worst-case *error metric*, still a measurement, not a guarantee.",
+        "Machine Learning-Driven Flip-Flop Timing Model, TODAES 2025 (DOI 10.1145/3785294): ML latch-probability model plus a second C2Q model, applied to 'hierarchical violation filtering' (reported 100% precision on their data); a waiver/filtering application with measured, not proven, safety.",
+        "Towards Robust Pre-Routing Timing Prediction: An Uncertainty-Aware GNN (IEEE 11566436): heteroscedastic Gaussian NLL for prediction variance, aimed at avoiding 'silent failures' out of distribution; uncertainty quantification, no hard bound."
+      ],
+      "limitations": [
+        "Mixed fidelity: five entries are API abstract reads, four are search-index summaries; no 2025-2026 closed-access item was obtained at full text. The K1 judgment in F-12 is made at this fidelity and should be re-checked if any full text becomes available."
+      ]
+    },
+    {
+      "id": "C-A24",
+      "type": "lead",
+      "title": "Exact worst-delay-corner branch-and-bound line (Guerra e Silva / Heloue / Onaissi family): exact in its own object under parametric delay models; no decision-set exactness and no screening certificate",
+      "url": "http://algos.inesc.pt/projects/viper/team/silva-date2007.pdf ; https://algos.inesc-id.pt/projectos/powerplan/IC6.pdf (both direct fetches failed: HTTP 502 and a TLS error, recorded as failed routes)",
+      "source_type": "conference/technical PDFs, snippet-level only",
+      "retrieved": "2026-10-13 ~12:3xZ",
+      "access": "snippet-level (search index); no direct read obtained",
+      "findings_supported": ["F-12"],
+      "key_observations": [
+        "Search-index snippets describe path-space and parameter-space branch-and-bound over partial corner assignments that explore-or-prune until 'all the regions of the parameter space ... are either explicitly explored or pruned', yielding the exact worst-delay corner; correctness leans on convexity of affine/piecewise-affine delay models.",
+        "Relation to the candidate: this line is exact about a different object (the worst corner under a parametric model), not about exact per-scenario violation lists or TNS of a pinned non-affine engine, and it contains no screening-certificate step; it does not disclose the candidate's mechanism.",
+        "The proposer's SRC-014 (ASP-DAC 2010 8B-2, multi-corner multi-mode engine of the same family) already anchors this line; the observation here is that the 2024-2026 literature reviewed in C-A23 does not revive it."
+      ],
+      "limitations": [
+        "No direct read (two failed fetches, recorded). Used only to bound the K1 discussion; not load-bearing for any objection."
+      ]
+    },
+    {
+      "id": "C-A25",
+      "type": "contest_sweep",
+      "title": "TAU 2013 contest closed out: 'Variation aware timing analysis' (parametric/statistical STA tool contest); winners and organizers recorded",
+      "url": "https://sites.google.com/site/taucontest2013/ ; http://www.tauworkshop.com/2013/tau2013_program.pdf",
+      "source_type": "contest website and program, primary",
+      "retrieved": "2026-10-13 ~13:0xZ",
+      "access": "full (live page and program PDF read; program extracted locally)",
+      "findings_supported": ["F-11", "F-14"],
+      "key_observations": [
+        "The 2013 contest asked for a 'variation aware parametric timing analysis' tool: goals included a fast parametric/statistical STA, parallel techniques, and 'creation of a public university level variation aware timer'.",
+        "Results announced 2013-03-27 at TAU: 1st place Team IITimer (IIT Madras), 2nd HWL timer (National Tsing Hua University), 3rd iTimer (National Chiao Tung University). Organizers: Debjit Sinha (IBM, chair), Luis Guerra e Silva (INESC-ID/IST), Jia Wang (IIT), Shesha Ragunathan and Dileep Netrabile (IBM), Ahmed Shebaita (Synopsys).",
+        "Content relevance: parametric/statistical analysis, not corner reduction or screening certificates; the contest is closed and its framework goal (a public variation-aware timer) was not pursued in later years.",
+        "This closes the last open contest item from the proposer's U-series audit (CLM-014's TAU 2013 anchor is now backed by the primary results page)."
+      ],
+      "limitations": ["None material; the contest paper/presentation links on the page were not downloaded."]
+    },
+    {
+      "id": "C-A26",
+      "type": "industry_practice",
+      "title": "TAU industry deck read: Synopsys 'Clustering-based signal merging in STA' (Belov, Wrixon, Keller, Dadheech; presented TAU 2019, hosted on the 2020 site) — merge-only-when-converged framing with explicit accuracy control",
+      "url": "http://www.tauworkshop.com/2020/slides/belov__clustering_based_merging_v2.pdf",
+      "source_type": "workshop slide deck, primary industry source",
+      "retrieved": "2026-10-13 ~12:5xZ",
+      "access": "full (downloaded; SHA-256 431b133046a4ae90614f440a1088aaa4a6646fb82c3a4448f53e337aaacba7f8; text extracted locally)",
+      "findings_supported": ["F-13", "F-14"],
+      "key_observations": [
+        "Subject is the GBA-PBA accuracy gap: GBA (graph-based, BFS) is linear-cost but pessimistic; PBA is exact per path but exponential; merging signals in PBA is how tools recover runtime.",
+        "The deck's safety framing is explicit: 'No convergence => no merging => slacks are accurate' — merging is only applied where convergence holds, and the partition is chosen to 'minimize overall accuracy [loss]' at a given merge factor.",
+        "Industrial data point: 16nm block at 0.545V, 100K endpoints; 40% of endpoints have a GBA-PBA gap below 0.05 ns.",
+        "Relation to the candidate: this is industry practice on merging with an accuracy criterion, adjacent to (but different from) corner reduction and screening; it closes the F-13 lead and can serve as a practitioner reference if the proposal's related work discusses reduction practice."
+      ],
+      "limitations": ["Slide-level text; no formal statement of the convergence criterion in the extracted text."]
+    },
+    {
+      "id": "C-A27",
+      "type": "contest_sweep",
+      "title": "ISPD 2026 contest primary repository: TT-only library set and ideal clocks; single-corner setup confirmed from the contest's own scripts",
+      "url": "https://github.com/ABKGroup/ISPD26-Contest (README, scripts/aes_cipher_top/lib_setup.tcl, scripts/ariane/lib_setup.tcl, scripts/evaluation.tcl read via raw.githubusercontent.com)",
+      "source_type": "contest repository, primary",
+      "retrieved": "2026-10-13 ~12:5x-13:0xZ",
+      "access": "full for the script files read; the description PDF could not be used (see limitations)",
+      "findings_supported": ["F-11", "F-14"],
+      "key_observations": [
+        "lib_setup.tcl (per design): the 'libworst' set lists only ASAP7 TT libraries — asap7sc7p5t_{AO,OA,INVBUF}_{LVT,RVT,SLVT}_TT_nldm_*.lib — one corner (TT), several library files.",
+        "evaluation.tcl: 'set_ideal_network [all_clocks]' with a commented-out '#set_propagated_clock [get_clocks *]' — clocks are explicitly ideal; metrics are report_tns / report_wns via OpenROAD/OpenSTA.",
+        "Timeline Oct 2025-Mar 2026, docker-based evaluation, 16+ registered teams including NVIDIA, TUM, PKU, NTU; contest continues in the ISPD 2027 roadmap.",
+        "This upgrades the load-bearing C-A20 claims (single PVT corner; ideal clock) from a search-index summary of the invited paper to primary-repository confirmation.",
+        "Fidelity note: ISPD26_contest_description.pdf and the MLCAD 2025 problem-statement PDF were both downloaded but use subset fonts without usable ToUnicode maps; the local extractor returns scrambled glyph codes, so neither PDF was read. Contest facts here come from the README and scripts instead; this is recorded as an extraction limitation, not a content claim."
+      ],
+      "limitations": ["Scripts read for two designs (aes_cipher_top, ariane); other designs assumed identical in setup, not verified."]
+    },
+    {
+      "id": "C-A28",
+      "type": "citation_closure",
+      "title": "C-A09 shortlist closed: mode merging (abstract-level, paywalled), NIO 2014 (unobtainable), Onaissi 2011 thesis (full text read); arXiv negative for the five closed 2025-26 works",
+      "url": "https://dl.acm.org/doi/abs/10.1145/2744769.2744787 ; https://www.semanticscholar.org/paper/... (NIO DOI 10.1109/ICSICT.2014.7021608) ; https://utoronto.scholaris.ca/items/ea37e159-1e97-49e5-9348-3676ac761ee8 (handle 1807/31886)",
+      "source_type": "mixed: publisher record (paywalled), citation index, open-access thesis",
+      "retrieved": "2026-10-13 ~13:0x-13:1xZ",
+      "access": "thesis full text (880,389 bytes, SHA-256 2233c14bad5c85dcce7d2b583b319f7d5109493761b03b5f52cd045432bfb38f, extracted locally with the ligature caveat); mode merging abstract-level; NIO title-only",
+      "findings_supported": ["F-5", "F-14"],
+      "key_observations": [
+        "Mode merging (Sripada & Palla, Synopsys; DAC 2015; DOI 10.1145/2744769.2744787, pp. 1-6): modes merged into superset modes with 'an inbuilt validation that merged constraints correctly model the intent of the original constraints'; sign-off accuracy is stated as the reason high merge factors are complex. No free copy found; remains the closest 'merging with validation' analogue and a watch item if a full text ever becomes reachable — the open question would be whether its validation is semantic (constraint equivalence) or predictive.",
+        "NIO: A fast and accurate verification method for PVT variations (ICSICT 2014; DOI 10.1109/ICSICT.2014.7021608): IEEE-paywalled; Semantic Scholar holds the title with no abstract; no open copy found. Remains unread — recorded as unobtainable within this session's routes rather than silently dropped.",
+        "Onaissi PhD thesis (U Toronto, 2011; same author as SRC-012/013): Ch. 4 is a block-based PSTA 'covering all potentially critical paths' with a section 'Exact Algorithm' (4.4.1) and a 'Sufficient Condition' (4.4.2); Ch. 5 is the DAC 2011 anchor-corner method with a section 'Exact vs conservative approach' (5.2) and conservatism statistics. Conservatism is conditional: 'for our technique to be conservative we must choose, for each set of corners, an anchor corner that leads to the smallest datapath delay'. In the optimization chapter the no-guarantee statement is explicit: 'there is no guarantee that X-hat would be the worst-case corner for the post-optimization expression'. CRPR appears in the margin discussion as a pessimism-removal technique.",
+        "Net effect: the thesis strengthens F-1/F-5 at a fuller-text level — the SARI line is anchor-based and conditionally conservative with empirical characterization, has an exact *parametric PSTA* algorithm as a separate chapter (a different object from engine-exact screening), and contains no per-scenario certificate with exact refinement.",
+        "arXiv/OA negative result: properly formed arXiv API queries (title-field and AND-combined) returned zero preprints for ASAP (TCAD 2026), SetupKit (ICCAD 2025), BLAST (DAC 2025), the uncertainty-aware GNN, and SI-Aware (ASP-DAC 2025); One-for-All's ACM 'open access' PDF link returns HTTP 403 from this session. No open full text of the five closed 2025-26 works exists at the routes available, so F-12's fidelity caveat is now a verified negative rather than an untried check."
+      ],
+      "limitations": ["Thesis text extraction drops some ligatures (fi/ff) and can break words across lines; keyword contexts were read with whitespace normalization, and quoted fragments above are short."]
+    },
+    {
+      "id": "C-A29",
+      "type": "negative_result",
+      "title": "F-4 lead downgraded: no public primary source found for a 'cell-level Liberty-monotonicity dominance proof'; the practice is anchored only at method level",
+      "url": "searches run 2026-10-13: 'corner dominance monotonicity liberty timing signoff proof safe corner pruning paper' (WebSearch)",
+      "source_type": "search negative result",
+      "retrieved": "2026-10-13 ~13:0xZ",
+      "access": "n/a (no source found)",
+      "findings_supported": ["F-4", "F-14"],
+      "key_observations": [
+        "Returned items: the secondary MMMC corner-pruning article already held as C-A08 (dominance as first principle; library-delay-monotonicity as the first and easiest criterion level; RC-pairing monotonicity as the second); the practitioner caveat source already held as C-A07 (sub-path sums; temperature inversion); patent US12675622B1 (dominance as per-path worst-corner selection, not a monotonicity proof; C-A22); and an unrelated buffering-candidate monotonic-pruning patent (US11520959B1). No academic proof paper exists publicly.",
+        "Decision (as planned in the search log): downgrade F-4's 'cell-level proof' framing to unsupported; anchor the practice at method level with primary sources (patent claim 1 dominant-corner selection; MDPI dominant-corner strategy in C-A17), and keep the baseline-gap point intact.",
+        "Side observation: the caveat material (why naive dominance can be unsafe: sub-path additivity, non-monotonic temperature) is practitioner-level (C-A07), which is exactly the level at which the proposal's motivation currently rests."
+      ],
+      "limitations": ["Negative-result records cannot exclude paywalled or non-indexed sources."]
+    },
+    {
+      "id": "C-A30",
+      "type": "code_adjacent_check",
+      "title": "ASAP7 multi-VT libraries share identical threshold attributes: mixed-VT alone does not trigger thresholdAdjust (OBJ-002 condition narrowed)",
+      "url": "https://raw.githubusercontent.com/ABKGroup/ISPD26-Contest/main/Platform/ASAP7/lib/asap7sc7p5t_{AO_LVT,AO_RVT,AO_SLVT}_TT_nldm_211120.lib (headers)",
+      "source_type": "PDK library files, primary (streamed through grep; files not retained)",
+      "retrieved": "2026-10-13 ~13:1xZ",
+      "access": "attribute-level (headers inspected for threshold and nominal attributes)",
+      "findings_supported": ["F-15"],
+      "key_observations": [
+        "All three ASAP7 stdcell variants (LVT, RVT, SLVT) declare identical timing-threshold attributes: input_threshold_pct_fall/rise 50, output_threshold_pct_fall/rise 50, slew_lower 10, slew_upper 90, and identical nom_voltage 0.7 / nom_temperature 25 / default_operating_conditions PVT_0P7V_25C.",
+        "Consequence for OBJ-002: with load_vth == drvr_vth the additive thresholdAdjust term is zero, so reading several VT-flavored libraries in one corner (the normal pattern, e.g. ISPD 2026's libworst) does not by itself move the returned wire delay. The live condition is narrower: a library pair whose threshold pct attributes *differ* (some macro/IO libraries use different definitions), or the separate input-port formula (dspfWireDelaySlew).",
+        "This narrows my own objection's 'potentially major' branch; the CLM-007 completeness point and the P4 modelling obligation are unaffected."
+      ],
+      "limitations": ["Three library headers checked (AO family); other ASAP7 families (OA, INVBUF) assumed identical, not verified. Files were not retained, so no hash is recorded; the check is reproducible from the URL pattern."]
+    }
+  ]
+}
