@@ -63,13 +63,36 @@
       "topic": "EDA-0002",
       "model": "gpt-6-astra",
       "effort_requested": "low",
-      "model_basis": "Explicit spawn_agent model and effort request; role self-report pending.",
+      "model_basis": "Original spawn requested gpt-6-astra low; existing session resumed without model override. Runtime self-attestation pending.",
       "operator": "getm0ss1moving",
       "github_login": "getm0ss1moving (transport only)",
-      "input_commit": "27977cb365dab9b3df5193fcd0c2e23804f840cf",
-      "packet_sha256": "5864539a0c2b0378e2fec6a8ea826ebbb330ed2ec3854fdbbb4b791f0d25cdab",
+      "input_commit": "24ea3f3223f6f5171e96711a4df90204e4f2248c",
+      "packet_sha256": "6d77b6e3cc08db57c84c0335ca1c40a029be50290c2bac7d7266016a28a89003",
       "independence_attestation": "Fresh fork_turns=none subagent; policy-only packet and public sources; no predecessor memory/signatures. Shared host, policy isolation only.",
-      "state": "initial_independent_search_complete; awaiting_frozen_revised_dossier"
+      "state": "resumed_for_full_R1b_challenge_review",
+      "packet_history": [
+        {
+          "input_commit": "27977cb365dab9b3df5193fcd0c2e23804f840cf",
+          "packet_sha256": "5864539a0c2b0378e2fec6a8ea826ebbb330ed2ec3854fdbbb4b791f0d25cdab",
+          "stage": "independent_initial_assessment_completed"
+        }
+      ]
+    },
+    {
+      "session_id": "e6bc9983-e74b-4576-9c1d-3abc95ea3df9",
+      "actor_id": "DeepSeek-V02-PHYSICAL",
+      "role": "verifier",
+      "topic": "EDA-0002",
+      "platform": "DeepSeek",
+      "model": "deepseek-flash",
+      "effort_requested": "low",
+      "model_basis": "Host-declared in released readiness; actual effort unobservable. Launcher now pins verifier low.",
+      "operator": "getm0ss1moving",
+      "github_login": "getm0ss1moving (transport only)",
+      "input_commit": "27b6c6e8cb4ef0d2ac7f2feb2521be1426940d88",
+      "packet_sha256": "db15a57c6355808e0faf90a6b2954c7f632bbe5b80071f069a905701d262ec78",
+      "state": "onboarding_complete; round inbox amendment pending receipt",
+      "independence_attestation": "Released readiness self-attestation; no transcript inspected; shared account with sandbox controls."
     }
   ],
   "required_session_fields": [

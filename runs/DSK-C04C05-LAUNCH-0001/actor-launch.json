@@ -55,7 +55,9 @@
       "outbox_dir": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/verifier-release-20261014/DeepSeek-V02-PHYSICAL",
       "session_id": "e6bc9983-e74b-4576-9c1d-3abc95ea3df9",
       "settings_file": "launch-settings-V02.json",
-      "settings_sha256": "48e9b241ce4edbda794a394d8b8e493289ff2f9a8e0b4e7639796485997f3d2f"
+      "settings_sha256": "47b54fc323f81e36aa3cb209b0545ee68e6db5ba04c6a3952a7de8da675e8009",
+      "round_inbox": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/rounds/EDA-0002/DeepSeek-V02-PHYSICAL",
+      "effort": "low"
     }
   }
 }
