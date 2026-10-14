@@ -1,0 +1,59 @@
+{
+  "run_id": "DSK-ROLE-SUCCESSION-0001",
+  "session_id": "04fe4881-0c22-4292-ac03-ab73f00eaf29",
+  "role": "coordinator",
+  "platform": "DeepSeek",
+  "stage": "platform_role_succession",
+  "status": "ready_for_independent_review",
+  "input_commit": "22002d24474e84d34d22b85b3d99f154fa304fe1",
+  "model": "deepseek-flash[1m]",
+  "host": "macOS arm64 (Darwin 25.5.0)",
+  "operator": "getm0ss1moving",
+  "started_at_utc": "2026-10-13T17:55:00Z",
+  "completed_at_utc": "2026-10-13T18:01:04Z",
+  "clock_note": "The host clock was resynchronized on 2026-10-13 and matched the api.deepseek.com Date header at run time; timestamps are true UTC. The owner directive arrived on 2026-10-13 (true UTC; 2026-10-14 local host date).",
+  "output_paths": [
+    "runs/DSK-ROLE-SUCCESSION-0001/record.md",
+    "runs/DSK-ROLE-SUCCESSION-0001/manifest.json",
+    "config/launch-release.json",
+    "config/agents-deepseek.json",
+    "config/agents.json",
+    "scripts/project.py",
+    "tests/test_project.py",
+    "domains/D06/brief.json",
+    "docs/TEAM-DEEPSEEK.md"
+  ],
+  "owner_directive": "2026-10-13 (true UTC; 2026-10-14 local host date): the DeepSeek platform stops serving as challenger and serves as the verification platform for D04 and D05; the D04 challenger seat passes to a Codex successor identity.",
+  "changes_summary": [
+    "launch-release.json: five-actor released set; assignments challenger Codex-C04-PHYSICAL-R2 / verifiers DeepSeek-V02-PHYSICAL; role_handoffs with four owner-authorized records; deepseek readiness carries the verifier model policy.",
+    "agents-deepseek.json: succession_directive; C04/C05 handed_off_by_succession with successor pointers; DeepSeek-V02-PHYSICAL released for D04+D05; DeepSeek-V03-SYSTEMS gains D06.",
+    "agents.json: Codex-C04-PHYSICAL-R2 successor identity added on the owner's Codex-successor choice; counts and scope policy updated.",
+    "project.py: role_handoffs validation with owner-record and registered-successor enforcement; deepseek model_policy check; released set and assignments derived from verified records.",
+    "tests: handoff tests replace the superseded succession tests; 38 tests pass.",
+    "domains/D06/brief.json and docs/TEAM-DEEPSEEK.md: D06 verifier moved to V03; dated succession note."
+  ],
+  "verifier_release": {
+    "actor_id": "DeepSeek-V02-PHYSICAL",
+    "call_sign": "DSK-Ledger-PHYSICAL",
+    "role": "verifier",
+    "queues": [
+      "D04",
+      "D05"
+    ],
+    "model_requested": "deepseek-flash",
+    "reasoning_requested": "low",
+    "session_state": "not_created; verifier packet awaits a frozen proposal and released challenge material"
+  },
+  "validation": {
+    "project_validate": "passed",
+    "tests": "38 tests OK",
+    "sessions_created": 0,
+    "scientific_content_touched": false
+  },
+  "coordination_notes": [
+    "This run and runs/DSK-C05-SESSION-0001 (challenge transport, PR #23) both touch the DeepSeek-C05-TIMING registry entry; whichever merges second is rebased so both land intact. The succession is self-consistent on main 22002d2 without the transport.",
+    "The successor identity Codex-C04-PHYSICAL-R2 is defined in the Codex registry per the owner's choice; the Codex platform owns its operation and any future registry annotation of its relinquished verifier identities."
+  ],
+  "independence_attestation": "Coordinator governance record only. No scientific content is authored, released or adjudicated; no session was created and no other actor's outputs or private notes were read.",
+  "experiment_authorization": false
+}

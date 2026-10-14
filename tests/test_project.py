@@ -195,13 +195,12 @@ class LaunchReleaseTests(unittest.TestCase):
         specs={
             'agents.json':[
                 ('Codex-P04-PHYSICAL','proposer',['D04']),
-                ('Codex-V02-PHYSICAL','verifier',['D04','D05'])],
+                ('Codex-C04-PHYSICAL-R2','challenger',['D04']),
+                ('Codex-C05-TIMING-R2','challenger',['D05'])],
             'agents-deepseek.json':[
-                ('DeepSeek-C04-PHYSICAL','challenger',['D04']),
-                ('DeepSeek-C05-TIMING','challenger',['D05'])],
+                ('DeepSeek-V02-PHYSICAL','verifier',['D04','D05'])],
             'agents-claude.json':[
-                ('Claude-P05-TIMING','proposer',['D05']),
-                ('Claude-V02-PHYSICAL','verifier',['D04','D05'])]}
+                ('Claude-P05-TIMING','proposer',['D05'])]}
         actors=[]
         for filename, rows in specs.items():
             registry=[]
@@ -216,39 +215,38 @@ class LaunchReleaseTests(unittest.TestCase):
             'state':'ready_for_role_creation','scope_domains':['D04','D05'],
             'topic_containers':{'D04':'EDA-0001','D05':'EDA-0002'},
             'assignments':{
-                'EDA-0001':{'domain':'D04','proposer':'Codex-P04-PHYSICAL','challenger':'DeepSeek-C04-PHYSICAL','verifier':'Claude-V02-PHYSICAL'},
-                'EDA-0002':{'domain':'D05','proposer':'Claude-P05-TIMING','challenger':'DeepSeek-C05-TIMING','verifier':'Codex-V02-PHYSICAL'}},
+                'EDA-0001':{'domain':'D04','proposer':'Codex-P04-PHYSICAL','challenger':'Codex-C04-PHYSICAL-R2','verifier':'DeepSeek-V02-PHYSICAL'},
+                'EDA-0002':{'domain':'D05','proposer':'Claude-P05-TIMING','challenger':'Codex-C05-TIMING-R2','verifier':'DeepSeek-V02-PHYSICAL'}},
             'released_actors':[a['actor_id'] for a in actors],
             'first_wave':['Codex-P04-PHYSICAL','Claude-P05-TIMING'],
             'max_concurrent_scientific_sessions':2,'fresh_sessions_required':True,
             'old_sessions_are_inputs':False,'experiment_authorization':False,
+            'role_handoffs':{
+                'EDA-0001':{
+                    'challenger':{'from':'DeepSeek-C04-PHYSICAL','to':'Codex-C04-PHYSICAL-R2','owner_authorized':True,'reason':'fixture'},
+                    'verifier':{'from':'Claude-V02-PHYSICAL','to':'DeepSeek-V02-PHYSICAL','owner_authorized':True,'reason':'fixture'}},
+                'EDA-0002':{
+                    'challenger':{'from':'DeepSeek-C05-TIMING','to':'Codex-C05-TIMING-R2','owner_authorized':True,'reason':'fixture'},
+                    'verifier':{'from':'Codex-V02-PHYSICAL','to':'DeepSeek-V02-PHYSICAL','owner_authorized':True,'reason':'fixture'}}},
             'platform_readiness':{
                 'codex':{'state':'ready_after_merge_and_packet_export','models_verified':True},
-                'deepseek':{'state':'ready_after_merge_and_packet_export','models_verified':True},
+                'deepseek':{'state':'ready_after_merge_and_packet_export','models_verified':True,
+                           'model_policy':'use the observed deepseek-flash at low effort'},
                 'claude':{'state':'ready_for_host_bound_creation','models_verified':False,
                           'model_policy':'use host-exposed Claude family'}}}
         self.path=self.root/'config/launch-release.json'
         self.path.write_text(json.dumps(self.release))
     def test_valid_release(self):
         self.assertEqual(p.validate_launch_release(self.root),[])
-    def test_challenger_succession_requires_owner_record(self):
-        self.release['challenger_handoffs']={'EDA-0002':{'from':'DeepSeek-C05-TIMING',
-            'to':'Codex-C05-TIMING-R2','owner_authorized':False,'reason':'fixture'}}
+    def test_role_handoff_requires_owner_record(self):
+        self.release['role_handoffs']['EDA-0002']['verifier']['owner_authorized']=False
         self.path.write_text(json.dumps(self.release))
-        self.assertTrue(any('succession' in e for e in p.validate_launch_release(self.root)))
-    def test_challenger_succession_accepts_registered_successor(self):
-        registry_path=self.root/'config/agents.json'
-        registry=json.loads(registry_path.read_text())
-        registry['actors'].append({'actor_id':'Codex-C05-TIMING-R2','role':'challenger',
-            'domain_ids':['D05'],'status':'ready_for_fresh_session','active_scope':True,
-            'fresh_session_required':True,'model_requested':'gpt-6-astra','reasoning_requested':'low'})
-        registry_path.write_text(json.dumps(registry))
-        self.release['challenger_handoffs']={'EDA-0002':{'from':'DeepSeek-C05-TIMING',
-            'to':'Codex-C05-TIMING-R2','owner_authorized':True,'reason':'fixture'}}
-        self.release['released_actors']=['Codex-C05-TIMING-R2' if a=='DeepSeek-C05-TIMING' else a
-                                         for a in self.release['released_actors']]
-        self.release['assignments']['EDA-0002']['challenger']='Codex-C05-TIMING-R2'
+        self.assertTrue(any('handoff' in e for e in p.validate_launch_release(self.root)))
+    def test_role_handoff_rejects_wrong_successor(self):
+        self.release['role_handoffs']['EDA-0001']['challenger']['to']='Codex-C01-ARCH'
         self.path.write_text(json.dumps(self.release))
+        self.assertTrue(any('handoff' in e for e in p.validate_launch_release(self.root)))
+    def test_registered_successors_are_accepted(self):
         self.assertEqual(p.validate_launch_release(self.root),[])
     def test_historical_session_reuse_is_rejected(self):
         self.release['old_sessions_are_inputs']=True

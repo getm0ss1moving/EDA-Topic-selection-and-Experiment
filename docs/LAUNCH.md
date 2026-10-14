@@ -20,7 +20,7 @@ Use a new empty session per role, with memory disabled and only its exported pac
 
 ## Platform-specific contracts
 
-Read the relevant execution contract before creating a role: `docs/platforms/CODEX-PHYSICAL.md`, `docs/platforms/DEEPSEEK-PHYSICAL.md`, or `docs/platforms/CLAUDE-PHYSICAL.md`. The current release is only the six identities bound in `config/launch-release.json`; the larger historical registries are namespaces, not permission to start more roles.
+Read the relevant execution contract before creating a role: `docs/platforms/CODEX-PHYSICAL.md`, `docs/platforms/DEEPSEEK-PHYSICAL.md`, or `docs/platforms/CLAUDE-PHYSICAL.md`. The current release is only the five identities bound in `config/launch-release.json` (after the recorded role handoffs); the larger historical registries are namespaces, not permission to start more roles.
 
 Export one actor-scoped packet at a frozen full SHA. For example, after the D04 proposal is frozen:
 

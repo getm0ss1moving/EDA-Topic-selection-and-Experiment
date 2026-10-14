@@ -555,11 +555,28 @@
       "predecessor": "DeepSeek-C05-TIMING",
       "session_state": "initial_independent_search_complete; awaiting_frozen_revised_dossier",
       "session_id": "/root/codex_c05_timing_r2"
+    },
+    {
+      "actor_id": "Codex-C04-PHYSICAL-R2",
+      "call_sign": "CDX-Skeptic-PHYSICAL",
+      "platform": "OpenAI Codex",
+      "role": "challenger",
+      "domain_ids": [
+        "D04"
+      ],
+      "model_requested": "gpt-6-astra",
+      "reasoning_requested": "low",
+      "status": "ready_for_fresh_session",
+      "active_scope": true,
+      "fresh_session_required": true,
+      "predecessor": "DeepSeek-C04-PHYSICAL",
+      "session_state": "not_created; awaits a frozen D04 proposal",
+      "succession_note": "Added by runs/DSK-ROLE-SUCCESSION-0001 under the owner decision of 2026-10-13 (true UTC; 2026-10-14 local host date), following the Codex-C05-TIMING-R2 successor shape with no inherited context. The Codex platform owns this identity's operation."
     }
   ],
   "active_actor_count": 0,
-  "released_actor_count": 2,
-  "scope_policy": "Codex supplies the D04 proposer and D05 verifier in the cross-platform release. Historical sessions remain archived and are not inputs. Claude supplies the D05 proposer and D04 verifier; DeepSeek supplies both challengers. No experiment or automatic retry is authorized.",
+  "released_actor_count": 3,
+  "scope_policy": "Codex supplies the D04 proposer and both challengers (successor identities C04-PHYSICAL-R2 and C05-TIMING-R2). Historical sessions remain archived and are not inputs. Claude supplies the D05 proposer; DeepSeek supplies both verifier queues. No experiment or automatic retry is authorized.",
   "max_concurrent_test_roles": 1,
   "role_test_policy": "Synthetic infrastructure fixtures only; archive the test role before another role starts; no scientific claims or approvals.",
   "platform_model_policy": {

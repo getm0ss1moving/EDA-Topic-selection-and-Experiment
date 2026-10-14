@@ -299,22 +299,43 @@ def validate_launch_release(root=ROOT):
             errors.append('config/launch-release.json: only D04/D05 may be released')
         if release.get('topic_containers') != {'D04': 'EDA-0001', 'D05': 'EDA-0002'}:
             errors.append('config/launch-release.json: physical topic-container mapping is invalid')
-        if not isinstance(released, list) or len(released) != 6 or len(set(released)) != 6:
-            errors.append('config/launch-release.json: exactly six distinct cross-platform actors must be released')
+        if not isinstance(released, list) or len(released) != 5 or len(set(released)) != 5:
+            errors.append('config/launch-release.json: exactly five distinct released actors are required after the recorded role handoffs')
             released = []
-        expected = {'Codex-P04-PHYSICAL', 'Claude-P05-TIMING',
+        baseline = {'Codex-P04-PHYSICAL', 'Claude-P05-TIMING',
                     'DeepSeek-C04-PHYSICAL', 'DeepSeek-C05-TIMING',
                     'Claude-V02-PHYSICAL', 'Codex-V02-PHYSICAL'}
-        handoffs = release.get('challenger_handoffs', {})
-        successor = handoffs.get('EDA-0002', {})
-        if handoffs:
-            if (set(handoffs) != {'EDA-0002'} or successor.get('from') != 'DeepSeek-C05-TIMING'
-                    or successor.get('to') != 'Codex-C05-TIMING-R2'
-                    or successor.get('owner_authorized') is not True or not successor.get('reason')):
-                errors.append('config/launch-release.json: invalid challenger succession record')
-            else:
-                expected.remove('DeepSeek-C05-TIMING')
-                expected.add('Codex-C05-TIMING-R2')
+        required_handoffs = {
+            'EDA-0001': {
+                'challenger': ('DeepSeek-C04-PHYSICAL', 'Codex-C04-PHYSICAL-R2'),
+                'verifier': ('Claude-V02-PHYSICAL', 'DeepSeek-V02-PHYSICAL')},
+            'EDA-0002': {
+                'challenger': ('DeepSeek-C05-TIMING', 'Codex-C05-TIMING-R2'),
+                'verifier': ('Codex-V02-PHYSICAL', 'DeepSeek-V02-PHYSICAL')}}
+        expected = set(baseline)
+        expected_assignments = {
+            'EDA-0001': {'domain': 'D04', 'proposer': 'Codex-P04-PHYSICAL',
+                         'challenger': 'DeepSeek-C04-PHYSICAL', 'verifier': 'Claude-V02-PHYSICAL'},
+            'EDA-0002': {'domain': 'D05', 'proposer': 'Claude-P05-TIMING',
+                         'challenger': 'DeepSeek-C05-TIMING', 'verifier': 'Codex-V02-PHYSICAL'}}
+        handoffs = release.get('role_handoffs', {})
+        if not isinstance(handoffs, dict) or set(handoffs) != set(required_handoffs):
+            errors.append('config/launch-release.json: invalid role handoff record')
+        else:
+            for topic, roles in required_handoffs.items():
+                got = handoffs.get(topic) or {}
+                if not isinstance(got, dict) or set(got) != set(roles):
+                    errors.append(f'config/launch-release.json: invalid role handoff record for {topic}')
+                    continue
+                for role, (source, successor) in roles.items():
+                    rec = got.get(role) or {}
+                    if (rec.get('from') != source or rec.get('to') != successor
+                            or rec.get('owner_authorized') is not True or not rec.get('reason')):
+                        errors.append(f'config/launch-release.json: invalid {role} handoff record for {topic}')
+                        continue
+                    expected.discard(source)
+                    expected.add(successor)
+                    expected_assignments[topic][role] = successor
         if set(released) != expected:
             errors.append('config/launch-release.json: released actor set does not match the cross-platform physical slice')
         for actor_id in released:
@@ -330,13 +351,6 @@ def validate_launch_release(root=ROOT):
                 errors.append(f'config/launch-release.json: {actor_id} exceeds released domains')
             if not actor.get('model_requested') or not actor.get('reasoning_requested'):
                 errors.append(f'config/launch-release.json: {actor_id} lacks an explicit model/effort policy')
-        expected_assignments = {
-            'EDA-0001': {'domain':'D04','proposer':'Codex-P04-PHYSICAL',
-                         'challenger':'DeepSeek-C04-PHYSICAL','verifier':'Claude-V02-PHYSICAL'},
-            'EDA-0002': {'domain':'D05','proposer':'Claude-P05-TIMING',
-                         'challenger':'DeepSeek-C05-TIMING','verifier':'Codex-V02-PHYSICAL'}}
-        if 'Codex-C05-TIMING-R2' in expected:
-            expected_assignments['EDA-0002']['challenger'] = 'Codex-C05-TIMING-R2'
         if release.get('assignments') != expected_assignments:
             errors.append('config/launch-release.json: cross-platform assignment matrix is invalid')
         else:
@@ -359,7 +373,8 @@ def validate_launch_release(root=ROOT):
         readiness = release.get('platform_readiness', {})
         for platform in ['codex','deepseek']:
             item = readiness.get(platform, {})
-            if item.get('state') != 'ready_after_merge_and_packet_export' or item.get('models_verified') is not True:
+            if (item.get('state') != 'ready_after_merge_and_packet_export' or item.get('models_verified') is not True
+                    or (platform == 'deepseek' and not item.get('model_policy'))):
                 errors.append(f'config/launch-release.json: {platform} readiness is incomplete')
         claude = readiness.get('claude', {})
         if (claude.get('state') != 'ready_for_host_bound_creation' or
