@@ -1,0 +1,14 @@
+{
+  "run_id": "ROLE-CONTRACT-AUDIT-0001",
+  "role": "coordinator",
+  "input_commit": "8df7fc5ed1fd41a67b4da1cc439a7e865db29bb4",
+  "scope": "Role contracts and enforcement; no scientific adjudication",
+  "sources": [
+    "User original requirements and subsequent human-review policy",
+    "Repository harnesses, policies, validator and workflow"
+  ],
+  "output_paths": [
+    "runs/ROLE-CONTRACT-AUDIT-0001/audit.md"
+  ],
+  "policy_rollout": "Existing frozen packets unchanged; release a hashed amendment before each affected next round."
+}

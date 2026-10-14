@@ -1,0 +1,21 @@
+{
+  "actor_id": "Codex-C05-TIMING-R2",
+  "call_sign": "CDX-Skeptic-TIMING",
+  "session_id": "/root/codex_c05_timing_r2",
+  "role": "challenger",
+  "domain_ids": [
+    "D05"
+  ],
+  "topic_scope": "EDA-0002 landscape only; no dossier supplied",
+  "input_commit": "27977cb365dab9b3df5193fcd0c2e23804f840cf",
+  "packet_sha256": "5864539a0c2b0378e2fec6a8ea826ebbb330ed2ec3854fdbbb4b791f0d25cdab",
+  "payload_hashes_verified": 19,
+  "status": "ready_for_bounded_landscape_only",
+  "isolation": "policy-only shared host; not OS sandbox",
+  "ambient_context": "System/developer tool instructions, extensive user-supplied workspace instructions and environment cwd were present. No parent scientific conversation, predecessor output, dossier, forecast, or other role notes observed. No shared checkout was inspected. Session originates as an assigned subagent; fresh empty runtime cannot be independently attested.",
+  "model_requested": "gpt-6-astra",
+  "reasoning_requested": "low",
+  "actual_model": "not independently exposed by runtime; cannot attest requested model selection",
+  "phase_override": "Operational assignment authorizes one bounded public-primary-source search after onboarding, maximum six primary sources; no experiments.",
+  "validation": "scripts/project.py is absent from allowlisted packet; shared checkout access prohibited. Full project validation deferred to transport; hashes checked locally."
+}

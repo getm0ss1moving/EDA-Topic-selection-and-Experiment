@@ -10,28 +10,31 @@
     "D04": "EDA-0001",
     "D05": "EDA-0002"
   },
-  "active_platforms": ["codex", "deepseek", "claude"],
+  "active_platforms": [
+    "codex",
+    "deepseek",
+    "claude"
+  ],
   "assignments": {
     "EDA-0001": {
       "domain": "D04",
       "proposer": "Codex-P04-PHYSICAL",
-      "challenger": "DeepSeek-C04-PHYSICAL",
-      "verifier": "Claude-V02-PHYSICAL"
+      "challenger": "Codex-C04-PHYSICAL-R2",
+      "verifier": "DeepSeek-V02-PHYSICAL"
     },
     "EDA-0002": {
       "domain": "D05",
       "proposer": "Claude-P05-TIMING",
-      "challenger": "DeepSeek-C05-TIMING",
-      "verifier": "Codex-V02-PHYSICAL"
+      "challenger": "Codex-C05-TIMING-R2",
+      "verifier": "DeepSeek-V02-PHYSICAL"
     }
   },
   "released_actors": [
     "Codex-P04-PHYSICAL",
     "Claude-P05-TIMING",
-    "DeepSeek-C04-PHYSICAL",
-    "DeepSeek-C05-TIMING",
-    "Claude-V02-PHYSICAL",
-    "Codex-V02-PHYSICAL"
+    "Codex-C04-PHYSICAL-R2",
+    "Codex-C05-TIMING-R2",
+    "DeepSeek-V02-PHYSICAL"
   ],
   "first_wave": [
     "Codex-P04-PHYSICAL",
@@ -53,24 +56,63 @@
     "codex": {
       "state": "ready_after_merge_and_packet_export",
       "models_verified": true,
-      "roles": ["D04 proposer", "D05 verifier"]
+      "roles": [
+        "D04 proposer",
+        "D04 challenger",
+        "D05 challenger"
+      ]
     },
     "deepseek": {
       "state": "ready_after_merge_and_packet_export",
       "models_verified": true,
-      "model_policy": "Use the observed deepseek-flash model for both challengers; record the actual host model and effort at creation.",
-      "roles": ["D04 challenger", "D05 challenger"]
+      "model_policy": "Verification platform: use the observed deepseek-flash model at low effort for bounded source checks per docs/TEAM-DEEPSEEK.md, and record the actual host model and effort at creation.",
+      "roles": [
+        "D04 verifier",
+        "D05 verifier"
+      ]
     },
     "claude": {
       "state": "ready_for_host_bound_creation",
       "models_verified": false,
       "model_policy": "Use only a Claude-family model exposed by the destination host. Record the exact model before the session receives scientific input; abort creation if no Claude model is exposed.",
-      "roles": ["D05 proposer", "D04 verifier"]
+      "roles": [
+        "D05 proposer"
+      ]
     }
   },
   "experiment_authorization": false,
   "experiment_blockers": [
     "No accepted topic or agreed experiment task list exists.",
     "Representative designs, macro-rich cases, additional corners and a qualified signoff oracle remain incomplete."
-  ]
+  ],
+  "role_handoffs": {
+    "EDA-0001": {
+      "challenger": {
+        "from": "DeepSeek-C04-PHYSICAL",
+        "to": "Codex-C04-PHYSICAL-R2",
+        "owner_authorized": true,
+        "reason": "Owner decision 2026-10-13 (true UTC; 2026-10-14 local host date): the DeepSeek platform stops serving as challenger and becomes the project's verification platform; the dormant D04 challenger seat passes to a fresh Codex successor identity with no inherited context."
+      },
+      "verifier": {
+        "from": "Claude-V02-PHYSICAL",
+        "to": "DeepSeek-V02-PHYSICAL",
+        "owner_authorized": true,
+        "reason": "Owner decision 2026-10-13: DeepSeek verifies both queues, replacing the platform that supplies the topic's proposer; D04 has no frozen proposal yet, so no verification work is lost."
+      }
+    },
+    "EDA-0002": {
+      "challenger": {
+        "from": "DeepSeek-C05-TIMING",
+        "to": "Codex-C05-TIMING-R2",
+        "owner_authorized": true,
+        "reason": "Owner-directed succession (PR #20), GPT-6-Astra at low effort with fresh context; the DeepSeek challenger filed and transported its round-1 challenge before the handoff."
+      },
+      "verifier": {
+        "from": "Codex-V02-PHYSICAL",
+        "to": "DeepSeek-V02-PHYSICAL",
+        "owner_authorized": true,
+        "reason": "Owner decision 2026-10-13: DeepSeek verifies both queues; with a Claude proposal and a Codex challenge, the verifier is the third platform."
+      }
+    }
+  }
 }

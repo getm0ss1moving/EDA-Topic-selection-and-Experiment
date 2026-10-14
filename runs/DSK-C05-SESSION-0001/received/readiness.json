@@ -1,0 +1,253 @@
+{
+  "schema": "eda-role-readiness/1",
+  "written_utc": "2026-10-12T18:39:19Z",
+  "written_local": "2026-10-13T02:39:19+08:00",
+
+  "identity": {
+    "actor_id": "DeepSeek-C05-TIMING",
+    "call_sign": "DSK-Forge-TIMING",
+    "call_sign_source": "domains/D05/brief.json line 39 (platform_roles.deepseek.challenger_call_sign)",
+    "platform": "DeepSeek",
+    "role": "challenger",
+    "domain_ids": ["D05"],
+    "topic": "EDA-0002",
+    "topic_title": "Sound per-(endpoint, scenario) screening for multi-corner STA with exact refinement",
+    "phase": "research",
+    "stage": "initial",
+    "session_freshness": "Fresh session created for this role. No prior conversation, task history, shared memory, agent messaging, subordinate agents or cross-role context was used. This turn began with the role assignment message only.",
+    "harness_observed": "Claude Code CLI (transport host). Harness identity is the runner, not the model.",
+    "harness_session_id_observed": "af136556-818c-47c7-b514-5a141cb14d85",
+    "harness_session_id_note": "Appears in this session's own sandbox task path; host-reported, not independently verified."
+  },
+
+  "model": {
+    "requested": "deepseek-flash",
+    "reasoning_requested": "max",
+    "observed_host_reported": "deepseek-flash",
+    "observed_evidence": [
+      "Session /model output: 'Set model to `deepseek-flash` and saved as your default for new sessions'.",
+      "Session environment statement: 'You are powered by the model deepseek-flash'."
+    ],
+    "verification_limit": "The model identity is host-reported. This agent cannot independently verify the serving model, weights, quantization or the effective reasoning effort. config/launch-release.json platform_readiness.deepseek.model_policy requires the observed model and effort to be recorded at creation; effort 'max' is recorded as requested, its actual application is unverifiable.",
+    "policy_fit": "Matches config/launch-release.json platform_readiness.deepseek.model_policy ('Use the observed deepseek-flash model for both challengers')."
+  },
+
+  "input": {
+    "input_commit": "4b666c04b0eaa089934f736fab4db2309ce7d36a",
+    "input_commit_source": "ASSIGNMENT.json line 13; PACKET.json line 5",
+    "packet_hash_sha256_expected": "e6c53f61ca815c2e69c1ab2f68cb2c667290f634cc49ea4ff5900d8e535332cf",
+    "packet_hash_sha256_observed": "e6c53f61ca815c2e69c1ab2f68cb2c667290f634cc49ea4ff5900d8e535332cf",
+    "packet_hash_match": true,
+    "registry": "config/agents-deepseek.json (named in PACKET.json line 4; not included in this packet, not read)",
+    "packet_root": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/challenger-release-20261013/DeepSeek-C05-TIMING",
+    "outbox": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/challenger-release-20261013/DeepSeek-C05-TIMING"
+  },
+
+  "hash_verification": {
+    "method": "shasum -a 256 over every file found with find -type f, compared field by field against the PACKET.json 'files' map",
+    "verified_utc": "2026-10-12T18:39:19Z",
+    "listed_file_count": 30,
+    "found_file_count": 31,
+    "file_count_note": "31 = 30 files listed in PACKET.json plus PACKET.json itself.",
+    "mismatches": 0,
+    "missing_listed_files": 0,
+    "extra_unlisted_files": 0,
+    "hidden_files_found": 0,
+    "result": "PASS",
+    "per_file": {
+      "AGENTS.md": "666078705945983829ad2dbc80d2cb3416b5f16a4e082d32dedba618b6579744",
+      "ASSIGNMENT.json": "eaa708cacc0bdc0acb0900f017b2b91f4fab4591e422bdd0b9d426261a52b830",
+      "PACKET.json": "e6c53f61ca815c2e69c1ab2f68cb2c667290f634cc49ea4ff5900d8e535332cf",
+      "candidates/EDA-0002/challenges.md": "8f59fa4fbefdad8e6f20ecc5023ee7093327cc886b467ce94c0a50cf1667f627",
+      "candidates/EDA-0002/contest-audit.md": "fb416544b8e99eb61c4b7b6dda913d4a247f48a3352cbad0d16f1468ad4b5fc0",
+      "candidates/EDA-0002/direction-control.json": "f9ee70159f3fa034a34077bcc9358b0c9fc07686889d47bff34407f4b2b1e50c",
+      "candidates/EDA-0002/dossier.json": "5c29d0ca629745fdf8115c83027c2b6e23cd4b316f38c15a95561805e3726263",
+      "candidates/EDA-0002/experiment-consensus.json": "366d7446fedcbc733de465a5de8725242e09a8d50630fefaa855a7dd504442a4",
+      "candidates/EDA-0002/experiment-plan.md": "441933fab59195d3e5a9a38abe8324bb272b9095d79b269907e2ba4660648eac",
+      "candidates/EDA-0002/industry-gap.md": "672c821feac7c77d9fbd2c9518552c7512099f8fb8496a675f67799ebc42e455",
+      "candidates/EDA-0002/prior-art.csv": "ab3672ad4eaf9ff6e85b20dc95307fadd548c132ca2a9252aec71bcacaddbf3c",
+      "candidates/EDA-0002/proposal.md": "18a2404e48fcb9ef68675d6854306d965b8a4fc2449edc33a3206ff04c12c5db",
+      "candidates/EDA-0002/search-log.md": "1b222e874e73d8f6e6fcceba528f99f631e37b2026962b148537c2b46e55e5bd",
+      "candidates/EDA-0002/sources.json": "4cc83ce23146ec2f867e8f98aca60440d3f22f5801d43ff8b38b207cb4afde57",
+      "candidates/EDA-0002/tasklist.md": "d115fcc69b1b65610311aa0b95554f4fe26bdac8a966f606f30fb6c0ca7efd56",
+      "config/launch-release.json": "e842409931c2b66d923b1c0414061f87efc4958c72510ac41e09ae91c94ecd12",
+      "config/physical-resources.lock.json": "ecc288ded4544a23d2e5290fb1b0457980c11f45c658d3b216bab0276e206b43",
+      "config/research-brief.json": "7fa9b901da1c3fbd984604493045670584c52b3bdf21abaa3dc54e797873ad92",
+      "docs/CHARTER.md": "5cd71c6268b09aa5967cf304dce9a39492b9a0103ed16e9cc05a79daf1ce7306",
+      "docs/EVIDENCE.md": "c79e8e92c350a052ad87721df55d29dd6da88a07b54de82151b4fec494997679",
+      "docs/EXPERIMENTS.md": "1aceeea8fbcc4f0cedeaf3fa5e04badcfcb769532ba07e107085baa230b0ddaa",
+      "docs/FORMATS.md": "fd86ca555d1df8f9895d79c4bff0bd7a2e65d0e6ef5da3a27765bac9a06e1734",
+      "docs/GITHUB.md": "e59fc702d32cc61016178f726be2311c0e539e6d28f17097dc93c90c61ed4150",
+      "docs/ISOLATION.md": "147bb553a8a217edd664a473285e3a436aa06361b2c7e9784304248a3083a573",
+      "docs/PHYSICAL-PILOT.md": "36e85b2d916f41901361ae9d238fc8c09889a92b376037225c190f9fcf78d913",
+      "docs/WORKFLOW.md": "d830e5834991311d42d8d4cc2f7a1300f97af30b21635a22a2916a4b40ae65a3",
+      "domains/D05/README.md": "af0d9a0020a475faf29e765917381b6bc14ce18d287946f9fa71aee9dfcf7740",
+      "domains/D05/brief.json": "ca2e965b5dfe5a3753d92b237eeb1920001e3d0ed42fc2bee3a484c0f01457d0",
+      "harness/CHALLENGER.md": "983a53c8afb90df6333df21edfe1060ae2fc530242f27e80058c67ae6af62e6f",
+      "harness/ONBOARDING.md": "543dd1ee58db69360d56fef382f8ff5c587b7a77309b6bb38cc7e8891781f5b5",
+      "templates/run.json": "2b8a523bbaf84c104e26fea82848847e09c4e7ab41e1d1bde05c4374a9b3837c"
+    }
+  },
+
+  "read_set_this_turn": {
+    "common_policy": [
+      "docs/CHARTER.md",
+      "docs/WORKFLOW.md",
+      "docs/EVIDENCE.md",
+      "docs/ISOLATION.md"
+    ],
+    "role_harness": ["harness/ONBOARDING.md", "harness/CHALLENGER.md"],
+    "task_and_identity": ["AGENTS.md", "ASSIGNMENT.json", "PACKET.json"],
+    "brief": ["domains/D05/brief.json", "domains/D05/README.md", "config/research-brief.json", "config/launch-release.json"],
+    "frozen_dossier_inputs": [
+      "candidates/EDA-0002/proposal.md",
+      "candidates/EDA-0002/sources.json",
+      "candidates/EDA-0002/prior-art.csv",
+      "candidates/EDA-0002/search-log.md",
+      "candidates/EDA-0002/contest-audit.md",
+      "candidates/EDA-0002/industry-gap.md",
+      "candidates/EDA-0002/experiment-plan.md",
+      "candidates/EDA-0002/tasklist.md",
+      "candidates/EDA-0002/dossier.json",
+      "candidates/EDA-0002/direction-control.json",
+      "candidates/EDA-0002/experiment-consensus.json",
+      "candidates/EDA-0002/challenges.md (placeholder, content TBD)"
+    ],
+    "hash_verified_but_not_read": [
+      "docs/EXPERIMENTS.md",
+      "docs/FORMATS.md",
+      "docs/GITHUB.md",
+      "docs/PHYSICAL-PILOT.md",
+      "templates/run.json",
+      "config/physical-resources.lock.json"
+    ],
+    "read_scope_note": "AGENTS.md line 5 names CHARTER, WORKFLOW, EVIDENCE and ISOLATION as the common policy and restricts harness reading to the assigned role harness, which was honored. EXPERIMENTS.md, FORMATS.md, PHYSICAL-PILOT.md and run.json are cited by the dossier (for example docs/EXPERIMENTS.md lines 25-27, docs/FORMATS.md lines 38 and 50, docs/PHYSICAL-PILOT.md line 27) but are not in the named common-policy set, so they were deliberately left unread this turn. If the coordinator classifies them as common policy, they will be read in the research round. No other role harness exists in this packet.",
+    "forecast_state": "forecast.json is absent from this packet, consistent with docs/ISOLATION.md line 16 ('A challenger packet intentionally withholds forecast.json on first pass'). I have not seen any proposer headroom estimate or forecast. The independent estimate in first-pass-plan.md is therefore recorded before any forecast exposure."
+  },
+
+  "isolation": {
+    "assignment_declared": "ASSIGNMENT.json line 16: 'Fresh task and allowlisted inputs; no OS sandbox claim'.",
+    "controls_observed": [
+      {
+        "control": "Packet mounted read-only",
+        "evidence": "All packet files are mode -r--r--r-- (444) and all directories dr-xr-xr-x (555), verified by ls -la.",
+        "strength": "Filesystem permission bit on this host, not an enforced security boundary (docs/ISOLATION.md line 5)."
+      },
+      {
+        "control": "No repository history in the packet",
+        "evidence": "The packet contains no .git and no hidden entries (find -name '.*' returned only '.'); the session reports 'Is a git repository: false'.",
+        "consequence": "File hashes can be checked against PACKET.json, but the packet contents cannot be verified against commit 4b666c04b0eaa089934f736fab4db2309ce7d36a offline. Commit provenance is taken on trust from PACKET.json and ASSIGNMENT.json."
+      },
+      {
+        "control": "Write confinement to the outbox",
+        "evidence": "This session's sandbox write allowlist contains only my outbox among shared project paths; all other project and home paths are excluded. I wrote only to /Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/challenger-release-20261013/DeepSeek-C05-TIMING.",
+        "strength": "Harness-level enforcement of the docs/ISOLATION.md access matrix for this session; declared here as an observed control, not as proof of a container boundary."
+      },
+      {
+        "control": "Read-deny rules covering other actors",
+        "evidence": "This session's configured read-deny list names other actors' packet and outbox trees (for example EDA-Agent-Packets/CODEX-*, GOVERNANCE-*, foundation-*, physical-pilot-*, role-allocation-*, physical-release-*, challenger-release-*/DeepSeek-C04-PHYSICAL and EDA-Agent-Outboxes/{Codex-*,Claude-*,DeepSeek-C04-*,DeepSeek-P*,DeepSeek-V*,physical-release-*}) plus unrelated home directories.",
+        "action_taken": "No attempt was made to read, list or test any of those paths."
+      },
+      {
+        "control": "No network use",
+        "evidence": "No WebSearch, WebFetch, curl or other network request was issued in this turn. No web survey was started, per the assignment."
+      },
+      {
+        "control": "No cross-role communication, no subordinate agents, no shared memory",
+        "evidence": "Files written only to my own outbox; no messaging tool, no task tool, no memory retrieval was used."
+      },
+      {
+        "control": "No execution of packet-provided code",
+        "evidence": "The packet contains no scripts/ directory or executable artifacts. Nothing in the packet was executed."
+      }
+    ],
+    "os_level_isolation_claim": "None. This is a plain host session under harness policy. Isolation here means controlled input exposure and an auditable single-role session, exactly as docs/ISOLATION.md lines 5 and 16 describe."
+  },
+
+  "unlisted_context_observed": [
+    {
+      "item": "Host model and session settings",
+      "detail": "The harness reports the model as 'deepseek-flash' and the /model command output was shown in this session. This is host context, not packet content.",
+      "scientific_content": false
+    },
+    {
+      "item": "Sandbox configuration block naming other actors' paths",
+      "detail": "The session's own sandbox configuration enumerated filesystem paths and deny rules for other actors' packets and outboxes, plus paths under EDA-Topic-selection-DeepSeek/runs/DSK-C04C05-LAUNCH-0001/launch-settings-C05.json, EDA-Resources, eda-dsk and ~/.claude. This exposes the existence, naming convention and release layout of other roles (for example a C04/C05 launch run and a DeepSeek-C04-PHYSICAL sibling).",
+      "scientific_content": false,
+      "action_taken": "No path outside the frozen packet and my own outbox was opened or listed. The contents of those paths are unknown to me. Recorded here for the coordinator's contamination audit rather than treated as usable input."
+    },
+    {
+      "item": "Assignment message",
+      "detail": "This turn's instruction text stated the actor identity, topic, outbox path and the packet hash. It is the role assignment, consistent with ASSIGNMENT.json, and adds no scientific content.",
+      "scientific_content": false
+    }
+  ],
+
+  "permitted_outputs": {
+    "per_assignment": ["role-output-manifest.json", "released scientific files for the assigned role"],
+    "written_this_turn": ["readiness.json", "first-pass-plan.md"],
+    "planned_later_pending_evidence": [
+      "challenges.md (OBJ-NNN ledger with sources, severities, refutation conditions and cheapest decisive tests)",
+      "tasklist.md 'Challenger additions' text (falsification tests, fairness controls, missing dependencies) for joint signature",
+      "experiment-consensus.json challenger consent over an exact frozen tasklist.md revision and SHA-256",
+      "evidence and source additions (new SOURCE records appended without rewriting the proposer's records)",
+      "role-output-manifest.json and an output packet for transport",
+      "an independent abandonment position, only if verified evidence supports one"
+    ],
+    "not_permitted_for_me": [
+      "approving, merging, promoting or adjudicating evidence",
+      "editing the frozen packet, repository governance, settings or another actor's files",
+      "conversing with another role or reading another role's files"
+    ]
+  },
+
+  "outbox_inventory": {
+    "snapshot_utc": "2026-10-13T11:28:00Z",
+    "files_sha256": {
+      "readiness.json": "c1b0573c12ae8d0bc6cab6cc786bd806eb098b4d8b48907f0c840056f19e896f",
+      "first-pass-plan.md": "dc3939f131e55ea7bd4bb74072f6c3f2c19a8bc1417b3986635a3daa681afaac",
+      "search-log-challenger.md": "2e4990427213178f8e957312da127c6d64ded5dd7d2ced84350d5fca64c7652b",
+      "sources-challenger.json": "1a45dda4c63dc3460d050acba1e3a157b665a32da78922ae071bb3192b0ea518",
+      "findings-challenger.md": "38d9f5a749930dff38b49445aa1d8acff516e08f8e778dc30902091f52f533fc"
+    },
+    "hashes_note": "Hashes are a snapshot at the time above; later edits to a file invalidate its entry. The coordinator should re-hash at transport time.",
+    "harness_created_entries": ".claude/.cc-writes/ is an empty directory created by the agent harness for its own bookkeeping (it appears in the harness session's own path lists). It contains no scientific content and was not authored by me.",
+    "challenges_md": "Not yet written to this outbox: no objection has met the evidence standard (source locator plus decisive test). The placeholder in the frozen packet is the proposer-side copy."
+  },
+
+  "claims_this_turn": {
+    "scientific_claims_made": 0,
+    "novelty_claims_made": 0,
+    "objections_asserted": 0,
+    "statement": "No web survey, no tool runs and no source inspection occurred, so no novelty, performance, contest, industry-gap or theoretical-limit claim is made. first-pass-plan.md contains plans, an explicitly labeled subjective headroom prior and investigation targets, not findings or objections."
+  },
+
+  "blocked_or_unverified": [
+    {
+      "item": "Repository validation script",
+      "detail": "AGENTS.md line 13 requires 'python3 scripts/project.py validate' before submission. This packet contains no scripts/ directory, so the command cannot be run from the frozen packet. Not run; no substitute check was invented."
+    },
+    {
+      "item": "Commit provenance of packet contents",
+      "detail": "Without .git, the mapping from these files to commit 4b666c04b0eaa089934f736fab4db2309ce7d36a cannot be verified offline."
+    },
+    {
+      "item": "Upstream artifact hashes cited in sources.json",
+      "detail": "Hashes recorded for downloaded upstream files (for example SRC-002 DmpCeff.cc edfadea5..., SRC-007 TableModel.cc 8326d308...) were not re-verified in this turn because no network access was used and the files are not in the packet. They are decision-relevant for the mechanism audit and are on the research-round checklist."
+    },
+    {
+      "item": "Resource envelope for the research round",
+      "detail": "domains/D05/brief.json lines 43-45 state that no broad research run is authorized by this onboarding packet and that compute, tool, PDK and design access stay unknown until the human fills config/research-brief.json further. Network access for a source survey is likewise unconfirmed for this role."
+    },
+    {
+      "item": "Experiment authorization",
+      "detail": "config/launch-release.json line 71: experiment_authorization is false. No experiment may start before promotion and task-list consensus."
+    }
+  ],
+
+  "next_turn_preconditions": [
+    "A file packet or a direct human request starts the research round (harness/ONBOARDING.md line 13).",
+    "Before viewing any proposer forecast, the independent headroom estimate in first-pass-plan.md stands as the pre-exposure record.",
+    "Work products go only to this outbox."
+  ]
+}

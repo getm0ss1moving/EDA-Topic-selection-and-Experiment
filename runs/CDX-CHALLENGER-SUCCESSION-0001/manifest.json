@@ -1,0 +1,19 @@
+{
+  "session_id": "/root/codex_c05_timing_r2",
+  "role": "challenger",
+  "actor_id": "Codex-C05-TIMING-R2",
+  "platform": "OpenAI Codex",
+  "topic": "EDA-0002",
+  "model": "gpt-6-astra",
+  "effort_requested": "low",
+  "model_basis": "Explicit spawn_agent model and effort request; role self-report pending.",
+  "operator": "getm0ss1moving",
+  "github_login": "getm0ss1moving (transport only)",
+  "input_commit": "27977cb365dab9b3df5193fcd0c2e23804f840cf",
+  "packet_sha256": "5864539a0c2b0378e2fec6a8ea826ebbb330ed2ec3854fdbbb4b791f0d25cdab",
+  "independence_attestation": "Fresh fork_turns=none subagent; policy-only packet and public sources; no predecessor memory/signatures. Shared host, policy isolation only.",
+  "state": "independent_landscape_search; dossier not released",
+  "run_id": "CDX-CHALLENGER-SUCCESSION-0001",
+  "packet_path": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/codex-successor-27977cb/Codex-C05-TIMING-R2",
+  "outbox": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/codex-successor-27977cb/Codex-C05-TIMING-R2"
+}

@@ -21,3 +21,9 @@ A verifier reopens each decision-critical original source, checks metadata and v
 ## Rights and provenance
 
 Store bibliographic metadata, bounded excerpts, hashes and retrieval scripts rather than copyrighted full texts. Record data/design/PDK/tool licenses; do not upload restricted benchmarks, netlists or proprietary reports. Closed-source internals remain unknown unless public evidence establishes them. Record retractions, corrections, conflicts and version mismatches.
+
+## Decision coverage and objections
+
+The verifier must trace every decision-critical positive claim and objection to checked evidence, including the strongest prior mechanism, engineering need, contest overlap, applicable bound and feasibility. A single checked source does not certify the dossier. Coverage and scientific entailment are semantic review duties; structural CI cannot establish them. Record unreviewed claim IDs as unresolved, and do not mark acceptance gates true while a decision-critical premise is unresolved. Scientific arguments from automated code reviewers also require file transport and adjudication before they can influence a research revision.
+
+All scientific roles have standing permission to independently read accessible external research files and sources, without per-source approval; see `docs/ISOLATION.md`. Primary-source requirements govern evidentiary weight, not permission to read. Record inaccessible sources and actual runtime restrictions in the search log; limited access does not establish novelty. Do not bypass source authentication or use external locations to recover another role's withheld material. Decisions about budgets, tools and thresholds must cite the human instruction or allocation file. Coordinator suggestions must be labelled suggestions, not invented owner answers.

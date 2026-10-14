@@ -51,7 +51,7 @@ Model diversity between proposer and challenger is intentional, but `docs/ISOLAT
 | D03 | Logic synthesis and technology mapping | DeepSeek-P03-SYNTH (`DSK-Spark-SYNTH`) | DeepSeek-C03-SYNTH (`DSK-Forge-SYNTH`) | DeepSeek-V01-DIGITAL (`DSK-Ledger-DIGITAL`) |
 | D04 | Floorplanning, placement and routing | DeepSeek-P04-PHYSICAL (`DSK-Spark-PHYSICAL`) | DeepSeek-C04-PHYSICAL (`DSK-Forge-PHYSICAL`) | DeepSeek-V02-PHYSICAL (`DSK-Ledger-PHYSICAL`) |
 | D05 | Timing, extraction and signoff | DeepSeek-P05-TIMING (`DSK-Spark-TIMING`) | DeepSeek-C05-TIMING (`DSK-Forge-TIMING`) | DeepSeek-V02-PHYSICAL (`DSK-Ledger-PHYSICAL`) |
-| D06 | Power, reliability and manufacturability | DeepSeek-P06-RELIABILITY (`DSK-Spark-RELIABILITY`) | DeepSeek-C06-RELIABILITY (`DSK-Forge-RELIABILITY`) | DeepSeek-V02-PHYSICAL (`DSK-Ledger-PHYSICAL`) |
+| D06 | Power, reliability and manufacturability | DeepSeek-P06-RELIABILITY (`DSK-Spark-RELIABILITY`) | DeepSeek-C06-RELIABILITY (`DSK-Forge-RELIABILITY`) | DeepSeek-V03-SYSTEMS (`DSK-Ledger-SYSTEMS`; moved from V02 by run `DSK-ROLE-SUCCESSION-0001`) |
 | D07 | Analog, RF and mixed-signal automation | DeepSeek-P07-ANALOG (`DSK-Spark-ANALOG`) | DeepSeek-C07-ANALOG (`DSK-Forge-ANALOG`) | DeepSeek-V03-SYSTEMS (`DSK-Ledger-SYSTEMS`) |
 | D08 | Packaging, chiplets and 3D systems | DeepSeek-P08-CHIPLETS (`DSK-Spark-CHIPLETS`) | DeepSeek-C08-CHIPLETS (`DSK-Forge-CHIPLETS`) | DeepSeek-V03-SYSTEMS (`DSK-Ledger-SYSTEMS`) |
 | D09 | Agentic EDA and flow orchestration | DeepSeek-P09-AGENTIC (`DSK-Spark-AGENTIC`) | DeepSeek-C09-AGENTIC (`DSK-Forge-AGENTIC`) | DeepSeek-V03-SYSTEMS (`DSK-Ledger-SYSTEMS`) |
@@ -124,3 +124,5 @@ Each task's first turn is bounded onboarding: verify every listed packet file ha
 ## Status
 
 Governance hold. No DeepSeek actor has produced a survey, a proposal, a challenge or a verification. No topic is claimed. The D04/D05 topic containers are empty draft scaffolds, and their direction-control and experiment-consensus records remain pending. No R1 role may start until the governance stack is merged, the current head passes independent GitHub confirmation and the coordinator records an explicit release.
+
+**Update 2026-10-13 (true UTC; 2026-10-14 local host date), per run `DSK-ROLE-SUCCESSION-0001`:** the owner moved the DeepSeek platform out of the challenger role and into the project's verification platform. `DeepSeek-C04-PHYSICAL` never ran and its seat passed to the Codex successor `Codex-C04-PHYSICAL-R2`; `DeepSeek-C05-TIMING` completed onboarding and a full round-1 challenge whose record is transported in `runs/DSK-C05-SESSION-0001`, and its seat continues with `Codex-C05-TIMING-R2`. `DeepSeek-V02-PHYSICAL` is released as the D04+D05 verifier (`deepseek-flash` at low effort for bounded source checks), and the D06 verifier binding moved to `DeepSeek-V03-SYSTEMS`. See `config/launch-release.json` `role_handoffs` for the owner-authorized records.

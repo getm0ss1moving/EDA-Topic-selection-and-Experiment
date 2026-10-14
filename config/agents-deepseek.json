@@ -411,7 +411,7 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "ready_for_fresh_session",
+      "status": "handed_off_by_succession",
       "github_review_identity": null,
       "packet": null,
       "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
@@ -440,10 +440,16 @@
         "verdict_state": "onboarding_complete",
         "unlisted_context_exposed": false
       },
-      "activation": "ready_for_fresh_session",
+      "activation": "handed_off",
+      "succession": {
+        "to": "Codex-C04-PHYSICAL-R2",
+        "owner_authorized": true,
+        "record": "runs/DSK-ROLE-SUCCESSION-0001",
+        "note": "Owner decision 2026-10-13 (true UTC; 2026-10-14 local host date): the DeepSeek platform serves as the verification platform only; the dormant D04 challenger seat passed to a fresh Codex successor identity. This identity never ran a session."
+      },
       "launch_readiness": {
         "run_id": "DSK-R1-READY",
-        "state": "ready_to_launch",
+        "state": "handed_off_by_succession",
         "input_commit": "4b9452e84b3caf57bb5c97ab37039a096ace3643",
         "r1_packets": [
           {
@@ -455,10 +461,10 @@
         "topic_containers": [
           "EDA-0001"
         ],
-        "blocked_by": "proposal_not_yet_frozen",
-        "current_hold": "The identity may be created after release merge and fresh packet export, but it receives scientific proposal content only after the assigned proposer output is frozen."
+        "blocked_by": "handed_off_to_Codex-C04-PHYSICAL-R2",
+        "current_hold": "No longer held by DeepSeek: the D04 challenger seat passed to Codex-C04-PHYSICAL-R2 under the owner decision recorded in config/launch-release.json role_handoffs."
       },
-      "active_scope": true,
+      "active_scope": false,
       "fresh_session_required": true
     },
     {
@@ -552,7 +558,7 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "ready_for_fresh_session",
+      "status": "handed_off_by_succession",
       "github_review_identity": null,
       "packet": null,
       "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
@@ -584,10 +590,40 @@
           "detail": "No file outside the packet allowlist was opened, and no content belonging to another actor, another role, another domain, another session or any shared memory was read. One disclosure for auditability: a single `ls -la` of the parent outbox directory (/Users/duanzeyu/Documents/ChatGPT/eda-dsk/outbox/) returned directory NAMES only for sibling actor outboxes (DeepSeek-C01..C09, P01..P09, V01..V03). No sibling outbox contents were listed or opened, and the challenge/plan below is not informed by them. I did not read, and did not attempt to read: another role harness, another domain brief, another actor's outbox content, any transcript or chain-of-thought, any shared agent memory, or any repository worktree outside this packet."
         }
       },
-      "activation": "ready_for_fresh_session",
+      "session_record": {
+        "run_id": "DSK-C05-SESSION-0001",
+        "session_id": "af136556-818c-47c7-b514-5a141cb14d85",
+        "state": "round-1 challenge filed and transported (OBJ-001, OBJ-002, OQ-1..5, S-1..4; provisional pending verifier adjudication); session not resumed; the D05 challenger seat passed to Codex-C05-TIMING-R2 by the owner-authorized handoff (PR #20)",
+        "packet_sha256": "e6c53f61ca815c2e69c1ab2f68cb2c667290f634cc49ea4ff5900d8e535332cf",
+        "input_commit": "4b666c04b0eaa089934f736fab4db2309ce7d36a",
+        "onboarding_outputs": {
+          "readiness.json": "cc3888e56f66002b8509a532540ccb02dd476fe3dce6a4f6af39047572930f1c",
+          "first-pass-plan.md": "dc3939f131e55ea7bd4bb74072f6c3f2c19a8bc1417b3986635a3daa681afaac"
+        },
+        "challenge_outputs": {
+          "challenges.md": "b57953a2e5aab67677dacc2cd9caee3ce0edef58070f1a85588e29c03407e225",
+          "findings-challenger.md": "658803fab83efa9d84fe4ff9ce016324e83f213528ede46714a33fb44a3c02ed",
+          "search-log-challenger.md": "2f9f561ed41d001561744ab3e8bc9583527844b4d515999ad6016258802ba8a0",
+          "sources-challenger.json": "d0d3d39d31efff63056c95bf589a51abc88c9529f6e2299631843e35869b420c"
+        },
+        "transport": "runs/DSK-C05-SESSION-0001 (challenges and sidecars moved into candidates/EDA-0002; session records archived under received/)",
+        "successor": "Codex-C05-TIMING-R2"
+      },
+      "model_observed": "deepseek-flash",
+      "session_id": "af136556-818c-47c7-b514-5a141cb14d85",
+      "session_state": "round-1 challenge filed and transported; not resumed; seat succeeded by Codex-C05-TIMING-R2 for further rounds",
+      "launch_run": "DSK-C04C05-LAUNCH-0001",
+      "registration_run": "DSK-C05-SESSION-0001",
+      "activation": "handed_off",
+      "succession": {
+        "to": "Codex-C05-TIMING-R2",
+        "owner_authorized": true,
+        "record": "runs/DSK-ROLE-SUCCESSION-0001",
+        "note": "Owner succession (PR #20) with DeepSeek exiting the challenger role; this identity completed onboarding and a full round-1 challenge whose record is transported in runs/DSK-C05-SESSION-0001, then handed the seat to the successor."
+      },
       "launch_readiness": {
         "run_id": "DSK-R1-READY",
-        "state": "ready_to_launch",
+        "state": "handed_off_by_succession",
         "input_commit": "4b9452e84b3caf57bb5c97ab37039a096ace3643",
         "r1_packets": [
           {
@@ -599,10 +635,10 @@
         "topic_containers": [
           "EDA-0002"
         ],
-        "blocked_by": "proposal_not_yet_frozen",
-        "current_hold": "The identity may be created after release merge and fresh packet export, but it receives scientific proposal content only after the assigned proposer output is frozen."
+        "blocked_by": "handed_off_to_Codex-C05-TIMING-R2",
+        "current_hold": "No longer held by DeepSeek: the D05 challenger seat passed to Codex-C05-TIMING-R2 under the owner-authorized handoff recorded in config/launch-release.json role_handoffs. The completed round-1 challenge (OBJ-001, OBJ-002; provisional) is transported in runs/DSK-C05-SESSION-0001 and remains available to downstream review."
       },
-      "active_scope": true,
+      "active_scope": false,
       "fresh_session_required": true
     },
     {
@@ -1108,8 +1144,7 @@
       "role": "verifier",
       "domain_ids": [
         "D04",
-        "D05",
-        "D06"
+        "D05"
       ],
       "task_title": "DeepSeek-V02-PHYSICAL",
       "model_requested": "deepseek-flash",
@@ -1117,7 +1152,7 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "paused_governance",
+      "status": "ready_for_fresh_session",
       "github_review_identity": null,
       "packet": null,
       "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
@@ -1175,7 +1210,9 @@
           ]
         }
       },
-      "activation": "paused_governance",
+      "activation": "ready_for_fresh_session",
+      "release_note": "Released as the D04+D05 verifier by runs/DSK-ROLE-SUCCESSION-0001 under the owner decision of 2026-10-13 (true UTC; 2026-10-14 local host date). D06 was removed from this identity's future assignment per the standing platform instruction; the D06 deepseek verifier binding moved to DeepSeek-V03-SYSTEMS.",
+      "session_state": "not_created; verifier packet awaits a frozen proposal and released challenge material",
       "launch_readiness": {
         "run_id": "DSK-R1-READY",
         "state": "ready_to_launch",
@@ -1196,9 +1233,11 @@
           "EDA-0001",
           "EDA-0002"
         ],
-        "blocked_by": "governance_hardening_and_github_independent_review",
-        "current_hold": "Historical packet readiness is preserved, but no scientific role may start until the governance stack is merged and explicitly released."
-      }
+        "blocked_by": "awaiting_frozen_proposal_and_released_challenge_material",
+        "current_hold": "Released for the D04 and D05 queues; the verifier session is created only after the proposal and challenge artifacts are frozen and released, per config/launch-release.json research_sequence."
+      },
+      "active_scope": true,
+      "fresh_session_required": true
     },
     {
       "actor_id": "DeepSeek-V03-SYSTEMS",
@@ -1206,10 +1245,12 @@
       "platform": "DeepSeek",
       "role": "verifier",
       "domain_ids": [
+        "D06",
         "D07",
         "D08",
         "D09"
       ],
+      "domain_note": "D06 added by runs/DSK-ROLE-SUCCESSION-0001 when the standing instruction to remove D06 from DeepSeek-V02-PHYSICAL's future assignment was executed; the D06 deepseek verifier binding moved here. D06 remains a deferred, unreleased domain.",
       "task_title": "DeepSeek-V03-SYSTEMS",
       "model_requested": "deepseek-flash",
       "reasoning_requested": "low",
@@ -1277,9 +1318,9 @@
     "state": "ready_for_role_creation",
     "decision_utc": "2026-10-11T03:27:55Z",
     "directive": "Release only DeepSeek-C04-PHYSICAL and DeepSeek-C05-TIMING as cross-platform challengers. They use fresh sessions and receive no proposal until the corresponding proposer artifact is frozen.",
+    "succession_directive": "Owner decision 2026-10-13 (true UTC; 2026-10-14 local host date): the DeepSeek platform stops serving as challenger and serves as the verification platform for both D04 and D05. The D04 challenger seat is handed to the Codex successor Codex-C04-PHYSICAL-R2; the D05 seat already passed to Codex-C05-TIMING-R2 (PR #20) after the DeepSeek challenger filed and transported its round-1 challenge. Release DeepSeek-V02-PHYSICAL as the D04/D05 verifier. See config/launch-release.json role_handoffs and runs/DSK-ROLE-SUCCESSION-0001.",
     "released_actors": [
-      "DeepSeek-C04-PHYSICAL",
-      "DeepSeek-C05-TIMING"
+      "DeepSeek-V02-PHYSICAL"
     ],
     "active_domains": [],
     "active_actors": [],
@@ -1310,12 +1351,12 @@
       "DeepSeek-V02-PHYSICAL",
       "DeepSeek-V03-SYSTEMS"
     ],
-    "deferral_reason": "Only the two D04/D05 challenger identities are released. DeepSeek proposer and verifier identities remain deferred under the cross-platform division of work; all other domains remain budget-deferred.",
+    "deferral_reason": "Only DeepSeek-V02-PHYSICAL is released, as the D04/D05 verifier. The challenger identities handed their seats to Codex successors; the DeepSeek proposer identity remains deferred under the cross-platform division of work; all other domains remain budget-deferred.",
     "column_scope": {
       "D04": "partitioning, floorplanning, macro placement, standard-cell placement, legalization, clock-tree synthesis, global and detailed routing",
       "D05": "STA, multi-mode/multi-corner analysis, parasitic extraction, crosstalk/signal integrity, timing closure, incremental analysis and ECO, signoff fidelity"
     },
-    "verifier_note": "DeepSeek-V02-PHYSICAL is registered for D04-D06. Its D04 and D05 queues are planned but currently closed.",
+    "verifier_note": "DeepSeek-V02-PHYSICAL is the released verifier for D04 and D05 (release updated by runs/DSK-ROLE-SUCCESSION-0001). D06 was removed from its future assignment per the standing platform instruction; the D06 deepseek verifier binding in domains/D06/brief.json moved to DeepSeek-V03-SYSTEMS.",
     "resource_note": "config/research-brief.json records a measured local smoke path and provisional coordinator caps. Representative publication designs, macro-rich cases, additional corners, practitioner-validated thresholds and a qualified signoff oracle remain unresolved."
   }
 }
