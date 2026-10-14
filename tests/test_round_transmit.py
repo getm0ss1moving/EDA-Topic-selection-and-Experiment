@@ -127,9 +127,11 @@ class RoundTransmitTests(unittest.TestCase):
 
     def test_wait_returns_the_next_delivery(self):
         t.send(self.config, self.release('proposer'))
-        got = t.wait(self.config, self.inbox['verifier'], timeout=0)
+        seen = self.root / 'work' / 'seen.json'  # missing file: nothing handled yet
+        got = t.wait(self.config, self.inbox['verifier'], seen, timeout=0)
         self.assertEqual(got['status'], 'delivered')
-        self.assertEqual(t.wait(self.config, self.inbox['verifier'], got['delivery'], timeout=0)['status'], 'timeout')
+        t.ack(seen, got['delivery'])
+        self.assertEqual(t.wait(self.config, self.inbox['verifier'], seen, timeout=0)['status'], 'timeout')
 
     def test_delivery_symlink_is_not_followed(self):
         t.send(self.config, self.release('challenger'))
@@ -156,7 +158,7 @@ class RoundTransmitTests(unittest.TestCase):
         m = json.loads(p.read_text()); m['from']['session_id'] = 'impostor'
         p.write_text(json.dumps(m))
         self.assertFalse(self.deliveries('verifier')[0]['valid'])
-        self.assertEqual(t.wait(self.config, self.inbox['verifier'], timeout=0)['status'], 'timeout')
+        self.assertEqual(t.wait(self.config, self.inbox['verifier'], self.root / 'seen.json', timeout=0)['status'], 'timeout')
 
     def test_acknowledged_ids_do_not_skip_same_second_deliveries(self):
         from unittest.mock import patch
@@ -167,7 +169,7 @@ class RoundTransmitTests(unittest.TestCase):
         deliveries = self.deliveries('verifier')
         seen = self.root / 'seen.json'
         seen.write_text(json.dumps([deliveries[-1]['delivery']]))
-        out = t.wait(self.config, self.inbox['verifier'], timeout=0, seen_file=seen)
+        out = t.wait(self.config, self.inbox['verifier'], seen, timeout=0)
         self.assertEqual(out['delivery'], deliveries[0]['delivery'])
 
     def test_wait_wakes_after_atomic_delivery_without_a_model(self):
@@ -201,10 +203,10 @@ class RoundTransmitTests(unittest.TestCase):
     def test_ack_records_each_delivery_once_and_wait_skips_it(self):
         t.send(self.config, self.release('proposer'))
         seen = self.root / 'work' / 'seen.json'
-        got = t.wait(self.config, self.inbox['verifier'], timeout=0, seen_file=None)
+        got = t.wait(self.config, self.inbox['verifier'], seen, timeout=0)
         for _ in range(2):
             self.assertEqual(t.ack(seen, got['delivery'])['count'], 1)
         self.assertEqual(json.loads(seen.read_text()), [got['delivery']])
-        self.assertEqual(t.wait(self.config, self.inbox['verifier'], timeout=0, seen_file=seen)['status'], 'timeout')
+        self.assertEqual(t.wait(self.config, self.inbox['verifier'], seen, timeout=0)['status'], 'timeout')
         with self.assertRaises(ValueError):
             t.ack(seen, 'not-a-delivery')

@@ -266,26 +266,31 @@ def scan(cfg, inbox):
     return {'topic': topic, 'role': role, 'deliveries': found, 'stray_entries_not_opened': stray}
 
 
-def wait(config, inbox, after='', timeout=540, interval=10, seen_file=None):
+def acknowledged(seen_file):
+    """Delivery IDs in the role's own receipt file; a missing file means none handled yet."""
+    path = Path(seen_file).absolute()
+    if not path.exists():
+        return []
+    data = json.loads(rs.regular(path))
+    if not isinstance(data, list) or any(not isinstance(x, str) or not DLV.fullmatch(x) for x in data):
+        raise ValueError('seen-file must be a JSON array of acknowledged delivery IDs')
+    return data
+
+
+def wait(config, inbox, seen_file, timeout=540, interval=10):
+    """Return the oldest valid delivery not yet acknowledged in the receipt file."""
     if timeout < 0 or interval <= 0:
         raise ValueError('timeout must be nonnegative and interval positive')
-    seen = set()
-    if seen_file is not None:
-        data = json.loads(rs.regular(seen_file))
-        if not isinstance(data, list) or any(not isinstance(x, str) or not DLV.fullmatch(x) for x in data):
-            raise ValueError('seen-file must be a JSON array of acknowledged delivery IDs')
-        seen = set(data)
     cfg = load_config(config)
     deadline = time.monotonic() + timeout
     while True:
         state = scan(cfg, inbox)
-        new = [d for d in state['deliveries'] if d['valid'] and
-               (d['delivery'] not in seen if seen_file is not None else
-                d['delivery'] != after and (not after or d['delivery'][4:20] >= after[4:20]))]
+        seen = set(acknowledged(seen_file))  # reloaded each pass, so an ack elsewhere is honoured at once
+        new = [d for d in state['deliveries'] if d['valid'] and d['delivery'] not in seen]
         if new:
             return {'status': 'delivered', **new[0], 'stray_entries_not_opened': state['stray_entries_not_opened']}
         if time.monotonic() >= deadline:
-            return {'status': 'timeout', 'after': after}
+            return {'status': 'timeout'}
         time.sleep(min(interval, max(0, deadline - time.monotonic())))
 
 
@@ -294,9 +299,7 @@ def ack(seen_file, delivery):
     if not DLV.fullmatch(delivery):
         raise ValueError(f'Invalid delivery ID: {delivery}')
     path = Path(seen_file).absolute()
-    seen = json.loads(rs.regular(path)) if path.exists() else []
-    if not isinstance(seen, list) or any(not isinstance(x, str) or not DLV.fullmatch(x) for x in seen):
-        raise ValueError('seen-file must be a JSON array of acknowledged delivery IDs')
+    seen = acknowledged(path)
     if delivery not in seen:
         seen.append(delivery)
         fd, tmp = tempfile.mkstemp(prefix='.ack-', dir=str(path.parent))
@@ -317,8 +320,8 @@ def main():
     w = sub.add_parser('wait', help='block until a new delivery reaches your inbox')
     w.add_argument('--config', required=True)
     w.add_argument('--inbox', required=True)
-    w.add_argument('--after', default='', help='last delivery ID already handled')
-    w.add_argument('--seen-file', help='own-outbox JSON array of processed IDs; preferred over --after')
+    w.add_argument('--seen-file', required=True,
+                   help='own-outbox receipt file: JSON array of handled delivery IDs (a missing file means none)')
     w.add_argument('--timeout', type=int, default=540)
     w.add_argument('--interval', type=int, default=10)
     c = sub.add_parser('check', help='list your inbox deliveries with their validity')
@@ -332,7 +335,7 @@ def main():
         if a.command == 'send':
             out = send(a.config, a.release, a.adjudicates, a.ledger)
         elif a.command == 'wait':
-            out = wait(a.config, a.inbox, a.after, a.timeout, a.interval, a.seen_file)
+            out = wait(a.config, a.inbox, a.seen_file, a.timeout, a.interval)
         elif a.command == 'ack':
             out = ack(a.seen_file, a.delivery)
         else:
