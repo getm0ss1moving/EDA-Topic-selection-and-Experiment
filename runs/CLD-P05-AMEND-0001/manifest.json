@@ -6,13 +6,13 @@
   "stage": "policy amendment, proposer runtime update and auto round transport",
   "status": "bundle delivered; proposer receipt pending; challenger and verifier runtimes pending",
   "input_commit": "9a190c5af7a371a82036b3dbb01ff8d6f4dd6936",
-  "amendment_commit": "a7e7c302fc951a77a5c3c7aeaf550f147aa4b13f",
-  "packet_sha256": "4ea6204028f4c279f3f4f955af889a70fa74ce5da334c87dc844cf0d288b68c5",
+  "amendment_commit": "2121532bfca928900f4252e796d7570fdb1ea224",
+  "packet_sha256": "3f2a177751f11e0ff2e0d5249007bc6cfb74bf6d557329565cbea5509643cc61",
   "model": "claude-opus-5-5",
   "host": "Claude desktop app, Claude Code 2.1.293, macOS arm64",
   "operator": "getm0ss1moving",
   "started_at_utc": "2026-10-14T00:41:25Z",
-  "completed_at_utc": "2026-10-14T01:19:57Z",
+  "completed_at_utc": "2026-10-14T10:17:43Z",
   "clock_note": "The host clock agreed with the GitHub Date header within 7 s; the 54000 s offset recorded in CLD-P05-LAUNCH-0001 is gone.",
   "owner_instructions_2026_10_14": [
     "resume your proposer to acknowledge those new repo constrains",
@@ -29,20 +29,25 @@
   },
   "amendment": {
     "bundle_path": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/rounds/EDA-0002/Claude-P05-TIMING/COORDINATOR-AMENDMENT-0001",
-    "amendment_sha256": "4ea6204028f4c279f3f4f955af889a70fa74ce5da334c87dc844cf0d288b68c5",
+    "amendment_sha256": "3f2a177751f11e0ff2e0d5249007bc6cfb74bf6d557329565cbea5509643cc61",
     "file_count": 19,
     "manifest_copy": "runs/CLD-P05-AMEND-0001/AMENDMENT.json",
     "changes_copy": "runs/CLD-P05-AMEND-0001/CHANGES.md",
     "release_provenance": {
-      "ref": "a7e7c302fc951a77a5c3c7aeaf550f147aa4b13f",
-      "packet": "4ea6204028f4c279f3f4f955af889a70fa74ce5da334c87dc844cf0d288b68c5"
+      "ref": "2121532bfca928900f4252e796d7570fdb1ea224",
+      "packet": "3f2a177751f11e0ff2e0d5249007bc6cfb74bf6d557329565cbea5509643cc61"
     },
-    "note": "Built from commit a7e7c30 of this PR. File hashes in AMENDMENT.json stay authoritative if the PR is squash-merged."
+    "note": "Built from commit 2121532 (PR #29 branch). File hashes in AMENDMENT.json stay authoritative if the PR is squash-merged.",
+    "superseded_before_acknowledgement": {
+      "amendment_sha256": "4ea6204028f4c279f3f4f955af889a70fa74ce5da334c87dc844cf0d288b68c5",
+      "built_from": "a7e7c302fc951a77a5c3c7aeaf550f147aa4b13f",
+      "reason": "Never acknowledged: no receipt, and the still-running proposer process uses the old launcher, which cannot read the round inbox. Replaced so that the delivered tools equal the ones tested after PR #29 (receipt-file waiting, ack, hardened delivery checks)."
+    }
   },
   "runtime_changes": {
     "settings_sha256": {
       "before": "e628d5f72faa76d06c7922e7d673e8d8e4ee7be2a175fdcf27958715988fc3d8",
-      "after": "a4cd4f1da062b221ee1b0b34a3c760c87fa12b9bee6aa1faaaf3be98c1b65516"
+      "after": "6009cc41dd0d8f8c6714bb81227166d0490632b64a2d92221c790bb96a005cc9"
     },
     "webfetch": "any domain; previously GitHub and arXiv only",
     "bash_network": "unchanged: GitHub and arXiv",
@@ -62,16 +67,16 @@
         "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/rounds/EDA-0002/DeepSeek-V02-PHYSICAL/from-proposer"
       ]
     },
-    "not_added": "The auto-mode classifier blocked one edit that added explicit permission deny rules (Edit on the own inbox; Read on the other two inboxes). It was not retried. Run 6 shows the same paths denied without it: R10, B17, B18, B19, W4 and W5."
+    "not_added": "Resolved by PR #29: explicit Read denials for the other inboxes and Edit/Write denials for the own inbox. Broad foreign Write/Edit denials were not kept because they also blocked the transmitter."
   },
   "isolation_smoke": {
-    "result": "runs/CLD-P05-LAUNCH-0001/isolation-smoke-run6-amendment.json",
-    "outcome": "All 41 steps and all 19 environment checks passed against settings a4cd4f1da062b221ee1b0b34a3c760c87fa12b9bee6aa1faaaf3be98c1b65516.",
-    "observations": [
-      "Built-in plugins only: cc-plugin-agents-md, cc-plugin-telemetry and cc-plugin-plugin-authoring; no MCP servers.",
-      "The fixture AGENTS.md probe produced no marker, consistent with CLAUDE_CODE_DISABLE_CLAUDE_MDS suppressing instruction files. The probe is behavioural evidence, not proof.",
-      "The init event lists a messaging_socket_path key; the value was not recorded. SendMessage and ListAgents are denied to the role.",
-      "The fixture lives under EDA-Agent-Smoke because the guard blocks any command naming the repository, which the coordinator scratch path contains."
+    "result": "runs/CLD-P05-LAUNCH-0001/isolation-smoke-run8-final.json",
+    "outcome": "All 41 steps and all 19 environment checks passed against settings 6009cc41dd0d8f8c6714bb81227166d0490632b64a2d92221c790bb96a005cc9 and the final tools.",
+    "history": [
+      "Run 6 passed against settings a4cd4f1d (PR #28).",
+      "PR #29's two runs failed on intermediate settings and skipped the guard probes (runs/ROUND-HARDENING-0001).",
+      "Run 7 passed every isolation, guard and transport check; three reachability steps failed during a host network outage.",
+      "Run 8 passed everything."
     ]
   },
   "round_transport": {
@@ -120,5 +125,9 @@
     "runs/CLD-P05-LAUNCH-0001/repo_guard.py",
     "runs/CLD-P05-LAUNCH-0001/isolation_smoke.py",
     "runs/CLD-P05-LAUNCH-0001/isolation-smoke-run6-amendment.json"
+  ],
+  "related_runs": [
+    "runs/ROUND-HARDENING-0001 (PR #29)",
+    "runs/ROUND-CIRCUIT-0001 (live three-role circuit)"
   ]
 }

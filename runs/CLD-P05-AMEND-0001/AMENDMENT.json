@@ -1,6 +1,6 @@
 {
   "actor_id": "Claude-P05-TIMING",
-  "amendment_commit": "a7e7c302fc951a77a5c3c7aeaf550f147aa4b13f",
+  "amendment_commit": "2121532bfca928900f4252e796d7570fdb1ea224",
   "amendment_id": "CLD-P05-AMEND-0001",
   "base_packet": {
     "input_commit": "d437c2f660906efe9351a90451905826d00b63e3",
@@ -8,27 +8,27 @@
     "path": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/physical-release-d437c2f66090/Claude-P05-TIMING"
   },
   "files": {
-    "CHANGES.md": "d1cb71ab355c3d190a64fdb73557646103de2576737cb1823eb2902b98a48dc5",
+    "CHANGES.md": "f613ae819049305f131ac6f336044ea8ea9f976984c88f54bebc5959bc44a6dd",
     "files/AGENTS.md": "1eed3eccacc16968105c50fc6699c954fa9b853e8543245d7cda33e570f8f80e",
     "files/config/launch-release.json": "9840510fd39155c4107726f19a45ca0b1ab3453eb8c6f804d953204daa93bbd0",
     "files/config/research-brief.json": "7fa9b901da1c3fbd984604493045670584c52b3bdf21abaa3dc54e797873ad92",
     "files/config/round-transport.json": "2e46af02352250535984e09575cd171bc1b78f185231787cf7eac2730d950902",
-    "files/docs/AUTO-ROUND.md": "71482292d2c0ac95f95e6e009799907cd2b7a5cae167c6ee601465863196eed5",
+    "files/docs/AUTO-ROUND.md": "3f55a08a0f07c2024f95818c58b04e7e54fb73e2872821841f94304e60e6d343",
     "files/docs/CHARTER.md": "e055bc4680e1e70095e009b52cfe47d137cc6b65884ded22dca117b7718493ca",
     "files/docs/EVIDENCE.md": "9a806aa52a9960e67900cd4ea8fa8371573461324f11abbc2c3ba29194024302",
     "files/docs/EXPERIMENTS.md": "ca17e6538daaf5ca0d1cfb964cde0c825b7e813e3667dc4d64dc79f87cba52c0",
     "files/docs/GITHUB.md": "9103499554a3924814180a775ce30cc285e74bc420cfae94142f6b9485c3023c",
     "files/docs/ISOLATION.md": "1da1e420e544662b7cc623f3cbd90f6844e0769e617c8e051b4fad92ac9eafdb",
-    "files/docs/SELF-SUBMISSION.md": "07064a390ce81d29afc2c98cc928bca073d4c38c29335f67f5f80039131f5b47",
+    "files/docs/SELF-SUBMISSION.md": "8a42fd9df088f886c744a5321a867ccaaef78e3731221483e25d3c6ea485e793",
     "files/docs/WORKFLOW.md": "6f9e05592fa887bda7fab9b3622c625813157497090aa194d75d6cc30a48d36e",
     "files/domains/D05/README.md": "af0d9a0020a475faf29e765917381b6bc14ce18d287946f9fa71aee9dfcf7740",
     "files/domains/D05/brief.json": "ca2e965b5dfe5a3753d92b237eeb1920001e3d0ed42fc2bee3a484c0f01457d0",
     "files/harness/PROPOSER.md": "8b66dde0bac6eb9ddb134bd6c13245a151284c75174a11d9130e53f9e5d09c4b",
     "files/scripts/role_submission.py": "7c3afcbb4e53bb1af821f03fae490dced593b6c44fd859b0f0006cdc71af5e21",
-    "files/scripts/round_transmit.py": "a744570a0aaa6827cb4846bb06736d7be626d3fa114e145e8bdc6a98774aeee4",
+    "files/scripts/round_transmit.py": "418bbd74754ffc0cd1eae066da551bc9b0f19bc9269d6732274cac1562f2eba5",
     "files/templates/topic/verification.md": "11963d252fd1508c79855ea665abb9e371542f784d33df0977fde3a644dbb323"
   },
-  "issued_at_utc": "2026-10-14T01:18:22Z",
+  "issued_at_utc": "2026-10-14T10:17:07Z",
   "issued_by": "Claude platform coordinator; transport only, no scientific content or approval",
   "owner_directives_2026_10_14": [
     "Resume the proposer to acknowledge the new repository constraints.",
@@ -37,7 +37,7 @@
   ],
   "release_provenance": {
     "packet": "SHA-256 of this AMENDMENT.json file",
-    "ref": "a7e7c302fc951a77a5c3c7aeaf550f147aa4b13f"
+    "ref": "2121532bfca928900f4252e796d7570fdb1ea224"
   },
   "role": "proposer",
   "schema": 1,

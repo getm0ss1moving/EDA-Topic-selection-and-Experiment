@@ -14,8 +14,8 @@
       "effort_observed_onboarding": "max: an operator /model selection before the setup prompt; reported by the role (readiness.json UC-06).",
       "operator": "getm0ss1moving",
       "github_login": "getm0ss1moving (transport account for this actor's outputs; the AI actor has no GitHub identity)",
-      "input_commit": "a7e7c302fc951a77a5c3c7aeaf550f147aa4b13f",
-      "packet_sha256": "4ea6204028f4c279f3f4f955af889a70fa74ce5da334c87dc844cf0d288b68c5",
+      "input_commit": "2121532bfca928900f4252e796d7570fdb1ea224",
+      "packet_sha256": "3f2a177751f11e0ff2e0d5249007bc6cfb74bf6d557329565cbea5509643cc61",
       "launch_commit": "ab600824ab0d65f579977484ec9a8db9dc43bdcc",
       "launch_run": "CLD-P05-LAUNCH-0001",
       "registration_run": "CLD-P05-SESSION-0001",
@@ -30,7 +30,7 @@
           "stage": "initial research packet, used through the R1b output (runs/CLD-P05-FROZEN-0002)"
         }
       ],
-      "runtime_since_amendment": "Launched without --safe-mode, with CLAUDE_CODE_DISABLE_CLAUDE_MDS, CLAUDE_CODE_DISABLE_BUNDLED_SKILLS and DISABLE_AUTOUPDATER, a repository guard hook, WebFetch to any domain and a read-only round inbox (runs/CLD-P05-LAUNCH-0001, isolation smoke run 6)."
+      "runtime_since_amendment": "Launched without --safe-mode, with CLAUDE_CODE_DISABLE_CLAUDE_MDS, CLAUDE_CODE_DISABLE_BUNDLED_SKILLS and DISABLE_AUTOUPDATER, a repository guard hook, WebFetch to any domain, explicit inbox deny rules and a read-only round inbox (runs/CLD-P05-LAUNCH-0001, isolation smoke run 8)."
     },
     {
       "session_id": "af136556-818c-47c7-b514-5a141cb14d85",

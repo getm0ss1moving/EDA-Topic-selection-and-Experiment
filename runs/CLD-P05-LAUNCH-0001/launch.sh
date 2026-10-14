@@ -35,7 +35,7 @@ RESULTS="/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/physical-release-d4
 INBOX="/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/rounds/EDA-0002/Claude-P05-TIMING"
 # Hashed policy amendment the session must acknowledge (runs/CLD-P05-AMEND-0001).
 AMENDMENT="$INBOX/COORDINATOR-AMENDMENT-0001"
-AMENDMENT_SHA256="4ea6204028f4c279f3f4f955af889a70fa74ce5da334c87dc844cf0d288b68c5"
+AMENDMENT_SHA256="3f2a177751f11e0ff2e0d5249007bc6cfb74bf6d557329565cbea5509643cc61"
 SETTINGS="$RUN_DIR/launch-settings.json"
 SETTINGS_SHA256="6009cc41dd0d8f8c6714bb81227166d0490632b64a2d92221c790bb96a005cc9"
 # PreToolUse hook named in launch-settings.json; installed read-only outside every checkout.
