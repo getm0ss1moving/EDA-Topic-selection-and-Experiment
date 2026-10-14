@@ -1,0 +1,68 @@
+{
+  "run_id": "DSK-V02-LAUNCH-0001",
+  "session_id": "04fe4881-0c22-4292-ac03-ab73f00eaf29",
+  "role": "coordinator",
+  "platform": "DeepSeek",
+  "stage": "verifier_launch_preparation",
+  "status": "ready_for_independent_review; session_not_created",
+  "input_commit": "27b6c6e8cb4ef0d2ac7f2feb2521be1426940d88",
+  "model": "deepseek-flash[1m]",
+  "host": "macOS arm64 (Darwin 25.5.0)",
+  "operator": "getm0ss1moving",
+  "started_at_utc": "2026-10-14T00:32:00Z",
+  "completed_at_utc": "2026-10-14T00:41:35Z",
+  "clock_note": "Host clock matches the api.deepseek.com Date header at run time; timestamps are true UTC.",
+  "output_paths": [
+    "runs/DSK-V02-LAUNCH-0001/readiness.md",
+    "runs/DSK-V02-LAUNCH-0001/manifest.json",
+    "runs/DSK-V02-LAUNCH-0001/isolation-smoke-v02-readonly.json",
+    "runs/DSK-C04C05-LAUNCH-0001/launch-settings-V02.json",
+    "runs/DSK-C04C05-LAUNCH-0001/actor-launch.json",
+    "runs/DSK-C04C05-LAUNCH-0001/isolation_smoke.py"
+  ],
+  "actor": {
+    "actor_id": "DeepSeek-V02-PHYSICAL",
+    "call_sign": "DSK-Ledger-PHYSICAL",
+    "role": "verifier",
+    "topic": "EDA-0002",
+    "domain": "D05",
+    "session_id_planned": "e6bc9983-e74b-4576-9c1d-3abc95ea3df9",
+    "session_state": "not_created",
+    "packet_path": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/verifier-release-20261014/DeepSeek-V02-PHYSICAL",
+    "packet_sha256": "db15a57c6355808e0faf90a6b2954c7f632bbe5b80071f069a905701d262ec78",
+    "packet_file_count": 42,
+    "packet_stage": "full",
+    "outbox": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/verifier-release-20261014/DeepSeek-V02-PHYSICAL",
+    "settings": "runs/DSK-C04C05-LAUNCH-0001/launch-settings-V02.json",
+    "settings_sha256": "48e9b241ce4edbda794a394d8b8e493289ff2f9a8e0b4e7639796485997f3d2f",
+    "model_requested": "deepseek-flash",
+    "effort_requested": "low",
+    "launch_check": "passed: all preconditions hold, nothing launched, exit 0 (launch-record commit 27b6c6e8cb4ef0d2ac7f2feb2521be1426940d88)"
+  },
+  "scientific_scope": {
+    "adjudicates": "Frozen round-0 revision (as transported) and the transported round-1 challenge for EDA-0002: OBJ-001 (hold-CRPR), OBJ-002 (thresholdAdjust), claim-level entailment, eight-gate table; compact verification.md + verification.json per templates/topic/verification.md; self-freeze per docs/SELF-SUBMISSION.md.",
+    "single_platform_limitation": "The challenge under adjudication was authored by DeepSeek-C05-TIMING (same platform). Owner-directed assignment (PR #24); the verifier session is fresh and did not write the challenge. This is a single-platform adjudication and must not be presented as cross-platform confirmation.",
+    "external_review_note": "An automated PR-bot review disputing OBJ-001's sign is recorded in runs/DSK-C05-SESSION-0001/external-review-notes.md; adjudicating OBJ-001 against the pinned sources and the packet's decisive test settles that question as normal verification work. The note is not part of the verifier packet."
+  },
+  "isolation_smoke": {
+    "state": "passed",
+    "script": "runs/DSK-C04C05-LAUNCH-0001/isolation_smoke.py",
+    "result": "runs/DSK-V02-LAUNCH-0001/isolation-smoke-v02-readonly.json",
+    "configuration": "final V02 settings (48e9b241...), read-only fixture",
+    "outcome": "All 19 environment checks and all 26 step checks passed.",
+    "script_change": "The smoke script gained per-actor packet/outbox roots and settings-file mapping so the verifier fixture runs against the verifier paths; C04/C05 behavior is unchanged."
+  },
+  "validation": {
+    "project_validate": "passed",
+    "tests": "51 tests OK (post-#25 suite)",
+    "sessions_created": 0
+  },
+  "independence_attestation": "Coordinator launch preparation only. It authors no scientific content, adjudicates nothing and approves nothing. The verifier session does not exist; its verdict will be its own, produced from the released packet under the documented isolation controls.",
+  "experiment_authorization": false,
+  "next_steps": [
+    "Independent review and merge of this record.",
+    "Operator runs the two launch commands from Terminal.app and sends the onboarding prompt (readiness.md).",
+    "Coordinator registers the session in config/roles.json after onboarding, then releases the research prompt.",
+    "Verifier adjudicates and self-freezes; coordinator publishes the frozen release via scripts/role_submission.py."
+  ]
+}
