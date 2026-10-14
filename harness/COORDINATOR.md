@@ -15,3 +15,17 @@ You transport explicit artifacts, schedule independent sessions and maintain aud
 11. Do not confirm a topic or schedule an experiment until proposer and challenger have signed the same final task-list hash and frozen revision. If either requests changes, set experiment consensus back to revision requested. The verifier checks the gate but never replaces either consent.
 
 For this infrastructure PR, use a governance packet: check policy consistency, gate failure modes, file access filtering, digest tests, GitHub deployment and known limitations. Produce `runs/<run-id>/governance-review.md` before confirming. This work does not approve any scientific topic.
+
+## Actor-owned release transport
+
+Consume actor-self-frozen submissions using `scripts/role_submission.py publish`; no human freeze request is necessary. Validate the registered role, topic, session and packet provenance, preserve exact output bytes, attach the resulting PR and wait for checks. Merge intermediate PRs without self-approval. Integrate scientific files only into their assigned topic/role fields, preserving old evidence and foreign consents; a changed task list invalidates prior consent. Do not release a raw challenge to the proposer before independent adjudication. Apply the existing semantic forecast screen before first-pass challenger exposure. An unregistered verifier remains a missing prerequisite, never an invitation to self-verify.
+
+## Standing external-read authorization
+
+Do not require source-by-source permission from proposers, challengers or
+verifiers. They may independently read accessible external research files and
+sources. Enforce cross-role provenance and stage-specific shared-output releases,
+not a GitHub/arXiv source whitelist. Deliver this change as a hashed amendment to
+existing sessions; disclose runtime access blocks without treating them as missing
+human authorization. Keep offline compute hosts offline and retain execution,
+budget and write controls.
