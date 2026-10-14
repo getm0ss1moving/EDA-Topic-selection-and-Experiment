@@ -121,7 +121,15 @@ def prompts(tools, cfg, inbox, out):
             f'{out["verifier"] / "release" / "verification.md"} with the text "Synthetic adjudication of '
             f'<that challenger release ID>."; and {out["verifier"] / "release" / "verification.json"} with the '
             f'text {{}}. Then Bash tool: {freeze("verifier")}. Then Bash tool: {send} --adjudicates '
-            f'<that challenger release ID>. Then Bash tool: {ack("verifier")}. Reply DONE.'}
+            f'<that challenger release ID>. Then Bash tool: {ack("verifier")}. Reply DONE.',
+        'verifier_direct': head.format(role='verifier') +
+            '1. ' + background.format(cmd=wait('verifier')) +
+            '\n2. When the wait reports a valid proposer-release delivery: use the Read tool on the DELIVERY.json '
+            'inside its delivery path and note the release ID listed under "releases". Use the Write tool twice: '
+            f'{out["verifier"] / "release" / "verification.md"} with the text "Synthetic direct review of '
+            f'<that release ID>; no challenger release arrived."; and {out["verifier"] / "release" / "verification.json"} '
+            f'with the text {{}}. Then Bash tool: {freeze("verifier")}. Then Bash tool: {send} --reviews '
+            f'<that release ID>. Then Bash tool: {ack("verifier")}. Reply DONE.'}
 
 
 def parse(stdout):
@@ -182,6 +190,8 @@ def main():
     ap.add_argument('--out', type=Path, required=True)
     ap.add_argument('--repo', type=Path, help='checkout for the publication dry run')
     ap.add_argument('--timeout', type=int, default=2400)
+    ap.add_argument('--no-challenger', action='store_true',
+                    help='run proposer and verifier only, as while the challenger seat is unavailable')
     ap.add_argument('--publish-fixture', type=Path,
                     help='rerun only the publication dry run on the completed round of an earlier fixture')
     args = ap.parse_args()
@@ -241,9 +251,11 @@ def main():
     env = {'HOME': HOME, 'USER': os.environ.get('USER', ''), 'LOGNAME': os.environ.get('USER', ''),
            'SHELL': '/bin/bash', 'TERM': 'dumb', 'LANG': 'en_US.UTF-8', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin',
            **SWITCHES}
-    texts = {role: prompts(tools[role], tools[role] / 'round-transport.json', inbox, out)[role] for role in rt.ROLES}
+    texts = {role: prompts(tools[role], tools[role] / 'round-transport.json', inbox, out)[
+        'verifier_direct' if role == 'verifier' and args.no_challenger else role] for role in rt.ROLES}
+    active = ('verifier', 'proposer') if args.no_challenger else ('challenger', 'verifier', 'proposer')
     procs, logs, started = {}, {}, {}
-    for role in ('challenger', 'verifier', 'proposer'):  # receivers wait first, then the proposer starts the round
+    for role in active:  # receivers wait first, then the proposer starts the round
         path = root / f'settings-{role}.json'
         path.write_text(json.dumps(settings[role], indent=2))
         dirs = [out[role], inbox[role]] + ([results_dir] if role == 'proposer' else [])
@@ -258,7 +270,7 @@ def main():
                                        stdout=logs[role], stderr=subprocess.STDOUT, text=True)
         time.sleep(15 if role != 'proposer' else 0)
     deadline, finished = time.monotonic() + args.timeout, {}
-    while len(finished) < 3 and time.monotonic() < deadline:
+    while len(finished) < len(active) and time.monotonic() < deadline:
         for role, proc in procs.items():
             if role not in finished and proc.poll() is not None:
                 finished[role] = utc()
@@ -270,7 +282,7 @@ def main():
 
     sessions = {role: {**parse((root / f'stream-{role}.jsonl').read_text()), 'started_at_utc': started[role],
                        'finished_at_utc': finished.get(role), 'exit_code': procs[role].returncode}
-                for role in rt.ROLES}
+                for role in active}
     cfg = rt.load_config(tools['proposer'] / 'round-transport.json')
     state = {role: rt.scan(cfg, inbox[role]) for role in rt.ROLES}
     kinds = {role: sorted(d['kind'] for d in state[role]['deliveries']) for role in rt.ROLES}
@@ -293,35 +305,58 @@ def main():
                                            registry_file=registry)
         except Exception as e:  # recorded, not raised: the report must still be written
             publication = {'error': str(e)}
-    verified = next((d for d in state['proposer']['deliveries'] if d['kind'] == 'verified-challenge'), None)
-    order = [d['delivery'][4:20] for d in (
-        next((d for d in state['challenger']['deliveries'] if d['kind'] == 'proposer-release'), None),
-        next((d for d in state['verifier']['deliveries'] if d['kind'] == 'challenger-release'), None), verified) if d]
+    def receipts_match(role):
+        return set(json.loads((out[role] / 'processed-deliveries.json').read_text())) == \
+            {d['delivery'] for d in state[role]['deliveries']}
+
+    roles_in_round = [rs.verify(p)[0]['role'] for p in found[0]['releases']] if found else []
     checks = {
         'all_sessions_exited_cleanly': all(s['exit_code'] == 0 for s in sessions.values()),
         'sessions_in_dont_ask_mode_without_mcp': all(s['permission_mode'] == 'dontAsk' and s['mcp_servers'] == []
                                                      for s in sessions.values()),
         'every_delivery_valid': all(d['valid'] for s in state.values() for d in s['deliveries']),
         'no_stray_inbox_entries': all(not s['stray_entries_not_opened'] for s in state.values()),
-        'proposer_received_only_the_verified_challenge': kinds['proposer'] == ['verified-challenge'],
-        'challenger_received_proposal_and_verification': kinds['challenger'] == ['proposer-release', 'verification'],
-        'verifier_received_proposal_and_challenge': kinds['verifier'] == ['challenger-release', 'proposer-release'],
-        'deliveries_in_circuit_order': len(order) == 3 and order == sorted(order),
-        'proposer_woke_and_recorded_the_verified_challenge':
-            sessions['proposer']['wake_notifications'] >= 1 and (result('proposer') or {}).get('kind') == 'verified-challenge'
-            and (result('proposer') or {}).get('delivery') == (verified or {}).get('delivery'),
-        'challenger_woke_twice_and_recorded_the_verification':
-            sessions['challenger']['wake_notifications'] >= 2 and (result('challenger') or {}).get('kind') == 'verification',
-        'verifier_woke_for_both_deliveries': sessions['verifier']['wake_notifications'] >= 2,
-        'receipts_cover_every_delivery': all(
-            set(json.loads((out[r] / 'processed-deliveries.json').read_text())) == {d['delivery'] for d in state[r]['deliveries']}
-            for r in rt.ROLES),
+        'receipts_cover_every_delivery': all(receipts_match(r) for r in active),
         'one_completed_round_found': len(found) == 1 and not found[0]['problems'],
-        'round_bundle_roles_in_order': bool(found) and [rs.verify(p)[0]['role'] for p in found[0]['releases']]
-            == ['proposer', 'challenger', 'verifier'],
         'publication_dry_run_validated': bool(publication) and publication.get('validation') == 'passed',
     }
-    report = {'test': 'ROUND-CIRCUIT-0001 synthetic proposer-challenger-verifier-proposer circuit',
+    if args.no_challenger:
+        ruling = next((d for d in state['proposer']['deliveries'] if d['kind'] == 'verification'), None)
+        order = [d['delivery'][4:20] for d in (
+            next((d for d in state['verifier']['deliveries'] if d['kind'] == 'proposer-release'), None), ruling) if d]
+        checks.update({
+            'proposer_received_only_the_verifier_ruling': kinds['proposer'] == ['verification'],
+            'verifier_received_only_the_proposal': kinds['verifier'] == ['proposer-release'],
+            'challenger_copies_wait_unopened': kinds['challenger'] == ['proposer-release', 'verification'],
+            'deliveries_in_circuit_order': len(order) == 2 and order == sorted(order),
+            'proposer_woke_and_recorded_the_ruling':
+                sessions['proposer']['wake_notifications'] >= 1 and (result('proposer') or {}).get('kind') == 'verification'
+                and (result('proposer') or {}).get('delivery') == (ruling or {}).get('delivery'),
+            'verifier_woke_and_named_the_reviewed_release':
+                sessions['verifier']['wake_notifications'] >= 1 and bool(found)
+                and found[0]['reviews'] == Path(found[0]['releases'][0]).name,
+            'round_bundle_roles_in_order': roles_in_round == ['proposer', 'verifier'],
+        })
+    else:
+        verified = next((d for d in state['proposer']['deliveries'] if d['kind'] == 'verified-challenge'), None)
+        order = [d['delivery'][4:20] for d in (
+            next((d for d in state['challenger']['deliveries'] if d['kind'] == 'proposer-release'), None),
+            next((d for d in state['verifier']['deliveries'] if d['kind'] == 'challenger-release'), None), verified) if d]
+        checks.update({
+            'proposer_received_only_the_verified_challenge': kinds['proposer'] == ['verified-challenge'],
+            'challenger_received_proposal_and_verification': kinds['challenger'] == ['proposer-release', 'verification'],
+            'verifier_received_proposal_and_challenge': kinds['verifier'] == ['challenger-release', 'proposer-release'],
+            'deliveries_in_circuit_order': len(order) == 3 and order == sorted(order),
+            'proposer_woke_and_recorded_the_verified_challenge':
+                sessions['proposer']['wake_notifications'] >= 1 and (result('proposer') or {}).get('kind') == 'verified-challenge'
+                and (result('proposer') or {}).get('delivery') == (verified or {}).get('delivery'),
+            'challenger_woke_twice_and_recorded_the_verification':
+                sessions['challenger']['wake_notifications'] >= 2 and (result('challenger') or {}).get('kind') == 'verification',
+            'verifier_woke_for_both_deliveries': sessions['verifier']['wake_notifications'] >= 2,
+            'round_bundle_roles_in_order': roles_in_round == ['proposer', 'challenger', 'verifier'],
+        })
+    report = {'test': 'ROUND-CIRCUIT-0001 synthetic ' + ('proposer-verifier-proposer circuit without a challenger'
+                                                        if args.no_challenger else 'proposer-challenger-verifier-proposer circuit'),
               'scientific_content': False, 'model': args.model, 'effort': args.effort,
               'proposer_settings_sha256': rs.sha((LAUNCH / 'launch-settings.json').read_bytes()),
               'transmitter_sha256': rs.sha((SCRIPTS / 'round_transmit.py').read_bytes()),
@@ -330,7 +365,7 @@ def main():
               'sessions': sessions,
               'deliveries': {role: [{k: d[k] for k in ('delivery', 'from', 'kind', 'valid')} for d in state[role]['deliveries']]
                              for role in rt.ROLES},
-              'round': found[0] and {k: found[0][k] for k in ('round_id', 'deliveries', 'adjudicates', 'problems')}
+              'round': found[0] and {k: found[0][k] for k in ('round_id', 'kind', 'deliveries', 'adjudicates', 'reviews', 'problems')}
               if found else None,
               'round_releases': [Path(p).name for p in found[0]['releases']] if found else [],
               'publication_dry_run': publication, 'checks': checks}

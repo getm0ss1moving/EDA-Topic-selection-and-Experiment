@@ -1,0 +1,237 @@
+{
+  "test": "ROUND-CIRCUIT-0001 synthetic proposer-challenger-verifier-proposer circuit",
+  "scientific_content": false,
+  "model": "claude-sonnet-5-5",
+  "effort": "low",
+  "proposer_settings_sha256": "6009cc41dd0d8f8c6714bb81227166d0490632b64a2d92221c790bb96a005cc9",
+  "transmitter_sha256": "7089366546399a35a737dd12f652f0795215b5352c823a19ea902153d37a6e7b",
+  "role_submission_sha256": "2e2dabf17961450a2f094168abcc0f57ab0ddceb75a13c56a01535ef5f08dc3b",
+  "publisher_sha256": "0f3e180bc49b3456405b5d457095c7969b75d2d8128c9e6cddd32b4862099678",
+  "sessions": {
+    "challenger": {
+      "model": "claude-sonnet-5-5",
+      "permission_mode": "dontAsk",
+      "tools": [
+        "Bash",
+        "Edit",
+        "Read",
+        "Write"
+      ],
+      "mcp_servers": [],
+      "plugins": [
+        "cc-plugin-agents-md",
+        "cc-plugin-telemetry",
+        "cc-plugin-plugin-authoring"
+      ],
+      "wake_notifications": 2,
+      "result_events": [
+        {
+          "subtype": "success",
+          "is_error": false,
+          "turns": 2,
+          "text": "Waiting for the proposer release delivery. The background wait will wake me when it finishes."
+        },
+        {
+          "subtype": "success",
+          "is_error": false,
+          "turns": 10,
+          "text": "Challenger release sent and the proposer delivery acknowledged. Now waiting in the background for the verification delivery."
+        },
+        {
+          "subtype": "success",
+          "is_error": false,
+          "turns": 4,
+          "text": "DONE"
+        }
+      ],
+      "tool_calls": 13,
+      "started_at_utc": "2026-10-14T12:17:17Z",
+      "finished_at_utc": "2026-10-14T12:18:52Z",
+      "exit_code": 0
+    },
+    "verifier": {
+      "model": "claude-sonnet-5-5",
+      "permission_mode": "dontAsk",
+      "tools": [
+        "Bash",
+        "Edit",
+        "Read",
+        "Write"
+      ],
+      "mcp_servers": [],
+      "plugins": [
+        "cc-plugin-agents-md",
+        "cc-plugin-telemetry",
+        "cc-plugin-plugin-authoring"
+      ],
+      "wake_notifications": 2,
+      "result_events": [
+        {
+          "subtype": "success",
+          "is_error": false,
+          "turns": 2,
+          "text": "The wait command is running in the background. I'm ending my turn now, as instructed."
+        },
+        {
+          "subtype": "success",
+          "is_error": false,
+          "turns": 4,
+          "text": "I acknowledged the proposer release and started the next wait in the background. I'm ending my turn now."
+        },
+        {
+          "subtype": "success",
+          "is_error": false,
+          "turns": 8,
+          "text": "DONE"
+        }
+      ],
+      "tool_calls": 11,
+      "started_at_utc": "2026-10-14T12:17:32Z",
+      "finished_at_utc": "2026-10-14T12:18:47Z",
+      "exit_code": 0
+    },
+    "proposer": {
+      "model": "claude-sonnet-5-5",
+      "permission_mode": "dontAsk",
+      "tools": [
+        "Bash",
+        "Edit",
+        "Read",
+        "WebFetch",
+        "WebSearch",
+        "Write"
+      ],
+      "mcp_servers": [],
+      "plugins": [
+        "cc-plugin-agents-md",
+        "cc-plugin-telemetry",
+        "cc-plugin-plugin-authoring"
+      ],
+      "wake_notifications": 1,
+      "result_events": [
+        {
+          "subtype": "success",
+          "is_error": false,
+          "turns": 4,
+          "text": "Steps 1\u20133 are done: the release is frozen and sent, and the wait is running in the background. I'm ending my turn until it reports a delivery."
+        },
+        {
+          "subtype": "success",
+          "is_error": false,
+          "turns": 5,
+          "text": "DONE"
+        }
+      ],
+      "tool_calls": 7,
+      "started_at_utc": "2026-10-14T12:17:47Z",
+      "finished_at_utc": "2026-10-14T12:18:52Z",
+      "exit_code": 0
+    }
+  },
+  "deliveries": {
+    "proposer": [
+      {
+        "delivery": "DLV-20261014T121839Z-verifier-2ecf5acd2040",
+        "from": "verifier",
+        "kind": "verified-challenge",
+        "valid": true
+      }
+    ],
+    "challenger": [
+      {
+        "delivery": "DLV-20261014T121756Z-proposer-8cc2161a15f6",
+        "from": "proposer",
+        "kind": "proposer-release",
+        "valid": true
+      },
+      {
+        "delivery": "DLV-20261014T121839Z-verifier-2ecf5acd2040",
+        "from": "verifier",
+        "kind": "verification",
+        "valid": true
+      }
+    ],
+    "verifier": [
+      {
+        "delivery": "DLV-20261014T121756Z-proposer-8cc2161a15f6",
+        "from": "proposer",
+        "kind": "proposer-release",
+        "valid": true
+      },
+      {
+        "delivery": "DLV-20261014T121816Z-challenger-a586c61686fd",
+        "from": "challenger",
+        "kind": "challenger-release",
+        "valid": true
+      }
+    ]
+  },
+  "round": {
+    "round_id": "ROUND-EDA-0002-20261014T121839Z",
+    "kind": "verified-challenge",
+    "deliveries": {
+      "proposer_to_verifier": "DLV-20261014T121756Z-proposer-8cc2161a15f6",
+      "proposer_to_challenger": "DLV-20261014T121756Z-proposer-8cc2161a15f6",
+      "challenger_to_verifier": [
+        "DLV-20261014T121816Z-challenger-a586c61686fd"
+      ],
+      "verifier_to_proposer": "DLV-20261014T121839Z-verifier-2ecf5acd2040",
+      "verification_to_challenger": "DLV-20261014T121839Z-verifier-2ecf5acd2040"
+    },
+    "adjudicates": [
+      "SUB-a586c61686fd9b5e5675ab8fa73c76661bbc7cf5c92cf26b0f26c1adc1d5f3be"
+    ],
+    "reviews": null,
+    "problems": []
+  },
+  "round_releases": [
+    "SUB-8cc2161a15f6be3cb872eb3ae0cd0354ea2d7efbbe424160a021cb60e6bc04b3",
+    "SUB-a586c61686fd9b5e5675ab8fa73c76661bbc7cf5c92cf26b0f26c1adc1d5f3be",
+    "SUB-2ecf5acd2040b5477d34dca2160956c8faaef2782c9b1ae57369dbb1533aafbf"
+  ],
+  "publication_dry_run": {
+    "dry_run": true,
+    "branch": "round/EDA-0002-20261014T121839Z",
+    "commit": "a1e4cd39c0bc13853e7372396ef41ffb74b7c165",
+    "files": [
+      "runs/ROUND-EDA-0002-20261014T121839Z/round.json",
+      "runs/SUB-2ecf5acd2040b5477d34dca2160956c8faaef2782c9b1ae57369dbb1533aafbf/SUBMISSION.json",
+      "runs/SUB-2ecf5acd2040b5477d34dca2160956c8faaef2782c9b1ae57369dbb1533aafbf/verification.json",
+      "runs/SUB-2ecf5acd2040b5477d34dca2160956c8faaef2782c9b1ae57369dbb1533aafbf/verification.md",
+      "runs/SUB-8cc2161a15f6be3cb872eb3ae0cd0354ea2d7efbbe424160a021cb60e6bc04b3/SUBMISSION.json",
+      "runs/SUB-8cc2161a15f6be3cb872eb3ae0cd0354ea2d7efbbe424160a021cb60e6bc04b3/contest-audit.md",
+      "runs/SUB-8cc2161a15f6be3cb872eb3ae0cd0354ea2d7efbbe424160a021cb60e6bc04b3/direction-control.json",
+      "runs/SUB-8cc2161a15f6be3cb872eb3ae0cd0354ea2d7efbbe424160a021cb60e6bc04b3/experiment-plan.md",
+      "runs/SUB-8cc2161a15f6be3cb872eb3ae0cd0354ea2d7efbbe424160a021cb60e6bc04b3/forecast.json",
+      "runs/SUB-8cc2161a15f6be3cb872eb3ae0cd0354ea2d7efbbe424160a021cb60e6bc04b3/industry-gap.md",
+      "runs/SUB-8cc2161a15f6be3cb872eb3ae0cd0354ea2d7efbbe424160a021cb60e6bc04b3/prior-art.csv",
+      "runs/SUB-8cc2161a15f6be3cb872eb3ae0cd0354ea2d7efbbe424160a021cb60e6bc04b3/proposal.md",
+      "runs/SUB-8cc2161a15f6be3cb872eb3ae0cd0354ea2d7efbbe424160a021cb60e6bc04b3/search-log.md",
+      "runs/SUB-8cc2161a15f6be3cb872eb3ae0cd0354ea2d7efbbe424160a021cb60e6bc04b3/sources.json",
+      "runs/SUB-8cc2161a15f6be3cb872eb3ae0cd0354ea2d7efbbe424160a021cb60e6bc04b3/tasklist.md",
+      "runs/SUB-a586c61686fd9b5e5675ab8fa73c76661bbc7cf5c92cf26b0f26c1adc1d5f3be/SUBMISSION.json",
+      "runs/SUB-a586c61686fd9b5e5675ab8fa73c76661bbc7cf5c92cf26b0f26c1adc1d5f3be/challenges.md",
+      "runs/SUB-a586c61686fd9b5e5675ab8fa73c76661bbc7cf5c92cf26b0f26c1adc1d5f3be/search-log.md",
+      "runs/SUB-a586c61686fd9b5e5675ab8fa73c76661bbc7cf5c92cf26b0f26c1adc1d5f3be/sources.json"
+    ],
+    "validation": "passed"
+  },
+  "checks": {
+    "all_sessions_exited_cleanly": true,
+    "sessions_in_dont_ask_mode_without_mcp": true,
+    "every_delivery_valid": true,
+    "no_stray_inbox_entries": true,
+    "receipts_cover_every_delivery": true,
+    "one_completed_round_found": true,
+    "publication_dry_run_validated": true,
+    "proposer_received_only_the_verified_challenge": true,
+    "challenger_received_proposal_and_verification": true,
+    "verifier_received_proposal_and_challenge": true,
+    "deliveries_in_circuit_order": true,
+    "proposer_woke_and_recorded_the_verified_challenge": true,
+    "challenger_woke_twice_and_recorded_the_verification": true,
+    "verifier_woke_for_both_deliveries": true,
+    "round_bundle_roles_in_order": true
+  },
+  "all_pass": true
+}

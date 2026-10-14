@@ -54,4 +54,4 @@ experiments, new expenditure, or access-control bypass. Follow
 
 ## Auto round transport
 
-When your topic is configured in `config/round-transport.json`, follow `docs/AUTO-ROUND.md`: after each freeze, run `round_transmit.py send` for your release, then wait for your next delivery with `round_transmit.py wait` as a background command. Open only deliveries reported valid. Your releases go to the verifier only; never place your output where the proposer can read it.
+When your topic is configured in `config/round-transport.json`, follow `docs/AUTO-ROUND.md`: after each freeze, run `round_transmit.py send` for your release, then wait for your next delivery with `round_transmit.py wait` as a background command. Open only deliveries reported valid. Your releases go to the verifier only; never place your output where the proposer can read it. Sign joint abandonment only through your own `abandonment-consent.json`.

@@ -122,3 +122,19 @@ class RoundPublishTests(unittest.TestCase):
         self.full_round()
         with self.assertRaises(ValueError):
             p.publish_round(self.rounds()[0], self.root, self.ledger, registry_file=self.root / 'registry.json')
+
+    def test_verifier_only_round_is_published_with_the_reviewed_release(self):
+        prop = self.release('proposer', 'Synthetic proposal\n')
+        t.send(self.config, prop)
+        ver = self.release('verifier', f'Reviewed {prop.name}\n')
+        t.send(self.config, ver, reviews=prop.name)
+        [rnd] = self.rounds()
+        self.assertEqual((rnd['kind'], rnd['reviews'], rnd['problems']), ('verification', prop.name, []))
+        self.assertEqual([Path(x).name for x in rnd['releases']], [prop.name, ver.name])
+
+    def test_bootstrap_round_without_an_inbox_proposal_publishes_the_verifier_release(self):
+        ver = self.release('verifier', 'Adjudicated the packet dossier\n')
+        t.send(self.config, ver)
+        [rnd] = self.rounds()
+        self.assertEqual([Path(x).name for x in rnd['releases']], [ver.name])
+        self.assertIsNone(rnd['deliveries']['proposer_to_verifier'])

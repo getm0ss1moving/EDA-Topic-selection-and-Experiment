@@ -11,8 +11,8 @@
     "Agentic EDA where justified"
   ],
   "proposer": "Claude-P05-TIMING",
-  "challenger": "DeepSeek-C05-TIMING",
-  "verifier": "Codex-V02-PHYSICAL",
+  "challenger": "Codex-C05-TIMING-R2",
+  "verifier": "DeepSeek-V02-PHYSICAL",
   "release_binding": {
     "source": "config/launch-release.json",
     "release_id": "PHYSICAL-ROLE-CREATION-0001",

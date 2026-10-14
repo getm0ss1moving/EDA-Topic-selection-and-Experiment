@@ -71,3 +71,19 @@ class SubmissionTests(unittest.TestCase):
     def test_malformed_manifest_is_value_error(self):
         with self.assertRaises(ValueError):
             s.validate_manifest({'schema': 1, 'role': 'challenger', 'topic': None})
+    def test_abandonment_consent_signs_only_for_own_session_with_grounds(self):
+        vote = {'session_id': 'session', 'decision': 'agree', 'grounds': ['dead_end'],
+                'signed_revision': 'SUB-' + 'a' * 64, 'signed_dossier_digest': 'd' * 64, 'rationale': 'Evidence-backed'}
+        path = self.source / 'abandonment-consent.json'
+        for bad in ({'session_id': 'other'}, {'grounds': ['bored']}, {'grounds': []}, {'signed_dossier_digest': ''}):
+            path.write_text(json.dumps({**vote, **bad}))
+            with self.assertRaises(ValueError):
+                self.freeze()
+        path.write_text(json.dumps(vote))
+        self.assertIn('abandonment-consent.json', s.verify(self.freeze())[0]['files'])
+    def test_agreeing_experiment_consent_must_sign_a_revision(self):
+        consent = {'session_id': 'session', 'decision': 'agree', 'signed_revision': 'latest',
+                   'tasklist_sha256': 'c' * 64, 'rationale': 'Reasonable plan'}
+        (self.source / 'experiment-consent.json').write_text(json.dumps(consent))
+        with self.assertRaises(ValueError):
+            self.freeze()

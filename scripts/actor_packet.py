@@ -13,6 +13,11 @@ COMMON = {'docs/SELF-SUBMISSION.md', 'scripts/role_submission.py', 'docs/AUTO-RO
           'docs/CHARTER.md', 'docs/WORKFLOW.md', 'docs/EVIDENCE.md', 'docs/ISOLATION.md',
           'docs/EXPERIMENTS.md', 'docs/FORMATS.md', 'docs/GITHUB.md', 'templates/run.json',
           'docs/PHYSICAL-PILOT.md', 'config/physical-resources.lock.json'}
+# The project's own digests and the dossier templates, so roles need no reimplementation (AUTO-ROUND).
+COMMON |= {'scripts/project.py'} | {f'templates/topic/{n}' for n in (
+    'challenges.md', 'contest-audit.md', 'direction-control.json', 'dossier.json', 'experiment-consensus.json',
+    'experiment-plan.md', 'forecast.json', 'industry-gap.md', 'prior-art.csv', 'proposal.md', 'responses.md',
+    'search-log.md', 'sources.json', 'tasklist.md', 'verification.json', 'verification.md')}
 REGISTRIES = ('config/agents.json', 'config/agents-deepseek.json', 'config/agents-claude.json')
 
 def make_packet(root, actor_id, ref, out, outbox, phase='onboarding', topic=None, stage='initial'):

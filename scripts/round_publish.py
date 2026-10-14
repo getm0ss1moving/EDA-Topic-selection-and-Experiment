@@ -2,9 +2,9 @@
 """Publish every completed local round to GitHub as one intermediate PR (coordinator side).
 
 Owner directive, 2026-10-14: each finished and frozen proposer-challenger-verifier round goes to
-GitHub. A round is complete when the verifier's valid `verified-challenge` delivery has reached
-the proposer's inbox (docs/AUTO-ROUND.md). Its bundle holds the proposer release that the
-verifier had last received before that delivery, the adjudicated challenger releases and the
+GitHub. A round is complete when a valid verifier delivery has reached the proposer's inbox
+(docs/AUTO-ROUND.md). Its bundle holds the proposer release the verifier reviewed (named by
+`--reviews`, otherwise the one it last received), any adjudicated challenger releases and the
 verifier release, each re-verified byte for byte, plus `runs/ROUND-<topic>-<UTC>/round.json`
 naming every delivery. Publication needs the coordinator's GitHub credentials, so it runs
 outside every role sandbox, once per command or continuously with `watch`. It checks the
@@ -49,20 +49,21 @@ def rounds(cfg, topic):
     inbox = {role: entry['roles'][role]['inbox'] for role in rt.ROLES}
     seen = {role: [d for d in rt.scan(cfg, inbox[role])['deliveries'] if d['valid']] for role in rt.ROLES}
     found = []
-    for done in (d for d in seen['proposer'] if d['kind'] == 'verified-challenge'):
+    for done in (d for d in seen['proposer'] if d['from'] == 'verifier'):
         stamp = done['delivery'][4:20]
         record = record_of(done)
+        reviewed = record.get('reviews')
         offered = [d for d in seen['verifier'] if d['from'] == 'proposer' and d['delivery'][4:20] <= stamp]
-        problems = [] if offered else ['the verifier had received no proposer release before this verification']
-        proposer = offered[-1] if offered else None
-        releases = []
-        if proposer:
-            releases.append(Path(proposer['path']) / record_of(proposer)['releases'][0]['id'])
+        if reviewed:  # the verifier named the proposer release it checked
+            offered = [d for d in offered if reviewed in {r['id'] for r in record_of(d)['releases']}]
+        problems = [f'{reviewed} is not among the proposer releases delivered to the verifier'] if reviewed and not offered else []
+        proposer = offered[-1] if offered else None  # none: a bootstrap round reviewed a packet dossier
+        releases = [Path(proposer['path']) / record_of(proposer)['releases'][0]['id']] if proposer else []
         ordered = sorted(record['releases'], key=lambda r: r['role'] != 'challenger')  # challenger(s), then verifier
         releases += [Path(done['path']) / r['id'] for r in ordered]
         verifier_id = next(r['id'] for r in record['releases'] if r['role'] == 'verifier')
         found.append({
-            'round_id': f'ROUND-{topic}-{stamp}', 'topic': topic, 'problems': problems,
+            'round_id': f'ROUND-{topic}-{stamp}', 'topic': topic, 'problems': problems, 'kind': record['kind'],
             'releases': [str(p) for p in releases],
             'deliveries': {
                 'proposer_to_verifier': proposer and proposer['delivery'],
@@ -70,10 +71,10 @@ def rounds(cfg, topic):
                     [d for d in seen['challenger'] if d['from'] == 'proposer'], releases[0].name),
                 'challenger_to_verifier': [holding([d for d in seen['verifier'] if d['from'] == 'challenger'], sid)
                                            for sid in record['adjudicates']],
-                'verified_challenge_to_proposer': done['delivery'],
+                'verifier_to_proposer': done['delivery'],
                 'verification_to_challenger': holding(
                     [d for d in seen['challenger'] if d['from'] == 'verifier'], verifier_id)},
-            'adjudicates': record['adjudicates']})
+            'adjudicates': record['adjudicates'], 'reviews': reviewed})
     return found
 
 
@@ -121,7 +122,8 @@ def publish_round(rnd, repo, ledger=LEDGER, dry_run=False, registry_file=None):
         if previous:
             return previous[0]['url']
     record = {'schema': 1, 'kind': 'local_round_publication_not_scientific_verification',
-              'round_id': rnd['round_id'], 'topic': rnd['topic'], 'adjudicates': rnd['adjudicates'],
+              'round_id': rnd['round_id'], 'topic': rnd['topic'], 'delivery_kind': rnd['kind'],
+              'adjudicates': rnd['adjudicates'], 'reviews': rnd['reviews'],
               'releases': [{'id': p.name, 'role': m['role'], 'actor_id': m['actor_id'], 'session_id': m['session_id'],
                             'input_commit': m['input_commit'], 'packet_sha256': m['packet_sha256'],
                             'path': f'runs/{p.name}/'} for p, m, _ in snaps],
@@ -159,7 +161,7 @@ def publish_round(rnd, repo, ledger=LEDGER, dry_run=False, registry_file=None):
         body = Path(tmp) / 'body.md'
         body.write_text(
             f"Local auto round `{rnd['round_id']}` for {rnd['topic']}, published after the verifier's "
-            f"verified-challenge delivery reached the proposer.\n\n"
+            f"{rnd['kind']} delivery reached the proposer.\n\n"
             + ''.join(f"- {m['role']} `{m['actor_id']}`: `runs/{p.name}/`\n" for p, m, _ in snaps)
             + f"- Round record: `runs/{rnd['round_id']}/round.json`\n\n"
             "Transport preserves bytes and role identity (docs/AUTO-ROUND.md). Publication is not "

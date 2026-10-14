@@ -78,8 +78,6 @@ class RoundTransmitTests(unittest.TestCase):
     def test_verifier_must_bind_adjudicated_challenges(self):
         cid = self.challenge_round()
         with self.assertRaises(ValueError):
-            t.send(self.config, self.release('verifier', f'Adjudicates {cid}\n'))
-        with self.assertRaises(ValueError):
             t.send(self.config, self.release('verifier', 'Names nothing\n'), [cid])
         with self.assertRaises(ValueError):
             t.send(self.config, self.release('verifier', 'Adjudicates SUB-' + 'f' * 64 + '\n'), ['SUB-' + 'f' * 64])
@@ -210,3 +208,24 @@ class RoundTransmitTests(unittest.TestCase):
         self.assertEqual(t.wait(self.config, self.inbox['verifier'], seen, timeout=0)['status'], 'timeout')
         with self.assertRaises(ValueError):
             t.ack(seen, 'not-a-delivery')
+
+    def test_verifier_only_round_reaches_the_proposer_without_challenger_material(self):
+        prop = self.release('proposer')
+        t.send(self.config, prop)
+        ver = self.release('verifier', f'Reviewed {prop.name} directly; no challenge arrived\n')
+        out = t.send(self.config, ver, reviews=prop.name)
+        self.assertEqual({r['kind'] for r in out}, {'verification'})
+        [d] = self.deliveries('proposer')
+        self.assertTrue(d['valid'], d['problems'])
+        self.assertEqual(d['kind'], 'verification')
+        self.assertEqual({p.name for p in Path(d['path']).iterdir()}, {'DELIVERY.json', ver.name})
+
+    def test_reviewed_release_must_be_named_and_delivered(self):
+        prop = self.release('proposer')
+        with self.assertRaises(ValueError):  # not yet delivered to the verifier
+            t.send(self.config, self.release('verifier', f'Reviewed {prop.name}\n'), reviews=prop.name)
+        t.send(self.config, prop)
+        with self.assertRaises(ValueError):  # delivered, but not named in the record
+            t.send(self.config, self.release('verifier', 'Names nothing\n'), reviews=prop.name)
+        with self.assertRaises(ValueError):  # only verifiers name reviewed releases
+            t.send(self.config, self.release('challenger', f'About {prop.name}\n'), reviews=prop.name)

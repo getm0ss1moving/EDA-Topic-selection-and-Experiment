@@ -19,7 +19,8 @@ Human approval is still required for final topic and experiment reports.
    challenger may add `experiment-consent.json` containing only its own consent
    block (`session_id`, `decision`, `signed_revision`, `tasklist_sha256`,
    `rationale`); the session must be the releasing session and the decision one of
-   `pending`, `agree` or `revision_requested`. Host artifacts named `.DS_Store` or
+   `pending`, `agree` or `revision_requested`. Either may likewise add its own
+   `abandonment-consent.json`; `docs/AUTO-ROUND.md` defines both signatures. Host artifacts named `.DS_Store` or
    `.claude` are ignored and never released.
 2. Use the trusted script supplied in your packet/amendment:
 

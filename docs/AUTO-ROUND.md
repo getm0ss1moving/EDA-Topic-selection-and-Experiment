@@ -27,8 +27,10 @@ creates the folders and may place `COORDINATOR-*` notices at an inbox root.
    (`docs/SELF-SUBMISSION.md`).
 2. Transmit it:
    `python3 round_transmit.py send --config round-transport.json --release <OUTBOX>/submissions/SUB-<hash>`.
-   The verifier adds `--adjudicates SUB-<challenger release> ...` and must name the same IDs
-   in `verification.md` or `verification.json`.
+   The verifier adds `--reviews SUB-<proposer release>` for the proposer release it checked and
+   `--adjudicates SUB-<challenger release> ...` for every challenger release it ruled on, and
+   names the same IDs in `verification.md` or `verification.json`. It rules on every objection
+   in each challenger release it includes, if only as `unresolved`.
 3. Wait for your next delivery as a background command, so waiting costs no model turns:
    `python3 round_transmit.py wait --config round-transport.json --inbox <YOUR INBOX> --seen-file <OUTBOX>/processed-deliveries.json --timeout 86400`.
    The CLI wakes the session when the command ends. Only valid deliveries end the wait; `check`
@@ -40,7 +42,8 @@ creates the folders and may place `COORDINATOR-*` notices at an inbox root.
 Routing is fixed in `scripts/round_transmit.py`. The proposer's release goes to the challenger
 and the verifier, and the challenger's release goes to the verifier only. The verifier's
 release goes to the proposer together with the challenger releases it adjudicated, as one
-`verified-challenge` delivery, and to the challenger alone as a `verification` delivery.
+`verified-challenge` delivery, or alone as a `verification` delivery when no challenger release
+reached it this round; the challenger receives the verifier release alone.
 While `challenger_stage` is `initial`, the challenger copy of a proposer release is held: the
 coordinator performs the semantic forecast screen and delivers a redacted packet.
 
@@ -48,6 +51,36 @@ Each delivery is an immutable `DLV-<UTC>-<sender>-<release prefix>` folder holdi
 of the frozen releases and a `DELIVERY.json` record. The receiver re-verifies every byte, the
 route and the configured identities. The sender's `transmissions.jsonl`, in its own outbox,
 makes a repeated send a no-op.
+
+## Rounds without a challenger
+
+If no challenger release reaches the verifier, for example while the challenger seat is vacant
+or its platform has reached a usage limit, the verifier reviews the proposer release directly
+and sends without `--adjudicates`. The proposer then receives a `verification` delivery that
+holds only the verifier release and carries no challenger material. The round completes and is
+published as usual, and a later challenger release joins the next round. Promotion and joint
+abandonment still need the challenger's own consent, so a topic cannot close without one.
+
+## Bootstrap
+
+A role whose current output never passed through the inboxes freezes it unchanged and sends it
+before its first wait, so every role refers to the same release ID. A verifier ruling made on a
+packet dossier, before any proposer release reached its inbox, may be frozen and sent without
+`--reviews`; the publisher records that round without a proposer release.
+
+## Consents and validation
+
+- **Experiment consent:** `signed_revision` is the `SUB-` ID of the proposer release whose
+  `tasklist.md` both roles accept, and `tasklist_sha256` is that file's digest
+  (`project.py tasklist-digest`). Any task-list change creates a new release and resets both
+  consents.
+- **Joint abandonment:** each role releases its own `abandonment-consent.json` with
+  `session_id`, `decision` (`agree`, `decline` or `pending`), `grounds`, `signed_revision`,
+  `signed_dossier_digest` and `rationale`, signing the same release and its dossier digest
+  (`project.py digest`). The coordinator copies both unchanged into `direction-control.json`,
+  and the verifier checks them.
+- **Validation:** role bundles include `scripts/project.py` and the topic templates, so each role
+  computes the project's own digests offline. Full `validate` runs on the coordinator side.
 
 ## GitHub
 
