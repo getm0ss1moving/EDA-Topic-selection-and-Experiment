@@ -150,6 +150,28 @@ def parse(stdout):
             'wake_notifications': notes, 'result_events': results, 'tool_calls': len(uses)}
 
 
+def publish_again(args):
+    """Repeat the coordinator's dry run on an earlier fixture, e.g. after a network failure."""
+    rt, rp = load('round_transmit'), load('round_publish')
+    root = args.publish_fixture.resolve()
+    cfg = rt.load_config(root / 'rounds' / 'EDA-0002' / ROLE_DIRS['proposer'] / 'COORDINATOR-TOOLS' / 'round-transport.json')
+    found = rp.rounds(cfg, 'EDA-0002')
+    try:
+        publication = rp.publish_round(found[0], args.repo, root / 'ledger.jsonl', dry_run=True,
+                                       registry_file=root / 'synthetic-registry.json')
+    except Exception as e:
+        publication = {'error': str(e)}
+    report = {'test': 'ROUND-CIRCUIT-0001 publication dry run repeated on an existing fixture',
+              'fixture_round': found[0]['round_id'] if found else None,
+              'round_releases': [Path(x).name for x in found[0]['releases']] if found else [],
+              'publisher_sha256': rt.rs.sha((SCRIPTS / 'round_publish.py').read_bytes()),
+              'run_at_utc': utc(), 'publication_dry_run': publication,
+              'all_pass': len(found) == 1 and publication.get('validation') == 'passed'}
+    args.out.write_text(json.dumps(report, indent=2) + '\n')
+    print(json.dumps({'all_pass': report['all_pass'], 'publication': publication}, indent=2))
+    raise SystemExit(0 if report['all_pass'] else 1)
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument('--cli', default=f'{HOME}/.local/claude-code-2.1.293/node_modules/@anthropic-ai/'
@@ -160,7 +182,11 @@ def main():
     ap.add_argument('--out', type=Path, required=True)
     ap.add_argument('--repo', type=Path, help='checkout for the publication dry run')
     ap.add_argument('--timeout', type=int, default=2400)
+    ap.add_argument('--publish-fixture', type=Path,
+                    help='rerun only the publication dry run on the completed round of an earlier fixture')
     args = ap.parse_args()
+    if args.publish_fixture:
+        return publish_again(args)
     if any(n in str(args.workdir.resolve()).lower() for n in BLOCKED_NAMES):
         raise SystemExit('Choose a work directory whose path names no blocked repository or account.')
     rt, rp = load('round_transmit'), load('round_publish')

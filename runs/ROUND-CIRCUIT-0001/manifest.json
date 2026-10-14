@@ -1,0 +1,68 @@
+{
+  "run_id": "ROUND-CIRCUIT-0001",
+  "session_id": "9273c928-a2eb-46ba-890d-9dedad60ac78",
+  "role": "coordinator",
+  "platform": "Claude",
+  "stage": "synthetic end-to-end test of local round transport and round publication",
+  "status": "passed: every circuit check; publication dry run passed on retry after a host network failure",
+  "input_commit": "9e846df",
+  "model": "claude-opus-5-5 (coordinator); test sessions claude-sonnet-5-5 at low effort",
+  "operator": "getm0ss1moving",
+  "started_at_utc": "2026-10-14T10:10:25Z",
+  "completed_at_utc": "2026-10-14T10:12:48Z",
+  "owner_instruction_2026_10_14": "keep working until you can claim that the local run through proposer-challenger-verifier-proposer circuit can work effectively",
+  "design": "Three fresh headless sessions of the pinned Claude Code 2.1.293 CLI on a throwaway fixture with no scientific content. The proposer used settings derived from runs/CLD-P05-LAUNCH-0001/launch-settings.json (sha256 6009cc41dd0d8f8c6714bb81227166d0490632b64a2d92221c790bb96a005cc9); the challenger and verifier used stand-in settings granting what config/round-transport.json requires of their platforms. Each session froze and transmitted with its own read-only copy of the tools, waited through a background command and acted only when the CLI woke it.",
+  "tools_sha256": {
+    "round_transmit.py": "418bbd74754ffc0cd1eae066da551bc9b0f19bc9269d6732274cac1562f2eba5",
+    "role_submission.py": "7c3afcbb4e53bb1af821f03fae490dced593b6c44fd859b0f0006cdc71af5e21",
+    "round_publish.py": "40417a3a530e03c2f10828215ebdd05ce1914cabc6d8e256782b0da3c0c99efb"
+  },
+  "results": {
+    "circuit": "runs/ROUND-CIRCUIT-0001/circuit-result-run1.json",
+    "circuit_checks_passed": "14 of 14",
+    "publication_first_attempt": {
+      "error": "Command '('git', 'fetch', '--quiet', 'origin', 'main')' returned non-zero exit status 128."
+    },
+    "publication_retry": "runs/ROUND-CIRCUIT-0001/circuit-result-run1-publication-retry.json",
+    "timeline_utc": {
+      "proposer_release_delivered": "10:11:02",
+      "challenger_release_delivered": "10:11:19",
+      "verified_challenge_delivered": "10:11:35",
+      "proposer_finished": "10:11:50"
+    },
+    "wake_notifications": {
+      "proposer": 1,
+      "challenger": 2,
+      "verifier": 2
+    },
+    "round_id": "ROUND-EDA-0002-20261014T101135Z",
+    "round_releases": [
+      "SUB-8cc2161a15f6be3cb872eb3ae0cd0354ea2d7efbbe424160a021cb60e6bc04b3",
+      "SUB-a586c61686fd9b5e5675ab8fa73c76661bbc7cf5c92cf26b0f26c1adc1d5f3be",
+      "SUB-2ecf5acd2040b5477d34dca2160956c8faaef2782c9b1ae57369dbb1533aafbf"
+    ]
+  },
+  "findings": [
+    "The proposer received challenger material only inside the verified-challenge delivery that carried the verifier release.",
+    "Each session woke from its background wait without polling: the proposer once, the challenger and the verifier twice.",
+    "Receipt files acknowledged every delivery exactly once; no delivery was returned twice.",
+    "The publisher found exactly one completed round and built a validated round commit holding the proposer, challenger and verifier releases plus the round record."
+  ],
+  "network_incident": "The first publication dry run failed at git fetch with a GitHub SSL_ERROR_SYSCALL from the host VPN. The same fixture was published again with circuit_test.py --publish-fixture after GitHub was reachable.",
+  "limits": [
+    "The challenger and verifier stand-ins are Claude Code sessions. The real Codex challenger and DeepSeek verifier runtimes still need the same grants from their coordinators.",
+    "The dry run stops before git push and gh pr create. Synthetic sessions are deliberately unregistered, so only a real round can exercise the push; it uses the same git and gh path as this project's other PRs.",
+    "All sessions share one OS account; sandbox grants are the boundary, not adversarial isolation."
+  ],
+  "contamination_events": [
+    "None. No role session, packet or private material was used."
+  ],
+  "independence_attestation": "Coordinator infrastructure test only; no scientific content, verification or approval.",
+  "output_paths": [
+    "runs/ROUND-CIRCUIT-0001/manifest.json",
+    "runs/ROUND-CIRCUIT-0001/circuit_test.py",
+    "runs/ROUND-CIRCUIT-0001/circuit-result-run1.json",
+    "runs/ROUND-CIRCUIT-0001/circuit-result-run1-publication-retry.json"
+  ],
+  "experiment_authorization": false
+}
