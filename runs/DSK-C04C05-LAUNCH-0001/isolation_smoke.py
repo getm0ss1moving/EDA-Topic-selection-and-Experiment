@@ -38,11 +38,27 @@ TOOLS = 'Bash,Read,Write,Edit,WebSearch,WebFetch'  # must equal TOOLS in launch.
 ACTORS = {
     'DeepSeek-C04-PHYSICAL': {
         'sibling': 'DeepSeek-C05-TIMING',
+        'sibling_packet': f'{CG}/EDA-Agent-Packets/challenger-release-20261013/DeepSeek-C05-TIMING/PACKET.json',
         'proposer_packet': f'{CG}/EDA-Agent-Packets/physical-release-d437c2f66090/Codex-P04-PHYSICAL/PACKET.json',
+        'packet_root': 'challenger-release-20261013',
+        'outbox_root': 'challenger-release-20261013',
+        'settings_file': 'launch-settings-C04.json',
     },
     'DeepSeek-C05-TIMING': {
         'sibling': 'DeepSeek-C04-PHYSICAL',
+        'sibling_packet': f'{CG}/EDA-Agent-Packets/challenger-release-20261013/DeepSeek-C04-PHYSICAL/PACKET.json',
         'proposer_packet': f'{CG}/EDA-Agent-Packets/physical-release-d437c2f66090/Claude-P05-TIMING/PACKET.json',
+        'packet_root': 'challenger-release-20261013',
+        'outbox_root': 'challenger-release-20261013',
+        'settings_file': 'launch-settings-C05.json',
+    },
+    'DeepSeek-V02-PHYSICAL': {
+        'sibling': 'DeepSeek-C05-TIMING',
+        'sibling_packet': f'{CG}/EDA-Agent-Packets/challenger-release-20261013/DeepSeek-C05-TIMING/PACKET.json',
+        'proposer_packet': f'{CG}/EDA-Agent-Packets/physical-release-d437c2f66090/Claude-P05-TIMING/PACKET.json',
+        'packet_root': 'verifier-release-20261014',
+        'outbox_root': 'verifier-release-20261014',
+        'settings_file': 'launch-settings-V02.json',
     },
 }
 
@@ -107,10 +123,10 @@ def main():
 
     actor_cfg = ACTORS[args.actor]
     global real_packet, real_outbox
-    real_packet = Path(f'{CG}/EDA-Agent-Packets/{RELEASE}/{args.actor}')
-    real_outbox = Path(f'{CG}/EDA-Agent-Outboxes/{RELEASE}/{args.actor}')
-    sibling_packet = f'{CG}/EDA-Agent-Packets/{RELEASE}/{actor_cfg["sibling"]}/PACKET.json'
-    real_settings = args.settings or RUN_DIR / f'launch-settings-{"C04" if "C04" in args.actor else "C05"}.json'
+    real_packet = Path(f'{CG}/EDA-Agent-Packets/{actor_cfg["packet_root"]}/{args.actor}')
+    real_outbox = Path(f'{CG}/EDA-Agent-Outboxes/{actor_cfg["outbox_root"]}/{args.actor}')
+    sibling_packet = actor_cfg['sibling_packet']
+    real_settings = args.settings or RUN_DIR / actor_cfg['settings_file']
 
     env = {'HOME': HOME, 'USER': os.environ.get('USER', ''), 'LOGNAME': os.environ.get('USER', ''),
            'SHELL': '/bin/bash', 'TERM': 'dumb', 'LANG': 'en_US.UTF-8',
