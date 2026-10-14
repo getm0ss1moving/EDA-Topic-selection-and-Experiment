@@ -141,3 +141,24 @@ This amendment supersedes the earlier network, read-rule and session-state descr
   - **Run 4** (`isolation-smoke-run4-lab-results.json`) first crashed in the harness parser, on a CLI status event with a plain-text message, and wrote no report. After the parser fix, the repeat passed all 13 environment checks and 25 of 26 steps. R2 failed only because it still expected a read outside the working directories to succeed when an allow rule matched. `blockReadsOutsideWorkingDirectories` denies such reads regardless, which is the intended fail-closed behaviour, so R2 now expects denial.
   - **Run 5** (`isolation-smoke-run5-lab-results.json`) passed all 26 steps and all 13 environment checks with that harness. The session ran `claude-opus-5-5`, with a `claude-haiku-5-5` helper, in `dontAsk` mode with exactly the six allowed tools and no MCP servers, third-party plugins or auto-memory. Reads outside the working directories and of the listed sensitive paths were denied. Lab results were readable but not writable, and the packet stayed unmodified. Bash reached GitHub but not other hosts, and WebFetch reached GitHub and arXiv but not other hosts.
 - Residual limitation: `Read(~/.claude/**)` and the outside-directory block also hide Claude Code's own spilled tool-result files for this session. The proposer should keep tool output small, or write large output into its outbox and read it there.
+
+## 2026-10-14 amendment CLD-P05-AMEND-0001
+
+This amendment supersedes the earlier network, safe-mode and resume descriptions. Details are in `runs/CLD-P05-AMEND-0001/manifest.json`.
+
+- WebFetch reaches any domain, under the PR #25 external-reading rule. Bash network access stays limited to GitHub and arXiv.
+- A PreToolUse guard (`repo_guard.py`, installed read-only outside every checkout and SHA-pinned in `launch.sh`) blocks WebFetch, WebSearch and Bash calls that name this repository or its owner accounts. Transported challenger output is public here before adjudication (owner directive, 2026-10-14).
+- `--safe-mode` disables settings hooks, so the launcher drops it and sets `CLAUDE_CODE_DISABLE_CLAUDE_MDS`, `CLAUDE_CODE_DISABLE_BUNDLED_SKILLS` and `DISABLE_AUTOUPDATER`. MCP stays off, settings stay project-only and the six-tool allow-list is unchanged.
+- The round inbox `EDA-Agent-Inboxes/rounds/EDA-0002/Claude-P05-TIMING` is a third `--add-dir`. It is read-only to the role and has only a `from-verifier` folder. The role may write, but not read, the `from-proposer` folders of the challenger and verifier inboxes (`docs/AUTO-ROUND.md`).
+- `launch.sh` refuses to start unless the policy amendment bundle in that inbox matches the pinned `AMENDMENT.json` digest `3f2a177751f11e0ff2e0d5249007bc6cfb74bf6d557329565cbea5509643cc61`.
+- PR #29 added explicit Read denials for the other inboxes and Edit/Write denials for the own inbox.
+- **Run 8** (`isolation-smoke-run8-final.json`) passed all 41 steps and all 19 environment checks against settings `6009cc41dd0d8f8c6714bb81227166d0490632b64a2d92221c790bb96a005cc9` and the final tools. Runs 6 and 7 are kept as history.
+
+Resume from your own Terminal.app, never from a Claude desktop terminal tab:
+
+0. If the proposer is still open from an earlier launch, exit that session first (`/exit`). Never run two processes on one session.
+1. `bash runs/CLD-P05-LAUNCH-0001/launch.sh --check-resume`, from a checkout that contains this amendment.
+2. `bash runs/CLD-P05-LAUNCH-0001/launch.sh --resume`.
+3. Send this prompt verbatim:
+
+> Coordinator notice, transport only: policy amendment CLD-P05-AMEND-0001. A hashed, read-only bundle is in your round inbox at `/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/rounds/EDA-0002/Claude-P05-TIMING/COORDINATOR-AMENDMENT-0001`. The SHA-256 of its `AMENDMENT.json` must be `3f2a177751f11e0ff2e0d5249007bc6cfb74bf6d557329565cbea5509643cc61`. Verify that hash and every file hash listed in `AMENDMENT.json`, then read `CHANGES.md` and the files it cites; they supersede the same paths in your packet. Owner directive of 2026-10-14: you see challenger output only after the verifier has adjudicated it, inside a valid `verified-challenge` delivery; never open it by any other route. Write your receipt as `CHANGES.md` specifies, then start the background wait on your inbox and end the turn. Do not freeze a release, revise the dossier or start new research in this turn.

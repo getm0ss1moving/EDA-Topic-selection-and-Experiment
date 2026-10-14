@@ -1,0 +1,12 @@
+[
+  {
+    "actor_id": "Codex-C05-TIMING-R2",
+    "path": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/rounds/EDA-0002/Codex-C05-TIMING-R2/COORDINATOR-REAL-ROLE-INBOX-0001",
+    "manifest_sha256": "454b4dbf886e00952a6ea9cf48b80efeb0623b2d56cf8aee9ac7df6451d793c2"
+  },
+  {
+    "actor_id": "DeepSeek-V02-PHYSICAL",
+    "path": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/rounds/EDA-0002/DeepSeek-V02-PHYSICAL/COORDINATOR-REAL-ROLE-INBOX-0001",
+    "manifest_sha256": "48e391fbb4bd62624d668527e38b15f622c0b5565a330f62448164e2d316f5c4"
+  }
+]

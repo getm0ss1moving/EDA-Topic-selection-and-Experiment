@@ -14,14 +14,23 @@
       "effort_observed_onboarding": "max: an operator /model selection before the setup prompt; reported by the role (readiness.json UC-06).",
       "operator": "getm0ss1moving",
       "github_login": "getm0ss1moving (transport account for this actor's outputs; the AI actor has no GitHub identity)",
-      "input_commit": "d437c2f660906efe9351a90451905826d00b63e3",
-      "packet_sha256": "ff20816f623585d4bf7ba7b13d79db58aab90a2e947cd05c719cd93f3574602d",
+      "input_commit": "2121532bfca928900f4252e796d7570fdb1ea224",
+      "packet_sha256": "3f2a177751f11e0ff2e0d5249007bc6cfb74bf6d557329565cbea5509643cc61",
       "launch_commit": "ab600824ab0d65f579977484ec9a8db9dc43bdcc",
       "launch_run": "CLD-P05-LAUNCH-0001",
       "registration_run": "CLD-P05-SESSION-0001",
       "started_at_utc": "2026-10-12T18:07:15Z",
-      "state": "first proposal complete; paused pending runner governance and P3-P5 revision",
-      "independence_attestation": "Fresh Claude Code 2.1.293 session started by the operator from Terminal.app through runs/CLD-P05-LAUNCH-0001/launch.sh: clean environment, --safe-mode, tool allow-list, sandboxed Bash and deny rules. The operator attests that the session received only the setup prompt after a /model selection. The role's readiness.json reports no contamination and discloses its unlisted context. All actors share one macOS account, so this is operator and self attestation, not OS-enforced independence."
+      "state": "R1b output frozen for challenger review (runs/CLD-P05-FROZEN-0002, PR #26; exposure record in runs/CLD-P05-AMEND-0001); policy amendment CLD-P05-AMEND-0001 delivered; receipt pending",
+      "independence_attestation": "Fresh Claude Code 2.1.293 session started by the operator from Terminal.app through runs/CLD-P05-LAUNCH-0001/launch.sh: clean environment, --safe-mode, tool allow-list, sandboxed Bash and deny rules. The operator attests that the session received only the setup prompt after a /model selection. The role's readiness.json reports no contamination and discloses its unlisted context. All actors share one macOS account, so this is operator and self attestation, not OS-enforced independence.",
+      "packet_basis": "AMENDMENT.json of policy amendment CLD-P05-AMEND-0001, which binds the base packet in packet_history and every amended file by SHA-256 (runs/CLD-P05-AMEND-0001)",
+      "packet_history": [
+        {
+          "input_commit": "d437c2f660906efe9351a90451905826d00b63e3",
+          "packet_sha256": "ff20816f623585d4bf7ba7b13d79db58aab90a2e947cd05c719cd93f3574602d",
+          "stage": "initial research packet, used through the R1b output (runs/CLD-P05-FROZEN-0002)"
+        }
+      ],
+      "runtime_since_amendment": "Launched without --safe-mode, with CLAUDE_CODE_DISABLE_CLAUDE_MDS, CLAUDE_CODE_DISABLE_BUNDLED_SKILLS and DISABLE_AUTOUPDATER, a repository guard hook, WebFetch to any domain, explicit inbox deny rules and a read-only round inbox (runs/CLD-P05-LAUNCH-0001, isolation smoke run 8)."
     },
     {
       "session_id": "af136556-818c-47c7-b514-5a141cb14d85",
@@ -68,6 +77,22 @@
           "stage": "independent_initial_assessment_completed"
         }
       ]
+    },
+    {
+      "session_id": "e6bc9983-e74b-4576-9c1d-3abc95ea3df9",
+      "actor_id": "DeepSeek-V02-PHYSICAL",
+      "role": "verifier",
+      "topic": "EDA-0002",
+      "platform": "DeepSeek",
+      "model": "deepseek-flash",
+      "effort_requested": "low",
+      "model_basis": "Host-declared in released readiness; actual effort unobservable. Launcher now pins verifier low.",
+      "operator": "getm0ss1moving",
+      "github_login": "getm0ss1moving (transport only)",
+      "input_commit": "27b6c6e8cb4ef0d2ac7f2feb2521be1426940d88",
+      "packet_sha256": "db15a57c6355808e0faf90a6b2954c7f632bbe5b80071f069a905701d262ec78",
+      "state": "onboarding_complete; round inbox amendment pending receipt",
+      "independence_attestation": "Released readiness self-attestation; no transcript inspected; shared account with sandbox controls."
     }
   ],
   "required_session_fields": [

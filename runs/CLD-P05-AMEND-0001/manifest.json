@@ -1,0 +1,133 @@
+{
+  "run_id": "CLD-P05-AMEND-0001",
+  "session_id": "9273c928-a2eb-46ba-890d-9dedad60ac78",
+  "role": "coordinator",
+  "platform": "Claude",
+  "stage": "policy amendment, proposer runtime update and auto round transport",
+  "status": "bundle delivered; proposer receipt pending; challenger and verifier runtimes pending",
+  "input_commit": "9a190c5af7a371a82036b3dbb01ff8d6f4dd6936",
+  "amendment_commit": "2121532bfca928900f4252e796d7570fdb1ea224",
+  "packet_sha256": "3f2a177751f11e0ff2e0d5249007bc6cfb74bf6d557329565cbea5509643cc61",
+  "model": "claude-opus-5-5",
+  "host": "Claude desktop app, Claude Code 2.1.293, macOS arm64",
+  "operator": "getm0ss1moving",
+  "started_at_utc": "2026-10-14T00:41:25Z",
+  "completed_at_utc": "2026-10-14T10:17:43Z",
+  "clock_note": "The host clock agreed with the GitHub Date header within 7 s; the 54000 s offset recorded in CLD-P05-LAUNCH-0001 is gone.",
+  "owner_instructions_2026_10_14": [
+    "resume your proposer to acknowledge those new repo constrains",
+    "need proposer can not see challenger's output but verified challenger's output",
+    "Need a better auto research mode: create inbox for three roles; when the three roles finish and freeze their round, use a transmit program to transmit to other's inbox; three roles monitor their own inbox; the whole round don't need to update on github",
+    "the transmitting program is started by the previous role",
+    "Chosen options: allow the launch-kit edit after the auto-mode classifier blocked it; keep PR #26 with an exposure record"
+  ],
+  "actor": {
+    "actor_id": "Claude-P05-TIMING",
+    "session_id": "76d0bf61-78f7-4b93-a557-7c29f1a2cbe8",
+    "role": "proposer",
+    "topic": "EDA-0002"
+  },
+  "amendment": {
+    "bundle_path": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/rounds/EDA-0002/Claude-P05-TIMING/COORDINATOR-AMENDMENT-0001",
+    "amendment_sha256": "3f2a177751f11e0ff2e0d5249007bc6cfb74bf6d557329565cbea5509643cc61",
+    "file_count": 19,
+    "manifest_copy": "runs/CLD-P05-AMEND-0001/AMENDMENT.json",
+    "changes_copy": "runs/CLD-P05-AMEND-0001/CHANGES.md",
+    "release_provenance": {
+      "ref": "2121532bfca928900f4252e796d7570fdb1ea224",
+      "packet": "3f2a177751f11e0ff2e0d5249007bc6cfb74bf6d557329565cbea5509643cc61"
+    },
+    "note": "Built from commit 2121532 (PR #29 branch). File hashes in AMENDMENT.json stay authoritative if the PR is squash-merged.",
+    "superseded_before_acknowledgement": {
+      "amendment_sha256": "4ea6204028f4c279f3f4f955af889a70fa74ce5da334c87dc844cf0d288b68c5",
+      "built_from": "a7e7c302fc951a77a5c3c7aeaf550f147aa4b13f",
+      "reason": "Never acknowledged: no receipt, and the still-running proposer process uses the old launcher, which cannot read the round inbox. Replaced so that the delivered tools equal the ones tested after PR #29 (receipt-file waiting, ack, hardened delivery checks)."
+    }
+  },
+  "runtime_changes": {
+    "settings_sha256": {
+      "before": "e628d5f72faa76d06c7922e7d673e8d8e4ee7be2a175fdcf27958715988fc3d8",
+      "after": "6009cc41dd0d8f8c6714bb81227166d0490632b64a2d92221c790bb96a005cc9"
+    },
+    "webfetch": "any domain; previously GitHub and arXiv only",
+    "bash_network": "unchanged: GitHub and arXiv",
+    "guard": {
+      "installed_path": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Guards/Claude-P05-TIMING/repo_guard.py",
+      "source": "runs/CLD-P05-LAUNCH-0001/repo_guard.py",
+      "sha256": "46f2fe7386eab766af9a22638db8281d2c2231b0c8465f370d2e8c7f98708eee",
+      "mode": "0444",
+      "blocks": "WebFetch, WebSearch and Bash calls naming getm0ss1moving, EDA-Topic-selection or M0nitor-EDA, after percent-decoding",
+      "log": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Guards/Claude-P05-TIMING/blocked-calls.jsonl (time, session, tool and matched name only)"
+    },
+    "safe_mode": "removed because it also disables settings hooks; replaced by CLAUDE_CODE_DISABLE_CLAUDE_MDS=1, CLAUDE_CODE_DISABLE_BUNDLED_SKILLS=1 and DISABLE_AUTOUPDATER=1, keeping --strict-mcp-config, --setting-sources project and the six-tool allow-list",
+    "round_inbox": {
+      "read_only": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/rounds/EDA-0002/Claude-P05-TIMING",
+      "write_only": [
+        "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/rounds/EDA-0002/Codex-C05-TIMING-R2/from-proposer",
+        "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/rounds/EDA-0002/DeepSeek-V02-PHYSICAL/from-proposer"
+      ]
+    },
+    "not_added": "Resolved by PR #29: explicit Read denials for the other inboxes and Edit/Write denials for the own inbox. Broad foreign Write/Edit denials were not kept because they also blocked the transmitter."
+  },
+  "isolation_smoke": {
+    "result": "runs/CLD-P05-LAUNCH-0001/isolation-smoke-run8-final.json",
+    "outcome": "All 41 steps and all 19 environment checks passed against settings 6009cc41dd0d8f8c6714bb81227166d0490632b64a2d92221c790bb96a005cc9 and the final tools.",
+    "history": [
+      "Run 6 passed against settings a4cd4f1d (PR #28).",
+      "PR #29's two runs failed on intermediate settings and skipped the guard probes (runs/ROUND-HARDENING-0001).",
+      "Run 7 passed every isolation, guard and transport check; three reachability steps failed during a host network outage.",
+      "Run 8 passed everything."
+    ]
+  },
+  "round_transport": {
+    "config": "config/round-transport.json",
+    "tool": {
+      "path": "scripts/round_transmit.py",
+      "sha256": "a744570a0aaa6827cb4846bb06736d7be626d3fa114e145e8bdc6a98774aeee4"
+    },
+    "procedure": "docs/AUTO-ROUND.md",
+    "inbox_folders_created": [
+      "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/rounds/EDA-0002/Claude-P05-TIMING/from-verifier",
+      "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/rounds/EDA-0002/Codex-C05-TIMING-R2/from-proposer",
+      "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/rounds/EDA-0002/Codex-C05-TIMING-R2/from-verifier",
+      "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/rounds/EDA-0002/DeepSeek-V02-PHYSICAL/from-proposer",
+      "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/rounds/EDA-0002/DeepSeek-V02-PHYSICAL/from-challenger"
+    ],
+    "pending": [
+      "Codex coordinator: let Codex-C05-TIMING-R2 read its own inbox and write only DeepSeek-V02-PHYSICAL/from-challenger, and supply the trusted tools and config.",
+      "DeepSeek coordinator: create the verifier session (planned e6bc9983-e74b-4576-9c1d-3abc95ea3df9), let it read its own inbox and write only the from-verifier folders of the proposer and challenger inboxes, and correct the session ID by PR if it differs."
+    ]
+  },
+  "registry_change": "config/roles.json: Claude-P05-TIMING input pair set to the amendment pair; the base pair moved to packet_history.",
+  "exposure_record": "runs/CLD-P05-AMEND-0001/exposure-record.md",
+  "sources_consulted": [
+    "Pinned Claude Code 2.1.293 help text and binary strings: --safe-mode and --restricted semantics, settings-hook loading, CLAUDE_CODE_DISABLE_* switches, permissions.blockReadsOutsideWorkingDirectories, AGENTS.md loading, the sandbox directory-metadata rule and background-task wake-up",
+    "Repository files at 9a190c5 and the PR #26 head 9f4c909: transport and role-output manifests, DeepSeek-V02 launch record",
+    "GitHub API Date header for the host clock"
+  ],
+  "contamination_events": [
+    "None in this run. The earlier round-1b exposure is recorded in exposure-record.md."
+  ],
+  "independence_attestation": "Coordinator transport and runtime record only; it authors no scientific content and approves nothing. The coordinator read no role transcript or private note. It read the proposer's released output manifest in PR #26 and listed outbox and inbox names only.",
+  "experiment_authorization": false,
+  "output_paths": [
+    "runs/CLD-P05-AMEND-0001/manifest.json",
+    "runs/CLD-P05-AMEND-0001/AMENDMENT.json",
+    "runs/CLD-P05-AMEND-0001/CHANGES.md",
+    "runs/CLD-P05-AMEND-0001/exposure-record.md",
+    "config/round-transport.json",
+    "config/roles.json",
+    "docs/AUTO-ROUND.md",
+    "scripts/round_transmit.py",
+    "tests/test_round_transmit.py",
+    "runs/CLD-P05-LAUNCH-0001/launch.sh",
+    "runs/CLD-P05-LAUNCH-0001/launch-settings.json",
+    "runs/CLD-P05-LAUNCH-0001/repo_guard.py",
+    "runs/CLD-P05-LAUNCH-0001/isolation_smoke.py",
+    "runs/CLD-P05-LAUNCH-0001/isolation-smoke-run6-amendment.json"
+  ],
+  "related_runs": [
+    "runs/ROUND-HARDENING-0001 (PR #29)",
+    "runs/ROUND-CIRCUIT-0001 (live three-role circuit)"
+  ]
+}

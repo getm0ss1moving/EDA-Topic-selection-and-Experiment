@@ -49,6 +49,11 @@
       "recorded_utc": "2026-10-13T09:33:30Z",
       "base_commit": "4b666c04b0eaa089934f736fab4db2309ce7d36a",
       "change": "The EDA-0002 proposal froze when PR #13 merged. The DeepSeek-C05-TIMING challenger packet was exported from that commit (30 files, stage initial), its digest recorded in actor-launch.json, the packet locked read-only and a fresh 0700 outbox re-created; launch.sh --check reached all preconditions hold (nothing launched). Export record: runs/DSK-C05-PACKET-0001."
+    },
+    {
+      "recorded_utc": "2026-10-14T00:41:35Z",
+      "base_commit": "27b6c6e8cb4ef0d2ac7f2feb2521be1426940d88",
+      "change": "Verifier launch preparation: launch-settings-V02.json added (digest-pinned), actor-launch.json gained the DeepSeek-V02-PHYSICAL binding (packet db15a57c..., session e6bc9983-..., stage full), and isolation_smoke.py gained per-actor roots so the V02 fixture runs; recorded in runs/DSK-V02-LAUNCH-0001. The launcher is unchanged."
     }
   ],
   "source_ids": [

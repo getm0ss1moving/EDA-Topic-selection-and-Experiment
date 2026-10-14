@@ -40,6 +40,24 @@
       "session_id": "af136556-818c-47c7-b514-5a141cb14d85",
       "settings_file": "launch-settings-C05.json",
       "settings_sha256": "2c1984b1e329cc8c4ba8921ba461407a228b68a9a668fbd49c905dbbbafdbf72"
+    },
+    "DeepSeek-V02-PHYSICAL": {
+      "actor_id": "DeepSeek-V02-PHYSICAL",
+      "call_sign": "DSK-Ledger-PHYSICAL",
+      "role": "verifier",
+      "domain": "D05",
+      "topic": "EDA-0002",
+      "stage": "full",
+      "model_pinned": "deepseek-flash",
+      "role_note": "Verifies the frozen round-0 revision and its transported round-1 challenge (proposer Claude-P05-TIMING, session 76d0bf61-78f7-4b93-a557-7c29f1a2cbe8; challenge authored by DeepSeek-C05-TIMING, seat now held by Codex-C05-TIMING-R2). Owner-directed single-platform adjudication of a DeepSeek challenge; the limitation is recorded in runs/DSK-V02-LAUNCH-0001.",
+      "packet_dir": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/verifier-release-20261014/DeepSeek-V02-PHYSICAL",
+      "packet_sha256": "db15a57c6355808e0faf90a6b2954c7f632bbe5b80071f069a905701d262ec78",
+      "outbox_dir": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/verifier-release-20261014/DeepSeek-V02-PHYSICAL",
+      "session_id": "e6bc9983-e74b-4576-9c1d-3abc95ea3df9",
+      "settings_file": "launch-settings-V02.json",
+      "settings_sha256": "47b54fc323f81e36aa3cb209b0545ee68e6db5ba04c6a3952a7de8da675e8009",
+      "round_inbox": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/rounds/EDA-0002/DeepSeek-V02-PHYSICAL",
+      "effort": "low"
     }
   }
 }
