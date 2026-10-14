@@ -82,10 +82,9 @@ operator resumes it when a delivery arrives.
 
 ## Reliable waiting and remaining runtime boundary
 
-Prefer `wait --seen-file <OWN_OUTBOX>/processed-deliveries.json` instead of a
-lexicographic `--after` cursor. Initialize that file to `[]`, then atomically
-append each delivery ID only after processing its valid frozen packet. Never
-write receipts into an inbox. On a restart, pass the same receipt file: an
+`wait` always takes the role's receipt file, `--seen-file <OWN_OUTBOX>/processed-deliveries.json`;
+a missing file means nothing has been handled yet. Record each delivery with `ack`
+only after processing its valid frozen packet. Never write receipts into an inbox. On a restart, pass the same receipt file: an
 unacknowledged delivery is replayed rather than lost. If a turn fails between
 output freeze and acknowledgement, use the immutable release ID to avoid a second
 scientific revision. Each new wait reloads receipts; run at most one consumer per
