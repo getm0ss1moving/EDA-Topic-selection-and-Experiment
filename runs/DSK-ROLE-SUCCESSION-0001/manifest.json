@@ -5,7 +5,7 @@
   "platform": "DeepSeek",
   "stage": "platform_role_succession",
   "status": "ready_for_independent_review",
-  "input_commit": "22002d2",
+  "input_commit": "22002d24474e84d34d22b85b3d99f154fa304fe1",
   "model": "deepseek-flash[1m]",
   "host": "macOS arm64 (Darwin 25.5.0)",
   "operator": "getm0ss1moving",
