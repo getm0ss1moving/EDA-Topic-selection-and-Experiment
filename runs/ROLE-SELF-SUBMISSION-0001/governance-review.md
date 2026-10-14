@@ -25,3 +25,17 @@ of a real actor release has not been exercised in this change. Readonly bits are
 not adversarial isolation. Semantic forecast masking and evidence adjudication
 remain explicit coordinator/verifier duties. Actor output transport is not an
 accepted topic or experiment authorization. No verifier was invented.
+
+## Owner clarification: independent external reading
+
+All proposers, challengers and verifiers have standing permission to read any
+accessible external research source/file without per-file or per-domain approval.
+Updated AGENTS, isolation/evidence policy and all role harnesses. Supersedes the
+historical GitHub/arXiv-only research-reading restriction. Cross-role material
+remains prohibited unless explicitly released as shared output for the receiver's
+stage, regardless of external location. Source quality requirements still govern
+claims. Offline compute, execution and budget limits are unchanged.
+
+Validation rerun: project validation and all 44 tests passed. Existing sessions'
+live permissions have not been changed; this PR supplies policy, not evidence of
+runtime deployment. Historical frozen records remain intact.

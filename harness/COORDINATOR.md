@@ -19,3 +19,13 @@ For this infrastructure PR, use a governance packet: check policy consistency, g
 ## Actor-owned release transport
 
 Consume actor-self-frozen submissions using `scripts/role_submission.py publish`; no human freeze request is necessary. Validate the registered role, topic, session and packet provenance, preserve exact output bytes, attach the resulting PR and wait for checks. Merge intermediate PRs without self-approval. Integrate scientific files only into their assigned topic/role fields, preserving old evidence and foreign consents; a changed task list invalidates prior consent. Do not release a raw challenge to the proposer before independent adjudication. Apply the existing semantic forecast screen before first-pass challenger exposure. An unregistered verifier remains a missing prerequisite, never an invitation to self-verify.
+
+## Standing external-read authorization
+
+Do not require source-by-source permission from proposers, challengers or
+verifiers. They may independently read accessible external research files and
+sources. Enforce cross-role provenance and stage-specific shared-output releases,
+not a GitHub/arXiv source whitelist. Deliver this change as a hashed amendment to
+existing sessions; disclose runtime access blocks without treating them as missing
+human authorization. Keep offline compute hosts offline and retain execution,
+budget and write controls.
