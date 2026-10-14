@@ -305,6 +305,11 @@ class AcceptanceTests(DossierTests):
         sessions=self.make_valid()
         sessions['c']['topic']='EDA-9999'
         self.assertTrue(any('different topic' in e for e in p.validate_topic(self.d,'topics',sessions)))
+    def test_untouched_verification_template_blocks_acceptance(self):
+        sessions=self.make_valid()
+        shutil.copy(self.original_root/'templates/topic/verification.md',self.d/'verification.md')
+        self.assertTrue(any('unresolved review placeholder: verification.md' in e
+                            for e in p.validate_topic(self.d,'topics',sessions)))
     def test_valid_then_tampered(self):
         sessions=self.make_valid()
         self.assertEqual(p.validate_topic(self.d,'topics',sessions),[])

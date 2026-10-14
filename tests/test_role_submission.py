@@ -1,4 +1,5 @@
 import importlib.util
+import json
 from pathlib import Path
 import tempfile
 import unittest
@@ -13,7 +14,7 @@ class SubmissionTests(unittest.TestCase):
         self.root = Path(self.tmp.name).resolve()
         self.source = self.root / 'release'; self.source.mkdir()
         for name in s.REQUIRED['challenger']:
-            (self.source / name).write_text('Explicit actor output\n')
+            (self.source / name).write_text('[]\n' if name.endswith('.json') else 'Explicit actor output\n')
     def tearDown(self):
         for p in self.root.rglob('*'):
             if not p.is_symlink(): p.chmod(0o755 if p.is_dir() else 0o644)
@@ -45,3 +46,28 @@ class SubmissionTests(unittest.TestCase):
     def test_extra_snapshot_path(self):
         snap = self.freeze(); snap.chmod(0o755); (snap / 'extra').write_text('unexpected')
         with self.assertRaises(ValueError): s.verify(snap)
+    def test_credential_rejected(self):
+        (self.source / 'challenges.md').write_text('key sk-ant-' + 'a' * 24 + '\n')
+        with self.assertRaises(ValueError): self.freeze()
+    def test_non_text_and_bad_json_rejected(self):
+        (self.source / 'challenges.md').write_bytes(b'\xff\xfe\x00binary')
+        with self.assertRaises(ValueError): self.freeze()
+        (self.source / 'challenges.md').write_text('Explicit actor output\n')
+        (self.source / 'sources.json').write_text('not json')
+        with self.assertRaises(ValueError): self.freeze()
+    def test_host_artifacts_ignored(self):
+        (self.source / '.DS_Store').write_bytes(b'\x00\x00\x00\x01Bud1')
+        (self.source / '.claude' / '.cc-writes').mkdir(parents=True)
+        snap = self.freeze()
+        self.assertNotIn('.DS_Store', s.verify(snap)[0]['files'])
+    def test_consent_signs_only_for_own_session(self):
+        consent = {'session_id': 'other', 'decision': 'agree', 'signed_revision': 'a' * 40,
+                   'tasklist_sha256': 'c' * 64, 'rationale': 'Reasonable plan'}
+        (self.source / 'experiment-consent.json').write_text(json.dumps(consent))
+        with self.assertRaises(ValueError): self.freeze()
+        consent['session_id'] = 'session'
+        (self.source / 'experiment-consent.json').write_text(json.dumps(consent))
+        self.assertIn('experiment-consent.json', s.verify(self.freeze())[0]['files'])
+    def test_malformed_manifest_is_value_error(self):
+        with self.assertRaises(ValueError):
+            s.validate_manifest({'schema': 1, 'role': 'challenger', 'topic': None})

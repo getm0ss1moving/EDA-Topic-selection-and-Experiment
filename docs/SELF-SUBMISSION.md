@@ -1,6 +1,6 @@
 # Self-submission and frozen role releases
 
-The owner authorizes proposer and challenger self-submission and self-freeze.
+The owner authorizes proposer, challenger and verifier self-submission and self-freeze.
 This replaces earlier instructions to wait for the owner/coordinator to freeze a
 dossier. The verifier submits a compact table and matching machine record.
 Human approval is still required for final topic and experiment reports.
@@ -15,7 +15,12 @@ Human approval is still required for final topic and experiment reports.
    challenges and their own evidence/search records, optionally a task-list
    revision and independent estimate; verifier releases contain the two
    verification files. Shared names such as `sources.json` remain separate in
-   each release. Never overwrite another role's evidence ledger.
+   each release. Never overwrite another role's evidence ledger. A proposer or
+   challenger may add `experiment-consent.json` containing only its own consent
+   block (`session_id`, `decision`, `signed_revision`, `tasklist_sha256`,
+   `rationale`); the session must be the releasing session and the decision one of
+   `pending`, `agree` or `revision_requested`. Host artifacts named `.DS_Store` or
+   `.claude` are ignored and never released.
 2. Use the trusted script supplied in your packet/amendment:
 
 ```sh
@@ -36,8 +41,11 @@ python3 /trusted/role_submission.py freeze \
 
 Readonly permissions are accidental-edit protection, not a security boundary.
 The transporter rehashes content. The script rejects symlinks, unlisted files,
-empty files, files over 8 MiB and bundles over 32 MiB. These limits apply to
-published research text, not access to your own saved experimental outputs.
+empty files, files over 8 MiB, bundles over 32 MiB, text that is not UTF-8,
+malformed JSON and credential-like strings (API keys, tokens, private keys).
+Releases are published to a public repository without human review, so these
+checks run at freeze and again at publish. These limits apply to published research
+text, not access to your own saved experimental outputs.
 
 ## Coordinator transport
 
@@ -49,8 +57,10 @@ python3 scripts/role_submission.py publish /assigned/outbox/submissions/SUB-HASH
 
 `publish` checks current main's session registry, topic, role and input packet;
 uses a temporary clone; preserves the frozen files under `runs/SUB-HASH/`;
-runs project validation; pushes a dedicated branch and creates one intermediate
-PR. Retry finds an existing PR. It never executes actor code, changes final
+runs project validation; pushes a dedicated `submit/HASH` branch and creates one
+intermediate PR. When integrating a release, copy a submitted
+`experiment-consent.json` unchanged into that role's `consents` entry of the
+candidate's `experiment-consensus.json`; never write a consent for an actor. Retry finds an existing PR. It never executes actor code, changes final
 reports, grants credentials to the actor, approves or merges a PR. The
 coordinator attaches the PR, checks CI, merges and records the resulting commit.
 If a push succeeds but PR creation fails, retry retains the remote branch; no

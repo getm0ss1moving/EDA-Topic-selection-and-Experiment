@@ -20,16 +20,25 @@ TOTAL = 32 * 1024 * 1024
 FILES = {
     'proposer': {'proposal.md', 'sources.json', 'search-log.md', 'prior-art.csv',
                  'contest-audit.md', 'industry-gap.md', 'experiment-plan.md',
-                 'forecast.json', 'tasklist.md', 'responses.md', 'direction-control.json'},
+                 'forecast.json', 'tasklist.md', 'responses.md', 'direction-control.json',
+                 'experiment-consent.json'},
     'challenger': {'challenges.md', 'sources.json', 'search-log.md', 'prior-art.csv',
-                   'independent-estimate.md', 'tasklist.md'},
+                   'independent-estimate.md', 'tasklist.md', 'experiment-consent.json'},
     'verifier': {'verification.md', 'verification.json'},
 }
 REQUIRED = {
-    'proposer': FILES['proposer'] - {'responses.md'},
+    'proposer': FILES['proposer'] - {'responses.md', 'experiment-consent.json'},
     'challenger': {'challenges.md', 'sources.json', 'search-log.md'},
     'verifier': FILES['verifier'],
 }
+# Host artifacts that are never research output (macOS Finder, Claude Code write staging).
+IGNORED = {'.DS_Store', '.claude'}
+CONSENT_KEYS = {'session_id', 'decision', 'signed_revision', 'tasklist_sha256', 'rationale'}
+CONSENT_DECISIONS = {'pending', 'agree', 'revision_requested'}
+# Releases are published to a public repository without human review, so refuse credential-like text.
+SECRET = re.compile(rb'sk-ant-[A-Za-z0-9_-]{10,}|sk-[A-Za-z0-9]{32,}|gh[pousr]_[A-Za-z0-9]{30,}|'
+                    rb'-----BEGIN [A-Z ]*PRIVATE KEY-----|AKIA[0-9A-Z]{16}|'
+                    rb'(ANTHROPIC|OPENAI|DEEPSEEK)_[A-Z_]*(KEY|TOKEN)\s*=\s*\S')
 
 
 def encoded(obj):
@@ -49,29 +58,56 @@ def regular(path):
     fd = os.open(path, os.O_RDONLY | os.O_NONBLOCK | os.O_NOFOLLOW)
     with os.fdopen(fd, 'rb') as f:
         if not stat.S_ISREG(os.fstat(f.fileno()).st_mode):
-            raise ValueError('Only regular files may be released')
+            raise ValueError(f'Only regular files may be released: {path.name}')
         body = f.read(LIMIT + 1)
     if len(body) > LIMIT or not body.strip():
-        raise ValueError('Empty or oversized release file')
+        raise ValueError(f'Empty or oversized release file: {path.name}')
     return body
 
 
 def validate_manifest(m):
-    if m.get('schema') != 1 or m.get('role') not in FILES:
+    if not isinstance(m, dict) or m.get('schema') != 1 or m.get('role') not in FILES:
         raise ValueError('Invalid schema/role')
-    if not re.fullmatch(r'EDA-\d{4,}', m.get('topic', '')):
-        raise ValueError('Invalid topic')
-    for key, pattern in [('input_commit', r'[0-9a-f]{40}'), ('packet_sha256', r'[0-9a-f]{64}')]:
-        if not re.fullmatch(pattern, m.get(key, '')):
+    for key, pattern in [('topic', r'EDA-\d{4,}'), ('input_commit', r'[0-9a-f]{40}'),
+                         ('packet_sha256', r'[0-9a-f]{64}')]:
+        if not isinstance(m.get(key), str) or not re.fullmatch(pattern, m[key]):
             raise ValueError(f'Invalid {key}')
     for key in ['actor_id', 'session_id']:
         if not isinstance(m.get(key), str) or not m[key].strip():
             raise ValueError(f'Missing {key}')
-    names = set(m['files'])
-    if not REQUIRED[m['role']] <= names <= FILES[m['role']]:
-        raise ValueError('Missing required files or forbidden role output')
-    if any(not re.fullmatch(r'[0-9a-f]{64}', h) for h in m['files'].values()):
+    files = m.get('files')
+    if not isinstance(files, dict) or not all(isinstance(h, str) for h in files.values()):
+        raise ValueError('Invalid file map')
+    names, role = set(files), m['role']
+    if not REQUIRED[role] <= names <= FILES[role]:
+        raise ValueError(f'{role} release: missing {sorted(REQUIRED[role] - names)}, '
+                         f'not role-owned {sorted(names - FILES[role])}')
+    if any(not re.fullmatch(r'[0-9a-f]{64}', h) for h in files.values()):
         raise ValueError('Invalid file hash')
+
+
+def check_content(m, payload):
+    """Text-level checks that must hold before anything is frozen or published."""
+    for name, body in payload.items():
+        try:
+            text = body.decode('utf-8')
+        except UnicodeDecodeError:
+            raise ValueError(f'{name}: not UTF-8 text')
+        if SECRET.search(body):
+            raise ValueError(f'{name}: contains a credential-like string; remove it before freezing')
+        if name.endswith('.json'):
+            try:
+                json.loads(text)
+            except ValueError:
+                raise ValueError(f'{name}: invalid JSON')
+    if 'experiment-consent.json' in payload:
+        consent = json.loads(payload['experiment-consent.json'])
+        if not isinstance(consent, dict) or set(consent) != CONSENT_KEYS:
+            raise ValueError(f'experiment-consent.json must contain exactly {sorted(CONSENT_KEYS)}')
+        if consent['session_id'] != m['session_id']:
+            raise ValueError('experiment-consent.json may only sign for the releasing session')
+        if consent['decision'] not in CONSENT_DECISIONS:
+            raise ValueError(f'experiment-consent.json decision must be one of {sorted(CONSENT_DECISIONS)}')
 
 
 def verify(snapshot):
@@ -85,6 +121,7 @@ def verify(snapshot):
         raise ValueError('Release exceeds total size cap')
     if any(sha(b) != m['files'][n] for n, b in payload.items()):
         raise ValueError('Frozen release hash mismatch')
+    check_content(m, payload)
     if snapshot.name != 'SUB-' + sha(encoded(m)):
         raise ValueError('Snapshot identity mismatch')
     return m, payload
@@ -94,11 +131,12 @@ def freeze(source, queue, role, actor, session, topic, ref, packet):
     source, queue = Path(source).absolute(), Path(queue).absolute()
     if source == queue or source in queue.parents:
         raise ValueError('Queue must be outside the release directory')
-    payload = {p.name: regular(p) for p in source.iterdir()}
+    payload = {p.name: regular(p) for p in source.iterdir() if p.name not in IGNORED}
     m = dict(schema=1, role=role, actor_id=actor, session_id=session,
              topic=topic, input_commit=ref, packet_sha256=packet,
              files={n: sha(b) for n, b in payload.items()})
     validate_manifest(m)
+    check_content(m, payload)
     if sum(map(len, payload.values())) > TOTAL:
         raise ValueError('Release exceeds total size cap')
     queue.mkdir(parents=True, exist_ok=True)
@@ -142,7 +180,7 @@ def publish(snapshot, repo):
     if (s['input_commit'], s['packet_sha256']) != (m['input_commit'], m['packet_sha256']):
         raise ValueError('Unregistered input packet; register the amendment first')
     submission = Path(snapshot).name
-    branch = 'codex/submit-' + submission[4:]
+    branch = 'submit/' + submission[4:]  # platform-neutral: releases come from every platform's actors
     remote = run('git', 'remote', 'get-url', 'origin', cwd=repo)
     if remote != 'https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment.git':
         raise ValueError('Unexpected repository remote')

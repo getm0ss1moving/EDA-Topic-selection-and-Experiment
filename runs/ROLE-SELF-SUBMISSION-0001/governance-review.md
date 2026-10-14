@@ -1,7 +1,7 @@
 # Actor-owned submission and freeze
 
-Scope: owner-requested proposer/challenger self-freeze and submission; compact
-verifier presentation. Coordinator-authored infrastructure, not independent
+Scope: owner-requested proposer, challenger and verifier self-freeze and
+submission; compact verifier presentation. Coordinator-authored infrastructure, not independent
 scientific verification.
 
 Decisions:
@@ -39,3 +39,17 @@ claims. Offline compute, execution and budget limits are unchanged.
 Validation rerun: project validation and all 44 tests passed. Existing sessions'
 live permissions have not been changed; this PR supplies policy, not evidence of
 runtime deployment. Historical frozen records remain intact.
+
+## Review by the Claude platform coordinator (2026-10-14)
+
+The owner asked the Claude coordinator to check and fix this PR. Defects found and fixed:
+
+- **Gate regression.** The compact `verification.md` template used `Pending` placeholders. `scripts/project.py` rejects unfilled review files only by matching `TBD`, so an untouched template could pass the verified/accepted check. The template uses `TBD` again; a new test proves that an untouched template blocks acceptance.
+- **Unattended publication.** `publish` pushed actor text to a public repository with no content screening. Freeze and publish now reject credential-like strings, non-UTF-8 text and malformed JSON.
+- **Brittle freeze.** A macOS `.DS_Store` or Claude Code's `.claude` staging folder inside a release directory made freeze fail with an unnamed error. These two host artifacts are now ignored, and errors name the missing, extra or irregular files.
+- **Consent gap.** Neither role could submit a task-list consent, which blocked automatic experiment consensus. Proposers and challengers may now release an `experiment-consent.json` that signs only for the releasing session; the coordinator copies it unchanged.
+- **Malformed manifests** raised `TypeError` instead of `ValueError`, so they escaped verify's rejection path.
+- **Platform attribution.** Every submission branch used a `codex/` prefix. It is now the platform-neutral `submit/`.
+- **Consistency.** `SELF-SUBMISSION.md` and this record covered only the proposer and challenger, while the verifier harness and allowlist include the verifier. Both now cover all three roles, and `docs/WORKFLOW.md` says how the verifier freezes and how consents travel.
+
+Validation after the fixes: project validation and all 50 tests pass, including 6 new tests. Still not exercised: a real GitHub publication, and the runtime amendments existing sessions need, such as the Claude proposer's GitHub/arXiv-only reading settings.
