@@ -1,0 +1,39 @@
+{
+  "status": "pending",
+  "tasklist_sha256": null,
+  "readiness_checks": {
+    "dependencies": false,
+    "resources": false,
+    "baselines": false,
+    "metrics": false,
+    "correctness_oracle": false,
+    "stop_rules": false,
+    "owners": false,
+    "reproducible_procedures": false
+  },
+  "consents": {
+    "proposer": {
+      "session_id": null,
+      "decision": "pending",
+      "signed_revision": null,
+      "tasklist_sha256": null,
+      "rationale": null
+    },
+    "challenger": {
+      "session_id": null,
+      "decision": "pending",
+      "signed_revision": null,
+      "tasklist_sha256": null,
+      "rationale": null
+    }
+  },
+  "open_conditions": [
+    "The challenger's independent first pass is received (runs/CDX-C05-INDEPENDENT-0001 at commit b7822234; no dossier-specific objections, estimate 'unknown') and was incorporated in amendment 1b on the owner's instruction. The challenger's dossier-specific review and required falsification tests are not yet received (tasklist.md section 'Challenger additions (pending)'). The revised dossier awaits the human owner's freeze and release to the challenger; no verifier is assigned.",
+    "Open prerequisites are unresolved: multi-corner libraries (GitHub or arXiv only; licenses verified in each repository), pinned design sources and licenses, RC corners (none available), and an explicitly estimated and allocated P&R budget (owner items U5 and U6; EXP-001).",
+    "SRC-012's assumptions remain unresolved under owner decision U1 (kill criterion K1). The owner has to rule on the ADD-0001 archived reading.",
+    "K2 is activated: P3-P5 are falsified (runs/CLD-P05-REVISION-0001/p3-p5-record.md). The guarantee is narrowed to the R1 capacitive-path certificate, which is code-argument-only and pending verifier review and the EXP-002b tests (K7).",
+    "Utility under R1 is unknown: the CPC share is unmeasured (owner item U4, deferred; EXP-003 step 1, K3).",
+    "The proposer has not signed: tasklist.md is a round-1 (amendment 1b) draft with no agreed revision or digest.",
+    "Round 1b: nearest-work leads SRC-066 to SRC-068 are unread (U11) and widen K1. The new rules P8 and P9 are code-argument-only or unresolved pending the EXP-002b tests."
+  ]
+}

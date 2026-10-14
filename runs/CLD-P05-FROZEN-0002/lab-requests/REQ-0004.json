@@ -1,0 +1,11 @@
+{
+  "id": "REQ-0004",
+  "category": "tooling",
+  "purpose": "Build the REQ-0003 toolchain (byacc, flex 2.6.4, Tcl 8.6.13, SWIG 4.1.1, Eigen 3.3.7 install, CMake 3.27.9) into /ws/tools/p05 and build unmodified OpenSTA e01d3f163f483f233db00410b6515a767a6ca03b with a bison-CLI-to-byacc wrapper; smoke-test the sta binary. No network, no timing analysis.",
+  "host": "lab234",
+  "network": false,
+  "cores": 8,
+  "timeout_hours": 3.0,
+  "script": "REQ-0004.sh",
+  "inputs": []
+}

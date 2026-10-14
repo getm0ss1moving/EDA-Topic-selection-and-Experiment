@@ -1,0 +1,11 @@
+{
+  "id": "REQ-0005",
+  "category": "tooling",
+  "purpose": "Retry of REQ-0004: reuse the toolchain built in /ws/tools/p05, add the tclsh name required by OpenSTA etc/TclEncode.tcl, record the CMake top-level license, and build plus smoke-test unmodified OpenSTA e01d3f163f483f233db00410b6515a767a6ca03b. No network, no timing analysis.",
+  "host": "lab234",
+  "network": false,
+  "cores": 8,
+  "timeout_hours": 3.0,
+  "script": "REQ-0005.sh",
+  "inputs": []
+}

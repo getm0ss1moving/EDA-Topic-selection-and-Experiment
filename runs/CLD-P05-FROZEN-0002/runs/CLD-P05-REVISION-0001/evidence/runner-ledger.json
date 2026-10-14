@@ -1,0 +1,464 @@
+{
+ "runner": "CLD-LAB-0001",
+ "note": "Runner-reported UTC times use the runner hosts' clocks; their offset from true UTC was not measured (the coordinating host clock runs about 15 h behind true UTC).",
+ "total_core_hours": 0.4504,
+ "jobs": [
+  {
+   "id": "REQ-0001",
+   "category": "tooling",
+   "host": "lab231",
+   "network": true,
+   "cores": 1,
+   "exit_code": 0,
+   "wall_seconds": 14,
+   "core_hours_charged": 0.0039,
+   "started_utc_runner": "2026-10-13T12:08:26Z",
+   "finished_utc_runner": "2026-10-13T12:08:40Z",
+   "purpose": "Probe the lab231 build environment and fetch pinned OpenSTA e01d3f163f483f233db00410b6515a767a6ca03b (the src/sta submodule of packet-pinned OpenROAD b16bda7e) from GitHub, logging URL, resolved revision and SHA-256; record the repository LICENSE.",
+   "script_sha256": "7ba027d966ec3fd2a6cb7ea93965ff3a0e16165972cac504d5cb88a6e13bd834",
+   "script_matches_submitted": true,
+   "result_json_sha256": "df50807bf880758699516364ed8374c81187d0e6594cdb1d4693b1a3aada75ab",
+   "returned_files": [
+    {
+     "path": "out/env.txt",
+     "sha256": "c1e031e7034f2e15ffc26266253f06739978ec8518b2ec714a208166a449a115",
+     "bytes": 1379
+    },
+    {
+     "path": "out/network-log.tsv",
+     "sha256": "4a11a16167f2683acf70c0e6ac2b5cd55294f960a1b593d8145c0c2063d6ccfa",
+     "bytes": 507
+    },
+    {
+     "path": "out/opensta-file-sha256.txt",
+     "sha256": "e050e83717d45edbb3a447bae15f90bc81db60de8fb0394288ae0c3665edd660",
+     "bytes": 944
+    },
+    {
+     "path": "out/opensta-license-head.txt",
+     "sha256": "395c936e698acfb4228b89ca8a80d6fa86c5530ff7f42d0d69b2326a0af23281",
+     "bytes": 95
+    }
+   ]
+  },
+  {
+   "id": "REQ-0002",
+   "category": "tooling",
+   "host": "lab234",
+   "network": false,
+   "cores": 1,
+   "exit_code": 0,
+   "wall_seconds": 1,
+   "core_hours_charged": 0.0003,
+   "started_utc_runner": "2026-10-13T12:04:41Z",
+   "finished_utc_runner": "2026-10-13T12:04:42Z",
+   "purpose": "Probe the lab234 build host (compilers, Tcl, SWIG, bison, flex, autotools, Eigen headers) and verify that /ws is shared with lab231 by reading the REQ-0001 marker and OpenSTA tree. No network.",
+   "script_sha256": "d5941a488acfc121ac8204c1fcdd4adcf8c0294e82476c4d72e7191c3fb130f4",
+   "script_matches_submitted": true,
+   "result_json_sha256": "a17faf776f6d11ce6e4d3028d6efae21b355a65042224a8be1d90094530d46fc",
+   "returned_files": [
+    {
+     "path": "out/env.txt",
+     "sha256": "2a3b1618680ed556d10ac789ce5a2e553c218d2e7afb216d60d3787e662831fe",
+     "bytes": 2323
+    }
+   ]
+  },
+  {
+   "id": "REQ-0003",
+   "category": "data",
+   "host": "lab231",
+   "network": true,
+   "cores": 1,
+   "exit_code": 0,
+   "wall_seconds": 72,
+   "core_hours_charged": 0.02,
+   "started_utc_runner": "2026-10-13T12:17:28Z",
+   "finished_utc_runner": "2026-10-13T12:18:40Z",
+   "purpose": "Download build-toolchain sources for pinned OpenSTA from official GitHub repositories and releases only: CMake 3.27.9 (Kitware release, checked against Kitware SHA-256 list), flex 2.6.4 (westes release), byacc t20240109 (ThomasDickey snapshots), Tcl core-8-6-13 (tcltk/tcl), SWIG v4.1.1 (swig/swig), Eigen 3.3.7 (eigenteam mirror). Log URL, resolved commit and SHA-256; record each repository license file.",
+   "script_sha256": "df28c61adb57edf1c0c17cd3f13c0bf888840b426cf2be554761e5208e47dcad",
+   "script_matches_submitted": true,
+   "result_json_sha256": "7480c989e128873c50434e5f8f998d6b158c588ff67aa7e9bab30911d907649a",
+   "returned_files": [
+    {
+     "path": "out/cmake-sha-check.txt",
+     "sha256": "0c8808bb2a84f02f5899e54bb27c4b3ace9658bb8fcb670609836409e8fe13ee",
+     "bytes": 37
+    },
+    {
+     "path": "out/licenses.txt",
+     "sha256": "65386310a9a130576278e08cbaed30b16cb66ea2c5be9abcb737e08c0eef9c5e",
+     "bytes": 5685
+    },
+    {
+     "path": "out/network-log.tsv",
+     "sha256": "f484a69b1a38438aceaddb8c591cf301889c268803d873cd7d3954e72f9192e8",
+     "bytes": 1964
+    },
+    {
+     "path": "out/src-listing.txt",
+     "sha256": "3b5fa2508e79a120a5db1bdf5124235fed51e8177dfea60f91a39b9c2b9cb3fb",
+     "bytes": 2289
+    }
+   ]
+  },
+  {
+   "id": "REQ-0004",
+   "category": "tooling",
+   "host": "lab234",
+   "network": false,
+   "cores": 8,
+   "exit_code": 1,
+   "wall_seconds": 143,
+   "core_hours_charged": 0.3178,
+   "started_utc_runner": "2026-10-13T12:13:43Z",
+   "finished_utc_runner": "2026-10-13T12:16:06Z",
+   "purpose": "Build the REQ-0003 toolchain (byacc, flex 2.6.4, Tcl 8.6.13, SWIG 4.1.1, Eigen 3.3.7 install, CMake 3.27.9) into /ws/tools/p05 and build unmodified OpenSTA e01d3f163f483f233db00410b6515a767a6ca03b with a bison-CLI-to-byacc wrapper; smoke-test the sta binary. No network, no timing analysis.",
+   "script_sha256": "ebe83e497b9118b056fe51571c84b0614a33ae688e01fb9102b6be3c03262481",
+   "script_matches_submitted": true,
+   "result_json_sha256": "e10bbe179f19bdd429af5614c1bcd55d303db3b1440e4ce9f971ea2a21a62428",
+   "returned_files": [
+    {
+     "path": "out/build-summary.txt",
+     "sha256": "99229fdd5eac0bc8569310ab028b2ecea46c00b3fecadfb282dfd069658f1f94",
+     "bytes": 520
+    },
+    {
+     "path": "out/cmake-license.txt",
+     "sha256": "3df666d9b9226bd5ae63a536b52a96d9c6b6268300ea401fb9f7d6e105c27c37",
+     "bytes": 381
+    },
+    {
+     "path": "out/opensta_build.FAILED.tail.txt",
+     "sha256": "95e4e472d0254f882c8b37e297bf8837280768b54125c51d29943949a37d86d8",
+     "bytes": 1778
+    }
+   ]
+  },
+  {
+   "id": "REQ-0005",
+   "category": "tooling",
+   "host": "lab234",
+   "network": false,
+   "cores": 8,
+   "exit_code": 1,
+   "wall_seconds": 44,
+   "core_hours_charged": 0.0978,
+   "started_utc_runner": "2026-10-13T12:17:17Z",
+   "finished_utc_runner": "2026-10-13T12:18:01Z",
+   "purpose": "Retry of REQ-0004: reuse the toolchain built in /ws/tools/p05, add the tclsh name required by OpenSTA etc/TclEncode.tcl, record the CMake top-level license, and build plus smoke-test unmodified OpenSTA e01d3f163f483f233db00410b6515a767a6ca03b. No network, no timing analysis.",
+   "script_sha256": "4424b4286f39cf5e6a41da25d0a1723137efcb8190c047db3accc64198a38123",
+   "script_matches_submitted": true,
+   "result_json_sha256": "56524977e316c2d621500cddab8358acf5d9bb8a439664a73e3af522bb8df3ee",
+   "returned_files": [
+    {
+     "path": "out/build-summary.txt",
+     "sha256": "4e363a4b4f6089a8aeedbec180bc4636ec1893ec74458e8a0ce5417c4b461ca0",
+     "bytes": 254
+    },
+    {
+     "path": "out/cmake-license.txt",
+     "sha256": "397352eda0b5d752e4f531ce4b3acb564f9f26ce8329e8e2532194e1fb9b90e3",
+     "bytes": 386
+    },
+    {
+     "path": "out/smoke.FAILED.tail.txt",
+     "sha256": "dcbf4282e0bfc9011ca77cd0aa84dd9b9e67d3c7a3990d2479c1658215aadbb5",
+     "bytes": 100
+    }
+   ]
+  },
+  {
+   "id": "REQ-0006",
+   "category": "property-check",
+   "host": "lab234",
+   "network": false,
+   "cores": 2,
+   "exit_code": 0,
+   "wall_seconds": 1,
+   "core_hours_charged": 0.0006,
+   "started_utc_runner": "2026-10-13T12:23:53Z",
+   "finished_utc_runner": "2026-10-13T12:23:54Z",
+   "purpose": "Install and smoke-test pinned OpenSTA e01d3f16 (built by REQ-0005), then run a pilot of the P3-P5 checks of pinned dmp_ceff_elmore on synthetic Liberty tables and synthetic RC trees or injected pi/Elmore models (150 + 150 nets). No real design, no runtime or QoR measurement.",
+   "script_sha256": "0a10a13f3c36381f179d720d4330a911e1a02daebc846faf043bd8aaccc2a875",
+   "script_matches_submitted": true,
+   "result_json_sha256": "488e4c896b6984655175b9fa7d4da811aa5cf88888da61fdd8ff5dc4d636c6ac",
+   "returned_files": [
+    {
+     "path": "out/check.log",
+     "sha256": "2fdd15c8390747b028a16cfe653bb0b5c53c3a0695411861c8534589b31a93cf",
+     "bytes": 210
+    },
+    {
+     "path": "out/extract.tail.txt",
+     "sha256": "9e818d8fdd5cad3d1d668e9a45817804e793c52c61924e0a3e37643c9774c585",
+     "bytes": 65
+    },
+    {
+     "path": "out/extract.warnings.txt",
+     "sha256": "01af54b9f00cdf2e516803f5338d7eb26f763ffbe8e2983112d69fb179dba251",
+     "bytes": 71
+    },
+    {
+     "path": "out/fixture-sha256.txt",
+     "sha256": "801b3f3d66ff454ae69c872a3a151260c30d21737402b192fd247389099e4036",
+     "bytes": 534
+    },
+    {
+     "path": "out/fixtures.log",
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "bytes": 0
+    },
+    {
+     "path": "out/harness-sha256.txt",
+     "sha256": "4da7a08cdf50f8cd0b94506215d211c24a2a7ea1674f3b00209274ee6ee95cff",
+     "bytes": 306
+    },
+    {
+     "path": "out/p05a.lib",
+     "sha256": "33c372d5d0c2d78987d1bcdf11b8ad3927c0e99ce7d44c5a90b3a06a152cf814",
+     "bytes": 25245
+    },
+    {
+     "path": "out/p05b.lib",
+     "sha256": "024523b3049a0b9e184a20b5fbc9ebd200ab4393ae5e2be0931da249858a4203",
+     "bytes": 12858
+    },
+    {
+     "path": "out/results_G.csv.gz",
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "bytes": 0
+    },
+    {
+     "path": "out/results_W.csv.gz",
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "bytes": 0
+    },
+    {
+     "path": "out/run-log.txt",
+     "sha256": "917a6e1110d025902b1bb433e057d5f7f7cb1c225214189f38035ebd393f1156",
+     "bytes": 287
+    },
+    {
+     "path": "out/setup.txt",
+     "sha256": "d6df68e7c7d3e5aecdf90fd581e2c4d51fc10b670f00dbab84bc8bb29528feac",
+     "bytes": 424
+    }
+   ]
+  },
+  {
+   "id": "REQ-0007",
+   "category": "property-check",
+   "host": "lab234",
+   "network": false,
+   "cores": 2,
+   "exit_code": 0,
+   "wall_seconds": 1,
+   "core_hours_charged": 0.0006,
+   "started_utc_runner": "2026-10-13T12:25:28Z",
+   "finished_utc_runner": "2026-10-13T12:25:29Z",
+   "purpose": "Retry of REQ-0006 pilot with sta::set_pi_model/sta::set_elmore: P3-P5 checks of pinned dmp_ceff_elmore (OpenSTA e01d3f16) on synthetic Liberty tables and synthetic RC trees or injected pi/Elmore models (150 + 150 nets). No real design, no runtime or QoR measurement.",
+   "script_sha256": "7ed057a3cdd73e7b2a0d44cc06a29e640f5df022ccd9d0961ffb215d8922414c",
+   "script_matches_submitted": true,
+   "result_json_sha256": "b13ef8a0c1eb85a608f0a75803303b88a515d92e429774dc6027246b67ddf87e",
+   "returned_files": [
+    {
+     "path": "out/check.log",
+     "sha256": "0e46571d285ba2ac1a74f8ad8f8589daf212bcf51211764ae90b095240ef2f97",
+     "bytes": 417
+    },
+    {
+     "path": "out/counterexamples.csv",
+     "sha256": "7647534989e7aed76e9b607c9be5fa2116b43ef6c3141570fbbc05ac5f1684d1",
+     "bytes": 20709
+    },
+    {
+     "path": "out/extract.tail.txt",
+     "sha256": "ffda4721e5b716290a446781624d7044c5d1de410cb3a0ad153a0ce9a93b9d34",
+     "bytes": 29
+    },
+    {
+     "path": "out/extract.warnings.txt",
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "bytes": 0
+    },
+    {
+     "path": "out/fixture-sha256.txt",
+     "sha256": "c35fb354b4882f05e32aacf912204e91a13932e34bada4205adc63dfc252591d",
+     "bytes": 534
+    },
+    {
+     "path": "out/fixtures.log",
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "bytes": 0
+    },
+    {
+     "path": "out/harness-sha256.txt",
+     "sha256": "6199a326ef5ee384556917bdc0ee090c49e90dfa988ae5a74105b522d10f2d60",
+     "bytes": 306
+    },
+    {
+     "path": "out/p05a.lib",
+     "sha256": "33c372d5d0c2d78987d1bcdf11b8ad3927c0e99ce7d44c5a90b3a06a152cf814",
+     "bytes": 25245
+    },
+    {
+     "path": "out/p05b.lib",
+     "sha256": "024523b3049a0b9e184a20b5fbc9ebd200ab4393ae5e2be0931da249858a4203",
+     "bytes": 12858
+    },
+    {
+     "path": "out/raw.tsv",
+     "sha256": "297dff4dbedf0e9f90006ac51a058e2dcd8951470692bc247c673b5be31308e8",
+     "bytes": 648947
+    },
+    {
+     "path": "out/results_G.csv.gz",
+     "sha256": "6737634ed6fc9f81ef84a61bbd6a02bbae727a622ffc63684f786b1e3b136aaf",
+     "bytes": 71488
+    },
+    {
+     "path": "out/results_W.csv.gz",
+     "sha256": "be8f9b8605a04daad2a83ba371d2757a54dd3cb374f70ecf7a23d1ee72c3b2f2",
+     "bytes": 89923
+    },
+    {
+     "path": "out/run-log.txt",
+     "sha256": "bcc240b41d831dbce75bda34f65724b18382982631523d0a0b18b1e64beef30e",
+     "bytes": 185
+    },
+    {
+     "path": "out/setup.txt",
+     "sha256": "d6df68e7c7d3e5aecdf90fd581e2c4d51fc10b670f00dbab84bc8bb29528feac",
+     "bytes": 424
+    },
+    {
+     "path": "out/summary.json",
+     "sha256": "274cb5a9794399cfceb67d669328d429383ef1205fd6e770d73a7f95a2cf7658",
+     "bytes": 10122
+    }
+   ]
+  },
+  {
+   "id": "REQ-0008",
+   "category": "property-check",
+   "host": "lab234",
+   "network": false,
+   "cores": 2,
+   "exit_code": 0,
+   "wall_seconds": 17,
+   "core_hours_charged": 0.0094,
+   "started_utc_runner": "2026-10-13T13:31:37Z",
+   "finished_utc_runner": "2026-10-13T13:31:54Z",
+   "purpose": "Full P3-P5 property checks of pinned dmp_ceff_elmore (OpenSTA e01d3f16): 3000 random SPEF RC trees, 3000 random injected pi/Elmore models, 1500+1500 targeted plateau cases and 800 near-singular Elmore cases on synthetic Liberty tables. No real design, no runtime or QoR measurement.",
+   "script_sha256": "5bea3a3619dd988c2ce64295f135dae5c680b8ce5d74e6ea553fe270992a1107",
+   "script_matches_submitted": true,
+   "result_json_sha256": "930fb6cb02793a3bd72c49f2eb728fd9ce9784d47bc261877c5d514f0b3d840e",
+   "returned_files": [
+    {
+     "path": "out/check.log",
+     "sha256": "29b574f725dda02c3bc8bb8e3f26f239a3e893b5e29a5a197a802e2a848534a3",
+     "bytes": 440
+    },
+    {
+     "path": "out/commands.txt",
+     "sha256": "c824e939004db33f222277d8e9e4b7c708b22be790d4263a7818b50f7b16961b",
+     "bytes": 196
+    },
+    {
+     "path": "out/counterexamples.csv",
+     "sha256": "4e81d0a3990c869a5354e1dc70e5ea5cf90186624209fa60436a71a57910b266",
+     "bytes": 40768
+    },
+    {
+     "path": "out/extract.tail.txt",
+     "sha256": "39ca35a1ea8bff3fcfd25a56f678db8d2da6497e02610904bccc96af19805479",
+     "bytes": 30
+    },
+    {
+     "path": "out/extract.warnings.txt",
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "bytes": 0
+    },
+    {
+     "path": "out/fixture-sha256.txt",
+     "sha256": "ad347bf41d55a964d470e615db0deb6a53c182c76f2f2b2c1bbfda707a97a4d6",
+     "bytes": 534
+    },
+    {
+     "path": "out/fixtures.log",
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "bytes": 0
+    },
+    {
+     "path": "out/harness-sha256.txt",
+     "sha256": "8c99a1ee89f0c04db02f4b35a3987695b272cfa223876df311e6dceb0e5bb42b",
+     "bytes": 306
+    },
+    {
+     "path": "out/p05a.lib",
+     "sha256": "33c372d5d0c2d78987d1bcdf11b8ad3927c0e99ce7d44c5a90b3a06a152cf814",
+     "bytes": 25245
+    },
+    {
+     "path": "out/p05b.lib",
+     "sha256": "024523b3049a0b9e184a20b5fbc9ebd200ab4393ae5e2be0931da249858a4203",
+     "bytes": 12858
+    },
+    {
+     "path": "out/raw-sha256.txt",
+     "sha256": "2b15627d076dcdcbf039e60e95e4883f0fe8bf14a2e4f67f087db8d9107b20a3",
+     "bytes": 181
+    },
+    {
+     "path": "out/results_G.csv.gz",
+     "sha256": "d116b83e82f580e0f6da25898151bc1c60a3b482439d65867b7522b3dc9efeff",
+     "bytes": 2979847
+    },
+    {
+     "path": "out/results_W.csv.gz",
+     "sha256": "fd4a5443101c29c35720e7a65fd09b7c053c5afda51c5e06268efdbcfdc81980",
+     "bytes": 4414740
+    },
+    {
+     "path": "out/run-log.txt",
+     "sha256": "3fdc0080827a258698b26a0520d169215d5756fdbe3430f4efb96cb1fa80124d",
+     "bytes": 186
+    },
+    {
+     "path": "out/setup.txt",
+     "sha256": "d6df68e7c7d3e5aecdf90fd581e2c4d51fc10b670f00dbab84bc8bb29528feac",
+     "bytes": 424
+    },
+    {
+     "path": "out/summary.json",
+     "sha256": "bc9a8cf03f7c735d74083b9bbbb37b7f77953150f3080a1775df2a2957eb1631",
+     "bytes": 18185
+    }
+   ]
+  },
+  {
+   "id": "REQ-0009",
+   "category": "tooling",
+   "host": "lab234",
+   "network": false,
+   "cores": 1,
+   "exit_code": 0,
+   "wall_seconds": 0,
+   "core_hours_charged": 0.0,
+   "started_utc_runner": "2026-10-13T13:41:13Z",
+   "finished_utc_runner": "2026-10-13T13:41:13Z",
+   "purpose": "Record compiler, CMake cache flags, tool versions and binary hashes of the pinned OpenSTA e01d3f16 build used by the P3-P5 checks (REQ-0006..0008). No network, no analysis.",
+   "script_sha256": "63549997563e9e3afc41e2cc8357ee865068fea3704318d21e0f88ae31a7f860",
+   "script_matches_submitted": true,
+   "result_json_sha256": "bf222704275d244a3e23c862addca4b69a9dcbb630a5e7645725a6c2e18723f4",
+   "returned_files": [
+    {
+     "path": "out/build-config.txt",
+     "sha256": "2e05e4583d5e31aa566945f2946a535e776d5fda1d1a3933dcc35fe7939c79f0",
+     "bytes": 2382
+    }
+   ]
+  }
+ ]
+}

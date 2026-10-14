@@ -1,0 +1,11 @@
+{
+  "id": "REQ-0009",
+  "category": "tooling",
+  "purpose": "Record compiler, CMake cache flags, tool versions and binary hashes of the pinned OpenSTA e01d3f16 build used by the P3-P5 checks (REQ-0006..0008). No network, no analysis.",
+  "host": "lab234",
+  "network": false,
+  "cores": 1,
+  "timeout_hours": 0.25,
+  "script": "REQ-0009.sh",
+  "inputs": []
+}
