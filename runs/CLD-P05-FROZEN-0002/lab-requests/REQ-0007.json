@@ -1,0 +1,11 @@
+{
+  "id": "REQ-0007",
+  "category": "property-check",
+  "purpose": "Retry of REQ-0006 pilot with sta::set_pi_model/sta::set_elmore: P3-P5 checks of pinned dmp_ceff_elmore (OpenSTA e01d3f16) on synthetic Liberty tables and synthetic RC trees or injected pi/Elmore models (150 + 150 nets). No real design, no runtime or QoR measurement.",
+  "host": "lab234",
+  "network": false,
+  "cores": 2,
+  "timeout_hours": 1.0,
+  "script": "REQ-0007.sh",
+  "inputs": ["p05_fixtures.py", "p05_extract.tcl", "p05_check.py"]
+}

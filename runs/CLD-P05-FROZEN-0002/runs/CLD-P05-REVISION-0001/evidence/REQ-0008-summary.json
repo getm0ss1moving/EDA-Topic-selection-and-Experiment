@@ -1,0 +1,1011 @@
+{
+ "n_driver_arcs": 19600,
+ "n_wire_arcs": 52088,
+ "algs": {
+  "Pi": 16739,
+  "c2=0": 2258,
+  "cap": 603
+ },
+ "fail_reasons": {
+  "find Vl crossing failed": 75
+ },
+ "P3": {
+  "total": {
+   "n": 19600,
+   "fail": 3553
+  },
+  "by": {
+   "spef/Pi/p05b": {
+    "n": 2580,
+    "fail": 295
+   },
+   "spef/Pi/p05a": {
+    "n": 5891,
+    "fail": 576
+   },
+   "spef/cap/p05a": {
+    "n": 257,
+    "fail": 0
+   },
+   "spef/cap/p05b": {
+    "n": 144,
+    "fail": 0
+   },
+   "pi/Pi/p05a": {
+    "n": 5799,
+    "fail": 669
+   },
+   "pi/Pi/p05b": {
+    "n": 2469,
+    "fail": 344
+   },
+   "pi/c2=0/p05a": {
+    "n": 1508,
+    "fail": 1138
+   },
+   "pi/cap/p05b": {
+    "n": 65,
+    "fail": 0
+   },
+   "pi/cap/p05a": {
+    "n": 137,
+    "fail": 0
+   },
+   "pi/c2=0/p05b": {
+    "n": 622,
+    "fail": 412
+   },
+   "spef/c2=0/p05a": {
+    "n": 104,
+    "fail": 95
+   },
+   "spef/c2=0/p05b": {
+    "n": 24,
+    "fail": 24
+   }
+  }
+ },
+ "P3_ext": {
+  "total": {
+   "n": 19600,
+   "fail": 3083
+  },
+  "by": {
+   "spef/Pi": {
+    "n": 8471,
+    "fail": 746
+   },
+   "spef/cap": {
+    "n": 401,
+    "fail": 0
+   },
+   "pi/Pi": {
+    "n": 8268,
+    "fail": 888
+   },
+   "pi/c2=0": {
+    "n": 2130,
+    "fail": 1350
+   },
+   "pi/cap": {
+    "n": 202,
+    "fail": 0
+   },
+   "spef/c2=0": {
+    "n": 128,
+    "fail": 99
+   }
+  }
+ },
+ "P3_by_path": {
+  "total": {
+   "n": 19600,
+   "fail": 3553
+  },
+  "by": {
+   "waveform_driver": {
+    "n": 18997,
+    "fail": 3553
+   },
+   "cap": {
+    "n": 603,
+    "fail": 0
+   }
+  }
+ },
+ "P3_by_group": {
+  "total": {
+   "n": 19600,
+   "fail": 3553
+  },
+  "by": {
+   "rand_spef": {
+    "n": 6000,
+    "fail": 838
+   },
+   "rand_pi": {
+    "n": 6000,
+    "fail": 936
+   },
+   "plat_spef": {
+    "n": 3000,
+    "fail": 152
+   },
+   "plat_pi": {
+    "n": 3000,
+    "fail": 1314
+   },
+   "sing_pi": {
+    "n": 1600,
+    "fail": 313
+   }
+  }
+ },
+ "P4_by_group": {
+  "total": {
+   "n": 52088,
+   "fail": 100
+  },
+  "by": {
+   "rand_spef/waveform_driver": {
+    "n": 12421,
+    "fail": 25
+   },
+   "rand_spef/cap": {
+    "n": 1125,
+    "fail": 0
+   },
+   "rand_pi/waveform_driver": {
+    "n": 14412,
+    "fail": 35
+   },
+   "rand_pi/cap": {
+    "n": 488,
+    "fail": 0
+   },
+   "plat_spef/waveform_driver": {
+    "n": 6000,
+    "fail": 3
+   },
+   "plat_pi/waveform_driver": {
+    "n": 12000,
+    "fail": 19
+   },
+   "sing_pi/waveform_driver": {
+    "n": 5642,
+    "fail": 18
+   }
+  }
+ },
+ "P5_by_group": {
+  "total": {
+   "n": 52088,
+   "fail": 3025
+  },
+  "by": {
+   "rand_spef/waveform_driver": {
+    "n": 12421,
+    "fail": 565
+   },
+   "rand_spef/cap": {
+    "n": 1125,
+    "fail": 0
+   },
+   "rand_pi/waveform_driver": {
+    "n": 14412,
+    "fail": 216
+   },
+   "rand_pi/cap": {
+    "n": 488,
+    "fail": 0
+   },
+   "plat_spef/waveform_driver": {
+    "n": 6000,
+    "fail": 1079
+   },
+   "plat_pi/waveform_driver": {
+    "n": 12000,
+    "fail": 617
+   },
+   "sing_pi/waveform_driver": {
+    "n": 5642,
+    "fail": 548
+   }
+  }
+ },
+ "P3_ext_by_path": {
+  "total": {
+   "n": 19600,
+   "fail": 3083
+  },
+  "by": {
+   "waveform_driver": {
+    "n": 18997,
+    "fail": 3083
+   },
+   "cap": {
+    "n": 603,
+    "fail": 0
+   }
+  }
+ },
+ "sd_nonneg": {
+  "total": {
+   "n": 19600,
+   "fail": 0
+  },
+  "by": {
+   "spef/Pi": {
+    "n": 8471,
+    "fail": 0
+   },
+   "spef/cap": {
+    "n": 401,
+    "fail": 0
+   },
+   "pi/Pi": {
+    "n": 8268,
+    "fail": 0
+   },
+   "pi/c2=0": {
+    "n": 2130,
+    "fail": 0
+   },
+   "pi/cap": {
+    "n": 202,
+    "fail": 0
+   },
+   "spef/c2=0": {
+    "n": 128,
+    "fail": 0
+   }
+  }
+ },
+ "BR3": {
+  "total": {
+   "n": 18997,
+   "fail": 0
+  },
+  "by": {
+   "spef/Pi": {
+    "n": 8471,
+    "fail": 0
+   },
+   "pi/Pi": {
+    "n": 8268,
+    "fail": 0
+   },
+   "pi/c2=0": {
+    "n": 2130,
+    "fail": 0
+   },
+   "spef/c2=0": {
+    "n": 128,
+    "fail": 0
+   }
+  }
+ },
+ "P2_table_match": {
+  "total": {
+   "n": 18997,
+   "fail": 2171
+  },
+  "by": {
+   "spef/Pi": {
+    "n": 8471,
+    "fail": 0
+   },
+   "pi/Pi": {
+    "n": 8268,
+    "fail": 0
+   },
+   "pi/c2=0": {
+    "n": 2130,
+    "fail": 2043
+   },
+   "spef/c2=0": {
+    "n": 128,
+    "fail": 128
+   }
+  }
+ },
+ "P2_ceff_in": {
+  "total": {
+   "n": 16739,
+   "fail": 0
+  },
+  "by": {
+   "spef/Pi": {
+    "n": 8471,
+    "fail": 0
+   },
+   "pi/Pi": {
+    "n": 8268,
+    "fail": 0
+   }
+  }
+ },
+ "P2_delay_in_box": {
+  "total": {
+   "n": 2258,
+   "fail": 0
+  },
+  "by": {
+   "pi/c2=0": {
+    "n": 2130,
+    "fail": 0
+   },
+   "spef/c2=0": {
+    "n": 128,
+    "fail": 0
+   }
+  }
+ },
+ "P4": {
+  "total": {
+   "n": 52088,
+   "fail": 100
+  },
+  "by": {
+   "spef/Pi/waveform": {
+    "n": 12853,
+    "fail": 28
+   },
+   "spef/Pi/elmore_small": {
+    "n": 5312,
+    "fail": 0
+   },
+   "spef/cap/elmore_small": {
+    "n": 1125,
+    "fail": 0
+   },
+   "pi/Pi/waveform": {
+    "n": 16092,
+    "fail": 66
+   },
+   "pi/Pi/elmore_small": {
+    "n": 8326,
+    "fail": 0
+   },
+   "pi/c2=0/waveform": {
+    "n": 5458,
+    "fail": 6
+   },
+   "pi/c2=0/elmore_small": {
+    "n": 2178,
+    "fail": 0
+   },
+   "pi/cap/elmore_small": {
+    "n": 410,
+    "fail": 0
+   },
+   "pi/cap/waveform": {
+    "n": 78,
+    "fail": 0
+   },
+   "spef/c2=0/waveform": {
+    "n": 256,
+    "fail": 0
+   }
+  }
+ },
+ "P4_lower": {
+  "total": {
+   "n": 52088,
+   "fail": 0
+  },
+  "by": {
+   "spef/Pi": {
+    "n": 18165,
+    "fail": 0
+   },
+   "spef/cap": {
+    "n": 1125,
+    "fail": 0
+   },
+   "pi/Pi": {
+    "n": 24418,
+    "fail": 0
+   },
+   "pi/c2=0": {
+    "n": 7636,
+    "fail": 0
+   },
+   "pi/cap": {
+    "n": 488,
+    "fail": 0
+   },
+   "spef/c2=0": {
+    "n": 256,
+    "fail": 0
+   }
+  }
+ },
+ "P5": {
+  "total": {
+   "n": 52088,
+   "fail": 3025
+  },
+  "by": {
+   "spef/Pi/waveform": {
+    "n": 12853,
+    "fail": 1644
+   },
+   "spef/Pi/elmore_small": {
+    "n": 5312,
+    "fail": 0
+   },
+   "spef/cap/elmore_small": {
+    "n": 1125,
+    "fail": 0
+   },
+   "pi/Pi/waveform": {
+    "n": 16092,
+    "fail": 1378
+   },
+   "pi/Pi/elmore_small": {
+    "n": 8326,
+    "fail": 0
+   },
+   "pi/c2=0/waveform": {
+    "n": 5458,
+    "fail": 3
+   },
+   "pi/c2=0/elmore_small": {
+    "n": 2178,
+    "fail": 0
+   },
+   "pi/cap/elmore_small": {
+    "n": 410,
+    "fail": 0
+   },
+   "pi/cap/waveform": {
+    "n": 78,
+    "fail": 0
+   },
+   "spef/c2=0/waveform": {
+    "n": 256,
+    "fail": 0
+   }
+  }
+ },
+ "P5_lower": {
+  "total": {
+   "n": 52088,
+   "fail": 0
+  },
+  "by": {
+   "spef/Pi": {
+    "n": 18165,
+    "fail": 0
+   },
+   "spef/cap": {
+    "n": 1125,
+    "fail": 0
+   },
+   "pi/Pi": {
+    "n": 24418,
+    "fail": 0
+   },
+   "pi/c2=0": {
+    "n": 7636,
+    "fail": 0
+   },
+   "pi/cap": {
+    "n": 488,
+    "fail": 0
+   },
+   "spef/c2=0": {
+    "n": 256,
+    "fail": 0
+   }
+  }
+ },
+ "LAG": {
+  "total": {
+   "n": 52088,
+   "fail": 47
+  },
+  "by": {
+   "spef/Pi": {
+    "n": 18165,
+    "fail": 0
+   },
+   "spef/cap": {
+    "n": 1125,
+    "fail": 0
+   },
+   "pi/Pi": {
+    "n": 24418,
+    "fail": 34
+   },
+   "pi/c2=0": {
+    "n": 7636,
+    "fail": 4
+   },
+   "pi/cap": {
+    "n": 488,
+    "fail": 9
+   },
+   "spef/c2=0": {
+    "n": 256,
+    "fail": 0
+   }
+  }
+ },
+ "BR4": {
+  "total": {
+   "n": 50475,
+   "fail": 0
+  },
+  "by": {
+   "spef/Pi": {
+    "n": 18165,
+    "fail": 0
+   },
+   "pi/Pi": {
+    "n": 24418,
+    "fail": 0
+   },
+   "pi/c2=0": {
+    "n": 7636,
+    "fail": 0
+   },
+   "spef/c2=0": {
+    "n": 256,
+    "fail": 0
+   }
+  }
+ },
+ "BR5": {
+  "total": {
+   "n": 50475,
+   "fail": 0
+  },
+  "by": {
+   "spef/Pi": {
+    "n": 18165,
+    "fail": 0
+   },
+   "pi/Pi": {
+    "n": 24418,
+    "fail": 0
+   },
+   "pi/c2=0": {
+    "n": 7636,
+    "fail": 0
+   },
+   "spef/c2=0": {
+    "n": 256,
+    "fail": 0
+   }
+  }
+ },
+ "spef_pi_replication_max_relerr_vs_ctot": 1.739165677981556e-07,
+ "spef_rpi_replication_max_relerr_noncap": 2.0150525303133136e-06,
+ "ADT_ratio_max": 1.007700612722287,
+ "ADT_ratio_gt_1.01": 0,
+ "worst": {
+  "P3_hi": [
+   {
+    "net": "n5171",
+    "rf": "rise",
+    "mode": "pi",
+    "group": "rand_pi",
+    "family": "pi",
+    "target": null,
+    "a_target": null,
+    "a_actual": 0.4820027147419618,
+    "path": "waveform_driver",
+    "lib": "p05a",
+    "cell": "BUFA_W4",
+    "alg": "Pi",
+    "fails": "",
+    "s_ns": 0.0033976447957190237,
+    "ctot": 0.004759888,
+    "c2": 0.000537351,
+    "rpi": 0.42210868,
+    "c1": 0.004222537,
+    "ceff": 0.002110267,
+    "rd": 0.453630537,
+    "dt": 0.002015281,
+    "t0": 0.010728701,
+    "sd_ns": 0.0040371174285513955,
+    "T_lo": 0.0011006518034264445,
+    "T_hi": 0.003022280056029558,
+    "P3_ratio_hi": 1.33578535202163,
+    "P3_ratio_lo": 3.667933324584056
+   },
+   {
+    "net": "n1246",
+    "rf": "rise",
+    "mode": "spef",
+    "group": "rand_spef",
+    "family": "two_branch",
+    "target": null,
+    "a_target": null,
+    "a_actual": 0.6905379232519326,
+    "path": "waveform_driver",
+    "lib": "p05b",
+    "cell": "BUFB_X16",
+    "alg": "Pi",
+    "fails": "",
+    "s_ns": 1.1035156122218837,
+    "ctot": 0.203010731,
+    "c2": 0.005776458,
+    "rpi": 0.645423353,
+    "c1": 0.197234273,
+    "ceff": 0.101963952,
+    "rd": 0.289244145,
+    "dt": 0.217065483,
+    "t0": -0.023427064,
+    "sd_ns": 0.597211835540179,
+    "T_lo": 0.31377896666526794,
+    "T_hi": 0.4478062391281128,
+    "P3_ratio_hi": 1.333638934336783,
+    "P3_ratio_lo": 1.903288298406791
+   },
+   {
+    "net": "n5171",
+    "rf": "fall",
+    "mode": "pi",
+    "group": "rand_pi",
+    "family": "pi",
+    "target": null,
+    "a_target": null,
+    "a_actual": 0.5408771597536244,
+    "path": "waveform_driver",
+    "lib": "p05a",
+    "cell": "BUFA_W4",
+    "alg": "Pi",
+    "fails": "",
+    "s_ns": 0.0033976447957190237,
+    "ctot": 0.004759888,
+    "c2": 0.000537351,
+    "rpi": 0.42210868,
+    "c1": 0.004222537,
+    "ceff": 0.002038338,
+    "rd": 0.358306378,
+    "dt": 0.001947284,
+    "t0": 0.010531854,
+    "sd_ns": 0.0032606816552371853,
+    "T_lo": 0.0011114790104329586,
+    "T_hi": 0.0025596327614039183,
+    "P3_ratio_hi": 1.2738865138797304,
+    "P3_ratio_lo": 2.933642133257235
+   }
+  ],
+  "P3_lo": [
+   {
+    "net": "n4650",
+    "rf": "rise",
+    "mode": "pi",
+    "group": "rand_pi",
+    "family": "pi",
+    "target": null,
+    "a_target": null,
+    "a_actual": 0.010061959970254278,
+    "path": "waveform_driver",
+    "lib": "p05a",
+    "cell": "BUFA_X8",
+    "alg": "Pi",
+    "fails": "",
+    "s_ns": 0.44741629845468367,
+    "ctot": 0.183994128,
+    "c2": 0.181565061,
+    "rpi": 0.003666693,
+    "c1": 0.002429067,
+    "ceff": 0.183993995,
+    "rd": 0.360744715,
+    "dt": 0.259308159,
+    "t0": -0.014447519,
+    "sd_ns": 0.16984956496823855,
+    "T_lo": 0.17576837539672852,
+    "T_hi": 0.18136653304100037,
+    "P3_ratio_hi": 0.9364989346178976,
+    "P3_ratio_lo": 0.9663260787662709
+   },
+   {
+    "net": "n4650",
+    "rf": "fall",
+    "mode": "pi",
+    "group": "rand_pi",
+    "family": "pi",
+    "target": null,
+    "a_target": null,
+    "a_actual": 0.012354609958470783,
+    "path": "waveform_driver",
+    "lib": "p05a",
+    "cell": "BUFA_X8",
+    "alg": "Pi",
+    "fails": "",
+    "s_ns": 0.44741629845468367,
+    "ctot": 0.183994128,
+    "c2": 0.181565061,
+    "rpi": 0.003666693,
+    "c1": 0.002429067,
+    "ceff": 0.18399401,
+    "rd": 0.293120742,
+    "dt": 0.27457124,
+    "t0": -0.030065916,
+    "sd_ns": 0.1727704923570883,
+    "T_lo": 0.1782744824886322,
+    "T_hi": 0.18136653304100037,
+    "P3_ratio_hi": 0.952604041441489,
+    "P3_ratio_lo": 0.9691263154731364
+   },
+   {
+    "net": "n5732",
+    "rf": "fall",
+    "mode": "pi",
+    "group": "rand_pi",
+    "family": "pi",
+    "target": null,
+    "a_target": null,
+    "a_actual": 0.0011103202618022623,
+    "path": "waveform_driver",
+    "lib": "p05b",
+    "cell": "BUFB_X16",
+    "alg": "Pi",
+    "fails": "",
+    "s_ns": 0.6943515762358743,
+    "ctot": 0.113377062,
+    "c2": 0.101043373,
+    "rpi": 0.000194673,
+    "c1": 0.012333689,
+    "ceff": 0.113376826,
+    "rd": 0.175135821,
+    "dt": 0.153645992,
+    "t0": -0.018307412,
+    "sd_ns": 0.2553033617846978,
+    "T_lo": 0.261831134557724,
+    "T_hi": 0.28414061665534973,
+    "P3_ratio_hi": 0.8985106205156503,
+    "P3_ratio_lo": 0.97506876795209
+   }
+  ],
+  "P4": [
+   {
+    "net": "n3144",
+    "rf": "rise",
+    "mode": "pi",
+    "group": "rand_pi",
+    "family": "pi",
+    "target": null,
+    "a_actual": 0.5058378304361444,
+    "path": "waveform_driver",
+    "lib": "p05a",
+    "cell": "BUFA_W4",
+    "alg": "Pi",
+    "fails": "",
+    "sd_ns": 0.009240237915097982,
+    "pin": "n3144_3/A",
+    "tau_ns": 0.0021993625102563505,
+    "w_ns": 0.0025487843172827818,
+    "sl_ns": 0.01022630591318574,
+    "gd_ns": 0.015669363376269452,
+    "P4_ratio": 1.1588741307524169,
+    "P4_excess_ns": 0.0003494218070264313,
+    "P5_bound": 0.012289201761124849,
+    "P5_ratio": 0.8321375230029352,
+    "regime": "waveform",
+    "kind": "far"
+   },
+   {
+    "net": "n730",
+    "rf": "rise",
+    "mode": "spef",
+    "group": "rand_spef",
+    "family": "line",
+    "target": null,
+    "a_actual": 0.3614259430405001,
+    "path": "waveform_driver",
+    "lib": "p05a",
+    "cell": "BUFA_W4",
+    "alg": "Pi",
+    "fails": "",
+    "sd_ns": 0.0073805536335291855,
+    "pin": "n730_0/A",
+    "tau_ns": 0.0015768022895086184,
+    "w_ns": 0.001806303370766038,
+    "sl_ns": 0.007946791662216679,
+    "gd_ns": 0.01525782798716957,
+    "P4_ratio": 1.1455484195985912,
+    "P4_excess_ns": 0.00022950108125741964,
+    "P5_bound": 0.009566465756075917,
+    "P5_ratio": 0.8306925321056483,
+    "regime": "waveform",
+    "kind": "line"
+   },
+   {
+    "net": "n3144",
+    "rf": "rise",
+    "mode": "pi",
+    "group": "rand_pi",
+    "family": "pi",
+    "target": null,
+    "a_actual": 0.5058378304361444,
+    "path": "waveform_driver",
+    "lib": "p05a",
+    "cell": "BUFA_W4",
+    "alg": "Pi",
+    "fails": "",
+    "sd_ns": 0.009240237915097982,
+    "pin": "n3144_0/A",
+    "tau_ns": 0.0037370517240227744,
+    "w_ns": 0.004213215280129967,
+    "sl_ns": 0.01184669203013744,
+    "gd_ns": 0.015669363376269452,
+    "P4_ratio": 1.1274169027541914,
+    "P4_excess_ns": 0.0004761635561071928,
+    "P5_bound": 0.01442089164732412,
+    "P5_ratio": 0.8214951141620749,
+    "regime": "waveform",
+    "kind": "far"
+   }
+  ],
+  "P4_abs": [
+   {
+    "net": "n7075",
+    "rf": "rise",
+    "mode": "spef",
+    "group": "plat_spef",
+    "family": "plateau",
+    "target": "vh",
+    "a_actual": 0.7561887162405734,
+    "path": "waveform_driver",
+    "lib": "p05a",
+    "cell": "BUFA_X1",
+    "alg": "Pi",
+    "fails": "",
+    "sd_ns": 0.4198557890244814,
+    "pin": "n7075_0/A",
+    "tau_ns": 0.19523547327756524,
+    "w_ns": 0.1989218650910729,
+    "sl_ns": 0.7084888231645436,
+    "gd_ns": 0.023879113963953813,
+    "P4_ratio": 1.018881772618579,
+    "P4_excess_ns": 0.003686391813507661,
+    "P5_bound": 0.6905096247197432,
+    "P5_ratio": 1.0260375783351283,
+    "regime": "waveform",
+    "kind": "plateau"
+   },
+   {
+    "net": "n9471",
+    "rf": "rise",
+    "mode": "pi",
+    "group": "sing_pi",
+    "family": "singular",
+    "target": null,
+    "a_actual": 0.5769541019496274,
+    "path": "waveform_driver",
+    "lib": "p05a",
+    "cell": "BUFA_W4",
+    "alg": "Pi",
+    "fails": "",
+    "sd_ns": 0.0364591204449205,
+    "pin": "n9471_2/A",
+    "tau_ns": 0.04803915450606306,
+    "w_ns": 0.050268213203086276,
+    "sl_ns": 0.0921732204450798,
+    "gd_ns": 0.014946530124682056,
+    "P4_ratio": 1.0464008727868406,
+    "P4_excess_ns": 0.002229058697023216,
+    "P5_bound": 0.10305552944964291,
+    "P5_ratio": 0.8944034438260721,
+    "regime": "waveform",
+    "kind": "sing_p2"
+   },
+   {
+    "net": "n9471",
+    "rf": "rise",
+    "mode": "pi",
+    "group": "sing_pi",
+    "family": "singular",
+    "target": null,
+    "a_actual": 0.5769541019496274,
+    "path": "waveform_driver",
+    "lib": "p05a",
+    "cell": "BUFA_W4",
+    "alg": "Pi",
+    "fails": "",
+    "sd_ns": 0.0364591204449205,
+    "pin": "n9471_3/A",
+    "tau_ns": 0.048039154554102216,
+    "w_ns": 0.050268213203086276,
+    "sl_ns": 0.0921732204450798,
+    "gd_ns": 0.014946530124682056,
+    "P4_ratio": 1.0464008717404398,
+    "P4_excess_ns": 0.00222905864898406,
+    "P5_bound": 0.10305552951623932,
+    "P5_ratio": 0.8944034432480918,
+    "regime": "waveform",
+    "kind": "sing_p2"
+   }
+  ],
+  "P5": [
+   {
+    "net": "n7922",
+    "rf": "rise",
+    "mode": "pi",
+    "group": "plat_pi",
+    "family": "plateau",
+    "target": "vh",
+    "a_actual": 0.8036364442370546,
+    "path": "waveform_driver",
+    "lib": "p05a",
+    "cell": "BUFA_X1",
+    "alg": "Pi",
+    "fails": "",
+    "sd_ns": 0.020014932419765152,
+    "pin": "n7922_2/A",
+    "tau_ns": 0.0671439313051685,
+    "w_ns": 0.06222871523631213,
+    "sl_ns": 0.242276310125078,
+    "gd_ns": 0.01954283783411892,
+    "P4_ratio": 0.9267958254258785,
+    "P4_excess_ns": -0.004915216068856379,
+    "P5_bound": 0.11309618577154155,
+    "P5_ratio": 2.142214686306796,
+    "regime": "waveform",
+    "kind": "plateau"
+   },
+   {
+    "net": "n7849",
+    "rf": "rise",
+    "mode": "pi",
+    "group": "plat_pi",
+    "family": "plateau",
+    "target": "vh",
+    "a_actual": 0.8034278652819417,
+    "path": "waveform_driver",
+    "lib": "p05a",
+    "cell": "BUFA_X1",
+    "alg": "Pi",
+    "fails": "",
+    "sd_ns": 0.009532325449812529,
+    "pin": "n7849_2/A",
+    "tau_ns": 0.0369600147004092,
+    "w_ns": 0.03461607736565675,
+    "sl_ns": 0.12976081320559274,
+    "gd_ns": 0.012167176988153727,
+    "P4_ratio": 0.936581807292233,
+    "P4_excess_ns": -0.0023439373347524523,
+    "P5_bound": 0.06076978541589807,
+    "P5_ratio": 2.135285032150958,
+    "regime": "waveform",
+    "kind": "plateau"
+   },
+   {
+    "net": "n7922",
+    "rf": "rise",
+    "mode": "pi",
+    "group": "plat_pi",
+    "family": "plateau",
+    "target": "vh",
+    "a_actual": 0.8036364442370546,
+    "path": "waveform_driver",
+    "lib": "p05a",
+    "cell": "BUFA_X1",
+    "alg": "Pi",
+    "fails": "",
+    "sd_ns": 0.020014932419765152,
+    "pin": "n7922_3/A",
+    "tau_ns": 0.09015876150430145,
+    "w_ns": 0.08425013464652409,
+    "sl_ns": 0.3093253708730259,
+    "gd_ns": 0.01954283783411892,
+    "P4_ratio": 0.9344641967215193,
+    "P4_excess_ns": -0.005908626857777363,
+    "P5_bound": 0.14500151509873133,
+    "P5_ratio": 2.1332561295129,
+    "regime": "waveform",
+    "kind": "plateau"
+   }
+  ]
+ },
+ "max_P3_ratio_hi": 1.33578535202163,
+ "max_P4_ratio": 1.1588741307524169,
+ "max_P5_ratio": 2.142214686306796
+}

@@ -1,0 +1,56 @@
+## versions
+gcc (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0
+cmake version 3.27.9
+/ws/tools/p05/bin/yacc - 2.0 20240109
+flex 2.6.4
+SWIG Version 4.1.1
+8.6.13
+tclsh -> tclsh8.6
+## bison wrapper
+5fb67dbac7e6da4a7b889ff5e0e0653b4c46b1fe8d31c9ee377cc9658d6bb3ad  /ws/tools/p05/bin/bison
+byacc-wrapper: /ws/tools/p05/bin/yacc - 2.0 20240109
+## OpenSTA CMakeCache (selected)
+BISON_EXECUTABLE:FILEPATH=/ws/tools/p05/bin/bison
+CMAKE_BUILD_TYPE:STRING=Release
+CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/c++
+CMAKE_CXX_FLAGS:STRING=
+CMAKE_CXX_FLAGS_DEBUG:STRING=-g
+CMAKE_CXX_FLAGS_MINSIZEREL:STRING=-Os -DNDEBUG
+CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
+CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
+Eigen3_DIR:UNINITIALIZED=/ws/tools/p05/share/eigen3/cmake
+FLEX_EXECUTABLE:FILEPATH=/ws/tools/p05/bin/flex
+FLEX_INCLUDE_DIR:PATH=/ws/tools/p05/include
+SWIG_EXECUTABLE:FILEPATH=/ws/tools/p05/bin/swig
+TCL_INCLUDE_PATH:UNINITIALIZED=/ws/tools/p05/include
+TCL_LIBRARY:UNINITIALIZED=/ws/tools/p05/lib/libtcl8.6.so
+USE_CUDD:BOOL=OFF
+USE_TCL_READLINE:BOOL=OFF
+ZLIB_LIBRARY_DEBUG:FILEPATH=ZLIB_LIBRARY_DEBUG-NOTFOUND
+ZLIB_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libz.so
+BISON_EXECUTABLE-ADVANCED:INTERNAL=1
+CMAKE_CXX_FLAGS-ADVANCED:INTERNAL=1
+CMAKE_CXX_FLAGS_DEBUG-ADVANCED:INTERNAL=1
+CMAKE_CXX_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
+CMAKE_CXX_FLAGS_RELEASE-ADVANCED:INTERNAL=1
+CMAKE_CXX_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
+FLEX_EXECUTABLE-ADVANCED:INTERNAL=1
+FLEX_INCLUDE_DIR-ADVANCED:INTERNAL=1
+SWIG_EXECUTABLE-ADVANCED:INTERNAL=1
+ZLIB_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+ZLIB_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+## compile flags of DmpCeff.cc
+CXX_DEFINES = 
+CXX_FLAGS = -O3 -DNDEBUG -Wall -Wextra -pedantic -Wcast-qual -Wredundant-decls -Wformat-security
+## binaries
+d6821adce56e1f8dec50ca0730129e8ebe297a7c5663ba85f84e9558466b464c  /ws/tools/opensta-e01d3f163f483f233db00410b6515a767a6ca03b/bin/sta
+d6821adce56e1f8dec50ca0730129e8ebe297a7c5663ba85f84e9558466b464c  /ws/data/src/OpenSTA-e01d3f163f483f233db00410b6515a767a6ca03b/app/sta
+## generated parser provenance
+/* original parser id follows */
+/* yysccsid[] = "@(#)yaccpar	1.9 (Berkeley) 02/21/93" */
+/* (use YYMAJOR/YYMINOR for ifdefs dependent on parser version) */
+/ws/build/opensta/LibertyExprParse.cc
+/ws/build/opensta/LibertyParse.cc
+/ws/build/opensta/SdfParse.cc
+/ws/build/opensta/SpefParse.cc
+/ws/build/opensta/VerilogParse.cc
