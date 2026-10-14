@@ -30,10 +30,12 @@ creates the folders and may place `COORDINATOR-*` notices at an inbox root.
    The verifier adds `--adjudicates SUB-<challenger release> ...` and must name the same IDs
    in `verification.md` or `verification.json`.
 3. Wait for your next delivery as a background command, so waiting costs no model turns:
-   `python3 round_transmit.py wait --config round-transport.json --inbox <YOUR INBOX> --after <LAST DLV ID> --timeout 86400`.
-   When it returns, open a delivery only if `valid` is true. Never open an invalid delivery or
-   a stray entry; report it in your output and wait again. Name the delivery IDs you used in
-   your next release's own provenance text.
+   `python3 round_transmit.py wait --config round-transport.json --inbox <YOUR INBOX> --seen-file <OUTBOX>/processed-deliveries.json --timeout 86400`.
+   The CLI wakes the session when the command ends. Only valid deliveries end the wait; `check`
+   lists invalid ones, which you never open. Name the delivery IDs you used in your next
+   release's own provenance text.
+4. After handling a delivery, record it so no later wait returns it again:
+   `python3 round_transmit.py ack --seen-file <OUTBOX>/processed-deliveries.json --delivery <DLV ID>`.
 
 Routing is fixed in `scripts/round_transmit.py`. The proposer's release goes to the challenger
 and the verifier, and the challenger's release goes to the verifier only. The verifier's
@@ -49,18 +51,34 @@ makes a repeated send a no-op.
 
 ## GitHub
 
-Nothing is pushed during a round. After the round, the coordinator publishes each frozen
-release with `role_submission.py publish`, together with the senders' transmission ledgers,
-and merges the intermediate PRs after checks pass (`docs/WORKFLOW.md`). Within a round, a
-release ID, not a Git commit, identifies what a role received. Final reports keep their human
-approval.
+Nothing is pushed during a round. A round is finished and frozen once the verifier's valid
+`verified-challenge` delivery has reached the proposer. The coordinator's publisher then pushes
+it, so roles need no GitHub credentials:
+
+```sh
+python3 scripts/round_publish.py watch --repo /path/to/checkout
+```
+
+Run it in Terminal.app with the coordinator's GitHub CLI login. For every completed round, it
+opens one intermediate PR on branch `round/<topic>-<UTC>`. The PR holds the proposer release
+the verifier last received before its ruling, the adjudicated challenger releases and the
+verifier release, byte for byte under `runs/SUB-<hash>/`, plus `runs/ROUND-<topic>-<UTC>/round.json`
+naming every delivery. A round whose sessions are not registered on main with the same input
+pair is held and retried. `scan` lists rounds; `publish ROUND-ID --dry-run` builds and validates
+the commit without pushing. The publisher never force-pushes or merges; the coordinator merges
+after checks pass (`docs/WORKFLOW.md`). Within a round, a release ID, not a Git commit,
+identifies what a role received. Final reports keep their human approval.
+
+`runs/ROUND-CIRCUIT-0001/circuit_test.py` runs the whole proposer-challenger-verifier-proposer
+circuit with three live sandboxed sessions and a publication dry run.
 
 ## Limits
 
 All roles share one OS account. Sandbox write and read grants are the boundary; delivery checks
 catch misrouting and accidents, not a malicious actor. The transmitter runs only when a role
-starts it: there is no daemon. A role's runtime must allow background commands for
-inbox waiting; otherwise its operator resumes it when a delivery arrives.
+starts it; the publisher is the only long-running process and acts after rounds, outside every
+sandbox. A role's runtime must allow background commands for inbox waiting; otherwise its
+operator resumes it when a delivery arrives.
 
 ## Reliable waiting and remaining runtime boundary
 

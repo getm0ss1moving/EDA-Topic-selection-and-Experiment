@@ -197,3 +197,14 @@ class RoundTransmitTests(unittest.TestCase):
         release = self.release('proposer')
         with patch.object(Path, 'is_symlink', guarded):
             self.assertEqual([r['status'] for r in t.send(self.config, release)], ['delivered', 'delivered'])
+
+    def test_ack_records_each_delivery_once_and_wait_skips_it(self):
+        t.send(self.config, self.release('proposer'))
+        seen = self.root / 'work' / 'seen.json'
+        got = t.wait(self.config, self.inbox['verifier'], timeout=0, seen_file=None)
+        for _ in range(2):
+            self.assertEqual(t.ack(seen, got['delivery'])['count'], 1)
+        self.assertEqual(json.loads(seen.read_text()), [got['delivery']])
+        self.assertEqual(t.wait(self.config, self.inbox['verifier'], timeout=0, seen_file=seen)['status'], 'timeout')
+        with self.assertRaises(ValueError):
+            t.ack(seen, 'not-a-delivery')

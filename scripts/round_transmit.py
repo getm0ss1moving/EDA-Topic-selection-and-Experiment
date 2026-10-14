@@ -289,6 +289,23 @@ def wait(config, inbox, after='', timeout=540, interval=10, seen_file=None):
         time.sleep(min(interval, max(0, deadline - time.monotonic())))
 
 
+def ack(seen_file, delivery):
+    """Record a processed delivery in the role's own receipt file, atomically and idempotently."""
+    if not DLV.fullmatch(delivery):
+        raise ValueError(f'Invalid delivery ID: {delivery}')
+    path = Path(seen_file).absolute()
+    seen = json.loads(rs.regular(path)) if path.exists() else []
+    if not isinstance(seen, list) or any(not isinstance(x, str) or not DLV.fullmatch(x) for x in seen):
+        raise ValueError('seen-file must be a JSON array of acknowledged delivery IDs')
+    if delivery not in seen:
+        seen.append(delivery)
+        fd, tmp = tempfile.mkstemp(prefix='.ack-', dir=str(path.parent))
+        with os.fdopen(fd, 'w') as f:
+            f.write(json.dumps(seen, indent=2) + '\n')
+        os.replace(tmp, path)
+    return {'acknowledged': delivery, 'count': len(seen)}
+
+
 def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = p.add_subparsers(dest='command', required=True)
@@ -307,12 +324,17 @@ def main():
     c = sub.add_parser('check', help='list your inbox deliveries with their validity')
     c.add_argument('--config', required=True)
     c.add_argument('--inbox', required=True)
+    k = sub.add_parser('ack', help='record a processed delivery in your own receipt file')
+    k.add_argument('--seen-file', required=True)
+    k.add_argument('--delivery', required=True)
     a = p.parse_args()
     try:
         if a.command == 'send':
             out = send(a.config, a.release, a.adjudicates, a.ledger)
         elif a.command == 'wait':
             out = wait(a.config, a.inbox, a.after, a.timeout, a.interval, a.seen_file)
+        elif a.command == 'ack':
+            out = ack(a.seen_file, a.delivery)
         else:
             out = scan(load_config(a.config), a.inbox)
     except (ValueError, OSError) as e:
