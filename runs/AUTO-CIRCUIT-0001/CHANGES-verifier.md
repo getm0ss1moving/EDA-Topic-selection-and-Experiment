@@ -22,9 +22,9 @@ automatically while the GPT challenger is at its usage limit.
    the dossier you adjudicated. It runs offline; full `validate` stays on the coordinator side.
 4. **G6, the GPT challenge.** The GPT challenger's frozen round-1b review,
    `SUB-e81a3116230c993ef314885730e0e5202a2bbfeab70328f5bfcc8b35c0511c7f`, is in your inbox under
-   `from-challenger`. The coordinator delivered it because that challenger has reached its usage
-   limit. The proposer's frozen R1b release arrives under `from-proposer` once the proposer
-   freezes it.
+   `from-challenger` as delivery `DLV-20261014T105602Z-challenger-e81a3116230c`. The challenger
+   sent it itself before reaching its usage limit. The proposer's frozen R1b release arrives under
+   `from-proposer` once the proposer freezes it.
 5. **Naming what you checked** (`harness/VERIFIER.md`, `docs/AUTO-ROUND.md`). Pass
    `--reviews <proposer release ID>` for the proposer release you checked, and
    `--adjudicates <challenger release IDs>` for every challenger release you ruled on. Name the

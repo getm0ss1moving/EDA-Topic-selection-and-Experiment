@@ -162,3 +162,10 @@ Resume from your own Terminal.app, never from a Claude desktop terminal tab:
 3. Send this prompt verbatim:
 
 > Coordinator notice, transport only: policy amendment CLD-P05-AMEND-0001. A hashed, read-only bundle is in your round inbox at `/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/rounds/EDA-0002/Claude-P05-TIMING/COORDINATOR-AMENDMENT-0001`. The SHA-256 of its `AMENDMENT.json` must be `3f2a177751f11e0ff2e0d5249007bc6cfb74bf6d557329565cbea5509643cc61`. Verify that hash and every file hash listed in `AMENDMENT.json`, then read `CHANGES.md` and the files it cites; they supersede the same paths in your packet. Owner directive of 2026-10-14: you see challenger output only after the verifier has adjudicated it, inside a valid `verified-challenge` delivery; never open it by any other route. Write your receipt as `CHANGES.md` specifies, then start the background wait on your inbox and end the turn. Do not freeze a release, revise the dossier or start new research in this turn.
+
+## AUTO-CIRCUIT-0001 (amendment CLD-P05-AMEND-0002)
+
+`launch.sh` now verifies both amendment bundles before any resume. The running session needs no restart: send this prompt.
+
+> Coordinator notice, transport only: policy amendment CLD-P05-AMEND-0002 is in your round inbox at `/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/rounds/EDA-0002/Claude-P05-TIMING/COORDINATOR-AMENDMENT-0002`. The SHA-256 of its `AMENDMENT.json` must be `d85b344a78650ef3d596f5614366016716bc2f08a165c12cf3cfaf527697644d`. Verify it and every listed file, read `CHANGES.md` and the files it cites, and write the receipt it specifies. Then do the bootstrap in rule 2 (freeze R1b unchanged and send it), start the new background wait with this bundle's tools, and end the turn. From then on, work automatically as `CHANGES.md` describes.
+

@@ -1,0 +1,21 @@
+{
+  "source_commit": "9d58e4335540ba4a8dbe5ac64675e545188891f9",
+  "bundles": [
+    {
+      "role": "proposer",
+      "actor_id": "Claude-P05-TIMING",
+      "amendment_id": "CLD-P05-AMEND-0002",
+      "path": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/rounds/EDA-0002/Claude-P05-TIMING/COORDINATOR-AMENDMENT-0002",
+      "amendment_sha256": "d85b344a78650ef3d596f5614366016716bc2f08a165c12cf3cfaf527697644d",
+      "file_count": 28
+    },
+    {
+      "role": "verifier",
+      "actor_id": "DeepSeek-V02-PHYSICAL",
+      "amendment_id": "AUTO-CIRCUIT-0001-V02",
+      "path": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/rounds/EDA-0002/DeepSeek-V02-PHYSICAL/COORDINATOR-AUTO-CIRCUIT-0001",
+      "amendment_sha256": "d48ab6d0f36a3408d3291242100e696807f1458a1bfa536b92c1fa9fcf1084e4",
+      "file_count": 30
+    }
+  ]
+}

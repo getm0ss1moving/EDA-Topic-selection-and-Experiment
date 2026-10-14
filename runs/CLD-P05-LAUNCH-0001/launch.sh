@@ -34,8 +34,9 @@ RESULTS="/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/physical-release-d4
 # Read-only round inbox (docs/AUTO-ROUND.md); the verifier writes its from-verifier folder.
 INBOX="/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/rounds/EDA-0002/Claude-P05-TIMING"
 # Hashed policy amendment the session must acknowledge (runs/CLD-P05-AMEND-0001).
-AMENDMENT="$INBOX/COORDINATOR-AMENDMENT-0001"
-AMENDMENT_SHA256="3f2a177751f11e0ff2e0d5249007bc6cfb74bf6d557329565cbea5509643cc61"
+# Hashed policy amendments the session must acknowledge, oldest first (runs/CLD-P05-AMEND-0001, AUTO-CIRCUIT-0001).
+AMENDMENTS=("COORDINATOR-AMENDMENT-0001:3f2a177751f11e0ff2e0d5249007bc6cfb74bf6d557329565cbea5509643cc61"
+            "COORDINATOR-AMENDMENT-0002:d85b344a78650ef3d596f5614366016716bc2f08a165c12cf3cfaf527697644d")
 SETTINGS="$RUN_DIR/launch-settings.json"
 SETTINGS_SHA256="6009cc41dd0d8f8c6714bb81227166d0490632b64a2d92221c790bb96a005cc9"
 # PreToolUse hook named in launch-settings.json; installed read-only outside every checkout.
@@ -108,9 +109,11 @@ ok "read-only lab results $RESULTS"
 [ "$(stat -f '%Lp' "$INBOX")" = "700" ] || die "round inbox must be mode 700"
 [ ! -e "$INBOX/from-challenger" ] || die "the proposer inbox must not have a from-challenger folder"
 ok "read-only round inbox $INBOX"
-[ "$(shasum -a 256 "$AMENDMENT/AMENDMENT.json" 2>/dev/null | awk '{print $1}')" = "$AMENDMENT_SHA256" ] || \
-  die "AMENDMENT.json missing or differs from the pinned $AMENDMENT_SHA256"
-python3 -I - "$AMENDMENT" <<'EOF' || die "amendment contents do not match AMENDMENT.json"
+for pin in "${AMENDMENTS[@]}"; do
+  AMENDMENT="$INBOX/${pin%%:*}"; AMENDMENT_SHA256="${pin#*:}"
+  [ "$(shasum -a 256 "$AMENDMENT/AMENDMENT.json" 2>/dev/null | awk '{print $1}')" = "$AMENDMENT_SHA256" ] || \
+    die "$AMENDMENT/AMENDMENT.json missing or differs from the pinned $AMENDMENT_SHA256"
+  python3 -I - "$AMENDMENT" <<'EOF' || die "amendment contents do not match $AMENDMENT/AMENDMENT.json"
 import hashlib, json, sys
 from pathlib import Path
 root = Path(sys.argv[1])
@@ -122,7 +125,8 @@ writable = [str(p) for p in [root, *root.rglob('*')] if p.stat().st_mode & 0o222
 if bad or extra or writable or any((root/n).is_symlink() for n in present):
     sys.exit(f'mismatch={bad} extra={extra} writable={writable}')
 EOF
-ok "policy amendment $AMENDMENT_SHA256: all listed hashes match, no extra files, read-only"
+  ok "policy amendment ${pin%%:*} $AMENDMENT_SHA256: all listed hashes match, no extra files, read-only"
+done
 
 [ -f "$SETTINGS" ] || die "settings file missing: $SETTINGS"
 [ "$(shasum -a 256 "$SETTINGS" | awk '{print $1}')" = "$SETTINGS_SHA256" ] || \

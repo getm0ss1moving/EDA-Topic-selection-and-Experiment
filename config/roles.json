@@ -14,20 +14,25 @@
       "effort_observed_onboarding": "max: an operator /model selection before the setup prompt; reported by the role (readiness.json UC-06).",
       "operator": "getm0ss1moving",
       "github_login": "getm0ss1moving (transport account for this actor's outputs; the AI actor has no GitHub identity)",
-      "input_commit": "2121532bfca928900f4252e796d7570fdb1ea224",
-      "packet_sha256": "3f2a177751f11e0ff2e0d5249007bc6cfb74bf6d557329565cbea5509643cc61",
+      "input_commit": "9d58e4335540ba4a8dbe5ac64675e545188891f9",
+      "packet_sha256": "d85b344a78650ef3d596f5614366016716bc2f08a165c12cf3cfaf527697644d",
       "launch_commit": "ab600824ab0d65f579977484ec9a8db9dc43bdcc",
       "launch_run": "CLD-P05-LAUNCH-0001",
       "registration_run": "CLD-P05-SESSION-0001",
       "started_at_utc": "2026-10-12T18:07:15Z",
-      "state": "R1b output frozen for challenger review (runs/CLD-P05-FROZEN-0002, PR #26; exposure record in runs/CLD-P05-AMEND-0001); policy amendment CLD-P05-AMEND-0001 delivered; receipt pending",
+      "state": "R1b frozen for challenger review (CLD-P05-FROZEN-0002); amendment CLD-P05-AMEND-0002 delivered, receipt and R1b bootstrap release pending; waiting on its round inbox",
       "independence_attestation": "Fresh Claude Code 2.1.293 session started by the operator from Terminal.app through runs/CLD-P05-LAUNCH-0001/launch.sh: clean environment, --safe-mode, tool allow-list, sandboxed Bash and deny rules. The operator attests that the session received only the setup prompt after a /model selection. The role's readiness.json reports no contamination and discloses its unlisted context. All actors share one macOS account, so this is operator and self attestation, not OS-enforced independence.",
-      "packet_basis": "AMENDMENT.json of policy amendment CLD-P05-AMEND-0001, which binds the base packet in packet_history and every amended file by SHA-256 (runs/CLD-P05-AMEND-0001)",
+      "packet_basis": "AMENDMENT.json of the newest acknowledged policy amendment (CLD-P05-AMEND-0002, run AUTO-CIRCUIT-0001); earlier pairs are in packet_history",
       "packet_history": [
         {
           "input_commit": "d437c2f660906efe9351a90451905826d00b63e3",
           "packet_sha256": "ff20816f623585d4bf7ba7b13d79db58aab90a2e947cd05c719cd93f3574602d",
           "stage": "initial research packet, used through the R1b output (runs/CLD-P05-FROZEN-0002)"
+        },
+        {
+          "input_commit": "2121532bfca928900f4252e796d7570fdb1ea224",
+          "packet_sha256": "3f2a177751f11e0ff2e0d5249007bc6cfb74bf6d557329565cbea5509643cc61",
+          "stage": "amendment CLD-P05-AMEND-0001 (acknowledged 2026-10-14T10:28Z)"
         }
       ],
       "runtime_since_amendment": "Launched without --safe-mode, with CLAUDE_CODE_DISABLE_CLAUDE_MDS, CLAUDE_CODE_DISABLE_BUNDLED_SKILLS and DISABLE_AUTOUPDATER, a repository guard hook, WebFetch to any domain, explicit inbox deny rules and a read-only round inbox (runs/CLD-P05-LAUNCH-0001, isolation smoke run 8)."
@@ -91,8 +96,20 @@
       "github_login": "getm0ss1moving (transport only)",
       "input_commit": "27b6c6e8cb4ef0d2ac7f2feb2521be1426940d88",
       "packet_sha256": "db15a57c6355808e0faf90a6b2954c7f632bbe5b80071f069a905701d262ec78",
-      "state": "onboarding_complete; round inbox amendment pending receipt",
-      "independence_attestation": "Released readiness self-attestation; no transcript inspected; shared account with sandbox controls."
+      "state": "round-0 ruling prepared, not frozen; amendments COORDINATOR-REAL-ROLE-INBOX-0001 and AUTO-CIRCUIT-0001 delivered; restart with the reviewed V02 launcher and receipts pending",
+      "independence_attestation": "Released readiness self-attestation; no transcript inspected; shared account with sandbox controls.",
+      "amendments": [
+        {
+          "id": "COORDINATOR-REAL-ROLE-INBOX-0001",
+          "amendment_sha256": "48e391fbb4bd62624d668527e38b15f622c0b5565a330f62448164e2d316f5c4",
+          "run": "REAL-ROLE-INBOX-0001"
+        },
+        {
+          "id": "AUTO-CIRCUIT-0001-V02",
+          "amendment_sha256": "d48ab6d0f36a3408d3291242100e696807f1458a1bfa536b92c1fa9fcf1084e4",
+          "run": "AUTO-CIRCUIT-0001"
+        }
+      ]
     }
   ],
   "required_session_fields": [
