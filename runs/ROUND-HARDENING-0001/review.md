@@ -4,7 +4,7 @@ Base: Claude amendment commit 95322c5 (PR #28). Coordinator infrastructure revie
 no scientific adjudication or role independence claim.
 
 Fixed in this revision:
-- Explicit built-in file-tool denials for other inboxes and own-inbox writes,
+- Explicit built-in Read denials for other inboxes and own-inbox write denials,
   supplementing existing Bash filesystem rules without removing sender writes.
 - Reject symlink delivery routes and folders, traversal/duplicate release IDs
   before opening payloads, and mismatched actor/session/descriptors.
@@ -38,3 +38,22 @@ Added deterministic hook tests for direct, mirror and encoded known-project
 requests, external reading and the explicitly uncovered renamed-mirror case.
 All 70 unit tests pass. A second, sequential fresh synthetic smoke validates the
 repair; no two test-role sessions ran concurrently.
+
+## Runtime diagnosis and verified correction
+
+The second full smoke also failed B16 and the same five unattempted guard probes;
+its JSON is retained. A subsequent single-command synthetic diagnostic exposed
+`Operation not permitted` at the destination `.pending-*` directory. The broad
+foreign-inbox Write/Edit denials also blocked the intentional Bash write grant.
+Removing those conflicting denials, while retaining explicit foreign Read denials
+and own-inbox Write/Edit denials, allowed the same synthetic send to return two
+`delivered` outcomes. Receiver-side validation confirms both packets are valid;
+see `transport-diagnostic.json`. Sender metadata prechecks remain removed to
+preserve write-only semantics.
+
+Final validation: 70 unit tests and project validation passed. Both full smokes
+remain FAILED records because they used the intermediate conflicting settings
+and the model skipped guard probes. The targeted corrected-runtime transport
+passed; it does not replace a future full deployment smoke. No real scientific
+round or Claude automatic model-turn wake-up is claimed. Production launcher and
+amendment installation remain gated on a complete deployment test.

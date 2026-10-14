@@ -95,11 +95,7 @@
       "Read(//private/tmp/claude-501/*DeepSeek*/**)",
       "Read(//private/tmp/claude-501/*Claude-V02*/**)",
       "Read(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/rounds/EDA-0002/Codex-C05-TIMING-R2/**)",
-      "Edit(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/rounds/EDA-0002/Codex-C05-TIMING-R2/**)",
-      "Write(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/rounds/EDA-0002/Codex-C05-TIMING-R2/**)",
       "Read(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/rounds/EDA-0002/DeepSeek-V02-PHYSICAL/**)",
-      "Edit(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/rounds/EDA-0002/DeepSeek-V02-PHYSICAL/**)",
-      "Write(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/rounds/EDA-0002/DeepSeek-V02-PHYSICAL/**)",
       "Edit(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/rounds/EDA-0002/Claude-P05-TIMING/**)",
       "Write(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/rounds/EDA-0002/Claude-P05-TIMING/**)"
     ]

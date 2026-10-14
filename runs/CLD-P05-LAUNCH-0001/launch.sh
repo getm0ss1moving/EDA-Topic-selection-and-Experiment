@@ -37,7 +37,7 @@ INBOX="/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/rounds/EDA-0002/Claud
 AMENDMENT="$INBOX/COORDINATOR-AMENDMENT-0001"
 AMENDMENT_SHA256="4ea6204028f4c279f3f4f955af889a70fa74ce5da334c87dc844cf0d288b68c5"
 SETTINGS="$RUN_DIR/launch-settings.json"
-SETTINGS_SHA256="575bec03d6270fe523889e6f8e3c98844c2bd46df676e3703d7a2d56c7b041d9"
+SETTINGS_SHA256="6009cc41dd0d8f8c6714bb81227166d0490632b64a2d92221c790bb96a005cc9"
 # PreToolUse hook named in launch-settings.json; installed read-only outside every checkout.
 GUARD="/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Guards/Claude-P05-TIMING/repo_guard.py"
 GUARD_SHA256="46f2fe7386eab766af9a22638db8281d2c2231b0c8465f370d2e8c7f98708eee"

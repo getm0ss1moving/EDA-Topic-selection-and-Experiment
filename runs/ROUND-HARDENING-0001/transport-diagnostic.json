@@ -1,0 +1,48 @@
+{
+  "kind": "synthetic_runtime_transport_diagnostic",
+  "scientific_content": false,
+  "initial_error": "Operation not permitted at foreign inbox from-proposer/.pending-*",
+  "repair": "Remove foreign inbox Write/Edit deny rules that override the intended Bash delivery grant; preserve explicit Read denies and own-inbox write denies.",
+  "settings_sha256": "6009cc41dd0d8f8c6714bb81227166d0490632b64a2d92221c790bb96a005cc9",
+  "runtime_send_tool_is_error": false,
+  "receiver_validation": {
+    "challenger": {
+      "topic": "EDA-0002",
+      "role": "challenger",
+      "deliveries": [
+        {
+          "delivery": "DLV-20261014T053057Z-proposer-cb5bd2ad9281",
+          "path": "/private/tmp/eda-round-hardening-smoke-retest/iso-fixture-219c9d4f/rounds/EDA-0002/Codex-C05-TIMING-R2/from-proposer/DLV-20261014T053057Z-proposer-cb5bd2ad9281",
+          "from": "proposer",
+          "kind": "proposer-release",
+          "valid": true,
+          "problems": []
+        }
+      ],
+      "stray_entries_not_opened": []
+    },
+    "verifier": {
+      "topic": "EDA-0002",
+      "role": "verifier",
+      "deliveries": [
+        {
+          "delivery": "DLV-20261014T052618Z-challenger-67b6ee411b96",
+          "path": "/private/tmp/eda-round-hardening-smoke-retest/iso-fixture-219c9d4f/rounds/EDA-0002/DeepSeek-V02-PHYSICAL/from-challenger/DLV-20261014T052618Z-challenger-67b6ee411b96",
+          "from": "challenger",
+          "kind": "challenger-release",
+          "valid": true,
+          "problems": []
+        },
+        {
+          "delivery": "DLV-20261014T053057Z-proposer-cb5bd2ad9281",
+          "path": "/private/tmp/eda-round-hardening-smoke-retest/iso-fixture-219c9d4f/rounds/EDA-0002/DeepSeek-V02-PHYSICAL/from-proposer/DLV-20261014T053057Z-proposer-cb5bd2ad9281",
+          "from": "proposer",
+          "kind": "proposer-release",
+          "valid": true,
+          "problems": []
+        }
+      ],
+      "stray_entries_not_opened": []
+    }
+  }
+}

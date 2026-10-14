@@ -85,7 +85,7 @@ reporting successful end-to-end wake-up.
 ## Guard boundary
 
 Explicit tool-level denials complement the existing home-denying Bash sandbox:
-other roles' inboxes cannot be read/edited/written through built-in file tools;
+other roles' inboxes have explicit Read denials;
 the own inbox cannot be edited/written. The transmitter's narrowly scoped Bash
 write grants remain available. Keep these layers separate when testing.
 
@@ -99,3 +99,9 @@ material out of publicly indexed channels when confidentiality is required;
 historical publication cannot be undone by an access-rule edit. Accidental
 exposure must be recorded and scientific independence reassessed. Do not claim
 these transport checks provide adversarial isolation.
+
+Do not add broad foreign-inbox Write/Edit denial patterns on top of the scoped
+Bash `allowWrite` grants: runtime testing showed those patterns also blocked the
+transmitter's `.pending-*` creation. Keep explicit Read denial, own-inbox write
+denial, outside-working-directory file-tool controls and narrowly provisioned
+sender write grants. Test actual transmission whenever changing these layers.
