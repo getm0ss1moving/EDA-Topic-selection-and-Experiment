@@ -185,3 +185,15 @@ class RoundTransmitTests(unittest.TestCase):
             self.assertTrue(json.loads(stdout)['valid'])
         finally:
             if proc.poll() is None: proc.kill(); proc.wait()
+
+    def test_sender_does_not_inspect_write_only_destination(self):
+        from unittest.mock import patch
+        original = Path.is_symlink
+        destinations = [self.inbox[r] for r in ('challenger', 'verifier')]
+        def guarded(path):
+            if any(path == d or d in path.parents for d in destinations):
+                raise PermissionError('destination metadata is not readable by sender')
+            return original(path)
+        release = self.release('proposer')
+        with patch.object(Path, 'is_symlink', guarded):
+            self.assertEqual([r['status'] for r in t.send(self.config, release)], ['delivered', 'delivered'])

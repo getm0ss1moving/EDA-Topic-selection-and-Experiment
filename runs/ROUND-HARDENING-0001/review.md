@@ -22,3 +22,19 @@ wait process does not establish Claude background turn wake-up. No production
 session was resumed and no existing frozen policy bundle was modified. New code
 must be delivered as a new hashed amendment and acknowledged before deployment;
 launcher settings hash is updated in source only.
+
+## First runtime result and repair
+
+`isolation-smoke.json` is a failed full smoke, not a pass. Inbox read/write
+protection and all canary checks passed. B16 transmission failed; five guard
+probes were never attempted by the synthetic model, so guard runtime coverage is
+incomplete. The installed guard did record one blocked call.
+
+The sender-side symlink precheck conflicted with write-only destination grants:
+metadata inspection itself requires a read. Removed that precheck at the sender;
+coordinator-provisioned destinations remain trusted and receiver-side symlink
+rejection remains enforced. A regression test prohibits sender metadata reads.
+Added deterministic hook tests for direct, mirror and encoded known-project
+requests, external reading and the explicitly uncovered renamed-mirror case.
+All 70 unit tests pass. A second, sequential fresh synthetic smoke validates the
+repair; no two test-role sessions ran concurrently.

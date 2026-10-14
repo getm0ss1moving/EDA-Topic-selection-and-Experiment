@@ -90,7 +90,9 @@ def verification_text(payload):
 
 def write_delivery(entry, topic, sender, recipient, releases, adjudicates):
     """Create <recipient inbox>/from-<sender>/DLV-... atomically; never lists the target folder."""
-    target = no_symlinks(Path(entry['roles'][recipient]['inbox']) / f'from-{sender}')
+    # Coordinator provisions trusted destination directories. Sender is write-only:
+    # do not stat/list/read them here; receiver rejects symlink routes before reading.
+    target = Path(entry['roles'][recipient]['inbox']) / f'from-{sender}'
     name = f"DLV-{utc('%Y%m%dT%H%M%SZ')}-{sender}-{releases[0][0].name[4:16]}"
     record = {'schema': 1, 'delivery_id': name, 'topic': topic, 'kind': KINDS[(sender, recipient)],
               'from': {'role': sender, 'actor_id': entry['roles'][sender]['actor_id'],
