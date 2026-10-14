@@ -77,6 +77,9 @@ or dependency change, and route allegations to the verifier before the proposer.
 First-pass forecast masking still requires semantic inspection; a filesystem
 watcher cannot establish scientific readiness or independence.
 
+Inside a round, `scripts/round_transmit.py` moves releases between local role inboxes
+without GitHub (`docs/AUTO-ROUND.md`); the publication above then happens after the round.
+
 This command-based transport is available now. It does not install a daemon or
 claim that queues are continuously watched. An unattended deployment must pin
 registered actor queue roots and provide a transport-only service identity;
