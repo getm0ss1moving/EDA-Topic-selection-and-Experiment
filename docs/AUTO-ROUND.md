@@ -61,3 +61,41 @@ All roles share one OS account. Sandbox write and read grants are the boundary; 
 catch misrouting and accidents, not a malicious actor. The transmitter runs only when a role
 starts it: there is no daemon. A role's runtime must allow background commands for
 inbox waiting; otherwise its operator resumes it when a delivery arrives.
+
+## Reliable waiting and remaining runtime boundary
+
+Prefer `wait --seen-file <OWN_OUTBOX>/processed-deliveries.json` instead of a
+lexicographic `--after` cursor. Initialize that file to `[]`, then atomically
+append each delivery ID only after processing its valid frozen packet. Never
+write receipts into an inbox. On a restart, pass the same receipt file: an
+unacknowledged delivery is replayed rather than lost. If a turn fails between
+output freeze and acknowledgement, use the immutable release ID to avoid a second
+scientific revision. Each new wait reloads receipts; run at most one consumer per
+role. Invalid deliveries do not wake research and remain visible through `check`.
+
+The wait process returning is not proof that an LLM session wakes. A successful
+Python delivery/wait test establishes transport only. Until the destination
+runtime has acknowledged a real delivery, label model wake-up unverified. A
+stopped CLI cannot be revived by its own background child. Resume the registered
+session from its reviewed launcher when necessary, preserving its inbox and
+receipt file; never launch a second session or blindly type into an active one.
+A platform leader should record the delivery ID and role-authored receipt before
+reporting successful end-to-end wake-up.
+
+## Guard boundary
+
+Explicit tool-level denials complement the existing home-denying Bash sandbox:
+other roles' inboxes cannot be read/edited/written through built-in file tools;
+the own inbox cannot be edited/written. The transmitter's narrowly scoped Bash
+write grants remain available. Keep these layers separate when testing.
+
+A repository/account keyword guard cannot identify an arbitrary renamed public
+copy. More keywords cannot close that gap. Readonly files under a shared OS user
+also cannot authenticate a malicious sender. Strong isolation requires separate
+OS users/VMs or containers, coordinator-controlled delivery and credentials, and
+no shared writable policy. Even that does not eliminate unknown online copies
+while unrestricted external reading is allowed. Therefore keep unadjudicated
+material out of publicly indexed channels when confidentiality is required;
+historical publication cannot be undone by an access-rule edit. Accidental
+exposure must be recorded and scientific independence reassessed. Do not claim
+these transport checks provide adversarial isolation.

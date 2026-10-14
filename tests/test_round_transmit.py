@@ -130,3 +130,58 @@ class RoundTransmitTests(unittest.TestCase):
         got = t.wait(self.config, self.inbox['verifier'], timeout=0)
         self.assertEqual(got['status'], 'delivered')
         self.assertEqual(t.wait(self.config, self.inbox['verifier'], got['delivery'], timeout=0)['status'], 'timeout')
+
+    def test_delivery_symlink_is_not_followed(self):
+        t.send(self.config, self.release('challenger'))
+        src = Path(self.deliveries('verifier')[0]['path'])
+        alias = src.parent / src.name.replace('-challenger-', '-proposer-')
+        alias.symlink_to(src, target_is_directory=True)
+        state = t.scan(t.load_config(self.config), self.inbox['verifier'])
+        self.assertEqual(len(state['deliveries']), 1)
+        self.assertTrue(state['stray_entries_not_opened'])
+
+    def test_traversal_id_is_rejected_before_payload_read(self):
+        t.send(self.config, self.release('challenger'))
+        d = Path(self.deliveries('verifier')[0]['path'])
+        p = d / 'DELIVERY.json'; p.chmod(0o644)
+        m = json.loads(p.read_text()); m['releases'][0]['id'] = '../../private'
+        p.write_text(json.dumps(m))
+        problems = self.deliveries('verifier')[0]['problems']
+        self.assertEqual(problems, ['Invalid or duplicate release IDs; payload not opened'])
+
+    def test_identity_tamper_is_invalid(self):
+        t.send(self.config, self.release('challenger'))
+        d = Path(self.deliveries('verifier')[0]['path'])
+        p = d / 'DELIVERY.json'; p.chmod(0o644)
+        m = json.loads(p.read_text()); m['from']['session_id'] = 'impostor'
+        p.write_text(json.dumps(m))
+        self.assertFalse(self.deliveries('verifier')[0]['valid'])
+        self.assertEqual(t.wait(self.config, self.inbox['verifier'], timeout=0)['status'], 'timeout')
+
+    def test_acknowledged_ids_do_not_skip_same_second_deliveries(self):
+        from unittest.mock import patch
+        with patch.object(t, 'utc', side_effect=lambda fmt='%Y-%m-%dT%H:%M:%SZ':
+                          '20261014T120000Z' if fmt == '%Y%m%dT%H%M%SZ' else '2026-10-14T12:00:00Z'):
+            t.send(self.config, self.release('challenger', 'first'))
+            t.send(self.config, self.release('proposer', 'second'))
+        deliveries = self.deliveries('verifier')
+        seen = self.root / 'seen.json'
+        seen.write_text(json.dumps([deliveries[-1]['delivery']]))
+        out = t.wait(self.config, self.inbox['verifier'], timeout=0, seen_file=seen)
+        self.assertEqual(out['delivery'], deliveries[0]['delivery'])
+
+    def test_wait_wakes_after_atomic_delivery_without_a_model(self):
+        import subprocess
+        import sys
+        seen = self.root / 'seen.json'; seen.write_text('[]')
+        proc = subprocess.Popen([sys.executable, str(Path(t.__file__)), 'wait',
+                                 '--config', str(self.config), '--inbox', str(self.inbox['verifier']),
+                                 '--seen-file', str(seen), '--timeout', '5', '--interval', '1'],
+                                stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+        try:
+            t.send(self.config, self.release('challenger'))
+            stdout, stderr = proc.communicate(timeout=8)
+            self.assertEqual(proc.returncode, 0, stderr)
+            self.assertTrue(json.loads(stdout)['valid'])
+        finally:
+            if proc.poll() is None: proc.kill(); proc.wait()

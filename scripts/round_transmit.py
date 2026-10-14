@@ -44,6 +44,13 @@ SUB = re.compile(r'SUB-[0-9a-f]{64}')
 DLV = re.compile(r'DLV-\d{8}T\d{6}Z-(proposer|challenger|verifier)-[0-9a-f]{12}')
 
 
+def no_symlinks(path):
+    path = Path(path).absolute()
+    if any(p.is_symlink() for p in [path, *path.parents]):
+        raise ValueError('Symlink in delivery path')
+    return path
+
+
 def utc(fmt='%Y-%m-%dT%H:%M:%SZ'):
     return datetime.datetime.now(datetime.timezone.utc).strftime(fmt)
 
@@ -83,7 +90,7 @@ def verification_text(payload):
 
 def write_delivery(entry, topic, sender, recipient, releases, adjudicates):
     """Create <recipient inbox>/from-<sender>/DLV-... atomically; never lists the target folder."""
-    target = Path(entry['roles'][recipient]['inbox']) / f'from-{sender}'
+    target = no_symlinks(Path(entry['roles'][recipient]['inbox']) / f'from-{sender}')
     name = f"DLV-{utc('%Y%m%dT%H%M%SZ')}-{sender}-{releases[0][0].name[4:16]}"
     record = {'schema': 1, 'delivery_id': name, 'topic': topic, 'kind': KINDS[(sender, recipient)],
               'from': {'role': sender, 'actor_id': entry['roles'][sender]['actor_id'],
@@ -181,7 +188,10 @@ def recipient_of(cfg, inbox):
 def validate(path, topic, entry, sender, recipient):
     """Return problems with one delivery; an empty list means it may be opened."""
     try:
-        rec = json.loads((path / 'DELIVERY.json').read_bytes())
+        path = no_symlinks(path)
+        rec = json.loads(rs.regular(path / 'DELIVERY.json'))
+        if not isinstance(rec, dict) or rec.get('schema') != 1:
+            return ['Invalid delivery schema']
         if recipient not in ROUTES.get(sender, ()):
             return [f'{sender} may not deliver to the {recipient}']
         problems = []
@@ -189,7 +199,15 @@ def validate(path, topic, entry, sender, recipient):
             problems.append('delivery record does not match its folder, topic or route')
         if rec.get('from', {}).get('role') != sender or rec.get('to', {}).get('role') != recipient:
             problems.append('delivery record names another sender or recipient')
+        for key, actor_role in [('from', sender), ('to', recipient)]:
+            if rec.get(key, {}).get('actor_id') != entry['roles'][actor_role]['actor_id']:
+                problems.append('delivery actor identity mismatch')
+        if rec.get('from', {}).get('session_id') != entry['roles'][sender]['session_id']:
+            problems.append('delivery session identity mismatch')
         ids = [r.get('id') for r in rec.get('releases', [])]
+        if (not ids or any(not isinstance(sid, str) or not SUB.fullmatch(sid) for sid in ids)
+                or len(ids) != len(set(ids))):
+            return ['Invalid or duplicate release IDs; payload not opened']
         if {p.name for p in path.iterdir()} != {'DELIVERY.json', *ids}:
             problems.append('unexpected or missing entries')
         roles, texts = [], {}
@@ -198,6 +216,9 @@ def validate(path, topic, entry, sender, recipient):
             want = entry['roles'][m['role']]
             if (m['topic'], m['actor_id'], m['session_id']) != (topic, want['actor_id'], want['session_id']):
                 problems.append(f'{sid}: not from the configured {m["role"]}')
+            claimed = rec['releases'][len(roles)]
+            if (claimed.get('role'), claimed.get('actor_id')) != (m['role'], m['actor_id']):
+                problems.append('release descriptor identity mismatch')
             roles.append(m['role'])
             texts[sid] = verification_text(payload)
         if sender in ('proposer', 'challenger') and roles != [sender]:
@@ -223,17 +244,17 @@ def validate(path, topic, entry, sender, recipient):
 
 def scan(cfg, inbox):
     topic, entry, role = recipient_of(cfg, inbox)
-    root = Path(inbox).absolute()
+    root = no_symlinks(inbox)
     found, stray = [], []
     allowed = {f'from-{s}' for s in ROLES if role in ROUTES[s]}
     for sub in sorted(p for p in root.iterdir() if p.name.startswith('from-')):
-        if sub.name not in allowed:
+        if sub.is_symlink() or not sub.is_dir() or sub.name not in allowed:
             stray.append(sub.name)  # Never opened: no sender may write here.
             continue
         for d in sorted(sub.iterdir()):
             if d.name.startswith('.pending-'):
                 continue
-            if not DLV.fullmatch(d.name):
+            if d.is_symlink() or not d.is_dir() or not DLV.fullmatch(d.name):
                 stray.append(f'{sub.name}/{d.name}')
                 continue
             problems = validate(d, topic, entry, sub.name[5:], role)
@@ -243,17 +264,27 @@ def scan(cfg, inbox):
     return {'topic': topic, 'role': role, 'deliveries': found, 'stray_entries_not_opened': stray}
 
 
-def wait(config, inbox, after='', timeout=540, interval=10):
+def wait(config, inbox, after='', timeout=540, interval=10, seen_file=None):
+    if timeout < 0 or interval <= 0:
+        raise ValueError('timeout must be nonnegative and interval positive')
+    seen = set()
+    if seen_file is not None:
+        data = json.loads(rs.regular(seen_file))
+        if not isinstance(data, list) or any(not isinstance(x, str) or not DLV.fullmatch(x) for x in data):
+            raise ValueError('seen-file must be a JSON array of acknowledged delivery IDs')
+        seen = set(data)
     cfg = load_config(config)
     deadline = time.monotonic() + timeout
     while True:
         state = scan(cfg, inbox)
-        new = [d for d in state['deliveries'] if d['delivery'] > after]
+        new = [d for d in state['deliveries'] if d['valid'] and
+               (d['delivery'] not in seen if seen_file is not None else
+                d['delivery'] != after and (not after or d['delivery'][4:20] >= after[4:20]))]
         if new:
             return {'status': 'delivered', **new[0], 'stray_entries_not_opened': state['stray_entries_not_opened']}
         if time.monotonic() >= deadline:
             return {'status': 'timeout', 'after': after}
-        time.sleep(interval)
+        time.sleep(min(interval, max(0, deadline - time.monotonic())))
 
 
 def main():
@@ -268,6 +299,7 @@ def main():
     w.add_argument('--config', required=True)
     w.add_argument('--inbox', required=True)
     w.add_argument('--after', default='', help='last delivery ID already handled')
+    w.add_argument('--seen-file', help='own-outbox JSON array of processed IDs; preferred over --after')
     w.add_argument('--timeout', type=int, default=540)
     w.add_argument('--interval', type=int, default=10)
     c = sub.add_parser('check', help='list your inbox deliveries with their validity')
@@ -278,7 +310,7 @@ def main():
         if a.command == 'send':
             out = send(a.config, a.release, a.adjudicates, a.ledger)
         elif a.command == 'wait':
-            out = wait(a.config, a.inbox, a.after, a.timeout, a.interval)
+            out = wait(a.config, a.inbox, a.after, a.timeout, a.interval, a.seen_file)
         else:
             out = scan(load_config(a.config), a.inbox)
     except (ValueError, OSError) as e:
