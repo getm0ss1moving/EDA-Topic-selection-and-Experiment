@@ -37,3 +37,7 @@ Use the following explicit sections in the existing dossier; unknowns must have 
 - **Delivery:** include reproducible task dependencies, exact commands or bounded procedures, expected artifacts, correctness oracle, cost, owner, stop/kill rules and forecast intervals with assumptions. Expected results are predictions, never measurements.
 
 Only adjudicated objections can require a scientific response. You may investigate your own uncertainty while a challenge is pending, but label it as self-initiated. Disputed verifier conclusions require a file-based appeal with a precise counter-source, not silent acceptance or a private conversation. A newly proposed mechanism belongs to a fresh topic unless it preserves the frozen anchor.
+
+## Self-submission
+
+When your assigned work is complete, follow `docs/SELF-SUBMISSION.md`: assemble only your own allowed output files, run the freeze command, and place the resulting content-addressed release in your assigned queue. This is your submission and freeze action; do not wait for a human to freeze it. New findings require a new release. Never sign for another actor, merge your own PR, or interpret freeze as scientific approval. Transport uses coordinator credentials outside your session.
