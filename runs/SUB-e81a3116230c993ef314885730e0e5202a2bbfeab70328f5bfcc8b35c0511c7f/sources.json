@@ -1,0 +1,110 @@
+[
+  {
+    "id": "C05-S01",
+    "title": "OpenSTA DmpCeff.cc",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/e01d3f163f483f233db00410b6515a767a6ca03b/dcalc/DmpCeff.cc",
+    "source_type": "official source code",
+    "publication_date": "2024-05-30 (packet metadata; not separately dated)",
+    "retrieved_at_utc": "2026-10-14T00:29:04.500493+00:00",
+    "access_level": "full",
+    "locator": "Physical source lines 1545\u20131585, 1630\u20131649; setCeffAlgorithm and gateModelRd",
+    "supported_claim_ids": [
+      "OBJ-001"
+    ],
+    "limitations": "Read and hashed, not executed. Web extracted line numbers differ from physical lines; physical lines checked via direct retrieval.",
+    "version": "e01d3f163f483f233db00410b6515a767a6ca03b",
+    "sha256": "edfadea5d90b929d42eb8aec739f0ca54f8e76d129584ea4a1c8e70b6599d186",
+    "license": "GPL-3.0 repository; no source copy published"
+  },
+  {
+    "id": "C05-S02",
+    "title": "A Fast Approach for Static Timing Analysis Covering All PVT Corners",
+    "url": "https://www.eecg.utoronto.ca/~najm/papers/dac11-sari.pdf",
+    "source_type": "author-hosted paper",
+    "publication_date": "2011",
+    "retrieved_at_utc": "2026-10-14T00:29:04.500493+00:00",
+    "access_level": "full",
+    "locator": "\u00a73 pp.778\u2013779; \u00a76.1 pp.780\u2013781, equations 8\u201311 and startpoint-stability discussion",
+    "supported_claim_ids": [
+      "CLM-005",
+      "CLM-015"
+    ],
+    "limitations": "Targeted original-source inspection; no reimplementation or commercial performance transfer.",
+    "doi": "10.1145/2024724.2024899"
+  },
+  {
+    "id": "C05-S03",
+    "title": "Parameterized Timing Analysis with General Delay Models and Arbitrary Variation Sources",
+    "url": "https://www.eecg.utoronto.ca/~najm/papers/dac08-khaled.pdf",
+    "source_type": "author-hosted paper",
+    "publication_date": "2008",
+    "retrieved_at_utc": "2026-10-14T00:29:04.500493+00:00",
+    "access_level": "full",
+    "locator": "\u00a72 and \u00a73 pp.404\u2013405, three properties of F and equations 4\u201312",
+    "supported_claim_ids": [
+      "CLM-005",
+      "CLM-026"
+    ],
+    "limitations": "Nonlinear model bounds do not establish equivalence to characterized NLDM/DMP implementation."
+  },
+  {
+    "id": "C05-S04",
+    "title": "On the signal bounding problem in timing analysis",
+    "url": "https://research.ibm.com/publications/on-the-signal-bounding-problem-in-timing-analysis",
+    "source_type": "author institution publication record",
+    "publication_date": "2001-01-01 (institution record)",
+    "retrieved_at_utc": "2026-10-14T00:29:04.500493+00:00",
+    "access_level": "abstract",
+    "locator": "Abstract, sentences on latest-arrival slew selection and bounding signals",
+    "supported_claim_ids": [
+      "CLM-015"
+    ],
+    "limitations": "Independently found outside proposer ledger; full method not inspected. Lead only; no duplicate or unsoundness verdict."
+  },
+  {
+    "id": "C05-P01",
+    "title": "forecast.json",
+    "url": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/codex-c05-r1b-24ea3f3223f6/shared-proposer-output/candidates/EDA-0002/forecast.json",
+    "source_type": "frozen proposer artifact",
+    "publication_date": "unknown",
+    "retrieved_at_utc": "2026-10-14T00:29:04.500493+00:00",
+    "access_level": "full",
+    "locator": "assumptions[1], CPC-share upper-bound assertion",
+    "supported_claim_ids": [
+      "OBJ-002"
+    ],
+    "limitations": "Actor-authored released material; not independent corroboration.",
+    "sha256": "1dacccdb35df1a7a702bb992698631dcaded574ee5841876c41775604290cd52"
+  },
+  {
+    "id": "C05-P02",
+    "title": "tasklist.md",
+    "url": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/codex-c05-r1b-24ea3f3223f6/shared-proposer-output/candidates/EDA-0002/tasklist.md",
+    "source_type": "frozen proposer artifact",
+    "publication_date": "unknown",
+    "retrieved_at_utc": "2026-10-14T00:29:04.500493+00:00",
+    "access_level": "full",
+    "locator": "EXP-003 step 1 and K3; EXP-002b; EXP-005",
+    "supported_claim_ids": [
+      "OBJ-001",
+      "OBJ-002"
+    ],
+    "limitations": "Actor-authored released material; not independent corroboration.",
+    "sha256": "bb1f2e6c4ee63273b45b78041a921bbc77fca09e6a4263b48cec27150905d0ef"
+  },
+  {
+    "id": "C05-P03",
+    "title": "experiment-plan.md",
+    "url": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/codex-c05-r1b-24ea3f3223f6/shared-proposer-output/candidates/EDA-0002/experiment-plan.md",
+    "source_type": "frozen proposer artifact",
+    "publication_date": "unknown",
+    "retrieved_at_utc": "2026-10-14T00:29:04.500493+00:00",
+    "access_level": "full",
+    "locator": "Guardrails G3/G4/G7; Pilot and H1 success criterion",
+    "supported_claim_ids": [
+      "OBJ-003"
+    ],
+    "limitations": "Actor-authored released material; not independent corroboration.",
+    "sha256": "829f14704acf39676638fb183e57a6cde299b91edb7977e81dc63f981e2b4fd3"
+  }
+]

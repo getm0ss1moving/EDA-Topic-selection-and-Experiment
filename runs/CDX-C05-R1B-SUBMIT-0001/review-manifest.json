@@ -1,0 +1,29 @@
+{
+  "actor_id": "Codex-C05-TIMING-R2",
+  "session_id": "/root/codex_c05_timing_r2",
+  "role": "challenger",
+  "topic": "EDA-0002",
+  "input_commit": "24ea3f3223f6f5171e96711a4df90204e4f2248c",
+  "packet_sha256": "6d77b6e3cc08db57c84c0335ca1c40a029be50290c2bac7d7266016a28a89003",
+  "policy_amendment_commit": "2f0be51a0fdbd17389002caad856361e00d4f228",
+  "completed_at_utc": "2026-10-14T00:29:04.500493+00:00",
+  "status": "review_complete_pending_independent_verification",
+  "requested_model": "gpt-6-astra",
+  "requested_effort": "low",
+  "observable_model_effort": "unverified; no changes",
+  "limitations": [
+    "Policy-only isolation and ambient user instructions disclosed previously",
+    "No experiments executed; supplied finite tests not independently verified",
+    "Source/contest coverage incomplete",
+    "Full project validator absent; transport must validate"
+  ],
+  "files": {
+    "readiness.json": "b584a7be9a0fdf933a15d00a6b1dc493c2329b5ed93afce5bc1f15bb48581da2",
+    "challenges.md": "d8bc02511388d0df382a2b8f6cb4498083a868734f0a5861265557d35c0386e3",
+    "sources.json": "e91fe8ed4148ff7ab6b8e3458a04e36fce25c9b4e44b672668a7f13ddef2734e",
+    "search-log.md": "7e0d00f6ddd27652ab436b59b5e8b60bf56bd09c4b48f07c542e0e5d30b6f2eb"
+  },
+  "frozen_release": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/codex-successor-27977cb/Codex-C05-TIMING-R2/r1b-review/submissions/SUB-e81a3116230c993ef314885730e0e5202a2bbfeab70328f5bfcc8b35c0511c7f",
+  "submission_manifest_sha256": "e81a3116230c993ef314885730e0e5202a2bbfeab70328f5bfcc8b35c0511c7f",
+  "freeze_validation": "Supplied trusted freeze script completed and internally verified all release hashes and allowlist. No scientific approval implied."
+}
