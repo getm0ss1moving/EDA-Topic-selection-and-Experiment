@@ -33,6 +33,9 @@ OUTBOX="/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/physical-release-d4
 RESULTS="/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/physical-release-d437c2f66090/Claude-P05-TIMING/lab-results"
 # Read-only round inbox (docs/AUTO-ROUND.md); the verifier writes its from-verifier folder.
 INBOX="/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/rounds/EDA-0002/Claude-P05-TIMING"
+# Hashed policy amendment the session must acknowledge (runs/CLD-P05-AMEND-0001).
+AMENDMENT="$INBOX/COORDINATOR-AMENDMENT-0001"
+AMENDMENT_SHA256="4ea6204028f4c279f3f4f955af889a70fa74ce5da334c87dc844cf0d288b68c5"
 SETTINGS="$RUN_DIR/launch-settings.json"
 SETTINGS_SHA256="a4cd4f1da062b221ee1b0b34a3c760c87fa12b9bee6aa1faaaf3be98c1b65516"
 # PreToolUse hook named in launch-settings.json; installed read-only outside every checkout.
@@ -105,6 +108,21 @@ ok "read-only lab results $RESULTS"
 [ "$(stat -f '%Lp' "$INBOX")" = "700" ] || die "round inbox must be mode 700"
 [ ! -e "$INBOX/from-challenger" ] || die "the proposer inbox must not have a from-challenger folder"
 ok "read-only round inbox $INBOX"
+[ "$(shasum -a 256 "$AMENDMENT/AMENDMENT.json" 2>/dev/null | awk '{print $1}')" = "$AMENDMENT_SHA256" ] || \
+  die "AMENDMENT.json missing or differs from the pinned $AMENDMENT_SHA256"
+python3 -I - "$AMENDMENT" <<'EOF' || die "amendment contents do not match AMENDMENT.json"
+import hashlib, json, sys
+from pathlib import Path
+root = Path(sys.argv[1])
+listed = json.loads((root/'AMENDMENT.json').read_text())['files']
+present = {str(p.relative_to(root)) for p in root.rglob('*') if p.is_file() or p.is_symlink()}
+bad = [n for n, h in listed.items() if hashlib.sha256((root/n).read_bytes()).hexdigest() != h]
+extra = sorted(present - set(listed) - {'AMENDMENT.json'})
+writable = [str(p) for p in [root, *root.rglob('*')] if p.stat().st_mode & 0o222]
+if bad or extra or writable or any((root/n).is_symlink() for n in present):
+    sys.exit(f'mismatch={bad} extra={extra} writable={writable}')
+EOF
+ok "policy amendment $AMENDMENT_SHA256: all listed hashes match, no extra files, read-only"
 
 [ -f "$SETTINGS" ] || die "settings file missing: $SETTINGS"
 [ "$(shasum -a 256 "$SETTINGS" | awk '{print $1}')" = "$SETTINGS_SHA256" ] || \
