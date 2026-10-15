@@ -1,0 +1,21 @@
+{
+  "role": "verifier",
+  "reviewed_proposer_release": "SUB-be8b1d040fc4856fb38e189557fdbca28beaa904fcfdb148ddc05666e3c9d8cf",
+  "adjudicated_challenger_releases": [
+    "SUB-5d47dfbc9c38c726d5892ca2972adb974de68113b05a8b611481a1c3c2938b3c"
+  ],
+  "next_action": "revise",
+  "decision": "revise",
+  "batch_round": 2,
+  "reason": "Revise source-only: identify actual integration/capability/cost contribution relative to independently grounded strongest methods; if none survives, recommend parking. Do not repeat identical C/B3 as physical treatments.",
+  "dossier_digest": "88928fc2f43a65ef24a8d6b1ca4c57a90b2f1ccb052f7427e36d19c954ff76af",
+  "current_objection_ids": [
+    "OBJ-001",
+    "OBJ-002"
+  ],
+  "physical_advancement": false,
+  "historical_reference_ids": [
+    "OBJ-001"
+  ],
+  "mechanical_repair": "Explicit scoped historical OBJ-001 ruling added; current substantive verdict unchanged."
+}

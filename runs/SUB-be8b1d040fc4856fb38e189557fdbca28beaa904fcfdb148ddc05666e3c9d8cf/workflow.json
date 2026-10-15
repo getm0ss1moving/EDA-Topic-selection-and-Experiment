@@ -1,0 +1,159 @@
+{
+  "role": "proposer",
+  "topic": "EDA-0005",
+  "round": 2,
+  "phase": "research",
+  "assessment": "unresolved",
+  "recommendation": "Independent review of negative C/B3 equivalence and repaired source map; no physical pilot until useful anchored delta exists.",
+  "actor_id": "ChatGPT-P04-PHYSICAL-EDA-0005",
+  "session_id": "07ec73dc-1bf7-4f5c-999f-b589460c1e5e",
+  "input_commit": "f68c1492c05be3fac5622deac4bb479eabf957de",
+  "packet_sha256": "b9b3d8bc704ac6b8b70e549417c704d5f4a0f3d966bdfe6c33bc9af9790bdef6",
+  "tasklist_sha256": "4376dd760bd00e5cd53db25f40161acf3ce9298dc5883fa75270471ea9b3482e",
+  "experiment_consent": "not_issued_unresolved_dependencies",
+  "abandonment_consent": "not_issued",
+  "coverage": {
+    "duplicate_prior_art": "unresolved_with_repaired_primary_sources",
+    "mechanism": "fully_specified_no_novelty_inferred",
+    "composition": "negative_equivalence_result_no_distinct_treatment",
+    "demand": "unresolved",
+    "industry_gap": "no_absence_claim",
+    "headroom": "conditional_bound_only",
+    "contests": "indices_reopened_winner_methods_unresolved",
+    "experiments": "conditional_plan_only",
+    "cost": "ledger_defined_no_local_physical_measurement"
+  },
+  "provenance_checks": {
+    "policy_files": 31,
+    "policy_hash_mismatches": 0,
+    "historical_release_files_checked": [
+      3,
+      7,
+      12
+    ],
+    "historical_hash_mismatches": 0,
+    "historical_approval_inherited": false,
+    "own_previous_files": 12,
+    "current_shared_release_files": [
+      7,
+      3
+    ],
+    "all_manifest_mismatches": 0
+  },
+  "execution": {
+    "source_reading": true,
+    "analytical_fixture": "5 deterministic cases, 216 identical budget prefixes; 4096 restricted matching cases, 262144 assignment checks",
+    "physical_runs": 0,
+    "training_runs": 0,
+    "paid_provider_calls": 0,
+    "new_compute_allocation": false,
+    "scientific_messages_sent": 0,
+    "scientific_subagents_spawned": 0,
+    "checkout_accessed": true,
+    "checkout_access_scope": "Initial common governance reads and filename-only instruction listing before reading job prompt; no scientific dossier/foreign harness/private content. Thereafter assigned packet/external sources only."
+  },
+  "validation_scope": "Trusted standalone freeze and own-release JSON/source-link checks. Full repository validation is coordinator publication duty per job; no false full-checkout pass.",
+  "release_output": "release/",
+  "submission_queue": "submissions/",
+  "source_log": "search-log.md",
+  "source_records": "sources.json",
+  "model_provenance": "Assigned proposer gpt-6.1-sol/high per JOB; backend not independently audited.",
+  "local_checks": [
+    "12 allowed role-owned files; all JSON parses; unique source IDs/CSV rows match",
+    "Source references and tasklist SHA-256 validated before freeze",
+    "Trusted freeze/verify only; full repository validation delegated by job contract",
+    "No consent, physical result or independent approval invented"
+  ],
+  "batch_round": 2,
+  "reviewed_previous_proposer_release": "SUB-5dc96f7c6ba6ea7f2d1cf5940be29d9cd08da069e1694ce3b7822e6c4f6e4243",
+  "reviewed_verifier_release": "SUB-13665529cc044fd6c0fbcc0952a154cf8a2bba4ae1d47ebd80ce3c1a0bd81011",
+  "adjudicated_challenger_release": "SUB-5596d53194873abeed4cccdb0d140e212c4ec8bf398a28f1c76c16800085c45b",
+  "response_inventory": {
+    "OBJ-001": "accept_valid; specify equal operations; negative result not a novel advantage"
+  },
+  "analytical_checks": {
+    "kind": "synthetic_analytical_check_not_EDA",
+    "cases": {
+      "conflict": {
+        "events": 41,
+        "candidate_move_calls": 6,
+        "option_generation_calls": 6,
+        "compound_realization_calls": 5,
+        "incumbent": {
+          "x": "AC",
+          "value": 50
+        },
+        "trace_sha256": "098c19fee8088f9c76be2572621ac7ef2866d1c172f910c6ae3c849f9a7d988c"
+      },
+      "shared": {
+        "events": 42,
+        "candidate_move_calls": 6,
+        "option_generation_calls": 6,
+        "compound_realization_calls": 6,
+        "incumbent": {
+          "x": "AB",
+          "value": 55
+        },
+        "trace_sha256": "f84d43762bc741ddbfe31b41d3b27aa33f65bacd1e126ca5dec3042d73220ca5"
+      },
+      "nonconflict": {
+        "events": 42,
+        "candidate_move_calls": 6,
+        "option_generation_calls": 6,
+        "compound_realization_calls": 6,
+        "incumbent": {
+          "x": "AB",
+          "value": 55
+        },
+        "trace_sha256": "6a36444337e60625044685831ac46300fdd9abb6a798fe2811c7b930ab8642a8"
+      },
+      "realization_failure": {
+        "events": 41,
+        "candidate_move_calls": 6,
+        "option_generation_calls": 6,
+        "compound_realization_calls": 5,
+        "incumbent": {
+          "x": "BC",
+          "value": 45
+        },
+        "trace_sha256": "228a13c8bf3326c40e441d58d4be040a9eb8e49805dbdfadf2382f80f9a839e7"
+      },
+      "net_split": {
+        "events": 40,
+        "candidate_move_calls": 6,
+        "option_generation_calls": 6,
+        "compound_realization_calls": 4,
+        "incumbent": {
+          "x": "BC",
+          "value": 45
+        },
+        "trace_sha256": "96451bb82319a0edf13755d69bbb2d85b2b66c035eb5d2c0aaba3767cc5b47bf"
+      }
+    },
+    "budget_prefix_comparisons": 216,
+    "trace_mismatches": 0,
+    "matching_cases": 4096,
+    "incidence_matrices": 512,
+    "raw_assignment_predicate_checks": 262144,
+    "hall_mismatches": 0,
+    "physical_tool_calls": 0,
+    "elapsed_seconds": 0.09657,
+    "python": "3.9.6"
+  },
+  "output_paths": [
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0005/ChatGPT-P04-PHYSICAL-EDA-0005/jobs/7c160221-42f2-4b7a-a695-852779c062aa/release/contest-audit.md",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0005/ChatGPT-P04-PHYSICAL-EDA-0005/jobs/7c160221-42f2-4b7a-a695-852779c062aa/release/direction-control.json",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0005/ChatGPT-P04-PHYSICAL-EDA-0005/jobs/7c160221-42f2-4b7a-a695-852779c062aa/release/experiment-plan.md",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0005/ChatGPT-P04-PHYSICAL-EDA-0005/jobs/7c160221-42f2-4b7a-a695-852779c062aa/release/forecast.json",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0005/ChatGPT-P04-PHYSICAL-EDA-0005/jobs/7c160221-42f2-4b7a-a695-852779c062aa/release/industry-gap.md",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0005/ChatGPT-P04-PHYSICAL-EDA-0005/jobs/7c160221-42f2-4b7a-a695-852779c062aa/release/prior-art.csv",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0005/ChatGPT-P04-PHYSICAL-EDA-0005/jobs/7c160221-42f2-4b7a-a695-852779c062aa/release/proposal.md",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0005/ChatGPT-P04-PHYSICAL-EDA-0005/jobs/7c160221-42f2-4b7a-a695-852779c062aa/release/responses.md",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0005/ChatGPT-P04-PHYSICAL-EDA-0005/jobs/7c160221-42f2-4b7a-a695-852779c062aa/release/search-log.md",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0005/ChatGPT-P04-PHYSICAL-EDA-0005/jobs/7c160221-42f2-4b7a-a695-852779c062aa/release/sources.json",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0005/ChatGPT-P04-PHYSICAL-EDA-0005/jobs/7c160221-42f2-4b7a-a695-852779c062aa/release/tasklist.md",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0005/ChatGPT-P04-PHYSICAL-EDA-0005/jobs/7c160221-42f2-4b7a-a695-852779c062aa/release/workflow.json"
+  ],
+  "source_retrieval_artifacts": "Public PDFs/text/rendered pages in private /tmp scratch only; no paper copies released.",
+  "completed_analytical_script_sha256": "ddac205cb2c71c952fb76c68fcd694ffac715abd287122450500c79a6c03e4de"
+}

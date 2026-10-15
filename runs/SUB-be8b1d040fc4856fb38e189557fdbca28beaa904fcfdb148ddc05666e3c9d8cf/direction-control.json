@@ -1,0 +1,80 @@
+{
+  "state": "continue",
+  "anchor": {
+    "problem": "Post-CTS datapath placement moves can induce hold repairs competing for legal physical resources.",
+    "engineering_user": "Implementation engineer deciding bounded datapath cell relocations after CTS and initial global route.",
+    "downstream_need": "Improve final extracted setup slack without new hold, physical or functional failures while charging total iteration cost.",
+    "causal_mechanism": "Represent action-conditioned concrete hold-repair alternatives with shared coverage and conflicting occupancy/connection footprints; select and validate placement plus compensating repair jointly before retention.",
+    "mechanism_invariants": [
+      "Fixed initial clock cells/connectivity, die, constraints and technology; no retiming or functional logic change.",
+      "Primary intervention remains bounded datapath cell relocation; repairs are declared buffer chains and bounded legalization.",
+      "Repair options are keyed to the full candidate placement/checkpoint and invalidated after changes.",
+      "Joint occupancy and net-split constraints include shared-buffer coverage; scalar counts are insufficient.",
+      "Whole-design min/max and final physical validation remain mandatory; table exactness is not signoff.",
+      "Charge generation, all failed checks, rollback, rerouting and fallback under matched budgets."
+    ],
+    "forbidden_pivots": [
+      "Claiming generic agents, whitespace reservation, rollback, MILP or hold-aware contest extensions as the contribution.",
+      "Replacing the anchored interface with script automation, a generic timing predictor, pin-access residual compilation or unrelated clock/logic optimization.",
+      "Optimizing HPWL/GR proxy alone or weakening hold/DRC/functional safety to claim success."
+    ]
+  },
+  "penalties": {
+    "combination_drift": {
+      "score": 0,
+      "rationale": "Anchor unchanged; explicit negative equivalence result replaces an unsupported comparator claim. No new mechanism or unsupported assembly was introduced.",
+      "evidence_refs": [
+        "S06",
+        "S13",
+        "S14",
+        "S22"
+      ]
+    },
+    "demand_drift": {
+      "score": 0,
+      "rationale": "Same post-CTS implementation user and final extracted setup/hold/physical endpoint; no proxy pivot or fabricated demand.",
+      "evidence_refs": [
+        "S12",
+        "S15",
+        "S20"
+      ]
+    },
+    "total": 0
+  },
+  "revision_assessment": {
+    "preserves_problem": true,
+    "preserves_engineering_need": true,
+    "preserves_causal_mechanism": true,
+    "changes": [
+      "Classify B3 as strongest equivalence control and specify identical schedules, ties and stops.",
+      "Add executed deterministic negative trace and complete costs; retract benefit beyond identical B3 as unsupported.",
+      "Read official padding slides and author thesis; strengthen negative prior-art map."
+    ],
+    "reason": "Anchor-preserving specification and disconfirmation; no different scientific direction introduced."
+  },
+  "abandonment": {
+    "decision_id": null,
+    "grounds": [],
+    "rationale": "No joint signature and no exhaustive novelty/dead-end finding. Continue current adjudication; park if no useful anchored delta survives subsequent review.",
+    "evidence_refs": [],
+    "consents": {
+      "proposer": {
+        "session_id": null,
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      },
+      "challenger": {
+        "session_id": null,
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      }
+    },
+    "successor_topic_id": null,
+    "resurrection_conditions": [
+      "Evidence of a concrete useful interaction or integration/cost capability beyond faithful matched ordinary composition.",
+      "Realistic demand/oracles/rights/resources and dual consent before physical execution."
+    ]
+  }
+}

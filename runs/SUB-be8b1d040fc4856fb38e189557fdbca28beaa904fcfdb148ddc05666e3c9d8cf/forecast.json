@@ -1,0 +1,25 @@
+{
+  "kind": "forecast_not_measurement",
+  "metric": "paired post-DR extracted worst setup slack difference",
+  "unit": "ns",
+  "baseline_source": "Proposed same-revision native and equally informed conventional composition; no local baseline measurement",
+  "direction": "higher subject to hold/physical/cost guardrails",
+  "pessimistic": null,
+  "base": null,
+  "optimistic": null,
+  "confidence": null,
+  "assumptions": [
+    "Representative post-CTS inputs exhibit action-induced competing repair choices.",
+    "Useful interaction survives faithful ordinary joint composition and equal charged EDA budgets.",
+    "Option generation/invalidations remain affordable.",
+    "Final detailed routing preserves a useful improvement."
+  ],
+  "calibration_plan": "Measure baseline-only paired variance and total call costs after a real allocation; preregister thresholds/sample size before candidate outcomes. Numerical intervals remain null until justified.",
+  "qualitative_position": "Negative operational result: current matched B3/C is identical; no positive advantage forecast is justified. Anchor remains a research question; physical utility and incidence unknown.",
+  "not_measurements": [
+    "Constructed fixture scores30,25,20 are dimensionless, not nanoseconds.",
+    "The +0.02ns screening threshold is provisional policy, not a predicted gain.",
+    "Five synthetic operation traces and 216 budget prefixes are implementation/derivation checks, not runtime or PPA measurements."
+  ],
+  "readiness": "not_experiment_ready"
+}

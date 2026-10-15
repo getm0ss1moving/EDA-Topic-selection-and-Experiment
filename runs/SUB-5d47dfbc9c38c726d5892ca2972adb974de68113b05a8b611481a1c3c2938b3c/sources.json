@@ -1,0 +1,109 @@
+{
+  "sources": [
+    {
+      "id": "C2-S01",
+      "title": "OpenROAD RepairHold.cc",
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/8da6ac250b0349c346d1abed7c2c43107f4ff6f7/src/rsz/src/RepairHold.cc",
+      "source_type": "code",
+      "publication_date": "unknown",
+      "retrieved_utc": "2026-10-15T11:31:59.693983+00:00",
+      "locator": "repairEndHold lines 535-564, 598-648",
+      "access_level": "full",
+      "supported_claim_ids": [
+        "C2-OBS-S01"
+      ],
+      "supported_claim": "Shared violating loads and setup guard with journal rollback exist.",
+      "limitations": "Pinned commit; selected function inspected, not a complete optimizer audit."
+    },
+    {
+      "id": "C2-S02",
+      "title": "HyPAS: A Hybrid Optimization Framework for Placement and Sizing Co-Optimization",
+      "url": "https://cedar.cse.cuhk.edu.hk/cedar-research-accepted-at-dac-2026-hypas-a-hybrid-optimization-framework-for-placement-and-sizing-co-optimization/",
+      "source_type": "author institutional abstract",
+      "publication_date": "2026-08-17",
+      "retrieved_utc": "2026-10-15T11:31:59.694206+00:00",
+      "locator": "Abstract and Paper Details",
+      "access_level": "abstract",
+      "supported_claim_ids": [
+        "C2-OBS-S02"
+      ],
+      "supported_claim": "Authors describe OpenROAD discrete repair plus DREAMPlace gradient refinement and a GNN timing-power surrogate.",
+      "limitations": "Search-index primary-page text accessible; direct open returned Internal Error. Full paper/code and claimed gains unverified; no identical hold-option mechanism inferred."
+    },
+    {
+      "id": "C2-S03",
+      "title": "repair_timing effort policy issue 10900",
+      "url": "https://github.com/The-OpenROAD-Project/OpenROAD/issues/10900",
+      "source_type": "primary developer discussion",
+      "publication_date": "2026-07-13",
+      "retrieved_utc": "2026-10-15T11:31:59.694208+00:00",
+      "locator": "Additional Context; July 14-15 comments",
+      "access_level": "full",
+      "supported_claim_ids": [
+        "C2-OBS-S03"
+      ],
+      "supported_claim": "Developers discuss costly hold repair and distinction from setup-effort policy.",
+      "limitations": "Anecdotal developer observations, explicitly one-design calibration; no measured placement-conflict incidence or transferable runtime estimate."
+    },
+    {
+      "id": "C2-S04",
+      "title": "ICCAD 2026 Problems",
+      "url": "https://www.iccad-contest.org/2026/Problems.html",
+      "source_type": "official contest",
+      "publication_date": "2026",
+      "retrieved_utc": "2026-10-15T11:31:59.694209+00:00",
+      "locator": "Problems A-C lines 34-61",
+      "access_level": "full",
+      "supported_claim_ids": [
+        "C2-OBS-S04"
+      ],
+      "supported_claim": "Current Problem C is FloorSet, not the previous incremental-placement task.",
+      "limitations": "Dynamic index, not full rules or winner methods; no proof of absence of other contests."
+    },
+    {
+      "id": "C2-S05",
+      "title": "2025 ICCAD Problem C invited paper",
+      "url": "https://ieeexplore.ieee.org/abstract/document/11240847",
+      "source_type": "publisher abstract",
+      "publication_date": "2025-11-20",
+      "retrieved_utc": "2026-10-15T11:31:59.694210+00:00",
+      "locator": "Abstract; DOI 10.1109/ICCAD66269.2025.11240847",
+      "access_level": "abstract",
+      "supported_claim_ids": [
+        "C2-OBS-S05"
+      ],
+      "supported_claim": "Combined sizing, buffering and relocation with replayable ECO and legality is a supplied contest task.",
+      "limitations": "Author PDF direct open failed; search-index excerpt not treated as full paper inspection."
+    },
+    {
+      "id": "C2-S06",
+      "title": "CUHK 2025 ICCAD first-place announcement",
+      "url": "https://www.cse.cuhk.edu.hk/news/achievements/iccad2025/",
+      "source_type": "institutional winner announcement",
+      "publication_date": "2025-12-01",
+      "retrieved_utc": "2026-10-15T11:31:59.694212+00:00",
+      "locator": "First-place announcement paragraph",
+      "access_level": "abstract",
+      "supported_claim_ids": [
+        "C2-OBS-S06"
+      ],
+      "supported_claim": "Institution reports winning Problem C using a discrete/differentiable hybrid.",
+      "limitations": "Search-index text only; direct open failed. Announcement supports reported identity/approach, not fair performance comparison."
+    },
+    {
+      "id": "C2-S07",
+      "title": "Multi-Corner Delay Padding presentation",
+      "url": "https://www.aspdac.com/aspdac2026/archive/pdf/3E-2.pdf",
+      "source_type": "official presentation",
+      "publication_date": "2026",
+      "retrieved_utc": "2026-10-15T11:31:59.694213+00:00",
+      "locator": "Direct PDF endpoint",
+      "access_level": "metadata",
+      "supported_claim_ids": [
+        "C2-OBS-S07"
+      ],
+      "supported_claim": "Lead retained for method-level audit.",
+      "limitations": "Direct open failed. No fresh method confirmation; proposer selected-slide reading remains attributed."
+    }
+  ]
+}
