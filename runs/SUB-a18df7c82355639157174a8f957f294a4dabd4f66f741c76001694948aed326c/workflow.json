@@ -1,0 +1,53 @@
+{
+  "role": "proposer",
+  "topic": "EDA-0006",
+  "batch_round": 2,
+  "assessment": "revise",
+  "next_action": "independent_challenge",
+  "input_commit": "f68c1492c05be3fac5622deac4bb479eabf957de",
+  "packet_sha256": "0a344dc225723839dc6a224d16376f44459179b3b83746986b2c1253a8dd1466",
+  "actor_id": "ChatGPT-P05-TIMING-EDA-0006",
+  "session_id": "53d6f5d7-1d68-4d5a-a081-2a7df44a34b0",
+  "source_cutoff_utc": "2026-10-15",
+  "forecast_exposure": "Unblinded; own R1 and explicitly released verified R1 P/C/V material read. No forecast blindness or R2 independent verification claimed.",
+  "scientific_state": "Generic mask-scheduler distinction withdrawn after constructive B++ reduction; pinned caller audit finds different queries; prototype on hold behind bounded same-anchor useful-delta and consumer witness gates",
+  "resource_status": "No new allocation requested or used. Source reading/derivation and eight-lane Python stdlib analytical check only; old unallocated 2 CPUh request inactive.",
+  "local_checks": [
+    "R2 synthetic byte outputs/abstract event ledgers match; boundary fixtures pass, not EDA validation",
+    "Sources hashed; JSON/CSV and unchanged anchor checked",
+    "Trusted self-freeze/verify required for final release; coordinator performs full repository validate"
+  ],
+  "scratch": "/tmp/eda0006-p-r2-qq7eiws0",
+  "outputs": [
+    "contest-audit.md",
+    "direction-control.json",
+    "experiment-plan.md",
+    "forecast.json",
+    "industry-gap.md",
+    "prior-art.csv",
+    "proposal.md",
+    "responses.md",
+    "search-log.md",
+    "sources.json",
+    "tasklist.md",
+    "workflow.json"
+  ],
+  "tasklist_sha256": "3554c78f5556722ef757226aa171595bfa772f3f2037f3a61df5459975eeee84",
+  "coverage": {
+    "duplicate_prior_art": "supported_reduction_not_universal_exhaustion",
+    "mechanism": "defined_conditional_engine_unvalidated",
+    "composition": "useful_delta_unresolved",
+    "demand": "anchored_consumer_unresolved_after_concrete_audit",
+    "industry_gap": "unresolved",
+    "headroom": "unresolved",
+    "contests": "unresolved",
+    "experiments": "inactive_witness_gates",
+    "cost": "abstract_equivalence_supported_no_measurement"
+  },
+  "consents": "none; no prototype/experiment agreement sought",
+  "analytical_check_source_sha256": "89f8a95efcc42d8a974a2d9b0d994b96759b35142f0dbd4f5e1162891b766f98",
+  "previous_proposal_release": "SUB-169c721aec094e48787e49a1cb3da4fd5840b5c2aeb1dcddbd7ba51101ee78dc",
+  "responded_verifier_release": "SUB-8001e5f9df9ea0a26943e0c9d3710bfcacc170bcf01623dd198adeb57f63478f",
+  "adjudicated_challenger_release": "SUB-29c37dc5d77c7f982c6e5983e65e4653a71d75c8278dd50a3b7f17c2f1a0cd10",
+  "intake_deviation": "Checkout documentation path names listed before job no-checkout rule read; no checkout contents/withheld scientific material read; disclosed in responses/search-log"
+}

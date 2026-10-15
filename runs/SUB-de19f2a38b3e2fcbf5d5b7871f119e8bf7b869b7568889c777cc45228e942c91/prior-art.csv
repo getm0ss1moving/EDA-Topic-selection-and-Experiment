@@ -1,0 +1,6 @@
+source_id,task,mechanism,assumptions,overlap,distinction_or_limit
+C201,conditional execution,context intersection and equal-value union,complete lifted state,abstract scheduler reduction,no timer adapter equivalence constants proved
+C202,VT alternative scoring,temporary edit and undo plus driver arrival,single candidate journal,real alternatives,different output contract
+C203,size-up scoring,prepared local delay estimate,immutable arc state,real sizing choices,not full endpoint evaluation
+C204,post-placement optimization,contest scoring and constraints,ideal-clock data paths,positive bounded-scope precedent,no per-alternative full-vector consumer
+C205,delay calculation,closed-form effective capacitance,approximate changed numerical model,adjacent speed-fidelity alternative,not unchanged-kernel exactness
