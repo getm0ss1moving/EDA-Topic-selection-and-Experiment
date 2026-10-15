@@ -1,0 +1,12 @@
+[
+  {
+    "recorded_at_utc": "2026-10-15T15:31:00.443733+00:00",
+    "kind": "GitHub PR creation TLS handshake timeout",
+    "topic": "EDA-0007",
+    "cycle": 3,
+    "preservation": "Durable branch and frozen outputs retained; next invocation checked existing PRs before retry.",
+    "resolution": "Existing head PR search returned empty, canonical publish-pending created PR65 once.",
+    "pr": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/65",
+    "role_misconduct": "not established; coordinator transport event"
+  }
+]

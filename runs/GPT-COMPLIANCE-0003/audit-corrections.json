@@ -1,0 +1,10 @@
+[
+  {
+    "new_audit": "SUB-1d05911d8e35b90fb0e6991b4d15e1cb7ed17fe0859b2a1a7316091a6778695c",
+    "old_audit": "SUB-33fe6d9202a429f9b3b661bce0892c1c7585a8d8d4863ea8a5aef6a7d798f6a8",
+    "pr": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/60",
+    "reason": "Audit author corrected Markdown P/C column alignment; judgments and workflow byte-identical; own activity ledger records presentation correction.",
+    "transport_note": "First temporary checkout read refused macOS /var symlink before push; resolved scratch path and retried.",
+    "transport_status": "updated PR60; original audit retained"
+  }
+]

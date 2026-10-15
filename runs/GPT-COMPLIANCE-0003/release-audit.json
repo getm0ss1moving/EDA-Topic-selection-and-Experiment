@@ -1,27 +1,1278 @@
 {
   "completed_cycles": {
-    "D04": 0,
-    "D05": 0
+    "D04": 4,
+    "D05": 4
   },
   "input_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
-  "jobs": [],
+  "jobs": [
+    {
+      "cycle": 1,
+      "domain": "D05",
+      "job_sha256": "c0c72500ed5ae82172ff499d229941494d67425b67465820da58b7feb96bc6d2",
+      "prompt_sha256": "c485a9dfd8513839fd2d4a293ab8e066b78572b04b749e8fee8ffb2318f9d68b",
+      "purpose": "research",
+      "released_inputs": [
+        {
+          "manifest_sha256": "e0cef865c5877d07c062554b61e073024cb0f6ed28b7ef45f31c19d7a5cb335a",
+          "release_id": "SUB-e0cef865c5877d07c062554b61e073024cb0f6ed28b7ef45f31c19d7a5cb335a",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "f1c9f13a026274de52f4988e533f9ccc40d00088efdf163f11c15edfebd76c47",
+          "release_id": "SUB-f1c9f13a026274de52f4988e533f9ccc40d00088efdf163f11c15edfebd76c47",
+          "role": "verifier"
+        },
+        {
+          "manifest_sha256": "373c606bec3ab48f9ff6871096ef98823c923e7a784f7873c19f1ddea7ca1b1c",
+          "release_id": "SUB-373c606bec3ab48f9ff6871096ef98823c923e7a784f7873c19f1ddea7ca1b1c",
+          "role": "challenger"
+        }
+      ],
+      "requested": {
+        "effort": "high",
+        "model": "gpt-6.1-sol"
+      },
+      "role": "proposer",
+      "topic": "EDA-0007"
+    },
+    {
+      "cycle": 1,
+      "domain": "D05",
+      "job_sha256": "e553e0b8fa294783d6c85a78e7c53ab1e933e4223ebaaa1e2037e2b9ce24aaff",
+      "prompt_sha256": "3ed06ee570fa3ee9144162934540c2ed5c49a7f9322646e89eda9e0045e66e2b",
+      "purpose": "research",
+      "released_inputs": [
+        {
+          "manifest_sha256": "e0cef865c5877d07c062554b61e073024cb0f6ed28b7ef45f31c19d7a5cb335a",
+          "release_id": "SUB-e0cef865c5877d07c062554b61e073024cb0f6ed28b7ef45f31c19d7a5cb335a",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "f1c9f13a026274de52f4988e533f9ccc40d00088efdf163f11c15edfebd76c47",
+          "release_id": "SUB-f1c9f13a026274de52f4988e533f9ccc40d00088efdf163f11c15edfebd76c47",
+          "role": "verifier"
+        },
+        {
+          "manifest_sha256": "8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f",
+          "release_id": "SUB-8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f",
+          "role": "proposer"
+        }
+      ],
+      "requested": {
+        "effort": "low",
+        "model": "gpt-6-astra"
+      },
+      "role": "challenger",
+      "topic": "EDA-0007"
+    },
+    {
+      "cycle": 1,
+      "domain": "D05",
+      "job_sha256": "f3f4ecec3ae5a2985098942aed5a367208540e19a4b788d1af6f42c925373bd6",
+      "prompt_sha256": "15982e0969222c4cdb53ed63e92ebeae09217e2999f70e5411f230455790c090",
+      "purpose": "research",
+      "released_inputs": [
+        {
+          "manifest_sha256": "e0cef865c5877d07c062554b61e073024cb0f6ed28b7ef45f31c19d7a5cb335a",
+          "release_id": "SUB-e0cef865c5877d07c062554b61e073024cb0f6ed28b7ef45f31c19d7a5cb335a",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "373c606bec3ab48f9ff6871096ef98823c923e7a784f7873c19f1ddea7ca1b1c",
+          "release_id": "SUB-373c606bec3ab48f9ff6871096ef98823c923e7a784f7873c19f1ddea7ca1b1c",
+          "role": "challenger"
+        },
+        {
+          "manifest_sha256": "f1c9f13a026274de52f4988e533f9ccc40d00088efdf163f11c15edfebd76c47",
+          "release_id": "SUB-f1c9f13a026274de52f4988e533f9ccc40d00088efdf163f11c15edfebd76c47",
+          "role": "verifier"
+        },
+        {
+          "manifest_sha256": "8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f",
+          "release_id": "SUB-8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "e3407b956910db0e7d4c3dbf46ac184bccf23d68e66ef738a10e0696ef980338",
+          "release_id": "SUB-e3407b956910db0e7d4c3dbf46ac184bccf23d68e66ef738a10e0696ef980338",
+          "role": "challenger"
+        }
+      ],
+      "requested": {
+        "effort": "low",
+        "model": "gpt-6.1-sol"
+      },
+      "role": "verifier",
+      "topic": "EDA-0007"
+    },
+    {
+      "cycle": 2,
+      "domain": "D05",
+      "job_sha256": "cb729bdf00ef5fd8ddc1133cc3e3f919a28a28b60f2dd5e6cc25090767387322",
+      "prompt_sha256": "51341667ec5619b770aecd44170e1ebcf82e339ed9a7135f85befac4a72dd4fe",
+      "purpose": "research",
+      "released_inputs": [
+        {
+          "manifest_sha256": "e0cef865c5877d07c062554b61e073024cb0f6ed28b7ef45f31c19d7a5cb335a",
+          "release_id": "SUB-e0cef865c5877d07c062554b61e073024cb0f6ed28b7ef45f31c19d7a5cb335a",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "f1c9f13a026274de52f4988e533f9ccc40d00088efdf163f11c15edfebd76c47",
+          "release_id": "SUB-f1c9f13a026274de52f4988e533f9ccc40d00088efdf163f11c15edfebd76c47",
+          "role": "verifier"
+        },
+        {
+          "manifest_sha256": "373c606bec3ab48f9ff6871096ef98823c923e7a784f7873c19f1ddea7ca1b1c",
+          "release_id": "SUB-373c606bec3ab48f9ff6871096ef98823c923e7a784f7873c19f1ddea7ca1b1c",
+          "role": "challenger"
+        },
+        {
+          "manifest_sha256": "1d2e343cab1599577d312783ff91916761e548b2d4e1d7749b3071f38416b8ca",
+          "release_id": "SUB-1d2e343cab1599577d312783ff91916761e548b2d4e1d7749b3071f38416b8ca",
+          "role": "verifier"
+        },
+        {
+          "manifest_sha256": "e3407b956910db0e7d4c3dbf46ac184bccf23d68e66ef738a10e0696ef980338",
+          "release_id": "SUB-e3407b956910db0e7d4c3dbf46ac184bccf23d68e66ef738a10e0696ef980338",
+          "role": "challenger"
+        },
+        {
+          "manifest_sha256": "8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f",
+          "release_id": "SUB-8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f",
+          "release_id": "SUB-8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f",
+          "role": "proposer"
+        }
+      ],
+      "requested": {
+        "effort": "high",
+        "model": "gpt-6.1-sol"
+      },
+      "role": "proposer",
+      "topic": "EDA-0007"
+    },
+    {
+      "cycle": 2,
+      "domain": "D05",
+      "job_sha256": "054cf93226e417636c6a1939761e8a18fe094f437d8c7a0156ebf3f8551a5551",
+      "prompt_sha256": "0a6ed352a67aefc2a0f256e6d0e4b45b254a2ac860200b0a49b8d30e44e9e6e7",
+      "purpose": "research",
+      "released_inputs": [
+        {
+          "manifest_sha256": "e0cef865c5877d07c062554b61e073024cb0f6ed28b7ef45f31c19d7a5cb335a",
+          "release_id": "SUB-e0cef865c5877d07c062554b61e073024cb0f6ed28b7ef45f31c19d7a5cb335a",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "f1c9f13a026274de52f4988e533f9ccc40d00088efdf163f11c15edfebd76c47",
+          "release_id": "SUB-f1c9f13a026274de52f4988e533f9ccc40d00088efdf163f11c15edfebd76c47",
+          "role": "verifier"
+        },
+        {
+          "manifest_sha256": "ebe8adb725c37ba6e164d487febc9021dddc8e911cf79e56ada9e9d2bd5c5ace",
+          "release_id": "SUB-ebe8adb725c37ba6e164d487febc9021dddc8e911cf79e56ada9e9d2bd5c5ace",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "1d2e343cab1599577d312783ff91916761e548b2d4e1d7749b3071f38416b8ca",
+          "release_id": "SUB-1d2e343cab1599577d312783ff91916761e548b2d4e1d7749b3071f38416b8ca",
+          "role": "verifier"
+        },
+        {
+          "manifest_sha256": "8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f",
+          "release_id": "SUB-8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "e3407b956910db0e7d4c3dbf46ac184bccf23d68e66ef738a10e0696ef980338",
+          "release_id": "SUB-e3407b956910db0e7d4c3dbf46ac184bccf23d68e66ef738a10e0696ef980338",
+          "role": "challenger"
+        }
+      ],
+      "requested": {
+        "effort": "low",
+        "model": "gpt-6-astra"
+      },
+      "role": "challenger",
+      "topic": "EDA-0007"
+    },
+    {
+      "cycle": 2,
+      "domain": "D05",
+      "job_sha256": "29fd74bf0e589858b574daafa54737d38e4cc531af4b7e9b332724230b2d2db8",
+      "prompt_sha256": "d2205187ac76d90871a3be8214f62eff845543b45004f8565d95f4dda0331811",
+      "purpose": "research",
+      "released_inputs": [
+        {
+          "manifest_sha256": "e0cef865c5877d07c062554b61e073024cb0f6ed28b7ef45f31c19d7a5cb335a",
+          "release_id": "SUB-e0cef865c5877d07c062554b61e073024cb0f6ed28b7ef45f31c19d7a5cb335a",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "373c606bec3ab48f9ff6871096ef98823c923e7a784f7873c19f1ddea7ca1b1c",
+          "release_id": "SUB-373c606bec3ab48f9ff6871096ef98823c923e7a784f7873c19f1ddea7ca1b1c",
+          "role": "challenger"
+        },
+        {
+          "manifest_sha256": "f1c9f13a026274de52f4988e533f9ccc40d00088efdf163f11c15edfebd76c47",
+          "release_id": "SUB-f1c9f13a026274de52f4988e533f9ccc40d00088efdf163f11c15edfebd76c47",
+          "role": "verifier"
+        },
+        {
+          "manifest_sha256": "ebe8adb725c37ba6e164d487febc9021dddc8e911cf79e56ada9e9d2bd5c5ace",
+          "release_id": "SUB-ebe8adb725c37ba6e164d487febc9021dddc8e911cf79e56ada9e9d2bd5c5ace",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "00eaf4c6d47db0f8dcb907fbf5d70719e7d1534a10660a8a5caa480ef6662ad9",
+          "release_id": "SUB-00eaf4c6d47db0f8dcb907fbf5d70719e7d1534a10660a8a5caa480ef6662ad9",
+          "role": "challenger"
+        },
+        {
+          "manifest_sha256": "399339b3dae4b21aa15b73db0d76cdf065e86a7be3ec7a36f60f6246f91637cd",
+          "release_id": "SUB-399339b3dae4b21aa15b73db0d76cdf065e86a7be3ec7a36f60f6246f91637cd",
+          "role": "verifier"
+        },
+        {
+          "manifest_sha256": "8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f",
+          "release_id": "SUB-8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "1d2e343cab1599577d312783ff91916761e548b2d4e1d7749b3071f38416b8ca",
+          "release_id": "SUB-1d2e343cab1599577d312783ff91916761e548b2d4e1d7749b3071f38416b8ca",
+          "role": "verifier"
+        }
+      ],
+      "requested": {
+        "effort": "low",
+        "model": "gpt-6.1-sol"
+      },
+      "role": "verifier",
+      "topic": "EDA-0007"
+    },
+    {
+      "cycle": 3,
+      "domain": "D05",
+      "job_sha256": "7bc1041bdceb751f6de00d1f2e38c307ab388557f287b32c80ab36fff0577b43",
+      "prompt_sha256": "51341667ec5619b770aecd44170e1ebcf82e339ed9a7135f85befac4a72dd4fe",
+      "purpose": "research",
+      "released_inputs": [
+        {
+          "manifest_sha256": "e0cef865c5877d07c062554b61e073024cb0f6ed28b7ef45f31c19d7a5cb335a",
+          "release_id": "SUB-e0cef865c5877d07c062554b61e073024cb0f6ed28b7ef45f31c19d7a5cb335a",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "f1c9f13a026274de52f4988e533f9ccc40d00088efdf163f11c15edfebd76c47",
+          "release_id": "SUB-f1c9f13a026274de52f4988e533f9ccc40d00088efdf163f11c15edfebd76c47",
+          "role": "verifier"
+        },
+        {
+          "manifest_sha256": "373c606bec3ab48f9ff6871096ef98823c923e7a784f7873c19f1ddea7ca1b1c",
+          "release_id": "SUB-373c606bec3ab48f9ff6871096ef98823c923e7a784f7873c19f1ddea7ca1b1c",
+          "role": "challenger"
+        },
+        {
+          "manifest_sha256": "13a40498da3f7157d34b903152f0d7531070e03db61f3a487ab5338f52e29a4a",
+          "release_id": "SUB-13a40498da3f7157d34b903152f0d7531070e03db61f3a487ab5338f52e29a4a",
+          "role": "verifier"
+        },
+        {
+          "manifest_sha256": "00eaf4c6d47db0f8dcb907fbf5d70719e7d1534a10660a8a5caa480ef6662ad9",
+          "release_id": "SUB-00eaf4c6d47db0f8dcb907fbf5d70719e7d1534a10660a8a5caa480ef6662ad9",
+          "role": "challenger"
+        },
+        {
+          "manifest_sha256": "8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f",
+          "release_id": "SUB-8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "ebe8adb725c37ba6e164d487febc9021dddc8e911cf79e56ada9e9d2bd5c5ace",
+          "release_id": "SUB-ebe8adb725c37ba6e164d487febc9021dddc8e911cf79e56ada9e9d2bd5c5ace",
+          "role": "proposer"
+        }
+      ],
+      "requested": {
+        "effort": "high",
+        "model": "gpt-6.1-sol"
+      },
+      "role": "proposer",
+      "topic": "EDA-0007"
+    },
+    {
+      "cycle": 3,
+      "domain": "D05",
+      "job_sha256": "0f57b3224a70efd5ae936e5a2303af0760885881eb83c7757452d33439d1c709",
+      "prompt_sha256": "0a6ed352a67aefc2a0f256e6d0e4b45b254a2ac860200b0a49b8d30e44e9e6e7",
+      "purpose": "research",
+      "released_inputs": [
+        {
+          "manifest_sha256": "e0cef865c5877d07c062554b61e073024cb0f6ed28b7ef45f31c19d7a5cb335a",
+          "release_id": "SUB-e0cef865c5877d07c062554b61e073024cb0f6ed28b7ef45f31c19d7a5cb335a",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "f1c9f13a026274de52f4988e533f9ccc40d00088efdf163f11c15edfebd76c47",
+          "release_id": "SUB-f1c9f13a026274de52f4988e533f9ccc40d00088efdf163f11c15edfebd76c47",
+          "role": "verifier"
+        },
+        {
+          "manifest_sha256": "43ec8c256a5116bee2790bbbb147ed089d72731f6051d10a6bbe479ffb2578b9",
+          "release_id": "SUB-43ec8c256a5116bee2790bbbb147ed089d72731f6051d10a6bbe479ffb2578b9",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "13a40498da3f7157d34b903152f0d7531070e03db61f3a487ab5338f52e29a4a",
+          "release_id": "SUB-13a40498da3f7157d34b903152f0d7531070e03db61f3a487ab5338f52e29a4a",
+          "role": "verifier"
+        },
+        {
+          "manifest_sha256": "ebe8adb725c37ba6e164d487febc9021dddc8e911cf79e56ada9e9d2bd5c5ace",
+          "release_id": "SUB-ebe8adb725c37ba6e164d487febc9021dddc8e911cf79e56ada9e9d2bd5c5ace",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "00eaf4c6d47db0f8dcb907fbf5d70719e7d1534a10660a8a5caa480ef6662ad9",
+          "release_id": "SUB-00eaf4c6d47db0f8dcb907fbf5d70719e7d1534a10660a8a5caa480ef6662ad9",
+          "role": "challenger"
+        }
+      ],
+      "requested": {
+        "effort": "low",
+        "model": "gpt-6-astra"
+      },
+      "role": "challenger",
+      "topic": "EDA-0007"
+    },
+    {
+      "cycle": 3,
+      "domain": "D05",
+      "job_sha256": "89ab4a9961af2c7762b7e9d1a402ed7ed20c60020430211e16e0302ab35acd93",
+      "prompt_sha256": "d2205187ac76d90871a3be8214f62eff845543b45004f8565d95f4dda0331811",
+      "purpose": "research",
+      "released_inputs": [
+        {
+          "manifest_sha256": "e0cef865c5877d07c062554b61e073024cb0f6ed28b7ef45f31c19d7a5cb335a",
+          "release_id": "SUB-e0cef865c5877d07c062554b61e073024cb0f6ed28b7ef45f31c19d7a5cb335a",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "373c606bec3ab48f9ff6871096ef98823c923e7a784f7873c19f1ddea7ca1b1c",
+          "release_id": "SUB-373c606bec3ab48f9ff6871096ef98823c923e7a784f7873c19f1ddea7ca1b1c",
+          "role": "challenger"
+        },
+        {
+          "manifest_sha256": "f1c9f13a026274de52f4988e533f9ccc40d00088efdf163f11c15edfebd76c47",
+          "release_id": "SUB-f1c9f13a026274de52f4988e533f9ccc40d00088efdf163f11c15edfebd76c47",
+          "role": "verifier"
+        },
+        {
+          "manifest_sha256": "43ec8c256a5116bee2790bbbb147ed089d72731f6051d10a6bbe479ffb2578b9",
+          "release_id": "SUB-43ec8c256a5116bee2790bbbb147ed089d72731f6051d10a6bbe479ffb2578b9",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "261aace737adca3c4e2a7d350c74b3613e49885585048bace6c03f3272213ab7",
+          "release_id": "SUB-261aace737adca3c4e2a7d350c74b3613e49885585048bace6c03f3272213ab7",
+          "role": "challenger"
+        },
+        {
+          "manifest_sha256": "399339b3dae4b21aa15b73db0d76cdf065e86a7be3ec7a36f60f6246f91637cd",
+          "release_id": "SUB-399339b3dae4b21aa15b73db0d76cdf065e86a7be3ec7a36f60f6246f91637cd",
+          "role": "verifier"
+        },
+        {
+          "manifest_sha256": "573a2812a0f0eb6551328cf55dc2994ad483dbe36cd866830b34f06dd959ff52",
+          "release_id": "SUB-573a2812a0f0eb6551328cf55dc2994ad483dbe36cd866830b34f06dd959ff52",
+          "role": "verifier"
+        },
+        {
+          "manifest_sha256": "ebe8adb725c37ba6e164d487febc9021dddc8e911cf79e56ada9e9d2bd5c5ace",
+          "release_id": "SUB-ebe8adb725c37ba6e164d487febc9021dddc8e911cf79e56ada9e9d2bd5c5ace",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "13a40498da3f7157d34b903152f0d7531070e03db61f3a487ab5338f52e29a4a",
+          "release_id": "SUB-13a40498da3f7157d34b903152f0d7531070e03db61f3a487ab5338f52e29a4a",
+          "role": "verifier"
+        }
+      ],
+      "requested": {
+        "effort": "low",
+        "model": "gpt-6.1-sol"
+      },
+      "role": "verifier",
+      "topic": "EDA-0007"
+    },
+    {
+      "cycle": 1,
+      "domain": "D04",
+      "job_sha256": "540afdd1da4edeebb3726cfe7f2a3da4853f591f728e25cd84a428cd39279309",
+      "prompt_sha256": "071f3d4bedae9c7da4ce0fd43b37f3ac12b84348e5235e6779b10ec4c53b9166",
+      "purpose": "research",
+      "released_inputs": [
+        {
+          "manifest_sha256": "1c2deaff2701f8108c4f9d6fdca3298698c7aa4a8273f9e9036232c12bde533c",
+          "release_id": "SUB-1c2deaff2701f8108c4f9d6fdca3298698c7aa4a8273f9e9036232c12bde533c",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "177346f5d1b164d8184704393d6b7f5f9b7cd7524a06d2d8e7950d7e7ee7bd4b",
+          "release_id": "SUB-177346f5d1b164d8184704393d6b7f5f9b7cd7524a06d2d8e7950d7e7ee7bd4b",
+          "role": "verifier"
+        },
+        {
+          "manifest_sha256": "a602a69c8d241294ba08a561d4471f2945f3416673b66de648bb72e6c31b9f97",
+          "release_id": "SUB-a602a69c8d241294ba08a561d4471f2945f3416673b66de648bb72e6c31b9f97",
+          "role": "challenger"
+        }
+      ],
+      "requested": {
+        "effort": "high",
+        "model": "gpt-6.1-sol"
+      },
+      "role": "proposer",
+      "topic": "EDA-0008"
+    },
+    {
+      "cycle": 1,
+      "domain": "D04",
+      "job_sha256": "add785715ce3cae5a8382d5299737f43fa1532c8397f96964f79b1c66fa33fe3",
+      "prompt_sha256": "36e00c59e52dbf20c5f0fd30bbb51f08e2fc2ecba1cab228cd2ab904a5e3f2a8",
+      "purpose": "research",
+      "released_inputs": [
+        {
+          "manifest_sha256": "1c2deaff2701f8108c4f9d6fdca3298698c7aa4a8273f9e9036232c12bde533c",
+          "release_id": "SUB-1c2deaff2701f8108c4f9d6fdca3298698c7aa4a8273f9e9036232c12bde533c",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "177346f5d1b164d8184704393d6b7f5f9b7cd7524a06d2d8e7950d7e7ee7bd4b",
+          "release_id": "SUB-177346f5d1b164d8184704393d6b7f5f9b7cd7524a06d2d8e7950d7e7ee7bd4b",
+          "role": "verifier"
+        },
+        {
+          "manifest_sha256": "f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4",
+          "release_id": "SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4",
+          "role": "proposer"
+        }
+      ],
+      "requested": {
+        "effort": "low",
+        "model": "gpt-6-astra"
+      },
+      "role": "challenger",
+      "topic": "EDA-0008"
+    },
+    {
+      "cycle": 1,
+      "domain": "D04",
+      "job_sha256": "8791f00aabb9312c72481e8e3f83294659b0cf586416b1d082cf9935bf0ae552",
+      "prompt_sha256": "ec9a43e11237c1ffa6d2021e41d6b8789ffb08bce149f69583c3e13eb1aca481",
+      "purpose": "research",
+      "released_inputs": [
+        {
+          "manifest_sha256": "1c2deaff2701f8108c4f9d6fdca3298698c7aa4a8273f9e9036232c12bde533c",
+          "release_id": "SUB-1c2deaff2701f8108c4f9d6fdca3298698c7aa4a8273f9e9036232c12bde533c",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "a602a69c8d241294ba08a561d4471f2945f3416673b66de648bb72e6c31b9f97",
+          "release_id": "SUB-a602a69c8d241294ba08a561d4471f2945f3416673b66de648bb72e6c31b9f97",
+          "role": "challenger"
+        },
+        {
+          "manifest_sha256": "177346f5d1b164d8184704393d6b7f5f9b7cd7524a06d2d8e7950d7e7ee7bd4b",
+          "release_id": "SUB-177346f5d1b164d8184704393d6b7f5f9b7cd7524a06d2d8e7950d7e7ee7bd4b",
+          "role": "verifier"
+        },
+        {
+          "manifest_sha256": "f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4",
+          "release_id": "SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "0ddb73ca97e1fc1b27f33363b8b06817e6794e7c7a51e8755934918cc9ef8f02",
+          "release_id": "SUB-0ddb73ca97e1fc1b27f33363b8b06817e6794e7c7a51e8755934918cc9ef8f02",
+          "role": "challenger"
+        }
+      ],
+      "requested": {
+        "effort": "low",
+        "model": "gpt-6.1-sol"
+      },
+      "role": "verifier",
+      "topic": "EDA-0008"
+    },
+    {
+      "cycle": 2,
+      "domain": "D04",
+      "job_sha256": "9ecb7855f58c60aa89042676a5e84ec75544e5e6e14ec18d4eef1d92fed23982",
+      "prompt_sha256": "071f3d4bedae9c7da4ce0fd43b37f3ac12b84348e5235e6779b10ec4c53b9166",
+      "purpose": "research",
+      "released_inputs": [
+        {
+          "manifest_sha256": "1c2deaff2701f8108c4f9d6fdca3298698c7aa4a8273f9e9036232c12bde533c",
+          "release_id": "SUB-1c2deaff2701f8108c4f9d6fdca3298698c7aa4a8273f9e9036232c12bde533c",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "177346f5d1b164d8184704393d6b7f5f9b7cd7524a06d2d8e7950d7e7ee7bd4b",
+          "release_id": "SUB-177346f5d1b164d8184704393d6b7f5f9b7cd7524a06d2d8e7950d7e7ee7bd4b",
+          "role": "verifier"
+        },
+        {
+          "manifest_sha256": "a602a69c8d241294ba08a561d4471f2945f3416673b66de648bb72e6c31b9f97",
+          "release_id": "SUB-a602a69c8d241294ba08a561d4471f2945f3416673b66de648bb72e6c31b9f97",
+          "role": "challenger"
+        },
+        {
+          "manifest_sha256": "1423e18cfcffc89303d1daabf192e80dcb00716aa283af514c89f5bb96058f5e",
+          "release_id": "SUB-1423e18cfcffc89303d1daabf192e80dcb00716aa283af514c89f5bb96058f5e",
+          "role": "verifier"
+        },
+        {
+          "manifest_sha256": "0ddb73ca97e1fc1b27f33363b8b06817e6794e7c7a51e8755934918cc9ef8f02",
+          "release_id": "SUB-0ddb73ca97e1fc1b27f33363b8b06817e6794e7c7a51e8755934918cc9ef8f02",
+          "role": "challenger"
+        },
+        {
+          "manifest_sha256": "f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4",
+          "release_id": "SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4",
+          "role": "proposer"
+        }
+      ],
+      "requested": {
+        "effort": "high",
+        "model": "gpt-6.1-sol"
+      },
+      "role": "proposer",
+      "topic": "EDA-0008"
+    },
+    {
+      "cycle": 2,
+      "domain": "D04",
+      "job_sha256": "4e197181dad7b0b495b1df01a4e5f5858a71a86bfacfa697e5ef6ffde4bcefac",
+      "prompt_sha256": "36e00c59e52dbf20c5f0fd30bbb51f08e2fc2ecba1cab228cd2ab904a5e3f2a8",
+      "purpose": "research",
+      "released_inputs": [
+        {
+          "manifest_sha256": "1c2deaff2701f8108c4f9d6fdca3298698c7aa4a8273f9e9036232c12bde533c",
+          "release_id": "SUB-1c2deaff2701f8108c4f9d6fdca3298698c7aa4a8273f9e9036232c12bde533c",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "177346f5d1b164d8184704393d6b7f5f9b7cd7524a06d2d8e7950d7e7ee7bd4b",
+          "release_id": "SUB-177346f5d1b164d8184704393d6b7f5f9b7cd7524a06d2d8e7950d7e7ee7bd4b",
+          "role": "verifier"
+        },
+        {
+          "manifest_sha256": "15651a51979be07b769426268a585dc32c570cdabcb357ce6d8f29e9d29e3588",
+          "release_id": "SUB-15651a51979be07b769426268a585dc32c570cdabcb357ce6d8f29e9d29e3588",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "1423e18cfcffc89303d1daabf192e80dcb00716aa283af514c89f5bb96058f5e",
+          "release_id": "SUB-1423e18cfcffc89303d1daabf192e80dcb00716aa283af514c89f5bb96058f5e",
+          "role": "verifier"
+        },
+        {
+          "manifest_sha256": "f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4",
+          "release_id": "SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "0ddb73ca97e1fc1b27f33363b8b06817e6794e7c7a51e8755934918cc9ef8f02",
+          "release_id": "SUB-0ddb73ca97e1fc1b27f33363b8b06817e6794e7c7a51e8755934918cc9ef8f02",
+          "role": "challenger"
+        }
+      ],
+      "requested": {
+        "effort": "low",
+        "model": "gpt-6-astra"
+      },
+      "role": "challenger",
+      "topic": "EDA-0008"
+    },
+    {
+      "cycle": 2,
+      "domain": "D04",
+      "job_sha256": "e205a521518a6acf9717d78beeb9eb970f79dbe5a94f4cbcb89a70df42564e59",
+      "prompt_sha256": "ec9a43e11237c1ffa6d2021e41d6b8789ffb08bce149f69583c3e13eb1aca481",
+      "purpose": "research",
+      "released_inputs": [
+        {
+          "manifest_sha256": "1c2deaff2701f8108c4f9d6fdca3298698c7aa4a8273f9e9036232c12bde533c",
+          "release_id": "SUB-1c2deaff2701f8108c4f9d6fdca3298698c7aa4a8273f9e9036232c12bde533c",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "a602a69c8d241294ba08a561d4471f2945f3416673b66de648bb72e6c31b9f97",
+          "release_id": "SUB-a602a69c8d241294ba08a561d4471f2945f3416673b66de648bb72e6c31b9f97",
+          "role": "challenger"
+        },
+        {
+          "manifest_sha256": "177346f5d1b164d8184704393d6b7f5f9b7cd7524a06d2d8e7950d7e7ee7bd4b",
+          "release_id": "SUB-177346f5d1b164d8184704393d6b7f5f9b7cd7524a06d2d8e7950d7e7ee7bd4b",
+          "role": "verifier"
+        },
+        {
+          "manifest_sha256": "15651a51979be07b769426268a585dc32c570cdabcb357ce6d8f29e9d29e3588",
+          "release_id": "SUB-15651a51979be07b769426268a585dc32c570cdabcb357ce6d8f29e9d29e3588",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "996a3afdee6abd5c24ebd2d6039e56c4e3baba57456ee34ec8d4c69c5e11ede2",
+          "release_id": "SUB-996a3afdee6abd5c24ebd2d6039e56c4e3baba57456ee34ec8d4c69c5e11ede2",
+          "role": "challenger"
+        },
+        {
+          "manifest_sha256": "1d05911d8e35b90fb0e6991b4d15e1cb7ed17fe0859b2a1a7316091a6778695c",
+          "release_id": "SUB-1d05911d8e35b90fb0e6991b4d15e1cb7ed17fe0859b2a1a7316091a6778695c",
+          "role": "verifier"
+        },
+        {
+          "manifest_sha256": "1423e18cfcffc89303d1daabf192e80dcb00716aa283af514c89f5bb96058f5e",
+          "release_id": "SUB-1423e18cfcffc89303d1daabf192e80dcb00716aa283af514c89f5bb96058f5e",
+          "role": "verifier"
+        }
+      ],
+      "requested": {
+        "effort": "low",
+        "model": "gpt-6.1-sol"
+      },
+      "role": "verifier",
+      "topic": "EDA-0008"
+    },
+    {
+      "cycle": 3,
+      "domain": "D04",
+      "job_sha256": "de78b549c22e11669a9c01520feb20523fb501ed7f4352350855d6734dfc3844",
+      "prompt_sha256": "071f3d4bedae9c7da4ce0fd43b37f3ac12b84348e5235e6779b10ec4c53b9166",
+      "purpose": "research",
+      "released_inputs": [
+        {
+          "manifest_sha256": "1c2deaff2701f8108c4f9d6fdca3298698c7aa4a8273f9e9036232c12bde533c",
+          "release_id": "SUB-1c2deaff2701f8108c4f9d6fdca3298698c7aa4a8273f9e9036232c12bde533c",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "177346f5d1b164d8184704393d6b7f5f9b7cd7524a06d2d8e7950d7e7ee7bd4b",
+          "release_id": "SUB-177346f5d1b164d8184704393d6b7f5f9b7cd7524a06d2d8e7950d7e7ee7bd4b",
+          "role": "verifier"
+        },
+        {
+          "manifest_sha256": "a602a69c8d241294ba08a561d4471f2945f3416673b66de648bb72e6c31b9f97",
+          "release_id": "SUB-a602a69c8d241294ba08a561d4471f2945f3416673b66de648bb72e6c31b9f97",
+          "role": "challenger"
+        },
+        {
+          "manifest_sha256": "34b826d7ab2de0ad0bae65f70fbe2a9aeea2f918b483e43265dbec790ddd0b47",
+          "release_id": "SUB-34b826d7ab2de0ad0bae65f70fbe2a9aeea2f918b483e43265dbec790ddd0b47",
+          "role": "verifier"
+        },
+        {
+          "manifest_sha256": "996a3afdee6abd5c24ebd2d6039e56c4e3baba57456ee34ec8d4c69c5e11ede2",
+          "release_id": "SUB-996a3afdee6abd5c24ebd2d6039e56c4e3baba57456ee34ec8d4c69c5e11ede2",
+          "role": "challenger"
+        },
+        {
+          "manifest_sha256": "15651a51979be07b769426268a585dc32c570cdabcb357ce6d8f29e9d29e3588",
+          "release_id": "SUB-15651a51979be07b769426268a585dc32c570cdabcb357ce6d8f29e9d29e3588",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "15651a51979be07b769426268a585dc32c570cdabcb357ce6d8f29e9d29e3588",
+          "release_id": "SUB-15651a51979be07b769426268a585dc32c570cdabcb357ce6d8f29e9d29e3588",
+          "role": "proposer"
+        }
+      ],
+      "requested": {
+        "effort": "high",
+        "model": "gpt-6.1-sol"
+      },
+      "role": "proposer",
+      "topic": "EDA-0008"
+    },
+    {
+      "cycle": 3,
+      "domain": "D04",
+      "job_sha256": "39b9c70d0603484467a119c8ae2791e55498dbf61b08d866424f7394589a9906",
+      "prompt_sha256": "36e00c59e52dbf20c5f0fd30bbb51f08e2fc2ecba1cab228cd2ab904a5e3f2a8",
+      "purpose": "research",
+      "released_inputs": [
+        {
+          "manifest_sha256": "1c2deaff2701f8108c4f9d6fdca3298698c7aa4a8273f9e9036232c12bde533c",
+          "release_id": "SUB-1c2deaff2701f8108c4f9d6fdca3298698c7aa4a8273f9e9036232c12bde533c",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "177346f5d1b164d8184704393d6b7f5f9b7cd7524a06d2d8e7950d7e7ee7bd4b",
+          "release_id": "SUB-177346f5d1b164d8184704393d6b7f5f9b7cd7524a06d2d8e7950d7e7ee7bd4b",
+          "role": "verifier"
+        },
+        {
+          "manifest_sha256": "871f669003b3f9e0bf3e000e214a1d897e997cb043492f7a9e31a7404d85917c",
+          "release_id": "SUB-871f669003b3f9e0bf3e000e214a1d897e997cb043492f7a9e31a7404d85917c",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "34b826d7ab2de0ad0bae65f70fbe2a9aeea2f918b483e43265dbec790ddd0b47",
+          "release_id": "SUB-34b826d7ab2de0ad0bae65f70fbe2a9aeea2f918b483e43265dbec790ddd0b47",
+          "role": "verifier"
+        },
+        {
+          "manifest_sha256": "15651a51979be07b769426268a585dc32c570cdabcb357ce6d8f29e9d29e3588",
+          "release_id": "SUB-15651a51979be07b769426268a585dc32c570cdabcb357ce6d8f29e9d29e3588",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "996a3afdee6abd5c24ebd2d6039e56c4e3baba57456ee34ec8d4c69c5e11ede2",
+          "release_id": "SUB-996a3afdee6abd5c24ebd2d6039e56c4e3baba57456ee34ec8d4c69c5e11ede2",
+          "role": "challenger"
+        }
+      ],
+      "requested": {
+        "effort": "low",
+        "model": "gpt-6-astra"
+      },
+      "role": "challenger",
+      "topic": "EDA-0008"
+    },
+    {
+      "cycle": 3,
+      "domain": "D04",
+      "job_sha256": "9e3de95f53aae6c78f12b5e82c07d3eaad0a6eb48d3fb0b67864adbbd0572368",
+      "prompt_sha256": "ec9a43e11237c1ffa6d2021e41d6b8789ffb08bce149f69583c3e13eb1aca481",
+      "purpose": "research",
+      "released_inputs": [
+        {
+          "manifest_sha256": "1c2deaff2701f8108c4f9d6fdca3298698c7aa4a8273f9e9036232c12bde533c",
+          "release_id": "SUB-1c2deaff2701f8108c4f9d6fdca3298698c7aa4a8273f9e9036232c12bde533c",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "a602a69c8d241294ba08a561d4471f2945f3416673b66de648bb72e6c31b9f97",
+          "release_id": "SUB-a602a69c8d241294ba08a561d4471f2945f3416673b66de648bb72e6c31b9f97",
+          "role": "challenger"
+        },
+        {
+          "manifest_sha256": "177346f5d1b164d8184704393d6b7f5f9b7cd7524a06d2d8e7950d7e7ee7bd4b",
+          "release_id": "SUB-177346f5d1b164d8184704393d6b7f5f9b7cd7524a06d2d8e7950d7e7ee7bd4b",
+          "role": "verifier"
+        },
+        {
+          "manifest_sha256": "871f669003b3f9e0bf3e000e214a1d897e997cb043492f7a9e31a7404d85917c",
+          "release_id": "SUB-871f669003b3f9e0bf3e000e214a1d897e997cb043492f7a9e31a7404d85917c",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "63d98250bf2d3b9407c62009b03af558f52923b0ca2eee7a9c23aba2375d4b44",
+          "release_id": "SUB-63d98250bf2d3b9407c62009b03af558f52923b0ca2eee7a9c23aba2375d4b44",
+          "role": "challenger"
+        },
+        {
+          "manifest_sha256": "1d05911d8e35b90fb0e6991b4d15e1cb7ed17fe0859b2a1a7316091a6778695c",
+          "release_id": "SUB-1d05911d8e35b90fb0e6991b4d15e1cb7ed17fe0859b2a1a7316091a6778695c",
+          "role": "verifier"
+        },
+        {
+          "manifest_sha256": "d3dc7b783411e0161535420c3cdf6abdb6a0798978ad99775eb2410873540442",
+          "release_id": "SUB-d3dc7b783411e0161535420c3cdf6abdb6a0798978ad99775eb2410873540442",
+          "role": "verifier"
+        },
+        {
+          "manifest_sha256": "34b826d7ab2de0ad0bae65f70fbe2a9aeea2f918b483e43265dbec790ddd0b47",
+          "release_id": "SUB-34b826d7ab2de0ad0bae65f70fbe2a9aeea2f918b483e43265dbec790ddd0b47",
+          "role": "verifier"
+        }
+      ],
+      "requested": {
+        "effort": "low",
+        "model": "gpt-6.1-sol"
+      },
+      "role": "verifier",
+      "topic": "EDA-0008"
+    },
+    {
+      "cycle": 4,
+      "domain": "D04",
+      "job_sha256": "bf78643946c4793803988d44d13206cc2c52f14fe8baa0053553ecf3ec018950",
+      "prompt_sha256": "2a09004d6702e6f1c5f3b28cf62c5522c228c99682ae33e66aef7e01fd918087",
+      "purpose": "research",
+      "released_inputs": [
+        {
+          "manifest_sha256": "871f669003b3f9e0bf3e000e214a1d897e997cb043492f7a9e31a7404d85917c",
+          "release_id": "SUB-871f669003b3f9e0bf3e000e214a1d897e997cb043492f7a9e31a7404d85917c",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "6e5bf1d98fce234bd3a92fe7baa53b72ecd534c846bd7b89a80359451044da95",
+          "release_id": "SUB-6e5bf1d98fce234bd3a92fe7baa53b72ecd534c846bd7b89a80359451044da95",
+          "role": "verifier"
+        },
+        {
+          "manifest_sha256": "63d98250bf2d3b9407c62009b03af558f52923b0ca2eee7a9c23aba2375d4b44",
+          "release_id": "SUB-63d98250bf2d3b9407c62009b03af558f52923b0ca2eee7a9c23aba2375d4b44",
+          "role": "challenger"
+        }
+      ],
+      "requested": {
+        "effort": "high",
+        "model": "gpt-6.1-sol"
+      },
+      "role": "proposer",
+      "topic": "EDA-0009"
+    },
+    {
+      "cycle": 4,
+      "domain": "D04",
+      "job_sha256": "ff6518a0341908d09b442f8a4200fdb4c7f54fa2deb7c3d67696179242afea22",
+      "prompt_sha256": "dc1ac8c0756262a62d9c737440d9471c13731ce30687692e1a23fd9fed2c36f9",
+      "purpose": "research",
+      "released_inputs": [
+        {
+          "manifest_sha256": "871f669003b3f9e0bf3e000e214a1d897e997cb043492f7a9e31a7404d85917c",
+          "release_id": "SUB-871f669003b3f9e0bf3e000e214a1d897e997cb043492f7a9e31a7404d85917c",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "6e5bf1d98fce234bd3a92fe7baa53b72ecd534c846bd7b89a80359451044da95",
+          "release_id": "SUB-6e5bf1d98fce234bd3a92fe7baa53b72ecd534c846bd7b89a80359451044da95",
+          "role": "verifier"
+        },
+        {
+          "manifest_sha256": "aeaba01af9a5b6128eec0673cea74b71dc559d2ba9bf7da096ebfaff8bdce21a",
+          "release_id": "SUB-aeaba01af9a5b6128eec0673cea74b71dc559d2ba9bf7da096ebfaff8bdce21a",
+          "role": "proposer"
+        }
+      ],
+      "requested": {
+        "effort": "low",
+        "model": "gpt-6-astra"
+      },
+      "role": "challenger",
+      "topic": "EDA-0009"
+    },
+    {
+      "cycle": 4,
+      "domain": "D04",
+      "job_sha256": "d8e0823e2afdeab202972886b1cb2b74e721913df699008d0e185646b8bd9762",
+      "prompt_sha256": "f13a4ab02d885e46c7600e59a1c3f6c9e4495eda1c79c3a89e67dfcc477b0c0b",
+      "purpose": "research",
+      "released_inputs": [
+        {
+          "manifest_sha256": "871f669003b3f9e0bf3e000e214a1d897e997cb043492f7a9e31a7404d85917c",
+          "release_id": "SUB-871f669003b3f9e0bf3e000e214a1d897e997cb043492f7a9e31a7404d85917c",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "63d98250bf2d3b9407c62009b03af558f52923b0ca2eee7a9c23aba2375d4b44",
+          "release_id": "SUB-63d98250bf2d3b9407c62009b03af558f52923b0ca2eee7a9c23aba2375d4b44",
+          "role": "challenger"
+        },
+        {
+          "manifest_sha256": "6e5bf1d98fce234bd3a92fe7baa53b72ecd534c846bd7b89a80359451044da95",
+          "release_id": "SUB-6e5bf1d98fce234bd3a92fe7baa53b72ecd534c846bd7b89a80359451044da95",
+          "role": "verifier"
+        },
+        {
+          "manifest_sha256": "aeaba01af9a5b6128eec0673cea74b71dc559d2ba9bf7da096ebfaff8bdce21a",
+          "release_id": "SUB-aeaba01af9a5b6128eec0673cea74b71dc559d2ba9bf7da096ebfaff8bdce21a",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "9354b850df73175a5f4764f21dc5b5e8d9204f7741e9c50dce06953c34e9f984",
+          "release_id": "SUB-9354b850df73175a5f4764f21dc5b5e8d9204f7741e9c50dce06953c34e9f984",
+          "role": "challenger"
+        }
+      ],
+      "requested": {
+        "effort": "low",
+        "model": "gpt-6.1-sol"
+      },
+      "role": "verifier",
+      "topic": "EDA-0009"
+    },
+    {
+      "cycle": 4,
+      "domain": "D05",
+      "job_sha256": "11443230f7af4065e0bd82bf4acb06d88735d8be1c3cfb5b8b73ad557fe71af8",
+      "prompt_sha256": "57c066eafc8d88572db951f486490cd1872c483791392680eb27b6f58914506c",
+      "purpose": "research",
+      "released_inputs": [
+        {
+          "manifest_sha256": "43ec8c256a5116bee2790bbbb147ed089d72731f6051d10a6bbe479ffb2578b9",
+          "release_id": "SUB-43ec8c256a5116bee2790bbbb147ed089d72731f6051d10a6bbe479ffb2578b9",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "f1d0c0c2682c4c400b66300ff48a498948f9fbc95d19db10151fa7cd92f8f4fa",
+          "release_id": "SUB-f1d0c0c2682c4c400b66300ff48a498948f9fbc95d19db10151fa7cd92f8f4fa",
+          "role": "verifier"
+        },
+        {
+          "manifest_sha256": "261aace737adca3c4e2a7d350c74b3613e49885585048bace6c03f3272213ab7",
+          "release_id": "SUB-261aace737adca3c4e2a7d350c74b3613e49885585048bace6c03f3272213ab7",
+          "role": "challenger"
+        }
+      ],
+      "requested": {
+        "effort": "high",
+        "model": "gpt-6.1-sol"
+      },
+      "role": "proposer",
+      "topic": "EDA-0010"
+    },
+    {
+      "cycle": 4,
+      "domain": "D05",
+      "job_sha256": "8626e9e4ecefab5f7e0e2421295eb96ec0fb9b3cd4262daac66211109f00bcdb",
+      "prompt_sha256": "02fa30a53b53efbe5643a2da29cbe6174f0d45e24515b4b4294b027b064a22a3",
+      "purpose": "research",
+      "released_inputs": [
+        {
+          "manifest_sha256": "43ec8c256a5116bee2790bbbb147ed089d72731f6051d10a6bbe479ffb2578b9",
+          "release_id": "SUB-43ec8c256a5116bee2790bbbb147ed089d72731f6051d10a6bbe479ffb2578b9",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "f1d0c0c2682c4c400b66300ff48a498948f9fbc95d19db10151fa7cd92f8f4fa",
+          "release_id": "SUB-f1d0c0c2682c4c400b66300ff48a498948f9fbc95d19db10151fa7cd92f8f4fa",
+          "role": "verifier"
+        },
+        {
+          "manifest_sha256": "64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c",
+          "release_id": "SUB-64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c",
+          "role": "proposer"
+        }
+      ],
+      "requested": {
+        "effort": "low",
+        "model": "gpt-6-astra"
+      },
+      "role": "challenger",
+      "topic": "EDA-0010"
+    },
+    {
+      "cycle": 4,
+      "domain": "D05",
+      "job_sha256": "444f0480aa30776df789c5f81e45e3d59768956b8aa541df5c57df5474ecee80",
+      "prompt_sha256": "b337dd2d475d10a55c212ca813819ff0962b1ec57c4b3c9c3ec1f133d3067a92",
+      "purpose": "research",
+      "released_inputs": [
+        {
+          "manifest_sha256": "43ec8c256a5116bee2790bbbb147ed089d72731f6051d10a6bbe479ffb2578b9",
+          "release_id": "SUB-43ec8c256a5116bee2790bbbb147ed089d72731f6051d10a6bbe479ffb2578b9",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "261aace737adca3c4e2a7d350c74b3613e49885585048bace6c03f3272213ab7",
+          "release_id": "SUB-261aace737adca3c4e2a7d350c74b3613e49885585048bace6c03f3272213ab7",
+          "role": "challenger"
+        },
+        {
+          "manifest_sha256": "f1d0c0c2682c4c400b66300ff48a498948f9fbc95d19db10151fa7cd92f8f4fa",
+          "release_id": "SUB-f1d0c0c2682c4c400b66300ff48a498948f9fbc95d19db10151fa7cd92f8f4fa",
+          "role": "verifier"
+        },
+        {
+          "manifest_sha256": "64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c",
+          "release_id": "SUB-64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "45b1311973778bf0f7a2a7a2466ef3c20389362d8faf02846afdf22bc4ffce3d",
+          "release_id": "SUB-45b1311973778bf0f7a2a7a2466ef3c20389362d8faf02846afdf22bc4ffce3d",
+          "role": "challenger"
+        }
+      ],
+      "requested": {
+        "effort": "low",
+        "model": "gpt-6.1-sol"
+      },
+      "role": "verifier",
+      "topic": "EDA-0010"
+    },
+    {
+      "cycle": 2,
+      "domain": "D05",
+      "job_sha256": "6c6cedcbb5ddbb7b1f957a7cdd8d40e543863c3850c3aada675e915ec847d133",
+      "prompt_sha256": "e2e2026e36b9aa68206a998acffb2654dba8d18be8928c84b347b788ece1421d",
+      "purpose": "protocol_audit",
+      "released_inputs": [
+        {
+          "manifest_sha256": "00eaf4c6d47db0f8dcb907fbf5d70719e7d1534a10660a8a5caa480ef6662ad9",
+          "release_id": "SUB-00eaf4c6d47db0f8dcb907fbf5d70719e7d1534a10660a8a5caa480ef6662ad9",
+          "role": "challenger"
+        },
+        {
+          "manifest_sha256": "ebe8adb725c37ba6e164d487febc9021dddc8e911cf79e56ada9e9d2bd5c5ace",
+          "release_id": "SUB-ebe8adb725c37ba6e164d487febc9021dddc8e911cf79e56ada9e9d2bd5c5ace",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "13a40498da3f7157d34b903152f0d7531070e03db61f3a487ab5338f52e29a4a",
+          "release_id": "SUB-13a40498da3f7157d34b903152f0d7531070e03db61f3a487ab5338f52e29a4a",
+          "role": "verifier"
+        }
+      ],
+      "requested": {
+        "effort": "low",
+        "model": "gpt-6.1-sol"
+      },
+      "role": "verifier",
+      "topic": "EDA-0007"
+    },
+    {
+      "cycle": 1,
+      "domain": "D04",
+      "job_sha256": "19241a4305cae0acfe8f78f22b5bf16ec509ee674737f0ef5b154651c3af44e3",
+      "prompt_sha256": "e3cf251b98aea6cc21ba153e0a1f81eea8967fc6e8fbc39964fd199c407d9802",
+      "purpose": "protocol_audit",
+      "released_inputs": [
+        {
+          "manifest_sha256": "0ddb73ca97e1fc1b27f33363b8b06817e6794e7c7a51e8755934918cc9ef8f02",
+          "release_id": "SUB-0ddb73ca97e1fc1b27f33363b8b06817e6794e7c7a51e8755934918cc9ef8f02",
+          "role": "challenger"
+        },
+        {
+          "manifest_sha256": "f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4",
+          "release_id": "SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "1423e18cfcffc89303d1daabf192e80dcb00716aa283af514c89f5bb96058f5e",
+          "release_id": "SUB-1423e18cfcffc89303d1daabf192e80dcb00716aa283af514c89f5bb96058f5e",
+          "role": "verifier"
+        },
+        {
+          "manifest_sha256": "c8a5acd8deacbb1be7f9decbb9890eb5a3d6fc162bd3fb85df94efa8a1c284d3",
+          "release_id": "SUB-c8a5acd8deacbb1be7f9decbb9890eb5a3d6fc162bd3fb85df94efa8a1c284d3",
+          "role": "verifier"
+        }
+      ],
+      "requested": {
+        "effort": "low",
+        "model": "gpt-6.1-sol"
+      },
+      "role": "verifier",
+      "topic": "EDA-0008"
+    },
+    {
+      "cycle": 1,
+      "domain": "D05",
+      "job_sha256": "9cbb5065ab61fcb9f8132f53fd1a2470e5462e9ca212bcd9ccd2d6905f1ed0b9",
+      "prompt_sha256": "b5ff0d0589a8aa872dad2fd3c504e4699286f4be7dbe97485fba0898d12f11f4",
+      "purpose": "protocol_audit",
+      "released_inputs": [
+        {
+          "manifest_sha256": "e3407b956910db0e7d4c3dbf46ac184bccf23d68e66ef738a10e0696ef980338",
+          "release_id": "SUB-e3407b956910db0e7d4c3dbf46ac184bccf23d68e66ef738a10e0696ef980338",
+          "role": "challenger"
+        },
+        {
+          "manifest_sha256": "8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f",
+          "release_id": "SUB-8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "1d2e343cab1599577d312783ff91916761e548b2d4e1d7749b3071f38416b8ca",
+          "release_id": "SUB-1d2e343cab1599577d312783ff91916761e548b2d4e1d7749b3071f38416b8ca",
+          "role": "verifier"
+        }
+      ],
+      "requested": {
+        "effort": "low",
+        "model": "gpt-6.1-sol"
+      },
+      "role": "verifier",
+      "topic": "EDA-0007"
+    },
+    {
+      "cycle": 4,
+      "domain": "D04",
+      "job_sha256": "566530c8d06b0c171a07bcfd45aa6ed9c00ff8c6bce978983d853406a4a5320c",
+      "prompt_sha256": "832b3e48d3a45a206ed8e0bfe5231c8644218cdee1a6659e5dc2838c9af744a8",
+      "purpose": "protocol_audit",
+      "released_inputs": [
+        {
+          "manifest_sha256": "9354b850df73175a5f4764f21dc5b5e8d9204f7741e9c50dce06953c34e9f984",
+          "release_id": "SUB-9354b850df73175a5f4764f21dc5b5e8d9204f7741e9c50dce06953c34e9f984",
+          "role": "challenger"
+        },
+        {
+          "manifest_sha256": "aeaba01af9a5b6128eec0673cea74b71dc559d2ba9bf7da096ebfaff8bdce21a",
+          "release_id": "SUB-aeaba01af9a5b6128eec0673cea74b71dc559d2ba9bf7da096ebfaff8bdce21a",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "2ff252d0046e7fc9825c2748ba4109878fee23295c7c2855ffd64435aa2a8f06",
+          "release_id": "SUB-2ff252d0046e7fc9825c2748ba4109878fee23295c7c2855ffd64435aa2a8f06",
+          "role": "verifier"
+        }
+      ],
+      "requested": {
+        "effort": "low",
+        "model": "gpt-6.1-sol"
+      },
+      "role": "verifier",
+      "topic": "EDA-0009"
+    },
+    {
+      "cycle": 2,
+      "domain": "D04",
+      "job_sha256": "81da9b0f592992edde2df8b75b2b58b8e7fe17ab8338b9de618d1ece30970614",
+      "prompt_sha256": "d115cfe14934eb5fefc7710bdfafc6a3284cab957ff879c42fb790ed7a1be8d3",
+      "purpose": "protocol_audit",
+      "released_inputs": [
+        {
+          "manifest_sha256": "996a3afdee6abd5c24ebd2d6039e56c4e3baba57456ee34ec8d4c69c5e11ede2",
+          "release_id": "SUB-996a3afdee6abd5c24ebd2d6039e56c4e3baba57456ee34ec8d4c69c5e11ede2",
+          "role": "challenger"
+        },
+        {
+          "manifest_sha256": "15651a51979be07b769426268a585dc32c570cdabcb357ce6d8f29e9d29e3588",
+          "release_id": "SUB-15651a51979be07b769426268a585dc32c570cdabcb357ce6d8f29e9d29e3588",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "34b826d7ab2de0ad0bae65f70fbe2a9aeea2f918b483e43265dbec790ddd0b47",
+          "release_id": "SUB-34b826d7ab2de0ad0bae65f70fbe2a9aeea2f918b483e43265dbec790ddd0b47",
+          "role": "verifier"
+        }
+      ],
+      "requested": {
+        "effort": "low",
+        "model": "gpt-6.1-sol"
+      },
+      "role": "verifier",
+      "topic": "EDA-0008"
+    },
+    {
+      "cycle": 3,
+      "domain": "D04",
+      "job_sha256": "a9f179e9aa0b246b4245accdc078c05556d9bf0c2ec8564a707ab13a11e0181b",
+      "prompt_sha256": "3a10693a2c88e51afc720578893452cb411c3957e9041c56aa14b18750f3c4fd",
+      "purpose": "protocol_audit",
+      "released_inputs": [
+        {
+          "manifest_sha256": "63d98250bf2d3b9407c62009b03af558f52923b0ca2eee7a9c23aba2375d4b44",
+          "release_id": "SUB-63d98250bf2d3b9407c62009b03af558f52923b0ca2eee7a9c23aba2375d4b44",
+          "role": "challenger"
+        },
+        {
+          "manifest_sha256": "871f669003b3f9e0bf3e000e214a1d897e997cb043492f7a9e31a7404d85917c",
+          "release_id": "SUB-871f669003b3f9e0bf3e000e214a1d897e997cb043492f7a9e31a7404d85917c",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "6e5bf1d98fce234bd3a92fe7baa53b72ecd534c846bd7b89a80359451044da95",
+          "release_id": "SUB-6e5bf1d98fce234bd3a92fe7baa53b72ecd534c846bd7b89a80359451044da95",
+          "role": "verifier"
+        },
+        {
+          "manifest_sha256": "46cfb469c0fe96288b8b4d5cddbc7ec4ab1525a9145d09584ea8167e379e972f",
+          "release_id": "SUB-46cfb469c0fe96288b8b4d5cddbc7ec4ab1525a9145d09584ea8167e379e972f",
+          "role": "challenger"
+        }
+      ],
+      "requested": {
+        "effort": "low",
+        "model": "gpt-6.1-sol"
+      },
+      "role": "verifier",
+      "topic": "EDA-0008"
+    },
+    {
+      "cycle": 4,
+      "domain": "D05",
+      "job_sha256": "dd30ff14fafc9ed21367b79c94d77899c4e89f9c655d9b4ed35038982639c448",
+      "prompt_sha256": "eff768e4f2270ebd63a6c13ad5f685fb6cdf54adbcf36e013cfc1c57d111749c",
+      "purpose": "protocol_audit",
+      "released_inputs": [
+        {
+          "manifest_sha256": "45b1311973778bf0f7a2a7a2466ef3c20389362d8faf02846afdf22bc4ffce3d",
+          "release_id": "SUB-45b1311973778bf0f7a2a7a2466ef3c20389362d8faf02846afdf22bc4ffce3d",
+          "role": "challenger"
+        },
+        {
+          "manifest_sha256": "64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c",
+          "release_id": "SUB-64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "af311c9ae6b091db1fdb94a8bd262fe027a34d25a761c2e072c59c2d0497d01d",
+          "release_id": "SUB-af311c9ae6b091db1fdb94a8bd262fe027a34d25a761c2e072c59c2d0497d01d",
+          "role": "verifier"
+        }
+      ],
+      "requested": {
+        "effort": "low",
+        "model": "gpt-6.1-sol"
+      },
+      "role": "verifier",
+      "topic": "EDA-0010"
+    },
+    {
+      "cycle": 3,
+      "domain": "D05",
+      "job_sha256": "1ff94b82a5bd86ce6905933251352711f57bd9db93c57f7be3046522f0509a1c",
+      "prompt_sha256": "3b24786ff3cc675d0a8414ae992c0ee4428c2939e2ed993c98b198aa519b9cd8",
+      "purpose": "protocol_audit",
+      "released_inputs": [
+        {
+          "manifest_sha256": "261aace737adca3c4e2a7d350c74b3613e49885585048bace6c03f3272213ab7",
+          "release_id": "SUB-261aace737adca3c4e2a7d350c74b3613e49885585048bace6c03f3272213ab7",
+          "role": "challenger"
+        },
+        {
+          "manifest_sha256": "43ec8c256a5116bee2790bbbb147ed089d72731f6051d10a6bbe479ffb2578b9",
+          "release_id": "SUB-43ec8c256a5116bee2790bbbb147ed089d72731f6051d10a6bbe479ffb2578b9",
+          "role": "proposer"
+        },
+        {
+          "manifest_sha256": "f1d0c0c2682c4c400b66300ff48a498948f9fbc95d19db10151fa7cd92f8f4fa",
+          "release_id": "SUB-f1d0c0c2682c4c400b66300ff48a498948f9fbc95d19db10151fa7cd92f8f4fa",
+          "role": "verifier"
+        },
+        {
+          "manifest_sha256": "f597ccc56ee643b3126c188c6892aee3ab54470d66586d18f397f52a38151312",
+          "release_id": "SUB-f597ccc56ee643b3126c188c6892aee3ab54470d66586d18f397f52a38151312",
+          "role": "verifier"
+        }
+      ],
+      "requested": {
+        "effort": "low",
+        "model": "gpt-6.1-sol"
+      },
+      "role": "verifier",
+      "topic": "EDA-0007"
+    }
+  ],
   "logical_scientific_seats": [
     {
-      "packet_sha256": "370dd0d14ce8fee3864991b64280be571a92d7591ca2400a9932e89a86949a65",
+      "packet_sha256": "7b2557a3e2917296cc9a80fcd6f54010af7f084ce8722fac9eeb382643cbd0de",
       "role": "challenger",
-      "session_id": "b789be3f-0354-4526-807b-b75b91d1f374",
+      "session_id": "a758be30-1627-4434-bc85-379554161f43",
       "topic": "EDA-0007"
     },
     {
-      "packet_sha256": "8d27771f88c17fa1ac3ec3b3a02d3f7cd8f1b4d9e8572341d5ee8cc681d52632",
+      "packet_sha256": "a33750c8ec5badb03663cf317bd8b6ea96e6e5d9905fe82f0c50861adbbe46d9",
       "role": "proposer",
-      "session_id": "5353d53c-1279-4e6e-8f34-409221f059aa",
+      "session_id": "5796edbb-fac9-477b-ab72-194c4cbfe34c",
       "topic": "EDA-0007"
     },
     {
-      "packet_sha256": "5b6045e682cf0edf1e4ed1bcd48a163db1e64d6292397242d5263dcb6772fd54",
+      "packet_sha256": "a628fc9403ccb57a82797cdd71108d68185d66bf2685845847b121742ddb8422",
       "role": "verifier",
-      "session_id": "04124b28-c866-4c3a-879c-f1d3ceac97fc",
+      "session_id": "bfed115a-3d9b-43a8-88ed-35eadbc3186f",
       "topic": "EDA-0007"
     },
     {
@@ -41,12 +1292,284 @@
       "role": "verifier",
       "session_id": "370f04ea-8378-4c1f-ab83-2fa830453d13",
       "topic": "EDA-0008"
+    },
+    {
+      "packet_sha256": "3d8eeb0deccb9ae624fc670d437c2b40da26cd425da309de94e71e569e11b9be",
+      "role": "challenger",
+      "session_id": "2f77fe2e-7fc6-48e3-ae9f-8e58df92c79d",
+      "topic": "EDA-0009"
+    },
+    {
+      "packet_sha256": "025ffe86fbd9a4fa31105c4bf0487d2b68d9515524613109f60e8d196d6acb49",
+      "role": "proposer",
+      "session_id": "a6cdf350-7e86-4988-92ca-660db08d6d53",
+      "topic": "EDA-0009"
+    },
+    {
+      "packet_sha256": "efe09fccc2d75536f767b96d8a3abfca2ee6c2092a5cabcd1ae6d316a6e72d18",
+      "role": "verifier",
+      "session_id": "7a28c23e-2907-49c3-858b-ae7d875697eb",
+      "topic": "EDA-0009"
+    },
+    {
+      "packet_sha256": "bae14bfaba1910849d9260180efe256b134a124182cb9dbfb87f058af5d57a5d",
+      "role": "challenger",
+      "session_id": "dcd1cbc5-8472-4448-b7a0-e05270475146",
+      "topic": "EDA-0010"
+    },
+    {
+      "packet_sha256": "a3cdae81519f17d5a7c8565ff49d97837cf36d62ddf505bd09f889921d79598a",
+      "role": "proposer",
+      "session_id": "32ff7459-1199-4a05-aceb-ae30c925a366",
+      "topic": "EDA-0010"
+    },
+    {
+      "packet_sha256": "0c752fb1af96613e21b0f0f0fbc63ea9827efcc26bf544e1315da254b98dd095",
+      "role": "verifier",
+      "session_id": "ff710454-5090-49e3-b425-6d9b97c0250c",
+      "topic": "EDA-0010"
     }
   ],
-  "merged": [],
-  "protocol_audits": [],
-  "published": {},
-  "scientific_releases": [],
+  "merged": [
+    "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/59",
+    "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/60",
+    "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/62",
+    "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/63",
+    "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/64",
+    "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/65",
+    "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/66",
+    "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/67"
+  ],
+  "protocol_audits": [
+    {
+      "files": 4,
+      "manifest_sha256": "573a2812a0f0eb6551328cf55dc2994ad483dbe36cd866830b34f06dd959ff52",
+      "release_id": "SUB-573a2812a0f0eb6551328cf55dc2994ad483dbe36cd866830b34f06dd959ff52",
+      "session_id": "ff2cde44-63ae-40df-bdc8-a7a755feacff"
+    },
+    {
+      "files": 4,
+      "manifest_sha256": "1d05911d8e35b90fb0e6991b4d15e1cb7ed17fe0859b2a1a7316091a6778695c",
+      "release_id": "SUB-1d05911d8e35b90fb0e6991b4d15e1cb7ed17fe0859b2a1a7316091a6778695c",
+      "session_id": "9d9c4bd7-e1e4-4225-88d8-133ccd93bac0"
+    },
+    {
+      "files": 4,
+      "manifest_sha256": "399339b3dae4b21aa15b73db0d76cdf065e86a7be3ec7a36f60f6246f91637cd",
+      "release_id": "SUB-399339b3dae4b21aa15b73db0d76cdf065e86a7be3ec7a36f60f6246f91637cd",
+      "session_id": "f92ba423-0831-49cd-b037-804a5d3c50ce"
+    },
+    {
+      "files": 4,
+      "manifest_sha256": "98a91657e03443db06b9d93a506dd01c49b534ec02ecd708a8e66c0bd74740df",
+      "release_id": "SUB-98a91657e03443db06b9d93a506dd01c49b534ec02ecd708a8e66c0bd74740df",
+      "session_id": "2a4c2379-f74f-419a-b360-8f3d3ee5bc3c"
+    },
+    {
+      "files": 4,
+      "manifest_sha256": "d3dc7b783411e0161535420c3cdf6abdb6a0798978ad99775eb2410873540442",
+      "release_id": "SUB-d3dc7b783411e0161535420c3cdf6abdb6a0798978ad99775eb2410873540442",
+      "session_id": "06316c3f-646b-43e3-9dfb-54caece1fd2a"
+    },
+    {
+      "files": 4,
+      "manifest_sha256": "81c72d9dd512affb8f74dfe5121ded71c504a73094e9b20e46968499084c3d8d",
+      "release_id": "SUB-81c72d9dd512affb8f74dfe5121ded71c504a73094e9b20e46968499084c3d8d",
+      "session_id": "2b352162-5dc9-4239-bfc8-8c876de59d4b"
+    },
+    {
+      "files": 4,
+      "manifest_sha256": "1d755d147fde917e19455a455a3a1020947212f4a552695d4df0ffbd05fbf9b0",
+      "release_id": "SUB-1d755d147fde917e19455a455a3a1020947212f4a552695d4df0ffbd05fbf9b0",
+      "session_id": "4b61aaa0-9cb1-4f78-8f53-7eb21e5d22bc"
+    },
+    {
+      "files": 4,
+      "manifest_sha256": "c38e4494f7fbff88b13149a35407d94e41edddc7e2ead6775f6305ba1d018614",
+      "release_id": "SUB-c38e4494f7fbff88b13149a35407d94e41edddc7e2ead6775f6305ba1d018614",
+      "session_id": "8053cef5-afcf-4dc5-aa8e-cc71a73118d1"
+    }
+  ],
+  "published": {
+    "SUB-13a40498da3f7157d34b903152f0d7531070e03db61f3a487ab5338f52e29a4a": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/63",
+    "SUB-1423e18cfcffc89303d1daabf192e80dcb00716aa283af514c89f5bb96058f5e": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/60",
+    "SUB-1d2e343cab1599577d312783ff91916761e548b2d4e1d7749b3071f38416b8ca": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/59",
+    "SUB-2ff252d0046e7fc9825c2748ba4109878fee23295c7c2855ffd64435aa2a8f06": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/66",
+    "SUB-34b826d7ab2de0ad0bae65f70fbe2a9aeea2f918b483e43265dbec790ddd0b47": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/62",
+    "SUB-6e5bf1d98fce234bd3a92fe7baa53b72ecd534c846bd7b89a80359451044da95": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/64",
+    "SUB-af311c9ae6b091db1fdb94a8bd262fe027a34d25a761c2e072c59c2d0497d01d": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/67",
+    "SUB-f1d0c0c2682c4c400b66300ff48a498948f9fbc95d19db10151fa7cd92f8f4fa": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/65"
+  },
+  "scientific_releases": [
+    {
+      "files": 14,
+      "manifest_sha256": "8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f",
+      "release_id": "SUB-8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f",
+      "role": "proposer",
+      "topic": "EDA-0007"
+    },
+    {
+      "files": 9,
+      "manifest_sha256": "e3407b956910db0e7d4c3dbf46ac184bccf23d68e66ef738a10e0696ef980338",
+      "release_id": "SUB-e3407b956910db0e7d4c3dbf46ac184bccf23d68e66ef738a10e0696ef980338",
+      "role": "challenger",
+      "topic": "EDA-0007"
+    },
+    {
+      "files": 4,
+      "manifest_sha256": "1d2e343cab1599577d312783ff91916761e548b2d4e1d7749b3071f38416b8ca",
+      "release_id": "SUB-1d2e343cab1599577d312783ff91916761e548b2d4e1d7749b3071f38416b8ca",
+      "role": "verifier",
+      "topic": "EDA-0007"
+    },
+    {
+      "files": 14,
+      "manifest_sha256": "ebe8adb725c37ba6e164d487febc9021dddc8e911cf79e56ada9e9d2bd5c5ace",
+      "release_id": "SUB-ebe8adb725c37ba6e164d487febc9021dddc8e911cf79e56ada9e9d2bd5c5ace",
+      "role": "proposer",
+      "topic": "EDA-0007"
+    },
+    {
+      "files": 9,
+      "manifest_sha256": "00eaf4c6d47db0f8dcb907fbf5d70719e7d1534a10660a8a5caa480ef6662ad9",
+      "release_id": "SUB-00eaf4c6d47db0f8dcb907fbf5d70719e7d1534a10660a8a5caa480ef6662ad9",
+      "role": "challenger",
+      "topic": "EDA-0007"
+    },
+    {
+      "files": 4,
+      "manifest_sha256": "13a40498da3f7157d34b903152f0d7531070e03db61f3a487ab5338f52e29a4a",
+      "release_id": "SUB-13a40498da3f7157d34b903152f0d7531070e03db61f3a487ab5338f52e29a4a",
+      "role": "verifier",
+      "topic": "EDA-0007"
+    },
+    {
+      "files": 14,
+      "manifest_sha256": "43ec8c256a5116bee2790bbbb147ed089d72731f6051d10a6bbe479ffb2578b9",
+      "release_id": "SUB-43ec8c256a5116bee2790bbbb147ed089d72731f6051d10a6bbe479ffb2578b9",
+      "role": "proposer",
+      "topic": "EDA-0007"
+    },
+    {
+      "files": 9,
+      "manifest_sha256": "261aace737adca3c4e2a7d350c74b3613e49885585048bace6c03f3272213ab7",
+      "release_id": "SUB-261aace737adca3c4e2a7d350c74b3613e49885585048bace6c03f3272213ab7",
+      "role": "challenger",
+      "topic": "EDA-0007"
+    },
+    {
+      "files": 4,
+      "manifest_sha256": "f1d0c0c2682c4c400b66300ff48a498948f9fbc95d19db10151fa7cd92f8f4fa",
+      "release_id": "SUB-f1d0c0c2682c4c400b66300ff48a498948f9fbc95d19db10151fa7cd92f8f4fa",
+      "role": "verifier",
+      "topic": "EDA-0007"
+    },
+    {
+      "files": 14,
+      "manifest_sha256": "f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4",
+      "release_id": "SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4",
+      "role": "proposer",
+      "topic": "EDA-0008"
+    },
+    {
+      "files": 9,
+      "manifest_sha256": "0ddb73ca97e1fc1b27f33363b8b06817e6794e7c7a51e8755934918cc9ef8f02",
+      "release_id": "SUB-0ddb73ca97e1fc1b27f33363b8b06817e6794e7c7a51e8755934918cc9ef8f02",
+      "role": "challenger",
+      "topic": "EDA-0008"
+    },
+    {
+      "files": 4,
+      "manifest_sha256": "1423e18cfcffc89303d1daabf192e80dcb00716aa283af514c89f5bb96058f5e",
+      "release_id": "SUB-1423e18cfcffc89303d1daabf192e80dcb00716aa283af514c89f5bb96058f5e",
+      "role": "verifier",
+      "topic": "EDA-0008"
+    },
+    {
+      "files": 14,
+      "manifest_sha256": "15651a51979be07b769426268a585dc32c570cdabcb357ce6d8f29e9d29e3588",
+      "release_id": "SUB-15651a51979be07b769426268a585dc32c570cdabcb357ce6d8f29e9d29e3588",
+      "role": "proposer",
+      "topic": "EDA-0008"
+    },
+    {
+      "files": 9,
+      "manifest_sha256": "996a3afdee6abd5c24ebd2d6039e56c4e3baba57456ee34ec8d4c69c5e11ede2",
+      "release_id": "SUB-996a3afdee6abd5c24ebd2d6039e56c4e3baba57456ee34ec8d4c69c5e11ede2",
+      "role": "challenger",
+      "topic": "EDA-0008"
+    },
+    {
+      "files": 4,
+      "manifest_sha256": "34b826d7ab2de0ad0bae65f70fbe2a9aeea2f918b483e43265dbec790ddd0b47",
+      "release_id": "SUB-34b826d7ab2de0ad0bae65f70fbe2a9aeea2f918b483e43265dbec790ddd0b47",
+      "role": "verifier",
+      "topic": "EDA-0008"
+    },
+    {
+      "files": 14,
+      "manifest_sha256": "871f669003b3f9e0bf3e000e214a1d897e997cb043492f7a9e31a7404d85917c",
+      "release_id": "SUB-871f669003b3f9e0bf3e000e214a1d897e997cb043492f7a9e31a7404d85917c",
+      "role": "proposer",
+      "topic": "EDA-0008"
+    },
+    {
+      "files": 9,
+      "manifest_sha256": "63d98250bf2d3b9407c62009b03af558f52923b0ca2eee7a9c23aba2375d4b44",
+      "release_id": "SUB-63d98250bf2d3b9407c62009b03af558f52923b0ca2eee7a9c23aba2375d4b44",
+      "role": "challenger",
+      "topic": "EDA-0008"
+    },
+    {
+      "files": 4,
+      "manifest_sha256": "6e5bf1d98fce234bd3a92fe7baa53b72ecd534c846bd7b89a80359451044da95",
+      "release_id": "SUB-6e5bf1d98fce234bd3a92fe7baa53b72ecd534c846bd7b89a80359451044da95",
+      "role": "verifier",
+      "topic": "EDA-0008"
+    },
+    {
+      "files": 14,
+      "manifest_sha256": "aeaba01af9a5b6128eec0673cea74b71dc559d2ba9bf7da096ebfaff8bdce21a",
+      "release_id": "SUB-aeaba01af9a5b6128eec0673cea74b71dc559d2ba9bf7da096ebfaff8bdce21a",
+      "role": "proposer",
+      "topic": "EDA-0009"
+    },
+    {
+      "files": 9,
+      "manifest_sha256": "9354b850df73175a5f4764f21dc5b5e8d9204f7741e9c50dce06953c34e9f984",
+      "release_id": "SUB-9354b850df73175a5f4764f21dc5b5e8d9204f7741e9c50dce06953c34e9f984",
+      "role": "challenger",
+      "topic": "EDA-0009"
+    },
+    {
+      "files": 4,
+      "manifest_sha256": "2ff252d0046e7fc9825c2748ba4109878fee23295c7c2855ffd64435aa2a8f06",
+      "release_id": "SUB-2ff252d0046e7fc9825c2748ba4109878fee23295c7c2855ffd64435aa2a8f06",
+      "role": "verifier",
+      "topic": "EDA-0009"
+    },
+    {
+      "files": 14,
+      "manifest_sha256": "64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c",
+      "release_id": "SUB-64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c",
+      "role": "proposer",
+      "topic": "EDA-0010"
+    },
+    {
+      "files": 9,
+      "manifest_sha256": "45b1311973778bf0f7a2a7a2466ef3c20389362d8faf02846afdf22bc4ffce3d",
+      "release_id": "SUB-45b1311973778bf0f7a2a7a2466ef3c20389362d8faf02846afdf22bc4ffce3d",
+      "role": "challenger",
+      "topic": "EDA-0010"
+    },
+    {
+      "files": 4,
+      "manifest_sha256": "af311c9ae6b091db1fdb94a8bd262fe027a34d25a761c2e072c59c2d0497d01d",
+      "release_id": "SUB-af311c9ae6b091db1fdb94a8bd262fe027a34d25a761c2e072c59c2d0497d01d",
+      "role": "verifier",
+      "topic": "EDA-0010"
+    }
+  ],
   "scope": "Frozen byte/binding audit and independent protocol findings, not proof of unseen actions, scientific truth or OS confinement.",
-  "status": "in_progress"
+  "status": "bounded_batch_complete"
 }

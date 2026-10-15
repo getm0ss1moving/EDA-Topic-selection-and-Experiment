@@ -73,11 +73,27 @@
       }
     }
   },
-  "execution_status": "prepared; no model dispatched yet",
+  "execution_status": "completed_at_cap: four additional cycles per domain, eight audits, eight round PRs merged; no new experiments or accepted topic",
   "setup_notes": [
     "Initial shortened prepare reference was rejected before creating seats; full committed SHA used successfully.",
     "Initial GitHub CI found the dry-run test depended on local origin spelling; coordinator dry-run now uses local HEAD without network and the test supplies its own Git identity. Frozen scientific policy inputs remain at b1bb69f."
   ],
   "scope": "Four additional cycles each for D04/D05; 24 scientific jobs plus eight fresh independent protocol audits; no new EDA resource allocation.",
-  "coordinator_fix_commit": "5a69c9a"
+  "coordinator_fix_commit": "5a69c9a",
+  "coordinator_followup": {
+    "pr": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/56",
+    "purpose": "Durable quarantine and clean full-cycle recovery; source role policy unchanged.",
+    "tests_passed": 131,
+    "boundary_pr": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/57",
+    "reopenable_evidence_pr": {
+      "mergeCommit": {
+        "oid": "cf489fe7e82678e3aae3682328598195a46f040d"
+      },
+      "state": "MERGED",
+      "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/61",
+      "tests": 135
+    }
+  },
+  "initial_execution_status": "Scientific roles running; protocol audits pending first complete triples",
+  "completion_evidence": "runs/GPT-COMPLIANCE-0003/completion.json"
 }

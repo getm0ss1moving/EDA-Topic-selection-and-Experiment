@@ -1,0 +1,335 @@
+{
+  "checked_at_utc": "2026-10-15T16:07:29.701818+00:00",
+  "before": {
+    "cycles": {
+      "D04": 4,
+      "D05": 4
+    },
+    "topics": {
+      "EDA-0007": {
+        "domain": "D05",
+        "round": 3,
+        "status": "parked",
+        "job": null
+      },
+      "EDA-0008": {
+        "domain": "D04",
+        "round": 3,
+        "status": "parked",
+        "job": null
+      },
+      "EDA-0009": {
+        "domain": "D04",
+        "round": 1,
+        "status": "stopped_after_round_limit",
+        "job": null
+      },
+      "EDA-0010": {
+        "domain": "D05",
+        "round": 1,
+        "status": "stopped_after_round_limit",
+        "job": null
+      }
+    },
+    "jobs": [
+      "EDA-0007/ChatGPT-C05-TIMING-B03-EDA-0007-REPLACEMENT-1-3f76bcf0/jobs/5e45854a-abda-4878-90f2-fd99030102e3/JOB.json",
+      "EDA-0007/ChatGPT-C05-TIMING-B03-EDA-0007-REPLACEMENT-1-3f76bcf0/jobs/bf3ad0dc-1cbd-4d20-b4ef-b9a735bececd/JOB.json",
+      "EDA-0007/ChatGPT-C05-TIMING-B03-EDA-0007/jobs/701e2344-fa63-48b9-a4e7-393c80f45e9d/JOB.json",
+      "EDA-0007/ChatGPT-C05-TIMING-B03-EDA-0007/jobs/f9276164-9120-4284-8d47-a9354c7f09ed/JOB.json",
+      "EDA-0007/ChatGPT-P05-TIMING-B03-EDA-0007-REPLACEMENT-1-8154ee5a/jobs/2d6a2a36-2080-4a78-ba1b-fad40c12219d/JOB.json",
+      "EDA-0007/ChatGPT-P05-TIMING-B03-EDA-0007-REPLACEMENT-1-8154ee5a/jobs/e49aa3b5-4266-4966-ab60-b7455dfa7a9a/JOB.json",
+      "EDA-0007/ChatGPT-P05-TIMING-B03-EDA-0007/jobs/183f2281-f9f2-4273-ab52-7442e5fc96c9/JOB.json",
+      "EDA-0007/ChatGPT-P05-TIMING-B03-EDA-0007/jobs/71796cdb-9158-417c-a464-60098bf7452a/JOB.json",
+      "EDA-0007/ChatGPT-V05-TIMING-B03-EDA-0007-REPLACEMENT-1-506e0f6e/jobs/1b43edf9-2877-400a-8144-b3f76d1f4c0f/JOB.json",
+      "EDA-0007/ChatGPT-V05-TIMING-B03-EDA-0007-REPLACEMENT-1-506e0f6e/jobs/7510431d-0032-4d10-a262-a370849ffde6/JOB.json",
+      "EDA-0007/ChatGPT-V05-TIMING-B03-EDA-0007/jobs/2bf1d1e0-d013-40b5-9ac8-69b898f194f0/JOB.json",
+      "EDA-0008/ChatGPT-C04-PHYSICAL-B03-EDA-0008/jobs/a0c8f514-fcb9-48fa-a4a3-051fb16fcdcc/JOB.json",
+      "EDA-0008/ChatGPT-C04-PHYSICAL-B03-EDA-0008/jobs/a56a2148-6232-4407-88e1-764c65a62d1d/JOB.json",
+      "EDA-0008/ChatGPT-C04-PHYSICAL-B03-EDA-0008/jobs/be04d547-6721-465d-9e44-a4b5103b9a4b/JOB.json",
+      "EDA-0008/ChatGPT-P04-PHYSICAL-B03-EDA-0008/jobs/76dd2476-5082-4df4-b75c-569165ddc930/JOB.json",
+      "EDA-0008/ChatGPT-P04-PHYSICAL-B03-EDA-0008/jobs/92987290-8d4d-409c-9b2a-b4a8032a7375/JOB.json",
+      "EDA-0008/ChatGPT-P04-PHYSICAL-B03-EDA-0008/jobs/f059c7d1-1da3-4b27-b373-cf995f205d79/JOB.json",
+      "EDA-0008/ChatGPT-V04-PHYSICAL-B03-EDA-0008/jobs/29f37c72-2e69-44b5-96a1-caa4200409be/JOB.json",
+      "EDA-0008/ChatGPT-V04-PHYSICAL-B03-EDA-0008/jobs/7e0e00bb-e6e2-4659-a94f-d05c6d1e946a/JOB.json",
+      "EDA-0008/ChatGPT-V04-PHYSICAL-B03-EDA-0008/jobs/f437b34b-1e93-448d-b55c-1083168a8a25/JOB.json",
+      "EDA-0009/ChatGPT-C04-PHYSICAL-B03-EDA-0009/jobs/68f5832a-706b-4949-bd6c-d0cc63d07dc6/JOB.json",
+      "EDA-0009/ChatGPT-P04-PHYSICAL-B03-EDA-0009/jobs/bc8ea4a2-c017-49ed-806d-dade647caae2/JOB.json",
+      "EDA-0009/ChatGPT-V04-PHYSICAL-B03-EDA-0009/jobs/337539d1-56ac-499c-a6df-08d7c7bc6c76/JOB.json",
+      "EDA-0010/ChatGPT-C05-TIMING-B03-EDA-0010/jobs/bbc3cee2-805a-4ae0-a256-caa4cbf3b6cd/JOB.json",
+      "EDA-0010/ChatGPT-P05-TIMING-B03-EDA-0010/jobs/0063b0e5-3794-4446-b9d6-43b3f83a47b7/JOB.json",
+      "EDA-0010/ChatGPT-V05-TIMING-B03-EDA-0010/jobs/8f1a6239-9864-47b2-9508-56dae32cc0b6/JOB.json",
+      "audits/SUB-13a40498da3f7157d34b903152f0d7531070e03db61f3a487ab5338f52e29a4a/jobs/59ddd9da-46d9-4740-9f8b-1b3d6052cb4d/JOB.json",
+      "audits/SUB-1423e18cfcffc89303d1daabf192e80dcb00716aa283af514c89f5bb96058f5e/jobs/90fbacfc-5c34-460f-8e20-6f4f5d04f0a9/JOB.json",
+      "audits/SUB-1d2e343cab1599577d312783ff91916761e548b2d4e1d7749b3071f38416b8ca/jobs/4e958940-9fd1-4ff7-93a9-821b6c791b64/JOB.json",
+      "audits/SUB-2ff252d0046e7fc9825c2748ba4109878fee23295c7c2855ffd64435aa2a8f06/jobs/06eabd90-6567-48d1-9eca-0071b080f735/JOB.json",
+      "audits/SUB-34b826d7ab2de0ad0bae65f70fbe2a9aeea2f918b483e43265dbec790ddd0b47/jobs/f850693e-5775-4feb-81ab-585371c2884a/JOB.json",
+      "audits/SUB-6e5bf1d98fce234bd3a92fe7baa53b72ecd534c846bd7b89a80359451044da95/jobs/1a716164-bf88-426a-88d8-6ecc1aca87d0/JOB.json",
+      "audits/SUB-af311c9ae6b091db1fdb94a8bd262fe027a34d25a761c2e072c59c2d0497d01d/jobs/d94d8c40-abe8-42dc-9b9f-8106e9cf2606/JOB.json",
+      "audits/SUB-f1d0c0c2682c4c400b66300ff48a498948f9fbc95d19db10151fa7cd92f8f4fa/jobs/24de5a49-3941-45e9-b8ef-44c83f7b756f/JOB.json"
+    ],
+    "audit_count": 8,
+    "published_count": 8,
+    "merged_count": 8
+  },
+  "after": {
+    "cycles": {
+      "D04": 4,
+      "D05": 4
+    },
+    "topics": {
+      "EDA-0007": {
+        "domain": "D05",
+        "round": 3,
+        "status": "parked",
+        "job": null
+      },
+      "EDA-0008": {
+        "domain": "D04",
+        "round": 3,
+        "status": "parked",
+        "job": null
+      },
+      "EDA-0009": {
+        "domain": "D04",
+        "round": 1,
+        "status": "stopped_after_round_limit",
+        "job": null
+      },
+      "EDA-0010": {
+        "domain": "D05",
+        "round": 1,
+        "status": "stopped_after_round_limit",
+        "job": null
+      }
+    },
+    "jobs": [
+      "EDA-0007/ChatGPT-C05-TIMING-B03-EDA-0007-REPLACEMENT-1-3f76bcf0/jobs/5e45854a-abda-4878-90f2-fd99030102e3/JOB.json",
+      "EDA-0007/ChatGPT-C05-TIMING-B03-EDA-0007-REPLACEMENT-1-3f76bcf0/jobs/bf3ad0dc-1cbd-4d20-b4ef-b9a735bececd/JOB.json",
+      "EDA-0007/ChatGPT-C05-TIMING-B03-EDA-0007/jobs/701e2344-fa63-48b9-a4e7-393c80f45e9d/JOB.json",
+      "EDA-0007/ChatGPT-C05-TIMING-B03-EDA-0007/jobs/f9276164-9120-4284-8d47-a9354c7f09ed/JOB.json",
+      "EDA-0007/ChatGPT-P05-TIMING-B03-EDA-0007-REPLACEMENT-1-8154ee5a/jobs/2d6a2a36-2080-4a78-ba1b-fad40c12219d/JOB.json",
+      "EDA-0007/ChatGPT-P05-TIMING-B03-EDA-0007-REPLACEMENT-1-8154ee5a/jobs/e49aa3b5-4266-4966-ab60-b7455dfa7a9a/JOB.json",
+      "EDA-0007/ChatGPT-P05-TIMING-B03-EDA-0007/jobs/183f2281-f9f2-4273-ab52-7442e5fc96c9/JOB.json",
+      "EDA-0007/ChatGPT-P05-TIMING-B03-EDA-0007/jobs/71796cdb-9158-417c-a464-60098bf7452a/JOB.json",
+      "EDA-0007/ChatGPT-V05-TIMING-B03-EDA-0007-REPLACEMENT-1-506e0f6e/jobs/1b43edf9-2877-400a-8144-b3f76d1f4c0f/JOB.json",
+      "EDA-0007/ChatGPT-V05-TIMING-B03-EDA-0007-REPLACEMENT-1-506e0f6e/jobs/7510431d-0032-4d10-a262-a370849ffde6/JOB.json",
+      "EDA-0007/ChatGPT-V05-TIMING-B03-EDA-0007/jobs/2bf1d1e0-d013-40b5-9ac8-69b898f194f0/JOB.json",
+      "EDA-0008/ChatGPT-C04-PHYSICAL-B03-EDA-0008/jobs/a0c8f514-fcb9-48fa-a4a3-051fb16fcdcc/JOB.json",
+      "EDA-0008/ChatGPT-C04-PHYSICAL-B03-EDA-0008/jobs/a56a2148-6232-4407-88e1-764c65a62d1d/JOB.json",
+      "EDA-0008/ChatGPT-C04-PHYSICAL-B03-EDA-0008/jobs/be04d547-6721-465d-9e44-a4b5103b9a4b/JOB.json",
+      "EDA-0008/ChatGPT-P04-PHYSICAL-B03-EDA-0008/jobs/76dd2476-5082-4df4-b75c-569165ddc930/JOB.json",
+      "EDA-0008/ChatGPT-P04-PHYSICAL-B03-EDA-0008/jobs/92987290-8d4d-409c-9b2a-b4a8032a7375/JOB.json",
+      "EDA-0008/ChatGPT-P04-PHYSICAL-B03-EDA-0008/jobs/f059c7d1-1da3-4b27-b373-cf995f205d79/JOB.json",
+      "EDA-0008/ChatGPT-V04-PHYSICAL-B03-EDA-0008/jobs/29f37c72-2e69-44b5-96a1-caa4200409be/JOB.json",
+      "EDA-0008/ChatGPT-V04-PHYSICAL-B03-EDA-0008/jobs/7e0e00bb-e6e2-4659-a94f-d05c6d1e946a/JOB.json",
+      "EDA-0008/ChatGPT-V04-PHYSICAL-B03-EDA-0008/jobs/f437b34b-1e93-448d-b55c-1083168a8a25/JOB.json",
+      "EDA-0009/ChatGPT-C04-PHYSICAL-B03-EDA-0009/jobs/68f5832a-706b-4949-bd6c-d0cc63d07dc6/JOB.json",
+      "EDA-0009/ChatGPT-P04-PHYSICAL-B03-EDA-0009/jobs/bc8ea4a2-c017-49ed-806d-dade647caae2/JOB.json",
+      "EDA-0009/ChatGPT-V04-PHYSICAL-B03-EDA-0009/jobs/337539d1-56ac-499c-a6df-08d7c7bc6c76/JOB.json",
+      "EDA-0010/ChatGPT-C05-TIMING-B03-EDA-0010/jobs/bbc3cee2-805a-4ae0-a256-caa4cbf3b6cd/JOB.json",
+      "EDA-0010/ChatGPT-P05-TIMING-B03-EDA-0010/jobs/0063b0e5-3794-4446-b9d6-43b3f83a47b7/JOB.json",
+      "EDA-0010/ChatGPT-V05-TIMING-B03-EDA-0010/jobs/8f1a6239-9864-47b2-9508-56dae32cc0b6/JOB.json",
+      "audits/SUB-13a40498da3f7157d34b903152f0d7531070e03db61f3a487ab5338f52e29a4a/jobs/59ddd9da-46d9-4740-9f8b-1b3d6052cb4d/JOB.json",
+      "audits/SUB-1423e18cfcffc89303d1daabf192e80dcb00716aa283af514c89f5bb96058f5e/jobs/90fbacfc-5c34-460f-8e20-6f4f5d04f0a9/JOB.json",
+      "audits/SUB-1d2e343cab1599577d312783ff91916761e548b2d4e1d7749b3071f38416b8ca/jobs/4e958940-9fd1-4ff7-93a9-821b6c791b64/JOB.json",
+      "audits/SUB-2ff252d0046e7fc9825c2748ba4109878fee23295c7c2855ffd64435aa2a8f06/jobs/06eabd90-6567-48d1-9eca-0071b080f735/JOB.json",
+      "audits/SUB-34b826d7ab2de0ad0bae65f70fbe2a9aeea2f918b483e43265dbec790ddd0b47/jobs/f850693e-5775-4feb-81ab-585371c2884a/JOB.json",
+      "audits/SUB-6e5bf1d98fce234bd3a92fe7baa53b72ecd534c846bd7b89a80359451044da95/jobs/1a716164-bf88-426a-88d8-6ecc1aca87d0/JOB.json",
+      "audits/SUB-af311c9ae6b091db1fdb94a8bd262fe027a34d25a761c2e072c59c2d0497d01d/jobs/d94d8c40-abe8-42dc-9b9f-8106e9cf2606/JOB.json",
+      "audits/SUB-f1d0c0c2682c4c400b66300ff48a498948f9fbc95d19db10151fa7cd92f8f4fa/jobs/24de5a49-3941-45e9-b8ef-44c83f7b756f/JOB.json"
+    ],
+    "audit_count": 8,
+    "published_count": 8,
+    "merged_count": 8
+  },
+  "dispatch_results": [
+    {
+      "command": [
+        "python3",
+        "scripts/codex_loop.py",
+        "--config",
+        "config/codex-compliance-research.json",
+        "dispatch",
+        "--domain",
+        "D04"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"finished\",\n  \"domain\": \"D04\",\n  \"rounds\": 4\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/codex_loop.py",
+        "--config",
+        "config/codex-compliance-research.json",
+        "dispatch",
+        "--domain",
+        "D05"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"finished\",\n  \"domain\": \"D05\",\n  \"rounds\": 4\n}\n",
+      "stderr": ""
+    }
+  ],
+  "no_new_job_or_seat": true,
+  "scope": "Both domain dispatches at cap; state/job inventory unchanged and no model spawned. This is a finite batch, not evidence of a running daemon.",
+  "exact_state_recheck": {
+    "checked_at_utc": "2026-10-15T16:11:13.501210+00:00",
+    "before": {
+      "state_sha256": "4738fcbf8f7e05447781a85e646c44b67f0ce1e80ab9230694305b36efaecbb0",
+      "seat_sessions": [
+        "2f77fe2e-7fc6-48e3-ae9f-8e58df92c79d",
+        "32ff7459-1199-4a05-aceb-ae30c925a366",
+        "370f04ea-8378-4c1f-ab83-2fa830453d13",
+        "5796edbb-fac9-477b-ab72-194c4cbfe34c",
+        "7a28c23e-2907-49c3-858b-ae7d875697eb",
+        "94045552-61ca-4bb4-a950-c6de444a88ed",
+        "a6cdf350-7e86-4988-92ca-660db08d6d53",
+        "a758be30-1627-4434-bc85-379554161f43",
+        "b68834d9-8d64-4081-8599-01722d58110e",
+        "bfed115a-3d9b-43a8-88ed-35eadbc3186f",
+        "dcd1cbc5-8472-4448-b7a0-e05270475146",
+        "ff710454-5090-49e3-b425-6d9b97c0250c"
+      ],
+      "cycles": {
+        "D04": 4,
+        "D05": 4
+      },
+      "pending_jobs": [],
+      "job_descriptors": [
+        "EDA-0007/ChatGPT-C05-TIMING-B03-EDA-0007-REPLACEMENT-1-3f76bcf0/jobs/5e45854a-abda-4878-90f2-fd99030102e3/JOB.json",
+        "EDA-0007/ChatGPT-C05-TIMING-B03-EDA-0007-REPLACEMENT-1-3f76bcf0/jobs/bf3ad0dc-1cbd-4d20-b4ef-b9a735bececd/JOB.json",
+        "EDA-0007/ChatGPT-C05-TIMING-B03-EDA-0007/jobs/701e2344-fa63-48b9-a4e7-393c80f45e9d/JOB.json",
+        "EDA-0007/ChatGPT-C05-TIMING-B03-EDA-0007/jobs/f9276164-9120-4284-8d47-a9354c7f09ed/JOB.json",
+        "EDA-0007/ChatGPT-P05-TIMING-B03-EDA-0007-REPLACEMENT-1-8154ee5a/jobs/2d6a2a36-2080-4a78-ba1b-fad40c12219d/JOB.json",
+        "EDA-0007/ChatGPT-P05-TIMING-B03-EDA-0007-REPLACEMENT-1-8154ee5a/jobs/e49aa3b5-4266-4966-ab60-b7455dfa7a9a/JOB.json",
+        "EDA-0007/ChatGPT-P05-TIMING-B03-EDA-0007/jobs/183f2281-f9f2-4273-ab52-7442e5fc96c9/JOB.json",
+        "EDA-0007/ChatGPT-P05-TIMING-B03-EDA-0007/jobs/71796cdb-9158-417c-a464-60098bf7452a/JOB.json",
+        "EDA-0007/ChatGPT-V05-TIMING-B03-EDA-0007-REPLACEMENT-1-506e0f6e/jobs/1b43edf9-2877-400a-8144-b3f76d1f4c0f/JOB.json",
+        "EDA-0007/ChatGPT-V05-TIMING-B03-EDA-0007-REPLACEMENT-1-506e0f6e/jobs/7510431d-0032-4d10-a262-a370849ffde6/JOB.json",
+        "EDA-0007/ChatGPT-V05-TIMING-B03-EDA-0007/jobs/2bf1d1e0-d013-40b5-9ac8-69b898f194f0/JOB.json",
+        "EDA-0008/ChatGPT-C04-PHYSICAL-B03-EDA-0008/jobs/a0c8f514-fcb9-48fa-a4a3-051fb16fcdcc/JOB.json",
+        "EDA-0008/ChatGPT-C04-PHYSICAL-B03-EDA-0008/jobs/a56a2148-6232-4407-88e1-764c65a62d1d/JOB.json",
+        "EDA-0008/ChatGPT-C04-PHYSICAL-B03-EDA-0008/jobs/be04d547-6721-465d-9e44-a4b5103b9a4b/JOB.json",
+        "EDA-0008/ChatGPT-P04-PHYSICAL-B03-EDA-0008/jobs/76dd2476-5082-4df4-b75c-569165ddc930/JOB.json",
+        "EDA-0008/ChatGPT-P04-PHYSICAL-B03-EDA-0008/jobs/92987290-8d4d-409c-9b2a-b4a8032a7375/JOB.json",
+        "EDA-0008/ChatGPT-P04-PHYSICAL-B03-EDA-0008/jobs/f059c7d1-1da3-4b27-b373-cf995f205d79/JOB.json",
+        "EDA-0008/ChatGPT-V04-PHYSICAL-B03-EDA-0008/jobs/29f37c72-2e69-44b5-96a1-caa4200409be/JOB.json",
+        "EDA-0008/ChatGPT-V04-PHYSICAL-B03-EDA-0008/jobs/7e0e00bb-e6e2-4659-a94f-d05c6d1e946a/JOB.json",
+        "EDA-0008/ChatGPT-V04-PHYSICAL-B03-EDA-0008/jobs/f437b34b-1e93-448d-b55c-1083168a8a25/JOB.json",
+        "EDA-0009/ChatGPT-C04-PHYSICAL-B03-EDA-0009/jobs/68f5832a-706b-4949-bd6c-d0cc63d07dc6/JOB.json",
+        "EDA-0009/ChatGPT-P04-PHYSICAL-B03-EDA-0009/jobs/bc8ea4a2-c017-49ed-806d-dade647caae2/JOB.json",
+        "EDA-0009/ChatGPT-V04-PHYSICAL-B03-EDA-0009/jobs/337539d1-56ac-499c-a6df-08d7c7bc6c76/JOB.json",
+        "EDA-0010/ChatGPT-C05-TIMING-B03-EDA-0010/jobs/bbc3cee2-805a-4ae0-a256-caa4cbf3b6cd/JOB.json",
+        "EDA-0010/ChatGPT-P05-TIMING-B03-EDA-0010/jobs/0063b0e5-3794-4446-b9d6-43b3f83a47b7/JOB.json",
+        "EDA-0010/ChatGPT-V05-TIMING-B03-EDA-0010/jobs/8f1a6239-9864-47b2-9508-56dae32cc0b6/JOB.json",
+        "audits/SUB-13a40498da3f7157d34b903152f0d7531070e03db61f3a487ab5338f52e29a4a/jobs/59ddd9da-46d9-4740-9f8b-1b3d6052cb4d/JOB.json",
+        "audits/SUB-1423e18cfcffc89303d1daabf192e80dcb00716aa283af514c89f5bb96058f5e/jobs/90fbacfc-5c34-460f-8e20-6f4f5d04f0a9/JOB.json",
+        "audits/SUB-1d2e343cab1599577d312783ff91916761e548b2d4e1d7749b3071f38416b8ca/jobs/4e958940-9fd1-4ff7-93a9-821b6c791b64/JOB.json",
+        "audits/SUB-2ff252d0046e7fc9825c2748ba4109878fee23295c7c2855ffd64435aa2a8f06/jobs/06eabd90-6567-48d1-9eca-0071b080f735/JOB.json",
+        "audits/SUB-34b826d7ab2de0ad0bae65f70fbe2a9aeea2f918b483e43265dbec790ddd0b47/jobs/f850693e-5775-4feb-81ab-585371c2884a/JOB.json",
+        "audits/SUB-6e5bf1d98fce234bd3a92fe7baa53b72ecd534c846bd7b89a80359451044da95/jobs/1a716164-bf88-426a-88d8-6ecc1aca87d0/JOB.json",
+        "audits/SUB-af311c9ae6b091db1fdb94a8bd262fe027a34d25a761c2e072c59c2d0497d01d/jobs/d94d8c40-abe8-42dc-9b9f-8106e9cf2606/JOB.json",
+        "audits/SUB-f1d0c0c2682c4c400b66300ff48a498948f9fbc95d19db10151fa7cd92f8f4fa/jobs/24de5a49-3941-45e9-b8ef-44c83f7b756f/JOB.json"
+      ]
+    },
+    "after": {
+      "state_sha256": "4738fcbf8f7e05447781a85e646c44b67f0ce1e80ab9230694305b36efaecbb0",
+      "seat_sessions": [
+        "2f77fe2e-7fc6-48e3-ae9f-8e58df92c79d",
+        "32ff7459-1199-4a05-aceb-ae30c925a366",
+        "370f04ea-8378-4c1f-ab83-2fa830453d13",
+        "5796edbb-fac9-477b-ab72-194c4cbfe34c",
+        "7a28c23e-2907-49c3-858b-ae7d875697eb",
+        "94045552-61ca-4bb4-a950-c6de444a88ed",
+        "a6cdf350-7e86-4988-92ca-660db08d6d53",
+        "a758be30-1627-4434-bc85-379554161f43",
+        "b68834d9-8d64-4081-8599-01722d58110e",
+        "bfed115a-3d9b-43a8-88ed-35eadbc3186f",
+        "dcd1cbc5-8472-4448-b7a0-e05270475146",
+        "ff710454-5090-49e3-b425-6d9b97c0250c"
+      ],
+      "cycles": {
+        "D04": 4,
+        "D05": 4
+      },
+      "pending_jobs": [],
+      "job_descriptors": [
+        "EDA-0007/ChatGPT-C05-TIMING-B03-EDA-0007-REPLACEMENT-1-3f76bcf0/jobs/5e45854a-abda-4878-90f2-fd99030102e3/JOB.json",
+        "EDA-0007/ChatGPT-C05-TIMING-B03-EDA-0007-REPLACEMENT-1-3f76bcf0/jobs/bf3ad0dc-1cbd-4d20-b4ef-b9a735bececd/JOB.json",
+        "EDA-0007/ChatGPT-C05-TIMING-B03-EDA-0007/jobs/701e2344-fa63-48b9-a4e7-393c80f45e9d/JOB.json",
+        "EDA-0007/ChatGPT-C05-TIMING-B03-EDA-0007/jobs/f9276164-9120-4284-8d47-a9354c7f09ed/JOB.json",
+        "EDA-0007/ChatGPT-P05-TIMING-B03-EDA-0007-REPLACEMENT-1-8154ee5a/jobs/2d6a2a36-2080-4a78-ba1b-fad40c12219d/JOB.json",
+        "EDA-0007/ChatGPT-P05-TIMING-B03-EDA-0007-REPLACEMENT-1-8154ee5a/jobs/e49aa3b5-4266-4966-ab60-b7455dfa7a9a/JOB.json",
+        "EDA-0007/ChatGPT-P05-TIMING-B03-EDA-0007/jobs/183f2281-f9f2-4273-ab52-7442e5fc96c9/JOB.json",
+        "EDA-0007/ChatGPT-P05-TIMING-B03-EDA-0007/jobs/71796cdb-9158-417c-a464-60098bf7452a/JOB.json",
+        "EDA-0007/ChatGPT-V05-TIMING-B03-EDA-0007-REPLACEMENT-1-506e0f6e/jobs/1b43edf9-2877-400a-8144-b3f76d1f4c0f/JOB.json",
+        "EDA-0007/ChatGPT-V05-TIMING-B03-EDA-0007-REPLACEMENT-1-506e0f6e/jobs/7510431d-0032-4d10-a262-a370849ffde6/JOB.json",
+        "EDA-0007/ChatGPT-V05-TIMING-B03-EDA-0007/jobs/2bf1d1e0-d013-40b5-9ac8-69b898f194f0/JOB.json",
+        "EDA-0008/ChatGPT-C04-PHYSICAL-B03-EDA-0008/jobs/a0c8f514-fcb9-48fa-a4a3-051fb16fcdcc/JOB.json",
+        "EDA-0008/ChatGPT-C04-PHYSICAL-B03-EDA-0008/jobs/a56a2148-6232-4407-88e1-764c65a62d1d/JOB.json",
+        "EDA-0008/ChatGPT-C04-PHYSICAL-B03-EDA-0008/jobs/be04d547-6721-465d-9e44-a4b5103b9a4b/JOB.json",
+        "EDA-0008/ChatGPT-P04-PHYSICAL-B03-EDA-0008/jobs/76dd2476-5082-4df4-b75c-569165ddc930/JOB.json",
+        "EDA-0008/ChatGPT-P04-PHYSICAL-B03-EDA-0008/jobs/92987290-8d4d-409c-9b2a-b4a8032a7375/JOB.json",
+        "EDA-0008/ChatGPT-P04-PHYSICAL-B03-EDA-0008/jobs/f059c7d1-1da3-4b27-b373-cf995f205d79/JOB.json",
+        "EDA-0008/ChatGPT-V04-PHYSICAL-B03-EDA-0008/jobs/29f37c72-2e69-44b5-96a1-caa4200409be/JOB.json",
+        "EDA-0008/ChatGPT-V04-PHYSICAL-B03-EDA-0008/jobs/7e0e00bb-e6e2-4659-a94f-d05c6d1e946a/JOB.json",
+        "EDA-0008/ChatGPT-V04-PHYSICAL-B03-EDA-0008/jobs/f437b34b-1e93-448d-b55c-1083168a8a25/JOB.json",
+        "EDA-0009/ChatGPT-C04-PHYSICAL-B03-EDA-0009/jobs/68f5832a-706b-4949-bd6c-d0cc63d07dc6/JOB.json",
+        "EDA-0009/ChatGPT-P04-PHYSICAL-B03-EDA-0009/jobs/bc8ea4a2-c017-49ed-806d-dade647caae2/JOB.json",
+        "EDA-0009/ChatGPT-V04-PHYSICAL-B03-EDA-0009/jobs/337539d1-56ac-499c-a6df-08d7c7bc6c76/JOB.json",
+        "EDA-0010/ChatGPT-C05-TIMING-B03-EDA-0010/jobs/bbc3cee2-805a-4ae0-a256-caa4cbf3b6cd/JOB.json",
+        "EDA-0010/ChatGPT-P05-TIMING-B03-EDA-0010/jobs/0063b0e5-3794-4446-b9d6-43b3f83a47b7/JOB.json",
+        "EDA-0010/ChatGPT-V05-TIMING-B03-EDA-0010/jobs/8f1a6239-9864-47b2-9508-56dae32cc0b6/JOB.json",
+        "audits/SUB-13a40498da3f7157d34b903152f0d7531070e03db61f3a487ab5338f52e29a4a/jobs/59ddd9da-46d9-4740-9f8b-1b3d6052cb4d/JOB.json",
+        "audits/SUB-1423e18cfcffc89303d1daabf192e80dcb00716aa283af514c89f5bb96058f5e/jobs/90fbacfc-5c34-460f-8e20-6f4f5d04f0a9/JOB.json",
+        "audits/SUB-1d2e343cab1599577d312783ff91916761e548b2d4e1d7749b3071f38416b8ca/jobs/4e958940-9fd1-4ff7-93a9-821b6c791b64/JOB.json",
+        "audits/SUB-2ff252d0046e7fc9825c2748ba4109878fee23295c7c2855ffd64435aa2a8f06/jobs/06eabd90-6567-48d1-9eca-0071b080f735/JOB.json",
+        "audits/SUB-34b826d7ab2de0ad0bae65f70fbe2a9aeea2f918b483e43265dbec790ddd0b47/jobs/f850693e-5775-4feb-81ab-585371c2884a/JOB.json",
+        "audits/SUB-6e5bf1d98fce234bd3a92fe7baa53b72ecd534c846bd7b89a80359451044da95/jobs/1a716164-bf88-426a-88d8-6ecc1aca87d0/JOB.json",
+        "audits/SUB-af311c9ae6b091db1fdb94a8bd262fe027a34d25a761c2e072c59c2d0497d01d/jobs/d94d8c40-abe8-42dc-9b9f-8106e9cf2606/JOB.json",
+        "audits/SUB-f1d0c0c2682c4c400b66300ff48a498948f9fbc95d19db10151fa7cd92f8f4fa/jobs/24de5a49-3941-45e9-b8ef-44c83f7b756f/JOB.json"
+      ]
+    },
+    "dispatch_results": [
+      {
+        "command": [
+          "python3",
+          "scripts/codex_loop.py",
+          "--config",
+          "config/codex-compliance-research.json",
+          "dispatch",
+          "--domain",
+          "D04"
+        ],
+        "exit_code": 0,
+        "result": {
+          "status": "finished",
+          "domain": "D04",
+          "rounds": 4
+        },
+        "stderr": ""
+      },
+      {
+        "command": [
+          "python3",
+          "scripts/codex_loop.py",
+          "--config",
+          "config/codex-compliance-research.json",
+          "dispatch",
+          "--domain",
+          "D05"
+        ],
+        "exit_code": 0,
+        "result": {
+          "status": "finished",
+          "domain": "D05",
+          "rounds": 4
+        },
+        "stderr": ""
+      }
+    ],
+    "state_bytes_and_seat_sessions_unchanged": true
+  }
+}

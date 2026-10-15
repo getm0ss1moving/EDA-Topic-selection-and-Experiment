@@ -1,0 +1,23 @@
+{
+  "scientific_role_rows": 24,
+  "rule_cells": 216,
+  "cell_status_counts": {
+    "no_violation_found_within_scope": 209,
+    "supported_deviation": 7,
+    "unresolved": 0
+  },
+  "aborted_metadata_only": {
+    "role_rows": 2,
+    "rule_cells": 18,
+    "cell_status_counts": {
+      "no_violation_found_within_scope": 1,
+      "supported_deviation": 2,
+      "unresolved": 15
+    },
+    "excluded_from_valid_cycle_counts": true
+  },
+  "overall_unresolved_audits": [
+    "SUB-1d755d147fde917e19455a455a3a1020947212f4a552695d4df0ffbd05fbf9b0"
+  ],
+  "scope": "Counts transcribe independent reviewer cells; a deviation is not necessarily material contamination. N is evidence-bounded and does not certify hidden actions."
+}

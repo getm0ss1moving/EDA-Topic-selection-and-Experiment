@@ -1,0 +1,8 @@
+{
+  "scope": "Exact public assignment and coordinator-visible failure metadata only; no private logs or raw unadjudicated scientific arguments.",
+  "files": {
+    "prompt.txt": "36e00c59e52dbf20c5f0fd30bbb51f08e2fc2ecba1cab228cd2ab904a5e3f2a8",
+    "coordinator-report.json": "521b4a89749888065241e546fed8a72f8e52951bc1b563bfa4db7a189167883f",
+    "JOB.json": "39b9c70d0603484467a119c8ae2791e55498dbf61b08d866424f7394589a9906"
+  }
+}

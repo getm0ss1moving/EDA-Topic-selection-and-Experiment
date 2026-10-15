@@ -1,0 +1,8 @@
+{
+  "recorded_at_utc": "2026-10-15T16:11:00.587235+00:00",
+  "actor": "coordinator",
+  "status": "self_disclosure_not_independently_adjudicated",
+  "event": "One closing rg search across the EDA-0008 role job tree used verification.md/verification.json/response.md filename filters instead of exact accepted-release paths; output included repeated shared copies, templates and superseded verification files. No private conversation, tool trace or scratch was requested.",
+  "correction": "Stopped that broad search; narrowed followup to exact accepted verifier releases from publication_queue. No content sent to science roles and no new scientific judgment made.",
+  "limits": "An independently reviewed protocol finding is not claimed for this coordinator action. Frozen eight audit decisions remain unchanged; no hidden-action certification."
+}
