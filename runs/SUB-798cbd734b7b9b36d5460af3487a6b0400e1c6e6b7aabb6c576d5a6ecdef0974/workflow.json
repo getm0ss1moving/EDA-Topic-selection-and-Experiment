@@ -1,0 +1,29 @@
+{
+  "role": "proposer",
+  "phase": "research",
+  "batch_round": 1,
+  "assessment": "unresolved",
+  "position": "revise_same_problem",
+  "experiment_ready": false,
+  "new_experiment_compute_used": false,
+  "adjudicated_challenge_supplied": false,
+  "inherited_exposure": "R1b unadjudicated first-pass content in explicitly released proposer handover/seed; no independence or acceptance inherited",
+  "scientific_gates": {
+    "novelty": "unresolved",
+    "soundness": "unresolved",
+    "engineering_demand": "unresolved",
+    "headroom": "unresolved",
+    "representative_data": "unresolved",
+    "consent": "not_requested"
+  },
+  "direction_penalties": {
+    "combination_drift": 1,
+    "demand_drift": 0,
+    "total": 1
+  },
+  "next_resolution_tasks": [
+    "TASK-01",
+    "TASK-02",
+    "TASK-03"
+  ]
+}
