@@ -6,6 +6,7 @@ watch runs a native Codex job whenever a role has work; no sleeping role must wa
 Scientific decisions are authored in role files. The coordinator only checks and routes them.
 """
 import argparse
+import copy
 import fcntl
 import hashlib
 import importlib.util
@@ -515,6 +516,67 @@ def pending_audit(state, c, domain):
             return record
 
 
+def cycle_checkpoint(t):
+    """Only clean, previously released inputs; never a private execution trace."""
+    fields=('phase','round','status','latest','history','closure','last_scientific_decision')
+    return {k:copy.deepcopy(t[k]) for k in fields if k in t}
+
+
+def quarantine_cycle(state,t,job,reason,home,record=None):
+    """Persist rejected evidence and halt; a disclosure is never a retry note."""
+    if not t.get('cycle_checkpoint'):raise ValueError('Missing clean recovery checkpoint; stop for coordinator')
+    ident='INCIDENT-'+str(uuid.uuid4())
+    releases=dict(record['releases']) if record else dict(t['latest'])
+    snapshots=[str(p) for p in (Path(job['work'])/'submissions').glob('SUB-*')]
+    incident={'id':ident,'topic':t['topic'],'domain':t['domain'],'reason':reason,
+              'job':copy.deepcopy(job),'releases':releases,'frozen_attempts':snapshots,
+              'clean_checkpoint':copy.deepcopy(t['cycle_checkpoint']),
+              'old_seats':copy.deepcopy(t['seats']),'status':'quarantined',
+              'note':'Preserve disclosure; no private transcript or exposed content is copied. Fresh full-cycle replacement required.'}
+    if record:
+        incident['round']=copy.deepcopy(record)
+        state['publication_queue'].remove(record)
+        key=record['verification_release']
+        if key in state.get('audits',{}):state['audits'][key]['quarantined']=True
+    state.setdefault('incidents',[]).append(incident)
+    save(home/'incidents'/(ident+'.json'),incident)
+    t['status']='quarantined';t['active_incident']=ident;t['job']=None;t['phase']='quarantined'
+
+
+def recover(c,home,domain):
+    """New identities/packets; rerun the tainted cycle from clean released inputs."""
+    state=read(home/'state.json')
+    affected=[t for t in state['topics'].values() if t['domain']==domain and t['status']=='quarantined']
+    if len(affected)!=1:raise ValueError('Exactly one quarantined cycle is required')
+    t=affected[0];incident=next(i for i in state['incidents'] if i['id']==t['active_incident'])
+    checkpoint=incident['clean_checkpoint'];old=t['seats'];new={}
+    number=sum(i['topic']==t['topic'] for i in state['incidents'])
+    for role,seat in old.items():
+        verify_packet(seat)
+        actor=seat['actor_id']+f'-REPLACEMENT-{number}-{uuid.uuid4().hex[:8]}'
+        base=home/t['topic']/actor;base.mkdir(parents=True);base.chmod(0o700)
+        packet=base/'packet';shutil.copytree(seat['packet'],packet)
+        packet.chmod(0o700)
+        manifest=read(packet/'PACKET.json');manifest['actor_id']=actor
+        (packet/'PACKET.json').chmod(0o600);save(packet/'PACKET.json',manifest);freeze_tree(packet)
+        inbox=base/'inbox';inbox.mkdir()
+        for sender in ROLES:
+            if role in rt.ROUTES[sender]:(inbox/f'from-{sender}').mkdir()
+        prior=Path(seat['base'])/'predecessor.json'
+        if prior.is_file():shutil.copyfile(prior,base/'predecessor.json')
+        new[role]={**seat,'actor_id':actor,'session_id':str(uuid.uuid4()),'base':str(base),
+                   'packet':str(packet),'packet_sha256':sha(packet/'PACKET.json'),'inbox':str(inbox)}
+    for key in ('phase','round','status','latest','history','closure','last_scientific_decision'):
+        if key in checkpoint:t[key]=copy.deepcopy(checkpoint[key])
+        else:t.pop(key,None)
+    t.update(seats=new,job=None,not_before=0)
+    t.pop('active_incident',None);t.pop('cycle_checkpoint',None)
+    incident['status']='replacement_prepared';incident['replacement_sessions']={r:s['session_id'] for r,s in new.items()}
+    save(home/'incidents'/(incident['id']+'.json'),incident)
+    transport_config(state,home);save(home/'state.json',state)
+    return {'status':'replacement_prepared','topic':t['topic'],'domain':domain,'incident':incident['id']}
+
+
 def audit_dispatch(c, home, domain):
     """Fresh verifier governance job, independent of all three scientific authors."""
     state=read(home/'state.json');record=pending_audit(state,c,domain)
@@ -592,13 +654,21 @@ def audit_collect(c,home,domain):
     if m['session_id'] in {rs.verify(p)[0]['session_id'] for p in record['releases'].values()}:
         raise ValueError('Auditor cannot review its own scientific output')
     expected=assignment['reviewed_releases']
-    compliance.validate_ledger(json.loads(p.get('compliance.json',b'{}')),m,assignment,expected.values())
+    try:
+        compliance.validate_ledger(json.loads(p.get('compliance.json',b'{}')),m,assignment,expected.values())
+    except compliance.ProtocolViolation as exc:
+        quarantine_cycle(state,state['topics'][record['topic']],job,str(exc),home,record)
+        save(home/'state.json',state);raise
     disposition=compliance.validate_review(json.loads(p['verification.json']),
                                           json.loads(p.get('workflow.json',b'{}')),expected)
     if record['decision'] in ('accept_for_pilot','abandon') and disposition not in ('clear_within_scope','nonblocking_findings'):
         raise ValueError('Scientific advancement cannot use an unresolved/blocking protocol audit')
     audit['release']=str(snapshot);audit['disposition']=disposition
     record['compliance_audit']=str(snapshot);record['compliance_gate']=disposition
+    if disposition=='blocking_violation':
+        quarantine_cycle(state,state['topics'][record['topic']],job,'Independent audit found a critical supported violation',home,record)
+        save(home/'state.json',state)
+        return {'status':'quarantined','topic':m['topic'],'disposition':disposition,'release_id':snapshot.name}
     registration={'session_id':m['session_id'],'actor_id':m['actor_id'],'role':'verifier','topic':m['topic'],
                   'platform':'OpenAI Codex','model':c['models']['verifier']['model'],'operator':'getm0ss1moving',
                   'github_login':'getm0ss1moving (transport only)', 'input_commit':m['input_commit'],
@@ -720,6 +790,8 @@ def merge_checked(url):
 def dispatch(c,home,domain):
     """Prepare one exact-model app-agent job; never spawn a native fallback."""
     state=read(home/'state.json')
+    if any(t['domain']==domain and t['status']=='quarantined' for t in state['topics'].values()):
+        return {'status':'quarantined','domain':domain,'instruction':'Preserve incident; run recover to prepare fresh full-cycle replacements.'}
     pending=pending_audit(state,c,domain)
     if pending:return {'status':'awaiting_compliance_audit','domain':domain,
                        'verification_release':pending['verification_release']}
@@ -730,7 +802,9 @@ def dispatch(c,home,domain):
     choices=[t for t in state['topics'].values() if t['domain']==domain and t['status']=='researching']
     if not choices:return {'status':'no_ready_topic','domain':domain}
     t=choices[0]
-    if not t['job']:t['job']=job_for(state,t,c)
+    if not t['job']:
+        if c.get('require_compliance') and t['phase']=='proposer':t['cycle_checkpoint']=cycle_checkpoint(t)
+        t['job']=job_for(state,t,c)
     save(home/'state.json',state)
     return {'status':'ready','topic':t['topic'],'domain':domain,**t['job'],**c['models'][t['phase']]}
 
@@ -740,8 +814,14 @@ def collect(c,home,domain):
     choices=[t for t in state['topics'].values() if t['domain']==domain and t['job']]
     if len(choices)!=1:raise ValueError('Exactly one dispatched job is required')
     t=choices[0];job=t['job'];result=read(Path(job['work'])/'result.json')
+    # Compatibility for first proposer jobs prepared before the recovery repair.
+    if c.get('require_compliance') and job['role']=='proposer' and not t.get('cycle_checkpoint'):
+        t['cycle_checkpoint']=cycle_checkpoint(t)
     try:
         accept_result(state,t,job,result,home)
+    except compliance.ProtocolViolation as e:
+        quarantine_cycle(state,t,job,str(e),home)
+        save(home/'state.json',state);raise
     except (ValueError,OSError) as e:
         save(Path(job['work'])/'retry-note.json',{'mechanical_error':str(e),
               'instruction':'Repair your own output; do not invent scientific agreement.'})
@@ -829,7 +909,7 @@ def main():
     a=sub.add_parser('prepare');a.add_argument('--ref',required=True)
     sub.add_parser('status');sub.add_parser('tick');sub.add_parser('watch')
     sub.add_parser('preflight')
-    for name in ('dispatch','collect','audit-dispatch','audit-collect'):
+    for name in ('dispatch','collect','audit-dispatch','audit-collect','recover'):
         q=sub.add_parser(name);q.add_argument('--domain',choices=['D04','D05'],required=True)
     sub.add_parser('publish-pending')
     args=p.parse_args();c,home=config(args.config)
@@ -848,6 +928,7 @@ def main():
             elif args.command=='collect':out=collect(c,home,args.domain)
             elif args.command=='audit-dispatch':out=audit_dispatch(c,home,args.domain)
             elif args.command=='audit-collect':out=audit_collect(c,home,args.domain)
+            elif args.command=='recover':out=recover(c,home,args.domain)
             elif args.command=='publish-pending':out=publish_pending(c,home)
             else:
                 while True:

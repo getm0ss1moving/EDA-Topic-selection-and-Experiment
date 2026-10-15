@@ -44,6 +44,7 @@ def main():
                             'files':len(payload),'manifest_sha256':loop.sha(path/'SUBMISSION.json')})
         if t.get('job'):jobs[t['job']['work']]=None
     for key,a in state.get('audits',{}).items():
+        if a.get('quarantined'):continue
         loop.verify_packet(a['seat']);work=Path(a['job']['work']);jobs[str(work)]=None
         dest=RUN/'inputs'/'audits'/key/'PACKET.json';dest.parent.mkdir(parents=True,exist_ok=True)
         shutil.copyfile(Path(a['seat']['packet'])/'PACKET.json',dest)
@@ -94,6 +95,7 @@ def main():
         assert not any(r['compliance_gate']=='blocking_violation' for r in index)
         assert {r['work'] for r in dispatches} >= set(jobs)
     loop.save(RUN/'topic-index.json',index);loop.save(RUN/'role-compliance-index.json',compliance)
+    loop.save(RUN/'quarantine-incidents.json',state.get('incidents',[]))
     loop.save(RUN/'progress.json',{'completed_cycles':counts,'topics':{
         k:{f:v.get(f) for f in ('domain','round','status','phase','last_scientific_decision')}
         for k,v in state['topics'].items()},'published':state['published'],'merged':state.get('merged',[])})

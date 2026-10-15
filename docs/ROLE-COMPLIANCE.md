@@ -111,3 +111,24 @@ unresolved final audit. Final reporting includes every role/round, supported
 deviations, unresolved observations, corrections, quarantine/replacement if any,
 and the audit's limits. The shared OS does not enforce adversarial confinement;
 the audit cannot certify unseen filesystem/network behavior from self-reports.
+
+### Durable quarantine and clean replacement
+
+The coordinator saves the clean released-input checkpoint before each audited
+proposer job. A disclosed forbidden read/activity is a `ProtocolViolation`, not
+a mechanical retry: preserve its frozen attempts and incident metadata, remove
+the job from the active queue, and mark the domain quarantined. Deleting a
+disclosure or re-freezing that same job cannot advance it. A critical supported
+protocol audit similarly removes the tainted triple from the publication queue
+while preserving its complete round/audit record as an incident.
+
+Use `codex_loop.py --config CONFIG recover --domain D04` (or D05) to prepare
+fresh identities, sessions and packets for all three scientific roles from that
+cycle's clean checkpoint. The replacement inherits no tainted-cycle output;
+previously released clean history remains available. Dispatch the replacement
+proposer, rerun the full triple and create a new independent audit. Only the
+replacement counts toward the four valid cycles. Quarantined bytes and findings
+remain in the incident index and cannot be rewritten into clearance. A recovery
+command prepares files; it neither launches a model nor supplies any scientific
+approval. Preserve and report a recovery failure rather than manually clearing
+the quarantine flag.
