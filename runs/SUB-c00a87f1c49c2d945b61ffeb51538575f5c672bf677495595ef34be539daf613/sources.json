@@ -1,0 +1,126 @@
+[
+  {
+    "id": "C301",
+    "title": "Faster Variational Execution with Transparent Bytecode Transformation",
+    "url": "https://www.cs.cmu.edu/~ckaestne/pdf/oopsla18.pdf",
+    "source_type": "author_paper",
+    "publication_date": "2018-11",
+    "retrieved_at_utc": "2026-10-15T11:51:11.174703+00:00",
+    "locator": "Section 2.1 printed 117:5; Section 3.1 printed 117:9",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "OBJ-001"
+    ],
+    "limitations": "Selected sections only; no EDA adapter or reproduced performance.",
+    "version": "10.1145/3276487"
+  },
+  {
+    "id": "C302",
+    "title": "VarexC VImpl.java",
+    "url": "https://raw.githubusercontent.com/chupanw/vbc/1221ef110e2b46951ab01319e97fa5d7dd84a724/src/main/java/edu/cmu/cs/varex/VImpl.java",
+    "source_type": "source_code",
+    "publication_date": "unknown",
+    "retrieved_at_utc": "2026-10-15T11:51:11.174703+00:00",
+    "locator": "Raw lines117-192: map, flatMap, addVToMap, put",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "OBJ-001"
+    ],
+    "limitations": "Object equality, interaction restrictions and exceptions need adaptation; not run.",
+    "version": "1221ef110e2b46951ab01319e97fa5d7dd84a724",
+    "sha256": "09adbcae7253f7b40e046edf798ecb9969187068a89c9397408b8edf3678ccd6"
+  },
+  {
+    "id": "C303",
+    "title": "OpenSTA TableModel.cc",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/49b86c95b31c53ba9096b91ef384ae5406b3107c/liberty/TableModel.cc",
+    "source_type": "source_code",
+    "publication_date": "unknown",
+    "retrieved_at_utc": "2026-10-15T11:51:11.174703+00:00",
+    "locator": "Raw113-130,273-325,833-853: gateDelay/findValue/scaleFactor",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "OBJ-001"
+    ],
+    "limitations": "Selected closure only, no full transitive purity or FP audit. Raw file lines differ from web-normalized lines.",
+    "version": "49b86c95b31c53ba9096b91ef384ae5406b3107c",
+    "sha256": "6f7f7b43e84850326ab42611586e401cc360ddaf4db987b992ade1dd6067dea5"
+  },
+  {
+    "id": "C304",
+    "title": "OpenROAD SizeUpMtCandidate.cc",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/8da6ac250b0349c346d1abed7c2c43107f4ff6f7/src/rsz/src/move/SizeUpMtCandidate.cc",
+    "source_type": "source_code",
+    "publication_date": "unknown",
+    "retrieved_at_utc": "2026-10-15T11:51:11.174703+00:00",
+    "locator": "Raw37-44 estimate; apply following it",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "OBJ-002"
+    ],
+    "limitations": "One inspected local-estimate caller, not complete caller population or workload observation.",
+    "version": "8da6ac250b0349c346d1abed7c2c43107f4ff6f7",
+    "sha256": "f522cf44d8fc8d5867e43b390fab5261b9a6517bf6f3990493fb2fbc8471be8f"
+  },
+  {
+    "id": "C305",
+    "title": "Invited: Post-Placement Buffering and Sizing Contest",
+    "url": "https://vlsicad.ucsd.edu/Publications/Conferences/421/c421.pdf",
+    "source_type": "organizer_paper",
+    "publication_date": "2026-03",
+    "retrieved_at_utc": "2026-10-15T11:51:11.174703+00:00",
+    "locator": "Sections5.2-5.3 pp6-7, web lines558-606",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-601",
+      "CLM-608"
+    ],
+    "limitations": "Scope and roadmap only; roadmap not final 2027 rules, no winner mechanism.",
+    "version": "10.1145/3764386.3779616"
+  },
+  {
+    "id": "C306",
+    "title": "Coalescing Executions for Fast Uncertainty Analysis",
+    "url": "https://www.cs.purdue.edu/homes/xyzhang/Comp/icse11.pdf",
+    "source_type": "author_paper",
+    "publication_date": "2011-05",
+    "retrieved_at_utc": "2026-10-15T11:51:11.174703+00:00",
+    "locator": "Section5 recoalescing, pp6-7 web lines610-624; Section6 implementation",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "OBJ-001"
+    ],
+    "limitations": "Selected exact-vs-threshold mode only; no timing adapter or byte-level floating-point equivalence inferred; no gains reproduced.",
+    "version": "10.1145/1985793.1985872"
+  },
+  {
+    "id": "C307",
+    "title": "ISPD program page and contest results link",
+    "url": "https://ispd.cc/ispd2027/index.php?page=program",
+    "source_type": "official_venue",
+    "publication_date": "unknown",
+    "retrieved_at_utc": "2026-10-15T11:51:11.174703+00:00",
+    "locator": "Page title ISPD2026 Program and Session16; linked slides",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-608"
+    ],
+    "limitations": "2026 URL redirects to 2027 shell. Slides fetch failed: content length122920554. Winner algorithms unread.",
+    "version": "retrieved 2026-10-15"
+  },
+  {
+    "id": "C308",
+    "title": "ISPD26 official index and repository",
+    "url": "https://www.ispd.cc/contests/26/index.html",
+    "source_type": "official_contest",
+    "publication_date": "unknown",
+    "retrieved_at_utc": "2026-10-15T11:51:11.174703+00:00",
+    "locator": "Contest Webpage link to https://github.com/ABKGroup/ISPD26-Contest; README table of contents/timeline",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-608"
+    ],
+    "limitations": "Inspected index/repository view does not establish winner method. Dynamic content, not final latest-edition clearance.",
+    "version": "retrieved 2026-10-15"
+  }
+]

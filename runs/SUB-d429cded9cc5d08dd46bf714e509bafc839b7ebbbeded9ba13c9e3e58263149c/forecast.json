@@ -1,0 +1,17 @@
+{
+  "kind": "forecast_not_measurement",
+  "metric": "Total time to obtain identical per-candidate endpoint results and caller decision",
+  "unit": "seconds",
+  "baseline_source": "B++ finite lifted-context executor plus transactional incremental timing, exact complete-key caching/output interning, sparse overlays and matched recovery; no reproduced EDA baseline",
+  "direction": "decrease",
+  "pessimistic": null,
+  "base": null,
+  "optimistic": null,
+  "confidence": null,
+  "assumptions": [
+    "Both positive resurrection witnesses survive review; neither established in R3",
+    "Compatible sound same-kernel adapter and real rights-cleared workload exist",
+    "Actual resources and matching current-tasklist dual agreement precede any EDA pilot"
+  ],
+  "calibration_plan": "Inactive while parked: both positive resurrection witnesses and independent review, then allocated baseline-only variance/reuse/overhead calibration; all numeric values remain null"
+}
