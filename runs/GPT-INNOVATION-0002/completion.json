@@ -1,0 +1,67 @@
+{
+  "status": "research_batch_complete",
+  "checked_at_utc": "2026-10-15T12:42:03.390074+00:00",
+  "source_commit": "f68c1492c05be3fac5622deac4bb479eabf957de",
+  "coordinator_head_before_completion_record": "243063b788f9d445e3a0c3ea6210822da0311d80",
+  "completed_cycles": {
+    "D04": 4,
+    "D05": 4
+  },
+  "valid_frozen_releases": 24,
+  "successful_fresh_app_dispatches": 24,
+  "logical_seats": 12,
+  "merged_round_prs": 8,
+  "last_scientific_decisions": {
+    "EDA-0005": "park",
+    "EDA-0006": "park",
+    "EDA-0007": "park",
+    "EDA-0008": "park"
+  },
+  "accepted_topics": [],
+  "matching_experiment_consensus": false,
+  "joint_abandonment_confirmed": false,
+  "new_EDA_or_training_experiments": 0,
+  "pending_jobs": 0,
+  "fifth_cycle_created": false,
+  "final_owner_report": "reports/final/GPT-INNOVATION-0002.zh-CN.md",
+  "validation": {
+    "python3 -m unittest discover -s tests": {
+      "passed": true,
+      "tests": 114
+    },
+    "python3 scripts/project.py validate": {
+      "passed": true,
+      "scope": "structure and provenance, not scientific truth"
+    },
+    "python3 runs/GPT-INNOVATION-0002/controller.py --final": {
+      "passed": true,
+      "releases": 24,
+      "merged_rounds": 8
+    },
+    "python3 runs/GPT-INNOVATION-0002/audit_publication.py": {
+      "passed": true,
+      "public_byte_identical_releases": 24,
+      "merged_prs": 8,
+      "documented_unadjudicated_review_threads": 1
+    },
+    "python3 -m py_compile controller.py audit_publication.py scripts/codex_loop.py": {
+      "passed": true,
+      "note": "Coordinator scripts used their complete repository-relative paths."
+    },
+    "git diff --check origin/main": {
+      "passed": true
+    },
+    "owned Markdown local-link and JSON checks": {
+      "passed": true,
+      "local_links": 44
+    }
+  },
+  "known_followup": "review-followups.json preserves one unadjudicated source-locator comment on parked EDA-0006; no fifth role turn or history edit",
+  "file_sha256": {
+    "config/codex-innovation-research.json": "f222a94cb845cd108e05443d24da9341e19cafa06f3ffad8c61bb8c8dc7ef0b6",
+    "runs/GPT-INNOVATION-0002/controller.py": "7a4f394fd32642eb959bbf770b3a0f3eb7ff8024176743fa1e28e6adfb9ff92f",
+    "runs/GPT-INNOVATION-0002/audit_publication.py": "30f009f2138573b52fc0b131bfb77f064d3292ea715f8ab51bc2cba853077e2e",
+    "reports/final/GPT-INNOVATION-0002.zh-CN.md": "ae2f6ffec38fda810e80cb970aeed77700e912d7bc5c0807992300ea4faee40b"
+  },
+  "scope": "Coordinator completion record. Requested models, policy isolation and scientific verdicts are not backend identity attestation or OS confinement."
+}
