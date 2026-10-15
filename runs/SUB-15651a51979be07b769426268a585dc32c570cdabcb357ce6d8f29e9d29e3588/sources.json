@@ -1,0 +1,330 @@
+{
+  "schema": 1,
+  "cutoff": "2026-10-15",
+  "sources": [
+    {
+      "id": "R01",
+      "title": "HyPAS: A Hybrid Optimization Framework for Placement and Sizing Co-Optimization",
+      "url": "https://wuqian-tang.github.io/files/papers/2026-dac-hypas.pdf",
+      "source_type": "author-paper",
+      "publication_date": "2026",
+      "retrieved_utc": "2026-10-15T14:08:11.636287+00:00",
+      "locator": "PDF pp.2-3, sections 2.2, 3.1-3.4; Figure 2",
+      "access": "full",
+      "supported_claim_ids": [
+        "CLM-005",
+        "CLM-007",
+        "CLM-014"
+      ],
+      "limitations": "Selected method text inspected, not every result; no code execution or reproduction. Web PDF opening failed; public urllib retrieval succeeded. No assertion of contest-winning lineage from social profiles.",
+      "version": "author PDF as retrieved",
+      "sha256": "d843ea04b2746e449c7ded65ab06bb5f5d9d11f969251962c6feec7bdb930ca0",
+      "rights": "Read accessible author copy; no full copy included in release.",
+      "record_provenance": "Inherited own released source record from SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4; no inherited scientific approval.",
+      "current_job_access": "Independently retrieved and selected locators reopened in this job."
+    },
+    {
+      "id": "R02",
+      "title": "IR-Aware ECO Timing Optimization Using Reinforcement Learning",
+      "url": "https://arxiv.org/html/2402.07781v1",
+      "source_type": "preprint",
+      "publication_date": "2024-02-12",
+      "retrieved_utc": "2026-10-15T13:43:53.428451+00:00",
+      "locator": "Introduction order/choice paragraph; section 3.2 Action/Reward and equation 6",
+      "access": "full",
+      "supported_claim_ids": [
+        "CLM-006"
+      ],
+      "limitations": "Late IR-aware sizing; not the proposed pre-CTS relocation pair. Selected formulation inspected; no reported performance transferred.",
+      "version": "arXiv v1",
+      "record_provenance": "Inherited own released source record from SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4; no inherited scientific approval.",
+      "current_job_access": "Not reopened in this job unless explicitly stated below."
+    },
+    {
+      "id": "R03",
+      "title": "AgenticPD: A Stage-Aware Agentic Framework for Closed-Loop Physical Design Optimization",
+      "url": "https://arxiv.org/html/2607.04758v3",
+      "source_type": "preprint",
+      "publication_date": "unknown",
+      "retrieved_utc": "2026-10-15T13:43:53.428451+00:00",
+      "locator": "Sections 3.1-3.4, especially retained tree equations 5-6 and history navigation",
+      "access": "full",
+      "supported_claim_ids": [
+        "CLM-003"
+      ],
+      "limitations": "v3 selected methodology inspected; no code audit or run. No exact pair-representation absence claim.",
+      "version": "arXiv v3; latest date not independently reverified",
+      "record_provenance": "Inherited own released source record from SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4; no inherited scientific approval.",
+      "current_job_access": "Not reopened in this job unless explicitly stated below."
+    },
+    {
+      "id": "R04",
+      "title": "OpenROAD MoveCommitter.cc",
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/3549d60529517dc82deb7f0ff769345e9a424911/src/rsz/src/MoveCommitter.cc",
+      "source_type": "source-code",
+      "publication_date": "unknown",
+      "retrieved_utc": "2026-10-15T14:08:02.126405+00:00",
+      "locator": "Raw physical 1-based lines 61-81 init,374-401 record/unrecord,482-599 journal,605-616 persisted-summary update,668-673 hasMoves; web-rendered 57-75,348-373,450-559,565-575,623-627 differ; named functions anchor both.",
+      "access": "full",
+      "supported_claim_ids": [
+        "CLM-004",
+        "CLM-019"
+      ],
+      "limitations": "Retained touch history verified by selected source. No adapter, complete reset proof, build or runtime causal confound demonstrated. Fresh executable process is a new reference-design choice, not a tested implementation.",
+      "version": "3549d60529517dc82deb7f0ff769345e9a424911",
+      "sha256": "ee9f09555c317de9e57e73d5edab56f5f710cd7195206229a31bb54be49c1679",
+      "record_provenance": "Inherited own released source record from SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4; no inherited scientific approval.",
+      "current_job_access": "Independently retrieved and selected locators reopened in this job."
+    },
+    {
+      "id": "R05",
+      "title": "ResizerAgent README",
+      "url": "https://raw.githubusercontent.com/ASU-VDA-Lab/ResizerAgent/ae402b9bf00b5116b9f2743b3bd8f7c9aed52127/README.md",
+      "source_type": "source-documentation",
+      "publication_date": "unknown",
+      "retrieved_utc": "2026-10-15T13:43:53.428451+00:00",
+      "locator": "Opening specification, Requirements, Run base/repair/backend entries",
+      "access": "full",
+      "supported_claim_ids": [
+        "CLM-014"
+      ],
+      "limitations": "README only; full planner and original paper unread. Post-CTS and provider requirements differ; no provider subscription acquired or invoked.",
+      "version": "ae402b9bf00b5116b9f2743b3bd8f7c9aed52127",
+      "record_provenance": "Inherited own released source record from SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4; no inherited scientific approval.",
+      "current_job_access": "Not reopened in this job unless explicitly stated below."
+    },
+    {
+      "id": "R06",
+      "title": "2025 CAD Contest at ICCAD: official Problems",
+      "url": "https://www.iccad-contest.org/2025/Problems.html",
+      "source_type": "official-contest",
+      "publication_date": "2025",
+      "retrieved_utc": "2026-10-15T14:21:01.563064+00:00",
+      "locator": "Problem C, links 29-38 including original Top-3 ZIP; web rendered lines 58-70",
+      "access": "full",
+      "supported_claim_ids": [
+        "CLM-007",
+        "CLM-014"
+      ],
+      "limitations": "Archive preview showed sign-in, but normal anonymous download produced an ordinary virus-scan size warning and a posted Download anyway form. Following that unmodified form retrieved the public archive. No authentication bypass; see R18 for what files actually exist. No optimizer methods inferred from final outputs.",
+      "record_provenance": "Inherited own released source record from SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4; no inherited scientific approval.",
+      "current_job_access": "Official Problem C index and Top-3 link reopened; original archive retrieved through standard public download form, separately recorded R18."
+    },
+    {
+      "id": "R07",
+      "title": "Invited: Post-Placement Buffering and Sizing Contest",
+      "url": "https://vlsicad.ucsd.edu/Publications/Conferences/421/c421.pdf",
+      "source_type": "author-paper",
+      "publication_date": "2026-03-15",
+      "retrieved_utc": "2026-10-15T14:08:09.505948+00:00",
+      "locator": "PDF p.2 sections 2.1-2.4; PDF p.6 section 4 hard constraints: No floorplan perturbation / Physical cells; section 5.1-5.3 and references.",
+      "access": "full",
+      "supported_claim_ids": [
+        "CLM-007",
+        "CLM-014"
+      ],
+      "limitations": "Selected formulation inspected. Non-resized cells fixed; proposed distinct-cell relocation cannot be claimed contest-legal. No transferred benchmark access or compute allocation.",
+      "doi": "10.1145/3764386.3779616",
+      "sha256": "da7022e95d0e86678787a7413b798684cd4989497ddec7cba3d1553ff3ac32d6",
+      "rights": "PDF declares CC BY 4.0; release contains metadata/paraphrase only.",
+      "record_provenance": "Inherited own released source record from SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4; no inherited scientific approval.",
+      "current_job_access": "Independently retrieved and selected locators reopened in this job."
+    },
+    {
+      "id": "R08",
+      "title": "ISPD26 contest winners and resources",
+      "url": "https://www.ispd.cc/contests/26/index.html",
+      "source_type": "official-contest",
+      "publication_date": "2026",
+      "retrieved_utc": "2026-10-15T14:21:01.563064+00:00",
+      "locator": "Contest Winners ordered list and Resources",
+      "access": "full",
+      "supported_claim_ids": [
+        "CLM-014"
+      ],
+      "limitations": "Only names/ranks checked. No original winning algorithm is inferred or recovered.",
+      "record_provenance": "Inherited own released source record from SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4; no inherited scientific approval.",
+      "current_job_access": "Official winners/resource index reopened; no original 2026 algorithm report retrieved."
+    },
+    {
+      "id": "R09",
+      "title": "Improving Timing & Power Trade-off in Post-place Optimization Using Multi-agent Reinforcement Learning",
+      "url": "https://csdl.postech.ac.kr/bbs/board.php?bo_table=sub5_1&sca=2024&wr_id=277",
+      "source_type": "author-paper",
+      "publication_date": "2024",
+      "retrieved_utc": "2026-10-15T14:09:30.853897+00:00",
+      "locator": "PDF pp.3-6 sections 2.3,3.1-3.4; p.4 Algorithm 1 lines 7-15; p.5 Table 1 and action definition; p.6 section 4.1; p.8 section 5; p.9 references 1-2",
+      "access": "full",
+      "supported_claim_ids": [
+        "CLM-014",
+        "CLM-018",
+        "CLM-021"
+      ],
+      "limitations": "Web-cached author download nonce failed. A normal fresh anonymous author page, its session cookies, exact posted download links and Referer succeeded without login or bypass. Selected full method inspected; no commercial tool/Intel technology access, code execution or reproduced gain. No universal absence or duplicate verdict.",
+      "doi": "10.1145/3676536.3676702",
+      "authors": [
+        "Jaemin Seo",
+        "Sejin Park",
+        "Seokhyeong Kang"
+      ],
+      "record_provenance": "Inherited own released source record from SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4; no inherited scientific approval.",
+      "current_job_access": "New full-method retrieval and selected methods inspected this job; supersedes previous metadata-only access without rewriting that historical record.",
+      "sha256": "3c2aefdc636a9b9a58b6445e1165de1903969c6a1e23a1a96aa326dc3bfdfd08",
+      "version": "Nine-page ICCAD 2024 author-distributed PDF as retrieved",
+      "rights": "Author PDF p.1 reserves copyright; no paper copy/excerpts/netlist published in release; bibliographic metadata, hash and bounded paraphrase only."
+    },
+    {
+      "id": "R10",
+      "title": "2026 CAD Contest official Problems",
+      "url": "https://www.iccad-contest.org/Problems",
+      "source_type": "official-contest",
+      "publication_date": "2026",
+      "retrieved_utc": "2026-10-15T13:43:53.428451+00:00",
+      "locator": "Problem A/B/C list, especially FloorSet Challenge",
+      "access": "full",
+      "supported_claim_ids": [
+        "CLM-014"
+      ],
+      "limitations": "Current task index only; not a claim about winner methods or all current work.",
+      "record_provenance": "Inherited own released source record from SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4; no inherited scientific approval.",
+      "current_job_access": "Not reopened in this job unless explicitly stated below."
+    },
+    {
+      "id": "R11",
+      "title": "Synopsys DSO.ai public product page",
+      "url": "https://www.synopsys.com/ai/ai-powered-eda/dso-ai.html",
+      "source_type": "vendor-documentation",
+      "publication_date": "unknown",
+      "retrieved_utc": "2026-10-15T13:43:53.428451+00:00",
+      "locator": "Opening DSO.ai description; Multi-Objective Design Space Optimization section",
+      "access": "full",
+      "supported_claim_ids": [
+        "CLM-012"
+      ],
+      "limitations": "Advertised capability only. No private internals, measured comparative advantage or commercial shortfall is inferred.",
+      "record_provenance": "Inherited own released source record from SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4; no inherited scientific approval.",
+      "current_job_access": "Not reopened in this job unless explicitly stated below."
+    },
+    {
+      "id": "R12",
+      "title": "2025 ICCAD CAD Contest Problem C invited paper abstract",
+      "url": "https://ieeexplore.ieee.org/abstract/document/11240847",
+      "source_type": "organizer-paper",
+      "publication_date": "2025-10",
+      "retrieved_utc": "2026-10-15T13:43:53.428451+00:00",
+      "locator": "Indexed Abstract: multi-operator search and GPU/differentiable guidance",
+      "access": "abstract",
+      "supported_claim_ids": [
+        "CLM-007",
+        "CLM-014"
+      ],
+      "limitations": "Search tool exposed organizer abstract. NVIDIA PDF URL returned non-PDF content with urllib and web error; no full-text claim.",
+      "doi": "10.1109/ICCAD66269.2025.11240847",
+      "record_provenance": "Inherited own released source record from SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4; no inherited scientific approval.",
+      "current_job_access": "Not reopened in this job unless explicitly stated below."
+    },
+    {
+      "id": "R13",
+      "title": "OpenROAD MoveCommitter.hh",
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/3549d60529517dc82deb7f0ff769345e9a424911/src/rsz/src/MoveCommitter.hh",
+      "source_type": "source-code",
+      "publication_date": "unknown",
+      "retrieved_utc": "2026-10-15T14:21:01.563064+00:00",
+      "locator": "Raw physical 1-based lines 159-160 static persisted_summary_by_type_; 170-178 instance accounting fields",
+      "access": "full",
+      "supported_claim_ids": [
+        "CLM-019"
+      ],
+      "limitations": "Declarations read; no decision influence inferred for static summary, and no complete caller/reset inventory or build.",
+      "version": "3549d60529517dc82deb7f0ff769345e9a424911",
+      "sha256": "1019f4e138d982cbecc4fa6c3a9f11129bb1fc3a6dc6dd63a99e13434994c2cc"
+    },
+    {
+      "id": "R14",
+      "title": "OpenROAD Resizer.cc and Resizer.hh journal interface",
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/3549d60529517dc82deb7f0ff769345e9a424911/src/rsz/src/Resizer.cc",
+      "source_type": "source-code",
+      "publication_date": "unknown",
+      "retrieved_utc": "2026-10-15T14:21:01.563064+00:00",
+      "locator": "Resizer.cc raw physical lines 5622-5637 initForJournalRestore and updateParasiticsAndTiming; Resizer.hh declaration raw line 946",
+      "access": "full",
+      "supported_claim_ids": [
+        "CLM-019"
+      ],
+      "limitations": "Selected implementation/declaration only; does not establish complete in-process reset. No build or execution.",
+      "version": "3549d60529517dc82deb7f0ff769345e9a424911",
+      "sha256": "ff3adf14a5f8f9059a293b7fbfbf39ce4138f008294c43fd86d6cc46c6024b85",
+      "companion_sha256": "3acef56455b746d898808c7cb6d43a6a22ca0f2f41ba2476343f5de1c8c09122"
+    },
+    {
+      "id": "R15",
+      "title": "Algorithms for Simultaneous Consideration of Multiple Physical Synthesis Transforms for Timing Closure",
+      "url": "https://websrv.cecs.uci.edu/~papers/iccad08/PDFs/Papers/02A.1.pdf",
+      "source_type": "conference-paper-indexed-excerpt",
+      "publication_date": "2008",
+      "retrieved_utc": "2026-10-15T14:21:01.563064+00:00",
+      "locator": "Primary institutional proceedings PDF indexed abstract; R09 PDF p.9 reference [2] confirms title/authors/ICCAD 2008 pp.93-100",
+      "access": "abstract",
+      "supported_claim_ids": [
+        "CLM-014"
+      ],
+      "limitations": "Original full fetch timed out in urllib and failed in web; search-indexed abstract only. Min-cost-flow simultaneous transforms and placement-cost coupling are relevant prior leads, not a full-method equivalence ruling. No reported gain used.",
+      "authors": [
+        "Huan Ren",
+        "Shantanu Dutt"
+      ]
+    },
+    {
+      "id": "R16",
+      "title": "Prof. Yu Bei\u2019s Team Won the first Place in 2025 CAD Contest at ICCAD",
+      "url": "https://www.cse.cuhk.edu.hk/news/achievements/iccad2025/",
+      "source_type": "institutional-author-team-announcement",
+      "publication_date": "2025-12-01",
+      "retrieved_utc": "2026-10-15T14:21:01.563064+00:00",
+      "locator": "Opening winner paragraph and hybrid discrete/differentiable solution summary; page updated January 26 2026",
+      "access": "full",
+      "supported_claim_ids": [
+        "CLM-014"
+      ],
+      "limitations": "Primary institution reports first-place hybrid solution, not exact algorithm/code provenance or matched performance proof; does not establish that HyPAS PDF is identical to contest-time winner bytes."
+    },
+    {
+      "id": "R17",
+      "title": "Author-distributed slides for Improving Timing & Power Trade-off in Post-place Optimization Using Multi-agent Reinforcement Learning",
+      "url": "https://csdl.postech.ac.kr/bbs/board.php?bo_table=sub5_1&sca=2024&wr_id=277",
+      "source_type": "author-slides",
+      "publication_date": "2024",
+      "retrieved_utc": "2026-10-15T14:09:35.162688+00:00",
+      "locator": "Public slide-download link and document metadata; 20-page PDF retrieved, no slide-method claims relied upon",
+      "access": "metadata",
+      "supported_claim_ids": [],
+      "sha256": "cb55260cef0f4865745d9c398fe9747f492b55fa7c4d5bdb083d030871815911",
+      "limitations": "Retrieved via same ordinary anonymous author session; paper R09 carries method evidence. No slide copy published."
+    },
+    {
+      "id": "R18",
+      "title": "ICCAD2025 Problem C original Top-3 result archive",
+      "url": "https://drive.google.com/file/d/1yZstdjFc30xt9RYz583ecb8_jnDE1F9O/view?usp=sharing",
+      "source_type": "official-contest-output-archive",
+      "publication_date": "2025",
+      "retrieved_utc": "2026-10-15T14:14:14.138371+00:00",
+      "locator": "ZIP central-directory complete file list: 78 non-directory members,39 .def and39 .changelist under cadc1001,cadc1007,cadc1051. Three aes.sol.changelist files inspected for format, not replayed.",
+      "access": "full",
+      "supported_claim_ids": [
+        "CLM-014",
+        "CLM-022"
+      ],
+      "sha256": "1ffd92dcd18862c273556a90fbaadf7a397355fe4dc15b7c1e10fe7ed427272c",
+      "bytes": 84364452,
+      "limitations": "All filenames enumerated; only selected changelists read. Archive contains final outputs, no algorithm reports/source files. No method, training, run order, score or physical correctness inferred. Public download is source reading, not an experimental resource or redistribution license.",
+      "rights": "Original contest output files retained only in job scratch; no DEF/changelist or benchmark payload published; future experimental reuse requires rights audit."
+    }
+  ],
+  "access_convention": "full means accessible original document with identified selected locators actually inspected, not exhaustive reading or reproduction. Each record distinguishes new reopening from inherited own released evidence. Raw source lines are physical 1-based lines; web rendering may collapse whitespace. Historical access limits remain unchanged in immutable prior releases.",
+  "new_current_claims": {
+    "CLM-019": "Decision-state isolation source observation plus proposed fresh-executable reference; no implemented validation.",
+    "CLM-020": "Own algebraic rank restriction and direct-head counterexample; no physical low-rank measurement.",
+    "CLM-021": "R09 actual state/action/phase method mapping; limited to inspected full paper.",
+    "CLM-022": "R18 original payload retrieved; central directory contains outputs only, not method files."
+  }
+}

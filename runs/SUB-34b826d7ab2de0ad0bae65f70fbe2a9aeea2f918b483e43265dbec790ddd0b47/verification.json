@@ -1,0 +1,339 @@
+{
+  "decision": "revise",
+  "verifier_session": "370f04ea-8378-4c1f-ab83-2fa830453d13",
+  "topic": "EDA-0008",
+  "batch_round": 2,
+  "input_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+  "packet_sha256": "d5dd4815d595e6eca62ed6640e0a91f111ead1203b0ebd491e738f112f851963",
+  "dossier_digest": "6c2044184cc55c8d38a8335962f33ed595d5a82ab1671782b31b053dbd0e5578",
+  "reviewed_proposer_release": "SUB-15651a51979be07b769426268a585dc32c570cdabcb357ce6d8f29e9d29e3588",
+  "adjudicated_challenger_releases": [
+    "SUB-996a3afdee6abd5c24ebd2d6039e56c4e3baba57456ee34ec8d4c69c5e11ede2"
+  ],
+  "gates": {
+    "novelty": false,
+    "mechanism": false,
+    "utility": false,
+    "contest_originality": false,
+    "headroom": false,
+    "feasibility": false,
+    "direction_integrity": true,
+    "experiment_consensus": false
+  },
+  "direction_penalty_checked": true,
+  "direction_penalties": {
+    "combination_drift": 0,
+    "demand_drift": 0,
+    "total": 0
+  },
+  "experiment_consensus_checked": true,
+  "abandonment_process_checked": false,
+  "source_checks": [
+    {
+      "claim_id": "CLM-004/019; prior OBJ-101 repair",
+      "source_locator": "V201 recordAcceptedResult/unrecordAcceptedResult/hasMoves; proposal fresh-process section",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "The retained instance-history path is explicit. Fresh exec plus unique mutable directories repairs the specification for this path; complete adapter/reset determinism remains untested and blocks execution, not the conditional hypothesis."
+    },
+    {
+      "claim_id": "CLM-016 success/observation masks",
+      "source_locator": "Own independent enumeration in analytical_checks",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "Nine masks and 49 observation submasks follow AB<=A and BA<=B. Physical reachability and partial UNKNOWN incidence remain unknown."
+    },
+    {
+      "claim_id": "CLM-013/017 transformed objective",
+      "source_locator": "Proposal weighted expansion; own 1000-case check",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "Asymmetric branch weights need the cross term; singleton-reference error enters reconstructed c. Scalar discrepancy <=5.69e-14. Author gradient-test numbers not independently rerun; implemented identity tests remain mandatory."
+    },
+    {
+      "claim_id": "CLM-018/020; prior C-T02 repair",
+      "source_locator": "Proposal low-rank equations; experiment-plan explicit graph; own I3/parameter arithmetic",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "M,D have rank <=r on a fixed grid. Three-ReLU witness yields I3; 2172/3736 parameter counts match. This is a genuine restrictive hypothesis, not proof of novelty or sample efficiency. B3-M must equal B5."
+    },
+    {
+      "claim_id": "CLM-005 HyPAS",
+      "source_locator": "V202 PDF pp.2-3 sections 2.2,3.1-3.4",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "Discrete repair, differentiable refinement and width grouping are prior. Selected methods do not establish fixed-pair low-rank order-prediction equivalence; no performance transferred."
+    },
+    {
+      "claim_id": "CLM-021 / R09",
+      "source_locator": "V203 PDF p.4 Algorithm1; p.5 section3.2.2; p.6 section4.1; p.8 conclusion",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "Timing/power specialists and sizing/VT/buffering are prior; instance movement is future work. Selected-method distinction is supported; no universal novelty inference."
+    },
+    {
+      "claim_id": "CLM-007 general need / ISPD restriction",
+      "source_locator": "V204 PDF p.6 No floorplan perturbation; V206 Problem C title",
+      "verdict": "partially_valid",
+      "blocking": true,
+      "reason": "General physical co-optimization context supported. Non-resized standard cells must stay fixed in cited ISPD rules, so independent relocation is outside that faithful scope. Narrow order incidence and economic demand are still unmeasured."
+    },
+    {
+      "claim_id": "CLM-014 / FlowSynth source gap",
+      "source_locator": "V205 PDF pp.1-3 sections1-3/Fig4, p.7 section7, p.8 sections8-9",
+      "verdict": "partially_valid",
+      "blocking": true,
+      "reason": "Full rendered primary PDF is now accessible, superseding this access gap for this review. Simultaneous transform-option selection is coupled to detailed placement by flow; selected mechanism differs from learned two-order residuals. Map this conventional alternative explicitly; winner-method and broader overlap coverage still unresolved."
+    },
+    {
+      "claim_id": "CLM-022 Top-3 archive contents",
+      "source_locator": "Proposal R18 record; V206 original Top-3 link",
+      "verdict": "unresolved",
+      "blocking": false,
+      "reason": "Official result link verified; 78-member payload not independently downloaded/enumerated here. Do not inherit file-count verification or infer absence of winner methods from output filenames."
+    },
+    {
+      "claim_id": "CLM-009/010 useful gain/headroom",
+      "source_locator": "Proposal H1; EXP-003/006/007/008",
+      "verdict": "unresolved",
+      "blocking": true,
+      "reason": "No physical prevalence, final-route utility, positive savings or applicable bound is measured. A useful low-rank systems result remains possible; neither refuted nor established."
+    },
+    {
+      "claim_id": "CLM-003/006/012 and other inherited context",
+      "source_locator": "Proposal claim continuity table; sources R02/R03/R05/R11/R12/R13/R14/R17",
+      "verdict": "unresolved",
+      "blocking": false,
+      "reason": "Not independently reopened in this execution. They provide no decisive positive gate or vendor-superiority claim. No inherited verification credit."
+    },
+    {
+      "claim_id": "C-T201 decision-sensitive rank diagnostic",
+      "source_locator": "Current challenge C-T201; independent diagonal arithmetic",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "Relative rank error ~1e-4 can coexist with 0.02 decision regret in arbitrary units. Add margin/tie/order-flip/regret diagnostics using existing labels and frozen policy; this is a refinement, not a new refutation."
+    },
+    {
+      "claim_id": "CLM-015 / task execution gate",
+      "source_locator": "JOB; batch brief; tasklist EXP-000 and EXP-002B onward",
+      "verdict": "valid",
+      "blocking": true,
+      "reason": "Research permission does not grant builds, EDA, training or remote work. Gate is closed; rights, resources, phase manifests, adapter/oracle, metric thresholds and matching phase consents remain absent."
+    },
+    {
+      "claim_id": "Direction penalties",
+      "source_locator": "Released predecessor proposal anchor; current direction-control anchor/invariants",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "Same resize/relocation legalization mechanism, residual contrast, pre-CTS user and post-DR/full-cost endpoint. Rank restriction and process repair narrow the anchor: combination_drift=0,demand_drift=0; no merit certification."
+    },
+    {
+      "claim_id": "Experiment consensus",
+      "source_locator": "Current P/C experiment-consent.json; tasklist SHA256",
+      "verdict": "valid",
+      "blocking": true,
+      "reason": "Distinct logical sessions; both pending, not agreement. Challenger exact task hash matches recomputation. Proposer target/hash null. No pilot or abandonment consent exists."
+    }
+  ],
+  "objections": [],
+  "challenger_obj_ids": [],
+  "research_refinements": [
+    {
+      "id": "C-T201",
+      "verdict": "valid",
+      "blocking": false,
+      "action": "Add margin-stratified flips, ties and policy regret to existing rank diagnostics."
+    }
+  ],
+  "sources": [
+    {
+      "id": "V201",
+      "title": "OpenROAD MoveCommitter.cc pinned source",
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/3549d60529517dc82deb7f0ff769345e9a424911/src/rsz/src/MoveCommitter.cc",
+      "locator": "Web-rendered lines348-373 record/unrecord;450-559 journal;623-627 hasMoves. Corresponding released raw physical locators374-401,482-599,668-673.",
+      "access": "full",
+      "retrieved_utc": "2026-10-15T14:39:48.406917+00:00",
+      "limitations": "Selected implementation read through web; no build or full caller/state audit.",
+      "source_type": "source-code",
+      "publication_date": "unknown",
+      "supported_claim_ids": [
+        "CLM-004",
+        "CLM-019"
+      ],
+      "rights": "Bibliographic metadata and bounded paraphrase only; no copyrighted source copy in release."
+    },
+    {
+      "id": "V202",
+      "title": "HyPAS",
+      "url": "https://wuqian-tang.github.io/files/papers/2026-dac-hypas.pdf",
+      "locator": "PDF pp.2-3 sections2.2,3.1-3.4",
+      "access": "full",
+      "retrieved_utc": "2026-10-15T14:39:48.406917+00:00",
+      "limitations": "Web failed; urllib original PDF succeeded and selected extracted methods inspected. No experiment or winning-code equivalence.",
+      "sha256": "d843ea04b2746e449c7ded65ab06bb5f5d9d11f969251962c6feec7bdb930ca0",
+      "source_type": "author-paper",
+      "publication_date": "2026",
+      "supported_claim_ids": [
+        "CLM-005",
+        "CLM-014"
+      ],
+      "rights": "Bibliographic metadata and bounded paraphrase only; no copyrighted source copy in release."
+    },
+    {
+      "id": "V203",
+      "title": "Improving Timing & Power Trade-off in Post-place Optimization Using Multi-agent Reinforcement Learning",
+      "url": "https://csdl.postech.ac.kr/bbs/board.php?bo_table=sub5_1&sca=2024&wr_id=277",
+      "locator": "PDF p.4 Algorithm1; p.5 section3.2.2; p.6 section4.1; p.8 section5",
+      "access": "full",
+      "retrieved_utc": "2026-10-15T14:39:48.406917+00:00",
+      "limitations": "Fresh ordinary anonymous author page/session and posted download succeeded. Selected methods, not entire code/tool/PDK or measured results.",
+      "sha256": "3c2aefdc636a9b9a58b6445e1165de1903969c6a1e23a1a96aa326dc3bfdfd08",
+      "source_type": "author-paper",
+      "publication_date": "2024",
+      "supported_claim_ids": [
+        "CLM-021",
+        "CLM-014"
+      ],
+      "rights": "Bibliographic metadata and bounded paraphrase only; no copyrighted source copy in release."
+    },
+    {
+      "id": "V204",
+      "title": "Invited: Post-Placement Buffering and Sizing Contest",
+      "url": "https://vlsicad.ucsd.edu/Publications/Conferences/421/c421.pdf",
+      "locator": "PDF p.6 No floorplan perturbation physical-cells bullet",
+      "access": "full",
+      "retrieved_utc": "2026-10-15T14:39:48.406917+00:00",
+      "limitations": "Selected rules only; no contest score transfer.",
+      "sha256": "da7022e95d0e86678787a7413b798684cd4989497ddec7cba3d1553ff3ac32d6",
+      "source_type": "organizer-paper",
+      "publication_date": "2026",
+      "supported_claim_ids": [
+        "CLM-007"
+      ],
+      "rights": "Bibliographic metadata and bounded paraphrase only; no copyrighted source copy in release."
+    },
+    {
+      "id": "V205",
+      "title": "Algorithms for Simultaneous Consideration of Multiple Physical Synthesis Transforms for Timing Closure",
+      "url": "https://websrv.cecs.uci.edu/~papers/iccad08/PDFs/Papers/02A.1.pdf",
+      "locator": "Eight-page primary PDF: pp.1-3 sections1-3, Fig4; p.7 section7; p.8 sections8-9. Web-rendered lines324-404,1110-1236,1279-1348.",
+      "access": "full",
+      "retrieved_utc": "2026-10-15T14:39:48.406917+00:00",
+      "limitations": "Initial URL open failed; primary search-index result reopened into full eight-page rendered PDF and selected graph passages inspected. No raw PDF hash, code or exhaustive proof audit. Published2008; search crawl date is not publication date.",
+      "source_type": "conference-paper",
+      "publication_date": "2008",
+      "supported_claim_ids": [
+        "CLM-014"
+      ],
+      "rights": "Bibliographic metadata and bounded paraphrase only; no copyrighted source copy in release."
+    },
+    {
+      "id": "V206",
+      "title": "ICCAD2025 official problems",
+      "url": "https://www.iccad-contest.org/2025/Problems.html",
+      "locator": "Problem C and Top-3 result link, web lines58-70",
+      "access": "full",
+      "retrieved_utc": "2026-10-15T14:39:48.406917+00:00",
+      "limitations": "Index only; linked archive not enumerated.",
+      "source_type": "official-contest",
+      "publication_date": "2025",
+      "supported_claim_ids": [
+        "CLM-007",
+        "CLM-022"
+      ],
+      "rights": "Bibliographic metadata and bounded paraphrase only; no copyrighted source copy in release."
+    },
+    {
+      "id": "V207",
+      "title": "ISPD2026 official contest winners",
+      "url": "https://www.ispd.cc/contests/26/index.html",
+      "locator": "Contest Winners list, web lines3-10",
+      "access": "full",
+      "retrieved_utc": "2026-10-15T14:39:48.406917+00:00",
+      "limitations": "IRISLab/PTSD/HLFC identity only; no winner algorithm inspected.",
+      "source_type": "official-contest",
+      "publication_date": "2026",
+      "supported_claim_ids": [
+        "CLM-014"
+      ],
+      "rights": "Bibliographic metadata and bounded paraphrase only; no copyrighted source copy in release."
+    }
+  ],
+  "analytical_checks": {
+    "masks": [
+      "0000",
+      "0100",
+      "0101",
+      "1000",
+      "1010",
+      "1100",
+      "1101",
+      "1110",
+      "1111"
+    ],
+    "observation_submasks": 49,
+    "loss_max_error_1000": 5.684341886080802e-14,
+    "relu_identity_grid": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "core_params_rank1": 2172,
+    "direct_H32_params": 3736,
+    "rank_regret_witness": {
+      "relative_frobenius_error": 9.999999950000001e-05,
+      "best_BA": 1000.01,
+      "AB_tied_choice": 999.99,
+      "regret": 0.02
+    },
+    "tasklist_sha256": "107a1ee6ade3542f44dca46a1e0ab2f72a256660792f4e18b75379b1a314d417",
+    "manifest_hash_checks": {
+      "SUB-1d05911d8e35b90fb0e6991b4d15e1cb7ed17fe0859b2a1a7316091a6778695c": true,
+      "SUB-996a3afdee6abd5c24ebd2d6039e56c4e3baba57456ee34ec8d4c69c5e11ede2": true,
+      "SUB-15651a51979be07b769426268a585dc32c570cdabcb357ce6d8f29e9d29e3588": true
+    }
+  },
+  "tasklist_sha256": "107a1ee6ade3542f44dca46a1e0ab2f72a256660792f4e18b75379b1a314d417",
+  "limitations": [
+    "Only assigned policy/job and explicitly supplied released files; unblinded. No foreign private notes, messages, transcript, checkout or memory accessed. Logical manifest separation does not attest OS confinement or backend model.",
+    "No EDA/build/training/paid/remote job was run. All numerical checks are tiny independent own arithmetic, not chip or trained-model results.",
+    "Full means original bytes or full rendered primary PDF accessible and selected cited passages inspected, not exhaustive reading. Unreviewed claim IDs remain unresolved.",
+    "No independent enumeration of R18 archive; no winner-code audit. R02/R03/R05/R11/R12/R13/R14/R17 not reopened here.",
+    "Standalone trusted freeze validation replaces unavailable whole-repository validation; coordinator owns publication and final repository checks.",
+    "Released predecessor audit reports historical locator/mechanical issues; these are not new source findings or proof of intentional fabrication. No misconduct finding follows from an unresolved hypothesis."
+  ],
+  "search_log": [
+    {
+      "date": "2026-10-15T14:39:48.406917+00:00",
+      "engine": "web search + primary opens",
+      "queries": [
+        "FlowSynth simultaneous physical synthesis transforms",
+        "order low rank placement sizing legalization 2026",
+        "ISPD 2026 IRISLab PTSD HLFC winner algorithm"
+      ],
+      "results": "FlowSynth original full rendered paper reopened successfully after direct-open error; other search hits did not establish a closer equivalent. Official winner page reopened; winner methods remain unresolved. Search budget bounded, not exhaustive."
+    },
+    {
+      "date": "2026-10-15T14:39:48.406917+00:00",
+      "engine": "urllib + pdftotext",
+      "results": "Original HyPAS, MARL and ISPD PDFs retrieved and SHA256 matched released records; inspected selected method/rule locators. No paper copies in release."
+    }
+  ],
+  "next_requirements": [
+    "Map now-accessible FlowSynth graph and comparison scope in the prior-art matrix, without transferring its old-node scores or claiming modern optimality.",
+    "Add C-T201 diagnostics and resolve policy scalarization/guardrails plus gate/fallback configuration before any consent-ready revision.",
+    "Continue source-only winner-method/dependency preparation. Preserve EXP-000 closed; no experiment readiness claimed until actual allocation and matching exact-phase agreement."
+  ]
+}

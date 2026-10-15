@@ -1,0 +1,7 @@
+source_id,task_formulation,mechanism,data_evaluation,assumptions,overlap,distinction_and_limit
+C202,Incremental placement/sizing,Discrete repair + differentiable refinement; width grouping,Author methods only; results not reproduced,Different optimizer and objectives,Coupled physical optimization,No selected-method evidence of exact fixed pair low-rank order predictor; no absence proof
+C203,Post-place timing/power,Slack-partitioned timing/power RL phases,Commercial Innovus/Intel22 setup in section4.1,Sizing VT buffering; movement future work,Multiple specialized optimization agents,Not the same action space; useful baseline context not exact duplication
+C205,Post-place simultaneous transforms,Network-flow transform and placement coupling,Primary indexed excerpts only,Old model/node and graph not fully inspected,Sizing plus placement; simultaneous vs serial,Full-method equivalence unresolved; no old gains transferred
+C201,Native physical repair,Nested journals with retained touched-instance history,Pinned source only,Adapter relevance conditional,Branch/state management,Fresh-exec contract addresses cited path; no runtime proof
+C204,Post-placement contest,Sizing buffering and physical guards,Official rules,Non-resized cell placement fixed,General engineering demand,Independent relocation changes task scope
+C207,ICCAD2025 winning hybrid,Discrete plus differentiable high-level summary,Institutional account,Exact code lineage unknown,Closest winner context,Not an original algorithm audit

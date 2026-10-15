@@ -1,0 +1,10 @@
+{
+  "role": "verifier",
+  "reviewed_proposer_release": "SUB-15651a51979be07b769426268a585dc32c570cdabcb357ce6d8f29e9d29e3588",
+  "adjudicated_challenger_releases": [
+    "SUB-996a3afdee6abd5c24ebd2d6039e56c4e3baba57456ee34ec8d4c69c5e11ede2"
+  ],
+  "next_action": "revise",
+  "decision": "revise",
+  "reason": "Specification repairs verified; FlowSynth full-source access advanced. Conditional EDA value, original winner methods and execution readiness remain unresolved."
+}

@@ -1,0 +1,156 @@
+{
+  "schema": 1,
+  "sources": [
+    {
+      "id": "C201",
+      "title": "OpenROAD MoveCommitter.cc",
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/3549d60529517dc82deb7f0ff769345e9a424911/src/rsz/src/MoveCommitter.cc",
+      "source_type": "source-code",
+      "publication_date": "unknown",
+      "retrieved_utc": "2026-10-15T14:33:51.092689+00:00",
+      "access": "full",
+      "locator": "Raw physical lines 374-401 recordAcceptedResult/unrecordAcceptedResult; 482-599 journal; 668-673 hasMoves. Web-rendered 348-373,450-559,623-627.",
+      "limitations": "Selected source inspected; no build or complete reset proof.",
+      "supported_claim_ids": [
+        "review-C201"
+      ],
+      "rights": "Metadata and bounded paraphrase only; no source document copied into release.",
+      "sha256": "ee9f09555c317de9e57e73d5edab56f5f710cd7195206229a31bb54be49c1679"
+    },
+    {
+      "id": "C202",
+      "title": "HyPAS: A Hybrid Optimization Framework for Placement and Sizing Co-Optimization",
+      "url": "https://wuqian-tang.github.io/files/papers/2026-dac-hypas.pdf",
+      "source_type": "author-paper",
+      "publication_date": "2026",
+      "retrieved_utc": "2026-10-15T14:33:51.092689+00:00",
+      "access": "full",
+      "locator": "PDF pp.2-3 sections 2.2,3.1-3.4",
+      "limitations": "Web open failed; ordinary urllib retrieval succeeded. Selected methods only, no execution or winner-byte equivalence.",
+      "supported_claim_ids": [
+        "review-C202"
+      ],
+      "rights": "Metadata and bounded paraphrase only; no source document copied into release.",
+      "sha256": "d843ea04b2746e449c7ded65ab06bb5f5d9d11f969251962c6feec7bdb930ca0"
+    },
+    {
+      "id": "C203",
+      "title": "Improving Timing & Power Trade-off in Post-place Optimization Using Multi-agent Reinforcement Learning",
+      "url": "https://csdl.postech.ac.kr/bbs/board.php?bo_table=sub5_1&sca=2024&wr_id=277",
+      "source_type": "author-paper",
+      "publication_date": "2024",
+      "retrieved_utc": "2026-10-15T14:33:51.092689+00:00",
+      "access": "full",
+      "locator": "PDF p.4 Algorithm 1; p.5 section 3.2.2 and Table 1; p.6 section 4.1; p.8 section 5",
+      "limitations": "Cached nonce failed; fresh anonymous page/cookie session and exact posted download with Referer succeeded. Selected full methods; no code/PDK or execution.",
+      "supported_claim_ids": [
+        "review-C203"
+      ],
+      "rights": "Metadata and bounded paraphrase only; no source document copied into release.",
+      "sha256": "3c2aefdc636a9b9a58b6445e1165de1903969c6a1e23a1a96aa326dc3bfdfd08"
+    },
+    {
+      "id": "C204",
+      "title": "Invited: Post-Placement Buffering and Sizing Contest",
+      "url": "https://vlsicad.ucsd.edu/Publications/Conferences/421/c421.pdf",
+      "source_type": "organizer-paper",
+      "publication_date": "2026",
+      "retrieved_utc": "2026-10-15T14:33:51.092689+00:00",
+      "access": "full",
+      "locator": "PDF p.6 section 4 No floorplan perturbation / Physical cells bullet",
+      "limitations": "Selected rule only; no score reproduction or inferred winner algorithm.",
+      "supported_claim_ids": [
+        "review-C204"
+      ],
+      "rights": "Metadata and bounded paraphrase only; no source document copied into release.",
+      "sha256": "da7022e95d0e86678787a7413b798684cd4989497ddec7cba3d1553ff3ac32d6"
+    },
+    {
+      "id": "C205",
+      "title": "Algorithms for Simultaneous Consideration of Multiple Physical Synthesis Transforms for Timing Closure",
+      "url": "https://websrv.cecs.uci.edu/~papers/iccad08/PDFs/Papers/02A.1.pdf",
+      "source_type": "conference-paper",
+      "publication_date": "2008",
+      "retrieved_utc": "2026-10-15T14:33:51.092689+00:00",
+      "access": "abstract",
+      "locator": "Primary-PDF search-index excerpts of section 8 and conclusion; citation confirmed by C203 reference 2",
+      "limitations": "Full direct PDF failed (TLS timeout); search-index excerpts only, access enum conservatively abstract. No complete graph audit or performance transfer.",
+      "supported_claim_ids": [
+        "review-C205"
+      ],
+      "rights": "Metadata and bounded paraphrase only; no source document copied into release."
+    },
+    {
+      "id": "C206",
+      "title": "ISPD2026 official winners and resources",
+      "url": "https://www.ispd.cc/contests/26/index.html",
+      "source_type": "official-contest",
+      "publication_date": "2026",
+      "retrieved_utc": "2026-10-15T14:33:51.092689+00:00",
+      "access": "full",
+      "locator": "Contest Winners ordered list; resources",
+      "limitations": "Identities and links only; original algorithm reports not retrieved.",
+      "supported_claim_ids": [
+        "review-C206"
+      ],
+      "rights": "Metadata and bounded paraphrase only; no source document copied into release."
+    },
+    {
+      "id": "C207",
+      "title": "Prof. Yu Bei team first place in 2025 CAD Contest",
+      "url": "https://www.cse.cuhk.edu.hk/news/achievements/iccad2025/",
+      "source_type": "institutional-author-announcement",
+      "publication_date": "2025-12-01",
+      "retrieved_utc": "2026-10-15T14:33:51.092689+00:00",
+      "access": "full",
+      "locator": "Opening and hybrid-method description; updated 2026-01-26",
+      "limitations": "High-level institutional report; no original winner code or independent performance comparison.",
+      "supported_claim_ids": [
+        "review-C207"
+      ],
+      "rights": "Metadata and bounded paraphrase only; no source document copied into release."
+    },
+    {
+      "id": "C208",
+      "title": "ICCAD2025 official Problems",
+      "url": "https://www.iccad-contest.org/2025/Problems.html",
+      "source_type": "official-contest",
+      "publication_date": "2025",
+      "retrieved_utc": "2026-10-15T14:33:51.092689+00:00",
+      "access": "full",
+      "locator": "Problem C and Top-3 link",
+      "limitations": "Index reopened; archive not downloaded here.",
+      "supported_claim_ids": [
+        "review-C208"
+      ],
+      "rights": "Metadata and bounded paraphrase only; no source document copied into release."
+    },
+    {
+      "id": "C209",
+      "title": "ICCAD2026 official Problems",
+      "url": "https://www.iccad-contest.org/Problems",
+      "source_type": "official-contest",
+      "publication_date": "2026",
+      "retrieved_utc": "2026-10-15T14:33:51.092689+00:00",
+      "access": "full",
+      "locator": "Problem A/B/C task list",
+      "limitations": "Index only; no original winner methods.",
+      "supported_claim_ids": [
+        "review-C209"
+      ],
+      "rights": "Metadata and bounded paraphrase only; no source document copied into release."
+    }
+  ],
+  "access_convention": "Full means original bytes accessible and selected cited locators inspected, not exhaustive reading. Raw source locators count physical lines; web may collapse blanks. C205 is search-index excerpt access, not full PDF.",
+  "unverified_proposal_sources": [
+    "R02",
+    "R03",
+    "R05",
+    "R11",
+    "R12 full paper",
+    "R13",
+    "R14",
+    "R17",
+    "R18 archive contents"
+  ]
+}

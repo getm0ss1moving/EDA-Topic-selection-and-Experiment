@@ -1,0 +1,112 @@
+{
+  "schema": 1,
+  "role": "verifier",
+  "actor_id": "ChatGPT-V04-PHYSICAL-B03-EDA-0008",
+  "session_id": "370f04ea-8378-4c1f-ab83-2fa830453d13",
+  "input_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+  "packet_sha256": "d5dd4815d595e6eca62ed6640e0a91f111ead1203b0ebd491e738f112f851963",
+  "job_id": "7e0e00bb-e6e2-4659-a94f-d05c6d1e946a",
+  "read_releases": [
+    "SUB-15651a51979be07b769426268a585dc32c570cdabcb357ce6d8f29e9d29e3588",
+    "SUB-996a3afdee6abd5c24ebd2d6039e56c4e3baba57456ee34ec8d4c69c5e11ede2",
+    "SUB-1d05911d8e35b90fb0e6991b4d15e1cb7ed17fe0859b2a1a7316091a6778695c",
+    "SUB-1423e18cfcffc89303d1daabf192e80dcb00716aa283af514c89f5bb96058f5e",
+    "SUB-1c2deaff2701f8108c4f9d6fdca3298698c7aa4a8273f9e9036232c12bde533c"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0
+  },
+  "rules": {
+    "inputs": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json#/reviewed_proposer_release",
+        "verification.json#/adjudicated_challenger_releases"
+      ],
+      "limits": "Self-authored ledger, not full tool-trace or proof of absent unseen conduct. Only current job activity; no historical approval inherited."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json#/limitations"
+      ],
+      "limits": "Self-authored ledger, not full tool-trace or proof of absent unseen conduct. Only current job activity; no historical approval inherited."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "release/verification.md",
+        "release/verification.json",
+        "release/workflow.json",
+        "release/compliance.json"
+      ],
+      "limits": "Self-authored ledger, not full tool-trace or proof of absent unseen conduct. Only current job activity; no historical approval inherited."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json#/sources",
+        "verification.json#/search_log"
+      ],
+      "limits": "Self-authored ledger, not full tool-trace or proof of absent unseen conduct. Only current job activity; no historical approval inherited."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json#/source_checks",
+        "verification.json#/analytical_checks"
+      ],
+      "limits": "Self-authored ledger, not full tool-trace or proof of absent unseen conduct. Only current job activity; no historical approval inherited."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json#/tasklist_sha256",
+        "verification.json#/experiment_consensus_checked"
+      ],
+      "limits": "Self-authored ledger, not full tool-trace or proof of absent unseen conduct. Only current job activity; no historical approval inherited."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "policy/docs/INNOVATION-BATCH-0003.md",
+        "verification.json#/analytical_checks"
+      ],
+      "limits": "Self-authored ledger, not full tool-trace or proof of absent unseen conduct. Only current job activity; no historical approval inherited."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json#/direction_penalties"
+      ],
+      "limits": "Self-authored ledger, not full tool-trace or proof of absent unseen conduct. Only current job activity; no historical approval inherited."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "release/workflow.json",
+        "policy/docs/SELF-SUBMISSION.md"
+      ],
+      "limits": "Self-authored ledger, not full tool-trace or proof of absent unseen conduct. Only current job activity; no historical approval inherited."
+    }
+  },
+  "operations": [
+    "Read own JOB/prompt, assigned common policy and verifier harness; listed only own job paths. No checkout reads.",
+    "Read current released P/C outputs and supplied predecessor proposal/audit plus own previous verdict. Unblinded; no private cross-role material.",
+    "Independently opened primary sources via web; retrieved three publicly posted PDFs to own job scratch through ordinary anonymous sessions; extracted selected text. No authentication bypass.",
+    "Ran own tiny arithmetic and current released payload hash checks; computed dossier digest with policy tool. No downloaded code executed.",
+    "Wrote only own scratch and release artifacts; copyrighted PDFs remain outside release.",
+    "Self-freeze using supplied trusted command; result.json records actual successful release. No PR, merge, role messaging, subagent or experiment action.",
+    "After successful initial freeze SUB-b1deec6dc3da49edad4269800510d8cc19b92ed91cf674de42aaa1efc5108e54, added source bibliographic/access metadata; refroze a superseding release without changing scientific verdict. Initial release preserved."
+  ],
+  "incidents": [],
+  "observability": "Self-authored public activity ledger, not a complete tool trace or evidence of absent undisclosed actions."
+}

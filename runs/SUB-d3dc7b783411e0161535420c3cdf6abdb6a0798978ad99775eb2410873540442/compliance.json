@@ -1,0 +1,114 @@
+{
+  "role": "verifier",
+  "actor_id": "ChatGPT-B03-PROTOCOL-D04-EDA-0008-R2",
+  "session_id": "06316c3f-646b-43e3-9dfb-54caece1fd2a",
+  "input_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+  "packet_sha256": "3d7440d75bc5ffa4c987554402b30c02488ec548fb186900ec31bf65642e3e79",
+  "job_id": "f850693e-5775-4feb-81ab-585371c2884a",
+  "schema": 1,
+  "read_releases": [
+    "SUB-996a3afdee6abd5c24ebd2d6039e56c4e3baba57456ee34ec8d4c69c5e11ede2",
+    "SUB-15651a51979be07b769426268a585dc32c570cdabcb357ce6d8f29e9d29e3588",
+    "SUB-34b826d7ab2de0ad0bae65f70fbe2a9aeea2f918b483e43265dbec790ddd0b47"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0
+  },
+  "rules": {
+    "inputs": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json#/roles",
+        "runs/activity.json"
+      ],
+      "limits": "Only assigned job/policy/released outputs read; self-report is not a complete trace. No source adjudication, consent, experiment or publication action is supplied by this audit."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json#/roles",
+        "runs/activity.json"
+      ],
+      "limits": "Only assigned job/policy/released outputs read; self-report is not a complete trace. No source adjudication, consent, experiment or publication action is supplied by this audit."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json#/roles",
+        "runs/activity.json"
+      ],
+      "limits": "Only assigned job/policy/released outputs read; self-report is not a complete trace. No source adjudication, consent, experiment or publication action is supplied by this audit."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json#/roles",
+        "runs/activity.json"
+      ],
+      "limits": "Only assigned job/policy/released outputs read; self-report is not a complete trace. No source adjudication, consent, experiment or publication action is supplied by this audit."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json#/roles",
+        "runs/activity.json"
+      ],
+      "limits": "Only assigned job/policy/released outputs read; self-report is not a complete trace. No source adjudication, consent, experiment or publication action is supplied by this audit."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json#/roles",
+        "runs/activity.json"
+      ],
+      "limits": "Only assigned job/policy/released outputs read; self-report is not a complete trace. No source adjudication, consent, experiment or publication action is supplied by this audit."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json#/roles",
+        "runs/activity.json"
+      ],
+      "limits": "Only assigned job/policy/released outputs read; self-report is not a complete trace. No source adjudication, consent, experiment or publication action is supplied by this audit."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json#/roles",
+        "runs/activity.json"
+      ],
+      "limits": "Only assigned job/policy/released outputs read; self-report is not a complete trace. No source adjudication, consent, experiment or publication action is supplied by this audit."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json#/roles",
+        "runs/activity.json"
+      ],
+      "limits": "Only assigned job/policy/released outputs read; self-report is not a complete trace. No source adjudication, consent, experiment or publication action is supplied by this audit."
+    }
+  },
+  "operations": [
+    "Read JOB/prompt, ROLE-COMPLIANCE and only VERIFIER harness; read common policy, rereading CODEX-AUTOMATION and ISOLATION after aggregate truncation.",
+    "List only assigned policy/shared filenames; read exact three releases and public job descriptors. No checkout or private role material.",
+    "Trusted manifest verify, JSON parsing, descriptor binding and task SHA checks; no downloaded research code executed.",
+    "Write own English audit, ledger and run record; run trusted structural checks; self-freeze and write result.json after success."
+  ],
+  "incidents": [],
+  "observability": "Self-authored public ledger; not a complete tool trace or evidence of absent undisclosed activity. Physical backend/session freshness not independently attested."
+}

@@ -1,0 +1,33 @@
+{
+  "role": "proposer",
+  "topic": "EDA-0008",
+  "batch_round": 2,
+  "assessment": "revise",
+  "next_action": "revise",
+  "experiment_ready": false,
+  "experiment_consent": "pending",
+  "preserves_anchor": true,
+  "direction_penalties": {
+    "combination_drift": 0,
+    "demand_drift": 0
+  },
+  "responds_to_verifier_release": "SUB-1423e18cfcffc89303d1daabf192e80dcb00716aa283af514c89f5bb96058f5e",
+  "adjudicated_challenger_release": "SUB-0ddb73ca97e1fc1b27f33363b8b06817e6794e7c7a51e8755934918cc9ef8f02",
+  "completed_work": [
+    "OBJ-101/C-T01 fresh-executable branch-reference and charged differential preflight contract",
+    "C-T02 explicit features/tensors/rank restriction plus direct identity controls",
+    "R09 full author paper retrieved and selected method audited",
+    "R18 original official output archive retrieved; directory establishes output-not-method nature",
+    "R07 p.6 locator independently corrected",
+    "Tiny scalar/rank/direct-witness checks; no EDA or training"
+  ],
+  "limitations": [
+    "Actual physical adapter/process-isolation and low-rank incidence untested",
+    "No new EDA/build/training/resource allocation or matching consent",
+    "Winner implementation/method reports and classical/current overlap still unresolved",
+    "Narrow engineering demand,final-route benefit and full-cost gain unmeasured",
+    "INC-P02-001 premature within-job filename enumeration retained for independent audit"
+  ],
+  "tasklist_sha256": "107a1ee6ade3542f44dca46a1e0ab2f72a256660792f4e18b75379b1a314d417",
+  "backend_identity": "JOB requests gpt-6.1-sol/high; logical role/session only, no independent backend model/freshness attestation."
+}

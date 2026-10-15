@@ -1,0 +1,45 @@
+{
+  "locator_map": {
+    "auditor JOB.json": "runs/CODEX-ROUND-EDA-0008-34b826d7ab2de0ad/job-descriptors/protocol_audit/JOB.json",
+    "shared/job-descriptors/": "runs/CODEX-ROUND-EDA-0008-34b826d7ab2de0ad/job-descriptors/"
+  },
+  "purpose": "Exact public job/packet descriptors used by the conduct review; not private traces",
+  "roles": {
+    "challenger": {
+      "files": {
+        "JOB.json": "4e197181dad7b0b495b1df01a4e5f5858a71a86bfacfa697e5ef6ffde4bcefac",
+        "PACKET.json": "48d40bb5ac63cd51e5b07f3150ce125e6f8e58660ee28c13c5cb0d811f4c3935",
+        "prompt.txt": "36e00c59e52dbf20c5f0fd30bbb51f08e2fc2ecba1cab228cd2ab904a5e3f2a8"
+      },
+      "release_id": "SUB-996a3afdee6abd5c24ebd2d6039e56c4e3baba57456ee34ec8d4c69c5e11ede2",
+      "root": "runs/CODEX-ROUND-EDA-0008-34b826d7ab2de0ad/job-descriptors/challenger"
+    },
+    "proposer": {
+      "files": {
+        "JOB.json": "9ecb7855f58c60aa89042676a5e84ec75544e5e6e14ec18d4eef1d92fed23982",
+        "PACKET.json": "a33f0dab9f9ecf62d70001cc3343663f307218e16e69f418d8843619cab37db3",
+        "prompt.txt": "071f3d4bedae9c7da4ce0fd43b37f3ac12b84348e5235e6779b10ec4c53b9166"
+      },
+      "release_id": "SUB-15651a51979be07b769426268a585dc32c570cdabcb357ce6d8f29e9d29e3588",
+      "root": "runs/CODEX-ROUND-EDA-0008-34b826d7ab2de0ad/job-descriptors/proposer"
+    },
+    "protocol_audit": {
+      "files": {
+        "JOB.json": "81da9b0f592992edde2df8b75b2b58b8e7fe17ab8338b9de618d1ece30970614",
+        "PACKET.json": "3d7440d75bc5ffa4c987554402b30c02488ec548fb186900ec31bf65642e3e79",
+        "prompt.txt": "d115cfe14934eb5fefc7710bdfafc6a3284cab957ff879c42fb790ed7a1be8d3"
+      },
+      "release_id": "SUB-d3dc7b783411e0161535420c3cdf6abdb6a0798978ad99775eb2410873540442",
+      "root": "runs/CODEX-ROUND-EDA-0008-34b826d7ab2de0ad/job-descriptors/protocol_audit"
+    },
+    "verifier": {
+      "files": {
+        "JOB.json": "e205a521518a6acf9717d78beeb9eb970f79dbe5a94f4cbcb89a70df42564e59",
+        "PACKET.json": "d5dd4815d595e6eca62ed6640e0a91f111ead1203b0ebd491e738f112f851963",
+        "prompt.txt": "ec9a43e11237c1ffa6d2021e41d6b8789ffb08bce149f69583c3e13eb1aca481"
+      },
+      "release_id": "SUB-34b826d7ab2de0ad0bae65f70fbe2a9aeea2f918b483e43265dbec790ddd0b47",
+      "root": "runs/CODEX-ROUND-EDA-0008-34b826d7ab2de0ad/job-descriptors/verifier"
+    }
+  }
+}
