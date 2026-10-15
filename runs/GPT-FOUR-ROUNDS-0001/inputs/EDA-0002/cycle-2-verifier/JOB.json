@@ -1,0 +1,34 @@
+{
+  "actor_id": "ChatGPT-V05-TIMING",
+  "batch_round": 2,
+  "batch_round_limit": 4,
+  "domain": "D05",
+  "input_commit": "a48f03d4bc254c0b0957d0fe0f265e072d6cf49a",
+  "models": {
+    "challenger": {
+      "effort": "low",
+      "model": "gpt-6-astra"
+    },
+    "proposer": {
+      "effort": "high",
+      "model": "gpt-6.1-sol"
+    },
+    "verifier": {
+      "effort": "low",
+      "model": "gpt-6.1-sol"
+    }
+  },
+  "packet_sha256": "c185aa8014f1936a775c86d3e418766e774100191d7c3658608e9790e9f5d7d2",
+  "phase": "research",
+  "previous_proposal_release": "SUB-a806c4dc87a5851aa442cab252006b29abb325ead730688f609e5187446cf7da",
+  "readiness": "logical seat registered; actual host model is recorded by the execution backend",
+  "released_inputs": [
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Four-Rounds-20261015/EDA-0002/ChatGPT-V05-TIMING/jobs/7b4a3b38-d21c-4967-9243-f0c4b07ebb1d/shared/SUB-a806c4dc87a5851aa442cab252006b29abb325ead730688f609e5187446cf7da",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Four-Rounds-20261015/EDA-0002/ChatGPT-V05-TIMING/jobs/7b4a3b38-d21c-4967-9243-f0c4b07ebb1d/shared/SUB-74e2057df298eb5622da2f9b9ac90aab34b6bc351ab27f9e0c717e80ef60d6c6",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Four-Rounds-20261015/EDA-0002/ChatGPT-V05-TIMING/jobs/7b4a3b38-d21c-4967-9243-f0c4b07ebb1d/shared/legacy-verifier"
+  ],
+  "role": "verifier",
+  "round": 1,
+  "session_id": "c411c94b-521d-48a9-b109-4489482b9cc6",
+  "topic": "EDA-0002"
+}

@@ -104,6 +104,17 @@ class LoopTests(unittest.TestCase):
         self.assertNotEqual(new['topic'],t['topic'])
         self.assertEqual(new['latest'],{})
         self.assertTrue(all(new['seats'][r]['session_id']!=t['seats'][r]['session_id'] for r in l.ROLES))
+    def test_successor_inputs_keep_verifiable_names_and_adjudicated_challenge(self):
+        self.tick();self.tick();self.tick()
+        state=l.read(self.home/'state.json');old=state['topics']['EDA-0002'];old['status']='parked'
+        with patch.object(l,'frozen',side_effect=lambda ref,name:(ROOT/name).read_bytes()):
+            l.successor(state,old,self.c,self.home)
+        job=l.job_for(state,state['topics'][old['successor']],self.c)
+        assign=l.read(Path(job['work'])/'JOB.json')
+        releases=[Path(p) for p in assign['released_inputs'] if Path(p).is_dir()]
+        roles={l.rs.verify(p)[0]['role'] for p in releases}
+        self.assertEqual(roles,set(l.ROLES))
+        self.assertTrue(all(p.name.startswith('SUB-') for p in releases))
     def test_native_command_uses_assigned_model_and_no_provider_bridge(self):
         cmd=l.command(self.c,'challenger',self.home/'work')
         self.assertEqual(cmd[cmd.index('--model')+1],'gpt-6-astra')
@@ -113,6 +124,11 @@ class LoopTests(unittest.TestCase):
         self.tick()
         with self.assertRaises(ValueError):l.prepare(self.c,self.home,self.state['source_commit'])
         self.assertEqual(self.topic()['phase'],'challenger')
+    def test_round_registrations_satisfy_repository_required_fields(self):
+        required=l.read(ROOT/'config/roles.json')['required_session_fields']
+        for seat in l.registry(self.state)['sessions']:
+            self.assertFalse([field for field in required if not seat.get(field)])
+            self.assertIn('transport account only',seat['github_login'])
     def test_changed_input_packet_blocks_model_execution_and_retains_retry(self):
         seat=self.topic()['seats']['proposer'];p=Path(seat['packet'])/'harness/PROPOSER.md'
         p.chmod(0o644);p.write_text('tampered policy')
@@ -168,6 +184,27 @@ class LoopTests(unittest.TestCase):
         self.assertEqual(out['status'],'advanced')
         self.assertIn('publication_error',state['publication_queue'][0])
         self.assertEqual(state['published'],{})
+    def test_app_publication_failure_is_durable_and_retryable(self):
+        self.tick();self.tick();self.tick()
+        with patch.object(l,'publish_record',side_effect=ValueError('Synthetic network failure')):
+            self.assertEqual(l.publish_pending(self.c,self.home),[])
+        s=l.read(self.home/'state.json')
+        self.assertIn('publication_error',s['publication_queue'][0])
+        with patch.object(l,'publish_record',return_value='https://example.invalid/pr/1'):
+            self.assertEqual(l.publish_pending(self.c,self.home),['https://example.invalid/pr/1'])
+        s=l.read(self.home/'state.json')
+        self.assertNotIn('publication_error',s['publication_queue'][0])
+        self.assertEqual(len(s['publication_queue']),1)
+    def test_app_merge_connection_failure_does_not_lose_publication(self):
+        self.tick();self.tick();self.tick();s=l.read(self.home/'state.json')
+        key=s['publication_queue'][0]['verification_release'];url='https://example.invalid/pr/1'
+        s['published'][key]=url;l.save(self.home/'state.json',s)
+        self.c['publication']['auto_merge']=True
+        with patch.object(l,'merge_checked',side_effect=OSError('Synthetic TLS failure')):
+            l.publish_pending(self.c,self.home)
+        s=l.read(self.home/'state.json')
+        self.assertEqual(s['published'][key],url)
+        self.assertIn(url,s['merge_errors'])
     def test_unregistered_release_identity_is_refused(self):
         state=l.read(self.home/'state.json');t=state['topics']['EDA-0002'];job=l.job_for(state,t,self.c)
         result=self.fake(self.c,job);t['seats']['proposer']['session_id']='different'
@@ -185,6 +222,19 @@ class LoopTests(unittest.TestCase):
         for _ in range(12):self.tick()
         t=self.topic();self.assertEqual(t['round'],4)
         self.assertEqual(t['status'],'stopped_after_round_limit')
+        self.assertEqual(l.dispatch(self.c,self.home,'D05')['status'],'finished')
+        self.assertEqual(self.tick()['status'],'idle')
+    def test_successor_uses_remaining_domain_budget_and_cannot_start_fifth_cycle(self):
+        self.c['stop_after_rounds']=4;self.c['max_substantive_rounds']=4
+        l.save(self.home/'settings.json',self.c)
+        for _ in range(6):self.tick()
+        self.tick();self.tick();self.action='park';self.tick()
+        self.action='revise'
+        with patch.object(l,'frozen',side_effect=lambda ref,name:(ROOT/name).read_bytes()):
+            for _ in range(3):self.tick()
+        state=l.read(self.home/'state.json')
+        self.assertEqual(sum(t['round'] for t in state['topics'].values()),4)
+        self.assertEqual(len(state['topics']),2)
         self.assertEqual(l.dispatch(self.c,self.home,'D05')['status'],'finished')
         self.assertEqual(self.tick()['status'],'idle')
     def test_app_backend_does_not_use_native_model_fallback(self):

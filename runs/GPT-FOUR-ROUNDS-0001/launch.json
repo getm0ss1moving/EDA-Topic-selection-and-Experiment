@@ -1,0 +1,63 @@
+{
+  "kind": "bounded_research_execution",
+  "date_local": "2026-10-15",
+  "source_commit": "a48f03d4bc254c0b0957d0fe0f265e072d6cf49a",
+  "domains": [
+    "D04",
+    "D05"
+  ],
+  "completed_rounds_required_per_domain": 4,
+  "model_policy": {
+    "challenger": {
+      "effort": "low",
+      "model": "gpt-6-astra"
+    },
+    "proposer": {
+      "effort": "high",
+      "model": "gpt-6.1-sol"
+    },
+    "verifier": {
+      "effort": "low",
+      "model": "gpt-6.1-sol"
+    }
+  },
+  "backend": "fresh Codex app agents; no parent-history fork",
+  "logical_registrations": {
+    "EDA-0001": {
+      "challenger": {
+        "actor_id": "ChatGPT-C04-PHYSICAL",
+        "session_id": "f29f2abb-ad12-4c6f-8446-e384bd6ae66d",
+        "packet_sha256": "6f386384bd1e2cb160b5f6ccf339e19c23646a70706198b75b39cb86acba183f"
+      },
+      "proposer": {
+        "actor_id": "ChatGPT-P04-PHYSICAL",
+        "session_id": "1a859cdd-08fa-46af-a2fe-1a6fc872d695",
+        "packet_sha256": "f24d6d0842a9a214e52469c518bae370fe1e11f48069736da9420adc325a6554"
+      },
+      "verifier": {
+        "actor_id": "ChatGPT-V04-PHYSICAL",
+        "session_id": "af1bc870-0e06-409c-97d6-94cd099f151a",
+        "packet_sha256": "635bbfb54195cb9a9d3d2a6fd7c72aa9b36219fa7a05fae2b67cc88d79a7d9fd"
+      }
+    },
+    "EDA-0002": {
+      "challenger": {
+        "actor_id": "ChatGPT-C05-TIMING",
+        "session_id": "4255d8a8-c77a-402e-b86f-cf16a2e2df48",
+        "packet_sha256": "cd0d8c8d335f3f4e9f3c439f50598593b41a697d32af39730a18ceafd05ccaea"
+      },
+      "proposer": {
+        "actor_id": "ChatGPT-P05-TIMING",
+        "session_id": "6a1a1207-fcda-4f17-ab1e-c5d41539718b",
+        "packet_sha256": "bd4911a04b3d7666d4304e869c785e479bbb5b5d9434f6fc18e777a6d9fe0fcb"
+      },
+      "verifier": {
+        "actor_id": "ChatGPT-V05-TIMING",
+        "session_id": "c411c94b-521d-48a9-b109-4489482b9cc6",
+        "packet_sha256": "c185aa8014f1936a775c86d3e418766e774100191d7c3658608e9790e9f5d7d2"
+      }
+    }
+  },
+  "privacy": "Only owner-released handovers, role-owned outputs and adjudicated shared packets. No predecessor transcript or private scratch read.",
+  "scientific_acceptance": "Not established by launch or transport checks."
+}

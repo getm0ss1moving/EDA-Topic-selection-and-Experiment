@@ -686,7 +686,7 @@
       "OpenAI Codex"
     ],
     "proposer": {
-      "model": "gpt-6-astra",
+      "model": "gpt-6.1-sol",
       "effort": "high"
     },
     "challenger": {
@@ -694,8 +694,8 @@
       "effort": "low"
     },
     "verifier": {
-      "model": "gpt-6-luna",
-      "effort": "medium"
+      "model": "gpt-6.1-sol",
+      "effort": "low"
     }
   }
 }

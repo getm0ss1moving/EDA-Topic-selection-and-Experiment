@@ -128,8 +128,10 @@ def prepare(c,home,ref):
 def registry(state):
     return {'sessions':[{'session_id':s['session_id'],'role':r,'actor_id':s['actor_id'],
              'topic':topic,'platform':'OpenAI Codex','model':read(Path(s['base']).parents[1]/'settings.json')['models'][r]['model'],
-             'operator':'getm0ss1moving','input_commit':state['source_commit'],'packet_sha256':s['packet_sha256'],
-             'session_kind':'logical file-mediated seat; fresh ephemeral CLI execution per job',
+             'operator':'getm0ss1moving',
+             'github_login':'getm0ss1moving (transport account only; not an independent reviewer)',
+             'input_commit':state['source_commit'],'packet_sha256':s['packet_sha256'],
+             'session_kind':'logical file-mediated seat; fresh isolated-input execution per job',
              'independence_attestation':'Separate role inputs and own files only; shared OS account, policy isolation.'}
              for topic,t in state['topics'].items() for r,s in t['seats'].items()]}
 
@@ -158,20 +160,29 @@ def job_for(state,t,c):
     work=Path(seat['base'])/'jobs'/str(uuid.uuid4()); work.mkdir(parents=True)
     shutil.copytree(seat['packet'],work/'policy')
     shared=work/'shared';shared.mkdir()
+    paths=[]
     predecessor=Path(seat['base'])/'predecessor.json'
     if predecessor.is_file():
         prior=read(predecessor)
-        save(shared/'predecessor.json',prior)
         # These are explicitly released end-of-round outputs, not predecessor memory.
         allowed_prior={'proposer':('proposer','verifier','challenger'),
                        'challenger':('proposer','verifier'),
                        'verifier':ROLES}[role]
+        exported={}
+        if role=='proposer' and prior['releases'].get('challenger'):
+            _,verdict=rs.verify(prior['releases']['verifier'])
+            if Path(prior['releases']['challenger']).name not in json.loads(verdict['verification.json']).get('adjudicated_challenger_releases',[]):
+                raise ValueError('Predecessor challenge has not been adjudicated')
+        (shared/'predecessor').mkdir()
         for sender in allowed_prior:
             old=prior['releases'].get(sender)
-            if old:copy_release(old,shared/('predecessor-'+sender))
+            if old:
+                dest=shared/'predecessor'/Path(old).name
+                copy_release(old,dest);paths.append(str(dest));exported[sender]=str(dest)
+        save(shared/'predecessor.json',{**prior,'releases':exported})
+        paths.append(str(shared/'predecessor.json'))
     allowed = {'proposer':('verifier',),'challenger':('proposer','verifier'),
                'verifier':('proposer','challenger')}[role]
-    paths=[]
     for sender in allowed:
         path=t['latest'].get(sender)
         if path:
@@ -213,6 +224,9 @@ def job_for(state,t,c):
         'Do not inspect another role\'s private files, sessions or memory. Do not call agents or send messages. '
         'Do not access the project checkout or GitHub branches for withheld files. No per-source approval is needed. '
         'Use the assigned model only. No provider fallback or new expenditure. '
+        'This is academic chip electronic-design-automation research using public or legitimately accessible sources. '
+        'Do not conduct cyber intrusion, acquire trade secrets, seek unpublished proprietary designs, '
+        'bypass access controls, or retrieve credentials. Public vendor capability claims are research evidence only. '
         'Write complete role-owned files in release/. Include workflow.json per the automation contract. '
         'Verify every source claim, record access limitations, and distinguish prediction from measurement. '
         'For a consent phase preserve scientific content; sign the same explicitly released proposal revision as the other role. '
@@ -232,7 +246,9 @@ def job_for(state,t,c):
                'unadjudicated first-pass material and is explicitly unblinded; do not inherit independence '
                'or treat historical verifier findings as verification of the new revision. '
                'Use released-handover for your own predecessor\'s shared files, never its transcript or scratch. '
-               'Write final protocol JSON to result.json in the job root after self-freezing, with status, release_id, reason.\n')
+               'Write final protocol JSON to result.json in the job root after self-freezing, with status, release_id, reason. '
+               'The status must be exactly "complete" or "blocked" per result.schema.json; a successfully frozen '
+               'research release uses "complete", even when its scientific decision is revise or unresolved.\n')
     prompt += ('The coordinator runs full-repository validation during publication. This standalone job '
                'does not contain the entire repository or foreign harnesses; use the trusted freeze validator '
                'for your own release and record any limited local checks. Do not browse the checkout to '
@@ -441,7 +457,7 @@ def publish_record(record,c,home,dry_run=False):
     key=record['verification_release'][4:20]
     branch=f'codex/round-{record["topic"].lower()}-{key}'
     slug='getm0ss1moving/EDA-Topic-selection-and-Experiment'
-    def cmd(*a,cwd=ROOT):return subprocess.check_output(a,cwd=cwd,text=True).strip()
+    def cmd(*a,cwd=ROOT):return subprocess.check_output(a,cwd=cwd,text=True,timeout=60).strip()
     if not dry_run:
         prs=json.loads(cmd('gh','pr','list','--repo',slug,'--head',branch,'--state','all','--json','url'))
         if prs:return prs[0]['url']
@@ -470,7 +486,7 @@ def publish_record(record,c,home,dry_run=False):
                     m,p=rs.verify(candidates[0]);dest=repo/'runs'/target;dest.mkdir(exist_ok=True)
                     for n,b in {**p,'SUBMISSION.json':rs.encoded(m)}.items():(dest/n).write_bytes(b)
                     published_ids.add(target)
-        public={k:v for k,v in record.items() if k!='releases'}
+        public={k:v for k,v in record.items() if k!='releases' and not k.startswith('publication_')}
         public['releases']={r:'runs/'+Path(p).name for r,p in record['releases'].items()}
         save(repo/'runs'/f'CODEX-ROUND-{record["topic"]}-{key}'/'round.json',public)
         # Registry travels atomically with this round; no registration PR has to merge first.
@@ -480,13 +496,31 @@ def publish_record(record,c,home,dry_run=False):
             if s['session_id'] in by and by[s['session_id']]!=s:raise ValueError('Session registration changed')
             by[s['session_id']]=s
         registered['sessions']=list(by.values());save(registry_path,registered)
-        cmd('python3','scripts/project.py','validate',cwd=repo)
+        validation=subprocess.run(['python3','scripts/project.py','validate'],cwd=repo,
+                                  capture_output=True,text=True)
+        if validation.returncode:
+            raise ValueError('Publication validation failed:\n'+validation.stdout+validation.stderr)
         cmd('git','add','runs','config/roles.json',cwd=repo)
         cmd('git','commit','--quiet','-m',f'Publish {record["topic"]} research round: {record["decision"]}',cwd=repo)
         if dry_run:return {'dry_run':True,'branch':branch,'commit':git('rev-parse','HEAD',cwd=repo)}
         if cmd('git','ls-remote','--heads','origin',branch,cwd=repo):
-            raise ValueError('Remote branch exists without a PR; preserved for reconciliation')
-        cmd('git','push','--quiet','origin',branch,cwd=repo)
+            # A network failure after push must not strand the durable publication.
+            # Reuse only a branch whose complete patch and bytes match our record.
+            cmd('git','fetch','--quiet','origin',branch,cwd=repo)
+            remote_base=cmd('git','merge-base','origin/main','FETCH_HEAD',cwd=repo)
+            remote_files=set(cmd('git','diff','--name-only',remote_base,'FETCH_HEAD',cwd=repo).splitlines())
+            expected_files={'config/roles.json',
+                f'runs/CODEX-ROUND-{record["topic"]}-{key}/round.json'}
+            for sid in published_ids:
+                expected_files.update(str(p.relative_to(repo)) for p in (repo/'runs'/sid).rglob('*') if p.is_file())
+            if not remote_files.issubset(expected_files):
+                raise ValueError('Existing remote branch has unexpected changes; preserved')
+            for name in expected_files:
+                remote_bytes=subprocess.check_output(['git','show',f'FETCH_HEAD:{name}'],cwd=repo)
+                if remote_bytes!=(repo/name).read_bytes():
+                    raise ValueError('Existing remote branch differs from publication record; preserved')
+        else:
+            cmd('git','push','--quiet','origin',branch,cwd=repo)
         body=Path(tmp)/'body.md'
         body.write_text(f'Automatic three-role round for {record["topic"]}. Decision: `{record["decision"]}`.\n\n'
                         'The round includes the frozen proposer, challenger and verifier outputs, '
@@ -500,15 +534,18 @@ def merge_checked(url):
     """Coordinator transport merge only, no self-approval or protection bypass."""
     # Ignore this invocation's branch and inspect the exact PR head through GitHub.
     detail=json.loads(subprocess.check_output(['gh','pr','view',url,'--json',
-        'state,headRefOid,statusCheckRollup,mergeStateStatus'],text=True))
+        'state,headRefOid,statusCheckRollup,mergeStateStatus'],text=True,timeout=60))
     if detail['state']=='MERGED':return True
     if detail['state']!='OPEN':return False
     checks=detail.get('statusCheckRollup') or []
     if not checks or not all(x.get('conclusion') in {'SUCCESS','NEUTRAL','SKIPPED'} or
                              x.get('state')=='SUCCESS' for x in checks):return False
+    if detail.get('mergeStateStatus')=='BEHIND':
+        subprocess.run(['gh','pr','update-branch',url],check=True,timeout=60)
+        return False
     if detail.get('mergeStateStatus')!='CLEAN':return False
     subprocess.run(['gh','pr','merge',url,'--squash','--delete-branch',
-                    '--match-head-commit',detail['headRefOid']],check=True)
+                    '--match-head-commit',detail['headRefOid']],check=True,timeout=60)
     return True
 
 
@@ -548,12 +585,23 @@ def publish_pending(c,home):
     for rec in state['publication_queue']:
         key=rec['verification_release']
         if key not in state['published']:
-            state['published'][key]=publish_record(rec,c,home)
+            try:
+                state['published'][key]=publish_record(rec,c,home)
+                rec.pop('publication_error',None)
+            except (ValueError,OSError,subprocess.SubprocessError) as exc:
+                rec['publication_error']=str(exc)
+                save(home/'state.json',state)
+                continue
             save(home/'state.json',state)
         out.append(state['published'][key])
     if c['publication'].get('auto_merge'):
         for url in out:
-            if url not in state.setdefault('merged',[]) and merge_checked(url):state['merged'].append(url)
+            if url not in state.setdefault('merged',[]):
+                try:
+                    if merge_checked(url):state['merged'].append(url)
+                    state.setdefault('merge_errors',{}).pop(url,None)
+                except (ValueError,OSError,subprocess.SubprocessError) as exc:
+                    state.setdefault('merge_errors',{})[url]=str(exc)
     save(home/'state.json',state);return out
 
 
@@ -566,7 +614,7 @@ def tick(c,home,executor=execute,publisher=publish_record):
         if rec.get('publication_retry_at',0)>time.time():continue
         try:
             url=publisher(rec,c,home);state['published'][key]=url
-        except (ValueError,OSError,subprocess.CalledProcessError) as e:
+        except (ValueError,OSError,subprocess.SubprocessError) as e:
             rec['publication_error']=str(e);rec['publication_retry_at']=time.time()+c['failure_backoff_seconds']
         save(home/'state.json',state)
     if c['publication'].get('auto_merge'):
@@ -575,7 +623,7 @@ def tick(c,home,executor=execute,publisher=publish_record):
             if url in merged:continue
             try:
                 if merge_checked(url):merged.append(url)
-            except (ValueError,OSError,subprocess.CalledProcessError):
+            except (ValueError,OSError,subprocess.SubprocessError):
                 pass  # Research and publication keep running; the PR remains reviewable.
     for t in list(state['topics'].values()):successor(state,t,c,home)
     # Fair rotation avoids an early blocked topic starving the other domain.
@@ -588,7 +636,7 @@ def tick(c,home,executor=execute,publisher=publish_record):
         save(home/'state.json',state)  # Resume this exact job after a crash.
         result=executor(c,t['job']);accept_result(state,t,t['job'],result,home)
         outcome={'status':'advanced','topic':t['topic'],'next_role':t['phase'],'topic_status':t['status']}
-    except (ValueError,OSError,subprocess.CalledProcessError) as e:
+    except (ValueError,OSError,subprocess.SubprocessError) as e:
         t['not_before']=time.time()+c['failure_backoff_seconds'];t['last_error']=str(e)
         # A blocked/faulty final reply must not permanently pin retries to the same result file.
         if t['job']:

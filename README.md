@@ -33,16 +33,18 @@ All research artifacts, role interactions, and technical reviews use English. Hu
 
 ## Current status
 
-The governance framework and platform allocations are on `main`. No topic, literature survey, experimental result, or scientific approval is claimed. `M0nitor-EDA` is enrolled as an independent GitHub review identity, but account enrollment is not scientific confirmation. The physical-slice role-creation release is recorded in `config/launch-release.json`: after that release is merged, six fresh cross-platform role sessions may be created in workflow order from packets exported at the resulting full `main` SHA.
+The 2026-10-15 bounded ChatGPT batch completed four full proposer/challenger/verifier cycles per domain for D04 and D05: eight rounds and 24 hash-verified role releases. Each original topic was parked after three cycles; one separately numbered successor per domain received the final cycle. Both successors were also parked. No topic passed experimental admission, no joint-abandonment signatures were fabricated, and no EDA experiment or fifth cycle was launched.
 
-The released D04/D05 assignment is documented separately for [Codex](docs/platforms/CODEX-PHYSICAL.md), [DeepSeek](docs/platforms/DEEPSEEK-PHYSICAL.md), and [Claude](docs/platforms/CLAUDE-PHYSICAL.md). These are execution contracts, not survey results.
+Read the owner's requested [Chinese topic report](reports/final/GPT-FOUR-ROUNDS-20261015.zh-CN.md), [round/release index](runs/GPT-FOUR-ROUNDS-0001/topic-index.json), and [release audit](runs/GPT-FOUR-ROUNDS-0001/release-audit.json). Scientific originals remain English. Current models are proposer gpt-6.1-sol/high, challenger gpt-6-astra/low, verifier gpt-6.1-sol/low. The batch used fresh app agents; no running unattended service is claimed.
+
+The scope is academic chip EDA using public or legitimately accessible research material. Public vendor information does not establish the absence of proprietary capabilities. The [scope/event record](runs/GPT-FOUR-ROUNDS-0001/SCOPE.md) distinguishes an automatic platform flag from intermittent publication TLS failures.
 
 Repository: https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment
 
-## Released physical team
+## Historical platform allocation
 
-See [team allocation](docs/TEAM.md), the three platform documents above, and `config/agents*.json` for role identities and runtime status. Codex and Claude each supply one proposer and one cross-topic verifier; DeepSeek supplies both challengers. This does not resume archived historical sessions and does not authorize experiments.
+The older [team allocation](docs/TEAM.md), [Codex](docs/platforms/CODEX-PHYSICAL.md), [DeepSeek](docs/platforms/DEEPSEEK-PHYSICAL.md), and [Claude](docs/platforms/CLAUDE-PHYSICAL.md) documents preserve the earlier cross-platform setup. They are superseded for new work by the ChatGPT-only automation contract and current config. Released historical handovers remain evidence; their approvals and private context do not transfer to new roles.
 
-Current scope and reproducible resource checks: [Physical pilot](docs/PHYSICAL-PILOT.md). The first wave contains the D04 and D05 proposers only; challenger and verifier scientific inputs are released later in workflow order.
+Historical resource checks: [Physical pilot](docs/PHYSICAL-PILOT.md). Proposed ceilings are not a new experiment allocation.
 
-Platform lead handoffs: [DeepSeek](docs/handoffs/DEEPSEEK-LEAD.md), [Claude](docs/handoffs/CLAUDE-LEAD.md), and the [shared coordinator contract](docs/handoffs/PLATFORM-LEAD-CONTRACT.md). These documents describe assignments; they do not by themselves launch or message external agents.
+Historical lead handoffs: [DeepSeek](docs/handoffs/DEEPSEEK-LEAD.md), [Claude](docs/handoffs/CLAUDE-LEAD.md), and [shared coordinator contract](docs/handoffs/PLATFORM-LEAD-CONTRACT.md). These do not launch or message external agents.

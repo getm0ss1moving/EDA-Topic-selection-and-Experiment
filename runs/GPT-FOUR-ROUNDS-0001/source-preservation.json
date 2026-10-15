@@ -1,0 +1,12 @@
+{
+  "input_commit": "a48f03d4bc254c0b0957d0fe0f265e072d6cf49a",
+  "public_ref": "refs/tags/codex/gpt-four-rounds-source-20261015",
+  "squash_merge": "b946ec3de2ee0c9144e233316621d7e052a682b2",
+  "verified_equal_tree": "a795625a469cd0a16259c16aa6a9216a445cbfff",
+  "fetch_test": "Fetched the public tag into a separate clone; git cat-file reports commit for the exact input SHA.",
+  "review_repairs": {
+    "PR35": "Exact source object retained through the public tag.",
+    "PR40": "Added coordinator-authored provenance reconstruction at both referenced P05 cycle2/cycle3 manifest paths, plus original JOB/prompt snapshots. Frozen science unchanged; no original author attestation invented.",
+    "PR42": "Added input-source.json beside round.json with the exact public tag, explicit fetch command and independently compared equal tree at reachable main commit b946ec3. A branch-only review checkout does not imply the public tag is absent."
+  }
+}

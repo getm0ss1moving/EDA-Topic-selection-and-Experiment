@@ -1,0 +1,62 @@
+{
+  "domains": {
+    "D04": {
+      "completed_cycles": 4,
+      "topics": [
+        {
+          "topic": "EDA-0001",
+          "cycles": 3,
+          "status": "parked",
+          "phase": "verifier",
+          "last_scientific_decision": "park"
+        },
+        {
+          "topic": "EDA-0003",
+          "cycles": 1,
+          "status": "stopped_after_round_limit",
+          "phase": "verifier",
+          "last_scientific_decision": "park"
+        }
+      ]
+    },
+    "D05": {
+      "completed_cycles": 4,
+      "topics": [
+        {
+          "topic": "EDA-0002",
+          "cycles": 3,
+          "status": "parked",
+          "phase": "verifier",
+          "last_scientific_decision": "park"
+        },
+        {
+          "topic": "EDA-0004",
+          "cycles": 1,
+          "status": "stopped_after_round_limit",
+          "phase": "verifier",
+          "last_scientific_decision": "park"
+        }
+      ]
+    }
+  },
+  "published": {
+    "SUB-1057c0a753d7e52927891b9cf2fbc91c3e965ce980795f3ece56d65206d5ea7e": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/40",
+    "SUB-2b565f85f8830c71269e076e61b110398b1458a10b2299d83e912478629f688a": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/42",
+    "SUB-3a1895dd42f58f6c71fa80bd6ff6e44e9619b9bb84ba90e2bce7332874e29985": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/36",
+    "SUB-414671da6ef4b86b8a8ce536be6cb2f5e4eb1dd6f3dd8b2a82fd5c4046c54005": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/39",
+    "SUB-4641912acb091a09c8c7f788fbdcd68a89743b3632ae19c31606000ecd6a9cb8": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/41",
+    "SUB-48d08a36a7ff2ace364227ede380e0feab8f10f0477e3731a1b0379238275671": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/35",
+    "SUB-5d1e1e55455806e40ba8728f8c331e9915b15edc757de58ed3bf27d5cf267e85": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/38",
+    "SUB-db7faf8be19b758c681168f9a974cc4ebd73782935c08ba9d2230e2f0c826f7c": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/37"
+  },
+  "merged": [
+    "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/36",
+    "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/37",
+    "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/38",
+    "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/39",
+    "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/35",
+    "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/41",
+    "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/40",
+    "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/42"
+  ]
+}

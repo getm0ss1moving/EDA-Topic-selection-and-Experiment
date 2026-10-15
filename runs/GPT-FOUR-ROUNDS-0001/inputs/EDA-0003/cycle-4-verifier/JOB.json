@@ -1,0 +1,37 @@
+{
+  "actor_id": "ChatGPT-V04-PHYSICAL-EDA-0003",
+  "batch_round": 4,
+  "batch_round_limit": 4,
+  "domain": "D04",
+  "input_commit": "a48f03d4bc254c0b0957d0fe0f265e072d6cf49a",
+  "models": {
+    "challenger": {
+      "effort": "low",
+      "model": "gpt-6-astra"
+    },
+    "proposer": {
+      "effort": "high",
+      "model": "gpt-6.1-sol"
+    },
+    "verifier": {
+      "effort": "low",
+      "model": "gpt-6.1-sol"
+    }
+  },
+  "packet_sha256": "cf5ada0f3f1fee33cf623370f4121b4d418d72ada24c7404041a7e2f4adc81af",
+  "phase": "research",
+  "previous_proposal_release": "SUB-7c6b1c85bbe65f26c8882bf0474a3c913417f740de75096fd57329377c32612e",
+  "readiness": "logical seat registered; actual host model is recorded by the execution backend",
+  "released_inputs": [
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Four-Rounds-20261015/EDA-0003/ChatGPT-V04-PHYSICAL-EDA-0003/jobs/533d52c3-ea2f-4edc-855d-763162dd30fc/shared/predecessor/SUB-ef21f90bce1ab37f7cc070a9f312bd0474a5b7ff3f9537ccfbf67dc25bb4c05a",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Four-Rounds-20261015/EDA-0003/ChatGPT-V04-PHYSICAL-EDA-0003/jobs/533d52c3-ea2f-4edc-855d-763162dd30fc/shared/predecessor/SUB-68d9be41f42f0dd24e0eff25e15b4e967b5d922e06ff3a01b97b12432ef7f328",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Four-Rounds-20261015/EDA-0003/ChatGPT-V04-PHYSICAL-EDA-0003/jobs/533d52c3-ea2f-4edc-855d-763162dd30fc/shared/predecessor/SUB-414671da6ef4b86b8a8ce536be6cb2f5e4eb1dd6f3dd8b2a82fd5c4046c54005",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Four-Rounds-20261015/EDA-0003/ChatGPT-V04-PHYSICAL-EDA-0003/jobs/533d52c3-ea2f-4edc-855d-763162dd30fc/shared/predecessor.json",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Four-Rounds-20261015/EDA-0003/ChatGPT-V04-PHYSICAL-EDA-0003/jobs/533d52c3-ea2f-4edc-855d-763162dd30fc/shared/SUB-7c6b1c85bbe65f26c8882bf0474a3c913417f740de75096fd57329377c32612e",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Four-Rounds-20261015/EDA-0003/ChatGPT-V04-PHYSICAL-EDA-0003/jobs/533d52c3-ea2f-4edc-855d-763162dd30fc/shared/SUB-68648e310004de173692e6a14bb0403758c4e74b98931d30f8d7086179db5df4"
+  ],
+  "role": "verifier",
+  "round": 0,
+  "session_id": "6b0cc4fd-22dd-4607-aafe-09d0ec0c8904",
+  "topic": "EDA-0003"
+}

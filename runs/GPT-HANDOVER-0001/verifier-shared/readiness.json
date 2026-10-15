@@ -1,0 +1,156 @@
+{
+  "schema": "eda-verifier-readiness/1",
+  "generated_utc": "2026-10-14T10:49:49Z",
+  "turn": "onboarding",
+  "identity": {
+    "actor_id": "DeepSeek-V02-PHYSICAL",
+    "call_sign": "DSK-Ledger-PHYSICAL",
+    "platform": "DeepSeek",
+    "role": "verifier",
+    "domain_ids": ["D04", "D05"],
+    "topic": "EDA-0002",
+    "phase": "research",
+    "stage": "full",
+    "outbox": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/verifier-release-20261014/DeepSeek-V02-PHYSICAL",
+    "session_id": {
+      "supplied_in_packet": false,
+      "host_observed_candidate": "e6bc9983-e74b-4576-9c1d-3abc95ea3df9",
+      "note": "Derived from this session's own task path. Registration in config/roles.json cannot be checked from inside the packet (that file is not exported). No session ID was supplied by ASSIGNMENT.json or PACKET.json."
+    }
+  },
+  "model": {
+    "model_requested": "deepseek-flash",
+    "reasoning_requested": "low",
+    "actual_model_id_declared_by_host": "deepseek-flash",
+    "effort_observed": "not observable from inside the session",
+    "independent_verification": "not possible from inside the session; recorded as host-declared, matching launch-release.json platform_readiness.deepseek.model_policy"
+  },
+  "input_provenance": {
+    "input_commit": "27b6c6e8cb4ef0d2ac7f2feb2521be1426940d88",
+    "packet_path": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/verifier-release-20261014/DeepSeek-V02-PHYSICAL",
+    "packet_sha256_assigned": "db15a57c6355808e0faf90a6b2954c7f632bbe5b80071f069a905701d262ec78",
+    "packet_sha256_recomputed": "db15a57c6355808e0faf90a6b2954c7f632bbe5b80071f069a905701d262ec78",
+    "packet_hash_match": true,
+    "packet_json_commit_field": "27b6c6e8cb4ef0d2ac7f2feb2521be1426940d88",
+    "hash_tool": "python3 -I hashlib.sha256 over file bytes (cross-checked with shasum -a 256 for PACKET.json)"
+  },
+  "file_verification": {
+    "listed_files": 42,
+    "verified_ok": 42,
+    "mismatches": [],
+    "missing": [],
+    "unlisted_files_present": ["PACKET.json"],
+    "unlisted_note": "PACKET.json is the manifest itself and cannot list its own hash; this is expected, not a discrepancy.",
+    "symlinks_found": [],
+    "method": "Every path in PACKET.json.files was read and SHA-256 hashed; on-disk file set was enumerated with os.walk and diffed against the manifest."
+  },
+  "permitted_outputs": {
+    "release_allowlist_per_scripts_role_submission_py": ["verification.md", "verification.json"],
+    "this_turn": ["readiness.json", "first-pass-plan.md"],
+    "write_scope": "own outbox only; the packet is read-only (0444 files / 0555 directories) and was not modified",
+    "prohibited_this_turn": ["source adjudication", "other-role file inspection", "inter-agent conversation", "approval", "merge"]
+  },
+  "isolation_controls_observed": [
+    {
+      "control": "Frozen packet is read-only on disk",
+      "evidence": "Directory mode dr-xr-xr-x, file mode -r--r--r--; no write attempted",
+      "grade": "accidental-edit protection only, per docs/ISOLATION.md"
+    },
+    {
+      "control": "Own outbox is the only writable actor path in this session",
+      "evidence": "Session write allowlist is limited to the assigned outbox (plus an unusable temp path, see limitations); the outbox was empty at turn start",
+      "grade": "host-enforced path rule"
+    },
+    {
+      "control": "Other actors' packet and outbox roots are denied to this session",
+      "evidence": "Reading the parent of my own outbox (/EDA-Agent-Outboxes/verifier-release-20261014/) returned 'Operation not permitted'; no other actor's content was requested or read",
+      "grade": "host-enforced path rule, names visible only in host configuration, no content exposed"
+    },
+    {
+      "control": "OS-level sandbox applied to every Bash command",
+      "evidence": "Session configuration states a macOS Seatbelt sandbox per command with a filesystem allowlist and a filtering network proxy; confirmed indirectly by the permission errors above",
+      "grade": "host control I did not configure and cannot audit; not a container, not a separate OS account; the sandbox also blocks some benign tool output (see limitations)"
+    },
+    {
+      "control": "Fresh session, no forked history",
+      "evidence": "No prior conversation context, no memory-retrieval tool exposed, no agent-messaging tool exposed, no other-role material in context beyond the packet's released files",
+      "grade": "consistent with launch-release.json fresh_sessions_required=true; cannot be proven from inside the session"
+    },
+    {
+      "control": "Released-input boundary respected",
+      "evidence": "Read only packet files: AGENTS.md, ASSIGNMENT.json, PACKET.json, docs/{CHARTER,WORKFLOW,EVIDENCE,ISOLATION,FORMATS,SELF-SUBMISSION,PHYSICAL-PILOT}.md, harness/{ONBOARDING,VERIFIER}.md, config/{launch-release,research-brief,physical-resources.lock}.json, domains/{D04,D05}/{brief.json,README.md}, candidates/EDA-0002/*, templates/topic/verification.md, scripts/role_submission.py (allowlist inspection)",
+      "grade": "self-attested; harness/ contains only ONBOARDING.md and VERIFIER.md, so no other role harness was exposed"
+    },
+    {
+      "control": "No declaration of OS isolation by the coordinator",
+      "evidence": "ASSIGNMENT.json isolation: 'Fresh task and allowlisted inputs; no OS sandbox claim'; this session in fact runs under a host sandbox, which is a divergence between declaration and observation with no scientific effect",
+      "grade": "recorded as observed, not as a claim I can certify"
+    }
+  ],
+  "unlisted_context_exposed": [
+    {
+      "item": "Host/session metadata outside the packet",
+      "detail": "UTC date 2026-10-14, platform darwin (arm64), working directories, 'Is a git repository: false', sandbox configuration text, availability of web search/fetch tools",
+      "scientific_content": false
+    },
+    {
+      "item": "Names of other actors' packet and outbox roots and repository areas in the host deny-list",
+      "detail": "Patterns such as EDA-Agent-Packets/{CODEX,GOVERNANCE,foundation,physical-pilot,role-allocation,physical-release,challenger-release}-* and EDA-Agent-Outboxes/{Codex,Claude,DeepSeek-C04,DeepSeek-P,DeepSeek-V,physical-release,challenger-release}-*, plus EDA-Resources, eda-dsk, EDA-Topic-selection-*; the list is truncated in what is shown ('... and 93 more')",
+      "scientific_content": false,
+      "content_read": "none; no other actor's file content was opened"
+    },
+    {
+      "item": "Task instructions pasted into the session by the coordinator/human",
+      "detail": "Role, topic EDA-0002 (D05), outbox path, prohibitions for this turn; consistent with ASSIGNMENT.json and PACKET.json",
+      "scientific_content": false
+    }
+  ],
+  "contamination_assessment": {
+    "scientific_contamination_observed": false,
+    "disclosures": [
+      "Platform kinship: the round-1 objections in challenges.md were authored by DeepSeek-C05-TIMING (session af136556-818c-47c7-b514-5a141cb14d85), an actor on the same platform as this verifier. I did not author them, they come from a distinct registered session, and the challenger seat has since passed to Codex-C05-TIMING-R2 (config/launch-release.json role_handoffs, owner-authorized). Same-platform review is a diversity limitation, not authorship; it will be disclosed in verification.md and any contested adjudication should go to a second verifier or the human per docs/CHARTER.md.",
+      "The DeepSeek platform previously supplied the D04/D05 challenger seats and now supplies verification (owner decisions 2026-10-13 recorded in config/launch-release.json). This history does not expose me to any private challenger material: challenges.md, findings-challenger.md, sources-challenger.json and search-log-challenger.md are released shared outputs for the verifier stage (docs/WORKFLOW.md step 4).",
+      "Forecast handling: the verifier may read forecast.json; the challenger's pre-exposure independence claim (challenges.md header, estimate hash dc3939f1...) cannot be checked in-packet because the challenger's first-pass-plan.md is not exported. Recorded as an access limitation, not as a defect."
+    ],
+    "independence_statement": "No cross-role private material, transcript, memory or hidden branch was read or is present. Independence claim is limited to what this file records and to the controls above, which are path rules and a host sandbox, not an OS boundary."
+  },
+  "documentary_inconsistencies_to_flag": [
+    {
+      "id": "DOC-1",
+      "files": ["domains/D05/brief.json", "config/launch-release.json", "candidates/EDA-0002/dossier.json", "candidates/EDA-0002/challenges.md"],
+      "issue": "domains/D05/brief.json still lists top-level challenger 'DeepSeek-C05-TIMING' and verifier 'Codex-V02-PHYSICAL' while claiming that its top-level fields 'follow the release'. config/launch-release.json assigns EDA-0002 to challenger Codex-C05-TIMING-R2 and verifier DeepSeek-V02-PHYSICAL, and its role_handoffs document both successions as owner-authorized. dossier.json names only the round-0/round-1 sessions (proposer 76d0bf61-..., challenger af136556-...).",
+      "requested_action": "Coordinator confirmation of the actor of record for each role before any experiment-consensus check, since the consent sessions must be distinct and currently registered.",
+      "adjudicated": false
+    },
+    {
+      "id": "DOC-2",
+      "files": ["candidates/EDA-0002/challenges.md"],
+      "issue": "The transported challenges.md (packet hash 751ed4ec...) is not byte-identical to its stated source (b57953a2...); the header asserts that objection blocks are byte-identical and only the repository skeleton was added. Byte-level transport fidelity cannot be re-derived in-packet.",
+      "requested_action": "Check whether the coordinator's transport record can supply the source file hash for comparison; otherwise treat the assertion as unverified transport metadata and adjudicate the semantic content only.",
+      "adjudicated": false
+    }
+  ],
+  "referenced_but_absent_inputs": [
+    {"path": "config/agents-deepseek.json", "referenced_by": "PACKET.json registry field", "effect": "own session registration not verifiable"},
+    {"path": "config/roles.json", "referenced_by": "docs/FORMATS.md session registry", "effect": "distinct/registered session check for all three roles not verifiable in-packet"},
+    {"path": "scripts/project.py", "referenced_by": "AGENTS.md, harness/VERIFIER.md, docs/FORMATS.md", "effect": "cannot compute the dossier digest or task-list digest locally; verification.json digest binding is blocked until the tool or a supplied digest is available"},
+    {"path": "docs/TEAM-DEEPSEEK.md", "referenced_by": "domains/D04/brief.json and domains/D05/brief.json allocation_doc", "effect": "platform allocation details not available"},
+    {"path": "runs/PHYSICAL-PILOT-0001, scripts/physical_smoke.py", "referenced_by": "config/research-brief.json, docs/PHYSICAL-PILOT.md, docs/EXPERIMENTS.md (packet includes docs/EXPERIMENTS.md)", "effect": "pilot smoke evidence cannot be inspected; feasibility checks rely on the brief's summary"},
+    {"path": "candidates/EDA-0001 (D04 queue)", "referenced_by": "ASSIGNMENT.json domain_ids [D04, D05]", "effect": "no D04 dossier exists in this packet; D04 verification has nothing to act on and must not be inferred from D05"},
+    {"path": "harness/CHALLENGER.md, harness/PROPOSER.md", "referenced_by": "challenges.md and transport notes", "effect": "not exported to the verifier by design; no cross-role harness reading"}
+  ],
+  "limitations": [
+    "No OS isolation: path rules and a host sandbox only; the coordinator makes no OS-sandbox claim and I make none.",
+    "Model identity, effort level, memory-mode settings and session registration are host-declared or unobservable from inside the session.",
+    "Sandbox side effects on tooling observed this turn: python3 stdout was silently discarded when writing directly to the captured stdout stream and /bin/cat could not write to it; workarounds used were piping python output through sed and using the file-read tool. Also /tmp/claude-501 (TMPDIR) was not writable, so no scratch files were created outside the outbox. Recorded as a runtime limitation of this session, not as a scientific obstacle.",
+    "No network access was attempted this turn; external source reachability and paywalls are untested so far."
+  ],
+  "status": {
+    "onboarding": "complete",
+    "decision": "pending",
+    "verdicts_issued": 0,
+    "approval_implied": false,
+    "next_action": "Round-1 adjudication of filed objections (OBJ-001, OBJ-002) and decision-critical claims, per first-pass-plan.md; starts only on a later packet or direct human request",
+    "note": "Challenges and a proposal are supplied, so this is not a waiting_for_evidence state; nothing is adjudicated or approved yet. Experiment consensus reads 'pending' with null consents, and a dossier digest cannot be computed with the tools present in this packet."
+  }
+}
