@@ -1,0 +1,83 @@
+{
+  "state": "revise_same_problem",
+  "anchor": {
+    "problem": "Multi-corner (MCMM) static timing analysis cost grows with the number of declared scenarios, and existing reductions save runtime only by skipping scenarios on estimated, empirical, learned or experience-based criteria that cannot guarantee zero missed violations.",
+    "engineering_user": "Timing-closure and signoff engineers (and closure-flow owners) who must obtain timing decisions at every scenario of a declared scenario set during closure iterations and before signoff.",
+    "downstream_need": "The complete decision set of full MCMM analysis of the declared scenario set: every violating (endpoint, scenario, check) triple, exact slacks below a reporting margin M, and WNS/TNS per scenario. It must come with zero missed violations relative to full analysis and with lower end-to-end turnaround.",
+    "causal_mechanism": "Per scenario, an exact clock-network pass plus a cheap data-network bound pass. The bound pass uses only that scenario's own characterized tables and parasitics, and its bounds are sound with respect to the reference engine's delay-calculation semantics. Together they certify (endpoint, scenario, check) triples whose slack lower bound clears M. Exact analysis is then restricted to the fan-in cones of uncertified triples. Decisions equal full analysis by construction; runtime falls because most triples in non-dominant scenarios have margins larger than the bound band.",
+    "mechanism_invariants": [
+      "Zero missed violations relative to full reference analysis of the declared scenario set, by construction under audited soundness properties; never by estimation, calibration or learning",
+      "Exact slack values for every reported triple below the margin M, plus exact WNS/TNS when negative",
+      "No parametric, monotone-in-PVT or learned cross-scenario model; each scenario is bounded from its own characterized data",
+      "Evaluation against the strongest full-MCMM baseline (all scenarios in one pinned OpenSTA run) under equal resources",
+      "One pinned reference engine and delay calculator define soundness; any new calculator needs its own audit"
+    ],
+    "forbidden_pivots": [
+      "Replacing the mechanism with a straightforward combination of prior methods",
+      "Optimizing a proxy without a demonstrated engineering need",
+      "Changing the user or downstream objective to avoid a valid objection",
+      "Replacing sound certificates with estimated cutoffs, learned predictors or calibrated safety margins while keeping a guarantee claim",
+      "Dropping exact refinement and reporting only bounds as if they were slacks",
+      "Redefining success as average slack error or correlation instead of decision equivalence",
+      "Attributing speedup to parallelism or hardware scaling rather than to certification"
+    ]
+  },
+  "penalties": {
+    "combination_drift": {
+      "score": 1,
+      "rationale": "Round 1 (proposer self-score). The causal mechanism is unchanged: an exact clock pass, a per-scenario data bound pass from the scenario's own tables and parasitics, certification against M, and exact cone refinement. The bound rules are narrowed because P3-P5 are falsified for the DMP waveform path. Only nets provably on the capacitive DmpCap path receive bounds; every other cone is refined exactly. This is an implementation-level change that preserves the mechanism and the guarantee's soundness, and adds no prior method. It is scored 1, not 0, because it materially reduces what can be certified. Round 1b (proposer self-score, unchanged at 1): the pre-freeze amendment adds two conservative soundness rules (no certificate on endpoints that a multicycle or delay exception can match; a rounding allowance derived from the float32 format), certificate audits, an incremental exact baseline (B6) and an edit-loop comparison. No prior method is added to or replaces the mechanism. The rules only remove triples from certification, and the rounding allowance is format-derived, not an empirical margin.",
+      "evidence_refs": [
+        "SRC-002",
+        "SRC-060",
+        "SRC-061",
+        "SRC-069",
+        "SRC-070",
+        "SRC-071"
+      ]
+    },
+    "demand_drift": {
+      "score": 0,
+      "rationale": "Round 1: user, downstream need (full-MCMM decisions with zero missed violations at lower turnaround), reference engine and calculator are unchanged. The reporting margin M = 0 ps primary with a 5% sensitivity and a provisional 20% threshold follow owner decision U9; they are not a proxy change. Round 1b: the preserved outputs are listed explicitly; D_M(S) has the same definition as in round 0. The use setting is stated as from-scratch analysis, which matches the round-0 exclusion of the repair-loop slice S1 (CLM-016), so the user and downstream need are unchanged. The edit-loop comparison (CH8) can limit the claim's scope, but it does not change the objective.",
+      "evidence_refs": []
+    },
+    "total": 1
+  },
+  "revision_assessment": {
+    "preserves_problem": true,
+    "preserves_engineering_need": true,
+    "preserves_causal_mechanism": true,
+    "changes": [
+      "Bound rules: the table box over [0, C1+C2], the Elmore wire upper bound and the P5 slew rule are withdrawn (P3-P5 falsified, CLM-018 to CLM-020). They are replaced by the capacitive-path certificate R1 (CLM-023).",
+      "The guarantee claim is narrowed to R1 certificates (K2 activated). A conditional variant R1-C is defined but excluded from the guarantee.",
+      "Refinement cones are closed over whole nets and over all drivers of multi-driver nets (CLM-024).",
+      "Reporting margin and threshold follow owner decision U9.",
+      "Round 1b: soundness rules P8 (timing exceptions, CLM-027) and P9 (rounding allowance, CLM-028) further restrict R1 certificates.",
+      "Round 1b: the preserved and not-preserved outputs are listed; the certificate-validity rule after edits is stated; guardrail G7 audits every certificate against B0.",
+      "Round 1b: baseline B6 (incremental exact) and the edit-loop comparison CH8 are added; the accounting identity becomes a preregistered metric.",
+      "Round 1b: nearest-work leads SRC-066 to SRC-068 are added and kill criterion K1 is widened to cover them (CLM-026)."
+    ],
+    "reason": "Owner decision CLD-LAB-0001 (U2) authorized P3-P5 property checks and required withdrawing or narrowing the certificate if a property cannot be made sound. Evidence: runs/CLD-P05-REVISION-0001/p3-p5-record.md. Round 1b: human-owner instruction of 2026-10-14 to incorporate the challenger's independent first pass (runs/CDX-C05-INDEPENDENT-0001 at commit b7822234) before the freeze; see responses.md CF-01 to CF-14 and runs/CLD-P05-REVISION-0002/manifest.json."
+  },
+  "abandonment": {
+    "decision_id": null,
+    "grounds": [],
+    "rationale": null,
+    "evidence_refs": [],
+    "consents": {
+      "proposer": {
+        "session_id": null,
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      },
+      "challenger": {
+        "session_id": null,
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      }
+    },
+    "successor_topic_id": null,
+    "resurrection_conditions": []
+  }
+}

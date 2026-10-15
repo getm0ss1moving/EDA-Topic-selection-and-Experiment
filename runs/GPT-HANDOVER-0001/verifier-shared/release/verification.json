@@ -1,0 +1,133 @@
+{
+  "decision": "revise",
+  "verifier_session": "e6bc9983-e74b-4576-9c1d-3abc95ea3df9",
+  "dossier_digest": null,
+  "gates": {
+    "novelty": false,
+    "mechanism": false,
+    "utility": false,
+    "contest_originality": false,
+    "headroom": false,
+    "feasibility": false,
+    "direction_integrity": true,
+    "experiment_consensus": false
+  },
+  "source_checks": [
+    {
+      "source_id": "SRC-003",
+      "locator": "search/Sta.cc:411,417 at OpenSTA e01d3f163f483f233db00410b6515a767a6ca03b",
+      "verdict": "verified",
+      "checked_at": "2026-10-14T11:05:02Z",
+      "entailment": "makeArcDelayCalc sets arc_delay_calc_ = makeDelayCalc(\"dmp_ceff_elmore\", this), confirming the pinned default calculator stated in CLM-006. File SHA-256 recomputed and equal to the proposer's recorded hash 8da5e45c..."
+    },
+    {
+      "source_id": "SRC-004",
+      "locator": "dcalc/DelayCalc.cc:37-43 at the pinned commit",
+      "verdict": "verified",
+      "checked_at": "2026-10-14T11:05:02Z",
+      "entailment": "Seven calculators registered (unit, lumped_cap, dmp_ceff_elmore, dmp_ceff_two_pole, arnoldi, ccs_ceff, ccs_sim), supporting the CLM-006 enumeration. Recorded hash 42c6e651... reproduced."
+    },
+    {
+      "source_id": "SRC-005",
+      "locator": "tcl/Sdc.tcl:3663-3672 and tcl/Variables.tcl at the pinned commit",
+      "verdict": "verified",
+      "checked_at": "2026-10-14T11:05:02Z",
+      "entailment": "define_corners must precede read_liberty; OCV/CRPR defaults as quoted in OBJ-001 are present. Recorded hash 34677ea5... reproduced."
+    },
+    {
+      "source_id": "SRC-006",
+      "locator": "search/Corner.cc:88 (makeCorners), :174 (makeAnalysisPts) at the pinned commit",
+      "verdict": "verified",
+      "checked_at": "2026-10-14T11:05:02Z",
+      "entailment": "All defined corners are analyzed in one run through Corners::makeAnalysisPts, as CLM-006 asserts. Recorded hash 68c644f0... reproduced."
+    },
+    {
+      "source_id": "SRC-007",
+      "locator": "liberty/TableModel.cc:1012-1060 (Table2::findValue), :1443-1463 (TableAxis::findAxisIndex) at the pinned commit",
+      "verdict": "verified",
+      "checked_at": "2026-10-14T11:05:02Z",
+      "entailment": "Bilinear NLDM table lookup and axis indexing behave as described for the quantities EXP-002/EXP-003 will exercise. Recorded hash 8326d308... reproduced."
+    },
+    {
+      "source_id": "SRC-002",
+      "locator": "dcalc/DmpCeff.cc:555-605 (DmpAlg::loadDelaySlew), :915-950 (DmpPi::gateDelaySlew), :969-974 (Ceff constraints) at the pinned commit",
+      "verdict": "partially_valid",
+      "checked_at": "2026-10-14T11:05:02Z",
+      "entailment": "The described DmpAlg/DmpPi behaviour is confirmed at the cited lines, including the slew = table_slew fallback and the throw conditions ceff < 0 and ceff > c1 + c2. Incomplete as a description of the returned delay because of the thresholdAdjust and top-level-port paths in DelayCalcBase (see OBJ-002). Recorded hash edfadea5... reproduced."
+    },
+    {
+      "source_id": "C-A15",
+      "locator": "search/PathEnd.cc:692-711, :724-731 plus sdc/Sdc.cc:226-229, :5474-5477 at the pinned commit",
+      "verdict": "refuted",
+      "checked_at": "2026-10-14T11:05:02Z",
+      "entailment": "The quoted sign flip and OCV/CRPR defaults are accurate, but the derived conclusion (CRPR decreases hold slack) is inverted: required = requiredTimeNoCrpr + commonClkPessimism, and the hold branch returning -crpr makes hold slack = arrival - requiredNoCrpr + crpr, so CRPR raises hold slack."
+    },
+    {
+      "source_id": "V-001 (verifier-added, not in either source ledger)",
+      "locator": "search/Crpr.cc:289-355 (CheckCrpr::findCrpr1, crprArrivalDiff, maxCrpr) at the pinned commit",
+      "verdict": "verified",
+      "checked_at": "2026-10-14T11:05:02Z",
+      "entailment": "Non-POCV findCrpr1 returns min(src_delta, tgt_delta) over absolute arrival differences and maxCrpr returns an absolute difference or 0.0, establishing crpr >= 0. This closes OBJ-001 by fixing the sign of the omitted term rather than assuming it."
+    },
+    {
+      "source_id": "C-A16",
+      "locator": "dcalc/DelayCalcBase.cc:107-124 (dspfWireDelaySlew), :126-153 (thresholdAdjust), :155-169 (thresholdLibrary); call sites dcalc/DmpDelayCalc.cc:96,121,276,343, dcalc/LumpedCapDelayCalc.cc:162, dcalc/DmpCeff.cc:569-570",
+      "verdict": "partially_valid",
+      "checked_at": "2026-10-14T11:05:02Z",
+      "entailment": "Every quoted line verified, including the restriction of thresholdAdjust to differing driver/load libraries, the rise/fall sign split, the top-level-port default-library route and wire_delay = -elmore*log(1-vth) (~0.693*elmore at 50%). The factual basis of OBJ-002 therefore holds; only its practical scope is narrowed (C-A30, planned ASAP7 VT variants share 50% thresholds)."
+    },
+    {
+      "source_id": "C-A30",
+      "locator": "challenger record: ASAP7 LVT/RVT/SLVT threshold attributes",
+      "verdict": "unresolved",
+      "checked_at": "2026-10-14T11:05:02Z",
+      "entailment": "Not independently re-derived in this round; the underlying library files were not opened. Recorded as a scope-narrowing input to OBJ-002 that the proposer must confirm in the EXP-002 library-pair audit, not as established fact."
+    },
+    {
+      "source_id": "SRC-012",
+      "locator": "dac11-sari.pdf, full text, all 6 pages (SHA-256 399a24613a4d5872d70708546046dbfdefe50d0ccca87ea052a2879f38871072)",
+      "verdict": "verified",
+      "checked_at": "2026-10-14T11:05:02Z",
+      "entailment": "Read in full independently: setup coverage is an empirical dominance-margin measurement (worst-case slack expected to occur at max-arrival corners; margins to 30 ps; per-circuit coverage 87.6-99.9%) and hold is an anchor-corner plus clock-only partial-run estimate with error equation (11), with no exact refinement or fallback and no proof/certificate/per-scenario soundness language. Supports CLM-015 and leaves kill criterion K1 not triggered."
+    },
+    {
+      "source_id": "SRC-013",
+      "locator": "tcad08-sari.pdf, full text (SHA-256 666cd07f37482f3abd3dfc85f83705b1509387eb810e914145d4913633fa1f0b)",
+      "verdict": "verified",
+      "checked_at": "2026-10-14T11:05:02Z",
+      "entailment": "Parametric worst-case method built on a hyperplane over process parameters, not a per-scenario certificate with exact refinement. Consistent with the proposer's nearest-work characterization."
+    },
+    {
+      "source_id": "SRC-015..SRC-021, SRC-037..SRC-040",
+      "locator": "vendor/practitioner and contest records as cited in proposal.md and contest-audit.md",
+      "verdict": "unresolved",
+      "checked_at": "2026-10-14T11:05:02Z",
+      "entailment": "Not re-opened in this round (budget-scoped, not access-blocked). They carry CLM-001..CLM-005 and CLM-014, which are recorded as not adjudicated rather than verified. No contrary evidence found; contest_originality stays false because it was not re-checked, not because it failed."
+    },
+    {
+      "source_id": "C-A23",
+      "locator": "2024-2026 nearest-work set in sources-challenger.json",
+      "verdict": "unresolved",
+      "checked_at": "2026-10-14T11:05:02Z",
+      "entailment": "The nearest-work closure of the novelty gate rests on this set; both ledgers hold it at abstract/summary level. Recorded as residual novelty risk to be refreshed before promotion, per the charter's novelty-refresh requirement."
+    }
+  ],
+  "objections": [
+    {
+      "id": "OBJ-001",
+      "claim_id": "CLM-009",
+      "verdict": "refuted",
+      "blocking": false,
+      "resolution": "resolved",
+      "rationale": "The challenger's code facts are accurate to the line at OpenSTA e01d3f163f483f233db00410b6515a767a6ca03b: PathEndClkConstrained::commonClkPessimism (search/PathEnd.cc:692) returns -crpr_ when the generic role is hold, requiredTime (:706) is requiredTimeNoCrpr + commonClkPessimism, and slack (:724) is arrival - required for hold. The challenger stopped one negation short: substituting gives hold slack = arrival - requiredTimeNoCrpr + crpr_, so CRPR raises hold slack exactly as it raises setup slack. search/Crpr.cc:289-355 shows the crpr term is non-negative (absolute arrival differences and min/max over them; maxCrpr returns 0.0 when no common point exists). Omitting CRPR from the certificate's hold lower bound therefore makes the bound smaller, which is conservative for a hold violation screen: no violation in the screen's decision set can be missed on this account, and the claimed inexactness of hold TNS in [-crpr, 0) does not arise. The objection is closed as refuted, not merely unsupported, because the sign of the omitted term is fixed by the pinned code. Suggestion S-1 (per-term sign table) is adopted in spirit as EXP-002 bookkeeping, not as a defect cure."
+    },
+    {
+      "id": "OBJ-002",
+      "claim_id": "CLM-007",
+      "verdict": "partially_valid",
+      "blocking": false,
+      "resolution": "open",
+      "rationale": "Verified at dcalc/DelayCalcBase.cc:126-153 that thresholdAdjust adds load_slew*(load_vth - drvr_vth)/drvr_slew_delta to the load delay for rises and subtracts it for falls, and that it fires only when the load and driver libraries differ; :155-169 routes top-level ports to the default (first-read) library; :107-124 returns wire_delay = -elmore*log(1-vth), about 0.693*elmore at a 50% input threshold, and is reached from the cited call sites in DmpDelayCalc and LumpedCapDelayCalc with DmpCeff deferring to the same base. So CLM-007 as written is an incomplete observation claim and P4 is an obligation stated between two unnamed quantities (the analytic Elmore crossing and the value the calculator actually returns). The objection survives on the code, hence partially_valid. Its practical bite is narrow: it needs an evaluated driver/load library pair whose threshold attributes differ, or input-port arcs inside the decision set, and C-A30 reports the planned ASAP7 VT variants share 50% thresholds. Non-blocking for advancement once the amendment lands; resolution stays open until the proposer amends CLM-007 and restates P4 with the thresholdAdjust term and the port formula, and adds a per-corner enumeration of driver/load library pairs plus an explicit port-arc inclusion rule to EXP-002's audit list. K2 already covers the case where the audit shows the obligation cannot be discharged."
+    }
+  ]
+}

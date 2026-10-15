@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "coordinator": "Current project creation task; transport only",
-  "model_confirmation": "Owner-selected proposer Astra high and challenger Astra low. Verifier retains lightweight GPT Luna medium policy; availability must be observed, not assumed.",
+  "model_confirmation": "Owner 2026-10-15: proposer GPT-6.1-Sol high; verifier GPT-6.1-Sol low; challenger retains Astra low. D04/D05 parallel, four completed role cycles each then stop.",
   "research_phase": "codex_only_automation_prepared",
   "actors": [
     {
@@ -581,7 +581,7 @@
       "domain_ids": [
         "D04"
       ],
-      "model_requested": "gpt-6-astra",
+      "model_requested": "gpt-6.1-sol",
       "reasoning_requested": "high",
       "status": "ready_for_fresh_session",
       "active_scope": true,
@@ -615,8 +615,8 @@
       "domain_ids": [
         "D04"
       ],
-      "model_requested": "gpt-6-luna",
-      "reasoning_requested": "medium",
+      "model_requested": "gpt-6.1-sol",
+      "reasoning_requested": "low",
       "status": "ready_for_fresh_session",
       "active_scope": true,
       "fresh_session_required": true,
@@ -632,7 +632,7 @@
       "domain_ids": [
         "D05"
       ],
-      "model_requested": "gpt-6-astra",
+      "model_requested": "gpt-6.1-sol",
       "reasoning_requested": "high",
       "status": "ready_for_fresh_session",
       "active_scope": true,
@@ -666,8 +666,8 @@
       "domain_ids": [
         "D05"
       ],
-      "model_requested": "gpt-6-luna",
-      "reasoning_requested": "medium",
+      "model_requested": "gpt-6.1-sol",
+      "reasoning_requested": "low",
       "status": "ready_for_fresh_session",
       "active_scope": true,
       "fresh_session_required": true,

@@ -1,0 +1,11 @@
+{
+  "id": "REQ-0003",
+  "category": "data",
+  "purpose": "Download build-toolchain sources for pinned OpenSTA from official GitHub repositories and releases only: CMake 3.27.9 (Kitware release, checked against Kitware SHA-256 list), flex 2.6.4 (westes release), byacc t20240109 (ThomasDickey snapshots), Tcl core-8-6-13 (tcltk/tcl), SWIG v4.1.1 (swig/swig), Eigen 3.3.7 (eigenteam mirror). Log URL, resolved commit and SHA-256; record each repository license file.",
+  "host": "lab231",
+  "network": true,
+  "cores": 1,
+  "timeout_hours": 1.0,
+  "script": "REQ-0003.sh",
+  "inputs": []
+}

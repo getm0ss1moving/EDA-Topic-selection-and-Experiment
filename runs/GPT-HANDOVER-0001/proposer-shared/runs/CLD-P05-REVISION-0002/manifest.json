@@ -1,0 +1,95 @@
+{
+  "run_id": "CLD-P05-REVISION-0002",
+  "session_id": "76d0bf61-78f7-4b93-a557-7c29f1a2cbe8",
+  "role": "proposer",
+  "input_commit": "d437c2f660906efe9351a90451905826d00b63e3",
+  "packet_sha256": "ff20816f623585d4bf7ba7b13d79db58aab90a2e947cd05c719cd93f3574602d",
+  "model": "claude-opus-5-5 (Opus 5.5), host-reported. Reasoning effort is not observable from inside the session.",
+  "operator": "Not asserted by the actor (human operator of the Claude Code session)",
+  "started_at_utc": "2026-10-14T08:55:00Z",
+  "completed_at_utc": "2026-10-14T09:25:00Z",
+  "clock_note": "True UTC = host clock + 54,000 s (erratum E1). The start time is the approximate fetch time of the challenger files. Earlier the same day, in the preceding turn, the proposer read repository metadata to look for challenges; those reads were not timed (see exposure_record).",
+  "purpose": "Round-1b pre-freeze amendment of the EDA-0002 dossier. The human owner instructed, in chat on 2026-10-14: 'now we haven't set the verifier so just check the challenger's output again and optimize your proposal'. The challenger's only output is its independent first pass, written before any dossier release. It raises no topic-specific objection, so this run takes in leads and proposed tests, not adjudicated objections. No experiment, runner job or measurement was made.",
+  "challenger_input": {
+    "repository": "getm0ss1moving/EDA-Topic-selection-and-Experiment (public)",
+    "branch": "codex/challenger-initial-search",
+    "commit": "b7822234587292124a6d033167beb5f9d942e818",
+    "commit_message": "Freeze challenger independent first pass with access limitations",
+    "actor": "Codex-C05-TIMING-R2 (CDX-Skeptic-TIMING), challenger input commit 27977cb365dab9b3df5193fcd0c2e23804f840cf",
+    "route": "raw.githubusercontent.com at the pinned commit",
+    "files_sha256": {
+      "runs/CDX-C05-INDEPENDENT-0001/blocker.md": "24b9949ef26b27a321136939296a886f05288f44a31214ea2f1e947519c6e474",
+      "runs/CDX-C05-INDEPENDENT-0001/first-pass-plan.md": "0081d4fe95f0224ee1595152af17b4a77b75a643926ca922a096d8c469d8d96e",
+      "runs/CDX-C05-INDEPENDENT-0001/independent-estimate.md": "0fa2be0b8e6cce007a48bfbcb39f7b7627cee273a5b999297b700e11c1cdf470",
+      "runs/CDX-C05-INDEPENDENT-0001/independent-search.md": "267ac29c23bcee6f07ff6c0e1dc1862acd558fd0e8d4656390e0d4373fa3175d",
+      "runs/CDX-C05-INDEPENDENT-0001/output-manifest.json": "56e3e2f9f8ec279f6441eee96eb9bd3e6a091dc81d13043e39d0c3fb7c7feecb",
+      "runs/CDX-C05-INDEPENDENT-0001/readiness.json": "d8a50c16771e76ac4d0d4f1b9d7f5b74da42dfa206b92c114cba4f0efd63e4f8",
+      "runs/CDX-C05-INDEPENDENT-0001/sources.json": "0cf632f982f651c1f2d876a088182e3e458c350f6ecb83c66fcf86c85e6db2c2",
+      "runs/CDX-C05-INDEPENDENT-0001/transport.json": "39765ff03e7166778810f7543f03367a3651787becb6b703ca0a9ceb1e55f3dc"
+    },
+    "integrity": "The six files listed in output-manifest.json match its recorded SHA-256 values. transport.json records output_manifest_sha256 56e3e2f9..., which matches output-manifest.json. The challenger files are not copied into this outbox.",
+    "use": "Items CF-01 to CF-14 in candidates/EDA-0002/responses.md. Challenger paraphrases of unread papers are recorded as unverified secondary reports (SRC-066 to SRC-068), not as proposer evidence."
+  },
+  "exposure_record": "Other-role material read in this run, all on the human owner's instruction: the eight challenger files above. Read earlier the same day, to look for challenges: titles, states and bodies of PRs #18, #20 and #21; the PR list and branch list; compare metadata for main...codex/challenger-initial-search (file names and commit message only); candidates/EDA-0002/challenges.md on main 86fb60b3 (the unchanged TBD scaffold, SHA-256 8f59fa4fbefdad8e6f20ecc5023ee7093327cc886b467ce94c0a50cf1667f627); and the coordinator's runs/CDX-CHALLENGER-SUCCESSION-0001/handoff.md on main (SHA-256 f4e6856685e27e7897603b3f4e334bb5d3ebe3accc8663a4388ebc12e31238b2). Not read: any DeepSeek challenger output, any other role's local outbox or scratch (the sandbox denies them), verifier material, conversations, memories or notes. No agent messages were sent or received.",
+  "independence_consequence": "The challenger's first pass was frozen before this exposure, so its independence is unaffected. The round-1b dossier is partly informed by that pass: P8, P9, G7, B6, CH8, CH9, CLM-026 to CLM-029 and SRC-066 to SRC-068 were added after reading it. A later challenger review should treat these items as responses to its own first-pass priorities, not as independent proposer findings. The forecast stays null, and the challenger gave no number that could anchor it.",
+  "network": {
+    "scope": "GitHub and arXiv only",
+    "hosts": [
+      "api.github.com",
+      "raw.githubusercontent.com",
+      "arxiv.org (web search and one abstract page)"
+    ],
+    "searches": "search-log.md Q45 to Q47",
+    "data_fetched": {
+      "OpenSTA e01d3f16 sdc/ExceptionPath.cc": "63634674e4377dc558c61762e15f309320a589a90d7ab4b9c42c70745b5149ce",
+      "OpenSTA e01d3f16 search/PathEnd.cc": "482a9b10b7e84f62324751565092db5ef1a5da136b7606ff5e2f85e5e1fc558d",
+      "OpenSTA e01d3f16 include/sta/DelayFloat.hh": "5040e6a4d0c7c362bacb9eec93a59c14c60d41d85503a828374b09824d33e449",
+      "OpenSTA e01d3f16 include/sta/Delay.hh": "932955a7a86aec8e5bd311ed7beb5db134e7d5e945a97c3e854c933a2697bfb6"
+    },
+    "not_accessed": "The author-hosted copies of SRC-066 and SRC-067 (eecg.utoronto.ca, algos.inesc-id.pt) are outside the permitted routes and were not opened. doi.org was not used."
+  },
+  "lab_runner_jobs": "None in this run. The runner ledger is unchanged (runs/CLD-P05-REVISION-0001/evidence/runner-ledger.json, 0.4504 core-hours).",
+  "output_paths": [
+    "candidates/EDA-0002/direction-control.json",
+    "candidates/EDA-0002/experiment-consensus.json",
+    "candidates/EDA-0002/experiment-plan.md",
+    "candidates/EDA-0002/forecast.json",
+    "candidates/EDA-0002/industry-gap.md",
+    "candidates/EDA-0002/prior-art.csv",
+    "candidates/EDA-0002/proposal.md",
+    "candidates/EDA-0002/responses.md",
+    "candidates/EDA-0002/search-log.md",
+    "candidates/EDA-0002/sources.json",
+    "candidates/EDA-0002/tasklist.md",
+    "runs/CLD-P05-REVISION-0002/manifest.json",
+    "role-output-manifest.json"
+  ],
+  "unchanged_dossier_files": [
+    "candidates/EDA-0002/contest-audit.md",
+    "candidates/EDA-0002/dossier.json"
+  ],
+  "changes_summary": [
+    "Nearest-work leads SRC-066 to SRC-068 (unread; K1 widened; CLM-026; U11).",
+    "Preserved and not-preserved outputs listed; use setting stated as from-scratch analysis (consistent with the round-0 exclusion of slice S1).",
+    "Soundness rules P8 (timing exceptions; CLM-027 from SRC-069 and SRC-070) and P9 (float32 rounding allowance; CLM-028 from SRC-071) restrict R1 certificates.",
+    "Certificate validity after edits stated; baseline B6 (incremental exact) and the edit-loop comparison CH8 (CLM-029; U13).",
+    "Guardrail G7 (certificate audit against B0, no tolerance); CH9; accounting identity as a preregistered metric; EXP-002b steps (6) to (9); EXP-003 exception census; EXP-004, EXP-006 and EXP-007 additions; no new CPU allocation.",
+    "Direction penalties unchanged: combination drift 1, demand drift 0, total 1."
+  ],
+  "dossier_digest_expected": {
+    "value": "291fb88515607ee0ac7a3c53c30ed9d84411b1274a222694a9c44d2a841db012",
+    "supersedes": "29b9ab5364d1e429961cf886faee4ab2bcbf682d545789249a8940cea29ba8f4 (round 1, never frozen)",
+    "basis": "Proposer reimplementation of scripts/project.py digest(). Inputs: the 13 outbox files plus the repository scaffold challenges.md (SHA-256 8f59fa4f..., unchanged on main 86fb60b3), with verification.* excluded. The coordinator's validator is authoritative."
+  },
+  "checks": [
+    "JSON files parse; sources.json has 71 records with all required fields; claim and source cross-references resolve; prior-art.csv has 19 rows with 9 columns (proposer structural script, not scripts/project.py validate).",
+    "Packet re-verified at 2026-10-14T09:16Z: PACKET.json SHA-256 ff20816f..., 31 listed files, no mismatch, no unlisted files."
+  ],
+  "contamination_events": [],
+  "independence_attestation": "Proposer self-attestation, not proof of independence (docs/PHYSICAL-PILOT.md line 33).",
+  "host_events": [
+    "One compound shell command (a cd into session scratch followed by a grep) was blocked by a host deny rule before it ran, because the cd target could not be resolved statically. It was re-run with absolute paths. Nothing outside scratch was read or written.",
+    "Shell commands containing cd moved the host's primary working directory between the packet, the outbox and candidates/EDA-0002. Nothing was written to the packet.",
+    "When the primary working directory moved into candidates/EDA-0002, the host created an empty directory candidates/EDA-0002/.claude/.cc-writes/. It holds no files, so the dossier digest is unaffected, but it must be excluded from transport, like the existing empty .claude/ directories at the outbox root and in lab-requests/."
+  ]
+}

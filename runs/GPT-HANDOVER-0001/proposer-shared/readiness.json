@@ -1,0 +1,435 @@
+{
+  "record_type": "onboarding_readiness",
+  "format_note": "The packet defines no schema for readiness.json. Field names follow harness/ONBOARDING.md step 2 (line 8) and templates/run.json where applicable.",
+  "language": "en",
+  "written_at_utc_approx": "2026-10-12T03:23Z",
+  "last_clock_reading_utc": "2026-10-12T03:22:36Z",
+  "actor": {
+    "actor_id": "Claude-P05-TIMING",
+    "call_sign": "CLD-Origin-TIMING",
+    "call_sign_source": "Launch prompt only; not present in any packet file.",
+    "platform": "Claude",
+    "host_application": "Claude Code CLI; version not observed",
+    "role": "proposer",
+    "domain_ids": ["D05"],
+    "topic": "EDA-0002",
+    "phase": "research",
+    "stage": "initial",
+    "assignment_sources": [
+      "ASSIGNMENT.json lines 2-13",
+      "PACKET.json lines 2-8",
+      "config/launch-release.json lines 21-26"
+    ],
+    "registry_named_in_packet": "config/agents-claude.json (PACKET.json line 4). The file is not in the packet, so registration cannot be verified.",
+    "session_registration": "Not registered as far as the packet shows: dossier.json proposer_session is null and config/roles.json is not in the packet. docs/FORMATS.md line 48 allows the coordinator to register after packet export.",
+    "host_session_uuid": "76d0bf61-78f7-4b93-a557-7c29f1a2cbe8",
+    "host_session_uuid_basis": "Inferred from the session scratchpad path in the host environment context. Not confirmed to be the Claude Code session ID.",
+    "launch_run_id_observed": "CLD-P05-LAUNCH-0001",
+    "launch_run_id_basis": "Directory name in a launch-settings.json path that appears in the host sandbox write-deny configuration. The file itself was not read.",
+    "operator_identity": "Not asserted. The host context includes the operator's account email; it is withheld here (see UC-04).",
+    "session_started_at_utc_approx": "2026-10-12T03:07:15Z",
+    "session_started_basis": "Birth time of this session's host temp directory."
+  },
+  "model": {
+    "requested_model": "claude-family:strongest-exposed",
+    "requested_reasoning": "highest-supported-within-budget",
+    "actual_model_id": "claude-opus-5-5",
+    "actual_model_name": "Opus 5.5",
+    "reasoning_effort_observed": "max",
+    "evidence": [
+      "Host system context states: 'You are powered by the model named Opus 5.5. The exact model ID is claude-opus-5-5.'",
+      "The local /model command record before the launch prompt reads: 'Set model to Opus 5.5 and saved as your default for new sessions with max effort'."
+    ],
+    "verification_level": "Host-reported. Not independently verified through an API response or the account console.",
+    "host_stated_knowledge_cutoff": "2026-06",
+    "strongest_exposed_check": "Not verifiable from inside the session. The host context lists the Claude 5 family IDs claude-fable-5-1, claude-opus-5-5, claude-sonnet-5-5 and claude-haiku-5-5. I cannot see which models this host offered or how claude-fable-5-1 ranks against claude-opus-5-5. Coordinator to confirm.",
+    "silent_substitution_observed": false,
+    "recording_order": "The /model record precedes the launch prompt, so the model was fixed before any packet content entered the session. This file first records it in writing, after the packet was read. The assigned dossier contained only TBD scaffolding."
+  },
+  "input": {
+    "input_commit": "d437c2f660906efe9351a90451905826d00b63e3",
+    "input_commit_consistency": "ASSIGNMENT.json input_commit, PACKET.json commit and the packet directory suffix d437c2f66090 agree.",
+    "packet_directory": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/physical-release-d437c2f66090/Claude-P05-TIMING",
+    "outbox": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/physical-release-d437c2f66090/Claude-P05-TIMING",
+    "outbox_matches_assignment": true,
+    "packet_sha256_expected": "ff20816f623585d4bf7ba7b13d79db58aab90a2e947cd05c719cd93f3574602d",
+    "packet_sha256_observed": "ff20816f623585d4bf7ba7b13d79db58aab90a2e947cd05c719cd93f3574602d",
+    "packet_sha256_method": "shasum -a 256 PACKET.json, confirmed with python3 hashlib",
+    "packet_hash_match": true,
+    "packet_created_at_utc": "2026-10-11T21:17:01Z"
+  },
+  "file_hash_verification": {
+    "method": "python3 -I; hashlib.sha256 over the raw bytes of every path in PACKET.json files{}; os.walk to detect unlisted files",
+    "listed": 31,
+    "verified": 31,
+    "mismatched": [],
+    "missing": [],
+    "unlisted_files_present": [],
+    "manifest_note": "PACKET.json is identified by its own hash above and is not listed in itself.",
+    "completed_before_utc": "2026-10-12T03:15:11Z",
+    "result": "pass"
+  },
+  "files_read": [
+    "AGENTS.md",
+    "ASSIGNMENT.json",
+    "PACKET.json",
+    "docs/CHARTER.md",
+    "docs/WORKFLOW.md",
+    "docs/EVIDENCE.md",
+    "docs/ISOLATION.md",
+    "harness/ONBOARDING.md",
+    "harness/PROPOSER.md",
+    "docs/FORMATS.md",
+    "docs/PHYSICAL-PILOT.md",
+    "docs/EXPERIMENTS.md",
+    "docs/GITHUB.md",
+    "config/launch-release.json",
+    "config/research-brief.json",
+    "config/physical-resources.lock.json",
+    "domains/D05/brief.json",
+    "domains/D05/README.md",
+    "templates/run.json",
+    "candidates/EDA-0002/dossier.json",
+    "candidates/EDA-0002/direction-control.json",
+    "candidates/EDA-0002/proposal.md",
+    "candidates/EDA-0002/experiment-plan.md",
+    "candidates/EDA-0002/tasklist.md",
+    "candidates/EDA-0002/experiment-consensus.json",
+    "candidates/EDA-0002/forecast.json",
+    "candidates/EDA-0002/search-log.md",
+    "candidates/EDA-0002/contest-audit.md",
+    "candidates/EDA-0002/industry-gap.md",
+    "candidates/EDA-0002/prior-art.csv",
+    "candidates/EDA-0002/responses.md",
+    "candidates/EDA-0002/sources.json"
+  ],
+  "files_read_scope_note": "The required set was read first: AGENTS.md, ASSIGNMENT.json, PACKET.json, the four common-policy documents named in AGENTS.md line 5, and harness/ONBOARDING.md and harness/PROPOSER.md, which are the only harness files in the packet. The remaining packet files were read next. harness/PROPOSER.md line 7 and the docs/ISOLATION.md line 11 access matrix list the brief and the assigned dossier as proposer inputs, and docs/FORMATS.md and docs/PHYSICAL-PILOT.md govern record formats and this release. The EDA-0002 dossier contained only TBD scaffolding. Outside the packet and this outbox, I read only the listing and timestamps of this session's own host temp directory.",
+  "permitted_outputs": {
+    "this_turn": ["readiness.json", "first-pass-plan.md"],
+    "this_turn_basis": "Launch prompt; harness/ONBOARDING.md step 3 (line 9); domains/D05/brief.json first_outputs (lines 18-21).",
+    "later_per_assignment": [
+      "role-output-manifest.json",
+      "released scientific files for the assigned role (EDA-0002 dossier files)"
+    ],
+    "later_basis": "ASSIGNMENT.json output_files (lines 17-20); docs/WORKFLOW.md step 2 (line 12).",
+    "write_location": "This outbox only.",
+    "deferred": "role-output-manifest.json and all dossier files are deferred to the research round, because the launch prompt says to finish the turn after writing the two onboarding files."
+  },
+  "outputs_written_this_turn": [
+    {
+      "path": "first-pass-plan.md",
+      "sha256": "63e75503d8bc9233b5a06650ccb0053b7956affecab41be272cf8ab6f559bfcf",
+      "bytes": 32302
+    },
+    {
+      "path": "readiness.json",
+      "sha256": null,
+      "note": "A file cannot contain its own hash. It is computed after writing and reported in the final status message."
+    }
+  ],
+  "non_actor_artifacts_in_outbox": [
+    {
+      "path": ".claude/.cc-writes/",
+      "created_at_utc": "2026-10-12T03:25:32Z",
+      "created_by": "Claude Code host, not the actor",
+      "contents": "Empty",
+      "handling": "Left in place; exclude from transport. See ISO-13."
+    }
+  ],
+  "amendment_note": "Amended after 2026-10-12T03:25:32Z to add ISO-13 and non_actor_artifacts_in_outbox. No other content changed.",
+  "onboarding_preconditions": [
+    {
+      "id": "PRE-01",
+      "check": "Onboarding must not run while config/agents.json reports governance_hardening_paused (harness/ONBOARDING.md line 3).",
+      "result": "not_verifiable",
+      "detail": "config/agents.json is not in the packet. config/launch-release.json line 4 reports state ready_for_role_creation, and the human launched this onboarding directly, so I proceeded. Coordinator to confirm the pause flag was clear."
+    },
+    {
+      "id": "PRE-02",
+      "check": "Fresh session with packet-only project input (docs/ISOLATION.md line 20; config/launch-release.json line 41).",
+      "result": "satisfied_as_observed",
+      "detail": "No earlier turns, memory or summaries in context. See ISO-01."
+    },
+    {
+      "id": "PRE-03",
+      "check": "Exact Claude-family model recorded (config/launch-release.json line 67).",
+      "result": "recorded",
+      "detail": "claude-opus-5-5, host-reported. See model."
+    },
+    {
+      "id": "PRE-04",
+      "check": "SHA-256 of every listed file verified before reliance (harness/ONBOARDING.md line 7).",
+      "result": "pass",
+      "detail": "31 of 31."
+    },
+    {
+      "id": "PRE-05",
+      "check": "This actor is in the first release wave (config/launch-release.json lines 36-39).",
+      "result": "pass",
+      "detail": "Claude-P05-TIMING is listed in first_wave."
+    }
+  ],
+  "isolation_observed": {
+    "summary_claim": "No operating-system isolation is claimed for this session, and ASSIGNMENT.json line 16 makes no OS-sandbox claim either. The observed controls are a per-command Bash sandbox, read-only file modes on the packet, and a fresh context. None was adversarially tested.",
+    "controls": [
+      {
+        "id": "ISO-01",
+        "control": "Fresh conversation context",
+        "observation": "The context held no earlier user or assistant turns. Only a local /model command record preceded the launch prompt. No CLAUDE.md, project or auto memory, prior summaries, skills or MCP servers appeared.",
+        "basis": "Own context window",
+        "limit": "I can attest only to what is visible in my context. Host-side memory settings cannot be inspected from inside the session."
+      },
+      {
+        "id": "ISO-02",
+        "control": "Tool surface",
+        "observation": "Exposed tools: Bash, Read, Write, Edit, WebFetch, WebSearch, plus a deferred EndConversation tool. There is no subagent or task-spawning tool, no inter-agent messaging tool and no memory tool.",
+        "basis": "Host tool list",
+        "limit": "None noted."
+      },
+      {
+        "id": "ISO-03",
+        "control": "Per-command Bash read sandbox (macOS Seatbelt, as declared by the host)",
+        "observation": "Reads are denied under the operator home directory, including ~/.* and ~/Library, with allow-within exceptions only for this packet directory and this outbox. Named denies include: other actors' packet and outbox directories matching Codex-*, DeepSeek-* and Claude-V02-* under physical-release-*; release-level *.json beside the actor packets; other packet families (CODEX-*, GOVERNANCE-*, foundation-*, physical-pilot-*, role-allocation-*); the EDA-Topic-selection-* checkouts; EDA-Resources; eda-dsk; and other sessions' temp directories matching *Codex*, *DeepSeek*, *Claude-V02*, EDA-Topic-selection-* or eda-dsk*.",
+        "basis": "Sandbox configuration text in the host system context",
+        "limit": "Declared, not tested. It applies to each Bash command separately, not to the whole session."
+      },
+      {
+        "id": "ISO-04",
+        "control": "Per-command Bash write sandbox",
+        "observation": "Writes are allowed only to this outbox, the shell working directory ('.'), $TMPDIR, /tmp/claude, /private/tmp/claude and device files. Deny-within-allow rules protect Claude Code settings, hooks, skills, agents, memory/projects areas and the launch-settings file.",
+        "basis": "Sandbox configuration text in the host system context",
+        "limit": "At launch '.' was the packet directory, so the packet was writable at the sandbox level. Its immutability rested on read-only file modes and policy, which docs/ISOLATION.md line 5 says are not a security boundary. No write to the packet was attempted. After a later 'cd' in one of my commands, the shell working directory became this outbox."
+      },
+      {
+        "id": "ISO-05",
+        "control": "Network",
+        "observation": "Bash egress goes through a filtering proxy whose allowlist was not visible to me. WebSearch and WebFetch are host tools outside the Bash sandbox.",
+        "basis": "Host system context",
+        "limit": "No network command and no web tool was used this turn."
+      },
+      {
+        "id": "ISO-06",
+        "control": "Sandbox override disabled",
+        "observation": "The dangerouslyDisableSandbox parameter is disabled in this session's configuration.",
+        "basis": "Host system context",
+        "limit": "Declared, not tested."
+      },
+      {
+        "id": "ISO-07",
+        "control": "File and web tool scope",
+        "observation": "I have not established whether the Read, Write and Edit tools fall under the same path restrictions as Bash. They are governed by Claude Code permission settings, which I did not inspect or test.",
+        "basis": "Host system context",
+        "limit": "All my file-tool reads targeted packet files, and all writes targeted this outbox."
+      },
+      {
+        "id": "ISO-08",
+        "control": "No probing",
+        "observation": "I deliberately did not test any denied path, because an access attempt on another actor's or session's directory would itself breach the launch instructions and docs/ISOLATION.md.",
+        "basis": "Own conduct",
+        "limit": "The controls listed here are therefore declared or observed, not verified."
+      },
+      {
+        "id": "ISO-09",
+        "control": "Packet properties",
+        "observation": "There is no .git and no .claude directory, and the host reports 'Is a git repository: false'. Directories are r-x and files r-- for all users, and files carry com.apple.provenance extended attributes. The packet was created at 2026-10-11T21:17:01Z.",
+        "basis": "ls -la@, find, stat",
+        "limit": "Mode bits are not a security boundary."
+      },
+      {
+        "id": "ISO-10",
+        "control": "Outbox properties",
+        "observation": "Mode drwx------ (owner only). It was empty when first listed and was created at 2026-10-12T00:44:34Z.",
+        "basis": "ls -la, stat",
+        "limit": "Owned by the same OS account as the packet."
+      },
+      {
+        "id": "ISO-11",
+        "control": "Account and host separation",
+        "observation": "The packet, the outbox and this session's temp files all belong to the macOS account the shell runs as, and the sandbox configuration names other actors' directories under the same home directory. This is consistent with all actors sharing one host and one OS account.",
+        "basis": "id -un, ls -la, sandbox path list",
+        "limit": "As far as I can observe, the strong-enforcement setup in docs/ISOLATION.md line 5 (separate containers or accounts, read-only packet mount) is not met."
+      },
+      {
+        "id": "ISO-12",
+        "control": "Session temp area",
+        "observation": "This session's per-project host temp directory holds one entry besides this session's own directory. This is inferred from the directory link count, which on this APFS volume equals 2 plus the number of entries. What the entry is remains unknown; it was not listed or opened.",
+        "basis": "ls -la of this session's own temp directory",
+        "limit": "It could be an earlier session launched from the same packet path, or an unrelated host artifact. The coordinator can confirm whether any prior session for this actor exists."
+      },
+      {
+        "id": "ISO-13",
+        "control": "Host state written into the outbox",
+        "observation": "After one of my commands cd'd into this outbox, the host switched its primary working directory to the outbox. At 2026-10-12T03:25:32Z it then created .claude/.cc-writes/ here; both directories were empty when inspected. I did not create them.",
+        "basis": "Host environment-update notice; find and stat on this outbox",
+        "limit": "Left in place because it is host-managed state. It is not an actor output and should be excluded from transport. If the outbox later becomes a working directory, the host could write further state there."
+      }
+    ]
+  },
+  "unlisted_context": [
+    {
+      "id": "UC-01",
+      "item": "Host system prompt: Claude Code operating instructions, tool documentation, and safety and git policies",
+      "content_relevance": "Generic host behaviour. No project or scientific content.",
+      "used_for": "Operating the tools"
+    },
+    {
+      "id": "UC-02",
+      "item": "Sandbox configuration text inside the host system prompt",
+      "content_relevance": "Path names and patterns only: other actors' directory patterns (Codex-*, DeepSeek-*, Claude-V02-*), other packet families, workspace names (EDA-Topic-selection-*, EDA-Resources, eda-dsk), and the path .../EDA-Topic-selection-and-Experiment/runs/CLD-P05-LAUNCH-0001/launch-settings.json. No file contents.",
+      "used_for": "Recording isolation controls (ISO-03, ISO-04) and the launch run ID. No scientific use."
+    },
+    {
+      "id": "UC-03",
+      "item": "Host environment block",
+      "content_relevance": "Working and outbox directories, platform darwin, OS Darwin 25.5.0, shell bash, current date 2026-10-12, model name and ID, host-stated knowledge cutoff of June 2026, the Claude 5 family model-ID list, and the scratchpad path containing the session UUID.",
+      "used_for": "Identity and timing fields"
+    },
+    {
+      "id": "UC-04",
+      "item": "System reminder carrying the operator's account email address",
+      "content_relevance": "A personal identifier. The value is deliberately not reproduced in any file.",
+      "used_for": "Nothing"
+    },
+    {
+      "id": "UC-05",
+      "item": "System reminder with git commit and PR attribution lines (a Co-Authored-By trailer naming Claude Opus 5.5)",
+      "content_relevance": "Host policy, consistent with the observed model.",
+      "used_for": "Nothing; no commits or PRs this turn"
+    },
+    {
+      "id": "UC-06",
+      "item": "Local /model command record",
+      "content_relevance": "'Set model to Opus 5.5 and saved as your default for new sessions with max effort'",
+      "used_for": "Model and effort evidence"
+    },
+    {
+      "id": "UC-07",
+      "item": "Launch prompt pasted by the human",
+      "content_relevance": "Actor ID, call sign CLD-Origin-TIMING, topic and domain, packet hash, outbox path and turn instructions. Consistent with the packet; only the call sign is absent from the packet.",
+      "used_for": "Task definition"
+    },
+    {
+      "id": "UC-08",
+      "item": "My pretrained knowledge (host-stated cutoff June 2026)",
+      "content_relevance": "Background knowledge of EDA literature, tools and contests. Not a packet input.",
+      "used_for": "Only for drafting terminology and the [L]-labelled seed leads in first-pass-plan.md. It is not evidence, and every lead must be confirmed in a primary source."
+    },
+    {
+      "id": "UC-09",
+      "item": "Absent categories",
+      "content_relevance": "No other role's outputs, private notes, challenges, verifier material, transcripts, shared memories or agent messages were present.",
+      "used_for": "Not applicable"
+    }
+  ],
+  "discrepancies_and_open_questions": [
+    {
+      "id": "DQ-01",
+      "severity": "Governance inconsistency; non-blocking for this actor",
+      "observation": "domains/D05/brief.json (lines 13-15 and platform_roles at lines 23-40) and domains/D05/README.md (line 9) name Codex-P05-TIMING as D05 proposer and Codex-C05-TIMING as challenger, and platform_roles has no claude entry. config/launch-release.json (lines 21-26) and ASSIGNMENT.json (lines 2-4 and 11) assign EDA-0002/D05 to proposer Claude-P05-TIMING and challenger DeepSeek-C05-TIMING. Both name the same verifier, Codex-V02-PHYSICAL.",
+      "my_handling": "Followed ASSIGNMENT.json and config/launch-release.json as the release-specific sources. Edited nothing.",
+      "request": "Coordinator to correct the domain brief and README through a governance PR, or record which source governs."
+    },
+    {
+      "id": "DQ-02",
+      "severity": "Blocks scientific submission, not search",
+      "observation": "PACKET.json line 4 names the registry config/agents-claude.json, which is not in the packet. config/roles.json is also absent, and dossier.json proposer_session is null.",
+      "my_handling": "Recorded the (inferred) host session UUID for registration.",
+      "request": "Coordinator to register this session (docs/FORMATS.md line 48) before dossier submission."
+    },
+    {
+      "id": "DQ-03",
+      "severity": "Precondition not verifiable",
+      "observation": "harness/ONBOARDING.md line 3 depends on config/agents.json, which is not in the packet.",
+      "my_handling": "Proceeded on the basis of config/launch-release.json state ready_for_role_creation and the direct human launch.",
+      "request": "Coordinator to confirm that governance_hardening_paused was not set."
+    },
+    {
+      "id": "DQ-04",
+      "severity": "Tooling gap",
+      "observation": "Referenced but absent from the packet: scripts/project.py (validate and tasklist-digest; AGENTS.md line 13, docs/FORMATS.md line 38), scripts/physical_smoke.py, templates/topic/ (harness/PROPOSER.md line 17), and runs/, including runs/PHYSICAL-PILOT-0001 (docs/PHYSICAL-PILOT.md line 19). docs/TEAM-DEEPSEEK.md (domains/D05/brief.json line 36) is also absent but is not relevant to this role. The 13-file candidates/EDA-0002 scaffold appears to be the instantiated topic template.",
+      "my_handling": "The GCD smoke numbers are treated as statements in docs/PHYSICAL-PILOT.md, not as inspected artifacts.",
+      "request": "Include scripts/project.py and templates/topic/ in the research-round packet, or confirm that the coordinator runs structural validation and computes the digests."
+    },
+    {
+      "id": "DQ-05",
+      "severity": "Wording clarification",
+      "observation": "ASSIGNMENT.json line 16 says 'no OS sandbox claim', while the host applies a per-command Seatbelt sandbox to Bash.",
+      "my_handling": "Not a contradiction. The sandbox is recorded as a partial, per-command control, and no session-level OS isolation is claimed.",
+      "request": "None."
+    },
+    {
+      "id": "DQ-06",
+      "severity": "Model confirmation",
+      "observation": "config/launch-release.json line 66 sets models_verified to false for claude, and ASSIGNMENT.json line 8 requests the strongest exposed Claude-family model.",
+      "my_handling": "Recorded claude-opus-5-5 with effort max, as reported by the host.",
+      "request": "Coordinator to confirm the model from the host side, and whether a stronger Claude model (for example claude-fable-5-1, if it was offered) was exposed."
+    },
+    {
+      "id": "DQ-07",
+      "severity": "Scope ruling needed before any local tool run",
+      "observation": "config/launch-release.json line 71 sets experiment_authorization to false, and docs/EXPERIMENTS.md lines 25-27 forbid experiments before consensus. Yet harness/PROPOSER.md line 13 asks the proposer to identify a failure 'with a counterexample, reproducible observation or tightly supported inference'.",
+      "my_handling": "Default: no local tool runs. Failure evidence will come from public sources or tight inference.",
+      "request": "Rule whether bounded, non-confirmatory characterization is allowed while the proposal is drafted, for example an OpenSTA phase profile or an endpoint slack distribution on public designs. If it is, state the CPU-minute cap, the container settings, and whether it counts against the 8 CPU-hour pilot cap."
+    },
+    {
+      "id": "DQ-08",
+      "severity": "Preregistration input; not a criticism of the brief",
+      "observation": "The provisional D05 metric (config/research-brief.json lines 71 and 77) has three gaps. (1) It does not count false-positive violations, yet a method that flags every endpoint scores zero false negatives. (2) It does not say how a two-sided 5 ps slack tolerance coexists with zero missed violations; that requires a one-sided bias or an exact fallback near the threshold. (3) Its comparator is 'full OpenSTA analysis', while the strongest baseline for incremental use is OpenSTA's own incremental update.",
+      "my_handling": "Handled in first-pass-plan.md section 10 (EP-02, EP-03 and the baseline policy).",
+      "request": "Practitioner input on the thresholds is still pending (config/research-brief.json lines 67 and 78)."
+    },
+    {
+      "id": "DQ-09",
+      "severity": "Resource risk",
+      "observation": "The 8 CPU-hours (config/research-brief.json line 11) must cover parasitic generation for at least 3 designs plus repeated timing runs, and only GCD at the typical corner is available (lines 44-61).",
+      "my_handling": "Planned feasibility gates G2, G3 and G5 in first-pass-plan.md section 11.",
+      "request": "Authorization for benchmark and library acquisition once candidates and their licenses are identified."
+    }
+  ],
+  "commands_and_tools_used": [
+    "Bash: pwd, ls -la, find (packet file inventory), shasum -a 256 PACKET.json",
+    "Bash: ls -la of this outbox",
+    "Bash: python3 -I hashlib verification of all listed files, with unlisted-file detection",
+    "Bash: wc -c on dossier files; ls -la@ and xattr on the packet",
+    "Bash: date; stat on this session's temp directory, this outbox and PACKET.json; id -un; python3 --version",
+    "Bash: shasum -a 256 and wc -c of first-pass-plan.md. This command cd'd into the outbox, which then became the shell working directory.",
+    "Bash (after writing this file): JSON validation and SHA-256 of readiness.json, repeated after the amendment",
+    "Bash: find and stat on the host-created .claude directory in this outbox (inspection only)",
+    "Read: all 32 packet files",
+    "Write: first-pass-plan.md and readiness.json in this outbox"
+  ],
+  "actions_not_taken": [
+    "No web search, web fetch or network command.",
+    "No write or write attempt outside this outbox; nothing in the packet was modified.",
+    "No edits to settings, credentials, other tasks, the shared checkout or repository governance.",
+    "No git operation, commit, PR, review, approval or merge.",
+    "No listing or reading of other actors' packets or outboxes, other sessions, the repository checkout or the launch-settings file, and no probing of sandbox denies.",
+    "No inter-agent message and no subordinate agent.",
+    "No experiment, OpenROAD/OpenSTA run, container pull or data download.",
+    "No dossier file or role-output-manifest.json written; both are deferred to the research round.",
+    "scripts/project.py validate was not run: it is not in the packet, and nothing is submitted this turn.",
+    "No novelty, prior-art or performance claim made."
+  ],
+  "contamination_events": [],
+  "contamination_assessment": "None known. The UC-02 exposure of path names is metadata only and is disclosed here rather than treated as contamination.",
+  "independence_attestation": "To the best of my observation, this session started fresh, received only the packet plus the host context listed in unlisted_context, and produced these files independently. This is a self-attestation, not proof of independence (docs/PHYSICAL-PILOT.md line 33).",
+  "readiness": {
+    "onboarding_state": "complete",
+    "research_round_state": "not_started",
+    "research_round_trigger": "A later file packet or a direct human request (harness/ONBOARDING.md line 13).",
+    "ready_for_research_round": true,
+    "conditions": {
+      "before_web_search": [],
+      "before_any_local_tool_run": ["DQ-07 ruling"],
+      "before_dossier_submission": [
+        "DQ-02 session registration",
+        "DQ-04 validator access or coordinator-run validation",
+        "DQ-06 model confirmation"
+      ],
+      "governance_follow_up": [
+        "DQ-01 role-mismatch correction",
+        "DQ-03 pause-flag confirmation"
+      ]
+    }
+  }
+}

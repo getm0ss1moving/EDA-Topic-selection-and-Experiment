@@ -1,0 +1,1174 @@
+[
+  {
+    "id": "SRC-001",
+    "title": "OpenSTA README.md at commit e01d3f163f483f233db00410b6515a767a6ca03b",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/e01d3f163f483f233db00410b6515a767a6ca03b/README.md",
+    "type": "repository",
+    "published": "2024-05-30",
+    "retrieved": "2026-10-13T07:05:00Z",
+    "locator": "Supported features list; license section",
+    "access": "full",
+    "claims": [
+      "CLM-006",
+      "CLM-029"
+    ],
+    "limitations": "Read through the WebFetch extraction tool, not line by line. It states query-based incremental update, the Dartu/Menezes/Pileggi Ceff algorithm and SPEF support. Multi-corner analysis is not mentioned in the README; that capability is established from source code in SRC-005 and SRC-006.",
+    "version": "OpenSTA commit e01d3f163f483f233db00410b6515a767a6ca03b (2024-05-30), the src/sta submodule of OpenROAD b16bda7e (SRC-010)",
+    "license": "Dual: GPL-3.0 or Parallax commercial license (per README)"
+  },
+  {
+    "id": "SRC-002",
+    "title": "OpenSTA dcalc/DmpCeff.cc (Dartu/Menezes/Pileggi effective-capacitance delay calculator)",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/e01d3f163f483f233db00410b6515a767a6ca03b/dcalc/DmpCeff.cc",
+    "type": "repository",
+    "published": "2024-05-30",
+    "retrieved": "2026-10-13T07:45:00Z",
+    "locator": "DmpAlg::loadDelaySlew lines 555-605; DmpPi::gateDelaySlew lines 915-948; Ceff constraint checks lines 969-974; DmpZeroC2 Ceff=c1 lines 1207-1228; DmpCeffDelayCalc::gateDelay lines 1492-1533; round 1: setCeffAlgorithm 1545-1585; gateModelRd 1630-1649; DmpCap 737-773; DmpPi::gateDelaySlew 915-949; DmpZeroC2::gateDelaySlew 1222-1241; findDriverDelaySlew 479-489; loadDelaySlew 555-607; Vl0 1057-1074; voCrossingUpperBound 1076-1080, 1269-1273; vlCrossingUpperBound 631-635; newtonRaphson 1281-1312; exp2 1687-1709",
+    "access": "full",
+    "claims": [
+      "CLM-007",
+      "CLM-008",
+      "CLM-018",
+      "CLM-019",
+      "CLM-020",
+      "CLM-021",
+      "CLM-022",
+      "CLM-023",
+      "CLM-025"
+    ],
+    "limitations": "These are code reading observations about the implementation only. No execution was performed. The soundness of any bound with respect to this code (properties P3-P5) is not established by reading these lines. The downloaded file has SHA-256 edfadea5d90b929d42eb8aec739f0ca54f8e76d129584ea4a1c8e70b6599d186.",
+    "version": "commit e01d3f163f483f233db00410b6515a767a6ca03b",
+    "license": "GPL-3.0 (dual-licensed project)"
+  },
+  {
+    "id": "SRC-003",
+    "title": "OpenSTA search/Sta.cc",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/e01d3f163f483f233db00410b6515a767a6ca03b/search/Sta.cc",
+    "type": "repository",
+    "published": "2024-05-30",
+    "retrieved": "2026-10-13T07:06:30Z",
+    "locator": "lines 411 and 417 (default makeDelayCalc(\"dmp_ceff_elmore\")); lines 3360-3362 (setIncrementalDelayTolerance)",
+    "access": "full",
+    "claims": [
+      "CLM-006",
+      "CLM-016"
+    ],
+    "limitations": "Default calculator only; a user script can change it with set_delay_calculator. The file has SHA-256 8da5e45c5820b92a8ea1c91ebea7ad84e6276aca64a121530fe49ed7a82d518f.",
+    "version": "commit e01d3f163f483f233db00410b6515a767a6ca03b",
+    "license": "GPL-3.0 (dual-licensed project)"
+  },
+  {
+    "id": "SRC-004",
+    "title": "OpenSTA dcalc/DelayCalc.cc",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/e01d3f163f483f233db00410b6515a767a6ca03b/dcalc/DelayCalc.cc",
+    "type": "repository",
+    "published": "2024-05-30",
+    "retrieved": "2026-10-13T07:10:00Z",
+    "locator": "lines 37-43: registered calculators unit, lumped_cap, dmp_ceff_elmore, dmp_ceff_two_pole, arnoldi, ccs_ceff, ccs_sim",
+    "access": "full",
+    "claims": [
+      "CLM-006"
+    ],
+    "limitations": "The file has SHA-256 42c6e6512f65516a2a17557161c8d6a8d3920904b79f9e360b27691c66a1eb28.",
+    "version": "commit e01d3f163f483f233db00410b6515a767a6ca03b",
+    "license": "GPL-3.0 (dual-licensed project)"
+  },
+  {
+    "id": "SRC-005",
+    "title": "OpenSTA tcl/Sdc.tcl (define_corners command)",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/e01d3f163f483f233db00410b6515a767a6ca03b/tcl/Sdc.tcl",
+    "type": "repository",
+    "published": "2024-05-30",
+    "retrieved": "2026-10-13T07:52:00Z",
+    "locator": "lines 3663-3672 (define_corners; must precede read_liberty)",
+    "access": "full",
+    "claims": [
+      "CLM-006"
+    ],
+    "limitations": "Establishes that the command exists, not its runtime scaling. The file has SHA-256 34677ea5e8af907dfe3bfef37f68906b2a7e376f302651042b3363ab3e70e5c0.",
+    "version": "commit e01d3f163f483f233db00410b6515a767a6ca03b",
+    "license": "GPL-3.0 (dual-licensed project)"
+  },
+  {
+    "id": "SRC-006",
+    "title": "OpenSTA search/Corner.cc",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/e01d3f163f483f233db00410b6515a767a6ca03b/search/Corner.cc",
+    "type": "repository",
+    "published": "2024-05-30",
+    "retrieved": "2026-10-13T07:06:30Z",
+    "locator": "Corners::makeCorners line 88; Corners::makeAnalysisPts line 174; Corners::dcalcAnalysisPtCount line 310",
+    "access": "full",
+    "claims": [
+      "CLM-006"
+    ],
+    "limitations": "The analysis-point structure was not traced in detail. The file has SHA-256 68c644f032e26bd3a3828b552481863ec2457650b985e57e3d8c69e3c9b79f08.",
+    "version": "commit e01d3f163f483f233db00410b6515a767a6ca03b",
+    "license": "GPL-3.0 (dual-licensed project)"
+  },
+  {
+    "id": "SRC-007",
+    "title": "OpenSTA liberty/TableModel.cc (NLDM table evaluation)",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/e01d3f163f483f233db00410b6515a767a6ca03b/liberty/TableModel.cc",
+    "type": "repository",
+    "published": "2024-05-30",
+    "retrieved": "2026-10-13T07:45:00Z",
+    "locator": "Table2::findValue lines 1012-1060 (bilinear interpolation); TableAxis::findAxisIndex lines 1443-1463 (out-of-range values use the edge cell, i.e. linear extrapolation); round 1: GateTableModel::gateDelay 104-135 (slew clipped at 0, 130-132)",
+    "access": "full",
+    "claims": [
+      "CLM-007",
+      "CLM-008",
+      "CLM-021",
+      "CLM-023",
+      "CLM-028"
+    ],
+    "limitations": "Only the 2-D path was read; 3-D tables (Table3) and table types other than NLDM delay/slew were not inspected. The file has SHA-256 8326d308abda4e2c8dfd9ac63b9b4bc8d7480c039c9a24f19d4da730c43ed581.",
+    "version": "commit e01d3f163f483f233db00410b6515a767a6ca03b",
+    "license": "GPL-3.0 (dual-licensed project)"
+  },
+  {
+    "id": "SRC-008",
+    "title": "OpenSTA dcalc/GraphDelayCalc.cc (incremental delay tolerance)",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/e01d3f163f483f233db00410b6515a767a6ca03b/dcalc/GraphDelayCalc.cc",
+    "type": "repository",
+    "published": "2024-05-30",
+    "retrieved": "2026-10-13T07:06:30Z",
+    "locator": "line 62 (incremental_delay_tolerance_ default 0.0); lines 588-589 (enqueue fanout only if delay_changed or not incremental); annotateDelaySlew lines ~1045-1075 (relative gate-delay test at line 1070; slew change does not set delay_changed); round 1: multi-driver dcalc arguments 940-967; loadCap ignores a pi model whose capacitance is below the pin caps 1255-1271",
+    "access": "full",
+    "claims": [
+      "CLM-016",
+      "CLM-024",
+      "CLM-029"
+    ],
+    "limitations": "Used only to assess the excluded incremental-timing slice (S1). The file has SHA-256 d939d1bb23fd4154528b8847dc1b8b11924c98ad538af6a11988090545f53a2b.",
+    "version": "commit e01d3f163f483f233db00410b6515a767a6ca03b",
+    "license": "GPL-3.0 (dual-licensed project)"
+  },
+  {
+    "id": "SRC-009",
+    "title": "OpenSTA search/Search.cc (arrival propagation stop rule)",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/e01d3f163f483f233db00410b6515a767a6ca03b/search/Search.cc",
+    "type": "repository",
+    "published": "2024-05-30",
+    "retrieved": "2026-10-13T07:06:30Z",
+    "locator": "ArrivalVisitor lines 1145-1163; Search::arrivalsChanged lines 1208-1235",
+    "access": "full",
+    "claims": [
+      "CLM-016"
+    ],
+    "limitations": "Used only to assess the excluded S1 slice. The file has SHA-256 0e84880661dbc5953bb6e1cb88774f9227dbe6c6fa08fe555bff30bf7621014a.",
+    "version": "commit e01d3f163f483f233db00410b6515a767a6ca03b",
+    "license": "GPL-3.0 (dual-licensed project)"
+  },
+  {
+    "id": "SRC-010",
+    "title": "OpenROAD src/sta submodule pointer at commit b16bda7e82721d10566ff7e2b68f1ff0be9f9e38 (GitHub contents API)",
+    "url": "https://api.github.com/repos/The-OpenROAD-Project/OpenROAD/contents/src/sta?ref=b16bda7e82721d10566ff7e2b68f1ff0be9f9e38",
+    "type": "repository",
+    "published": "2024-06-03",
+    "retrieved": "2026-10-13T07:03:30Z",
+    "locator": "fields type=submodule, sha=e01d3f163f483f233db00410b6515a767a6ca03b",
+    "access": "full",
+    "claims": [
+      "CLM-006"
+    ],
+    "limitations": "This links the packet's pinned OpenROAD commit (config/research-brief.json line 30) to the OpenSTA commit. OpenROAD commit date 2024-06-03T22:19:59Z; OpenSTA commit date 2024-05-30T16:46:04Z (GitHub commits API).",
+    "version": "OpenROAD b16bda7e82721d10566ff7e2b68f1ff0be9f9e38",
+    "license": "not re-verified in this session"
+  },
+  {
+    "id": "SRC-011",
+    "title": "OpenROAD src/rsz/src/RepairSetup.cc",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/src/rsz/src/RepairSetup.cc",
+    "type": "repository",
+    "published": "2024-06-03",
+    "retrieved": "2026-10-13T07:24:00Z",
+    "locator": "repair loop lines 149-282 (updateParasitics, findRequireds, vertexSlack, worstSlack after each pass); fanout sorting by exact slack margin lines ~703-740 (clone) and ~855-880 (split loads)",
+    "access": "full",
+    "claims": [
+      "CLM-016"
+    ],
+    "limitations": "Used only to assess the excluded S1 slice. No profiling data. The file has SHA-256 fafa72edb73d1ea95121bafdc68aa2c23d9f3f7d71cc2fb8ce8cd2126275e114. A grep of RepairSetup.cc, RepairHold.cc, Resizer.cc and RepairDesign.cc found no call that sets the incremental delay tolerance.",
+    "version": "OpenROAD b16bda7e82721d10566ff7e2b68f1ff0be9f9e38",
+    "license": "not re-verified in this session"
+  },
+  {
+    "id": "SRC-012",
+    "title": "A Fast Approach for Static Timing Analysis Covering All PVT Corners (S. Onaissi, F. Taraporevala, J. Liu, F. N. Najm)",
+    "url": "https://www.eecg.utoronto.ca/~najm/papers/dac11-sari.pdf",
+    "type": "paper",
+    "published": "unknown",
+    "retrieved": "2026-10-13T07:12:00Z",
+    "locator": "Abstract/introduction excerpts as returned by the search tool; no page or section locator available",
+    "access": "metadata",
+    "claims": [
+      "CLM-005",
+      "CLM-015"
+    ],
+    "limitations": "DECISION-CRITICAL; ASSUMPTIONS UNRESOLVED (owner decision CLD-LAB-0001, item U1). Round 0 saw only search-tool excerpts. A round-1 re-attempt through arXiv and GitHub, the only permitted routes, found no copy (search-log.md Q36-Q38). A proposer reading of an Internet Archive capture of the author-hosted PDF exists in addenda/EDA-0002/ADD-0001 (made 2026-10-13 on the human owner's instruction, before decision U1). Per U1 it is not used to resolve this paper's assumptions or the K1 test in this revision; the owner is asked to rule on its admissibility. The verifier must open the full text before any distinction from this paper is accepted (K1).",
+    "version": "DAC 2011, pp. 777-782; DOI 10.1145/2024724.2024899 (Crossref metadata, ADD-0001)",
+    "license": "unknown (author-hosted copy)"
+  },
+  {
+    "id": "SRC-013",
+    "title": "A Linear-Time Approach for Static Timing Analysis Covering All Process Corners (S. Onaissi, F. N. Najm)",
+    "url": "https://www.eecg.utoronto.ca/~najm/papers/tcad08-sari.pdf",
+    "type": "paper",
+    "published": "unknown",
+    "retrieved": "2026-10-13T07:12:00Z",
+    "locator": "Search-tool summary; cited on slide 14 of SRC-014",
+    "access": "metadata",
+    "claims": [
+      "CLM-005"
+    ],
+    "limitations": "Not inspected. Per the search summary and SRC-014, delays and slews are treated as linear functions of process parameters and the result is a single-pass estimated upper bound.",
+    "version": "ICCAD 2006; IEEE TCAD 2008 (per search metadata)",
+    "license": "unknown"
+  },
+  {
+    "id": "SRC-014",
+    "title": "A Unified Multi-Corner Multi-Mode Static Timing Analysis Engine (J.-J. Nian, S.-H. Tsai, C.-Y. Huang, National Taiwan University) - presentation slides",
+    "url": "https://www.aspdac.com/aspdac2010/Archive_Folder/pdf/8B-2.pdf",
+    "type": "paper",
+    "published": "unknown",
+    "retrieved": "2026-10-13T07:34:00Z",
+    "locator": "slides 7 (techniques: branch-and-bound per Heloue DATE07; linear-time upper bound per Onaissi ICCAD06), 11-12 (exact complexity), 14 ('efficient but just an estimated upper bound'), 15 ('Cell delays are modeled as linear functions of the process variations or operation modes'), 21 (path-based branch-and-bound pruning rule); 29 (reference list: [6] SRC-013, [7] SRC-068, [9] SRC-067)",
+    "access": "full",
+    "claims": [
+      "CLM-005",
+      "CLM-026"
+    ],
+    "limitations": "Slides, not the full paper. Text was extracted locally with PDFKit and may contain layout errors. The PDF has SHA-256 16861f55263b6f8c059d16f7896cad7d3ea05c7806070e3e827f603763c49a51. Experimental results were not inspected. Round 1b: the challenger first pass Codex-C05-TIMING-R2, runs/CDX-C05-INDEPENDENT-0001/sources.json at commit b7822234587292124a6d033167beb5f9d942e818 (SHA-256 0cf632f9...) (S02) lists DOI 10.1109/ASPDAC.2010.5419804 and an NTU institutional abstract (pages 669-674). The proposer has not resolved the DOI or read that abstract. Slide 29 of this file cites SRC-067 and SRC-068, and slide 7 cites '[Heloue, DATE07]' for the branch-and-bound method without a full reference.",
+    "version": "ASP-DAC 2010 session 8B-2 archive file",
+    "license": "unknown (conference archive)"
+  },
+  {
+    "id": "SRC-015",
+    "title": "\"Unobserved Corner\" Prediction: Reducing Timing Analysis Effort for Faster Design Convergence in Advanced-Node Design (A. B. Kahng, U. Mallappa, L. Saul, S. Tong)",
+    "url": "https://past.date-conference.com/proceedings-archive/2019/html/0823.html",
+    "type": "paper",
+    "published": "unknown",
+    "retrieved": "2026-10-13T07:58:00Z",
+    "locator": "Abstract (DATE 2019 proceedings archive page)",
+    "access": "abstract",
+    "claims": [
+      "CLM-001",
+      "CLM-002"
+    ],
+    "limitations": "Abstract only, as paraphrased by the fetch tool. Reported: multivariate linear regression with backward stepwise corner selection; 10 observed corners predict 48 unobserved with under 0.5% relative RMSE on a 1M-instance foundry-16nm design. No guarantee is described. Full text (NSF PAR copy) not opened.",
+    "version": "DATE 2019, paper 0823",
+    "license": "unknown"
+  },
+  {
+    "id": "SRC-016",
+    "title": "US7681157B2 - Variable threshold system and method for multi-corner static timing analysis (IBM)",
+    "url": "https://patents.google.com/patent/US7681157B2/en",
+    "type": "official documentation",
+    "published": "2010-03-16",
+    "retrieved": "2026-10-13T07:47:00Z",
+    "locator": "Abstract; claim 1; description of slack cutoffs c_i (estimated upper bound on slack change; determined empirically) and the parameter-by-parameter bypass procedure",
+    "access": "full",
+    "claims": [
+      "CLM-002"
+    ],
+    "limitations": "Read through the extraction tool (first 100,000 of 107,640 characters). This is a patent: it describes a method, not measured performance. Priority 2007-02-27; listed status Expired - Fee Related (Google's assumption).",
+    "version": "US7681157B2 (application US11/679,834)",
+    "license": "Patent publication (public record)"
+  },
+  {
+    "id": "SRC-017",
+    "title": "US12675622B1 - Signoff-safe multi-corner reduction for static timing analysis (Synopsys)",
+    "url": "https://patents.google.com/patent/US12675622B1/en",
+    "type": "official documentation",
+    "published": "2026-07-07",
+    "retrieved": "2026-10-13T07:13:00Z",
+    "locator": "Abstract; claim 1; description of dominant-corner selection, path-library ratio estimation, Monte Carlo corner ranking, ML error classifier, aggressiveness level and object marking",
+    "access": "full",
+    "claims": [
+      "CLM-001",
+      "CLM-002"
+    ],
+    "limitations": "Read through the extraction tool. The 3x-12x industrial speedups are the applicant's statement, not a controlled comparison. The disclosure says 'designed to be sign-off safe' but gives no proof or bound. Priority 2022-04-25; filed 2023-04-18.",
+    "version": "US12675622B1 (application US 18/302,687)",
+    "license": "Patent publication (public record)"
+  },
+  {
+    "id": "SRC-018",
+    "title": "US9141742B2 - Priori corner and mode reduction (Synopsys)",
+    "url": "https://patents.google.com/patent/US9141742B2/en",
+    "type": "official documentation",
+    "published": "2015-09-22",
+    "retrieved": "2026-10-13T07:57:00Z",
+    "locator": "Abstract; claim 1; description of synthetic corners (max over temperature or parasitic corners) and mode merging within a corner",
+    "access": "full",
+    "claims": [
+      "CLM-002"
+    ],
+    "limitations": "Read through the extraction tool. The patent describes its result as '(approximately) the worst', with 'some pessimism' and QoR 'similar' to activating both corners. Priority 2012-12-31.",
+    "version": "US9141742B2",
+    "license": "Patent publication (public record)"
+  },
+  {
+    "id": "SRC-019",
+    "title": "Corner-based Timing Signoff and What Is Next (A. Tetelbaum, Abelite Design Automation)",
+    "url": "https://anysilicon.com/wp-content/uploads/2014/10/Corner_based_Signoff_paper_Jan_2014a.pdf",
+    "type": "official documentation",
+    "published": "unknown",
+    "retrieved": "2026-10-13T07:34:00Z",
+    "locator": "p.7 (135 PVT/RC corners; Katz quote of 160 corners; SS+Fast-Metal needed because launch/data cell-dominated and capture metal-dominated paths can violate); p.8 ('each path has the worst slack only at 3-4 (less than 10) corners, but these corners are different for different paths'; 160-495 basic corners); p.9 (no guarantee even with 160-495 corners due to non-linearity and temperature inversion)",
+    "access": "full",
+    "claims": [
+      "CLM-001",
+      "CLM-003",
+      "CLM-017"
+    ],
+    "limitations": "Vendor white paper (Abelite, dated January 2014 per filename and footer) promoting its own statistical signoff methods. It supports practice and methodology statements, not controlled measurements. Text was extracted locally with PDFKit. The PDF has SHA-256 6aa2ff3db953dbb5259c6de961ef891d6883cfb5f16a944d526dede7c7c6f319.",
+    "version": "January 2014 white paper",
+    "license": "unknown (copyright Abelite 2014)"
+  },
+  {
+    "id": "SRC-020",
+    "title": "How to Close Timing with Hundreds of Multi-Mode/Multi-Corner Views (EEJournal; byline Amelia Dalton, author bio Ruben Molina, Cadence)",
+    "url": "https://www.eejournal.com/article/20121206-cadence/",
+    "type": "official documentation",
+    "published": "2012-12-06",
+    "retrieved": "2026-10-13T07:56:00Z",
+    "locator": "Article body: 'more than 250 views to be analyzed' (8 modes, 28nm); reduction to about 100 views 'depending on your tolerance for risk'; 'Reduction must not lead to a loss in accuracy or missed failing endpoints'",
+    "access": "full",
+    "claims": [
+      "CLM-001",
+      "CLM-004"
+    ],
+    "limitations": "Vendor marketing for Cadence Encounter Timing System. It supports statements of practice and advertised need only.",
+    "version": "web article, 2012-12-06",
+    "license": "publisher copyright"
+  },
+  {
+    "id": "SRC-021",
+    "title": "Reducing signoff corners to achieve faster 40 nm SOC design closure (A. Mishra, Freescale Semiconductor India; R. Mittal)",
+    "url": "https://www.embedded.com/reducing-signoff-corners-to-achieve-faster-40-nm-soc-design-closure/",
+    "type": "official documentation",
+    "published": "unknown",
+    "retrieved": "2026-10-13T07:59:00Z",
+    "locator": "Article body: up to 16 signoff corners at C40; greedy corner addition from 3 mandatory corners until saturation, giving 8 corners; 97.3% critical hold-path coverage; hold signoff uncertainty increased by 20 ps (worst corners) and 10 ps (all corners)",
+    "access": "full",
+    "claims": [
+      "CLM-001",
+      "CLM-002",
+      "CLM-004"
+    ],
+    "limitations": "Industrial practitioner article with no date on the page. It describes one company's methodology, not a controlled study.",
+    "version": "web article",
+    "license": "publisher copyright"
+  },
+  {
+    "id": "SRC-022",
+    "title": "Machine-Learning-Based Multi-Corner Timing Prediction for Faster Timing Closure (Electronics 11(10):1571)",
+    "url": "https://doi.org/10.3390/electronics11101571",
+    "type": "paper",
+    "published": "unknown",
+    "retrieved": "2026-10-13T07:58:00Z",
+    "locator": "Search-tool snippets of the abstract: 2 dominant corners used to predict 12 non-dominant corners, more than 2x faster timing closure; ITC'99 accuracy up to 98.2%",
+    "access": "metadata",
+    "claims": [
+      "CLM-002"
+    ],
+    "limitations": "Direct fetch returned HTTP 403, so only search snippets were seen. 2022 per journal volume.",
+    "version": "Electronics 2022, 11(10), 1571",
+    "license": "open access per publisher (not verified)"
+  },
+  {
+    "id": "SRC-023",
+    "title": "TOTAL: Multi-Corners Timing Optimization Based on Transfer and Active Learning (DAC 2023; Beihang University research repository record)",
+    "url": "https://research.buaa.edu.cn/zh/publications/total-multi-corners-timing-optimization-based-on-transfer-and-act/",
+    "type": "paper",
+    "published": "unknown",
+    "retrieved": "2026-10-13T08:00:00Z",
+    "locator": "Repository abstract as summarized by the search tool: generalized linear model with latent features; transfer learning; Bayesian decision strategy that re-examines uncertain predictions; 'accuracy close to 100%'",
+    "access": "metadata",
+    "claims": [
+      "CLM-002"
+    ],
+    "limitations": "Abstract-level information via search summary only; the exact title was not verified.",
+    "version": "DAC 2023 (60th DAC, San Francisco)",
+    "license": "unknown"
+  },
+  {
+    "id": "SRC-024",
+    "title": "Multicorner Timing Analysis Acceleration for Iterative Physical Design of ICs (IEEE journal article)",
+    "url": "https://ieeexplore.ieee.org/document/10419016",
+    "type": "paper",
+    "published": "2024-02-02",
+    "retrieved": "2026-10-13T07:16:00Z",
+    "locator": "Abstract as summarized by the search tool: multicorner multistage prediction with a generalized linear model and latent features, kernel extension, transfer learning, a Bayesian decision strategy, 'can improve prediction accuracy to 100% with little extra STA executions'; pages 2151-2162",
+    "access": "metadata",
+    "claims": [
+      "CLM-002"
+    ],
+    "limitations": "The IEEE Xplore page returned empty content to the fetch tool, so the journal name and authors are unverified. Search results suggest an extension of SRC-023.",
+    "version": "IEEE Xplore document 10419016",
+    "license": "publisher copyright"
+  },
+  {
+    "id": "SRC-025",
+    "title": "Static Timing Analysis Acceleration to Attack Process Corner Explosion by Matrix Filling Prediction (L. Wang, Z. Wang, W. X. Xing, N. Xu, Y. Cheng)",
+    "url": "https://research.buaa.edu.cn/en/publications/static-timing-analysis-acceleration-to-attack-process-corner-expl/",
+    "type": "paper",
+    "published": "unknown",
+    "retrieved": "2026-10-13T08:00:00Z",
+    "locator": "Repository abstract as summarized by the search tool: matrix completion with neural predictor and autoencoders plus active learning; 'accuracy approaches 100%'",
+    "access": "metadata",
+    "claims": [
+      "CLM-002"
+    ],
+    "limitations": "Venue not identified; 2024 per search summary. Not inspected. Round 1b: the challenger first pass Codex-C05-TIMING-R2, runs/CDX-C05-INDEPENDENT-0001/sources.json at commit b7822234587292124a6d033167beb5f9d942e818 (SHA-256 0cf632f9...) (S04) gives venue ISEDA 2024 and DOI 10.1109/ISEDA62518.2024.10617500, also at metadata level. The proposer has not checked this metadata.",
+    "version": "unknown",
+    "license": "unknown"
+  },
+  {
+    "id": "SRC-026",
+    "title": "The Elmore Delay as a Bound for RC Trees with Generalized Input Signals (R. Gupta, B. Tutuianu, L. T. Pileggi)",
+    "url": "https://users.ece.cmu.edu/~pileggi/the-elmore-delay-as-a-bound-for-rc-trees-with-generalized-input-signals",
+    "type": "paper",
+    "published": "unknown",
+    "retrieved": "2026-10-13T07:59:00Z",
+    "locator": "Bibliographic record: IEEE TCAD 16(1):95-104, January 1997; earlier DAC 1995 pp. 364-369",
+    "access": "metadata",
+    "claims": [
+      "CLM-008"
+    ],
+    "limitations": "Theorem conditions (input-waveform class) were not read from the paper; secondary sources say the bound holds for inputs with unimodal derivative. Whether OpenSTA's numeric single-pole crossing (SRC-002) always respects the bound is property P4, to be audited.",
+    "version": "IEEE TCAD vol. 16, no. 1, 1997",
+    "license": "publisher copyright"
+  },
+  {
+    "id": "SRC-027",
+    "title": "Performance Computation for Pre-characterized CMOS Gates with RC Loads (F. Dartu, N. Menezes, L. T. Pileggi)",
+    "url": "https://users.ece.cmu.edu/~pileggi/?p=1040",
+    "type": "paper",
+    "published": "unknown",
+    "retrieved": "2026-10-13T07:59:00Z",
+    "locator": "Bibliographic record: IEEE TCAD 15(5):544-553, May 1996",
+    "access": "metadata",
+    "claims": [
+      "CLM-007"
+    ],
+    "limitations": "Not inspected. Cited only as the named basis of OpenSTA's default calculator (SRC-001).",
+    "version": "IEEE TCAD 1996",
+    "license": "publisher copyright"
+  },
+  {
+    "id": "SRC-028",
+    "title": "OpenROAD-flow-scripts flow/platforms/asap7/lib/NLDM directory listing (GitHub contents API, master)",
+    "url": "https://api.github.com/repos/The-OpenROAD-Project/OpenROAD-flow-scripts/contents/flow/platforms/asap7/lib/NLDM",
+    "type": "repository",
+    "published": "unknown",
+    "retrieved": "2026-10-13T07:53:00Z",
+    "locator": "File names asap7sc7p5t_{AO,INVBUF,OA,SEQ,SIMPLE,...}_{LVT,RVT,SLVT,SRAM}_{FF,SS,TT}_nldm_*.lib(.gz)",
+    "access": "full",
+    "claims": [
+      "CLM-013"
+    ],
+    "limitations": "Listing of the moving master branch (head e5cc6e799f5ddf36e6bdf2d8c5db73373b88f52c observed at about 17:00Z; see SRC-052). The listing was truncated after 76 entries. The voltages and temperatures of each corner were not read from the library headers.",
+    "version": "ORFS master at retrieval (not pinned)",
+    "license": "See SRC-032; provenance of the ORFS copies not verified"
+  },
+  {
+    "id": "SRC-029",
+    "title": "OpenROAD-flow-scripts flow/platforms/sky130hd/lib directory listing (GitHub contents API, master)",
+    "url": "https://api.github.com/repos/The-OpenROAD-Project/OpenROAD-flow-scripts/contents/flow/platforms/sky130hd/lib",
+    "type": "repository",
+    "published": "unknown",
+    "retrieved": "2026-10-13T07:52:00Z",
+    "locator": "Files: sky130_dummy_io.lib, sky130_fd_sc_hd__tt_025C_1v80.lib",
+    "access": "full",
+    "claims": [
+      "CLM-013"
+    ],
+    "limitations": "Master branch, not pinned.",
+    "version": "ORFS master at retrieval (not pinned)",
+    "license": "See SRC-031 (PDK) and SRC-033 (ORFS scripts)"
+  },
+  {
+    "id": "SRC-030",
+    "title": "google/skywater-pdk-libs-sky130_fd_sc_hd timing directory listing",
+    "url": "https://api.github.com/repos/google/skywater-pdk-libs-sky130_fd_sc_hd/contents/timing",
+    "type": "repository",
+    "published": "unknown",
+    "retrieved": "2026-10-13T07:52:00Z",
+    "locator": "17 .lib.json files: common plus 16 PVT corners (ff_100C_1v65, ff_100C_1v95, ff_n40C_1v56, ff_n40C_1v65, ff_n40C_1v76, ff_n40C_1v95_ccsnoise, ss_100C_1v40, ss_100C_1v60, ss_n40C_1v28, ss_n40C_1v35, ss_n40C_1v40, ss_n40C_1v44, ss_n40C_1v60_ccsnoise, ss_n40C_1v76, tt_025C_1v80, tt_100C_1v80)",
+    "access": "full",
+    "claims": [
+      "CLM-013"
+    ],
+    "limitations": "Files are JSON sources, not Liberty. Conversion or generation (e.g. via the PDK's build scripts or open_pdks) is an unverified prerequisite. The license of this specific library repository was not checked (only skywater-pdk, SRC-031).",
+    "version": "default branch at retrieval (not pinned)",
+    "license": "unknown for this repository (to verify)"
+  },
+  {
+    "id": "SRC-031",
+    "title": "google/skywater-pdk repository license (GitHub license API)",
+    "url": "https://api.github.com/repos/google/skywater-pdk/license",
+    "type": "repository",
+    "published": "unknown",
+    "retrieved": "2026-10-13T07:54:00Z",
+    "locator": "license.spdx_id = Apache-2.0; path LICENSE",
+    "access": "full",
+    "claims": [
+      "CLM-013"
+    ],
+    "limitations": "Covers the skywater-pdk umbrella repository; per-library repositories must be checked separately.",
+    "version": "default branch at retrieval",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "SRC-032",
+    "title": "ASAP7 repositories license (GitHub license API): The-OpenROAD-Project/asap7 and The-OpenROAD-Project/asap7sc7p5t_28",
+    "url": "https://api.github.com/repos/The-OpenROAD-Project/asap7sc7p5t_28/license",
+    "type": "repository",
+    "published": "unknown",
+    "retrieved": "2026-10-13T07:55:00Z",
+    "locator": "license.spdx_id = BSD-3-Clause for both repositories",
+    "access": "full",
+    "claims": [
+      "CLM-013"
+    ],
+    "limitations": "Whether the ORFS asap7 platform libraries (SRC-028) derive from these repositories is not verified. The ORFS platform README states no license.",
+    "version": "default branches at retrieval",
+    "license": "BSD-3-Clause"
+  },
+  {
+    "id": "SRC-033",
+    "title": "OpenROAD-flow-scripts LICENSE_BUILD_RUN_SCRIPTS",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD-flow-scripts/master/LICENSE_BUILD_RUN_SCRIPTS",
+    "type": "repository",
+    "published": "unknown",
+    "retrieved": "2026-10-13T07:54:00Z",
+    "locator": "Lines 1-10: BSD 3-Clause applies only to build/run scripts; tools, platforms and designs carry their own licenses",
+    "access": "full",
+    "claims": [
+      "CLM-013"
+    ],
+    "limitations": "Master branch.",
+    "version": "ORFS master at retrieval",
+    "license": "BSD-3-Clause (scripts only)"
+  },
+  {
+    "id": "SRC-034",
+    "title": "OpenROAD-flow-scripts design sources and licenses (flow/designs/src/{aes,jpeg,ibex_sv}; flow/designs/{asap7,sky130hd} listings)",
+    "url": "https://api.github.com/repos/The-OpenROAD-Project/OpenROAD-flow-scripts/contents/flow/designs/src",
+    "type": "repository",
+    "published": "unknown",
+    "retrieved": "2026-10-13T07:57:00Z",
+    "locator": "aes/LICENSE and jpeg/LICENSE: BSD-3-style license from ASICs World Services (adds netlist and silicon forms); ibex_sv/LICENSE: Apache-2.0. Design configurations exist for aes, ibex, jpeg on both asap7 and sky130hd.",
+    "access": "full",
+    "claims": [
+      "CLM-013"
+    ],
+    "limitations": "Master branch at retrieval; must be pinned to a commit. Licenses read through the extraction tool. Upstream provenance of the RTL was not verified.",
+    "version": "ORFS master at retrieval",
+    "license": "per design as listed"
+  },
+  {
+    "id": "SRC-035",
+    "title": "OpenROAD Parasitics Extraction (OpenRCX) documentation",
+    "url": "https://openroad.readthedocs.io/en/latest/main/src/rcx/README.html",
+    "type": "official documentation",
+    "published": "unknown",
+    "retrieved": "2026-10-13T08:00:00Z",
+    "locator": "Search-tool summary: RC tech (rules) files are process-corner specific; define_process_corner; extract_parasitics -corner/-corner_cnt options; rules generated by a calibration flow",
+    "access": "metadata",
+    "claims": [
+      "CLM-013"
+    ],
+    "limitations": "Search snippet only; describes 'latest' documentation, not the pinned commit. Option names differ between documentation versions.",
+    "version": "latest documentation at retrieval",
+    "license": "unknown"
+  },
+  {
+    "id": "SRC-036",
+    "title": "OpenROAD-flow-scripts flow/platforms/asap7 directory listing",
+    "url": "https://api.github.com/repos/The-OpenROAD-Project/OpenROAD-flow-scripts/contents/flow/platforms/asap7",
+    "type": "repository",
+    "published": "unknown",
+    "retrieved": "2026-10-13T07:53:00Z",
+    "locator": "Single rcx_patterns.rules (117,122 bytes) and setRC.tcl; no LICENSE file in the directory",
+    "access": "full",
+    "claims": [
+      "CLM-013"
+    ],
+    "limitations": "Master branch. A single rules file suggests one RC corner; the rules file's content was not inspected.",
+    "version": "ORFS master at retrieval",
+    "license": "unknown for platform files"
+  },
+  {
+    "id": "SRC-037",
+    "title": "TAU 2015 Contest: Incremental Timing and Incremental CPPR",
+    "url": "https://sites.google.com/site/taucontest2015/",
+    "type": "contest",
+    "published": "unknown",
+    "retrieved": "2026-10-13T07:11:00Z",
+    "locator": "Contest description and winners as summarized by the search tool (1st iTimerC 2.0, 2nd UI-Timer 2.0, 3rd iitRACE)",
+    "access": "metadata",
+    "claims": [
+      "CLM-014"
+    ],
+    "limitations": "Search summary; the page itself was not fetched.",
+    "version": "TAU 2015",
+    "license": "unknown"
+  },
+  {
+    "id": "SRC-038",
+    "title": "TAU 2016 timing contest page (timing macro-modeling)",
+    "url": "http://www.tauworkshop.com/2016/contest.html",
+    "type": "contest",
+    "published": "unknown",
+    "retrieved": "2026-10-13T07:55:00Z",
+    "locator": "Contest topic: 'Timing macro-modeling'; hierarchical timing with black-box/gray-box macro models; winners not listed",
+    "access": "full",
+    "claims": [
+      "CLM-014"
+    ],
+    "limitations": "Fetched via WebFetch.",
+    "version": "TAU 2016",
+    "license": "unknown"
+  },
+  {
+    "id": "SRC-039",
+    "title": "TAU contest topics 2013, 2014, 2017, 2020, 2021 (search-tool summaries of TAU/ISPD slides and later papers)",
+    "url": "https://ispd.cc/ispd2026/slides/2013/9_sinha.pdf",
+    "type": "contest",
+    "published": "unknown",
+    "retrieved": "2026-10-13T07:55:00Z",
+    "locator": "2013 variation-aware parametric timing; 2014 CPPR (ISPD 2014 slides s8_Hu.pdf); 2017 timing macro modeling (via LibAbs/iTimerM references); 2020 winner 'Delay Calculator Using Current Source Model'; 2021 delay calculation",
+    "access": "metadata",
+    "claims": [
+      "CLM-014"
+    ],
+    "limitations": "Search summaries only. Round 0 stated that the TAU 2018 and 2019 contest pages redirect to a Google login; that was inaccurate, since the official tauworkshop.com topic pages and summary slides are public. TAU 2018 and 2019 are now covered by SRC-053 to SRC-056. The retrieval time is corrected by +15 h for the host-clock offset. The decision-relevant topic record in round 1 is SRC-059 (GitHub, owner item U8).",
+    "version": "various",
+    "license": "unknown"
+  },
+  {
+    "id": "SRC-040",
+    "title": "ICCAD CAD Contest timing-related problems (2014/2015 incremental timing-driven placement; 2018 timing-aware fill; 2025 MBFF power/timing) and 2011 IC/CAD contest A3 multi-core STA",
+    "url": "https://www.iccad-contest.org/2015/problem_C/default.html",
+    "type": "contest",
+    "published": "unknown",
+    "retrieved": "2026-10-13T07:55:00Z",
+    "locator": "Search-tool summary of iccad-contest.org pages, the IEEE CEDA newsletter and the NTU 2011 course PDF",
+    "access": "metadata",
+    "claims": [
+      "CLM-014"
+    ],
+    "limitations": "No multi-corner scenario-reduction problem was found. This is an absence of evidence, not proof of absence; the full contest history was not enumerated.",
+    "version": "various",
+    "license": "unknown"
+  },
+  {
+    "id": "SRC-041",
+    "title": "Speeding Up Physical Synthesis with Transactional Timing Analysis (D. Papa, M. Moffitt, C. Alpert, I. Markov), IEEE Design & Test, Sept. 2010",
+    "url": "https://web.eecs.umich.edu/~imarkov/pubs/jour/dt10-sta.pdf",
+    "type": "paper",
+    "published": "unknown",
+    "retrieved": "2026-10-13T07:37:00Z",
+    "locator": "Introduction excerpt via search tool: STA 'the single major bottleneck in physical synthesis'",
+    "access": "metadata",
+    "claims": [
+      "CLM-016"
+    ],
+    "limitations": "TLS certificate verification failed for WebFetch and curl; certificate checks were deliberately not bypassed. Excerpt only. Used only for the excluded S1 slice.",
+    "version": "IEEE D&T 2010",
+    "license": "publisher copyright"
+  },
+  {
+    "id": "SRC-042",
+    "title": "US8141017B2 - Method for bounded transactional timing analysis (IBM; D. Papa, M. D. Moffitt)",
+    "url": "https://patents.google.com/patent/US8141017B2/en",
+    "type": "official documentation",
+    "published": "2012-03-20",
+    "retrieved": "2026-10-13T07:36:00Z",
+    "locator": "Abstract; description of timing window selection, checkpoint and rollback",
+    "access": "full",
+    "claims": [
+      "CLM-016"
+    ],
+    "limitations": "Extraction tool covered 100,000 of 130,114 characters; claims not reached. Excluded slice S1 only.",
+    "version": "US8141017B2",
+    "license": "Patent publication (public record)"
+  },
+  {
+    "id": "SRC-043",
+    "title": "US9280625B2 - Incremental slack margin propagation (Synopsys; A. H. Mottaez, M. A. Iyer)",
+    "url": "https://patents.google.com/patent/US9280625B2/en",
+    "type": "official documentation",
+    "published": "2016-03-08",
+    "retrieved": "2026-10-13T07:22:00Z",
+    "locator": "Abstract; claim 1; sections 'Caching the Slack Margin' and 'Efficient Incremental Slack Margin Propagation'",
+    "access": "full",
+    "claims": [
+      "CLM-016"
+    ],
+    "limitations": "Extraction tool. Excluded slice S1 only.",
+    "version": "US9280625B2 (priority 2011-12-02)",
+    "license": "Patent publication (public record)"
+  },
+  {
+    "id": "SRC-044",
+    "title": "US8056038B2 - Method for efficiently checkpointing and restarting static timing analysis of an integrated circuit chip (IBM)",
+    "url": "https://patents.google.com/patent/US8056038B2/en",
+    "type": "official documentation",
+    "published": "2011-11-08",
+    "retrieved": "2026-10-13T07:22:00Z",
+    "locator": "FIG. 5 step 503 (half-slack-margin test at partition ports); claims 12-13 (percentage-of-slack margin)",
+    "access": "full",
+    "claims": [
+      "CLM-016"
+    ],
+    "limitations": "Extraction tool. Excluded slice S1 only.",
+    "version": "US8056038B2",
+    "license": "Patent publication (public record)"
+  },
+  {
+    "id": "SRC-045",
+    "title": "US10747925B1 - Variable accuracy incremental timing analysis (IBM)",
+    "url": "https://patents.google.com/patent/US10747925B1/en",
+    "type": "official documentation",
+    "published": "2020-08-18",
+    "retrieved": "2026-10-13T07:22:00Z",
+    "locator": "Block 260 of FIG. 2 (sufficiency check comparing slack to the maximum slack change of the next more accurate model)",
+    "access": "full",
+    "claims": [
+      "CLM-016"
+    ],
+    "limitations": "Extraction tool. The derivation of the 'maximum change' is not given in the text. Relevant to the excluded S1 and S3 slices and as a related bound-then-refine concept.",
+    "version": "US10747925B1",
+    "license": "Patent publication (public record)"
+  },
+  {
+    "id": "SRC-046",
+    "title": "US5508937A - Incremental timing analysis (IBM; Abato, Drumm, Hathaway, van Ginneken)",
+    "url": "https://patents.google.com/patent/US5508937",
+    "type": "official documentation",
+    "published": "unknown",
+    "retrieved": "2026-10-13T07:33:00Z",
+    "locator": "Search-tool summary of claims and description (level-limited recalculation)",
+    "access": "metadata",
+    "claims": [
+      "CLM-016"
+    ],
+    "limitations": "Snippet only. Excluded slice S1.",
+    "version": "US5508937A",
+    "license": "Patent publication (public record)"
+  },
+  {
+    "id": "SRC-047",
+    "title": "iTimerC 2.0: Fast Incremental Timing and CPPR Analysis (P.-Y. Lee, I. H.-R. Jiang, C.-R. Li, W.-L. Chiu, Y.-M. Yang), ICCAD 2015, pp. 890-894",
+    "url": "https://ir.lib.nycu.edu.tw/handle/11536/129823",
+    "type": "paper",
+    "published": "unknown",
+    "retrieved": "2026-10-13T07:20:00Z",
+    "locator": "Abstract via search summary (lazy evaluation and lazy propagation); DOI 10.1109/ICCAD.2015.7372665 per search metadata",
+    "access": "metadata",
+    "claims": [
+      "CLM-016"
+    ],
+    "limitations": "Abstract only; self-reported results. Excluded slice S1.",
+    "version": "ICCAD 2015",
+    "license": "publisher copyright"
+  },
+  {
+    "id": "SRC-048",
+    "title": "OpenTimer v2: A New Parallel Incremental Timing Analysis Engine (T.-W. Huang, G. Guo, C.-X. Lin, M. D. F. Wong), IEEE TCAD 40(4):776-789, 2021",
+    "url": "https://scholars.hkbu.edu.hk/en/publications/opentimer-v2-a-new-parallel-incremental-timing-analysis-engine/",
+    "type": "paper",
+    "published": "unknown",
+    "retrieved": "2026-10-13T07:33:00Z",
+    "locator": "Bibliographic record and README-level description via search summary",
+    "access": "metadata",
+    "claims": [
+      "CLM-016"
+    ],
+    "limitations": "Not inspected. Excluded slice S1.",
+    "version": "IEEE TCAD 2021",
+    "license": "publisher copyright"
+  },
+  {
+    "id": "SRC-049",
+    "title": "INSTA: An Ultra-Fast, Differentiable, Statistical Static Timing Analysis Engine for Industrial Physical Design Applications (Y.-C. Lu, Z. Guo, K. Kunal, R. Liang, H. Ren; NVIDIA), DAC 2025",
+    "url": "https://research.nvidia.com/labs/electronic-design-automation/publication/lu2025dac",
+    "type": "paper",
+    "published": "unknown",
+    "retrieved": "2026-10-13T07:39:00Z",
+    "locator": "Abstract claims via search summary (0.999 correlation with PrimeTime; 25x faster incremental update in a commercial sizing flow)",
+    "access": "metadata",
+    "claims": [
+      "CLM-016"
+    ],
+    "limitations": "The PDF URL served a Git LFS pointer, so the paper was not inspected. It is GPU-based, so the method is outside the packet's no-GPU resource envelope.",
+    "version": "DAC 2025",
+    "license": "unknown"
+  },
+  {
+    "id": "SRC-050",
+    "title": "Speeding up OpenROAD (Antmicro blog)",
+    "url": "https://antmicro.com/blog/2024/03/speeding-up-openroad/",
+    "type": "official documentation",
+    "published": "2024-03-28",
+    "retrieved": "2026-10-13T07:18:00Z",
+    "locator": "Statement that global routing time is mostly taken by the gate resizer and the external OpenSTA library; ~80% CTS repair time reduction on Ariane from RepairSetup::rebufferBottomUp changes",
+    "access": "full",
+    "claims": [
+      "CLM-016"
+    ],
+    "limitations": "No per-function runtime fractions are given in the text; tables are images. Excluded slice S1.",
+    "version": "blog post 2024-03-28",
+    "license": "publisher copyright"
+  },
+  {
+    "id": "SRC-051",
+    "title": "OpenROAD LICENSE at commit b16bda7e82721d10566ff7e2b68f1ff0be9f9e38",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/LICENSE",
+    "type": "repository",
+    "published": "2024-06-03",
+    "retrieved": "2026-10-13T07:24:00Z",
+    "locator": "Whole file; SHA-256 e4c62605dedc27267ba0b1b987f6f86355b4e20362ebdeb07a59a792a260d29b",
+    "access": "full",
+    "claims": [
+      "CLM-006"
+    ],
+    "limitations": "The hash equals the LICENSE entry in config/physical-resources.lock.json, so the downloaded tree matches the packet's pinned commit. License text was not re-read.",
+    "version": "OpenROAD b16bda7e82721d10566ff7e2b68f1ff0be9f9e38",
+    "license": "not re-read in this session"
+  },
+  {
+    "id": "SRC-052",
+    "title": "OpenROAD-flow-scripts master head at retrieval (GitHub commits API)",
+    "url": "https://api.github.com/repos/The-OpenROAD-Project/OpenROAD-flow-scripts/commits/master",
+    "type": "repository",
+    "published": "unknown",
+    "retrieved": "2026-10-13T08:00:00Z",
+    "locator": "sha e5cc6e799f5ddf36e6bdf2d8c5db73373b88f52c; committer.date reported as 2026-10-12T19:30:07Z",
+    "access": "full",
+    "claims": [
+      "CLM-013"
+    ],
+    "limitations": "The reported committer date is later than the local UTC clock at retrieval (2026-10-12T17:00:46Z). Git committer dates are author-supplied and are not treated as authoritative. Earlier ORFS listings (SRC-028, -029, -033, -034, -036) were taken from master during 16:52-17:00Z and may correspond to a slightly different head.",
+    "version": "e5cc6e799f5ddf36e6bdf2d8c5db73373b88f52c",
+    "license": "See SRC-033"
+  },
+  {
+    "id": "SRC-053",
+    "title": "TAU 2018 timing contest topic page (ACM TAU Workshop 2018)",
+    "url": "https://www.tauworkshop.com/2018/contest.html",
+    "type": "contest",
+    "published": "unknown",
+    "retrieved": "2026-10-13T10:41:30Z",
+    "locator": "Topic paragraph ('Efficient generation of timing reports from an STA graph with updated arrival and required times'); goals list (top-N critical reports on a cone of logic; from/through/to); list of prior-year topics",
+    "access": "full",
+    "claims": [
+      "CLM-014"
+    ],
+    "limitations": "Topic page only. The linked Google-hosted contest website and its rule, format and benchmark attachments were not inspected. Acquired in ADD-0001 from tauworkshop.com before owner decision CLD-LAB-0001 (U8 restricts this round's searches to GitHub and arXiv). Used here only as corroboration of SRC-059.",
+    "version": "Page SHA-256 b6a917df90c74f67050654f0e0726085ebf40844d9f1b620a6b60236fd01fd9e; workshop dates March 15-16, 2018 per the page",
+    "license": "unknown (workshop website)"
+  },
+  {
+    "id": "SRC-054",
+    "title": "TAU 2018 contest summary slides (G. Chen, A. Dhuria, X. Chen): path reporting contest",
+    "url": "https://www.tauworkshop.com/2018/slides/TAU18_Contest.pdf",
+    "type": "contest",
+    "published": "unknown",
+    "retrieved": "2026-10-13T10:41:42Z",
+    "locator": "Slides 3-6: motivation; scope 'Graph-Based Analysis only' with from/through/to; benchmarks with constant-delay Liberty models; metrics. Slide 15: iTimerP local slack bounds and slack priority queue. Slides 20-22: results and prizes (1st iTimerP, 2nd BattleCat).",
+    "access": "full",
+    "claims": [
+      "CLM-014"
+    ],
+    "limitations": "Summary slides, not the official rules or file-format documents. Slide 2 is titled 'The TAU 2017 Contest' although the file name, content and prize slides are TAU 2018, probably a template carry-over. Text was extracted with a PDFKit reading aid. Acquired in ADD-0001 from tauworkshop.com before owner decision CLD-LAB-0001 (U8 restricts this round's searches to GitHub and arXiv). Used here only as corroboration of SRC-059.",
+    "version": "SHA-256 f043f70659eebb310e9be41d628df3cb5b167761b82cc592c94a9684e3256397 (matches the access guide); 25 pages",
+    "license": "unknown (workshop slides)"
+  },
+  {
+    "id": "SRC-055",
+    "title": "TAU 2019 timing contest topic page (ACM TAU Workshop 2019)",
+    "url": "https://www.tauworkshop.com/2019/contest.html",
+    "type": "contest",
+    "published": "unknown",
+    "retrieved": "2026-10-13T10:41:30Z",
+    "locator": "Topic paragraph ('TAU 2019 timing contest topic: Design optimization'); goals list (incremental, multithreaded optimization engine; evaluation by final timing, area and power)",
+    "access": "full",
+    "claims": [
+      "CLM-014"
+    ],
+    "limitations": "Topic page only. The page footer reads 'Site last updated: August 28, 2018', so it predates the contest. The Google-hosted rule and benchmark attachments were not inspected. Acquired in ADD-0001 from tauworkshop.com before owner decision CLD-LAB-0001 (U8 restricts this round's searches to GitHub and arXiv). Used here only as corroboration of SRC-059.",
+    "version": "Page SHA-256 c9af5518675c6fccd0aca1b5adbf50aebe669ec06d0daf3d9e1348e2eeeb657c",
+    "license": "unknown (workshop website)"
+  },
+  {
+    "id": "SRC-056",
+    "title": "TAU 2019 contest summary slides (G. Chen, T.-W. Huang, J. Shah): design optimization contest",
+    "url": "https://www.tauworkshop.com/2019/slides/TAU%202019%20Contest.pdf",
+    "type": "contest",
+    "published": "unknown",
+    "retrieved": "2026-10-13T10:41:35Z",
+    "locator": "Slide 3: allowed optimizations (buffer insertion, deletion and resizing). Slide 4: OpenTimer-based evaluation. Slide 5: benchmarks and Nangate FreePDK45. Slide 6: scoring. Slides 11-13: results per 'fast corner' and 'typical corner', runtime, memory and scores. Slides 16-18: prizes (1st iTimerP, 2nd Time-Boost, 3rd Parallel Closure).",
+    "access": "full",
+    "claims": [
+      "CLM-014"
+    ],
+    "limitations": "Summary slides, not the official rules or file formats. Text was extracted with a PDFKit reading aid. Acquired in ADD-0001 from tauworkshop.com before owner decision CLD-LAB-0001 (U8 restricts this round's searches to GitHub and arXiv). Used here only as corroboration of SRC-059.",
+    "version": "SHA-256 5df07bbd5ec081139e993a3038ad52263afbfbb62f645a9c390f869c43af085e (matches the access guide); 18 pages",
+    "license": "unknown (workshop slides)"
+  },
+  {
+    "id": "SRC-057",
+    "title": "One-for-All: An Unified Learning-Based Framework for Efficient Cross-Corner Timing Signoff (L. Zhu, Y. Cai, X. Guo)",
+    "url": "https://doi.org/10.1145/3676536.3676656",
+    "type": "paper",
+    "published": "unknown",
+    "retrieved": "2026-10-13T10:55:18Z",
+    "locator": "Abstract (Semantic Scholar Graph API record): learning-based reference-corner selection and interconnect timing prediction from one known corner; ECO acceleration",
+    "access": "abstract",
+    "claims": [
+      "CLM-002"
+    ],
+    "limitations": "Abstract only, via a metadata index. Method, guarantees and evaluation were not inspected. Found as a forward citation of SRC-012.",
+    "version": "ICCAD 2024 (per Semantic Scholar metadata)",
+    "license": "unknown"
+  },
+  {
+    "id": "SRC-058",
+    "title": "FACT: Fast and Accurate Multi-Corner Predictor for Timing Closure in Commercial EDA Flows (J. Xu, Z. Han, L.-L. Jin, S. Wu, H. Yan, L. Shi)",
+    "url": "https://doi.org/10.1145/3670474.3685941",
+    "type": "paper",
+    "published": "unknown",
+    "retrieved": "2026-10-13T10:55:18Z",
+    "locator": "Abstract (Semantic Scholar Graph API record): corner counts 'from dozens to hundreds'; full-corner timing prediction from one known corner for ECO timing closure",
+    "access": "abstract",
+    "claims": [
+      "CLM-001",
+      "CLM-002"
+    ],
+    "limitations": "Abstract only, via a metadata index. Method, guarantees and evaluation were not inspected. Found as a forward citation of SRC-012.",
+    "version": "MLCAD 2024 (ACM/IEEE Workshop on Machine Learning for CAD), per Semantic Scholar metadata",
+    "license": "unknown"
+  },
+  {
+    "id": "SRC-059",
+    "title": "OpenTimer README.md (OpenTimer/OpenTimer): list of contests in which OpenTimer served as golden timer",
+    "url": "https://raw.githubusercontent.com/OpenTimer/OpenTimer/cd0565fc7a720368e75751c717be92d76350ee8d/README.md",
+    "type": "repository",
+    "published": "unknown",
+    "retrieved": "2026-10-14T04:42:00Z",
+    "locator": "README lines 349-359: 'Golden Timer, 2019 ACM TAU Timing Analysis Contest on Timing-driven Optimization'; 'Golden Timer, 2018 ACM TAU Timing Analysis Contest on Timing Reports from an STA Graph'; link targets lines 481-482",
+    "access": "full",
+    "claims": [
+      "CLM-014"
+    ],
+    "limitations": "A topic-level record in the contest golden timer's repository (OpenTimer project), not the organizers' rules, file formats or winner reports. Whether it counts as a primary record of the contest topics is for the verifier. Found by GitHub search under owner item U8; arXiv searches found no record.",
+    "version": "commit cd0565fc7a720368e75751c717be92d76350ee8d (master, committed 2025-12-26)",
+    "license": "MIT (repository LICENSE at the pinned commit; GitHub's license API reports NOASSERTION)"
+  },
+  {
+    "id": "SRC-060",
+    "title": "OpenSTA dcalc/FindRoot.cc (safeguarded Newton/bisection root finder) at commit e01d3f163f483f233db00410b6515a767a6ca03b",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/e01d3f163f483f233db00410b6515a767a6ca03b/dcalc/FindRoot.cc",
+    "type": "repository",
+    "published": "2024-05-30",
+    "retrieved": "2026-10-14T03:30:00Z",
+    "locator": "lines 41-103: bracket check 50-55, Newton step accepted only inside the bracket 76-79, bisection 80-84, convergence |dx| <= x_tol*|root| 89-93, bracket update 96-101, failure 102",
+    "access": "full",
+    "claims": [
+      "CLM-019",
+      "CLM-020",
+      "CLM-021",
+      "CLM-022"
+    ],
+    "limitations": "Code reading by the proposer, not a verification. File hash matched the copy fetched by lab job REQ-0001.",
+    "version": "commit e01d3f163f483f233db00410b6515a767a6ca03b",
+    "license": "GPL-3.0 (repository LICENSE)"
+  },
+  {
+    "id": "SRC-061",
+    "title": "OpenSTA dcalc/DmpDelayCalc.cc (DmpCeffElmoreDelayCalc) at commit e01d3f163f483f233db00410b6515a767a6ca03b",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/e01d3f163f483f233db00410b6515a767a6ca03b/dcalc/DmpDelayCalc.cc",
+    "type": "repository",
+    "published": "2024-05-30",
+    "retrieved": "2026-10-14T03:30:00Z",
+    "locator": "lines 104-122: load delay and slew default to (0, driver slew) and use Elmore only when present; thresholdAdjust applied",
+    "access": "full",
+    "claims": [
+      "CLM-021"
+    ],
+    "limitations": "Code reading by the proposer, not a verification. File hash matched the copy fetched by lab job REQ-0001.",
+    "version": "commit e01d3f163f483f233db00410b6515a767a6ca03b",
+    "license": "GPL-3.0 (repository LICENSE)"
+  },
+  {
+    "id": "SRC-062",
+    "title": "OpenSTA dcalc/DelayCalcBase.cc at commit e01d3f163f483f233db00410b6515a767a6ca03b",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/e01d3f163f483f233db00410b6515a767a6ca03b/dcalc/DelayCalcBase.cc",
+    "type": "repository",
+    "published": "2024-05-30",
+    "retrieved": "2026-10-14T03:30:00Z",
+    "locator": "lines 108-124 dspfWireDelaySlew (single-pole slew increment used as the P5 test bound); lines 127-153 thresholdAdjust (applies only when load and driver libraries differ)",
+    "access": "full",
+    "claims": [
+      "CLM-020",
+      "CLM-024"
+    ],
+    "limitations": "Code reading by the proposer, not a verification. File hash matched the copy fetched by lab job REQ-0001.",
+    "version": "commit e01d3f163f483f233db00410b6515a767a6ca03b",
+    "license": "GPL-3.0 (repository LICENSE)"
+  },
+  {
+    "id": "SRC-063",
+    "title": "OpenSTA parasitics/ReduceParasitics.cc (pi and Elmore reduction) at commit e01d3f163f483f233db00410b6515a767a6ca03b",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/e01d3f163f483f233db00410b6515a767a6ca03b/parasitics/ReduceParasitics.cc",
+    "type": "repository",
+    "published": "2024-05-30",
+    "retrieved": "2026-10-14T03:30:00Z",
+    "locator": "lines 104-145 reduceToPi (O'Brien/Savarino moments to C2, Rpi, C1); 148-212 reducePiDfs (moments, loop resistors ignored); 215-233 pinCapacitance (pin caps added when SPEF excludes them); 349-380 reduceElmoreDfs",
+    "access": "full",
+    "claims": [
+      "CLM-018",
+      "CLM-019",
+      "CLM-020"
+    ],
+    "limitations": "Code reading by the proposer, not a verification. File hash matched the copy fetched by lab job REQ-0001.",
+    "version": "commit e01d3f163f483f233db00410b6515a767a6ca03b",
+    "license": "GPL-3.0 (repository LICENSE)"
+  },
+  {
+    "id": "SRC-064",
+    "title": "OpenSTA CMakeLists.txt (build dependencies and output locations) at commit e01d3f163f483f233db00410b6515a767a6ca03b",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/e01d3f163f483f233db00410b6515a767a6ca03b/CMakeLists.txt",
+    "type": "repository",
+    "published": "2024-05-30",
+    "retrieved": "2026-10-14T03:30:00Z",
+    "locator": "lines 262-264 FLEX/BISON; 337 TCL; 367 Eigen3 REQUIRED; 568 runtime output directory app/; 573 add_executable(sta); 399-400 (SSTA defaults to 0, which selects the float Delay type of SRC-071)",
+    "access": "full",
+    "claims": [
+      "CLM-021",
+      "CLM-028"
+    ],
+    "limitations": "Code reading by the proposer, not a verification. File hash matched the copy fetched by lab job REQ-0001.",
+    "version": "commit e01d3f163f483f233db00410b6515a767a6ca03b",
+    "license": "GPL-3.0 (repository LICENSE)"
+  },
+  {
+    "id": "SRC-065",
+    "title": "OpenSTA dcalc/LumpedCapDelayCalc.cc (parasitic lookup and lumped fallback) at commit e01d3f163f483f233db00410b6515a767a6ca03b",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/e01d3f163f483f233db00410b6515a767a6ca03b/dcalc/LumpedCapDelayCalc.cc",
+    "type": "repository",
+    "published": "2024-05-30",
+    "retrieved": "2026-10-14T03:30:00Z",
+    "locator": "lines 55-90 findParasitic (set_load precedence, PiElmore, reduction, wireload estimate); 92-102 reduceParasitic",
+    "access": "full",
+    "claims": [
+      "CLM-021"
+    ],
+    "limitations": "Code reading by the proposer, not a verification. File hash matched the copy fetched by lab job REQ-0001.",
+    "version": "commit e01d3f163f483f233db00410b6515a767a6ca03b",
+    "license": "GPL-3.0 (repository LICENSE)"
+  },
+  {
+    "id": "SRC-066",
+    "title": "Efficient Block-Based Parameterized Timing Analysis Covering All Potentially Critical Paths (ICCAD 2008; authors not verified by the proposer)",
+    "url": "https://www.eecg.utoronto.ca/~najm/papers/iccad08-khaled.pdf",
+    "type": "paper",
+    "published": "unknown",
+    "retrieved": "2026-10-14T08:55:00Z",
+    "locator": "Not opened by the proposer. The challenger record (S01) gives printed pp. 174-175, sections 2.1, 2.2, 2.2.1 and 2.2.2, equations (2), (5), (6), (9) and (10).",
+    "access": "metadata",
+    "claims": [
+      "CLM-015",
+      "CLM-026"
+    ],
+    "limitations": "Lead relayed from the challenger first pass Codex-C05-TIMING-R2, runs/CDX-C05-INDEPENDENT-0001/sources.json at commit b7822234587292124a6d033167beb5f9d942e818 (SHA-256 0cf632f9...). What the proposer retrieved is the challenger's record, not the paper. The host is outside the GitHub and arXiv routes the proposer may use in this round, and neither holds a copy (search-log.md Q45 and Q46). The challenger paraphrases it as assuming linear parameterized arc delays, defining envelope-preserving path removal, and distinguishing sufficient pairwise pruning from exact feasibility-based pruning. That paraphrase is an unverified secondary report and is used only to scope CLM-026 and K1. The verifier must read the full text.",
+    "version": "ICCAD 2008 (per the challenger record)",
+    "license": "unknown (author-hosted copy)"
+  },
+  {
+    "id": "SRC-067",
+    "title": "Efficient Computation of the Worst-Delay Corner (L. Silva, L. M. Silveira, J. Phillips), DATE 2007, pp. 1-6",
+    "url": "https://algos.inesc-id.pt/projects/powerplan/IC6.pdf",
+    "type": "paper",
+    "published": "unknown",
+    "retrieved": "2026-10-14T08:55:00Z",
+    "locator": "Bibliographic entry [9] on slide 29 of SRC-014 (proposer copy, full access). The URL is taken from the challenger record (S03). The paper was not opened.",
+    "access": "metadata",
+    "claims": [
+      "CLM-015",
+      "CLM-026"
+    ],
+    "limitations": "Metadata only. The challenger record titles the INESC-ID-hosted PDF 'Efficient Computation of the Exact Worst-Delay Corner' and reports that its text could not be retrieved. Whether the two titles denote the same work is unverified. arXiv and GitHub hold no copy (Q45, Q46). The title indicates exact worst-delay-corner computation, which is close in goal. Its delay model, guarantee and output (worst delay versus per-endpoint slack) are unknown. Decision-relevant for K1; verifier full-text read required.",
+    "version": "DATE 2007 (per SRC-014 slide 29)",
+    "license": "unknown"
+  },
+  {
+    "id": "SRC-068",
+    "title": "Parameterized Timing Analysis with General Delay Models and Arbitrary Variation Sources (K. Heloue, F. Najm), DAC 2008, pp. 403-408",
+    "url": "unknown (cited by SRC-014 slide 29; no copy on arXiv or GitHub)",
+    "type": "paper",
+    "published": "unknown",
+    "retrieved": "2026-10-14T08:55:00Z",
+    "locator": "Bibliographic entry [7] on slide 29 of SRC-014. Not opened.",
+    "access": "metadata",
+    "claims": [
+      "CLM-005",
+      "CLM-026"
+    ],
+    "limitations": "Found by backward citation from SRC-014 during the round-1b intake. Round 0 missed it. The title states general delay models, which would weaken limitation L2 (linear parametric delay models, CLM-005) if the method applies to discrete characterized corners. Its delay model, guarantee and corner semantics are unknown. Decision-relevant for K1.",
+    "version": "DAC 2008 (per SRC-014 slide 29)",
+    "license": "unknown"
+  },
+  {
+    "id": "SRC-069",
+    "title": "OpenSTA sdc/ExceptionPath.cc (MultiCyclePath::pathMultiplier) at commit e01d3f163f483f233db00410b6515a767a6ca03b",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/e01d3f163f483f233db00410b6515a767a6ca03b/sdc/ExceptionPath.cc",
+    "type": "repository",
+    "published": "2024-05-30",
+    "retrieved": "2026-10-14T09:05:00Z",
+    "locator": "lines 649-656: a multicycle path declared without -setup or -hold returns multiplier 0 for min (hold) checks and its own multiplier otherwise",
+    "access": "full",
+    "claims": [
+      "CLM-027"
+    ],
+    "limitations": "Code reading by the proposer, not a verification. File SHA-256 63634674e4377dc558c61762e15f309320a589a90d7ab4b9c42c70745b5149ce.",
+    "version": "commit e01d3f163f483f233db00410b6515a767a6ca03b",
+    "license": "GPL-3.0 (repository LICENSE)"
+  },
+  {
+    "id": "SRC-070",
+    "title": "OpenSTA search/PathEnd.cc (multicycle adjustment of the target clock) at commit e01d3f163f483f233db00410b6515a767a6ca03b",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/e01d3f163f483f233db00410b6515a767a6ca03b/search/PathEnd.cc",
+    "type": "repository",
+    "published": "2024-05-30",
+    "retrieved": "2026-10-14T09:05:00Z",
+    "locator": "lines 624-633 (target clock arrival includes targetClkMcpAdjustment); lines 776-831 checkMcpAdjustment: for hold checks, line 809 returns (setup_mult - 1) * setup_period - hold_mult * hold_period, line 816 returns -mult * period and line 823 returns (mult - 1) * period when only a setup multicycle path applies",
+    "access": "full",
+    "claims": [
+      "CLM-027"
+    ],
+    "limitations": "Code reading by the proposer, not a verification. Path-group, tag and exception-matching code was not traced. File SHA-256 482a9b10b7e84f62324751565092db5ef1a5da136b7606ff5e2f85e5e1fc558d.",
+    "version": "commit e01d3f163f483f233db00410b6515a767a6ca03b",
+    "license": "GPL-3.0 (repository LICENSE)"
+  },
+  {
+    "id": "SRC-071",
+    "title": "OpenSTA include/sta/Delay.hh and include/sta/DelayFloat.hh (delay numeric type) at commit e01d3f163f483f233db00410b6515a767a6ca03b",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/e01d3f163f483f233db00410b6515a767a6ca03b/include/sta/DelayFloat.hh",
+    "type": "repository",
+    "published": "2024-05-30",
+    "retrieved": "2026-10-14T09:06:00Z",
+    "locator": "DelayFloat.hh line 27 'typedef float Delay;'; Delay.hh lines 21-38 (DelayFloat.hh is selected unless SSTA is 1 or 2; ArcDelay, Slew, Arrival, Required and Slack are Delay)",
+    "access": "full",
+    "claims": [
+      "CLM-028"
+    ],
+    "limitations": "Code reading by the proposer. SHA-256: DelayFloat.hh 5040e6a4d0c7c362bacb9eec93a59c14c60d41d85503a828374b09824d33e449; Delay.hh 932955a7a86aec8e5bd311ed7beb5db134e7d5e945a97c3e854c933a2697bfb6. The order of float operations in arrival propagation was not traced.",
+    "version": "commit e01d3f163f483f233db00410b6515a767a6ca03b",
+    "license": "GPL-3.0 (repository LICENSE)"
+  }
+]

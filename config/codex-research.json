@@ -1,11 +1,11 @@
 {
   "schema": 1,
   "platform": "OpenAI Codex",
-  "runtime_root": "../EDA-Codex-Research",
+  "runtime_root": "../EDA-GPT-Four-Rounds-20261015",
   "cli": "codex",
   "models": {
     "proposer": {
-      "model": "gpt-6-astra",
+      "model": "gpt-6.1-sol",
       "effort": "high"
     },
     "challenger": {
@@ -13,8 +13,8 @@
       "effort": "low"
     },
     "verifier": {
-      "model": "gpt-6-luna",
-      "effort": "medium"
+      "model": "gpt-6.1-sol",
+      "effort": "low"
     }
   },
   "topics": {
@@ -25,7 +25,11 @@
         "challenger": "ChatGPT-C04-PHYSICAL",
         "verifier": "ChatGPT-V04-PHYSICAL"
       },
-      "seed_prefix": null
+      "seed_prefix": null,
+      "handover_prefixes": {
+        "proposer": [],
+        "verifier": []
+      }
     },
     "EDA-0002": {
       "domain": "D05",
@@ -34,18 +38,29 @@
         "challenger": "ChatGPT-C05-TIMING",
         "verifier": "ChatGPT-V05-TIMING"
       },
-      "seed_prefix": "runs/CLD-P05-FROZEN-0002/candidates/EDA-0002/"
+      "seed_prefix": "runs/GPT-HANDOVER-0001/proposer-shared/candidates/EDA-0002/",
+      "handover_prefixes": {
+        "proposer": [
+          "runs/GPT-HANDOVER-0001/proposer-shared/"
+        ],
+        "verifier": [
+          "runs/GPT-HANDOVER-0001/verifier-shared/"
+        ]
+      }
     }
   },
   "poll_seconds": 30,
   "turn_timeout_seconds": 1800,
   "failure_backoff_seconds": 1800,
-  "max_substantive_rounds": 3,
+  "max_substantive_rounds": 4,
   "max_topics_per_domain": null,
   "publication": {
     "enabled": true,
     "auto_merge": true,
     "require_human_final_reports": false
   },
-  "execution_policy": "Research automation may read accessible external sources, write its own outputs, freeze and send. It may not inspect foreign private content, purchase resources, or exceed the existing experiment allocation."
+  "execution_policy": "Research automation may read accessible external sources, write its own outputs, freeze and send. It may not inspect foreign private content, purchase resources, or exceed the existing experiment allocation.",
+  "backend": "codex_app_agents",
+  "stop_after_rounds": 4,
+  "max_parallel_domains": 2
 }

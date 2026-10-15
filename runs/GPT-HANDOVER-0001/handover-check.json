@@ -1,0 +1,14 @@
+{
+  "proposer_inventory_count": 66,
+  "mismatches": [],
+  "verifier_handover_sha256": "f658c733065362fc0c7d9920bd3c4024c7eec6324c7e36f32c014a9425f6ba4f",
+  "legacy_verdict_scope": "R0 proposal / original DeepSeek OBJ-001 and OBJ-002 only; not a verdict on R1b or new GPT revisions",
+  "source_access": "Owner explicitly released these files. No transcripts, hidden memory or unlisted scratch read.",
+  "native_model_probe": {
+    "requested": "gpt-6.1-sol low",
+    "cli": "0.145.0",
+    "exit_code": 1,
+    "error": "The gpt-6.1-sol model is not supported when using Codex with a ChatGPT account.",
+    "response": "Use exact-model Codex app agents; no model fallback."
+  }
+}

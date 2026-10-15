@@ -90,7 +90,7 @@
     "evidence": "Require >=3 independently selected designs and >=5 paired seeds per stochastic condition, confidence intervals and all failures. GCD alone cannot establish success. Revise thresholds after baseline variance and practitioner input, before candidate evaluation."
   },
   "human_owner": "getm0ss1moving",
-  "max_review_rounds": 3,
+  "max_review_rounds": 4,
   "feasibility_status": "Infrastructure smoke verified; topic-level R1 feasibility remains conditional on representative designs, baseline reproduction, domain oracle and role review.",
-  "review_policy": "Three substantive research rounds per candidate, then park automatically and explore a successor. Consent-only exchanges do not consume a substantive round. Human research-decision approval is optional under owner directive 2026-10-15."
+  "review_policy": "Owner-authorized bounded batch: D04 and D05 run concurrently; each domain stops after four completed proposer/challenger/verifier cycles, including any successor candidates. Report unresolved evidence honestly."
 }
