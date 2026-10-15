@@ -1,0 +1,11 @@
+# Contest originality audit, cutoff 2026-10-15
+
+| Material | Actually inspected | Relation and limitation |
+|---|---|---|
+| S13 ISPD2026 v2.2, sections 2 and 3 | Official full rules are available; bounded relevant scope passages inspected | Post-placement buffering/sizing; ideal-clock single-mode setup scope is adjacent to timing closure, not a full exact PBA contest oracle. Implementing its optimization task is not our contribution. |
+| S14 official ISPD2026 results; S15 organizer repository README | Winners/resources/timeline and public top-level structure | Ranks and starter assets do not reveal winner mechanisms. Repository advertises BSD-3-Clause; per-benchmark/platform rights are not thereby cleared. No data downloaded or run. |
+| S19 TAU2019 official program and contest page | Program shows Design optimizations and links for Parallel Closure, iTimer, TimeBoost; contest page itself is sparse | Initial combined winner retrieval failed; separate retry read S20 ParallelClosure. Other team methods remain unresolved. No rank or algorithm is inferred from a team name. |
+| S04 official TAU2019 merging talk | Slides 5-9 and 11-13 | It is an invited/research presentation, not treated as a contest winning method. Provides close scientific context. |
+| Newer editions | Searches for TAU2025/2026 contests, updated ISPD material; no complete new exact-PBA task inspected | No claim of no newer contest or finalized 2027 task. Full current winner/rules coverage is unresolved. |
+
+S20 (official linked contest-team slides), slides 2,6-12,14-16,19,21, describes buffering, slew-target sizing and parallel STA with Galois operators, including explicit limitations. This establishes adjacent known optimization/scheduling ideas, not a paired-certificate implementation or measured result for us. Read all remaining organizer hints, baseline source and winner reports before promotion (T00). Specifically search path enumeration, suffix/prefix trees, full-depth PBA, signal merging and backward slack. Generic safe pruning, completing a known contest task, or caching supplied routines would be insufficient. Source/publication date is separated from page crawl date. No hidden-case file is acquired simply because a public page links one. No contest overlap gate is passed by an unsuccessful search.

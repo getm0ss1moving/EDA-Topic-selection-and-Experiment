@@ -1,0 +1,187 @@
+[
+  {
+    "id": "C01",
+    "title": "Static Timing Analysis using Backward Signal Propagation",
+    "url": "https://www.cs.york.ac.uk/rts/docs/SIGDA-Compendium-1994-2004/papers/2004/dac04/pdffiles/p664.pdf",
+    "source_type": "primary_research_or_official_source",
+    "publication_date": "2004-06",
+    "retrieved_utc": "2026-10-15T09:26:46.145957+00:00",
+    "locator": "Sections 3.1-3.2, EQ2/EQ3, proceedings pp.666-667",
+    "access": "full",
+    "supported_claim_ids": [
+      "OBJ-401"
+    ],
+    "limitations": "Backward scalar suffix tables and finite interpolation; not an exact executable-arithmetic complexity theorem."
+  },
+  {
+    "id": "C02",
+    "title": "On the Signal Bounding Problem in Timing Analysis",
+    "url": "https://cecs.uci.edu/~papers/compendium94-03/papers/2001/iccad01/pdffiles/08d_2.pdf",
+    "source_type": "primary_research_or_official_source",
+    "publication_date": "2001",
+    "retrieved_utc": "2026-10-15T09:26:46.145957+00:00",
+    "locator": "Section 3 EQ11-14; Section 4 EQ15-18, PDF pp.4-6",
+    "access": "full",
+    "supported_claim_ids": [
+      "OBJ-401"
+    ],
+    "limitations": "Composite-path sensitivity bounds and backward recursion; no reproduction or proof of total equivalence to candidate."
+  },
+  {
+    "id": "C03",
+    "title": "OpenSTA TableModel.cc",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/e01d3f163f483f233db00410b6515a767a6ca03b/liberty/TableModel.cc",
+    "source_type": "primary_source_code",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-15T09:26:46.145957+00:00",
+    "locator": "Table2::findValue lines 959-1017",
+    "access": "full",
+    "supported_claim_ids": [
+      "OBJ-402"
+    ],
+    "limitations": "Pinned e01d3f163f483f233db00410b6515a767a6ca03b; float interface and double intermediates read. No build or full timing adapter audit."
+  },
+  {
+    "id": "C04",
+    "title": "Infinite-depth path-based analysis of operational timing for circuit design",
+    "url": "https://patents.google.com/patent/US10776547B1/en",
+    "source_type": "primary_research_or_official_source",
+    "publication_date": "2020-09-15",
+    "retrieved_utc": "2026-10-15T09:26:46.145957+00:00",
+    "locator": "Detailed Description phase merging and Nworst discussion, claims 1-9",
+    "access": "full",
+    "supported_claim_ids": [
+      "COVERAGE"
+    ],
+    "limitations": "Primary disclosure, not deployment proof. Selected description inspected, not every embodiment."
+  },
+  {
+    "id": "C05",
+    "title": "Adaptive path based analysis process",
+    "url": "https://patents.google.com/patent/US12423504B1/en",
+    "source_type": "primary_research_or_official_source",
+    "publication_date": "2025-09-23",
+    "retrieved_utc": "2026-10-15T09:26:46.145957+00:00",
+    "locator": "Detailed Description FIG9 adaptive endpoint selection, lines 845 onward",
+    "access": "full",
+    "supported_claim_ids": [
+      "COVERAGE"
+    ],
+    "limitations": "Primary disclosure inspected; no measured comparison or full equivalence proof."
+  },
+  {
+    "id": "C06",
+    "title": "Using Machine Learning to Predict Path-Based Slack from Graph-Based Timing Analysis",
+    "url": "https://vlsicad.ucsd.edu/Publications/Conferences/361/c361.pdf",
+    "source_type": "primary_research_or_official_source",
+    "publication_date": "2018",
+    "retrieved_utc": "2026-10-15T09:26:46.145957+00:00",
+    "locator": "Abstract and Introduction pp.603-605",
+    "access": "full",
+    "supported_claim_ids": [
+      "OBJ-403"
+    ],
+    "limitations": "General PBA motivation; inspected introductory scope, not a validation of present restricted-model utility."
+  },
+  {
+    "id": "C07",
+    "title": "ISPD26 Contest Description v2.2",
+    "url": "https://www.ispd.cc/contests/26/ISPD26_contest_description.pdf",
+    "source_type": "primary_research_or_official_source",
+    "publication_date": "2026",
+    "retrieved_utc": "2026-10-15T09:26:46.145957+00:00",
+    "locator": "Section 2, PDF p.3 constraints; section 3 metrics",
+    "access": "full",
+    "supported_claim_ids": [
+      "COVERAGE"
+    ],
+    "limitations": "Setup single-mode ideal-clock optimization, not exhaustive PBA timing oracle."
+  },
+  {
+    "id": "C08",
+    "title": "ISPD26 official contest results",
+    "url": "https://www.ispd.cc/contests/26/index.html",
+    "source_type": "primary_research_or_official_source",
+    "publication_date": "2026",
+    "retrieved_utc": "2026-10-15T09:26:46.145957+00:00",
+    "locator": "Contest Winners and resources",
+    "access": "full",
+    "supported_claim_ids": [
+      "COVERAGE"
+    ],
+    "limitations": "Ranking read; winner method details not established."
+  },
+  {
+    "id": "C09",
+    "title": "A Symbolic Execution Framework for Symbolic Timing Analysis of Digital Integrated Circuits",
+    "url": "https://arxiv.org/html/2608.04036v1",
+    "source_type": "primary_research_or_official_source",
+    "publication_date": "2026-08-03",
+    "retrieved_utc": "2026-10-15T09:26:46.145957+00:00",
+    "locator": "Sections V-B, V-D, VI and Appendix A",
+    "access": "full",
+    "supported_claim_ids": [
+      "COVERAGE"
+    ],
+    "limitations": "HTML plus direct text retrieval; symbolic event-state timing, goal functions and feasibility pruning differ from paired NLDM suffix queries. No runtime comparison."
+  },
+  {
+    "id": "C10",
+    "title": "MLCAD26 Contest",
+    "url": "https://asu-vda-lab.github.io/MLCAD26-Contest/",
+    "source_type": "primary_research_or_official_source",
+    "publication_date": "2026",
+    "retrieved_utc": "2026-10-15T09:26:46.145957+00:00",
+    "locator": "Contest Overview, Final Results, Contest Details",
+    "access": "full",
+    "supported_claim_ids": [
+      "COVERAGE"
+    ],
+    "limitations": "Later contest expansion. Design-adaptive optimization; no inference about hidden winners algorithms."
+  },
+  {
+    "id": "C11",
+    "title": "MLCAD26 official code README",
+    "url": "https://raw.githubusercontent.com/ASU-VDA-Lab/MLCAD26-Contest-Scripts-Benchmarks/main/README.md",
+    "source_type": "primary_research_or_official_source",
+    "publication_date": "2026",
+    "retrieved_utc": "2026-10-15T09:26:46.145957+00:00",
+    "locator": "Lines 3-17 and 52-57 baseline evaluation",
+    "access": "full",
+    "supported_claim_ids": [
+      "COVERAGE"
+    ],
+    "limitations": "Current unpinned README; repair_timing baseline described. No scripts executed. Direct description PDF retrieval returned internal error."
+  },
+  {
+    "id": "C12",
+    "title": "MLCAD2026 official program",
+    "url": "https://mlcad.org/symposium/2026/program/",
+    "source_type": "primary_research_or_official_source",
+    "publication_date": "2026-09",
+    "retrieved_utc": "2026-10-15T09:26:46.145957+00:00",
+    "locator": "Contest Session lines 134-143 and timing poster lines 163-164",
+    "access": "metadata",
+    "supported_claim_ids": [
+      "COVERAGE"
+    ],
+    "limitations": "Program titles inspected; papers and winner internals not verified. Secondary CERBERUS lead not used as method evidence."
+  },
+  {
+    "id": "P0",
+    "title": "Frozen successor proposal and task list",
+    "url": "shared/SUB-a9dc2b2421eae654e0f60201c11f172e38bc87864f420a7230cb7cc88b716306",
+    "source_type": "released_role_output",
+    "publication_date": "2026-10-15",
+    "retrieved_utc": "2026-10-15T09:26:46.145957+00:00",
+    "locator": "proposal.md CLM-400..410; tasklist.md T00..T11; experiment-plan.md",
+    "access": "full",
+    "supported_claim_ids": [
+      "OBJ-401",
+      "OBJ-402",
+      "OBJ-403",
+      "OBJ-404"
+    ],
+    "limitations": "Released input only; no inherited scientific approval."
+  }
+]

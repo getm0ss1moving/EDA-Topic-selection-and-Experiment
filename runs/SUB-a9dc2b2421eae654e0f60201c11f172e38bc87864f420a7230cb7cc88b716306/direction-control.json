@@ -1,0 +1,91 @@
+{
+  "state": "continue",
+  "topic": "EDA-0004",
+  "operational_position": "final_batch_candidate_unresolved_no_experiment",
+  "anchor": {
+    "problem": "Exhaustive endpoint path-specific setup analysis can require expensive multi-signal continuation; evaluate whether paired suffix differences provide a cheaper exact comparison representation.",
+    "engineering_user": "Timing-closure engineer deciding whether a declared setup endpoint needs an ECO.",
+    "downstream_need": "Complete worst endpoint PBA slack and violation decisions with lower total turnaround, identical declared-model outputs and honest coverage.",
+    "causal_mechanism": "Query-directed product DAG over two compatible prefix states taking the same suffix edges; certify an upper bound on executable severity difference and delete only endpoint-dominated states.",
+    "mechanism_invariants": [
+      "Same suffix language and timing context for both states.",
+      "Pair the same edge before taking a maximum; include endpoint setup.",
+      "Account for full executable arrivals/rounding, or label a result real-model-only.",
+      "Unsupported/budget-exhausted queries retain states or exact fallback; no silent omissions.",
+      "Strong scalar backward suffix and signal-bound controls receive all shared cache and scheduling optimizations.",
+      "All overhead is charged; difference in representation must yield actual user-relevant benefit."
+    ],
+    "forbidden_pivots": [
+      "Renaming EDA-0002 own-table CAP/corner certificate.",
+      "Claiming backward propagation, dominance, generic interval arithmetic or caching as novel.",
+      "Restricting B+ to coarse bounds or removing scalar demand-driven reuse.",
+      "Replacing exact endpoint outputs by learned predictions, cluster pessimism or bounded-depth clean verdicts.",
+      "Switching to an unsupported proxy or multidimensional production-signoff claim to evade a negative result."
+    ]
+  },
+  "penalties": {
+    "combination_drift": {
+      "score": 0,
+      "rationale": "Initial new-ID anchor; no revision or scientific clearance. Routine-composition risk is explicit and unresolved, not erased by zero initial drift.",
+      "evidence_refs": [
+        "CLM-403",
+        "CLM-406",
+        "S02",
+        "S06"
+      ]
+    },
+    "demand_drift": {
+      "score": 0,
+      "rationale": "Initial user decision fixed; restricted-slice demand remains a gate, not a passed fact.",
+      "evidence_refs": [
+        "CLM-401",
+        "S04",
+        "S11"
+      ]
+    },
+    "total": 0
+  },
+  "revision_assessment": {
+    "preserves_problem": true,
+    "preserves_engineering_need": true,
+    "preserves_causal_mechanism": true,
+    "changes": [],
+    "reason": "Initial EDA-0004 anchor. Explicit successor changes predecessor objective/mechanism and therefore receives a new topic ID; old adverse scores remain in lineage."
+  },
+  "abandonment": {
+    "decision_id": null,
+    "grounds": [],
+    "rationale": "No same-target joint consent, exhaustive novelty failure or universal dead-end proof. Current unresolved position is not abandonment.",
+    "evidence_refs": [
+      "CLM-406"
+    ],
+    "consents": {
+      "proposer": {
+        "session_id": null,
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      },
+      "challenger": {
+        "session_id": null,
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      }
+    },
+    "successor_topic_id": null,
+    "resurrection_conditions": [
+      "Demonstrate nonroutine distinction and fully charged net-work witness vs unrestricted exact scalar B+.",
+      "Prove executable arithmetic and suffix/context legality.",
+      "Validate scoped demand, representative rights, actual resources and exact task consensus."
+    ]
+  },
+  "predecessor": {
+    "topic": "EDA-0002",
+    "status": "parked",
+    "combination_drift": 1,
+    "demand_drift": 0,
+    "inherited_approval": false,
+    "negative_results_retained": true
+  }
+}

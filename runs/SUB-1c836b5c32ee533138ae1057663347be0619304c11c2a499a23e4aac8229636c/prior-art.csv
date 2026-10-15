@@ -1,0 +1,7 @@
+source_id,task_formulation,mechanism,data,evaluation,assumptions,limitation,overlap,proposed_distinction
+C01,worst delay with slew,scalar backward functions,paper circuits,published only,finite interpolation,not executable exact proof,suffix DP and slack pruning,pair cost unproved
+C02,signal dominance,recursive sensitivity bounds,paper examples,not reproduced,sensitivity assumptions,not arbitrary certified relational solver,difference bounds,query-local paired enclosure
+C04,PBA,staged signal merging,patent disclosure,not reproduced,phase/context compatibility,deployment unknown,retain/prune signals,same-suffix product
+C05,adaptive PBA,target selection,patent disclosure,not reproduced,adaptive thresholds,exact matching unknown,selective PBA work,paired relation
+C09,symbolic circuit timing,event state tree and constraints,author examples,not reproduced,analytic event timing,different state/model,goal-directed pruning,fixed NLDM same-suffix pairs
+C11,timing optimization contest,OpenROAD repair_timing baseline,contest designs,README only,optimization evaluation,not PBA oracle,flow integration,exact endpoint analysis
