@@ -1,0 +1,18 @@
+{
+  "topic": "EDA-0008",
+  "batch_round": 4,
+  "batch_round_limit": 4,
+  "actor_id": "ChatGPT-V04-PHYSICAL-EDA-0008",
+  "input_commit": "f68c1492c05be3fac5622deac4bb479eabf957de",
+  "packet_sha256": "08368a5b4cdec4b2456cab9ea1bf5c0ec290cbc105ef258822bcdb600e6dcfdb",
+  "reviewed_proposer_release": "SUB-1c2deaff2701f8108c4f9d6fdca3298698c7aa4a8273f9e9036232c12bde533c",
+  "adjudicated_challenger_releases": [
+    "SUB-a602a69c8d241294ba08a561d4471f2945f3416673b66de648bb72e6c31b9f97"
+  ],
+  "next_action": "park",
+  "role": "verifier",
+  "session_id": "6d337b5b-f9f0-44f8-aa22-8aeea66b2301",
+  "decision": "park",
+  "run_manifest": "verification.json: run_manifest",
+  "reason": "Final authorized D04 cycle: conditional hypothesis remains, readiness and novelty unresolved; no consent or measured gain."
+}

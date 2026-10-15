@@ -1,0 +1,19 @@
+{
+  "kind": "forecast_not_measurement",
+  "metric": "complete charged time to prespecified feasible post-DR quality target",
+  "unit": "seconds",
+  "baseline_source": "B0-B4/B6 strongest applicable baseline, not yet reproduced",
+  "direction": "lower at matched quality/guards",
+  "pessimistic": null,
+  "base": null,
+  "optimistic": null,
+  "confidence": null,
+  "assumptions": [
+    "Real order effects exist above repeat noise",
+    "Same-data direct nonlinear model does not remove representation advantage",
+    "Deployable initial inputs suffice",
+    "Label/training/fallback cost amortizes under stated reuse count",
+    "Final routing preserves useful effect"
+  ],
+  "calibration_plan": "EXP-002 fixes meaningful thresholds; EXP-003 establishes incidence; EXP-007/008 measure paired pilot and cold/amortized cost. No numeric forecast is calibrated now."
+}

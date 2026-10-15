@@ -1,0 +1,8 @@
+source_id,task,mechanism,assumptions_and_limits,overlap_and_distinction
+C02,Joint placement/sizing,Discrete repair plus differentiable timing/power refinement,Broader actions; different objective,Need exact order-outcome comparison; no duplicate established
+C03,IR-aware gate sizing,RL-LR order and choice,Post-route IR-aware,Order learning prior; legalization pair delta unproven
+C04,Whole physical flow,Stage tree and conditioned agents,Stage parameter actions,Not low-level two-order label identity
+C05,Post-CTS repair,Adaptive agent-selected move sequences,Different stage; selected specification only,"Strong sequence/controller reference, not exact reduction"
+C06,Gate sizing,Learned physically aware gradient supervision,Commercial optimizer labels,Alternative learned guide; same-data adaptation must be identified
+C07,ISPD26,Winner index,No algorithms read,Open prior-art risk
+C10,ICCAD26 FloorSet,Data-driven floorplanning,Block-level task,"Newer edition checked, not same problem"

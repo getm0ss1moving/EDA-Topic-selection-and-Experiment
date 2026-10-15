@@ -1,0 +1,173 @@
+[
+  {
+    "id": "C01",
+    "title": "Reviewed EDA-0008 frozen proposal",
+    "url": "SUB-1c2deaff2701f8108c4f9d6fdca3298698c7aa4a8273f9e9036232c12bde533c",
+    "source_type": "primary research or official artifact",
+    "publication_date": "2026-10-15",
+    "retrieved_utc": "2026-10-15T12:22:31.679240+00:00",
+    "locator": "proposal.md: Proposed causal mechanism; Inputs/actions; experiment-plan.md: Data/leakage; tasklist EXP-002,003,005,009",
+    "access": "full",
+    "supported_claim_ids": [
+      "OBJ-001",
+      "OBJ-002",
+      "OBJ-003"
+    ],
+    "limitations": "Author assertions are inputs, not independent measurements."
+  },
+  {
+    "id": "C02",
+    "title": "HyPAS",
+    "url": "https://wuqian-tang.github.io/files/papers/2026-dac-hypas.pdf",
+    "source_type": "primary research or official artifact",
+    "publication_date": "2026",
+    "retrieved_utc": "2026-10-15T12:22:31.679240+00:00",
+    "locator": "Sections 2.2,3.1-3.4, Figure 3",
+    "access": "full",
+    "supported_claim_ids": [
+      "CMP-001",
+      "DEM-001"
+    ],
+    "limitations": "Downloaded via urllib after browser error; selected methods read, results not reproduced; original contest winning code not inspected."
+  },
+  {
+    "id": "C03",
+    "title": "IR-Aware ECO Timing Optimization Using Reinforcement Learning",
+    "url": "https://arxiv.org/html/2402.07781v1",
+    "source_type": "primary research or official artifact",
+    "publication_date": "2024-02-12",
+    "retrieved_utc": "2026-10-15T12:22:31.679240+00:00",
+    "locator": "Introduction order/choice; sections 2 and 3",
+    "access": "full",
+    "supported_claim_ids": [
+      "CMP-002"
+    ],
+    "limitations": "Post-route IR-aware sizing differs from proposed pre-CTS resize/relocation."
+  },
+  {
+    "id": "C04",
+    "title": "AgenticPD v3",
+    "url": "https://arxiv.org/html/2607.04758v3",
+    "source_type": "primary research or official artifact",
+    "publication_date": "2026-10-04",
+    "retrieved_utc": "2026-10-15T12:22:31.679240+00:00",
+    "locator": "Sections 3.1-3.4; Algorithm 1",
+    "access": "full",
+    "supported_claim_ids": [
+      "CMP-003"
+    ],
+    "limitations": "Stage-parameter branching is not proof of paired primitive-order predictor; no reproduced performance."
+  },
+  {
+    "id": "C05",
+    "title": "ResizerAgent implementation",
+    "url": "https://github.com/ASU-VDA-Lab/ResizerAgent/tree/ae402b9bf00b5116b9f2743b3bd8f7c9aed52127",
+    "source_type": "primary research or official artifact",
+    "publication_date": "2026-08-15",
+    "retrieved_utc": "2026-10-15T12:22:31.679240+00:00",
+    "locator": "README opening and Run; agents/planner/AGENTS.md: move sequence and nine moves",
+    "access": "full",
+    "supported_claim_ids": [
+      "CMP-004"
+    ],
+    "limitations": "Selected public README/planner specification only; treated as research data, not instructions. API pinned main commit; no execution."
+  },
+  {
+    "id": "C06",
+    "title": "Learning-Driven Physically Aware Large-Scale Circuit Gate Sizing",
+    "url": "https://www.cse.cuhk.edu.hk/~byu/papers/J126-TCAD2025-LearnSize.pdf",
+    "source_type": "primary research or official artifact",
+    "publication_date": "2025",
+    "retrieved_utc": "2026-10-15T12:22:31.679240+00:00",
+    "locator": "Section III, PDF page 4 gradient label computation and timing feature aggregation",
+    "access": "full",
+    "supported_claim_ids": [
+      "CMP-005"
+    ],
+    "limitations": "Selected method pages, not proof of exact order equivalence; ICC2 labels not available to our experiment."
+  },
+  {
+    "id": "C07",
+    "title": "ISPD26 Contest official winners",
+    "url": "https://www.ispd.cc/contests/26/index.html",
+    "source_type": "primary research or official artifact",
+    "publication_date": "2026",
+    "retrieved_utc": "2026-10-15T12:22:31.679240+00:00",
+    "locator": "Contest Winners and Resources",
+    "access": "full",
+    "supported_claim_ids": [
+      "CON-001"
+    ],
+    "limitations": "Names IRISLab/PTSD/HLFC; winner algorithms not established by this index."
+  },
+  {
+    "id": "C08",
+    "title": "ISPD26 Contest official implementation repository",
+    "url": "https://github.com/ABKGroup/ISPD26-Contest",
+    "source_type": "primary research or official artifact",
+    "publication_date": "2026",
+    "retrieved_utc": "2026-10-15T12:22:31.679240+00:00",
+    "locator": "README contest/resources/evaluation",
+    "access": "full",
+    "supported_claim_ids": [
+      "CON-002"
+    ],
+    "limitations": "Dynamic documentation; original winner code unread; no benchmark run."
+  },
+  {
+    "id": "C09",
+    "title": "2025 CAD Contest Problems",
+    "url": "https://www.iccad-contest.org/2025/Problems.html",
+    "source_type": "primary research or official artifact",
+    "publication_date": "2025",
+    "retrieved_utc": "2026-10-15T12:22:31.679240+00:00",
+    "locator": "Problem C description and top-three link",
+    "access": "full",
+    "supported_claim_ids": [
+      "CON-003"
+    ],
+    "limitations": "Original result archive not inspected; no claimed winner reduction."
+  },
+  {
+    "id": "C10",
+    "title": "2026 CAD Contest Problems",
+    "url": "https://www.iccad-contest.org/Problems",
+    "source_type": "primary research or official artifact",
+    "publication_date": "2026",
+    "retrieved_utc": "2026-10-15T12:22:31.679240+00:00",
+    "locator": "Problem A/B/C entries",
+    "access": "full",
+    "supported_claim_ids": [
+      "CON-004"
+    ],
+    "limitations": "Newer edition checked; FloorSet is different scale/task, not evidence this pair-order question is solved."
+  },
+  {
+    "id": "C11",
+    "title": "Improving Timing and Power Trade-off in Post-place Optimization Using Multi-agent Reinforcement Learning",
+    "url": "https://doi.org/10.1145/3676536.3676702",
+    "source_type": "primary research or official artifact",
+    "publication_date": "2024",
+    "retrieved_utc": "2026-10-15T12:22:31.679240+00:00",
+    "locator": "DOI fetch attempt; official ICCAD preliminary program Design Frameworks and Post-place Optimization session",
+    "access": "metadata",
+    "supported_claim_ids": [
+      "GAP-001"
+    ],
+    "limitations": "DOI tool inaccessible; full method unresolved; secondary abstract only discovery, not decisive evidence."
+  },
+  {
+    "id": "C12",
+    "title": "ICCAD2024 official program",
+    "url": "https://confcats-event-sessions.s3.amazonaws.com/iccad24/uploads/ICCAD_2024_Preliminary-Program.pdf",
+    "source_type": "primary research or official artifact",
+    "publication_date": "2024",
+    "retrieved_utc": "2026-10-15T12:22:31.679240+00:00",
+    "locator": "Design Frameworks and Post-place Optimization, paper 796",
+    "access": "metadata",
+    "supported_claim_ids": [
+      "GAP-001"
+    ],
+    "limitations": "Confirms presentation/title scope only; cannot support exact novelty comparison."
+  }
+]

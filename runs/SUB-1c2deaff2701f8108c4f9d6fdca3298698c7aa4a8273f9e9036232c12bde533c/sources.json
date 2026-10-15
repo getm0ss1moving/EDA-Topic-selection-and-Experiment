@@ -1,0 +1,333 @@
+[
+  {
+    "id": "S01",
+    "title": "ChatEDA: A Large Language Model Powered Autonomous Agent for EDA",
+    "url": "https://arxiv.org/html/2308.10204",
+    "type": "primary_paper",
+    "published": "2024-09-21",
+    "retrieved": "2026-10-15T12:13:33.901850+00:00",
+    "locator": "Section III-A Task Decomposition, III-B Script Generation, III-C Task Execution; author manuscript framework sections",
+    "access": "full",
+    "claims": [
+      "CLM-001"
+    ],
+    "limitations": "Selected framework/method/evaluation sections inspected, not results reproduced. This HTML is discovery current rendering; prior packet identifies v4; pin exact v4 bytes before reproduction.",
+    "version": "arXiv:2308.10204 (rendered current)",
+    "provenance_status": "Independent source reading in this EDA-0008 proposer job unless expressly metadata-only"
+  },
+  {
+    "id": "S02",
+    "title": "Divergent Thoughts toward One Goal: LLM-based Multi-Agent Collaboration System for Electronic Design Automation",
+    "url": "https://arxiv.org/html/2502.10857v1",
+    "type": "primary_paper",
+    "published": "2025-02-15",
+    "retrieved": "2026-10-15T12:13:33.901850+00:00",
+    "locator": "Sections 3.1-3.3 agent/connection/message definition, divergent thoughts, decision making; sections 2/4 context",
+    "access": "full",
+    "claims": [
+      "CLM-002"
+    ],
+    "limitations": "Method sections inspected. No public code successfully located from this source; no performance numbers transferred.",
+    "version": "arXiv:2502.10857v1",
+    "provenance_status": "Independent source reading in this EDA-0008 proposer job unless expressly metadata-only",
+    "related_urls": [
+      "https://aclanthology.org/2025.naacl-long.83/"
+    ]
+  },
+  {
+    "id": "S03",
+    "title": "AgenticPD: A Stage-Aware Agentic Framework for Closed-Loop Physical Design Optimization",
+    "url": "https://arxiv.org/html/2607.04758v3",
+    "type": "primary_paper",
+    "published": "2026-10-04",
+    "retrieved": "2026-10-15T12:13:33.901850+00:00",
+    "locator": "Section 2.1; complete methodology 3.1-3.4; Algorithm1; experimental boundary 4.1",
+    "access": "full",
+    "claims": [
+      "CLM-003"
+    ],
+    "limitations": "v1 initially opened but superseded for current method claims: v3 selects by GR and routes final incumbent. Future ASP-DAC2027 venue metadata is not a completed future evaluation. No gains reproduced.",
+    "version": "arXiv:2607.04758v3",
+    "provenance_status": "Independent source reading in this EDA-0008 proposer job unless expressly metadata-only"
+  },
+  {
+    "id": "S04",
+    "title": "Author-linked AgenticPD implementation",
+    "url": "https://github.com/Flians/AgenticPD/tree/3456161b829ee2cc4888cbe57b279d2733452367",
+    "type": "primary_code",
+    "published": "2026-09-03",
+    "retrieved": "2026-10-15T12:13:33.901850+00:00",
+    "locator": "README execution/checkpoint contract; src/agenticpd/agents/stage_agent.py propose() lines185-239; src/agenticpd/flow/checkpoint.py inheritance lines50-110",
+    "access": "full",
+    "claims": [
+      "CLM-003"
+    ],
+    "limitations": "Selected code read, not built. Pin predates paper v3. Search initially found Cheatnut/AgenticPD; it is excluded as author-method evidence because paper links Flians.",
+    "version": "3456161b829ee2cc4888cbe57b279d2733452367",
+    "provenance_status": "Independent source reading in this EDA-0008 proposer job unless expressly metadata-only",
+    "files_sha256": {
+      "src/agenticpd/agents/stage_agent.py": "3369d49c562f7fc635cd051365283ef37bdd94091b7940fcbf56ef5faf1cd937",
+      "src/agenticpd/flow/checkpoint.py": "c67a3b853f80a56cc3fd2fdc321797b931ce27a37ce1e4d9e5eb7fcc25b6e913"
+    },
+    "license_status": "Source repository publicly readable; dependency/model/tool licenses need experiment audit"
+  },
+  {
+    "id": "S05",
+    "title": "OpenROAD optimizer, move journaling and incremental placement source",
+    "url": "https://github.com/The-OpenROAD-Project/OpenROAD/tree/3549d60529517dc82deb7f0ff769345e9a424911",
+    "type": "primary_code",
+    "published": "2026-10-15",
+    "retrieved": "2026-10-15T12:13:33.901850+00:00",
+    "locator": "src/rsz/src/MoveCommitter.cc beginJournal/commitJournal/restoreJournal lines482-557; Optimizer.cc run lines157-196; src/dpl/src/Opendp.cpp detailedPlacement lines128-180 and updateDbInstLocations",
+    "access": "full",
+    "claims": [
+      "CLM-004"
+    ],
+    "limitations": "Current code substantially reorganized; requested old RepairSetup.cc returned404, corrected to actual directory-listed Optimizer/MoveCommitter. Selected functions only; no tool build or full-policy absence claim.",
+    "version": "3549d60529517dc82deb7f0ff769345e9a424911",
+    "provenance_status": "Independent source reading in this EDA-0008 proposer job unless expressly metadata-only",
+    "files_sha256": {
+      "src/rsz/src/MoveCommitter.cc": "ee9f09555c317de9e57e73d5edab56f5f710cd7195206229a31bb54be49c1679",
+      "src/rsz/src/Optimizer.cc": "2343706101c8b2faabb81398d2989cc8963c539cc32fe1741c71192451362e26",
+      "src/rsz/src/MoveTracker.cc": "ef0bd6d9a7c9a4adef32a32bdcf3f49f4b1ab31ecd9954e2af4da5c9140b7835",
+      "src/dpl/src/Opendp.cpp": "3a062a1f870d6d78a39e5dd5e071c23503f09f6ff5e882936b0ef9f1be6f0f94"
+    },
+    "related_urls": [
+      "https://openroad.readthedocs.io/en/latest/main/src/rsz/README.html"
+    ],
+    "license_status": "Selected files SPDX BSD-3-Clause; PDK/input rights separate"
+  },
+  {
+    "id": "S06",
+    "title": "HyPAS: A Hybrid Optimization Framework for Placement and Sizing Co-Optimization",
+    "url": "https://wuqian-tang.github.io/files/papers/2026-dac-hypas.pdf",
+    "type": "primary_author_paper",
+    "published": "2026-07-26",
+    "retrieved": "2026-10-15T12:13:33.901850+00:00",
+    "locator": "DOI10.1145/3770743.3804137; Section2.2; sections3.1-3.7; Figure3; Section4 comparison boundary",
+    "access": "full",
+    "claims": [
+      "CLM-005",
+      "CLM-007"
+    ],
+    "limitations": "Author PDF independently fetched with urllib after web reader failed; pdftotext method sections inspected. Paper gradients target sizing logits while DREAMPlace handles location; no claim that whole pipeline or measurements reproduced. Original winner executable not inspected.",
+    "version": "7-page author manuscript",
+    "provenance_status": "Independent source reading in this EDA-0008 proposer job unless expressly metadata-only",
+    "sha256": "d843ea04b2746e449c7ded65ab06bb5f5d9d11f969251962c6feec7bdb930ca0",
+    "license_status": "Paper prints CC BY4.0; only metadata/paraphrases released, no PDF"
+  },
+  {
+    "id": "S07",
+    "title": "IR-Aware ECO Timing Optimization Using Reinforcement Learning",
+    "url": "https://arxiv.org/html/2402.07781v1",
+    "type": "primary_paper",
+    "published": "2024-02-12",
+    "retrieved": "2026-10-15T12:13:33.901850+00:00",
+    "locator": "Sections2,3.1-3.3,4.2; order/choice explicitly in Introduction and action definition3.2; incremental timing equation6 context",
+    "access": "full",
+    "claims": [
+      "CLM-006"
+    ],
+    "limitations": "Different post-PD IR-aware sizing task; transfer to placement-aware relocation is not automatic. No numerical gains imported; quoted contribution priority claims not adopted.",
+    "version": "arXiv:2402.07781v1",
+    "provenance_status": "Independent source reading in this EDA-0008 proposer job unless expressly metadata-only"
+  },
+  {
+    "id": "S08",
+    "title": "Improving Timing & Power Trade-off in Post-place Optimization Using Multi-agent Reinforcement Learning",
+    "url": "https://soc.postech.ac.kr/bbs/board.php?bo_table=sub5_1&sca=2024&wr_id=277",
+    "type": "primary_author_metadata",
+    "published": "2024",
+    "retrieved": "2026-10-15T12:13:33.901850+00:00",
+    "locator": "Author laboratory publication entry; ICCAD2024 final program Session Design Frameworks and Post-place Optimization; DOI10.1145/3676536.3676702",
+    "access": "metadata",
+    "claims": [
+      "CLM-014"
+    ],
+    "limitations": "Author page provides paper/slides; web download returns error page. Ordinary session-aware fresh-page retrieval also returned invalid/expired-token page; no bypass attempted. ACM403. Full nine-page method remains unread; secondary abstract used only for discovery, not decisive method absence.",
+    "version": "ICCAD2024 162:1-162:9",
+    "provenance_status": "Independent source reading in this EDA-0008 proposer job unless expressly metadata-only",
+    "related_urls": [
+      "https://dl.acm.org/doi/10.1145/3676536.3676702",
+      "https://confcats-event-sessions.s3.amazonaws.com/iccad24/uploads/ICCAD_2024_Program_Final.pdf"
+    ]
+  },
+  {
+    "id": "S09",
+    "title": "AutoDMP Optimizes Macro Placement for Chip Design with AI and GPUs",
+    "url": "https://developer.nvidia.com/blog/autodmp-optimizes-macro-placement-for-chip-design-with-ai-and-gpus/",
+    "type": "primary_author_technical_article",
+    "published": "2023-04-18",
+    "retrieved": "2026-10-15T12:13:33.901850+00:00",
+    "locator": "Multi-objective optimization; Results and integration flow",
+    "access": "full",
+    "claims": [],
+    "limitations": "Primary author technical explanation of multi-objective parameter search and downstream flow. Different macro-placement stage. Full formal paper not inspected here; no reported gains/hardware transferred. Wrong arXiv2303.16495 search guess is unrelated and excluded.",
+    "version": "Author technical article",
+    "provenance_status": "Independent source reading in this EDA-0008 proposer job unless expressly metadata-only"
+  },
+  {
+    "id": "S10",
+    "title": "CircuitNet official repository",
+    "url": "https://github.com/circuitnet/CircuitNet/tree/41ade1d7e913a418b4495b6b13630b26b0ff7279",
+    "type": "primary_code_dataset_documentation",
+    "published": "2026-05-17",
+    "retrieved": "2026-10-15T12:13:33.901850+00:00",
+    "locator": "README changelog, Congestion/DRC/IR drop and Net Delay sections; official download page task table",
+    "access": "full",
+    "claims": [
+      "CLM-011"
+    ],
+    "limitations": "Documentation read; no data/model downloaded. Supports task availability, not a claim that paired interventions exist or cannot exist anywhere in dataset. Concrete data rights/layout errors must be audited.",
+    "version": "41ade1d7e913a418b4495b6b13630b26b0ff7279",
+    "provenance_status": "Independent source reading in this EDA-0008 proposer job unless expressly metadata-only",
+    "related_urls": [
+      "https://circuitnet.github.io/intro/download.html",
+      "https://circuitnet.github.io/change-log.html"
+    ],
+    "license_status": "README states BSD3-Clause code; dataset/PDK rights not inferred from code license"
+  },
+  {
+    "id": "S11",
+    "title": "Invited: Post-Placement Buffering and Sizing Contest",
+    "url": "https://vlsicad.ucsd.edu/Publications/Conferences/421/c421.pdf",
+    "type": "primary_organizer_paper",
+    "published": "2026-03-15",
+    "retrieved": "2026-10-15T12:13:33.901850+00:00",
+    "locator": "Sections2.1-2.4 operations/constraints/workflow, Section3 Table1 benchmarks, Section4 evaluation, Section5 roadmap",
+    "access": "full",
+    "claims": [
+      "CLM-007"
+    ],
+    "limitations": "Organizer paper independently downloaded/pdftotext inspected. Ideal-clock setup single-PVT GR-based evaluation is narrower than full DR. Roadmap is not completed results; no contest compute transferred.",
+    "version": "ISPD2026 organizer manuscript",
+    "provenance_status": "Independent source reading in this EDA-0008 proposer job unless expressly metadata-only",
+    "sha256": "da7022e95d0e86678787a7413b798684cd4989497ddec7cba3d1553ff3ac32d6"
+  },
+  {
+    "id": "S12",
+    "title": "ISPD2026 official contest winner index",
+    "url": "https://www.ispd.cc/contests/26/index.html",
+    "type": "primary_contest",
+    "published": "unknown",
+    "retrieved": "2026-10-15T12:13:33.901850+00:00",
+    "locator": "Contest Winners list items1-3 and resource links",
+    "access": "full",
+    "claims": [
+      "CLM-014"
+    ],
+    "limitations": "IRISLab/PTSD/HLFC identities only; method or originality cannot be inferred from rank. Exact winner reports/source not inspected.",
+    "version": "retrieved2026-10-15",
+    "provenance_status": "Independent source reading in this EDA-0008 proposer job unless expressly metadata-only"
+  },
+  {
+    "id": "S13",
+    "title": "2025 CAD Contest official Problems index",
+    "url": "https://www.iccad-contest.org/2025/Problems.html",
+    "type": "primary_contest",
+    "published": "2025",
+    "retrieved": "2026-10-15T12:13:33.901850+00:00",
+    "locator": "Problem C title/organizer, description link last update09/04, top-three result link12/01, environment/runtime limits",
+    "access": "full",
+    "claims": [
+      "CLM-007",
+      "CLM-014"
+    ],
+    "limitations": "Index inspected; original linked rule PDF rendered only sparse Drive preview; do not call index full-rule inspection. Neighboring ProblemA spreadsheet was accidentally opened then excluded.",
+    "version": "retrieved2026-10-15",
+    "provenance_status": "Independent source reading in this EDA-0008 proposer job unless expressly metadata-only"
+  },
+  {
+    "id": "S14",
+    "title": "ICCAD problem C top-three result ZIP official link",
+    "url": "https://drive.google.com/file/d/1yZstdjFc30xt9RYz583ecb8_jnDE1F9O/view?usp=sharing",
+    "type": "primary_contest_resource",
+    "published": "2025-12-01",
+    "retrieved": "2026-10-15T12:13:33.901850+00:00",
+    "locator": "Official S13 ProblemC top-3 result link38; Drive title only",
+    "access": "metadata",
+    "claims": [
+      "CLM-014"
+    ],
+    "limitations": "ZIP payload not retrieved or inspected; no winner algorithm claim based on it. University winner announcement is discovery context only.",
+    "version": "official linked archive",
+    "provenance_status": "Independent source reading in this EDA-0008 proposer job unless expressly metadata-only"
+  },
+  {
+    "id": "S15",
+    "title": "Achieve Optimal PPA Targets Using AI-Driven Technology",
+    "url": "https://www.synopsys.com/webinars/optimal-ppa-targets-dso-ai.html",
+    "type": "primary_vendor_capability",
+    "published": "unknown",
+    "retrieved": "2026-10-15T12:13:33.901850+00:00",
+    "locator": "Description of DSO.ai reinforcement-learning PPA search and RTL-to-GDS full-flow capability",
+    "access": "full",
+    "claims": [
+      "CLM-012"
+    ],
+    "limitations": "Vendor advertises capability; does not establish controlled performance, internal mechanism absence, license access or superiority/inferiority. Promotional percentages deliberately omitted.",
+    "version": "retrieved2026-10-15",
+    "provenance_status": "Independent source reading in this EDA-0008 proposer job unless expressly metadata-only"
+  },
+  {
+    "id": "S16",
+    "title": "Method, system, and computer program product for implementing incremental placement in electronics design",
+    "url": "https://patents.google.com/patent/US20100037196A1/en",
+    "type": "primary_patent",
+    "published": "2010-02-11",
+    "retrieved": "2026-10-15T12:13:33.901850+00:00",
+    "locator": "Description referring to Figures6-7: ordering movable instances by density/target score, bounded/adaptive search region",
+    "access": "full",
+    "claims": [],
+    "limitations": "Patent description inspected as prior mechanism, not legal advice, validity ruling or performance evidence. Conventional placement ordering is already prior.",
+    "version": "US20100037196A1",
+    "provenance_status": "Independent source reading in this EDA-0008 proposer job unless expressly metadata-only"
+  },
+  {
+    "id": "S17",
+    "title": "OpenROAD-flow-scripts commit metadata",
+    "url": "https://api.github.com/repos/The-OpenROAD-Project/OpenROAD-flow-scripts/commits/08ddc64f89c66b7e8398587d25bbaf55858d1fe5",
+    "type": "primary_code_metadata",
+    "published": "2026-10-14",
+    "retrieved": "2026-10-15T12:13:33.901850+00:00",
+    "locator": "GitHub commit SHA and commit date fields",
+    "access": "metadata",
+    "claims": [],
+    "limitations": "Version candidate only. No compilation, dependency/submodule compatibility, baseline readiness or input rights inferred.",
+    "version": "08ddc64f89c66b7e8398587d25bbaf55858d1fe5",
+    "provenance_status": "Independent source reading in this EDA-0008 proposer job unless expressly metadata-only"
+  },
+  {
+    "id": "S18",
+    "title": "ISPD26 Contest official ABKGroup repository",
+    "url": "https://github.com/ABKGroup/ISPD26-Contest/tree/f7b29d242fc7d441f3b4eadc556f40099ccca067",
+    "type": "primary_contest_code_documentation",
+    "published": "2026-05-03",
+    "retrieved": "2026-10-15T12:13:33.901850+00:00",
+    "locator": "README Table of Contents, baseline score/context, resources and organizers; repository root evaluation/equivalence directories",
+    "access": "full",
+    "claims": [
+      "CLM-007"
+    ],
+    "limitations": "README read at pinned SHA; scripts/input datasets not run or fully audited. Baseline scores not reproduced or used as performance evidence.",
+    "version": "f7b29d242fc7d441f3b4eadc556f40099ccca067",
+    "provenance_status": "Independent source reading in this EDA-0008 proposer job unless expressly metadata-only",
+    "files_sha256": {
+      "README.md": "29c95e3df2f051f14ebb45ee71be7c3d42d5302c8c12d7f2249a45901dc0ab50"
+    }
+  },
+  {
+    "id": "S19",
+    "title": "ISPD program page with 2026 content and redirected 2027 URL",
+    "url": "https://ispd.cc/ispd2027/index.php?page=program",
+    "type": "primary_program",
+    "published": "unknown",
+    "retrieved": "2026-10-15T12:13:33.901850+00:00",
+    "locator": "Program body ISPD2026; Session9 AstroTune abstract; Session16 slides91/93 links",
+    "access": "full",
+    "claims": [],
+    "limitations": "Mixed archive/URL chronology; linked summary/closing slides resolve under2025 paths and closing PDF is actually2025. Excluded from 2026 winner-method support. AstroTune abstract is a related lead only; full method not inspected.",
+    "version": "retrieved2026-10-15",
+    "provenance_status": "Independent source reading in this EDA-0008 proposer job unless expressly metadata-only"
+  }
+]
