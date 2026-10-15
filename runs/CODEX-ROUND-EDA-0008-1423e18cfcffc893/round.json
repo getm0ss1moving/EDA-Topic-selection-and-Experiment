@@ -1,5 +1,5 @@
 {
-  "compliance_audit": "runs/SUB-33fe6d9202a429f9b3b661bce0892c1c7585a8d8d4863ea8a5aef6a7d798f6a8",
+  "compliance_audit": "runs/SUB-1d05911d8e35b90fb0e6991b4d15e1cb7ed17fe0859b2a1a7316091a6778695c",
   "compliance_gate": "nonblocking_findings",
   "decision": "revise",
   "mechanical_releases": [
@@ -114,6 +114,9 @@
   },
   "round": 1,
   "source_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+  "superseded_compliance_audits": [
+    "runs/SUB-33fe6d9202a429f9b3b661bce0892c1c7585a8d8d4863ea8a5aef6a7d798f6a8"
+  ],
   "topic": "EDA-0008",
   "verification_release": "SUB-1423e18cfcffc89303d1daabf192e80dcb00716aa283af514c89f5bb96058f5e"
 }

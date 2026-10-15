@@ -1,0 +1,126 @@
+{
+  "schema": 1,
+  "role": "verifier",
+  "actor_id": "ChatGPT-B03-PROTOCOL-D04-EDA-0008-R1",
+  "session_id": "9d9c4bd7-e1e4-4225-88d8-133ccd93bac0",
+  "input_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+  "packet_sha256": "38be57a49a0263681c06dc4ee2ecd9456c4b878ccb3e591857509e07f1a12c80",
+  "job_id": "90fbacfc-5c34-460f-8e20-6f4f5d04f0a9",
+  "read_releases": [
+    "SUB-0ddb73ca97e1fc1b27f33363b8b06817e6794e7c7a51e8755934918cc9ef8f02",
+    "SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4",
+    "SUB-1423e18cfcffc89303d1daabf192e80dcb00716aa283af514c89f5bb96058f5e",
+    "SUB-c8a5acd8deacbb1be7f9decbb9890eb5a3d6fc162bd3fb85df94efa8a1c284d3"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0
+  },
+  "rules": {
+    "inputs": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json#/roles",
+        "release/verification.json#/mechanical_checks"
+      ],
+      "limits": "Own bounded audit activity only; self-ledger does not prove absence of undisclosed actions. No original-paper entailment or backend attestation."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json#/roles",
+        "release/verification.json#/mechanical_checks"
+      ],
+      "limits": "Own bounded audit activity only; self-ledger does not prove absence of undisclosed actions. No original-paper entailment or backend attestation."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json#/roles",
+        "release/verification.json#/mechanical_checks"
+      ],
+      "limits": "Own bounded audit activity only; self-ledger does not prove absence of undisclosed actions. No original-paper entailment or backend attestation."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json#/roles",
+        "release/verification.json#/mechanical_checks"
+      ],
+      "limits": "Own bounded audit activity only; self-ledger does not prove absence of undisclosed actions. No original-paper entailment or backend attestation."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json#/roles",
+        "release/verification.json#/mechanical_checks"
+      ],
+      "limits": "Own bounded audit activity only; self-ledger does not prove absence of undisclosed actions. No original-paper entailment or backend attestation."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json#/roles",
+        "release/verification.json#/mechanical_checks"
+      ],
+      "limits": "Own bounded audit activity only; self-ledger does not prove absence of undisclosed actions. No original-paper entailment or backend attestation."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json#/roles",
+        "release/verification.json#/mechanical_checks"
+      ],
+      "limits": "Own bounded audit activity only; self-ledger does not prove absence of undisclosed actions. No original-paper entailment or backend attestation."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json#/roles",
+        "release/verification.json#/mechanical_checks"
+      ],
+      "limits": "Own bounded audit activity only; self-ledger does not prove absence of undisclosed actions. No original-paper entailment or backend attestation."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json#/roles",
+        "release/verification.json#/mechanical_checks"
+      ],
+      "limits": "Own bounded audit activity only; self-ledger does not prove absence of undisclosed actions. No original-paper entailment or backend attestation."
+    }
+  },
+  "operations": [
+    "First read only exact JOB.json and prompt.txt in assigned job.",
+    "Read frozen common policy, ROLE-COMPLIANCE, CODEX-AUTOMATION, SELF-SUBMISSION, INNOVATION-STRATEGY/BATCH and only VERIFIER harness; read supplied compliance template.",
+    "Enumerated/read only released shared scientific outputs, supplied rejected attempt and public job descriptors. Some large tool output was truncated; targeted follow-up reads used for bindings and findings.",
+    "Standard-library manifest SHA checks, identity comparisons, task hash and rejected/corrected scientific-byte comparison. No EDA experiments or external source retrieval.",
+    "Write own audit_write.py, release/verification.md, verification.json, workflow.json, compliance.json; trusted self-freeze to submissions; result.json after success. Full checkout validation delegated to coordinator under standalone prompt.",
+    "Presentation correction after frozen SUB-33fe6d9202a429f9b3b661bce0892c1c7585a8d8d4863ea8a5aef6a7d798f6a8: Markdown matrix had challenger/proposer cells reversed relative to headings due to iteration order. Swapped only those Markdown cells to match JSON role labels. Prior release preserved; scientific outputs and audit judgments unchanged."
+  ],
+  "incidents": [
+    {
+      "kind": "presentation_correction",
+      "evidence": [
+        "release/verification.md: nine-rule matrix",
+        "release/verification.json#/roles"
+      ],
+      "reason": "Corrected proposer/challenger Markdown column alignment; original frozen release remains intact."
+    }
+  ],
+  "observability": "Self-authored public ledger, not complete tool trace or proof of unseen conduct. Fresh assigned governance execution; no other scientific conversation/private materials inspected."
+}
