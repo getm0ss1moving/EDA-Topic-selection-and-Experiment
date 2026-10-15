@@ -1,0 +1,35 @@
+{
+  "role": "challenger",
+  "reviewed_proposer_release": "SUB-4d1d28908e8092c441ca120da3acc52d46c0181575fb6cafc2b2230126c763dc",
+  "assessment": "revise",
+  "coverage": {
+    "duplicate_prior_art": "unresolved",
+    "mechanism": "supported",
+    "composition": "supported",
+    "demand": "unresolved",
+    "industry_gap": "unresolved",
+    "headroom": "unresolved",
+    "contests": "unresolved",
+    "experiments": "unresolved",
+    "cost": "supported"
+  },
+  "coverage_note": "Supported means evidence-backed review of that dimension, not approval of a claim; detailed limits in challenges.md.",
+  "objection_ids": [
+    "OBJ-001",
+    "OBJ-002",
+    "OBJ-003"
+  ],
+  "actor_id": "ChatGPT-C04-PHYSICAL",
+  "session_id": "f29f2abb-ad12-4c6f-8446-e384bd6ae66d",
+  "input_commit": "a48f03d4bc254c0b0957d0fe0f265e072d6cf49a",
+  "packet_sha256": "6f386384bd1e2cb160b5f6ccf339e19c23646a70706198b75b39cb86acba183f",
+  "batch_round": 1,
+  "experiment_consent": "not_given",
+  "joint_abandonment_position": "continue",
+  "direction_drift": {
+    "combination_drift": 0,
+    "demand_drift": 0
+  },
+  "search_stop": "budget_exhaustion_with_new_closer_source_found",
+  "executed_experiments": false
+}

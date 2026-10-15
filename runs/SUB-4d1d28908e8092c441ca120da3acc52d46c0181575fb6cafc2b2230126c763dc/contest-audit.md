@@ -1,0 +1,12 @@
+# Contest originality audit, cutoff 2026-10-15
+
+| Edition | Primary evidence and what was inspected | Overlap and disposition |
+| --- | --- | --- |
+| ISPD 2018 initial detailed routing | S01 full organizer page: Abstract/Fig.1, evaluation kit description and update history. | The motivating critical-detour problem is explicitly supplied. The official evaluator invokes Innovus; no such license is established here. We do not claim an official contest score. |
+| ISPD 2019 initial detailed routing | S12 organizer page, benchmark/evaluation sections; S11 baseline README. | Modern rule handling and routing correctness are relevant. Dr. CU 2.0 code is a historical solution baseline, not evidence of a current timing-optimal solution. Full winning-team technical reports were not established this turn. |
+| ISPD 2024 large-scale global routing | S09 Introduction points backward to this edition; no independent full 2024 rules inspection. | Coverage incomplete; T01 must inspect original 2024 rules and winner methods. |
+| ISPD 2025 performance-driven global routing | S09 pinned organizer index, formulation/evaluation/results; S13 official winner list. | Hippo, RL-Route and It's MyRoute!!!!! are listed as winners. No winner algorithm is inferred from its name or rank. Timing/power optimization itself is supplied, so adding a timing weight is not novel. Final DR evaluation remains distinct from the published GR scoring stage. |
+| ISPD 2026 post-placement buffering/sizing | S14 official winner list and S15 organizer repository, timeline/table of contents; S16 organizer paper Section 2.1. | IRISLab, PTSD and HLFC are listed winners. This is adjacent fixed-resource physical optimization, not a direct routing baseline. Winner implementations/reports remain T01; no absence claim. |
+| 2027 continuation | Only forward references were discovered; no finalized 2027 rules checked. | Exclude post-cutoff or unspecified contest formulations from confirmed coverage. Refresh before promotion. |
+
+The two specific novelty exclusions are organizer-supplied critical-detour motivation and established blocker/region repair (CLM-001,003–005,007). The unverified remaining question is whether cut-guided owner selection adds a nontrivial, useful interaction beyond those ideas. No contest success, leaderboard entry or prize is claimed. Contest cases are not automatically licensed for public redistribution or suitable for our resource envelope.
