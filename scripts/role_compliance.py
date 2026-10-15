@@ -94,6 +94,8 @@ def validate_review(value, flow, expected):
     if deviations != supported:raise ValueError('Supported findings and matrix deviations disagree')
     if disposition=='clear_within_scope' and (deviations or unresolved):
         raise ValueError('Clear audit conflicts with deviation/unknown matrix')
+    if unresolved and disposition not in {'unresolved','blocking_violation'}:
+        raise ValueError('Unresolved matrix cannot be silently cleared as nonblocking')
     if critical != (disposition=='blocking_violation'):
         raise ValueError('Critical supported violations require blocking disposition')
     return disposition

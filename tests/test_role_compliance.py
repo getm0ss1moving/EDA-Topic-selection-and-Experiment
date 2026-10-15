@@ -142,3 +142,38 @@ class AuditedLoopTests(unittest.TestCase):
         self.assertEqual(state['topics']['EDA-0002']['last_scientific_decision'],'revise')
         self.assertEqual(state['publication_queue'][0]['compliance_gate'],'unresolved')
         with self.assertRaisesRegex(ValueError,'dispatch/collect'):l.tick(self.c,self.home)
+
+    def test_continuation_exports_only_public_adjudicated_files_with_fresh_seats(self):
+        c=l.read(ROOT/'config/codex-compliance-research.json')
+        c['topics']={'EDA-0007':c['topics']['EDA-0007']}
+        home=self.root/'continued'
+        with patch.object(l,'frozen',side_effect=lambda ref,name:(ROOT/name).read_bytes()):
+            state=l.prepare(c,home,l.git('rev-parse','HEAD'))
+        topic=state['topics']['EDA-0007'];self.assertEqual(topic['latest'],{})
+        job=l.job_for(state,topic,c);work=Path(job['work'])
+        releases=list((work/'shared/predecessor').glob('SUB-*'))
+        self.assertEqual({l.rs.verify(p)[0]['role'] for p in releases},set(l.ROLES))
+        self.assertNotIn(topic['seats']['proposer']['session_id'],{l.rs.verify(p)[0]['session_id'] for p in releases})
+        self.assertEqual([p.name for p in (work/'policy/harness').iterdir()],['PROPOSER.md'])
+
+    def test_continuation_refuses_nonpublic_path(self):
+        c=copy.deepcopy(self.c)
+        c['topics']['EDA-0002']['continuation_releases']={r:'../private' for r in l.ROLES}
+        with patch.object(l,'frozen',side_effect=lambda ref,name:(ROOT/name).read_bytes()):
+            with self.assertRaisesRegex(ValueError,'public runs/SUB'):
+                l.prepare(c,self.root/'bad-continuation',l.git('rev-parse','HEAD'))
+
+    def test_ledger_metadata_does_not_change_consent_science_digest(self):
+        payload={'proposal.md':b'Fixed synthetic science','tasklist.md':b'Fixed synthetic tasks'}
+        self.assertEqual(l.proposal_digest(payload),
+                         l.proposal_digest({**payload,'compliance.json':b'{"job":"new"}'}))
+
+    def test_literal_objections_in_all_challenger_files_must_be_covered(self):
+        self.science()
+        job=l.dispatch(self.c,self.home,'D05');work=Path(job['work'])
+        fixtures.LoopTests.fake(self,self.c,job)
+        (work/'release/tasklist.md').write_text('Synthetic incidental OBJ-099 requires an explicit scope row.\n')
+        l.save(work/'release/compliance.json',self.ledger(l.read(work/'JOB.json')))
+        self.freeze(work);l.collect(self.c,self.home,'D05')
+        with self.assertRaisesRegex(ValueError,'omitted objection'):
+            self.science()

@@ -416,7 +416,8 @@ def validate_result(state,t,job,result):
         if v.get('reviewed_proposer_release')!=flow['reviewed_proposer_release'] or v.get('adjudicated_challenger_releases')!=[expected]:
             raise ValueError('Verifier must bind the current proposer/challenger pair')
         _,cp=rs.verify(t['latest']['challenger'])
-        objections=set(re.findall(r'\bOBJ-\d+\b',cp['challenges.md'].decode()))
+        objection_text=b'\n'.join(cp.values()) if assignment.get('compliance_required') else cp['challenges.md']
+        objections=set(re.findall(r'\bOBJ-\d+\b',objection_text.decode()))
         judged={o.get('id',o.get('objection_id')) for o in v.get('objections',[])}
         if not objections<=judged:raise ValueError('Verifier omitted objection verdicts')
         if any(o.get('verdict') not in {'valid','partially_valid','unsupported','refuted','unresolved'}
