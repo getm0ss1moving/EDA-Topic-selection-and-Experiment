@@ -1,0 +1,11 @@
+{
+  "purpose": "protocol_audit",
+  "reviewed_releases": {
+    "challenger": "SUB-45b1311973778bf0f7a2a7a2466ef3c20389362d8faf02846afdf22bc4ffce3d",
+    "proposer": "SUB-64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c",
+    "verifier": "SUB-af311c9ae6b091db1fdb94a8bd262fe027a34d25a761c2e072c59c2d0497d01d"
+  },
+  "disposition": "unresolved",
+  "role": "verifier",
+  "scientific_vote_created": false
+}

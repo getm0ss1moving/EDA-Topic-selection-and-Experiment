@@ -1,0 +1,621 @@
+{
+  "purpose": "protocol_audit",
+  "reviewed_releases": {
+    "challenger": "SUB-45b1311973778bf0f7a2a7a2466ef3c20389362d8faf02846afdf22bc4ffce3d",
+    "proposer": "SUB-64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c",
+    "verifier": "SUB-af311c9ae6b091db1fdb94a8bd262fe027a34d25a761c2e072c59c2d0497d01d"
+  },
+  "disposition": "unresolved",
+  "roles": {
+    "challenger": {
+      "release_id": "SUB-45b1311973778bf0f7a2a7a2466ef3c20389362d8faf02846afdf22bc4ffce3d",
+      "checks": {
+        "inputs": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-45b1311973778bf0f7a2a7a2466ef3c20389362d8faf02846afdf22bc4ffce3d/compliance.json#/read_releases",
+            "shared/job-descriptors/challenger/JOB.json#/released_inputs",
+            "shared/SUB-45b1311973778bf0f7a2a7a2466ef3c20389362d8faf02846afdf22bc4ffce3d/SUBMISSION.json"
+          ],
+          "reason": "Declared release reads are within original JOB enumeration; manifest, payload hashes and ledger identity match."
+        },
+        "isolation": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-45b1311973778bf0f7a2a7a2466ef3c20389362d8faf02846afdf22bc4ffce3d/compliance.json#/activity",
+            "shared/SUB-45b1311973778bf0f7a2a7a2466ef3c20389362d8faf02846afdf22bc4ffce3d/SUBMISSION.json#/session_id"
+          ],
+          "reason": "Distinct declared current sessions; no foreign private reads, messages or subagents disclosed. This is bounded public-record consistency, not hidden-activity clearance."
+        },
+        "writes": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-45b1311973778bf0f7a2a7a2466ef3c20389362d8faf02846afdf22bc4ffce3d/SUBMISSION.json#/files",
+            "shared/SUB-45b1311973778bf0f7a2a7a2466ef3c20389362d8faf02846afdf22bc4ffce3d/compliance.json#/operations"
+          ],
+          "reason": "Own English role outputs are frozen with matching hashes; no foreign edits disclosed. Unreleased write trace is unavailable."
+        },
+        "evidence": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-45b1311973778bf0f7a2a7a2466ef3c20389362d8faf02846afdf22bc4ffce3d/sources.json",
+            "shared/SUB-45b1311973778bf0f7a2a7a2466ef3c20389362d8faf02846afdf22bc4ffce3d/compliance.json#/rules/evidence"
+          ],
+          "reason": "Source locators, versions/access and retrieval limitations are supplied; bounded/inaccessible material is not silently treated as exhaustive verification."
+        },
+        "claims": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-45b1311973778bf0f7a2a7a2466ef3c20389362d8faf02846afdf22bc4ffce3d/challenges.md#C12 reproducible own analytical test",
+            "shared/SUB-45b1311973778bf0f7a2a7a2466ef3c20389362d8faf02846afdf22bc4ffce3d/compliance.json#/rules/claims"
+          ],
+          "reason": "Synthetic counts and conditional arguments are expressly separated from chip/flow performance and calibrated forecasts; unresolved usefulness is retained."
+        },
+        "consent": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-45b1311973778bf0f7a2a7a2466ef3c20389362d8faf02846afdf22bc4ffce3d/experiment-consent.json",
+            "shared/SUB-45b1311973778bf0f7a2a7a2466ef3c20389362d8faf02846afdf22bc4ffce3d/workflow.json"
+          ],
+          "reason": "No agreeing paired consent is claimed; pending and revision_requested are not execution authorization."
+        },
+        "resources": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-45b1311973778bf0f7a2a7a2466ef3c20389362d8faf02846afdf22bc4ffce3d/compliance.json#/activity",
+            "shared/SUB-45b1311973778bf0f7a2a7a2466ef3c20389362d8faf02846afdf22bc4ffce3d/compliance.json#/rules/resources"
+          ],
+          "reason": "Zero new EDA/training/paid runs disclosed; tiny own arithmetic is explicitly distinct, and future resource requests are not grants. Backend identity remains unattested."
+        },
+        "direction": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-45b1311973778bf0f7a2a7a2466ef3c20389362d8faf02846afdf22bc4ffce3d/workflow.json",
+            "shared/SUB-45b1311973778bf0f7a2a7a2466ef3c20389362d8faf02846afdf22bc4ffce3d/compliance.json#/rules/direction"
+          ],
+          "reason": "New EDA-0010 anchor and zero initial drift do not inherit predecessor approval or establish merit; negative predecessor outcomes are retained as history."
+        },
+        "publication": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-45b1311973778bf0f7a2a7a2466ef3c20389362d8faf02846afdf22bc4ffce3d/SUBMISSION.json",
+            "shared/SUB-45b1311973778bf0f7a2a7a2466ef3c20389362d8faf02846afdf22bc4ffce3d/compliance.json#/rules/publication"
+          ],
+          "reason": "Trusted self-freeze only is claimed; coordinator transport/full validation is separate, with no role self-approval or merge claim."
+        }
+      }
+    },
+    "proposer": {
+      "release_id": "SUB-64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c",
+      "checks": {
+        "inputs": {
+          "status": "supported_deviation",
+          "evidence": [
+            "shared/SUB-64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c/compliance.json#/incidents/0",
+            "shared/SUB-64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c/compliance.json#/operations/0"
+          ],
+          "reason": "Candid own-job filename listing before successful assignment/common-policy reading departs from required ordering. No foreign scientific exposure is established by this listing."
+        },
+        "isolation": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c/compliance.json#/activity",
+            "shared/SUB-64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c/SUBMISSION.json#/session_id"
+          ],
+          "reason": "Distinct declared current sessions; no foreign private reads, messages or subagents disclosed. This is bounded public-record consistency, not hidden-activity clearance."
+        },
+        "writes": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c/SUBMISSION.json#/files",
+            "shared/SUB-64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c/compliance.json#/operations"
+          ],
+          "reason": "Own English role outputs are frozen with matching hashes; no foreign edits disclosed. Unreleased write trace is unavailable."
+        },
+        "evidence": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c/sources.json",
+            "shared/SUB-64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c/compliance.json#/rules/evidence"
+          ],
+          "reason": "Source locators, versions/access and retrieval limitations are supplied; bounded/inaccessible material is not silently treated as exhaustive verification."
+        },
+        "claims": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c/proposal.md#Analytical progress and a limiting reduction",
+            "shared/SUB-64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c/compliance.json#/rules/claims"
+          ],
+          "reason": "Synthetic counts and conditional arguments are expressly separated from chip/flow performance and calibrated forecasts; unresolved usefulness is retained."
+        },
+        "consent": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c/experiment-consent.json",
+            "shared/SUB-64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c/workflow.json"
+          ],
+          "reason": "No agreeing paired consent is claimed; pending and revision_requested are not execution authorization."
+        },
+        "resources": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c/compliance.json#/activity",
+            "shared/SUB-64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c/compliance.json#/rules/resources"
+          ],
+          "reason": "Zero new EDA/training/paid runs disclosed; tiny own arithmetic is explicitly distinct, and future resource requests are not grants. Backend identity remains unattested."
+        },
+        "direction": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c/direction-control.json#/anchor",
+            "shared/SUB-64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c/compliance.json#/rules/direction"
+          ],
+          "reason": "New EDA-0010 anchor and zero initial drift do not inherit predecessor approval or establish merit; negative predecessor outcomes are retained as history."
+        },
+        "publication": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c/SUBMISSION.json",
+            "shared/SUB-64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c/compliance.json#/rules/publication"
+          ],
+          "reason": "Trusted self-freeze only is claimed; coordinator transport/full validation is separate, with no role self-approval or merge claim."
+        }
+      }
+    },
+    "verifier": {
+      "release_id": "SUB-af311c9ae6b091db1fdb94a8bd262fe027a34d25a761c2e072c59c2d0497d01d",
+      "checks": {
+        "inputs": {
+          "status": "supported_deviation",
+          "evidence": [
+            "shared/SUB-af311c9ae6b091db1fdb94a8bd262fe027a34d25a761c2e072c59c2d0497d01d/compliance.json#/incidents/0",
+            "shared/SUB-af311c9ae6b091db1fdb94a8bd262fe027a34d25a761c2e072c59c2d0497d01d/compliance.json#/operations/0"
+          ],
+          "reason": "Candid own-job filename listing before successful assignment/common-policy reading departs from required ordering. No foreign scientific exposure is established by this listing."
+        },
+        "isolation": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-af311c9ae6b091db1fdb94a8bd262fe027a34d25a761c2e072c59c2d0497d01d/compliance.json#/activity",
+            "shared/SUB-af311c9ae6b091db1fdb94a8bd262fe027a34d25a761c2e072c59c2d0497d01d/SUBMISSION.json#/session_id"
+          ],
+          "reason": "Distinct declared current sessions; no foreign private reads, messages or subagents disclosed. This is bounded public-record consistency, not hidden-activity clearance."
+        },
+        "writes": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-af311c9ae6b091db1fdb94a8bd262fe027a34d25a761c2e072c59c2d0497d01d/SUBMISSION.json#/files",
+            "shared/SUB-af311c9ae6b091db1fdb94a8bd262fe027a34d25a761c2e072c59c2d0497d01d/compliance.json#/operations"
+          ],
+          "reason": "Own English role outputs are frozen with matching hashes; no foreign edits disclosed. Unreleased write trace is unavailable."
+        },
+        "evidence": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-af311c9ae6b091db1fdb94a8bd262fe027a34d25a761c2e072c59c2d0497d01d/verification.json#/source_checks",
+            "shared/SUB-af311c9ae6b091db1fdb94a8bd262fe027a34d25a761c2e072c59c2d0497d01d/compliance.json#/rules/evidence"
+          ],
+          "reason": "Source locators, versions/access and retrieval limitations are supplied; bounded/inaccessible material is not silently treated as exhaustive verification."
+        },
+        "claims": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-af311c9ae6b091db1fdb94a8bd262fe027a34d25a761c2e072c59c2d0497d01d/verification.json#/analytical_checks",
+            "shared/SUB-af311c9ae6b091db1fdb94a8bd262fe027a34d25a761c2e072c59c2d0497d01d/compliance.json#/rules/claims"
+          ],
+          "reason": "Synthetic counts and conditional arguments are expressly separated from chip/flow performance and calibrated forecasts; unresolved usefulness is retained."
+        },
+        "consent": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-af311c9ae6b091db1fdb94a8bd262fe027a34d25a761c2e072c59c2d0497d01d/verification.json#/experiment_consensus_checked",
+            "shared/SUB-af311c9ae6b091db1fdb94a8bd262fe027a34d25a761c2e072c59c2d0497d01d/workflow.json"
+          ],
+          "reason": "No agreeing paired consent is claimed; pending and revision_requested are not execution authorization."
+        },
+        "resources": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-af311c9ae6b091db1fdb94a8bd262fe027a34d25a761c2e072c59c2d0497d01d/compliance.json#/activity",
+            "shared/SUB-af311c9ae6b091db1fdb94a8bd262fe027a34d25a761c2e072c59c2d0497d01d/compliance.json#/rules/resources"
+          ],
+          "reason": "Zero new EDA/training/paid runs disclosed; tiny own arithmetic is explicitly distinct, and future resource requests are not grants. Backend identity remains unattested."
+        },
+        "direction": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-af311c9ae6b091db1fdb94a8bd262fe027a34d25a761c2e072c59c2d0497d01d/verification.json#/direction_penalties",
+            "shared/SUB-af311c9ae6b091db1fdb94a8bd262fe027a34d25a761c2e072c59c2d0497d01d/compliance.json#/rules/direction"
+          ],
+          "reason": "New EDA-0010 anchor and zero initial drift do not inherit predecessor approval or establish merit; negative predecessor outcomes are retained as history."
+        },
+        "publication": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-af311c9ae6b091db1fdb94a8bd262fe027a34d25a761c2e072c59c2d0497d01d/SUBMISSION.json",
+            "shared/SUB-af311c9ae6b091db1fdb94a8bd262fe027a34d25a761c2e072c59c2d0497d01d/compliance.json#/rules/publication"
+          ],
+          "reason": "Trusted self-freeze only is claimed; coordinator transport/full validation is separate, with no role self-approval or merge claim."
+        }
+      }
+    }
+  },
+  "findings": [
+    {
+      "id": "INC-001",
+      "role": "proposer",
+      "rule": "inputs",
+      "severity": "noncritical",
+      "classification": "supported_violation",
+      "evidence": [
+        "shared/SUB-64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c/compliance.json#/incidents/0",
+        "shared/SUB-64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c/compliance.json#/operations/0"
+      ],
+      "action": "Retain disclosure; read exact JOB/prompt before discovery in future. Do not equate ordering defect with private contamination.",
+      "needs_scientific_adjudication": false
+    },
+    {
+      "id": "INC-002",
+      "role": "verifier",
+      "rule": "inputs",
+      "severity": "noncritical",
+      "classification": "supported_violation",
+      "evidence": [
+        "shared/SUB-af311c9ae6b091db1fdb94a8bd262fe027a34d25a761c2e072c59c2d0497d01d/compliance.json#/incidents/0",
+        "shared/SUB-af311c9ae6b091db1fdb94a8bd262fe027a34d25a761c2e072c59c2d0497d01d/compliance.json#/operations/0"
+      ],
+      "action": "Retain disclosure; read exact JOB/prompt before discovery in future. Do not equate ordering defect with private contamination.",
+      "needs_scientific_adjudication": false
+    },
+    {
+      "id": "INC-003",
+      "role": "proposer",
+      "rule": "consent",
+      "severity": "noncritical",
+      "classification": "research_defect",
+      "evidence": [
+        "shared/SUB-64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c/tasklist.md#EXP-001 and EXP-003",
+        "shared/SUB-af311c9ae6b091db1fdb94a8bd262fe027a34d25a761c2e072c59c2d0497d01d/verification.json#/objections/1"
+      ],
+      "action": "Preserve existing scientific verifier ruling on cyclic recorder/census prerequisites; repair only in separately authorized future work, then obtain fresh exact-task consents. No present conduct violation is inferred.",
+      "needs_scientific_adjudication": false
+    }
+  ],
+  "limitations": [
+    "Released self-ledgers are not complete tool traces; hidden filesystem/network activity, physical session freshness and backend model identity are not independently observable.",
+    "No external scientific sources reopened: no new source-fabrication allegation or scientific ruling is made. Source/access labels and internal consistency only were checked.",
+    "Long combined display outputs truncated; targeted structured metadata extraction supplied binding and incident fields. Semantic source review is not claimed.",
+    "Old attempts supplied metadata only; underlying science, consent files, experiments and historical transport implementation are not reopened. Prior incident review is evidence, not an inherited clearance.",
+    "No acceptance, abandonment, valid-cycle count, pilot authorization or extra research round follows. Current three bindings are separate from old EDA-0007 attempts."
+  ],
+  "aborted_attempts": [
+    {
+      "role": "proposer",
+      "release_id": "SUB-47b431b4e6d39d744a6de744a3528c7571a5d718f6fc5716d5f1795875671a81",
+      "checks": {
+        "inputs": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/protocol-incident/coordinator-report.json#/attempts/0/metadata/JOB.json/text#/released_inputs",
+            "shared/protocol-incident/coordinator-report.json#/attempts/0/metadata/compliance.json/text#/read_releases",
+            "shared/protocol-incident/coordinator-report.json#/attempts/0/own_previous_metadata"
+          ],
+          "reason": "All declared IDs are original JOB-authorized or hash-bound same-author/session own previous release; no unexplained ID."
+        },
+        "isolation": {
+          "status": "unresolved",
+          "evidence": [
+            "shared/protocol-incident/coordinator-report.json#/attempts/0/metadata/compliance.json/text#/activity",
+            "shared/protocol-incident/coordinator-report.json#/attempts/0/metadata/compliance.json/text#/incidents"
+          ],
+          "reason": "No foreign private reads disclosed; metadata cannot establish physical/hidden independence."
+        },
+        "writes": {
+          "status": "unresolved",
+          "evidence": [
+            "shared/protocol-incident/coordinator-report.json#/attempts/0/metadata/compliance.json/text#/rules/writes",
+            "shared/protocol-incident/coordinator-report.json#/attempts/0/metadata/SUBMISSION.json/text#/files"
+          ],
+          "reason": "Only declaration plus file hashes supplied; absent underlying role payload/trace cannot substantiate this rule. No violation or scientific correctness inference from absence."
+        },
+        "evidence": {
+          "status": "unresolved",
+          "evidence": [
+            "shared/protocol-incident/coordinator-report.json#/attempts/0/metadata/compliance.json/text#/rules/evidence",
+            "shared/protocol-incident/coordinator-report.json#/attempts/0/metadata/SUBMISSION.json/text#/files"
+          ],
+          "reason": "Only declaration plus file hashes supplied; absent underlying role payload/trace cannot substantiate this rule. No violation or scientific correctness inference from absence."
+        },
+        "claims": {
+          "status": "unresolved",
+          "evidence": [
+            "shared/protocol-incident/coordinator-report.json#/attempts/0/metadata/compliance.json/text#/rules/claims",
+            "shared/protocol-incident/coordinator-report.json#/attempts/0/metadata/SUBMISSION.json/text#/files"
+          ],
+          "reason": "Only declaration plus file hashes supplied; absent underlying role payload/trace cannot substantiate this rule. No violation or scientific correctness inference from absence."
+        },
+        "consent": {
+          "status": "unresolved",
+          "evidence": [
+            "shared/protocol-incident/coordinator-report.json#/attempts/0/metadata/compliance.json/text#/rules/consent",
+            "shared/protocol-incident/coordinator-report.json#/attempts/0/metadata/SUBMISSION.json/text#/files"
+          ],
+          "reason": "Only declaration plus file hashes supplied; absent underlying role payload/trace cannot substantiate this rule. No violation or scientific correctness inference from absence."
+        },
+        "resources": {
+          "status": "unresolved",
+          "evidence": [
+            "shared/protocol-incident/coordinator-report.json#/attempts/0/metadata/compliance.json/text#/rules/resources",
+            "shared/protocol-incident/coordinator-report.json#/attempts/0/metadata/SUBMISSION.json/text#/files"
+          ],
+          "reason": "Only declaration plus file hashes supplied; absent underlying role payload/trace cannot substantiate this rule. No violation or scientific correctness inference from absence."
+        },
+        "direction": {
+          "status": "unresolved",
+          "evidence": [
+            "shared/protocol-incident/coordinator-report.json#/attempts/0/metadata/compliance.json/text#/rules/direction",
+            "shared/protocol-incident/coordinator-report.json#/attempts/0/metadata/SUBMISSION.json/text#/files"
+          ],
+          "reason": "Only declaration plus file hashes supplied; absent underlying role payload/trace cannot substantiate this rule. No violation or scientific correctness inference from absence."
+        },
+        "publication": {
+          "status": "unresolved",
+          "evidence": [
+            "shared/protocol-incident/coordinator-report.json#/attempts/0/metadata/SUBMISSION.json",
+            "shared/protocol-incident/coordinator-report.json#/attempts/0/metadata/compliance.json/text#/rules/publication"
+          ],
+          "reason": "Embedded manifest and ledger byte bindings verify, but no actual transport/approval trace or full payload supplied; no publication clearance."
+        }
+      },
+      "metadata_validation": {
+        "release_id": "SUB-47b431b4e6d39d744a6de744a3528c7571a5d718f6fc5716d5f1795875671a81",
+        "embedded_sha_checks": {
+          "JOB.json": true,
+          "prompt.txt": true,
+          "compliance.json": true,
+          "SUBMISSION.json": true
+        },
+        "manifest_id_match": true,
+        "ledger_to_manifest": true,
+        "identity_matches": true,
+        "job_matches": true,
+        "own_previous_manifest_hashes": [
+          true
+        ],
+        "read_ids": [
+          "SUB-8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f",
+          "SUB-1d2e343cab1599577d312783ff91916761e548b2d4e1d7749b3071f38416b8ca",
+          "SUB-e3407b956910db0e7d4c3dbf46ac184bccf23d68e66ef738a10e0696ef980338"
+        ],
+        "own_previous_ids": [
+          "SUB-8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f"
+        ],
+        "outside_JOB_and_own_previous": [],
+        "checkout_access_raw": "none"
+      },
+      "limitations": [
+        "Metadata only; no raw historical science or historical paths opened.",
+        "Prior incident review PRIOR-001..004 supports reported transport ambiguity/remediation, but cited old source-codex-loop bytes are not supplied here and were not independently reopened.",
+        "Do not attribute this attempt to current EDA-0010 actors; no science vote or valid-cycle credit.",
+        "Proposer declared synthetic analytical checks/zero allocations; actual outputs and conduct cannot be verified from metadata alone."
+      ]
+    },
+    {
+      "role": "challenger",
+      "release_id": "SUB-56f872e4f80bf5014b43024f33adda8011fdcdb0d211168bb549f3309a939ee5",
+      "checks": {
+        "inputs": {
+          "status": "supported_deviation",
+          "evidence": [
+            "shared/protocol-incident/coordinator-report.json#/attempts/1/metadata/JOB.json/text#/released_inputs",
+            "shared/protocol-incident/coordinator-report.json#/attempts/1/metadata/compliance.json/text#/read_releases",
+            "shared/protocol-incident/coordinator-report.json#/attempts/1/own_previous_metadata"
+          ],
+          "reason": "Historical proposal SUB-8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f is outside original JOB and is not challenger own previous output. Prompt shared-folder wording creates transport ambiguity; candid scope departure is supported, deliberate evasion/private provenance is not."
+        },
+        "isolation": {
+          "status": "supported_deviation",
+          "evidence": [
+            "shared/protocol-incident/coordinator-report.json#/attempts/1/metadata/compliance.json/text#/activity",
+            "shared/protocol-incident/coordinator-report.json#/attempts/1/metadata/compliance.json/text#/incidents"
+          ],
+          "reason": "Extra selected frozen-proposal reads are candidly disclosed. checkout_access contains explanatory prose instead of exact enum; mechanical schema defect, not proof of checkout read. Historical private exposure remains unestablished; preserve prior adjudication."
+        },
+        "writes": {
+          "status": "unresolved",
+          "evidence": [
+            "shared/protocol-incident/coordinator-report.json#/attempts/1/metadata/compliance.json/text#/rules/writes",
+            "shared/protocol-incident/coordinator-report.json#/attempts/1/metadata/SUBMISSION.json/text#/files"
+          ],
+          "reason": "Only declaration plus file hashes supplied; absent underlying role payload/trace cannot substantiate this rule. No violation or scientific correctness inference from absence."
+        },
+        "evidence": {
+          "status": "unresolved",
+          "evidence": [
+            "shared/protocol-incident/coordinator-report.json#/attempts/1/metadata/compliance.json/text#/rules/evidence",
+            "shared/protocol-incident/coordinator-report.json#/attempts/1/metadata/SUBMISSION.json/text#/files"
+          ],
+          "reason": "Only declaration plus file hashes supplied; absent underlying role payload/trace cannot substantiate this rule. No violation or scientific correctness inference from absence."
+        },
+        "claims": {
+          "status": "unresolved",
+          "evidence": [
+            "shared/protocol-incident/coordinator-report.json#/attempts/1/metadata/compliance.json/text#/rules/claims",
+            "shared/protocol-incident/coordinator-report.json#/attempts/1/metadata/SUBMISSION.json/text#/files"
+          ],
+          "reason": "Only declaration plus file hashes supplied; absent underlying role payload/trace cannot substantiate this rule. No violation or scientific correctness inference from absence."
+        },
+        "consent": {
+          "status": "unresolved",
+          "evidence": [
+            "shared/protocol-incident/coordinator-report.json#/attempts/1/metadata/compliance.json/text#/rules/consent",
+            "shared/protocol-incident/coordinator-report.json#/attempts/1/metadata/SUBMISSION.json/text#/files"
+          ],
+          "reason": "Only declaration plus file hashes supplied; absent underlying role payload/trace cannot substantiate this rule. No violation or scientific correctness inference from absence."
+        },
+        "resources": {
+          "status": "unresolved",
+          "evidence": [
+            "shared/protocol-incident/coordinator-report.json#/attempts/1/metadata/compliance.json/text#/rules/resources",
+            "shared/protocol-incident/coordinator-report.json#/attempts/1/metadata/SUBMISSION.json/text#/files"
+          ],
+          "reason": "Only declaration plus file hashes supplied; absent underlying role payload/trace cannot substantiate this rule. No violation or scientific correctness inference from absence."
+        },
+        "direction": {
+          "status": "unresolved",
+          "evidence": [
+            "shared/protocol-incident/coordinator-report.json#/attempts/1/metadata/compliance.json/text#/rules/direction",
+            "shared/protocol-incident/coordinator-report.json#/attempts/1/metadata/SUBMISSION.json/text#/files"
+          ],
+          "reason": "Only declaration plus file hashes supplied; absent underlying role payload/trace cannot substantiate this rule. No violation or scientific correctness inference from absence."
+        },
+        "publication": {
+          "status": "unresolved",
+          "evidence": [
+            "shared/protocol-incident/coordinator-report.json#/attempts/1/metadata/SUBMISSION.json",
+            "shared/protocol-incident/coordinator-report.json#/attempts/1/metadata/compliance.json/text#/rules/publication"
+          ],
+          "reason": "Embedded manifest and ledger byte bindings verify, but no actual transport/approval trace or full payload supplied; no publication clearance."
+        }
+      },
+      "metadata_validation": {
+        "release_id": "SUB-56f872e4f80bf5014b43024f33adda8011fdcdb0d211168bb549f3309a939ee5",
+        "embedded_sha_checks": {
+          "JOB.json": true,
+          "prompt.txt": true,
+          "compliance.json": true,
+          "SUBMISSION.json": true
+        },
+        "manifest_id_match": true,
+        "ledger_to_manifest": true,
+        "identity_matches": true,
+        "job_matches": true,
+        "own_previous_manifest_hashes": [
+          true
+        ],
+        "read_ids": [
+          "SUB-47b431b4e6d39d744a6de744a3528c7571a5d718f6fc5716d5f1795875671a81",
+          "SUB-1d2e343cab1599577d312783ff91916761e548b2d4e1d7749b3071f38416b8ca",
+          "SUB-8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f"
+        ],
+        "own_previous_ids": [
+          "SUB-e3407b956910db0e7d4c3dbf46ac184bccf23d68e66ef738a10e0696ef980338"
+        ],
+        "outside_JOB_and_own_previous": [
+          "SUB-8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f"
+        ],
+        "checkout_access_raw": "none; user-provided checkout path/instructions present in initial context but no filesystem read there"
+      },
+      "limitations": [
+        "Metadata only; no raw historical science or historical paths opened.",
+        "Prior incident review PRIOR-001..004 supports reported transport ambiguity/remediation, but cited old source-codex-loop bytes are not supplied here and were not independently reopened.",
+        "Do not attribute this attempt to current EDA-0010 actors; no science vote or valid-cycle credit.",
+        "Proposer declared synthetic analytical checks/zero allocations; actual outputs and conduct cannot be verified from metadata alone."
+      ]
+    }
+  ],
+  "integrity_checks": {
+    "challenger": {
+      "manifest_sha_matches_release": true,
+      "payloads_match": true,
+      "identity_matches_JOB_ledger": true,
+      "job_matches": true,
+      "read_ids_within_JOB": true,
+      "declared_session": "dcd1cbc5-8472-4448-b7a0-e05270475146"
+    },
+    "proposer": {
+      "manifest_sha_matches_release": true,
+      "payloads_match": true,
+      "identity_matches_JOB_ledger": true,
+      "job_matches": true,
+      "read_ids_within_JOB": true,
+      "declared_session": "32ff7459-1199-4a05-aceb-ae30c925a366"
+    },
+    "verifier": {
+      "manifest_sha_matches_release": true,
+      "payloads_match": true,
+      "identity_matches_JOB_ledger": true,
+      "job_matches": true,
+      "read_ids_within_JOB": true,
+      "declared_session": "ff710454-5090-49e3-b425-6d9b97c0250c"
+    }
+  },
+  "metadata_checks": {
+    "report_sha_matches_INPUTS": true,
+    "attempts": [
+      {
+        "release_id": "SUB-47b431b4e6d39d744a6de744a3528c7571a5d718f6fc5716d5f1795875671a81",
+        "embedded_sha_checks": {
+          "JOB.json": true,
+          "prompt.txt": true,
+          "compliance.json": true,
+          "SUBMISSION.json": true
+        },
+        "manifest_id_match": true,
+        "ledger_to_manifest": true,
+        "identity_matches": true,
+        "job_matches": true,
+        "own_previous_manifest_hashes": [
+          true
+        ],
+        "read_ids": [
+          "SUB-8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f",
+          "SUB-1d2e343cab1599577d312783ff91916761e548b2d4e1d7749b3071f38416b8ca",
+          "SUB-e3407b956910db0e7d4c3dbf46ac184bccf23d68e66ef738a10e0696ef980338"
+        ],
+        "own_previous_ids": [
+          "SUB-8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f"
+        ],
+        "outside_JOB_and_own_previous": [],
+        "checkout_access_raw": "none"
+      },
+      {
+        "release_id": "SUB-56f872e4f80bf5014b43024f33adda8011fdcdb0d211168bb549f3309a939ee5",
+        "embedded_sha_checks": {
+          "JOB.json": true,
+          "prompt.txt": true,
+          "compliance.json": true,
+          "SUBMISSION.json": true
+        },
+        "manifest_id_match": true,
+        "ledger_to_manifest": true,
+        "identity_matches": true,
+        "job_matches": true,
+        "own_previous_manifest_hashes": [
+          true
+        ],
+        "read_ids": [
+          "SUB-47b431b4e6d39d744a6de744a3528c7571a5d718f6fc5716d5f1795875671a81",
+          "SUB-1d2e343cab1599577d312783ff91916761e548b2d4e1d7749b3071f38416b8ca",
+          "SUB-8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f"
+        ],
+        "own_previous_ids": [
+          "SUB-e3407b956910db0e7d4c3dbf46ac184bccf23d68e66ef738a10e0696ef980338"
+        ],
+        "outside_JOB_and_own_previous": [
+          "SUB-8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f"
+        ],
+        "checkout_access_raw": "none; user-provided checkout path/instructions present in initial context but no filesystem read there"
+      }
+    ]
+  },
+  "current_cycle_disposition": "nonblocking_findings",
+  "disposition_reason": "Current matrix has only noncritical ordering deviations; separate older metadata-only scientific/operational questions remain unresolved. No blocking private-exposure finding is established.",
+  "task_binding": {
+    "tasklist_sha256": "868febca25e7ca9e5ba405590df6eac8d3e41819a3119c221ece13c6fc50fe18",
+    "proposer_consent": {
+      "session_id": "32ff7459-1199-4a05-aceb-ae30c925a366",
+      "decision": "pending",
+      "signed_revision": null,
+      "tasklist_sha256": "868febca25e7ca9e5ba405590df6eac8d3e41819a3119c221ece13c6fc50fe18",
+      "rationale": "Initial new successor has no earlier frozen target to sign; specific novelty, owners, dependency/oracle locks, representative economics and actual allocation remain unresolved. Pending is no agreement. No inherited predecessor consent."
+    },
+    "challenger_consent": {
+      "session_id": "dcd1cbc5-8472-4448-b7a0-e05270475146",
+      "decision": "revision_requested",
+      "signed_revision": "SUB-64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c",
+      "tasklist_sha256": "868febca25e7ca9e5ba405590df6eac8d3e41819a3119c221ece13c6fc50fe18",
+      "rationale": "Not agreement. Add variational-execution comparator and resolve recorder/census ordering; owners, lawful representative inputs, complete adapter/oracle locks, actual grants and matching consents remain missing. No new execution authorized."
+    }
+  }
+}

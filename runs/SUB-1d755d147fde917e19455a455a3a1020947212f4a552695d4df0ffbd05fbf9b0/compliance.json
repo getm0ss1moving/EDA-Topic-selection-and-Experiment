@@ -1,0 +1,177 @@
+{
+  "schema": 1,
+  "role": "verifier",
+  "actor_id": "ChatGPT-B03-PROTOCOL-D05-EDA-0010-R1",
+  "session_id": "4b61aaa0-9cb1-4f78-8f53-7eb21e5d22bc",
+  "input_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+  "packet_sha256": "6afa6c5e5181a17850cb21c677868b651b13403abd770639868f2d02ba83be68",
+  "job_id": "d94d8c40-abe8-42dc-9b9f-8106e9cf2606",
+  "read_releases": [
+    "SUB-45b1311973778bf0f7a2a7a2466ef3c20389362d8faf02846afdf22bc4ffce3d",
+    "SUB-64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c",
+    "SUB-af311c9ae6b091db1fdb94a8bd262fe027a34d25a761c2e072c59c2d0497d01d",
+    "SUB-47b431b4e6d39d744a6de744a3528c7571a5d718f6fc5716d5f1795875671a81",
+    "SUB-56f872e4f80bf5014b43024f33adda8011fdcdb0d211168bb549f3309a939ee5"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0
+  },
+  "rules": {
+    "inputs": {
+      "status": "deviation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json",
+        "runs/input-checks.json",
+        "operations"
+      ],
+      "limits": "Bounded released-file audit only; not hidden-activity/model attestation or independent self-clearance. Old IDs are metadata-only; no scientific vote."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json",
+        "runs/input-checks.json",
+        "operations"
+      ],
+      "limits": "Bounded released-file audit only; not hidden-activity/model attestation or independent self-clearance. Old IDs are metadata-only; no scientific vote."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json",
+        "runs/input-checks.json",
+        "operations"
+      ],
+      "limits": "Bounded released-file audit only; not hidden-activity/model attestation or independent self-clearance. Old IDs are metadata-only; no scientific vote."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json",
+        "runs/input-checks.json",
+        "operations"
+      ],
+      "limits": "Bounded released-file audit only; not hidden-activity/model attestation or independent self-clearance. Old IDs are metadata-only; no scientific vote."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json",
+        "runs/input-checks.json",
+        "operations"
+      ],
+      "limits": "Bounded released-file audit only; not hidden-activity/model attestation or independent self-clearance. Old IDs are metadata-only; no scientific vote."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json",
+        "runs/input-checks.json",
+        "operations"
+      ],
+      "limits": "Bounded released-file audit only; not hidden-activity/model attestation or independent self-clearance. Old IDs are metadata-only; no scientific vote."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json",
+        "runs/input-checks.json",
+        "operations"
+      ],
+      "limits": "Bounded released-file audit only; not hidden-activity/model attestation or independent self-clearance. Old IDs are metadata-only; no scientific vote."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json",
+        "runs/input-checks.json",
+        "operations"
+      ],
+      "limits": "Bounded released-file audit only; not hidden-activity/model attestation or independent self-clearance. Old IDs are metadata-only; no scientific vote."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json",
+        "runs/input-checks.json",
+        "operations"
+      ],
+      "limits": "Bounded released-file audit only; not hidden-activity/model attestation or independent self-clearance. Old IDs are metadata-only; no scientific vote."
+    }
+  },
+  "operations": [
+    {
+      "action": "initial assigned job root listing then JOB/prompt reading",
+      "paths": [
+        "JOB.json",
+        "prompt.txt"
+      ],
+      "incident": "OWN-001"
+    },
+    {
+      "action": "read supplied common rules and only verifier harness",
+      "paths": [
+        "policy/docs/CHARTER.md",
+        "policy/docs/WORKFLOW.md",
+        "policy/docs/EVIDENCE.md",
+        "policy/docs/ISOLATION.md",
+        "policy/docs/ROLE-COMPLIANCE.md",
+        "policy/docs/CODEX-AUTOMATION.md",
+        "policy/docs/SELF-SUBMISSION.md",
+        "policy/docs/INNOVATION-STRATEGY.md",
+        "policy/harness/VERIFIER.md"
+      ]
+    },
+    {
+      "action": "inspect supplied exact current outputs/descriptors and embedded old metadata; recompute SHA/identity/read/task bindings",
+      "paths": [
+        "shared/",
+        "runs/input-checks.json"
+      ],
+      "limits": "Historical paths embedded in strings not opened; no raw quarantined science sought."
+    },
+    {
+      "action": "write audit and own ledger; trusted structural validation/freeze/verify",
+      "paths": [
+        "release/",
+        "runs/",
+        "submissions/",
+        "result.json"
+      ],
+      "limits": "No full checkout validator, no experiments/source-code execution, no messages/new allocation."
+    }
+  ],
+  "incidents": [
+    {
+      "id": "OWN-001",
+      "rule": "inputs",
+      "description": "Initial own-job root filename listing before JOB/common-policy reading; no foreign payload exposed by listing. Preserve procedural ordering deviation."
+    },
+    {
+      "id": "OWN-002",
+      "classification": "interrupted_attempt_unknown_cause",
+      "description": "Assignment continuation explicitly reports an interrupted attempt. Cause and any pre-interruption activity beyond visible current execution are unknown; no prior completion, platform change, bypass or independent self-clearance asserted. Same assigned job/model retained."
+    }
+  ],
+  "observability": "Own public activity ledger, not full trace or independent audit. Assignment clarification messages supplied transport/boundary instructions only; no scientific role messages sent. Physical backend identity cannot be independently attested.",
+  "metadata_only_read_releases": [
+    "SUB-47b431b4e6d39d744a6de744a3528c7571a5d718f6fc5716d5f1795875671a81",
+    "SUB-56f872e4f80bf5014b43024f33adda8011fdcdb0d211168bb549f3309a939ee5"
+  ],
+  "checkout_access_explanation": "No checkout file accessed. Initial own assigned-job root listing preceded successful JOB/prompt/common-policy reading; common rules and own verifier harness thereafter, supplied shared files only."
+}

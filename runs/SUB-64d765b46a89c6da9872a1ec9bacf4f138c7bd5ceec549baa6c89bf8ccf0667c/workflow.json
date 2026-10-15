@@ -1,0 +1,49 @@
+{
+  "role": "proposer",
+  "topic": "EDA-0010",
+  "domain": "D05",
+  "batch_round": 4,
+  "batch_round_limit": 4,
+  "assessment": "unresolved",
+  "proposer_position": "conditional_new_successor_hypothesis_no_pilot_consent",
+  "next_action_requested": "independent_challenger_then_verifier_and_protocol_audit_then_batch_hard_stop",
+  "predecessor_topic": "EDA-0007",
+  "predecessor_status": "parked",
+  "predecessor_releases": [
+    "SUB-43ec8c256a5116bee2790bbbb147ed089d72731f6051d10a6bbe479ffb2578b9",
+    "SUB-261aace737adca3c4e2a7d350c74b3613e49885585048bace6c03f3272213ab7",
+    "SUB-f1d0c0c2682c4c400b66300ff48a498948f9fbc95d19db10151fa7cd92f8f4fa"
+  ],
+  "consensus_status": "pending_no_matching_exact_target_pair",
+  "tasklist_sha256": "868febca25e7ca9e5ba405590df6eac8d3e41819a3119c221ece13c6fc50fe18",
+  "readiness_checks": {
+    "dependencies": false,
+    "resources": false,
+    "baselines": false,
+    "metrics": false,
+    "correctness_oracle": false,
+    "stop_rules": true,
+    "owners": false,
+    "reproducible_procedures": false
+  },
+  "gates": {
+    "novelty": "unresolved",
+    "mechanism": "conditional_pure_DAG_lemma_only",
+    "utility": "unresolved",
+    "contest_originality": "unresolved",
+    "headroom": "unmeasured_administration_and_memory",
+    "feasibility": "not_ready",
+    "direction_integrity": "new_anchor_zero_drift",
+    "experiment_consensus": "pending"
+  },
+  "local_validation_scope": "Trusted release freeze/verify, supplied ledger validator, JSON/allowlist/hash/source-reference checks and own finite arithmetic only. Full project.py validate and PR publication delegated to coordinator by standalone job prompt; checkout not accessed.",
+  "resource_use": {
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0,
+    "tiny_own_analysis": "512 abstract integer/Fraction cases; not physical EDA execution"
+  },
+  "model_attestation": "JOB requested configuration only; no independent backend attestation",
+  "forecast_exposure": "unblinded released predecessor prose; no blindness claim",
+  "hard_stop": "No fifth substantive cycle or experiment allocation authorized by this batch."
+}

@@ -1,0 +1,11 @@
+# Engineering demand and fair scope
+
+The engineering user and exhaustive decision contract are fixed in proposal.md. N01 p1 introduces repeated timing queries in optimization; N09/N10b identify an experimental API consumer. That motivates inspection, not a claim that the candidate list is large or that this API dominates timing closure. N12's cap/order makes low-n workloads a mandatory negative control. No practitioner interview, representative timing trace, latency profile or downstream deployment evidence was acquired.
+
+The possible gap is administrative duplication across mutually exclusive replacement worlds after strong ordinary incrementality and keyed reuse. EXP-001 must census every naturally generated case (including0/1 candidates, failures, caps and non-improving alternatives), exact-key multiplicity, output bytes, useful primitive cost and restore/checkpoint cost. No workload may be selected because this method predicts reuse. Report the complete unfiltered distribution and prespecified strata.
+
+N15/N16 are public advertisements for existing timing-analysis capabilities. They are not an industry-absence claim, a license grant or controlled parity evidence. N03/N05/N06/N07 further prevent claiming that commercial systems lack sharing; actual deployed internals remain unknown. A feature missing from an open API is not independently a paper contribution.
+
+Deployment requires explicit acyclic/pure dependency extraction, upstream load/parasitic invalidation, full output availability, byte-bounded state, deterministic ties, restoration and reference fallback. Oracle context pinning and integration may exceed all potential savings. Output serialization may be the limiting floor even when primitives share.
+
+The owner policy screen is20% total-time reduction, <=0.005ns endpoint error and zero missed violating endpoints; it is explicitly provisional. This topic initially targets reference-equal outputs, so even a small sign-changing error fails regardless of tolerance. A justified practical threshold must be frozen using baseline variance and practitioner input before candidate evaluation. No user-backed numerical threshold, performance gap, silicon exactness or superiority is established. EXP-001 resolves demand; EXP-003 resolves adapter semantics; EXP-006/007 resolve net benefit after allocation and consensus.

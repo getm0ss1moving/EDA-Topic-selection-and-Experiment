@@ -1,0 +1,161 @@
+{
+  "schema": 1,
+  "role": "challenger",
+  "actor_id": "ChatGPT-C05-TIMING-B03-EDA-0010",
+  "session_id": "dcd1cbc5-8472-4448-b7a0-e05270475146",
+  "input_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+  "packet_sha256": "bae14bfaba1910849d9260180efe256b134a124182cb9dbfb87f058af5d57a5d",
+  "job_id": "bbc3cee2-805a-4ae0-a256-caa4cbf3b6cd",
+  "read_releases": [
+    "SUB-64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0,
+    "checkout_access_explanation": "All filesystem reads/writes were inside this assigned job. Cwd is supplied externally but commands use exact job workdir. No project checkout file was opened.",
+    "forecast_exposure": "Current released proposal/plan disclosed null forecasts, toy counts and final position; explicitly unblinded. forecast.json not read."
+  },
+  "rules": {
+    "inputs": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "search-log.md",
+        "challenges.md",
+        "workflow.json"
+      ],
+      "limits": "Self-report only; not an OS audit or proof of absent unseen actions. Actual model/effort not independently attested. External selected-text access and unresolved scientific claims are documented."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "search-log.md",
+        "challenges.md",
+        "workflow.json"
+      ],
+      "limits": "Self-report only; not an OS audit or proof of absent unseen actions. Actual model/effort not independently attested. External selected-text access and unresolved scientific claims are documented."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "search-log.md",
+        "challenges.md",
+        "workflow.json"
+      ],
+      "limits": "Self-report only; not an OS audit or proof of absent unseen actions. Actual model/effort not independently attested. External selected-text access and unresolved scientific claims are documented."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "search-log.md",
+        "challenges.md",
+        "workflow.json"
+      ],
+      "limits": "Self-report only; not an OS audit or proof of absent unseen actions. Actual model/effort not independently attested. External selected-text access and unresolved scientific claims are documented."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "search-log.md",
+        "challenges.md",
+        "workflow.json"
+      ],
+      "limits": "Self-report only; not an OS audit or proof of absent unseen actions. Actual model/effort not independently attested. External selected-text access and unresolved scientific claims are documented."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "search-log.md",
+        "challenges.md",
+        "experiment-consent.json"
+      ],
+      "limits": "Self-report only; not an OS audit or proof of absent unseen actions. Actual model/effort not independently attested. External selected-text access and unresolved scientific claims are documented."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "search-log.md",
+        "challenges.md",
+        "workflow.json"
+      ],
+      "limits": "Self-report only; not an OS audit or proof of absent unseen actions. Actual model/effort not independently attested. External selected-text access and unresolved scientific claims are documented."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "search-log.md",
+        "challenges.md",
+        "workflow.json"
+      ],
+      "limits": "Self-report only; not an OS audit or proof of absent unseen actions. Actual model/effort not independently attested. External selected-text access and unresolved scientific claims are documented."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "search-log.md",
+        "challenges.md",
+        "workflow.json"
+      ],
+      "limits": "Self-report only; not an OS audit or proof of absent unseen actions. Actual model/effort not independently attested. External selected-text access and unresolved scientific claims are documented."
+    }
+  },
+  "operations": [
+    {
+      "action": "read",
+      "paths": [
+        "JOB.json",
+        "prompt.txt",
+        "policy/docs/",
+        "policy/harness/CHALLENGER.md",
+        "policy/templates/topic/compliance.json",
+        "shared/SUB-64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c"
+      ],
+      "details": "Only listed released current files actually read; predecessor filenames listed, not contents."
+    },
+    {
+      "action": "external_source_read",
+      "evidence": [
+        "search-log.md",
+        "sources.json"
+      ],
+      "details": "Independent primary literature/code/contest/vendor reading via web; no downloaded code execution."
+    },
+    {
+      "action": "own_tiny_analysis",
+      "paths": [
+        "scratch/conditional_check.py",
+        "runs/conditional-check.json"
+      ],
+      "details": "1024 finite arithmetic/mask cases; not EDA or performance measurement."
+    },
+    {
+      "action": "write",
+      "paths": [
+        "release/",
+        "scratch/write_release.py",
+        "scratch/evidence_release.py",
+        "runs/"
+      ],
+      "details": "Role-owned artifacts and local generation scripts only."
+    },
+    {
+      "action": "freeze",
+      "details": "Supplied trusted role_submission.py invoked after local JSON/source/identity checks; resulting manifest and result.json record successful completion if validated."
+    }
+  ],
+  "incidents": [],
+  "observability": "Self-authored public activity ledger, not a complete tool trace or evidence of absent undisclosed actions."
+}

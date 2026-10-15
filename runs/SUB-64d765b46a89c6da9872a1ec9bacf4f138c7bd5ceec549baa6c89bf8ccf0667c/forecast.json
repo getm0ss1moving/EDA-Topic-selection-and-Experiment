@@ -1,0 +1,18 @@
+{
+  "kind": "forecast_not_measurement",
+  "metric": "Total wall time for identical exhaustive candidate timing decisions",
+  "unit": "seconds",
+  "baseline_source": "B2 same-key global exact memoization plus strong incremental task execution; not measured",
+  "direction": "lower if H1/H2 hold",
+  "pessimistic": null,
+  "base": null,
+  "optimistic": null,
+  "confidence": null,
+  "assumptions": [
+    "No calibration or representative trace; numeric benefit probabilities/ranges are unavailable.",
+    "Synthetic primitive counts are not timing-runtime forecasts.",
+    "No unallocated EDA/build/training run occurs.",
+    "All administration, materialization, fallbacks, features, fitting and communication are charged."
+  ],
+  "calibration_plan": "EXP-001/005 freeze empirical variance, demand threshold and grouped held-out design splits before allocated confirmatory candidate evaluation."
+}

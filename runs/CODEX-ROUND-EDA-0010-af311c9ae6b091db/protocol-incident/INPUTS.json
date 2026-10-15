@@ -1,0 +1,8 @@
+{
+  "scope": "Exact public JOB/prompt/self-ledger/frozen manifest only; no raw proposal/challenge arguments, copyrighted sources, private scratch or traces. No scientific validity/novelty vote can follow from this metadata alone.",
+  "files": {
+    "coordinator-report.json": "bf300d0568b00fa2e750b33ee805d32b014782d8a086375a7963eeffa09b8f03"
+  },
+  "source_input": "runs/GPT-COMPLIANCE-0003/aborted-attempt-metadata.json",
+  "source_input_sha256": "bf300d0568b00fa2e750b33ee805d32b014782d8a086375a7963eeffa09b8f03"
+}

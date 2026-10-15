@@ -1,0 +1,82 @@
+{
+  "state": "continue",
+  "topic": "EDA-0010",
+  "predecessor_topic": "EDA-0007",
+  "predecessor_status": "parked",
+  "anchor": {
+    "problem": "Repeated exhaustive timing evaluation of mutually exclusive fixed-topology cell-replacement worlds from one immutable base.",
+    "engineering_user": "Timing-engine and timing-optimization developer.",
+    "downstream_need": "Lower total time for identical full candidate timing/electrical outputs and reference selection, with complete charged reporting/restoration.",
+    "causal_mechanism": "Maintain operation-specific exact world partitions by dependency-class intersection, split and result re-coalescence; test administrative and bounded-memory dispatch cost beyond same-key memoization.",
+    "mechanism_invariants": [
+      "Every requested world/candidate and complete output remains available; no mask/selected-subset output contract.",
+      "Complete exact operation context; hashes are indexes and full keys checked; upstream load and all phase dependencies included.",
+      "Prediction/algorithmic agents schedule or admit work only; no learned equality/correctness certificate.",
+      "Same-key memo parity and output materialization cost are mandatory negative controls.",
+      "Single base/epoch; unsupported impure/cyclic engine work uses isolated charged reference fallback.",
+      "No predecessor covariance, signatures, acceptance, exposure erasure or automatic resource transfer."
+    ],
+    "forbidden_pivots": [
+      "Claiming generic caching, transaction undo, task grouping or agent count as the research contribution.",
+      "Dropping full endpoint/candidate outputs, filtering low-n/no-reuse cases, or optimizing a cache-hit proxy without decision-time demand.",
+      "Escaping same-key memoization by giving the proposal extra features, future traces, memory or hidden reference work.",
+      "Changing to selective residual-covariance acquisition or MCMM/wider ECO scope merely to manufacture headroom."
+    ]
+  },
+  "penalties": {
+    "combination_drift": {
+      "score": 0,
+      "rationale": "Initial new anchor explicitly concedes known components and memo parity; no prior topic acceptance or mechanism is renamed.",
+      "evidence_refs": [
+        "proposal.md:New anchor",
+        "prior-art.csv",
+        "responses.md"
+      ]
+    },
+    "demand_drift": {
+      "score": 0,
+      "rationale": "Same domain need for reference-consistent timing decisions; no claimed demonstrated demand. Initial exhaustive contract is explicit.",
+      "evidence_refs": [
+        "industry-gap.md",
+        "proposal.md:Problem"
+      ]
+    },
+    "total": 0
+  },
+  "revision_assessment": {
+    "preserves_problem": true,
+    "preserves_engineering_need": true,
+    "preserves_causal_mechanism": true,
+    "changes": [
+      "New successor mechanism; retained predecessor negatives.",
+      "Own memo-parity reduction narrows potential contribution to administration/memory cost."
+    ],
+    "reason": "Initial EDA-0010 anchor; zero is not a merit/readiness score."
+  },
+  "abandonment": {
+    "decision_id": null,
+    "grounds": [],
+    "rationale": null,
+    "evidence_refs": [],
+    "consents": {
+      "proposer": {
+        "session_id": null,
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      },
+      "challenger": {
+        "session_id": null,
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      }
+    },
+    "successor_topic_id": null,
+    "resurrection_conditions": [
+      "Any post-batch research requires new finite authorization.",
+      "Resolve specific administration distinction, representative exact-key economics, engine dependency/restore locks and actual resources.",
+      "Fresh exact-target P/C consents and independent readiness verification; no inherited approval."
+    ]
+  }
+}
