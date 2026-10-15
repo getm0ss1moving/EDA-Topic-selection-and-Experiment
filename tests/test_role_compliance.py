@@ -173,6 +173,55 @@ class AuditedLoopTests(unittest.TestCase):
         self.assertEqual(l.dispatch(self.c,self.home,'D05')['status'],'finished')
         self.assertEqual(len(l.read(self.home/'state.json')['publication_queue']),1)
 
+    def test_terminal_decisions_cannot_skip_critical_audit_quarantine(self):
+        for action in ('accept_for_pilot','abandon'):
+            with self.subTest(action=action):
+                self.home=self.root/action
+                with patch.object(l,'frozen',side_effect=lambda ref,name:(ROOT/name).read_bytes()):
+                    l.prepare(self.c,self.home,l.git('rev-parse','HEAD'))
+                for _ in range(3):self.science()
+                state=l.read(self.home/'state.json');state['publication_queue'][0]['decision']=action
+                l.save(self.home/'state.json',state)
+                self.audit('blocking_violation')
+                self.assertEqual(l.audit_collect(self.c,self.home,'D05')['status'],'quarantined')
+                state=l.read(self.home/'state.json');self.assertEqual(state['publication_queue'],[])
+                self.assertEqual(state['incidents'][0]['round']['decision'],action)
+
+    def test_pre_checkpoint_inflight_phases_recover_using_only_released_history(self):
+        for phase,completed in (('challenger',1),('verifier',2),('protocol_audit',3)):
+            with self.subTest(phase=phase):
+                self.home=self.root/phase
+                with patch.object(l,'frozen',side_effect=lambda ref,name:(ROOT/name).read_bytes()):
+                    l.prepare(self.c,self.home,l.git('rev-parse','HEAD'))
+                for _ in range(completed):self.science()
+                if phase=='protocol_audit':work=self.audit('blocking_violation')
+                else:
+                    job=l.dispatch(self.c,self.home,'D05');work=Path(job['work'])
+                    fixtures.LoopTests.fake(self,self.c,job);a=l.read(work/'JOB.json');v=self.ledger(a)
+                    v['activity']['foreign_private_reads']=['withheld-id']
+                    l.save(work/'release/compliance.json',v);self.freeze(work)
+                state=l.read(self.home/'state.json');state['topics']['EDA-0002'].pop('cycle_checkpoint')
+                l.save(self.home/'state.json',state)
+                if phase=='protocol_audit':l.audit_collect(self.c,self.home,'D05')
+                else:
+                    with self.assertRaises(l.compliance.ProtocolViolation):l.collect(self.c,self.home,'D05')
+                state=l.read(self.home/'state.json');self.assertEqual(state['incidents'][0]['clean_checkpoint']['history'],[])
+                l.recover(self.c,self.home,'D05');job=l.dispatch(self.c,self.home,'D05')
+                self.assertEqual(job['role'],'proposer')
+                self.assertEqual(l.read(self.home/'state.json')['topics']['EDA-0002']['round'],0)
+
+    def test_unreconstructable_checkpoint_still_persists_fail_closed_quarantine(self):
+        self.science();job=l.dispatch(self.c,self.home,'D05');work=Path(job['work'])
+        fixtures.LoopTests.fake(self,self.c,job);a=l.read(work/'JOB.json');v=self.ledger(a)
+        v['activity']['foreign_private_reads']=['withheld-id']
+        l.save(work/'release/compliance.json',v);self.freeze(work)
+        state=l.read(self.home/'state.json');t=state['topics']['EDA-0002']
+        t.pop('cycle_checkpoint');t['history']=[];l.save(self.home/'state.json',state)
+        with self.assertRaises(l.compliance.ProtocolViolation):l.collect(self.c,self.home,'D05')
+        self.assertEqual(l.dispatch(self.c,self.home,'D05')['status'],'quarantined')
+        with self.assertRaisesRegex(ValueError,'quarantine preserved'):l.recover(self.c,self.home,'D05')
+        self.assertEqual(l.read(self.home/'state.json')['incidents'][0]['status'],'quarantined')
+
     def test_identity_and_unreleased_input_are_checked(self):
         a=l.read(Path(l.dispatch(self.c,self.home,'D05')['work'])/'JOB.json')
         ledger=self.ledger(a);manifest={k:a[k] for k in ('role','actor_id','session_id','input_commit','packet_sha256')}

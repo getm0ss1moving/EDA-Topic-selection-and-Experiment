@@ -522,15 +522,41 @@ def cycle_checkpoint(t):
     return {k:copy.deepcopy(t[k]) for k in fields if k in t}
 
 
+def clean_checkpoint(state,t,job,record=None):
+    """Migrate older audited in-flight phases using released history only."""
+    if t.get('cycle_checkpoint'):return t['cycle_checkpoint']
+    consumed=3 if record else ROLES.index(job['role'])
+    history=list(t['history'])
+    if len(history)<consumed:return None
+    clean=history[:-consumed] if consumed else history
+    expected_round=t['round']-(1 if record else 0)
+    if len(clean)!=expected_round*3:return None
+    try:
+        for index,name in enumerate(history):
+            m,_=rs.verify(name)
+            if m['topic']!=t['topic'] or m['role']!=ROLES[index%3]:return None
+        latest={r:clean[-3+index] for index,r in enumerate(ROLES)} if clean else {}
+        out={'phase':'proposer','round':expected_round,'status':'researching',
+             'latest':latest,'history':clean,'closure':None}
+        if clean:
+            _,payload=rs.verify(latest['verifier'])
+            action=json.loads(payload['workflow.json'])['next_action']
+            out['last_scientific_decision']=action
+            out['closure']={'consent_experiment':'experiment','consent_abandonment':'abandonment',
+                            'accept_for_pilot':'experiment'}.get(action)
+        return out
+    except (ValueError,OSError,KeyError):return None
+
+
 def quarantine_cycle(state,t,job,reason,home,record=None):
     """Persist rejected evidence and halt; a disclosure is never a retry note."""
-    if not t.get('cycle_checkpoint'):raise ValueError('Missing clean recovery checkpoint; stop for coordinator')
+    checkpoint=clean_checkpoint(state,t,job,record)
     ident='INCIDENT-'+str(uuid.uuid4())
     releases=dict(record['releases']) if record else dict(t['latest'])
     snapshots=[str(p) for p in (Path(job['work'])/'submissions').glob('SUB-*')]
     incident={'id':ident,'topic':t['topic'],'domain':t['domain'],'reason':reason,
               'job':copy.deepcopy(job),'releases':releases,'frozen_attempts':snapshots,
-              'clean_checkpoint':copy.deepcopy(t['cycle_checkpoint']),
+              'clean_checkpoint':copy.deepcopy(checkpoint),
               'old_seats':copy.deepcopy(t['seats']),'status':'quarantined',
               'note':'Preserve disclosure; no private transcript or exposed content is copied. Fresh full-cycle replacement required.'}
     if record:
@@ -550,6 +576,7 @@ def recover(c,home,domain):
     if len(affected)!=1:raise ValueError('Exactly one quarantined cycle is required')
     t=affected[0];incident=next(i for i in state['incidents'] if i['id']==t['active_incident'])
     checkpoint=incident['clean_checkpoint'];old=t['seats'];new={}
+    if not checkpoint:raise ValueError('Clean checkpoint unavailable; quarantine preserved, independent coordinator repair required')
     number=sum(i['topic']==t['topic'] for i in state['incidents'])
     for role,seat in old.items():
         verify_packet(seat)
@@ -661,14 +688,14 @@ def audit_collect(c,home,domain):
         save(home/'state.json',state);raise
     disposition=compliance.validate_review(json.loads(p['verification.json']),
                                           json.loads(p.get('workflow.json',b'{}')),expected)
-    if record['decision'] in ('accept_for_pilot','abandon') and disposition not in ('clear_within_scope','nonblocking_findings'):
-        raise ValueError('Scientific advancement cannot use an unresolved/blocking protocol audit')
     audit['release']=str(snapshot);audit['disposition']=disposition
     record['compliance_audit']=str(snapshot);record['compliance_gate']=disposition
     if disposition=='blocking_violation':
         quarantine_cycle(state,state['topics'][record['topic']],job,'Independent audit found a critical supported violation',home,record)
         save(home/'state.json',state)
         return {'status':'quarantined','topic':m['topic'],'disposition':disposition,'release_id':snapshot.name}
+    if record['decision'] in ('accept_for_pilot','abandon') and disposition not in ('clear_within_scope','nonblocking_findings'):
+        raise ValueError('Scientific advancement cannot use an unresolved protocol audit')
     registration={'session_id':m['session_id'],'actor_id':m['actor_id'],'role':'verifier','topic':m['topic'],
                   'platform':'OpenAI Codex','model':c['models']['verifier']['model'],'operator':'getm0ss1moving',
                   'github_login':'getm0ss1moving (transport only)', 'input_commit':m['input_commit'],
