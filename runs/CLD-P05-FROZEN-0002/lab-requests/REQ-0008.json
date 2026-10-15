@@ -1,0 +1,11 @@
+{
+  "id": "REQ-0008",
+  "category": "property-check",
+  "purpose": "Full P3-P5 property checks of pinned dmp_ceff_elmore (OpenSTA e01d3f16): 3000 random SPEF RC trees, 3000 random injected pi/Elmore models, 1500+1500 targeted plateau cases and 800 near-singular Elmore cases on synthetic Liberty tables. No real design, no runtime or QoR measurement.",
+  "host": "lab234",
+  "network": false,
+  "cores": 2,
+  "timeout_hours": 2.0,
+  "script": "REQ-0008.sh",
+  "inputs": ["p05_fixtures.py", "p05_extract.tcl", "p05_check.py"]
+}

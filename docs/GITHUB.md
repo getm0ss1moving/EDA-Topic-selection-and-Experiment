@@ -1,10 +1,12 @@
+Current default: human confirmation is optional under the owner's 2026-10-15 instruction. Set repository variable `REQUIRE_HUMAN_FINAL_REPORTS=true` to opt into the distinct-account report review described below. Automated checks and scientific verification always remain required.
+
 # GitHub operations and enforcement
 
 ## Enforced gate
 
 `main` requires PRs, resolved conversations, current-base structural checks and status `independent-verifier`. Administrative bypass is disabled by branch protection. Force pushes and deletion are disabled. The bootstrap gate uses GitHub API data only, with no checkout or execution of PR code, and runs from the base branch on `pull_request_target`.
 
-For final reports under `topics/` and `reports/final/`, only accounts explicitly listed in the repository Actions variable `VERIFIER_LOGINS` may confirm. An empty configuration blocks final-report approval. Intermediate PRs require no human review; the unconditional approval count is zero. The review must be `APPROVED`, belong to a different account than the PR author, reference the current full head SHA and contain exactly `CONFIRM <sha>`. A registered verifier's outstanding change request blocks confirmation. All scientific rationale must already exist in files; the review is a transport signal.
+When `REQUIRE_HUMAN_FINAL_REPORTS=true`, final reports under `topics/` and `reports/final/` require account approval. Only accounts explicitly listed in the repository Actions variable `VERIFIER_LOGINS` may confirm. An empty configuration blocks final-report approval. Intermediate PRs require no human review; the unconditional approval count is zero. The review must be `APPROVED`, belong to a different account than the PR author, reference the current full head SHA and contain exactly `CONFIRM <sha>`. A registered verifier's outstanding change request blocks confirmation. All scientific rationale must already exist in files; the review is a transport signal.
 
 A native approval proves account separation, not independent reasoning. The human must verify the session manifest, file packet isolation and verifier's evidence work. All roles using the owner's single GitHub account cannot provide distinct-account human confirmation of final reports. AI scientific independence is established separately by packets and evidence records. Enroll a second GitHub account controlled by the verifier operator or a properly configured review bot; never give a proposer admin credentials for the review identity.
 

@@ -1,9 +1,13 @@
+# Current ChatGPT-only execution
+
+The role self-freezes, then the native coordinator automatically transports its validated release. Use `docs/CODEX-AUTOMATION.md`; do not wait for a registry merge, human freeze or manual wake-up. The coordinator includes exact logical registrations in each round PR. The standalone legacy publish command below retains its original main-registry precondition.
+
 # Self-submission and frozen role releases
 
 The owner authorizes proposer, challenger and verifier self-submission and self-freeze.
 This replaces earlier instructions to wait for the owner/coordinator to freeze a
 dossier. The verifier submits a compact table and matching machine record.
-Human approval is still required for final topic and experiment reports.
+Human review is optional under the owner's 2026-10-15 automatic-research instruction; independent scientific verification remains required.
 
 ## Actor procedure
 
@@ -19,7 +23,8 @@ Human approval is still required for final topic and experiment reports.
    challenger may add `experiment-consent.json` containing only its own consent
    block (`session_id`, `decision`, `signed_revision`, `tasklist_sha256`,
    `rationale`); the session must be the releasing session and the decision one of
-   `pending`, `agree` or `revision_requested`. Host artifacts named `.DS_Store` or
+   `pending`, `agree` or `revision_requested`. Either may likewise add its own
+   `abandonment-consent.json`; `docs/AUTO-ROUND.md` defines both signatures. Host artifacts named `.DS_Store` or
    `.claude` are ignored and never released.
 2. Use the trusted script supplied in your packet/amendment:
 
@@ -78,7 +83,8 @@ First-pass forecast masking still requires semantic inspection; a filesystem
 watcher cannot establish scientific readiness or independence.
 
 Inside a round, `scripts/round_transmit.py` moves releases between local role inboxes
-without GitHub (`docs/AUTO-ROUND.md`); the publication above then happens after the round.
+without GitHub, and `scripts/round_publish.py` publishes each finished round as one PR
+(`docs/AUTO-ROUND.md`).
 
 This command-based transport is available now. It does not install a daemon or
 claim that queues are continuously watched. An unattended deployment must pin
@@ -92,4 +98,4 @@ claim/objection, and the eight-gate table. Cite source ID plus exact locator,
 verdict, whether blocking, and a short reason/action. No long narrative is
 required. Retain `verification.json` for structural gates and digest binding.
 Unavailable evidence is unresolved; a concise table cannot conceal missing
-verification. Task-list dual consent and final human approval remain unchanged.
+verification. Task-list dual consent and independent evidence checking remain required.

@@ -31,10 +31,10 @@ Failure of an unsupported premise means revise or collect evidence, not automati
 
 ## Decision rights
 
-The human owns priorities, resources and exceptions. The proposer owns a hypothesis. The challenger owns independently researched objections. The verifier owns source checking and whether each objection is valid, overstated, unsupported, or unresolved. None may confirm their own output as independent evidence. A second verifier or a human adjudicator handles contested verifier conclusions through written files.
+The human owns priorities, resources and exceptions. The proposer owns a hypothesis. The challenger owns independently researched objections. The verifier owns source checking and whether each objection is valid, overstated, unsupported, or unresolved. None may confirm their own output as independent evidence. A contested verifier conclusion is rechecked from written counter-evidence; if unresolved, park the topic and continue with a successor. A second verifier or human adjudicator is an optional escalation.
 
 ## Research incentives
 
 Reward disconfirmation, corrected citations and useful negative results. Do not reward proposal count, objection count, impressive forecasts or forced consensus. Freeze evaluation criteria before results. Publish uncertainty and archive negative outcomes. Reopen decisions when new prior art or evidence appears.
 
-Human GitHub approval is reserved for final topic and experiment reports, as specified in `docs/WORKFLOW.md`. Intermediate PRs use automated checks and role-specific AI verification without requiring a human approval review.
+Human GitHub approval is optional under the owner's 2026-10-15 automatic-research instruction. All decisions still require their scientific role checks and file provenance. See `docs/WORKFLOW.md` and `docs/CODEX-AUTOMATION.md`.

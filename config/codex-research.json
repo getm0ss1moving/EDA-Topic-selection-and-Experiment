@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "platform": "OpenAI Codex",
+  "runtime_root": "../EDA-Codex-Research",
+  "cli": "codex",
+  "models": {
+    "proposer": {
+      "model": "gpt-6-astra",
+      "effort": "high"
+    },
+    "challenger": {
+      "model": "gpt-6-astra",
+      "effort": "low"
+    },
+    "verifier": {
+      "model": "gpt-6-luna",
+      "effort": "medium"
+    }
+  },
+  "topics": {
+    "EDA-0001": {
+      "domain": "D04",
+      "actors": {
+        "proposer": "ChatGPT-P04-PHYSICAL",
+        "challenger": "ChatGPT-C04-PHYSICAL",
+        "verifier": "ChatGPT-V04-PHYSICAL"
+      },
+      "seed_prefix": null
+    },
+    "EDA-0002": {
+      "domain": "D05",
+      "actors": {
+        "proposer": "ChatGPT-P05-TIMING",
+        "challenger": "ChatGPT-C05-TIMING",
+        "verifier": "ChatGPT-V05-TIMING"
+      },
+      "seed_prefix": "runs/CLD-P05-FROZEN-0002/candidates/EDA-0002/"
+    }
+  },
+  "poll_seconds": 30,
+  "turn_timeout_seconds": 1800,
+  "failure_backoff_seconds": 1800,
+  "max_substantive_rounds": 3,
+  "max_topics_per_domain": null,
+  "publication": {
+    "enabled": true,
+    "auto_merge": true,
+    "require_human_final_reports": false
+  },
+  "execution_policy": "Research automation may read accessible external sources, write its own outputs, freeze and send. It may not inspect foreign private content, purchase resources, or exceed the existing experiment allocation."
+}

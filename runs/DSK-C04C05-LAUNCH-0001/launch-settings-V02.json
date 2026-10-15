@@ -2,11 +2,13 @@
   "autoMemoryEnabled": false,
   "apiKeyHelper": "/Users/duanzeyu/Documents/ChatGPT/EDA-Topic-selection-and-Experiment/runs/DSK-C04C05-LAUNCH-0001/keychain-token.sh",
   "permissions": {
-    "defaultMode": "default",
+    "defaultMode": "dontAsk",
     "allow": [
       "WebSearch",
       "WebFetch",
-      "Edit(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/verifier-release-20261014/DeepSeek-V02-PHYSICAL/**)"
+      "Edit(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/verifier-release-20261014/DeepSeek-V02-PHYSICAL/**)",
+      "Read(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/rounds/EDA-0002/DeepSeek-V02-PHYSICAL/**)",
+      "Write(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/verifier-release-20261014/DeepSeek-V02-PHYSICAL/**)"
     ],
     "deny": [
       "Task",
@@ -61,8 +63,13 @@
       "Read(~/.*/**)",
       "Read(~/Library/**)",
       "Read(//private/tmp/claude-501/**)",
-      "Read(//tmp/claude-501/**)"
-    ]
+      "Read(//tmp/claude-501/**)",
+      "Read(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/rounds/EDA-0002/Claude-P05-TIMING/**)",
+      "Read(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/rounds/EDA-0002/Codex-C05-TIMING-R2/**)",
+      "Write(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/rounds/EDA-0002/DeepSeek-V02-PHYSICAL/**)",
+      "Edit(//Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/rounds/EDA-0002/DeepSeek-V02-PHYSICAL/**)"
+    ],
+    "blockReadsOutsideWorkingDirectories": true
   },
   "sandbox": {
     "enabled": true,
@@ -75,13 +82,17 @@
       ],
       "allowRead": [
         "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/verifier-release-20261014/DeepSeek-V02-PHYSICAL",
-        "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/verifier-release-20261014/DeepSeek-V02-PHYSICAL"
+        "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/verifier-release-20261014/DeepSeek-V02-PHYSICAL",
+        "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/rounds/EDA-0002/DeepSeek-V02-PHYSICAL"
       ],
       "denyWrite": [
-        "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/verifier-release-20261014/DeepSeek-V02-PHYSICAL"
+        "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Packets/verifier-release-20261014/DeepSeek-V02-PHYSICAL",
+        "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/rounds/EDA-0002/DeepSeek-V02-PHYSICAL"
       ],
       "allowWrite": [
-        "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/verifier-release-20261014/DeepSeek-V02-PHYSICAL"
+        "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Outboxes/verifier-release-20261014/DeepSeek-V02-PHYSICAL",
+        "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/rounds/EDA-0002/Claude-P05-TIMING/from-verifier",
+        "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/rounds/EDA-0002/Codex-C05-TIMING-R2/from-verifier"
       ]
     },
     "network": {

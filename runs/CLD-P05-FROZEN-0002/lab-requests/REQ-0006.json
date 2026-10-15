@@ -1,0 +1,11 @@
+{
+  "id": "REQ-0006",
+  "category": "property-check",
+  "purpose": "Install and smoke-test pinned OpenSTA e01d3f16 (built by REQ-0005), then run a pilot of the P3-P5 checks of pinned dmp_ceff_elmore on synthetic Liberty tables and synthetic RC trees or injected pi/Elmore models (150 + 150 nets). No real design, no runtime or QoR measurement.",
+  "host": "lab234",
+  "network": false,
+  "cores": 2,
+  "timeout_hours": 1.0,
+  "script": "REQ-0006.sh",
+  "inputs": ["p05_fixtures.py", "p05_extract.tcl", "p05_check.py"]
+}

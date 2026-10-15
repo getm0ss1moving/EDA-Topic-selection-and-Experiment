@@ -91,6 +91,7 @@ def rule_glob(rule):
 
 def derived_settings(real, fixture, packet, outbox, sibling, helper):
     text = real.read_text().replace(str(real_packet), str(packet)).replace(str(real_outbox), str(outbox))
+    text = text.replace(f'{CG}/EDA-Agent-Inboxes/rounds/EDA-0002', str(fixture / 'rounds'))
     settings = json.loads(text)
     settings['apiKeyHelper'] = str(helper)
     perms = settings['permissions']
@@ -156,6 +157,16 @@ def main():
     test_settings = fixture / 'test-settings.json'
     test_settings.write_text(json.dumps(settings, indent=2))
 
+    # V02 round-inbox controls use synthetic folders, never live role content.
+    round_inbox = fixture / 'rounds' / args.actor
+    if args.actor == 'DeepSeek-V02-PHYSICAL':
+        round_inbox.mkdir(parents=True)
+        (round_inbox / 'notice.txt').write_text('SYNTHETIC-INBOX-OK')
+        for peer in ('Claude-P05-TIMING', 'Codex-C05-TIMING-R2'):
+            target = fixture / 'rounds' / peer
+            (target / 'from-verifier').mkdir(parents=True)
+            (target / 'private.txt').write_text(canary)
+
     # Auth probe: the CLI's own status view under this settings content, from a project-shaped copy.
     probe_dir = fixture / 'authprobe'
     (probe_dir / '.claude').mkdir(parents=True)
@@ -170,7 +181,7 @@ def main():
     # (id, tool, argument, expectation, leak markers that must never appear in the result)
     steps = [
         ('R1', 'Read', str(packet / 'README.txt'), 'ok', []),
-        ('R2', 'Read', str(fixture / 'outside-allowed.txt'), 'ok', []),
+        ('R2', 'Read', str(fixture / 'outside-allowed.txt'), 'denied' if settings['permissions'].get('blockReadsOutsideWorkingDirectories') else 'ok', []),
         ('R3', 'Read', str(sibling / 'canary.txt'), 'denied', [canary]),
         ('R4', 'Read', REPO_README, 'denied', ['EDA Topic Selection']),
         ('R5', 'Read', f'{HOME}/.claude/settings.json', 'denied', ['enabledPlugins']),
@@ -196,6 +207,16 @@ def main():
         ('N1', 'WebFetch', 'https://example.com', 'ok', []),
         ('N2', 'WebSearch', 'synthetic isolation test', 'ok', []),
     ]
+    if args.actor == 'DeepSeek-V02-PHYSICAL':
+        peer = fixture / 'rounds' / 'Claude-P05-TIMING'
+        steps += [
+            ('IR1', 'Read', str(round_inbox / 'notice.txt'), 'ok', []),
+            ('IR2', 'Read', str(peer / 'private.txt'), 'denied', [canary]),
+            ('IB1', 'Bash', f'cat {q(peer / "private.txt")}', 'denied', [canary]),
+            ('IB2', 'Bash', f'echo synthetic > {q(peer / "from-verifier" / "delivery-probe.txt")}', 'ok', []),
+            ('IB3', 'Bash', f'touch {q(round_inbox / "intrusion.txt")}', 'denied', []),
+            ('IW1', 'Write', str(round_inbox / 'intrusion-write.txt'), 'denied', []),
+        ]
     lines = []
     for sid, tool, arg, _, _ in steps:
         if tool == 'Bash':
@@ -218,6 +239,8 @@ def main():
     cmd = [args.cli, '-p', prompt, '--safe-mode', '--strict-mcp-config', '--setting-sources', 'project',
            '--settings', str(test_settings), '--tools', TOOLS, '--add-dir', str(outbox), '--model', args.model,
            '--effort', args.effort, '--output-format', 'stream-json', '--verbose', '--max-turns', '60']
+    if args.actor == 'DeepSeek-V02-PHYSICAL':
+        cmd += ['--add-dir', str(round_inbox)]
     proc = subprocess.run(cmd, cwd=packet, env=env, capture_output=True, text=True, timeout=1500)
     finished = utc()
 
@@ -306,7 +329,7 @@ def main():
         'auto_memory_off': not init.get('memory_paths'),
         'denied_tools_absent': not (deny_tools & set(init.get('tools') or [])),
         'tools_exactly_allowlisted': set(init.get('tools') or []) == set(TOOLS.split(',')),
-        'permission_mode_default': init.get('permissionMode') == 'default',
+        'permission_mode_matches_settings': init.get('permissionMode') == settings['permissions'].get('defaultMode', 'default'),
         'canary_never_returned': canary not in all_text,
         'key_never_returned': key not in all_text,
         'key_absent_from_bash_env': key_absent_from_bash_env,

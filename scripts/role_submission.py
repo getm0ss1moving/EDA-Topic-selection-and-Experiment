@@ -21,20 +21,30 @@ FILES = {
     'proposer': {'proposal.md', 'sources.json', 'search-log.md', 'prior-art.csv',
                  'contest-audit.md', 'industry-gap.md', 'experiment-plan.md',
                  'forecast.json', 'tasklist.md', 'responses.md', 'direction-control.json',
-                 'experiment-consent.json'},
+                 'experiment-consent.json', 'abandonment-consent.json'},
     'challenger': {'challenges.md', 'sources.json', 'search-log.md', 'prior-art.csv',
-                   'independent-estimate.md', 'tasklist.md', 'experiment-consent.json'},
+                   'independent-estimate.md', 'tasklist.md', 'experiment-consent.json',
+                   'abandonment-consent.json'},
     'verifier': {'verification.md', 'verification.json'},
 }
+# Optional coordinator-readable outcome. Legacy releases remain valid.
+for _owned in FILES.values():
+    _owned.add('workflow.json')
 REQUIRED = {
-    'proposer': FILES['proposer'] - {'responses.md', 'experiment-consent.json'},
+    'proposer': FILES['proposer'] - {'responses.md', 'experiment-consent.json', 'abandonment-consent.json', 'workflow.json'},
     'challenger': {'challenges.md', 'sources.json', 'search-log.md'},
-    'verifier': FILES['verifier'],
+    'verifier': FILES['verifier'] - {'workflow.json'},
 }
 # Host artifacts that are never research output (macOS Finder, Claude Code write staging).
 IGNORED = {'.DS_Store', '.claude'}
 CONSENT_KEYS = {'session_id', 'decision', 'signed_revision', 'tasklist_sha256', 'rationale'}
 CONSENT_DECISIONS = {'pending', 'agree', 'revision_requested'}
+# Joint abandonment (docs/CHARTER.md, docs/WORKFLOW.md step 8); each role signs only for itself.
+ABANDON_KEYS = {'session_id', 'decision', 'grounds', 'signed_revision', 'signed_dossier_digest', 'rationale'}
+ABANDON_DECISIONS = {'pending', 'agree', 'decline'}
+ABANDON_GROUNDS = {'novelty_exhausted', 'theoretical_headroom_exhausted', 'dead_end', 'no_anchor_preserving_direction'}
+# A signature names the frozen proposer release (SUB-<sha256>) or, for pre-release revisions, a commit.
+REVISION = re.compile(r'SUB-[0-9a-f]{64}|[0-9a-f]{40}')
 # Releases are published to a public repository without human review, so refuse credential-like text.
 SECRET = re.compile(rb'sk-ant-[A-Za-z0-9_-]{10,}|sk-[A-Za-z0-9]{32,}|gh[pousr]_[A-Za-z0-9]{30,}|'
                     rb'-----BEGIN [A-Z ]*PRIVATE KEY-----|AKIA[0-9A-Z]{16}|'
@@ -108,6 +118,24 @@ def check_content(m, payload):
             raise ValueError('experiment-consent.json may only sign for the releasing session')
         if consent['decision'] not in CONSENT_DECISIONS:
             raise ValueError(f'experiment-consent.json decision must be one of {sorted(CONSENT_DECISIONS)}')
+        if consent['decision'] == 'agree' and not (
+                isinstance(consent['signed_revision'], str) and REVISION.fullmatch(consent['signed_revision'])
+                and isinstance(consent['tasklist_sha256'], str) and re.fullmatch(r'[0-9a-f]{64}', consent['tasklist_sha256'])):
+            raise ValueError('An agreeing experiment consent must sign a release ID or commit and a task-list SHA-256')
+    if 'abandonment-consent.json' in payload:
+        vote = json.loads(payload['abandonment-consent.json'])
+        if not isinstance(vote, dict) or set(vote) != ABANDON_KEYS:
+            raise ValueError(f'abandonment-consent.json must contain exactly {sorted(ABANDON_KEYS)}')
+        if vote['session_id'] != m['session_id']:
+            raise ValueError('abandonment-consent.json may only sign for the releasing session')
+        if vote['decision'] not in ABANDON_DECISIONS:
+            raise ValueError(f'abandonment-consent.json decision must be one of {sorted(ABANDON_DECISIONS)}')
+        if not isinstance(vote['grounds'], list) or not set(vote['grounds']) <= ABANDON_GROUNDS:
+            raise ValueError(f'abandonment-consent.json grounds must be a list drawn from {sorted(ABANDON_GROUNDS)}')
+        if vote['decision'] == 'agree' and not (
+                vote['grounds'] and isinstance(vote['signed_revision'], str) and REVISION.fullmatch(vote['signed_revision'])
+                and isinstance(vote['signed_dossier_digest'], str) and re.fullmatch(r'[0-9a-f]{64}', vote['signed_dossier_digest'])):
+            raise ValueError('An agreeing abandonment consent must state grounds and sign a release ID or commit and a dossier digest')
 
 
 def verify(snapshot):

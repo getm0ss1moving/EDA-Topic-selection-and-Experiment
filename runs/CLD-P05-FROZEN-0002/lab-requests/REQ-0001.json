@@ -1,0 +1,11 @@
+{
+  "id": "REQ-0001",
+  "category": "tooling",
+  "purpose": "Probe the lab231 build environment and fetch pinned OpenSTA e01d3f163f483f233db00410b6515a767a6ca03b (the src/sta submodule of packet-pinned OpenROAD b16bda7e) from GitHub, logging URL, resolved revision and SHA-256; record the repository LICENSE.",
+  "host": "lab231",
+  "network": true,
+  "cores": 1,
+  "timeout_hours": 0.5,
+  "script": "REQ-0001.sh",
+  "inputs": []
+}

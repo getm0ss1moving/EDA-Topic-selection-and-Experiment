@@ -7,7 +7,7 @@ no other role's material.
 
 - Base packet: commit `d437c2f660906efe9351a90451905826d00b63e3`, `PACKET.json` SHA-256
   `ff20816f623585d4bf7ba7b13d79db58aab90a2e947cd05c719cd93f3574602d`.
-- Amended text: commit `a7e7c302fc951a77a5c3c7aeaf550f147aa4b13f` of the repository (its amendment PR). Each file
+- Amended text: commit `2121532bfca928900f4252e796d7570fdb1ea224` of the repository (its amendment PR). Each file
   under `files/` replaces the packet copy at the same repository path or is new. Every other
   packet file stays in force. `AMENDMENT.json` lists every file's SHA-256; those hashes are
   authoritative even if the PR is squash-merged under another commit. Your frozen packet is
@@ -36,7 +36,8 @@ no other role's material.
    round transport". Within a round, releases travel between the roles' local inboxes, and
    nothing goes to GitHub until the round ends. After each freeze you run the transmitter
    yourself; it delivers your release to the challenger and the verifier. You then wait for
-   your next delivery in the background. The coordinator publishes the round afterwards.
+   your next delivery in the background. When the verifier's ruling reaches you, the round is
+   finished, and the coordinator's publisher pushes its frozen releases to GitHub as one PR.
 4. **Self-submission and freeze.** `docs/SELF-SUBMISSION.md`; `docs/WORKFLOW.md`, steps 3
    and 6 and "Actor-owned freeze"; `harness/PROPOSER.md`, "Self-submission";
    `scripts/role_submission.py`. When an assigned phase is complete, you freeze your own
@@ -100,7 +101,7 @@ python3 <BUNDLE>/files/scripts/role_submission.py freeze \
   --source <OUTBOX>/release --queue <OUTBOX>/submissions \
   --role proposer --actor Claude-P05-TIMING \
   --session 76d0bf61-78f7-4b93-a557-7c29f1a2cbe8 --topic EDA-0002 \
-  --ref a7e7c302fc951a77a5c3c7aeaf550f147aa4b13f --packet <PACKET-SHA>
+  --ref 2121532bfca928900f4252e796d7570fdb1ea224 --packet <PACKET-SHA>
 ```
 
 Transmit it to the challenger and the verifier:
@@ -111,18 +112,24 @@ python3 <BUNDLE>/files/scripts/round_transmit.py send \
   --release <OUTBOX>/submissions/SUB-<hash>
 ```
 
-Wait for your next delivery as a background Bash command; the session wakes when it ends:
+Wait for your next delivery as a background Bash command; the session wakes when it ends.
+Create `<OUTBOX>/processed-deliveries.json` containing `[]` before the first wait:
 
 ```sh
 python3 <BUNDLE>/files/scripts/round_transmit.py wait \
   --config <BUNDLE>/files/config/round-transport.json --inbox <INBOX> \
-  --after <LAST HANDLED DLV ID, or empty> --timeout 86400
+  --seen-file <OUTBOX>/processed-deliveries.json --timeout 86400
 ```
 
-Open a delivery only when it is reported `valid`. Otherwise do not open it: record its ID
-and the reported problems in your output and wait again after it. Keep the last handled
-delivery ID in your own notes, and name the delivery IDs you used in your next release's
-provenance text.
+Only valid deliveries end the wait. `round_transmit.py check` lists any invalid ones; never
+open those. After handling a delivery, record it so that no later wait returns it again:
+
+```sh
+python3 <BUNDLE>/files/scripts/round_transmit.py ack \
+  --seen-file <OUTBOX>/processed-deliveries.json --delivery <DLV ID>
+```
+
+Name the delivery IDs you used in your next release's provenance text.
 
 ## Receipt, required before any further scientific action
 

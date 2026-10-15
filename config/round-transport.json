@@ -1,33 +1,5 @@
 {
   "schema": 1,
-  "authority": "Owner directives 2026-10-14: local auto round transport and verified-only challenger release to proposers. Procedure in docs/AUTO-ROUND.md. Change this file only by PR; roles receive it read-only.",
-  "topics": {
-    "EDA-0002": {
-      "challenger_stage": "full",
-      "challenger_stage_basis": "Codex-C05-TIMING-R2 froze its independent first pass before forecast exposure (PR #22) and was released the full R1b output (PR #26).",
-      "roles": {
-        "proposer": {
-          "actor_id": "Claude-P05-TIMING",
-          "session_id": "76d0bf61-78f7-4b93-a557-7c29f1a2cbe8",
-          "platform": "Claude",
-          "inbox": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/rounds/EDA-0002/Claude-P05-TIMING",
-          "runtime": "configured by runs/CLD-P05-LAUNCH-0001 (amendment CLD-P05-AMEND-0001)"
-        },
-        "challenger": {
-          "actor_id": "Codex-C05-TIMING-R2",
-          "session_id": "/root/codex_c05_timing_r2",
-          "platform": "OpenAI Codex",
-          "inbox": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/rounds/EDA-0002/Codex-C05-TIMING-R2",
-          "runtime": "pending: the Codex coordinator grants read of this inbox and write of the from-challenger folder in the verifier inbox only"
-        },
-        "verifier": {
-          "actor_id": "DeepSeek-V02-PHYSICAL",
-          "session_id": "e6bc9983-e74b-4576-9c1d-3abc95ea3df9",
-          "platform": "DeepSeek",
-          "inbox": "/Users/duanzeyu/Documents/ChatGPT/EDA-Agent-Inboxes/rounds/EDA-0002/DeepSeek-V02-PHYSICAL",
-          "runtime": "pending: planned session from runs/DSK-V02-LAUNCH-0001; the DeepSeek coordinator grants read of this inbox and write of the from-verifier folders in the proposer and challenger inboxes"
-        }
-      }
-    }
-  }
+  "authority": "ChatGPT-only transition: historical inboxes are not active. scripts/codex_loop.py prepare generates the runtime inbox config and logical session registry from config/codex-research.json. No fabricated session IDs.",
+  "topics": {}
 }

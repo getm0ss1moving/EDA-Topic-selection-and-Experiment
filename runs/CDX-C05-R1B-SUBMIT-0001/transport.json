@@ -1,0 +1,19 @@
+{
+  "actor_id": "Codex-C05-TIMING-R2",
+  "session_id": "/root/codex_c05_timing_r2",
+  "role": "challenger",
+  "topic": "EDA-0002",
+  "input_commit": "24ea3f3223f6f5171e96711a4df90204e4f2248c",
+  "packet_sha256": "6d77b6e3cc08db57c84c0335ca1c40a029be50290c2bac7d7266016a28a89003",
+  "release": "SUB-e81a3116230c993ef314885730e0e5202a2bbfeab70328f5bfcc8b35c0511c7f",
+  "source_files_verified": {
+    "challenges.md": "d8bc02511388d0df382a2b8f6cb4498083a868734f0a5861265557d35c0386e3",
+    "search-log.md": "7e0d00f6ddd27652ab436b59b5e8b60bf56bd09c4b48f07c542e0e5d30b6f2eb",
+    "sources.json": "e91fe8ed4148ff7ab6b8e3458a04e36fce25c9b4e44b672668a7f13ddef2734e"
+  },
+  "operation": "Byte-preserving publication of already self-frozen outputs, requested by owner",
+  "scientific_verification": false,
+  "proposer_release_authorized": false,
+  "next_step": "Independent verifier adjudication; proposer must not read raw challenges through public repository",
+  "timestamp_note": "Role-reported completion time retained verbatim; transport does not independently attest host-clock accuracy."
+}

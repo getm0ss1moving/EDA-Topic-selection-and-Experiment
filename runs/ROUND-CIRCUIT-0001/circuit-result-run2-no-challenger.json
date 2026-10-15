@@ -1,0 +1,174 @@
+{
+  "test": "ROUND-CIRCUIT-0001 synthetic proposer-verifier-proposer circuit without a challenger",
+  "scientific_content": false,
+  "model": "claude-sonnet-5-5",
+  "effort": "low",
+  "proposer_settings_sha256": "6009cc41dd0d8f8c6714bb81227166d0490632b64a2d92221c790bb96a005cc9",
+  "transmitter_sha256": "7089366546399a35a737dd12f652f0795215b5352c823a19ea902153d37a6e7b",
+  "role_submission_sha256": "2e2dabf17961450a2f094168abcc0f57ab0ddceb75a13c56a01535ef5f08dc3b",
+  "publisher_sha256": "0f3e180bc49b3456405b5d457095c7969b75d2d8128c9e6cddd32b4862099678",
+  "sessions": {
+    "verifier": {
+      "model": "claude-sonnet-5-5",
+      "permission_mode": "dontAsk",
+      "tools": [
+        "Bash",
+        "Edit",
+        "Read",
+        "Write"
+      ],
+      "mcp_servers": [],
+      "plugins": [
+        "cc-plugin-agents-md",
+        "cc-plugin-telemetry",
+        "cc-plugin-plugin-authoring"
+      ],
+      "wake_notifications": 1,
+      "result_events": [
+        {
+          "subtype": "success",
+          "is_error": false,
+          "turns": 2,
+          "text": "Waiting on the background command; it will wake me when it finishes."
+        },
+        {
+          "subtype": "success",
+          "is_error": false,
+          "turns": 8,
+          "text": "DONE"
+        }
+      ],
+      "tool_calls": 8,
+      "started_at_utc": "2026-10-14T12:15:02Z",
+      "finished_at_utc": "2026-10-14T12:15:57Z",
+      "exit_code": 0
+    },
+    "proposer": {
+      "model": "claude-sonnet-5-5",
+      "permission_mode": "dontAsk",
+      "tools": [
+        "Bash",
+        "Edit",
+        "Read",
+        "WebFetch",
+        "WebSearch",
+        "Write"
+      ],
+      "mcp_servers": [],
+      "plugins": [
+        "cc-plugin-agents-md",
+        "cc-plugin-telemetry",
+        "cc-plugin-plugin-authoring"
+      ],
+      "wake_notifications": 1,
+      "result_events": [
+        {
+          "subtype": "success",
+          "is_error": false,
+          "turns": 5,
+          "text": "The release is frozen and sent, and the wait is running in the background. I'm ending my turn until it reports a delivery."
+        },
+        {
+          "subtype": "success",
+          "is_error": false,
+          "turns": 5,
+          "text": "DONE"
+        }
+      ],
+      "tool_calls": 8,
+      "started_at_utc": "2026-10-14T12:15:17Z",
+      "finished_at_utc": "2026-10-14T12:16:07Z",
+      "exit_code": 0
+    }
+  },
+  "deliveries": {
+    "proposer": [
+      {
+        "delivery": "DLV-20261014T121551Z-verifier-47a507e9d9d6",
+        "from": "verifier",
+        "kind": "verification",
+        "valid": true
+      }
+    ],
+    "challenger": [
+      {
+        "delivery": "DLV-20261014T121528Z-proposer-8cc2161a15f6",
+        "from": "proposer",
+        "kind": "proposer-release",
+        "valid": true
+      },
+      {
+        "delivery": "DLV-20261014T121551Z-verifier-47a507e9d9d6",
+        "from": "verifier",
+        "kind": "verification",
+        "valid": true
+      }
+    ],
+    "verifier": [
+      {
+        "delivery": "DLV-20261014T121528Z-proposer-8cc2161a15f6",
+        "from": "proposer",
+        "kind": "proposer-release",
+        "valid": true
+      }
+    ]
+  },
+  "round": {
+    "round_id": "ROUND-EDA-0002-20261014T121551Z",
+    "kind": "verification",
+    "deliveries": {
+      "proposer_to_verifier": "DLV-20261014T121528Z-proposer-8cc2161a15f6",
+      "proposer_to_challenger": "DLV-20261014T121528Z-proposer-8cc2161a15f6",
+      "challenger_to_verifier": [],
+      "verifier_to_proposer": "DLV-20261014T121551Z-verifier-47a507e9d9d6",
+      "verification_to_challenger": "DLV-20261014T121551Z-verifier-47a507e9d9d6"
+    },
+    "adjudicates": [],
+    "reviews": "SUB-8cc2161a15f6be3cb872eb3ae0cd0354ea2d7efbbe424160a021cb60e6bc04b3",
+    "problems": []
+  },
+  "round_releases": [
+    "SUB-8cc2161a15f6be3cb872eb3ae0cd0354ea2d7efbbe424160a021cb60e6bc04b3",
+    "SUB-47a507e9d9d6e3e477875cd9cc6de70bba73fda34f4b755c64c107d123848868"
+  ],
+  "publication_dry_run": {
+    "dry_run": true,
+    "branch": "round/EDA-0002-20261014T121551Z",
+    "commit": "3be3299b02489ae6e1ab71d8433c8cb578913503",
+    "files": [
+      "runs/ROUND-EDA-0002-20261014T121551Z/round.json",
+      "runs/SUB-47a507e9d9d6e3e477875cd9cc6de70bba73fda34f4b755c64c107d123848868/SUBMISSION.json",
+      "runs/SUB-47a507e9d9d6e3e477875cd9cc6de70bba73fda34f4b755c64c107d123848868/verification.json",
+      "runs/SUB-47a507e9d9d6e3e477875cd9cc6de70bba73fda34f4b755c64c107d123848868/verification.md",
+      "runs/SUB-8cc2161a15f6be3cb872eb3ae0cd0354ea2d7efbbe424160a021cb60e6bc04b3/SUBMISSION.json",
+      "runs/SUB-8cc2161a15f6be3cb872eb3ae0cd0354ea2d7efbbe424160a021cb60e6bc04b3/contest-audit.md",
+      "runs/SUB-8cc2161a15f6be3cb872eb3ae0cd0354ea2d7efbbe424160a021cb60e6bc04b3/direction-control.json",
+      "runs/SUB-8cc2161a15f6be3cb872eb3ae0cd0354ea2d7efbbe424160a021cb60e6bc04b3/experiment-plan.md",
+      "runs/SUB-8cc2161a15f6be3cb872eb3ae0cd0354ea2d7efbbe424160a021cb60e6bc04b3/forecast.json",
+      "runs/SUB-8cc2161a15f6be3cb872eb3ae0cd0354ea2d7efbbe424160a021cb60e6bc04b3/industry-gap.md",
+      "runs/SUB-8cc2161a15f6be3cb872eb3ae0cd0354ea2d7efbbe424160a021cb60e6bc04b3/prior-art.csv",
+      "runs/SUB-8cc2161a15f6be3cb872eb3ae0cd0354ea2d7efbbe424160a021cb60e6bc04b3/proposal.md",
+      "runs/SUB-8cc2161a15f6be3cb872eb3ae0cd0354ea2d7efbbe424160a021cb60e6bc04b3/search-log.md",
+      "runs/SUB-8cc2161a15f6be3cb872eb3ae0cd0354ea2d7efbbe424160a021cb60e6bc04b3/sources.json",
+      "runs/SUB-8cc2161a15f6be3cb872eb3ae0cd0354ea2d7efbbe424160a021cb60e6bc04b3/tasklist.md"
+    ],
+    "validation": "passed"
+  },
+  "checks": {
+    "all_sessions_exited_cleanly": true,
+    "sessions_in_dont_ask_mode_without_mcp": true,
+    "every_delivery_valid": true,
+    "no_stray_inbox_entries": true,
+    "receipts_cover_every_delivery": true,
+    "one_completed_round_found": true,
+    "publication_dry_run_validated": true,
+    "proposer_received_only_the_verifier_ruling": true,
+    "verifier_received_only_the_proposal": true,
+    "challenger_copies_wait_unopened": true,
+    "deliveries_in_circuit_order": true,
+    "proposer_woke_and_recorded_the_ruling": true,
+    "verifier_woke_and_named_the_reviewed_release": true,
+    "round_bundle_roles_in_order": true
+  },
+  "all_pass": true
+}

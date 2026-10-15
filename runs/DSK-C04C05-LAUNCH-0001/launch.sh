@@ -51,6 +51,7 @@ while [ $# -gt 0 ]; do
     --actor) actor="${2:-}"; shift 2 ;;
     --check) mode="--check"; shift ;;
     --resume) mode="--resume"; shift ;;
+    --check-resume) mode="--check-resume"; shift ;;
     *) die "unknown argument: $1" ;;
   esac
 done
@@ -81,6 +82,10 @@ PYEOF
 ) || die "actor $actor is not present in $LAUNCH_CONFIG"
 [ "$A_ACTOR" = "$actor" ] || die "launch binding mismatch: config returned '$A_ACTOR'"
 ok "binding: $A_ACTOR role=$A_ROLE topic=$A_TOPIC stage=$A_STAGE session=$A_SESSION"
+# Keep historical challenger settings; verifier uses its owner-selected low effort.
+if [ "$A_ROLE" = "verifier" ]; then EFFORT="low"; fi
+A_INBOX="$(python3 -I -c 'import json,sys; print(json.load(open(sys.argv[1]))["actors"][sys.argv[2]].get("round_inbox", ""))' "$LAUNCH_CONFIG" "$actor")"
+if [ -n "$A_INBOX" ]; then [ -d "$A_INBOX" ] || die "round inbox missing"; fi
 
 SETTINGS_ABS="$RUN_DIR/$A_SETTINGS"
 [ -f "$SETTINGS_ABS" ] || die "settings file missing: $SETTINGS_ABS"
@@ -133,7 +138,7 @@ fi
 [ -d "$A_OUTBOX" ] || die "outbox missing: $A_OUTBOX"
 [ "$(stat -f '%Lp' "$A_OUTBOX")" = "700" ] || die "outbox must be mode 700"
 transcripts="$HOME/.claude/projects/$(printf '%s' "$A_PACKET" | tr '/.' '--')"
-if [ "$mode" = "--resume" ]; then
+if [ "$mode" = "--resume" ] || [ "$mode" = "--check-resume" ]; then
   [ -f "$transcripts/$A_SESSION.jsonl" ] || die "no existing session $A_SESSION to resume"
 else
   [ -z "$(ls -A "$A_OUTBOX")" ] || die "outbox is not empty; a fresh session requires an empty outbox"
@@ -144,7 +149,7 @@ echo "info  launch record commit $(git -C "$RUN_DIR" rev-parse HEAD 2>/dev/null 
 
 if [ "${#pends[@]}" -gt 0 ]; then
   for p in "${pends[@]}"; do echo "PENDING $p"; done
-  if [ "$mode" = "--check" ]; then
+  if [ "$mode" = "--check" ] || [ "$mode" = "--check-resume" ]; then
     echo "Prepared but not startable by design. Nothing was launched."
     exit 1
   fi
@@ -153,7 +158,8 @@ fi
 
 flags=(--safe-mode --strict-mcp-config --setting-sources project --settings "$SETTINGS_ABS"
        --tools "$TOOLS" --add-dir "$A_OUTBOX" --model "$MODEL" --effort "$EFFORT")
-if [ "$mode" = "--check" ]; then
+if [ -n "$A_INBOX" ]; then flags+=(--add-dir "$A_INBOX"); fi
+if [ "$mode" = "--check" ] || [ "$mode" = "--check-resume" ]; then
   echo "All preconditions hold. Nothing was launched."
   exit 0
 fi

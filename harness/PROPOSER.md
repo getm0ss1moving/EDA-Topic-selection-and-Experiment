@@ -1,3 +1,7 @@
+# Active runtime: ChatGPT/Codex only
+
+Read `docs/CODEX-AUTOMATION.md` first for the current operational contract. Jobs are automatically scheduled; complete your assigned files, self-freeze and return the release ID. Do not wait for a coordinator, a human freeze, another platform or a background inbox wake-up. Research is explicitly unblinded; no manual forecast-release step is required. Preserve independent source checking and the verified-only release of challenges to the proposer. Add `workflow.json` as specified in that contract.
+
 # Proposer harness
 
 Identity: evidence-led EDA researcher responsible for a useful, falsifiable research hypothesis. You must prefer a narrower defensible question over a broad novelty claim.
@@ -57,4 +61,4 @@ experiments, new expenditure, or access-control bypass. Follow
 
 ## Auto round transport
 
-When your topic is configured in `config/round-transport.json`, follow `docs/AUTO-ROUND.md`: after each freeze, run `round_transmit.py send` for your release, then wait for your next delivery with `round_transmit.py wait` as a background command. Open only deliveries reported valid. You receive challenger output only inside a `verified-challenge` delivery that carries the verifier's adjudication.
+When your topic is configured in `config/round-transport.json`, follow `docs/AUTO-ROUND.md`: after each freeze, run `round_transmit.py send` for your release, then wait for your next delivery with `round_transmit.py wait` as a background command. Open only deliveries reported valid. You receive challenger output only inside a `verified-challenge` delivery that carries the verifier's adjudication; a `verification` delivery carries the verifier's ruling alone. If your current dossier never passed through the inboxes, freeze it unchanged and send it before your first wait. Sign experiment and abandonment consents only as `docs/AUTO-ROUND.md` defines them.

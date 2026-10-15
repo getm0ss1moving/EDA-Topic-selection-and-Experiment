@@ -78,8 +78,6 @@ class RoundTransmitTests(unittest.TestCase):
     def test_verifier_must_bind_adjudicated_challenges(self):
         cid = self.challenge_round()
         with self.assertRaises(ValueError):
-            t.send(self.config, self.release('verifier', f'Adjudicates {cid}\n'))
-        with self.assertRaises(ValueError):
             t.send(self.config, self.release('verifier', 'Names nothing\n'), [cid])
         with self.assertRaises(ValueError):
             t.send(self.config, self.release('verifier', 'Adjudicates SUB-' + 'f' * 64 + '\n'), ['SUB-' + 'f' * 64])
@@ -127,6 +125,107 @@ class RoundTransmitTests(unittest.TestCase):
 
     def test_wait_returns_the_next_delivery(self):
         t.send(self.config, self.release('proposer'))
-        got = t.wait(self.config, self.inbox['verifier'], timeout=0)
+        seen = self.root / 'work' / 'seen.json'  # missing file: nothing handled yet
+        got = t.wait(self.config, self.inbox['verifier'], seen, timeout=0)
         self.assertEqual(got['status'], 'delivered')
-        self.assertEqual(t.wait(self.config, self.inbox['verifier'], got['delivery'], timeout=0)['status'], 'timeout')
+        t.ack(seen, got['delivery'])
+        self.assertEqual(t.wait(self.config, self.inbox['verifier'], seen, timeout=0)['status'], 'timeout')
+
+    def test_delivery_symlink_is_not_followed(self):
+        t.send(self.config, self.release('challenger'))
+        src = Path(self.deliveries('verifier')[0]['path'])
+        alias = src.parent / src.name.replace('-challenger-', '-proposer-')
+        alias.symlink_to(src, target_is_directory=True)
+        state = t.scan(t.load_config(self.config), self.inbox['verifier'])
+        self.assertEqual(len(state['deliveries']), 1)
+        self.assertTrue(state['stray_entries_not_opened'])
+
+    def test_traversal_id_is_rejected_before_payload_read(self):
+        t.send(self.config, self.release('challenger'))
+        d = Path(self.deliveries('verifier')[0]['path'])
+        p = d / 'DELIVERY.json'; p.chmod(0o644)
+        m = json.loads(p.read_text()); m['releases'][0]['id'] = '../../private'
+        p.write_text(json.dumps(m))
+        problems = self.deliveries('verifier')[0]['problems']
+        self.assertEqual(problems, ['Invalid or duplicate release IDs; payload not opened'])
+
+    def test_identity_tamper_is_invalid(self):
+        t.send(self.config, self.release('challenger'))
+        d = Path(self.deliveries('verifier')[0]['path'])
+        p = d / 'DELIVERY.json'; p.chmod(0o644)
+        m = json.loads(p.read_text()); m['from']['session_id'] = 'impostor'
+        p.write_text(json.dumps(m))
+        self.assertFalse(self.deliveries('verifier')[0]['valid'])
+        self.assertEqual(t.wait(self.config, self.inbox['verifier'], self.root / 'seen.json', timeout=0)['status'], 'timeout')
+
+    def test_acknowledged_ids_do_not_skip_same_second_deliveries(self):
+        from unittest.mock import patch
+        with patch.object(t, 'utc', side_effect=lambda fmt='%Y-%m-%dT%H:%M:%SZ':
+                          '20261014T120000Z' if fmt == '%Y%m%dT%H%M%SZ' else '2026-10-14T12:00:00Z'):
+            t.send(self.config, self.release('challenger', 'first'))
+            t.send(self.config, self.release('proposer', 'second'))
+        deliveries = self.deliveries('verifier')
+        seen = self.root / 'seen.json'
+        seen.write_text(json.dumps([deliveries[-1]['delivery']]))
+        out = t.wait(self.config, self.inbox['verifier'], seen, timeout=0)
+        self.assertEqual(out['delivery'], deliveries[0]['delivery'])
+
+    def test_wait_wakes_after_atomic_delivery_without_a_model(self):
+        import subprocess
+        import sys
+        seen = self.root / 'seen.json'; seen.write_text('[]')
+        proc = subprocess.Popen([sys.executable, str(Path(t.__file__)), 'wait',
+                                 '--config', str(self.config), '--inbox', str(self.inbox['verifier']),
+                                 '--seen-file', str(seen), '--timeout', '5', '--interval', '1'],
+                                stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+        try:
+            t.send(self.config, self.release('challenger'))
+            stdout, stderr = proc.communicate(timeout=8)
+            self.assertEqual(proc.returncode, 0, stderr)
+            self.assertTrue(json.loads(stdout)['valid'])
+        finally:
+            if proc.poll() is None: proc.kill(); proc.wait()
+
+    def test_sender_does_not_inspect_write_only_destination(self):
+        from unittest.mock import patch
+        original = Path.is_symlink
+        destinations = [self.inbox[r] for r in ('challenger', 'verifier')]
+        def guarded(path):
+            if any(path == d or d in path.parents for d in destinations):
+                raise PermissionError('destination metadata is not readable by sender')
+            return original(path)
+        release = self.release('proposer')
+        with patch.object(Path, 'is_symlink', guarded):
+            self.assertEqual([r['status'] for r in t.send(self.config, release)], ['delivered', 'delivered'])
+
+    def test_ack_records_each_delivery_once_and_wait_skips_it(self):
+        t.send(self.config, self.release('proposer'))
+        seen = self.root / 'work' / 'seen.json'
+        got = t.wait(self.config, self.inbox['verifier'], seen, timeout=0)
+        for _ in range(2):
+            self.assertEqual(t.ack(seen, got['delivery'])['count'], 1)
+        self.assertEqual(json.loads(seen.read_text()), [got['delivery']])
+        self.assertEqual(t.wait(self.config, self.inbox['verifier'], seen, timeout=0)['status'], 'timeout')
+        with self.assertRaises(ValueError):
+            t.ack(seen, 'not-a-delivery')
+
+    def test_verifier_only_round_reaches_the_proposer_without_challenger_material(self):
+        prop = self.release('proposer')
+        t.send(self.config, prop)
+        ver = self.release('verifier', f'Reviewed {prop.name} directly; no challenge arrived\n')
+        out = t.send(self.config, ver, reviews=prop.name)
+        self.assertEqual({r['kind'] for r in out}, {'verification'})
+        [d] = self.deliveries('proposer')
+        self.assertTrue(d['valid'], d['problems'])
+        self.assertEqual(d['kind'], 'verification')
+        self.assertEqual({p.name for p in Path(d['path']).iterdir()}, {'DELIVERY.json', ver.name})
+
+    def test_reviewed_release_must_be_named_and_delivered(self):
+        prop = self.release('proposer')
+        with self.assertRaises(ValueError):  # not yet delivered to the verifier
+            t.send(self.config, self.release('verifier', f'Reviewed {prop.name}\n'), reviews=prop.name)
+        t.send(self.config, prop)
+        with self.assertRaises(ValueError):  # delivered, but not named in the record
+            t.send(self.config, self.release('verifier', 'Names nothing\n'), reviews=prop.name)
+        with self.assertRaises(ValueError):  # only verifiers name reviewed releases
+            t.send(self.config, self.release('challenger', f'About {prop.name}\n'), reviews=prop.name)

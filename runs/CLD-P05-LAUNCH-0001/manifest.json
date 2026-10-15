@@ -4,7 +4,7 @@
   "role": "coordinator",
   "platform": "Claude",
   "stage": "launch_readiness",
-  "status": "amended by CLD-P05-AMEND-0001; isolation smoke run 6 passed",
+  "status": "amended by CLD-P05-AMEND-0001 and PR #29; isolation smoke run 8 passed",
   "input_commit": "7c9771196db41fab1593ceead9ebb93d935a3508",
   "packet_sha256": "ff20816f623585d4bf7ba7b13d79db58aab90a2e947cd05c719cd93f3574602d",
   "model": "claude-opus-5-5",
@@ -35,7 +35,9 @@
     "runs/CLD-LAB-0001/e2e-result.json",
     "runs/CLD-P05-LAUNCH-0001/repo_guard.py",
     "runs/CLD-P05-LAUNCH-0001/isolation-smoke-run6-amendment.json",
-    "runs/CLD-P05-AMEND-0001/manifest.json"
+    "runs/CLD-P05-AMEND-0001/manifest.json",
+    "runs/CLD-P05-LAUNCH-0001/isolation-smoke-run7-hardening.json",
+    "runs/CLD-P05-LAUNCH-0001/isolation-smoke-run8-final.json"
   ],
   "source_ids": [],
   "sources_consulted": [
@@ -78,7 +80,7 @@
     "tools_allowlist": "Bash,Read,Write,Edit,WebSearch,WebFetch",
     "launcher": "runs/CLD-P05-LAUNCH-0001/launch.sh",
     "settings": "runs/CLD-P05-LAUNCH-0001/launch-settings.json",
-    "settings_sha256": "a4cd4f1da062b221ee1b0b34a3c760c87fa12b9bee6aa1faaaf3be98c1b65516",
+    "settings_sha256": "6009cc41dd0d8f8c6714bb81227166d0490632b64a2d92221c790bb96a005cc9",
     "launcher_flags_note": "From CLD-P05-AMEND-0001, --safe-mode is replaced by DISABLE switches so that the repository guard hook runs; see runs/CLD-P05-AMEND-0001/manifest.json."
   },
   "host_model_catalog": {
@@ -110,7 +112,7 @@
     "agent_usage": "Existing Claude subscription (Pro) only; no automatic retries."
   },
   "isolation_smoke": {
-    "state": "passed: run 6 against the amended settings a4cd4f1da062b221ee1b0b34a3c760c87fa12b9bee6aa1faaaf3be98c1b65516",
+    "state": "passed: run 8 against settings 6009cc41dd0d8f8c6714bb81227166d0490632b64a2d92221c790bb96a005cc9",
     "script": "runs/CLD-P05-LAUNCH-0001/isolation_smoke.py",
     "runs": [
       {
@@ -142,6 +144,16 @@
         "result": "runs/CLD-P05-LAUNCH-0001/isolation-smoke-run6-amendment.json",
         "configuration": "amended settings (sha256 a4cd4f1da062b221ee1b0b34a3c760c87fa12b9bee6aa1faaaf3be98c1b65516): open WebFetch, guard hook, round inbox; no --safe-mode; DISABLE switches; fixture outside any path the guard blocks",
         "outcome": "All 41 steps and all 19 environment checks passed. The guard blocked and logged six calls: three WebFetch, one WebSearch and two Bash. Self-freeze and transmission worked inside the sandbox; the other inboxes stayed unreadable and the own inbox unwritable; the AGENTS.md probe stayed silent."
+      },
+      {
+        "result": "runs/CLD-P05-LAUNCH-0001/isolation-smoke-run7-hardening.json",
+        "configuration": "settings 6009cc41dd0d8f8c6714bb81227166d0490632b64a2d92221c790bb96a005cc9 (PR #29 deny rules); guard probes first with explicit authorization; receipt-file wait",
+        "outcome": "Every isolation, guard and transport step and all 19 environment checks passed. B10, N2 and N3 failed because the host VPN could not reach GitHub, arXiv or example.com at the time."
+      },
+      {
+        "result": "runs/CLD-P05-LAUNCH-0001/isolation-smoke-run8-final.json",
+        "configuration": "settings 6009cc41dd0d8f8c6714bb81227166d0490632b64a2d92221c790bb96a005cc9 and the final tools (ack added)",
+        "outcome": "All 41 steps and all 19 environment checks passed; the guard blocked and logged six calls."
       }
     ],
     "settings_load_probe": "launch-settings.json loaded from its repository path; a Bash read of ~/.claude was denied by the sandbox."
@@ -159,8 +171,8 @@
       "run": "CLD-P05-AMEND-0001",
       "date": "2026-10-14",
       "settings_sha256_before": "e628d5f72faa76d06c7922e7d673e8d8e4ee7be2a175fdcf27958715988fc3d8",
-      "settings_sha256_after": "a4cd4f1da062b221ee1b0b34a3c760c87fa12b9bee6aa1faaaf3be98c1b65516",
-      "amendment_sha256": "4ea6204028f4c279f3f4f955af889a70fa74ce5da334c87dc844cf0d288b68c5"
+      "settings_sha256_after": "6009cc41dd0d8f8c6714bb81227166d0490632b64a2d92221c790bb96a005cc9",
+      "amendment_sha256": "3f2a177751f11e0ff2e0d5249007bc6cfb74bf6d557329565cbea5509643cc61"
     }
   ]
 }

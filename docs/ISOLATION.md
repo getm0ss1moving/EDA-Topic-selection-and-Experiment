@@ -1,3 +1,7 @@
+# Current runtime policy
+
+For new ChatGPT-only jobs, `docs/CODEX-AUTOMATION.md` supersedes manual forecast-screen release and per-session amendment/wake-up procedures below. Reviews are explicitly unblinded. Each job receives a frozen policy snapshot and role-specific shared files; no running historical packet is silently modified. Cross-role privacy and verified-only challenge release remain in force.
+
 # Isolation and access policy
 
 ## Trust boundary
@@ -31,7 +35,7 @@ Governance packets include the three tracked dossier-area README files so offlin
 
 Filename filtering does not guarantee forecast blindness. Before issuing an initial challenger packet, the coordinator must inspect proposal, plan, task list, annotations and manifests for forecast values or conclusions; release a separately hashed redacted packet with a redaction log. Preserve engineering requirements and preregistered success thresholds, but withhold the proposer's predicted outcomes. Do not claim a blind assessment if this semantic screen was not performed. On accidental exposure record the affected files, withdraw the blindness claim and follow contamination handling.
 
-Policy changes do not alter already frozen packets. Release a hashed policy amendment with a run ID and changed-rule list; the actor records receipt and hashes before continuing. Never silently edit the packet or assume a merged harness has changed a running session. Pause affected scientific actions while controls are incomplete; at most one synthetic role test may run. Resume only the authorized scope after the applicable checks pass.
+Policy changes do not alter already frozen packets. Release a hashed policy amendment with a run ID and changed-rule list; the actor records receipt and hashes before continuing. Never silently edit the packet or assume a merged harness has changed a running session. Pause affected scientific actions while controls are incomplete, and test controls with fresh synthetic sessions on throwaway fixtures, never with a live role session. Resume only the authorized scope after the applicable checks pass.
 
 ## Independent external reading (owner clarification)
 

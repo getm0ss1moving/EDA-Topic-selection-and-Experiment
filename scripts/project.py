@@ -4,6 +4,7 @@ import argparse
 import csv
 import hashlib
 import json
+import importlib.util
 import re
 import shutil
 import subprocess
@@ -22,7 +23,7 @@ GATES = {'novelty', 'mechanism', 'utility', 'contest_originality', 'headroom',
          'feasibility', 'direction_integrity', 'experiment_consensus'}
 DIRECTION_STATES = {'continue', 'revise_same_problem', 'abandonment_proposed', 'jointly_abandoned'}
 ABANDONMENT_GROUNDS = {'novelty_exhausted', 'theoretical_headroom_exhausted',
-                       'dead_end', 'immutable_direction_blocked'}
+                       'dead_end', 'immutable_direction_blocked', 'no_anchor_preserving_direction'}
 
 def read_json(path):
     return json.loads(path.read_text())
@@ -162,7 +163,7 @@ def validate_topic(path, area, sessions):
                         f'{role} has not agreed that the experiment task list is reasonable')
                 require(bool(consent.get('rationale')),
                         f'{role} experiment consent lacks rationale')
-                require(re.fullmatch(r'[0-9a-f]{40}', str(consent.get('signed_revision', ''))),
+                require(re.fullmatch(r'SUB-[0-9a-f]{64}|[0-9a-f]{40}', str(consent.get('signed_revision', ''))),
                         f'{role} experiment consent lacks a full signed revision')
                 require(consent.get('tasklist_sha256') == tasklist_hash,
                         f'{role} experiment consent binds a stale task list')
@@ -225,7 +226,7 @@ def validate_topic(path, area, sessions):
                 sid = consent.get('session_id')
                 people.append(sid)
                 require(consent.get('decision') == 'agree', f'{role} has not agreed to abandonment')
-                require(re.fullmatch(r'[0-9a-f]{40}', str(consent.get('signed_revision', ''))),
+                require(re.fullmatch(r'SUB-[0-9a-f]{64}|[0-9a-f]{40}', str(consent.get('signed_revision', ''))),
                         f'{role} abandonment consent lacks a full signed revision')
                 signed_revisions.append(consent.get('signed_revision'))
                 signed_digests.append(consent.get('signed_dossier_digest'))
@@ -284,6 +285,8 @@ def validate_launch_release(root=ROOT):
     errors = []
     try:
         release = read_json(path)
+        if release.get('schema_version') == 2:
+            return validate_codex_release(root, release)
         registries = [read_json(root/name) for name in
                       ['config/agents.json','config/agents-deepseek.json','config/agents-claude.json']]
         actor_list = [a for registry in registries for a in registry.get('actors', [])]
@@ -384,12 +387,55 @@ def validate_launch_release(root=ROOT):
         errors.append(f'config/launch-release.json: malformed data: {exc}')
     return errors
 
+def validate_codex_release(root, release):
+    """Validate active bindings rather than hardcoding historical platform handoffs."""
+    errors = []
+    def check(ok, why):
+        if not ok:
+            errors.append('config/launch-release.json: ' + why)
+    actors = {a['actor_id']: a for a in read_json(root/'config/agents.json')['actors']}
+    check(release.get('active_platforms') == ['codex'], 'only Codex may run new work')
+    check(release.get('state') == 'ready_for_role_creation', 'release is not ready')
+    check(release.get('fresh_sessions_required') is True and release.get('old_sessions_are_inputs') is False,
+          'historical sessions must remain isolated')
+    assigned = []
+    for topic, entry in release.get('assignments', {}).items():
+        check(bool(ID.fullmatch(topic)), 'invalid topic ID')
+        domain = entry.get('domain')
+        for role in ('proposer', 'challenger', 'verifier'):
+            aid = entry.get(role)
+            assigned.append(aid)
+            a = actors.get(aid, {})
+            check(a.get('role') == role and domain in a.get('domain_ids', []), f'{topic} {role} binding invalid')
+            check(a.get('platform') == 'OpenAI Codex' and a.get('active_scope') is True,
+                  f'{aid} is not an active Codex actor')
+            check(bool(a.get('model_requested')) and bool(a.get('reasoning_requested')), f'{aid} lacks model policy')
+        brief = root/'domains'/str(domain)/'brief.json'
+        if brief.is_file():
+            b = read_json(brief)
+            check(all(b.get(r) == entry.get(r) for r in ('proposer', 'challenger', 'verifier')),
+                  f'{domain} brief disagrees with assignments')
+    check(bool(assigned) and len(set(assigned)) == len(assigned), 'distinct scientific seats required')
+    check(set(release.get('released_actors', [])) == set(assigned), 'released actor set differs from assignments')
+    check(release.get('experiment_authorization') is False, 'creation cannot authorize experiments')
+    return errors
+
 def git(*args):
     return subprocess.check_output(['git', '-C', str(ROOT), *args])
 
 def revision_topic_blobs(ref, topic):
     """Return one frozen topic tree as relative-path -> blob bytes, or None."""
     try:
+        if re.fullmatch(r'SUB-[0-9a-f]{64}', str(ref)):
+            # Consents bind an earlier immutable proposal, avoiding self-reference.
+            tool = Path(__file__).with_name('role_submission.py')
+            spec = importlib.util.spec_from_file_location('consent_submission', tool)
+            rs = importlib.util.module_from_spec(spec); spec.loader.exec_module(rs)
+            manifest, payload = rs.verify(ROOT/'runs'/ref)
+            if manifest['topic'] != topic or manifest['role'] != 'proposer':
+                return None
+            return {k:v for k,v in payload.items() if k not in {
+                'workflow.json', 'experiment-consent.json', 'abandonment-consent.json'}}
         object_type = subprocess.check_output(
             ['git', '-C', str(ROOT), 'cat-file', '-t', ref], stderr=subprocess.DEVNULL)
         if object_type.decode().strip() != 'commit':
@@ -411,7 +457,7 @@ def revision_topic_blobs(ref, topic):
             if blobs:
                 matches.append(blobs)
         return matches[0] if len(matches) == 1 else None
-    except (subprocess.CalledProcessError, UnicodeDecodeError, ValueError):
+    except (subprocess.CalledProcessError, UnicodeDecodeError, ValueError, OSError):
         return None
 
 def revision_topic_digest(ref, topic):

@@ -1,0 +1,491 @@
+{
+  "test": "CLD-P05-LAUNCH-0001 synthetic isolation smoke test (amendment CLD-P05-AMEND-0001)",
+  "scientific_content": false,
+  "started_at_utc": "2026-10-14T05:26:18Z",
+  "finished_at_utc": "2026-10-14T05:28:33Z",
+  "cli": {
+    "path": "/Users/duanzeyu/.local/claude-code-2.1.293/node_modules/@anthropic-ai/claude-code-darwin-arm64/claude",
+    "version": "2.1.293",
+    "sha256": "4e21122a227857da1178aca3299700c1fd7f2b77c93f12e73c2c76db796a105e"
+  },
+  "launch_settings_sha256": "575bec03d6270fe523889e6f8e3c98844c2bd46df676e3703d7a2d56c7b041d9",
+  "guard_sha256": "46f2fe7386eab766af9a22638db8281d2c2231b0c8465f370d2e8c7f98708eee",
+  "transmitter_sha256": "868d473c5577926cf23acd7a924df55776abc55ce1f7e6b8590dd2812ff47879",
+  "role_submission_sha256": "7c3afcbb4e53bb1af821f03fae490dced593b6c44fd859b0f0006cdc71af5e21",
+  "packet_mode": "readonly",
+  "tools_flag": "Bash,Read,Write,Edit,WebSearch,WebFetch",
+  "launch_flags_without_paths": [
+    "--strict-mcp-config",
+    "--setting-sources",
+    "project",
+    "--settings",
+    "--tools",
+    "Bash,Read,Write,Edit,WebSearch,WebFetch",
+    "--add-dir",
+    "--add-dir",
+    "--add-dir",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "xhigh"
+  ],
+  "environment_switches": {
+    "CLAUDE_CODE_DISABLE_AUTO_MEMORY": "1",
+    "CLAUDE_CODE_DISABLE_CLAUDE_MDS": "1",
+    "CLAUDE_CODE_DISABLE_BUNDLED_SKILLS": "1",
+    "DISABLE_AUTOUPDATER": "1"
+  },
+  "deny_rules_dropped_for_fixture_location": [],
+  "session": {
+    "model": "claude-opus-5-5",
+    "permission_mode": "dontAsk",
+    "api_key_source": "none",
+    "tools": [
+      "Bash",
+      "Edit",
+      "Read",
+      "WebFetch",
+      "WebSearch",
+      "Write"
+    ],
+    "plugins": [
+      "cc-plugin-agents-md",
+      "cc-plugin-telemetry",
+      "cc-plugin-plugin-authoring"
+    ],
+    "mcp_servers": [],
+    "init_keys": [
+      "agents",
+      "analytics_disabled",
+      "apiKeySource",
+      "capabilities",
+      "claude_code_version",
+      "cwd",
+      "fast_mode_disabled_reason",
+      "fast_mode_state",
+      "mcp_servers",
+      "messaging_socket_path",
+      "model",
+      "output_style",
+      "per_turn_effort_active",
+      "permissionMode",
+      "plugins",
+      "product_feedback_disabled",
+      "session_id",
+      "skills",
+      "slash_commands",
+      "subtype",
+      "terminal_slash_commands",
+      "tools",
+      "type",
+      "uuid",
+      "view_mode"
+    ]
+  },
+  "guard_blocked_calls_logged": 1,
+  "expected_release": "SUB-cb5bd2ad9281026b6eb1a095594471c95dc434bcbb80b84a0bac6976f513bf5e",
+  "seeded_deliveries": {
+    "valid_verified_challenge": "DLV-20261014T052618Z-verifier-d37c40e87fda",
+    "invalid_unverified": "DLV-29991231T235959Z-verifier-d51a122abeff"
+  },
+  "models_billed": [
+    "claude-haiku-5-5",
+    "claude-opus-5-5"
+  ],
+  "permission_denials_reported": 13,
+  "cli_exit_code": 0,
+  "result_is_error": false,
+  "result_subtype": "success",
+  "cli_notices": [
+    {
+      "type": "system",
+      "subtype": "permission_denied",
+      "message": "/private/tmp/eda-round-hardening-smoke-retest/iso-fixture-219c9d4f/outside-allowed.txt is outside /private/tmp/eda-round-hardening-smoke-retest/iso-fixture-219c9d4f/packet, /private/tmp/eda-round-hardening-smoke-retest/iso-fixture-219c9d4f/outbox/Claude-ISO-TEST, /private/tmp/eda-round-hardening-smo"
+    }
+  ],
+  "result_error": null,
+  "stderr_tail": "",
+  "environment_checks": {
+    "cli_version": true,
+    "model": true,
+    "no_mcp_servers": true,
+    "no_third_party_plugins": true,
+    "auto_memory_off": true,
+    "denied_tools_absent": true,
+    "tools_exactly_allowlisted": true,
+    "permission_mode_dont_ask": true,
+    "canary_never_returned": true,
+    "packet_instruction_files_not_loaded": true,
+    "packet_unmodified": true,
+    "outbox_writes_landed": true,
+    "results_remained_read_only": true,
+    "own_inbox_unchanged": true,
+    "self_freeze_valid": true,
+    "transmit_reached_challenger_and_verifier": false,
+    "withheld_challenger_canary_never_returned": true,
+    "guard_logged_blocked_calls": false,
+    "main_model_billed": true
+  },
+  "step_checks": [
+    {
+      "id": "R1",
+      "tool": "Read",
+      "expect": "ok",
+      "attempted": true,
+      "is_error": false,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "R2",
+      "tool": "Read",
+      "expect": "denied",
+      "attempted": true,
+      "is_error": true,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "R3",
+      "tool": "Read",
+      "expect": "denied",
+      "attempted": true,
+      "is_error": true,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "R4",
+      "tool": "Read",
+      "expect": "denied",
+      "attempted": true,
+      "is_error": true,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "R5",
+      "tool": "Read",
+      "expect": "denied",
+      "attempted": true,
+      "is_error": true,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "R6",
+      "tool": "Read",
+      "expect": "denied",
+      "attempted": true,
+      "is_error": true,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "R7",
+      "tool": "Read",
+      "expect": "denied",
+      "attempted": true,
+      "is_error": true,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "R8",
+      "tool": "Read",
+      "expect": "denied",
+      "attempted": true,
+      "is_error": true,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "R9",
+      "tool": "Read",
+      "expect": "ok",
+      "attempted": true,
+      "is_error": false,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "R10",
+      "tool": "Read",
+      "expect": "denied",
+      "attempted": true,
+      "is_error": true,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "B1",
+      "tool": "Bash",
+      "expect": "ok",
+      "attempted": true,
+      "is_error": false,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "B2",
+      "tool": "Bash",
+      "expect": "denied",
+      "attempted": true,
+      "is_error": true,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "B3",
+      "tool": "Bash",
+      "expect": "denied",
+      "attempted": true,
+      "is_error": true,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "B4",
+      "tool": "Bash",
+      "expect": "denied",
+      "attempted": true,
+      "is_error": true,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "B5",
+      "tool": "Bash",
+      "expect": "denied",
+      "attempted": true,
+      "is_error": true,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "B6",
+      "tool": "Bash",
+      "expect": "zero",
+      "attempted": true,
+      "is_error": false,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "B7",
+      "tool": "Bash",
+      "expect": "denied",
+      "attempted": true,
+      "is_error": true,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "B8",
+      "tool": "Bash",
+      "expect": "ok",
+      "attempted": true,
+      "is_error": false,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "B9",
+      "tool": "Bash",
+      "expect": "no_200",
+      "attempted": true,
+      "is_error": true,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "B10",
+      "tool": "Bash",
+      "expect": "http_200",
+      "attempted": true,
+      "is_error": false,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "B11",
+      "tool": "Bash",
+      "expect": "large_size",
+      "attempted": true,
+      "is_error": false,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "B12",
+      "tool": "Bash",
+      "expect": "denied",
+      "attempted": false,
+      "pass": false
+    },
+    {
+      "id": "B13",
+      "tool": "Bash",
+      "expect": "freeze_ok",
+      "attempted": true,
+      "is_error": false,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "B14",
+      "tool": "Bash",
+      "expect": "check_ok",
+      "attempted": true,
+      "is_error": false,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "B15",
+      "tool": "Bash",
+      "expect": "wait_ok",
+      "attempted": true,
+      "is_error": false,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "B16",
+      "tool": "Bash",
+      "expect": "send_ok",
+      "attempted": true,
+      "is_error": true,
+      "leak_marker_seen": false,
+      "pass": false
+    },
+    {
+      "id": "B17",
+      "tool": "Bash",
+      "expect": "denied",
+      "attempted": true,
+      "is_error": true,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "B18",
+      "tool": "Bash",
+      "expect": "denied",
+      "attempted": true,
+      "is_error": true,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "B19",
+      "tool": "Bash",
+      "expect": "denied",
+      "attempted": true,
+      "is_error": true,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "W1",
+      "tool": "Write",
+      "expect": "ok",
+      "attempted": true,
+      "is_error": false,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "W2",
+      "tool": "Write",
+      "expect": "denied",
+      "attempted": true,
+      "is_error": true,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "W3",
+      "tool": "Write",
+      "expect": "denied",
+      "attempted": true,
+      "is_error": true,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "W4",
+      "tool": "Write",
+      "expect": "denied",
+      "attempted": true,
+      "is_error": true,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "W5",
+      "tool": "Write",
+      "expect": "denied",
+      "attempted": true,
+      "is_error": true,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "N1",
+      "tool": "WebFetch",
+      "expect": "ok",
+      "attempted": true,
+      "is_error": false,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "N2",
+      "tool": "WebFetch",
+      "expect": "ok",
+      "attempted": true,
+      "is_error": false,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "N3",
+      "tool": "WebFetch",
+      "expect": "ok",
+      "attempted": true,
+      "is_error": false,
+      "leak_marker_seen": false,
+      "pass": true
+    },
+    {
+      "id": "N4",
+      "tool": "WebFetch",
+      "expect": "denied",
+      "attempted": false,
+      "pass": false
+    },
+    {
+      "id": "N5",
+      "tool": "WebFetch",
+      "expect": "denied",
+      "attempted": false,
+      "pass": false
+    },
+    {
+      "id": "N6",
+      "tool": "WebFetch",
+      "expect": "denied",
+      "attempted": false,
+      "pass": false
+    },
+    {
+      "id": "S1",
+      "tool": "WebSearch",
+      "expect": "denied",
+      "attempted": false,
+      "pass": false
+    }
+  ],
+  "all_pass": false
+}

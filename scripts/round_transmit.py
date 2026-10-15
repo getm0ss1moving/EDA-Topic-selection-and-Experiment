@@ -9,7 +9,8 @@ own inbox with `wait`, normally as a background command. Routing is fixed here, 
   proposer   -> challenger and verifier: the proposer release
   challenger -> verifier only: the challenger release
   verifier   -> proposer: the verifier release plus the challenger releases it adjudicated
-                (the verified challenge packet); challenger: the verifier release
+                (the verified challenge packet), or the verifier release alone when no challenger
+                release reached the verifier this round; challenger: the verifier release
 
 A proposer therefore never receives challenger output without the verifier's adjudication.
 Every inbox has one `from-<role>` folder per permitted sender. Each platform's sandbox lets a
@@ -37,11 +38,19 @@ _spec.loader.exec_module(rs)
 ROLES = ('proposer', 'challenger', 'verifier')
 ROUTES = {'proposer': ('challenger', 'verifier'), 'challenger': ('verifier',),
           'verifier': ('proposer', 'challenger')}
-KINDS = {('proposer', 'challenger'): 'proposer-release', ('proposer', 'verifier'): 'proposer-release',
-         ('challenger', 'verifier'): 'challenger-release',
-         ('verifier', 'proposer'): 'verified-challenge', ('verifier', 'challenger'): 'verification'}
+# Delivery kinds each route may carry; the first is the route's default.
+KINDS = {('proposer', 'challenger'): ('proposer-release',), ('proposer', 'verifier'): ('proposer-release',),
+         ('challenger', 'verifier'): ('challenger-release',),
+         ('verifier', 'proposer'): ('verified-challenge', 'verification'), ('verifier', 'challenger'): ('verification',)}
 SUB = re.compile(r'SUB-[0-9a-f]{64}')
 DLV = re.compile(r'DLV-\d{8}T\d{6}Z-(proposer|challenger|verifier)-[0-9a-f]{12}')
+
+
+def no_symlinks(path):
+    path = Path(path).absolute()
+    if any(p.is_symlink() for p in [path, *path.parents]):
+        raise ValueError('Symlink in delivery path')
+    return path
 
 
 def utc(fmt='%Y-%m-%dT%H:%M:%SZ'):
@@ -81,17 +90,19 @@ def verification_text(payload):
     return payload.get('verification.md', b'') + payload.get('verification.json', b'')
 
 
-def write_delivery(entry, topic, sender, recipient, releases, adjudicates):
+def write_delivery(entry, topic, sender, recipient, releases, adjudicates, kind=None, reviews=None):
     """Create <recipient inbox>/from-<sender>/DLV-... atomically; never lists the target folder."""
+    # Coordinator provisions trusted destination directories. Sender is write-only:
+    # do not stat/list/read them here; receiver rejects symlink routes before reading.
     target = Path(entry['roles'][recipient]['inbox']) / f'from-{sender}'
     name = f"DLV-{utc('%Y%m%dT%H%M%SZ')}-{sender}-{releases[0][0].name[4:16]}"
-    record = {'schema': 1, 'delivery_id': name, 'topic': topic, 'kind': KINDS[(sender, recipient)],
+    record = {'schema': 1, 'delivery_id': name, 'topic': topic, 'kind': kind or KINDS[(sender, recipient)][0],
               'from': {'role': sender, 'actor_id': entry['roles'][sender]['actor_id'],
                        'session_id': entry['roles'][sender]['session_id']},
               'to': {'role': recipient, 'actor_id': entry['roles'][recipient]['actor_id']},
               'releases': [{'id': snap.name, 'role': m['role'], 'actor_id': m['actor_id']}
                            for snap, m, _ in releases],
-              'adjudicates': list(adjudicates), 'created_at_utc': utc(),
+              'adjudicates': list(adjudicates), 'reviews': reviews, 'created_at_utc': utc(),
               'transmitter_sha256': rs.sha(Path(__file__).read_bytes())}
     try:
         tmp = Path(tempfile.mkdtemp(prefix='.pending-', dir=str(target)))
@@ -120,7 +131,7 @@ def write_delivery(entry, topic, sender, recipient, releases, adjudicates):
     return name
 
 
-def send(config, release, adjudicates=(), ledger=None):
+def send(config, release, adjudicates=(), ledger=None, reviews=None):
     release = Path(release).absolute()
     m, payload = rs.verify(release)
     cfg = load_config(config)
@@ -128,18 +139,21 @@ def send(config, release, adjudicates=(), ledger=None):
     entry = topic_entry(cfg, topic)
     role = m['role']
     checked_release(release, entry, role, topic)
-    if role == 'verifier' and not adjudicates:
-        raise ValueError('Name the challenger releases this verification adjudicates (--adjudicates SUB-...)')
-    if role != 'verifier' and adjudicates:
-        raise ValueError('Only a verifier release names adjudicated challenger releases')
+    if role != 'verifier' and (adjudicates or reviews):
+        raise ValueError('Only a verifier release names adjudicated or reviewed releases')
+    own = Path(entry['roles'][role]['inbox'])
+    if reviews:  # the proposer release this verification checked, as the verifier received it
+        if not SUB.fullmatch(reviews) or reviews.encode() not in verification_text(payload):
+            raise ValueError(f'{reviews} must be a release ID named in verification.md or verification.json')
+        if not sorted((own / 'from-proposer').glob(f'DLV-*/{reviews}')):
+            raise ValueError(f'{reviews} was not delivered to this verifier by the proposer')
     included = [(release, m, payload)]
     for sid in adjudicates:
         if not SUB.fullmatch(sid):
             raise ValueError(f'Invalid release ID: {sid}')
         if sid.encode() not in verification_text(payload):
             raise ValueError(f'{sid} is not named in verification.md or verification.json')
-        own = Path(entry['roles']['verifier']['inbox']) / 'from-challenger'
-        found = sorted(own.glob(f'DLV-*/{sid}'))
+        found = sorted((own / 'from-challenger').glob(f'DLV-*/{sid}'))
         if not found:
             raise ValueError(f'{sid} was not delivered to this verifier by the challenger')
         cm, cp = checked_release(found[-1], entry, 'challenger', topic)
@@ -161,8 +175,11 @@ def send(config, release, adjudicates=(), ledger=None):
             result = {'to': recipient, 'status': 'held_for_coordinator_forecast_screening'}
         else:
             parts = included if recipient == 'proposer' else included[:1]
-            result = {'to': recipient, 'status': 'delivered',
-                      'delivery': write_delivery(entry, topic, role, recipient, parts, adjudicates)}
+            kind = 'verified-challenge' if recipient == 'proposer' and adjudicates else None
+            if role == 'verifier' and not kind:
+                kind = 'verification'
+            result = {'to': recipient, 'status': 'delivered', 'kind': kind or KINDS[(role, recipient)][0],
+                      'delivery': write_delivery(entry, topic, role, recipient, parts, adjudicates, kind, reviews)}
         with open(ledger, 'a') as f:  # Record each outcome at once so a retry never duplicates it.
             f.write(json.dumps({'utc': utc(), 'release': release.name, **result}) + '\n')
         results.append(result)
@@ -181,15 +198,26 @@ def recipient_of(cfg, inbox):
 def validate(path, topic, entry, sender, recipient):
     """Return problems with one delivery; an empty list means it may be opened."""
     try:
-        rec = json.loads((path / 'DELIVERY.json').read_bytes())
+        path = no_symlinks(path)
+        rec = json.loads(rs.regular(path / 'DELIVERY.json'))
+        if not isinstance(rec, dict) or rec.get('schema') != 1:
+            return ['Invalid delivery schema']
         if recipient not in ROUTES.get(sender, ()):
             return [f'{sender} may not deliver to the {recipient}']
         problems = []
-        if (rec.get('delivery_id'), rec.get('topic'), rec.get('kind')) != (path.name, topic, KINDS[(sender, recipient)]):
+        if (rec.get('delivery_id'), rec.get('topic')) != (path.name, topic) or rec.get('kind') not in KINDS[(sender, recipient)]:
             problems.append('delivery record does not match its folder, topic or route')
         if rec.get('from', {}).get('role') != sender or rec.get('to', {}).get('role') != recipient:
             problems.append('delivery record names another sender or recipient')
+        for key, actor_role in [('from', sender), ('to', recipient)]:
+            if rec.get(key, {}).get('actor_id') != entry['roles'][actor_role]['actor_id']:
+                problems.append('delivery actor identity mismatch')
+        if rec.get('from', {}).get('session_id') != entry['roles'][sender]['session_id']:
+            problems.append('delivery session identity mismatch')
         ids = [r.get('id') for r in rec.get('releases', [])]
+        if (not ids or any(not isinstance(sid, str) or not SUB.fullmatch(sid) for sid in ids)
+                or len(ids) != len(set(ids))):
+            return ['Invalid or duplicate release IDs; payload not opened']
         if {p.name for p in path.iterdir()} != {'DELIVERY.json', *ids}:
             problems.append('unexpected or missing entries')
         roles, texts = [], {}
@@ -198,6 +226,9 @@ def validate(path, topic, entry, sender, recipient):
             want = entry['roles'][m['role']]
             if (m['topic'], m['actor_id'], m['session_id']) != (topic, want['actor_id'], want['session_id']):
                 problems.append(f'{sid}: not from the configured {m["role"]}')
+            claimed = rec['releases'][len(roles)]
+            if (claimed.get('role'), claimed.get('actor_id')) != (m['role'], m['actor_id']):
+                problems.append('release descriptor identity mismatch')
             roles.append(m['role'])
             texts[sid] = verification_text(payload)
         if sender in ('proposer', 'challenger') and roles != [sender]:
@@ -209,11 +240,17 @@ def validate(path, topic, entry, sender, recipient):
             adjudicated = rec.get('adjudicates', [])
             if recipient == 'challenger' and challenged:
                 problems.append('a verification delivery to the challenger carries no challenger release')
-            if recipient == 'proposer':
+            if recipient == 'proposer' and rec.get('kind') == 'verified-challenge':
                 if not challenged or sorted(challenged) != sorted(adjudicated):
                     problems.append('challenger releases must be exactly the adjudicated ones')
                 if roles and roles[0] == 'verifier' and not all(s.encode() in texts[ids[0]] for s in challenged):
                     problems.append('the verification record does not name every included challenger release')
+            if recipient == 'proposer' and rec.get('kind') == 'verification' and (challenged or adjudicated):
+                problems.append('a verification delivery to the proposer carries and adjudicates no challenger release')
+            reviewed = rec.get('reviews')
+            if reviewed is not None and (not isinstance(reviewed, str) or not SUB.fullmatch(reviewed)
+                                         or not (roles and roles[0] == 'verifier' and reviewed.encode() in texts[ids[0]])):
+                problems.append('the reviewed proposer release is not named in the verification record')
             if set(roles) - {'verifier', 'challenger'}:
                 problems.append('unexpected release role in a verifier delivery')
         return problems
@@ -223,37 +260,71 @@ def validate(path, topic, entry, sender, recipient):
 
 def scan(cfg, inbox):
     topic, entry, role = recipient_of(cfg, inbox)
-    root = Path(inbox).absolute()
+    root = no_symlinks(inbox)
     found, stray = [], []
     allowed = {f'from-{s}' for s in ROLES if role in ROUTES[s]}
     for sub in sorted(p for p in root.iterdir() if p.name.startswith('from-')):
-        if sub.name not in allowed:
+        if sub.is_symlink() or not sub.is_dir() or sub.name not in allowed:
             stray.append(sub.name)  # Never opened: no sender may write here.
             continue
         for d in sorted(sub.iterdir()):
             if d.name.startswith('.pending-'):
                 continue
-            if not DLV.fullmatch(d.name):
+            if d.is_symlink() or not d.is_dir() or not DLV.fullmatch(d.name):
                 stray.append(f'{sub.name}/{d.name}')
                 continue
             problems = validate(d, topic, entry, sub.name[5:], role)
+            try:
+                kind = json.loads(rs.regular(d / 'DELIVERY.json')).get('kind')
+            except (OSError, ValueError, AttributeError):
+                kind = None
             found.append({'delivery': d.name, 'path': str(d), 'from': sub.name[5:],
-                          'kind': KINDS.get((sub.name[5:], role)), 'valid': not problems, 'problems': problems})
+                          'kind': kind, 'valid': not problems, 'problems': problems})
     found.sort(key=lambda x: x['delivery'])
     return {'topic': topic, 'role': role, 'deliveries': found, 'stray_entries_not_opened': stray}
 
 
-def wait(config, inbox, after='', timeout=540, interval=10):
+def acknowledged(seen_file):
+    """Delivery IDs in the role's own receipt file; a missing file means none handled yet."""
+    path = Path(seen_file).absolute()
+    if not path.exists():
+        return []
+    data = json.loads(rs.regular(path))
+    if not isinstance(data, list) or any(not isinstance(x, str) or not DLV.fullmatch(x) for x in data):
+        raise ValueError('seen-file must be a JSON array of acknowledged delivery IDs')
+    return data
+
+
+def wait(config, inbox, seen_file, timeout=540, interval=10):
+    """Return the oldest valid delivery not yet acknowledged in the receipt file."""
+    if timeout < 0 or interval <= 0:
+        raise ValueError('timeout must be nonnegative and interval positive')
     cfg = load_config(config)
     deadline = time.monotonic() + timeout
     while True:
         state = scan(cfg, inbox)
-        new = [d for d in state['deliveries'] if d['delivery'] > after]
+        seen = set(acknowledged(seen_file))  # reloaded each pass, so an ack elsewhere is honoured at once
+        new = [d for d in state['deliveries'] if d['valid'] and d['delivery'] not in seen]
         if new:
             return {'status': 'delivered', **new[0], 'stray_entries_not_opened': state['stray_entries_not_opened']}
         if time.monotonic() >= deadline:
-            return {'status': 'timeout', 'after': after}
-        time.sleep(interval)
+            return {'status': 'timeout'}
+        time.sleep(min(interval, max(0, deadline - time.monotonic())))
+
+
+def ack(seen_file, delivery):
+    """Record a processed delivery in the role's own receipt file, atomically and idempotently."""
+    if not DLV.fullmatch(delivery):
+        raise ValueError(f'Invalid delivery ID: {delivery}')
+    path = Path(seen_file).absolute()
+    seen = acknowledged(path)
+    if delivery not in seen:
+        seen.append(delivery)
+        fd, tmp = tempfile.mkstemp(prefix='.ack-', dir=str(path.parent))
+        with os.fdopen(fd, 'w') as f:
+            f.write(json.dumps(seen, indent=2) + '\n')
+        os.replace(tmp, path)
+    return {'acknowledged': delivery, 'count': len(seen)}
 
 
 def main():
@@ -262,23 +333,30 @@ def main():
     s = sub.add_parser('send', help='deliver a frozen release to the next roles')
     s.add_argument('--config', required=True)
     s.add_argument('--release', required=True)
-    s.add_argument('--adjudicates', nargs='*', default=[])
+    s.add_argument('--adjudicates', nargs='*', default=[], help='verifier: challenger releases this verification adjudicated')
+    s.add_argument('--reviews', help='verifier: the proposer release this verification checked')
     s.add_argument('--ledger')
     w = sub.add_parser('wait', help='block until a new delivery reaches your inbox')
     w.add_argument('--config', required=True)
     w.add_argument('--inbox', required=True)
-    w.add_argument('--after', default='', help='last delivery ID already handled')
+    w.add_argument('--seen-file', required=True,
+                   help='own-outbox receipt file: JSON array of handled delivery IDs (a missing file means none)')
     w.add_argument('--timeout', type=int, default=540)
     w.add_argument('--interval', type=int, default=10)
     c = sub.add_parser('check', help='list your inbox deliveries with their validity')
     c.add_argument('--config', required=True)
     c.add_argument('--inbox', required=True)
+    k = sub.add_parser('ack', help='record a processed delivery in your own receipt file')
+    k.add_argument('--seen-file', required=True)
+    k.add_argument('--delivery', required=True)
     a = p.parse_args()
     try:
         if a.command == 'send':
-            out = send(a.config, a.release, a.adjudicates, a.ledger)
+            out = send(a.config, a.release, a.adjudicates, a.ledger, a.reviews)
         elif a.command == 'wait':
-            out = wait(a.config, a.inbox, a.after, a.timeout, a.interval)
+            out = wait(a.config, a.inbox, a.seen_file, a.timeout, a.interval)
+        elif a.command == 'ack':
+            out = ack(a.seen_file, a.delivery)
         else:
             out = scan(load_config(a.config), a.inbox)
     except (ValueError, OSError) as e:

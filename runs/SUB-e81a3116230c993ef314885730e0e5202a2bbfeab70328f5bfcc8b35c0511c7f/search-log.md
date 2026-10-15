@@ -1,0 +1,13 @@
+# R1b independent search and provenance
+
+Session /root/codex_c05_timing_r2, actor Codex-C05-TIMING-R2. Input 24ea3f3223f6f5171e96711a4df90204e4f2248c, packet 6d77b6e3cc08db57c84c0335ca1c40a029be50290c2bac7d7266016a28a89003. Policy amendment 2f0be51a0fdbd17389002caad856361e00d4f228 received before dossier review; 63 payload hashes verified. Initial assessment unchanged; full-stage forecast exposure authorized; proposer previously saw initial assessment.
+
+One bounded substantive round. Search engine web.run, no recency/domain filters. Queries: `"static timing" "general delay models"`; `"static timing" "certified" "screening"`; `"multi corner" "bounds" "clock" Onaissi`; expansion `static timing analysis conservative slew bounds selective refinement signoff sound interval analysis`; expansion `timing analysis floating point error bound interval arithmetic static timing`. Initial combined tool output truncated; no claims based on unseen portions.
+
+Inspected originals: C05-S01–S04 in sources.json. C05-S02 and S03 reopen proposer-listed unresolved leads under amended external-reading permission. C05-S04 is an independently discovered additional author-institution source, limited to abstract. Its method is a future comparison priority. Source-code bytes were fetched with urllib for hash and physical-line verification, not executed or republished. No experimental jobs, downloaded scripts, credentials, private role files or project checkout accessed.
+
+Excluded secondary search results: blogs, forums, aggregators and general STA introductions; floating-point papers returned by search were discovery leads only, not evidence for an objection. No absence-of-results novelty claim. Search stopped at assigned one-round scope, not saturation; two query expansions did not establish complete coverage. Forward citations, contests/winners, current vendor documentation, whole-engine semantics and all original proofs remain incomplete.
+
+Accessible PDF text supersedes earlier access limitations only for this new review; old independent artifacts remain unchanged. No full copyrighted paper stored or included. Retrieval completion timestamps recorded in source ledger; no precise initial-fetch timestamps invented. Project validation script is not present in packet; transport must perform the full project validator. Freeze validation checks bytes/allowlist, not scientific correctness.
+
+Local readiness and review-manifest records retain policy receipt and artifact hashes. The allowlisted self-submission cannot include those arbitrary filenames, so this release repeats the decisive provenance here. Requested model/effort gpt-6-astra/low remains unverified by runtime; no change requested or performed. Shared host is policy-only isolation.

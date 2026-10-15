@@ -1,0 +1,11 @@
+{
+  "id": "REQ-0002",
+  "category": "tooling",
+  "purpose": "Probe the lab234 build host (compilers, Tcl, SWIG, bison, flex, autotools, Eigen headers) and verify that /ws is shared with lab231 by reading the REQ-0001 marker and OpenSTA tree. No network.",
+  "host": "lab234",
+  "network": false,
+  "cores": 1,
+  "timeout_hours": 0.25,
+  "script": "REQ-0002.sh",
+  "inputs": []
+}

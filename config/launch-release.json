@@ -1,6 +1,6 @@
 {
-  "schema_version": 1,
-  "release_id": "PHYSICAL-ROLE-CREATION-0001",
+  "schema_version": 2,
+  "release_id": "CHATGPT-ONLY-0001",
   "state": "ready_for_role_creation",
   "scope_domains": [
     "D04",
@@ -11,108 +11,45 @@
     "D05": "EDA-0002"
   },
   "active_platforms": [
-    "codex",
-    "deepseek",
-    "claude"
+    "codex"
   ],
   "assignments": {
     "EDA-0001": {
       "domain": "D04",
-      "proposer": "Codex-P04-PHYSICAL",
-      "challenger": "Codex-C04-PHYSICAL-R2",
-      "verifier": "DeepSeek-V02-PHYSICAL"
+      "proposer": "ChatGPT-P04-PHYSICAL",
+      "challenger": "ChatGPT-C04-PHYSICAL",
+      "verifier": "ChatGPT-V04-PHYSICAL"
     },
     "EDA-0002": {
       "domain": "D05",
-      "proposer": "Claude-P05-TIMING",
-      "challenger": "Codex-C05-TIMING-R2",
-      "verifier": "DeepSeek-V02-PHYSICAL"
+      "proposer": "ChatGPT-P05-TIMING",
+      "challenger": "ChatGPT-C05-TIMING",
+      "verifier": "ChatGPT-V05-TIMING"
     }
   },
   "released_actors": [
-    "Codex-P04-PHYSICAL",
-    "Claude-P05-TIMING",
-    "Codex-C04-PHYSICAL-R2",
-    "Codex-C05-TIMING-R2",
-    "DeepSeek-V02-PHYSICAL"
+    "ChatGPT-P04-PHYSICAL",
+    "ChatGPT-C04-PHYSICAL",
+    "ChatGPT-V04-PHYSICAL",
+    "ChatGPT-P05-TIMING",
+    "ChatGPT-C05-TIMING",
+    "ChatGPT-V05-TIMING"
   ],
   "first_wave": [
-    "Codex-P04-PHYSICAL",
-    "Claude-P05-TIMING"
+    "ChatGPT-P04-PHYSICAL",
+    "ChatGPT-P05-TIMING"
   ],
-  "max_concurrent_scientific_sessions": 2,
+  "max_concurrent_scientific_sessions": 1,
   "fresh_sessions_required": true,
   "old_sessions_are_inputs": false,
-  "packet_ref_policy": "After this release is merged, export each packet from the resulting full main commit. Never reuse a historical packet or PR #4 output.",
-  "communication": "Files only through immutable packets and private outboxes; no role-to-role messages or shared memory.",
-  "research_sequence": [
-    "Create the Codex D04 proposer and Claude D05 proposer from separate frozen packets.",
-    "Commit each complete proposal before creating or releasing a challenger scientific packet.",
-    "Require each challenger to record an independent search and headroom estimate before receiving the proposer forecast.",
-    "Create the verifier session only after proposal and challenge artifacts are frozen and released.",
-    "Release only adjudicated objections back to the proposer."
-  ],
+  "communication": "Files only. Separate role workspaces and fresh ephemeral Codex executions; no inherited conversations, shared memory or foreign private outputs.",
+  "experiment_authorization": false,
   "platform_readiness": {
     "codex": {
-      "state": "ready_after_merge_and_packet_export",
-      "models_verified": true,
-      "roles": [
-        "D04 proposer",
-        "D04 challenger",
-        "D05 challenger"
-      ]
-    },
-    "deepseek": {
-      "state": "ready_after_merge_and_packet_export",
-      "models_verified": true,
-      "model_policy": "Verification platform: use the observed deepseek-flash model at low effort for bounded source checks per docs/TEAM-DEEPSEEK.md, and record the actual host model and effort at creation.",
-      "roles": [
-        "D04 verifier",
-        "D05 verifier"
-      ]
-    },
-    "claude": {
-      "state": "ready_for_host_bound_creation",
-      "models_verified": false,
-      "model_policy": "Use only a Claude-family model exposed by the destination host. Record the exact model before the session receives scientific input; abort creation if no Claude model is exposed.",
-      "roles": [
-        "D05 proposer"
-      ]
+      "state": "configuration_prepared_live_loop_not_tested",
+      "models_verified": false
     }
   },
-  "experiment_authorization": false,
-  "experiment_blockers": [
-    "No accepted topic or agreed experiment task list exists.",
-    "Representative designs, macro-rich cases, additional corners and a qualified signoff oracle remain incomplete."
-  ],
-  "role_handoffs": {
-    "EDA-0001": {
-      "challenger": {
-        "from": "DeepSeek-C04-PHYSICAL",
-        "to": "Codex-C04-PHYSICAL-R2",
-        "owner_authorized": true,
-        "reason": "Owner decision 2026-10-13 (true UTC; 2026-10-14 local host date): the DeepSeek platform stops serving as challenger and becomes the project's verification platform; the dormant D04 challenger seat passes to a fresh Codex successor identity with no inherited context."
-      },
-      "verifier": {
-        "from": "Claude-V02-PHYSICAL",
-        "to": "DeepSeek-V02-PHYSICAL",
-        "owner_authorized": true,
-        "reason": "Owner decision 2026-10-13: DeepSeek verifies both queues, replacing the platform that supplies the topic's proposer; D04 has no frozen proposal yet, so no verification work is lost."
-      }
-    },
-    "EDA-0002": {
-      "challenger": {
-        "from": "DeepSeek-C05-TIMING",
-        "to": "Codex-C05-TIMING-R2",
-        "owner_authorized": true,
-        "reason": "Owner-directed succession (PR #20), GPT-6-Astra at low effort with fresh context; the DeepSeek challenger filed and transported its round-1 challenge before the handoff."
-      },
-      "verifier": {
-        "from": "Codex-V02-PHYSICAL",
-        "to": "DeepSeek-V02-PHYSICAL",
-        "owner_authorized": true,
-        "reason": "Owner decision 2026-10-13: DeepSeek verifies both queues; with a Claude proposal and a Codex challenge, the verifier is the third platform."
-      }
-    }
-  }
+  "supersedes_release": "PHYSICAL-ROLE-CREATION-0001",
+  "owner_authority": "Owner instructions 2026-10-15: adapt only ChatGPT proposer/challenger/verifier; autonomous complete research circuit, abandon invalid topics, select useful ones, publish each round; remove incidental manual gates."
 }
