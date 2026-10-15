@@ -1,0 +1,7 @@
+{
+  "session_id": "b789be3f-0354-4526-807b-b75b91d1f374",
+  "decision": "revision_requested",
+  "signed_revision": "SUB-8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f",
+  "tasklist_sha256": "2c2d7ee1b4e6a731d301942eda9924a571fc48902b5dfe71b979054852f9c1ba",
+  "rationale": "Add rank/D falsification boundary; physical readiness, owners and actual resources remain unresolved. This is not execution consent."
+}

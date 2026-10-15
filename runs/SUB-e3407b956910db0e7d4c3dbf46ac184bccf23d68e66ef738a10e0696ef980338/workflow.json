@@ -1,0 +1,23 @@
+{
+  "role": "challenger",
+  "reviewed_proposer_release": "SUB-8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f",
+  "assessment": "revise",
+  "coverage": {
+    "duplicate_prior_art": "unresolved",
+    "mechanism": "supported",
+    "composition": "unresolved",
+    "demand": "unresolved",
+    "industry_gap": "unresolved",
+    "headroom": "unresolved",
+    "contests": "unresolved",
+    "experiments": "unresolved",
+    "cost": "supported"
+  },
+  "objections": [
+    "OBJ-001"
+  ],
+  "direction_drift": {
+    "combination_drift": 0,
+    "demand_drift": 0
+  }
+}

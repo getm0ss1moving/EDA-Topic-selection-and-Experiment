@@ -1,0 +1,158 @@
+[
+  {
+    "id": "S01",
+    "title": "Constrained Two-step Look-Ahead Bayesian Optimization",
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2021/file/685217557383cd194b4f10ae4b39eebf-Paper.pdf",
+    "type": "primary paper",
+    "published": "2021",
+    "retrieved_utc": "2026-10-15T13:52:06.345498+00:00",
+    "locator": "PDF physical pp3-4 \u00a7\u00a72.2\u20132.3 Eq1; web rendered lines131-173",
+    "access": "full",
+    "claims": [
+      "CLM-703",
+      "OBJ-001"
+    ],
+    "limitations": "Selected definitions inspected; independent objective/constraint GPs in original; no numerical gains adopted."
+  },
+  {
+    "id": "S02",
+    "title": "Disentangled Differentiable Timing-Power Co-Optimization with Quad-Gradient Gate Sizing",
+    "url": "https://guozz.cn/publication/phyoptdac-26/phyoptdac-26.pdf",
+    "type": "author primary paper",
+    "published": "2026-07",
+    "retrieved_utc": "2026-10-15T13:52:06.345498+00:00",
+    "locator": "PDF physical pp4-5 \u00a7\u00a73.3\u20133.4 Eq6-11, Algorithm1; \u00a74.2 hardware caveat",
+    "access": "full",
+    "claims": [
+      "CLM-702"
+    ],
+    "limitations": "Selected method/evaluation read; no winner code or performance reproduction. Electrical directional calibration is prior, not proof of identical covariance."
+  },
+  {
+    "id": "S03",
+    "title": "OpenROAD MeasuredVtSwapCandidate.cc",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/3549d60529517dc82deb7f0ff769345e9a424911/src/rsz/src/move/MeasuredVtSwapCandidate.cc",
+    "type": "primary code",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-15T13:52:06.345498+00:00",
+    "locator": "estimate, arrivalDelay, restoreEstimateJournal; web-rendered L40-61,L101-123",
+    "access": "full",
+    "claims": [
+      "CLM-701"
+    ],
+    "limitations": "Pinned revision; web line numbering differs from raw file numbering. Full rendered file read as data; not built or transitive audited."
+  },
+  {
+    "id": "S04",
+    "title": "OpenROAD DelayEstimator.cc",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/3549d60529517dc82deb7f0ff769345e9a424911/src/rsz/src/DelayEstimator.cc",
+    "type": "primary code",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-15T13:52:06.345498+00:00",
+    "locator": "slewBias/interpolateStaSlewBias; web-rendered L453-480",
+    "access": "full",
+    "claims": [
+      "CLM-701",
+      "CLM-703"
+    ],
+    "limitations": "Selected functions inspected, not complete adapter. Distinguish rendered locator from raw lines; no execution."
+  },
+  {
+    "id": "S05",
+    "title": "High-Performance Gate Sizing with a Signoff Timer",
+    "url": "https://vlsicad.ucsd.edu/Publications/Conferences/304/c304.pdf",
+    "type": "primary paper",
+    "published": "2013",
+    "retrieved_utc": "2026-10-15T13:52:06.345498+00:00",
+    "locator": "physical PDF p3 \u00a73.1 Offset-based timing calibration and peephole optimization",
+    "access": "full",
+    "claims": [
+      "CLM-702"
+    ],
+    "limitations": "Selected section read; old performance not transferred to current setup."
+  },
+  {
+    "id": "S06",
+    "title": "Multi-task Gaussian Process Prediction",
+    "url": "https://papers.nips.cc/paper/3189-multi-task-gaussian-process-prediction.pdf",
+    "type": "primary paper",
+    "published": "2007",
+    "retrieved_utc": "2026-10-15T13:52:06.345498+00:00",
+    "locator": "physical PDF p3 \u00a72.3; web-rendered L241-262",
+    "access": "full",
+    "claims": [
+      "OBJ-001"
+    ],
+    "limitations": "Separable noise-free block-design cancellation differs from our rank-identification lemma; no general impossibility inferred."
+  },
+  {
+    "id": "S07",
+    "title": "ISPD2026 official contest winners",
+    "url": "https://www.ispd.cc/contests/26/index.html",
+    "type": "official contest page",
+    "published": "2026",
+    "retrieved_utc": "2026-10-15T13:52:06.345498+00:00",
+    "locator": "Contest Winners ordered list",
+    "access": "full",
+    "claims": [
+      "CLM-702"
+    ],
+    "limitations": "IRISLab/PTSD/HLFC identities only; algorithms unresolved."
+  },
+  {
+    "id": "S08",
+    "title": "ISPD2027 pinned contest README",
+    "url": "https://raw.githubusercontent.com/ABKGroup/ISPD27-Contest/faef83cacf70fa7923be07816d804ca9c1cef68e/README.md",
+    "type": "official contest documentation",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-15T13:52:06.345498+00:00",
+    "locator": "title; Resources; Timeline; rendered L0-19",
+    "access": "full",
+    "claims": [
+      "CLM-702"
+    ],
+    "limitations": "MCMM post-CTS scope and future scheduled dates, not observed completion. Full description/evaluator not independently audited here."
+  },
+  {
+    "id": "S09",
+    "title": "ISPD26-Contest-Solution public fork",
+    "url": "https://github.com/jaysunl/ISPD26-Contest-Solution",
+    "type": "public participant repository",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-15T13:52:06.345498+00:00",
+    "locator": "repository fork provenance and README/alpha-beta tables",
+    "access": "full",
+    "claims": [
+      "CLM-702"
+    ],
+    "limitations": "Full page readable; only README/file listing inspected. No verified connection to winning teams or new algorithm; discovery lead only."
+  },
+  {
+    "id": "S10",
+    "title": "ISPD program contest-summary entry",
+    "url": "https://www.ispd.cc/ispd2027/index.php?page=program",
+    "type": "official program page",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-15T13:52:06.345498+00:00",
+    "locator": "rendered L294-301: ISPD2026 contest summary slides link91",
+    "access": "full",
+    "claims": [
+      "CLM-702"
+    ],
+    "limitations": "URL year and displayed 2026 program mismatch. Slide click failed tool resolution; no slides/video method inspection."
+  },
+  {
+    "id": "A01",
+    "title": "Own exact rank-two bundled-observation audit",
+    "url": "independent-estimate.md",
+    "type": "own analytical derivation",
+    "published": "2026-10-15",
+    "retrieved_utc": "2026-10-15T13:52:06.345498+00:00",
+    "locator": "reproduction block; challenges.md OBJ-001",
+    "access": "full",
+    "claims": [
+      "OBJ-001"
+    ],
+    "limitations": "Synthetic exact arithmetic only; no model calibration, EDA workload or forecast."
+  }
+]

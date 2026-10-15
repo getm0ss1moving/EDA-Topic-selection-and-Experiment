@@ -1,0 +1,263 @@
+{
+  "decision": "revise",
+  "verifier_session": "04124b28-c866-4c3a-879c-f1d3ceac97fc",
+  "input_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+  "packet_sha256": "5b6045e682cf0edf1e4ed1bcd48a163db1e64d6292397242d5263dcb6772fd54",
+  "reviewed_proposer_release": "SUB-8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f",
+  "adjudicated_challenger_releases": [
+    "SUB-e3407b956910db0e7d4c3dbf46ac184bccf23d68e66ef738a10e0696ef980338"
+  ],
+  "dossier_digest": "36b668c5ecf8d51cffa09978063af9bae12c85359f2a4b0ab14ffbcb12af71ae",
+  "digest_scope": "project.py digest over supplied frozen proposer directory including SUBMISSION.json; not an integrated canonical dossier",
+  "gates": {
+    "novelty": false,
+    "mechanism": false,
+    "utility": false,
+    "contest_originality": false,
+    "headroom": false,
+    "feasibility": false,
+    "direction_integrity": true,
+    "experiment_consensus": false
+  },
+  "gate_reasons": {
+    "novelty": "Useful W-system delta unresolved; component novelty not required.",
+    "mechanism": "Coherent conditional construction; physical residual-transfer premise untested.",
+    "utility": "Demand thresholds, local/full relationship and charged savings absent.",
+    "contest_originality": "Winner identities known; methods incompletely audited.",
+    "headroom": "Rank-two boundary valid; physical residual/headroom unknown.",
+    "feasibility": "No lawful workload lock, transitive adapter proof, assigned owners or actual experiment allocation.",
+    "direction_integrity": "Current explicit anchor retained; combination_drift=0,demand_drift=0. No historical signature/acceptance inherited.",
+    "experiment_consensus": "Distinct P/C session IDs, but both request revision; no agreeing signatures. Task hash independently recomputed."
+  },
+  "direction_penalty_checked": true,
+  "direction_penalties": {
+    "combination_drift": 0,
+    "demand_drift": 0
+  },
+  "experiment_consensus_checked": true,
+  "tasklist_sha256": "2c2d7ee1b4e6a731d301942eda9924a571fc48902b5dfe71b979054852f9c1ba",
+  "abandonment_process_checked": false,
+  "source_checks": [
+    {
+      "id": "V01",
+      "title": "Two-step lookahead Bayesian optimization with inequality constraints",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2021/file/685217557383cd194b4f10ae4b39eebf-Paper.pdf",
+      "publication_date": "2021",
+      "locator": "PDF physical pp3-5, sections2.2,2.3 Eq1 and3.2",
+      "access": "full",
+      "result": "Joint improvement and adaptive two-stage choice confirmed; original objective/constraint priors independent. Challenger S01 title is an approximate label; use actual title here.",
+      "retrieved_utc": "2026-10-15T13:56:07.770083+00:00"
+    },
+    {
+      "id": "V02",
+      "title": "Disentangled Differentiable Timing-Power Co-Optimization with Quad-Gradient Gate Sizing",
+      "url": "https://guozz.cn/publication/phyoptdac-26/phyoptdac-26.pdf",
+      "publication_date": "2026",
+      "locator": "physical pp4-5 sections3.3-3.4 Eqs6-11 and Algorithm1",
+      "access": "full",
+      "result": "Discrete load/slew directions and multi-level calibration are prior. Selected methods only; no performance replication or winning-code equivalence.",
+      "retrieved_utc": "2026-10-15T13:56:07.770198+00:00"
+    },
+    {
+      "id": "V03",
+      "title": "MeasuredVtSwapCandidate.cc",
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/3549d60529517dc82deb7f0ff769345e9a424911/src/rsz/src/move/MeasuredVtSwapCandidate.cc",
+      "publication_date": "unknown",
+      "locator": "web-rendered lines40-61,101-123; functions estimate/arrivalDelay/restoreEstimateJournal",
+      "access": "full",
+      "result": "Temporary replacement, arrival-score and restore consumer exists. No build or transitive rollback guarantee; raw line numbering is not asserted.",
+      "retrieved_utc": "2026-10-15T13:56:07.770200+00:00"
+    },
+    {
+      "id": "V04",
+      "title": "DelayEstimator.cc",
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/3549d60529517dc82deb7f0ff769345e9a424911/src/rsz/src/DelayEstimator.cc",
+      "publication_date": "unknown",
+      "locator": "web-rendered lines453-480 slewBias/interpolateStaSlewBias",
+      "access": "full",
+      "result": "Load-dependent interpolation of STA/table slew discrepancy exists; selected functions only.",
+      "retrieved_utc": "2026-10-15T13:56:07.770201+00:00"
+    },
+    {
+      "id": "V05",
+      "title": "High-Performance Gate Sizing with a Signoff Timer",
+      "url": "https://vlsicad.ucsd.edu/Publications/Conferences/304/c304.pdf",
+      "publication_date": "2013",
+      "locator": "physical p3 section3.1 offset-based calibration and dedicated critical-path optimization",
+      "access": "full",
+      "result": "Offsets, incremental timing and peephole search precede proposal; no current-node performance transfer.",
+      "retrieved_utc": "2026-10-15T13:56:07.770203+00:00"
+    },
+    {
+      "id": "V06",
+      "title": "Multi-task Gaussian Process Prediction",
+      "url": "https://papers.nips.cc/paper/3189-multi-task-gaussian-process-prediction.pdf",
+      "publication_date": "2007",
+      "locator": "physical pp3-4 section2.3 Eqs6-9",
+      "access": "full",
+      "result": "Separable noiseless block-design transfer cancellation confirmed; differs from rank-two full identification.",
+      "retrieved_utc": "2026-10-15T13:56:07.770204+00:00"
+    },
+    {
+      "id": "V07",
+      "title": "ISPD2026 contest winners",
+      "url": "https://www.ispd.cc/contests/26/index.html",
+      "publication_date": "2026",
+      "locator": "Contest Winners ordered list",
+      "access": "full",
+      "result": "IRISLab/PTSD/HLFC identities confirmed; no algorithms given.",
+      "retrieved_utc": "2026-10-15T13:56:07.770205+00:00"
+    },
+    {
+      "id": "V08",
+      "title": "ISPD2027 Contest README",
+      "url": "https://raw.githubusercontent.com/ABKGroup/ISPD27-Contest/faef83cacf70fa7923be07816d804ca9c1cef68e/README.md",
+      "publication_date": "unknown",
+      "locator": "title, Resources, Timeline",
+      "access": "full",
+      "result": "MCMM post-CTS scope and future schedule confirmed. Not a finished 2027 result or fully audited evaluator.",
+      "retrieved_utc": "2026-10-15T13:56:07.770206+00:00"
+    },
+    {
+      "id": "V09",
+      "title": "Learning-driven Physically-aware Large-scale Circuit Gate Sizing",
+      "url": "https://arxiv.org/abs/2403.08193",
+      "publication_date": "2024-03-13",
+      "locator": "author abstract",
+      "access": "abstract",
+      "result": "Independent expansion confirms coupled physical/timing learning lead, not full-method equivalence.",
+      "retrieved_utc": "2026-10-15T13:56:07.770207+00:00"
+    }
+  ],
+  "objections": [
+    {
+      "id": "OBJ-001",
+      "source": "V01 sections2.2-3.2; own A-V01 rank argument",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "Add C-001 to EXP-000/004. With known mu/W,D=0, invertible 2x2 query blocks and exact bundled observations, z is determined after any first query. With two equal-cost queries, the second measures the best remaining feasible candidate. Terminal quality is the table optimum for both lookahead and posterior-updated myopic policy. Conditional limit only; no general impossibility or physical-prevalence claim."
+    }
+  ],
+  "claim_checks": [
+    {
+      "id": "CLM-701",
+      "source": "V03 estimate; V04 slewBias",
+      "verdict": "partially_valid",
+      "blocking": true,
+      "reason": "Actual source consumer/calibration confirmed. Candidate inventory, transitive state restoration, modern build compatibility and useful bottleneck prevalence remain unresolved."
+    },
+    {
+      "id": "CLM-702",
+      "source": "V02 sections3.3-3.4; V05 section3.1; V07/V08; V09 abstract",
+      "verdict": "partially_valid",
+      "blocking": true,
+      "reason": "Three nearest mechanisms checked: calibrated incremental/peephole search, electrical directional guidance, constrained lookahead. Complete W-construction system equivalence and current winner methods unresolved. Other R07/R08 details not independently reopened and do not receive clearance."
+    },
+    {
+      "id": "CLM-703: CEI and observation semantics",
+      "source": "V01 Eq1/section3.2; proposal residual/controller definitions; own conditioning derivation",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "Tower property removes expected posterior E[M] term; only expected measured feasible incumbent gain remains. Same-candidate dependence must stay joint. Same mean and K imply identical Gaussian posterior; persistent indexed D is not extra query noise. Exact observed entries have zero covariance. Numerical/singular implementation still untested."
+    },
+    {
+      "id": "CLM-703: physical W utility",
+      "source": "V02/V04 plus proposal Physical feature construction",
+      "verdict": "unresolved",
+      "blocking": true,
+      "reason": "Signed finite-difference recipe is a testable hypothesis. Advantage after strong calibration and charged feature costs has no physical evidence. No theorem or super-additivity requirement imposed."
+    },
+    {
+      "id": "CLM-704",
+      "source": "own A-V02 enumeration; experiment-plan EXP-000",
+      "verdict": "partially_valid",
+      "blocking": false,
+      "reason": "Independently recomputed finite-law values (3,2,2,2) versus (1,5/3,5/3,5/3); analytical Gaussian equivalence follows shared K. Did not rerun proposer code or independently reproduce specific 217/1048 output. Non-Gaussian witness establishes possibility only, not proposed Gaussian/physical transfer."
+    },
+    {
+      "id": "CLM-705",
+      "source": "proposal endpoint; tasklist EXP-002/005/006",
+      "verdict": "unresolved",
+      "blocking": true,
+      "reason": "Local-to-full feasibility, justified tolerances and net charged savings remain open. Final guard cannot certify unmeasured optimum."
+    },
+    {
+      "id": "CLM-706",
+      "source": "JOB; batch0003 resource clause; forecast.json",
+      "verdict": "partially_valid",
+      "blocking": true,
+      "reason": "Research only; no new EDA allocation. Forecast nulls appropriate. Vendor R13 not reopened; no commercial-absence/performance conclusion accepted."
+    },
+    {
+      "id": "CLM-707",
+      "source": "proposal/responses historical descriptions; no predecessor reread",
+      "verdict": "unresolved",
+      "blocking": false,
+      "reason": "Historical approval/addressing claims not reverified; none inherited. Current reductions independently checked above. Historical conduct/park record must remain preserved."
+    },
+    {
+      "id": "C-002/C-003 task requests",
+      "source": "V02/V04; V07/V08",
+      "verdict": "valid",
+      "blocking": true,
+      "reason": "Before readiness distinguish mean calibration, physical W and posterior policy; complete current winner-method source closure or bound remaining risk. These are reasonable readiness tasks, not proof of duplication."
+    }
+  ],
+  "analytical_checks": {
+    "rank": [
+      {
+        "query": 0,
+        "W_determinant": 1,
+        "K_observation_determinant": 1
+      },
+      {
+        "query": 1,
+        "W_determinant": -2,
+        "K_observation_determinant": 4
+      },
+      {
+        "query": 2,
+        "W_determinant": 5,
+        "K_observation_determinant": 25
+      }
+    ],
+    "correlated_two_step": [
+      "3",
+      "2",
+      "2",
+      "2"
+    ],
+    "independent_two_step": [
+      "1",
+      "5/3",
+      "5/3",
+      "5/3"
+    ],
+    "input_payload_hashes": "both current released payloads match manifests",
+    "scope": "own constant-size exact algebra; no EDA experiment"
+  },
+  "search_log": [
+    {
+      "query": "ISPD 2026 IRISLab PTSD HLFC gate sizing winner algorithm",
+      "engine": "web search",
+      "result": "No authenticated winner-method material retrieved; official winners page checked."
+    },
+    {
+      "query": "gate sizing electrical sensitivity covariance Bayesian candidate timing 2026",
+      "engine": "web search",
+      "result": "Learning-driven physical sizing primary abstract reopened. Statistical timing/process-variation leads are not equivalent epistemic-residual mechanisms. Many irrelevant results excluded."
+    }
+  ],
+  "limitations": [
+    "Selected critical source sections only; no exhaustive novelty certification. Search budget exhausted, not two unsuccessful expansions.",
+    "Current packet and released P/C payload hashes checked; logical sessions distinct. Shared OS and backend identity not independently attested.",
+    "No predecessor files/private notes read; unblinded current forecast read.",
+    "Full repository validation and PR review reserved to coordinator; trusted freeze validates this standalone release only.",
+    "No EDA experiment, build, training, downloaded-code execution or paid call. Own tiny rational/enumeration checks only."
+  ],
+  "reversal_conditions": [
+    "Integrate valid rank/D/full-bundle boundary and distinguish covariance transfer from nonmyopic policy value.",
+    "Supply source-backed W distinction and readiness locks; preserve calibrated and identical-feature GP controls.",
+    "Before pilot obtain actual resources, owners, lawful inputs, correctness oracle and independent matching exact-task consents."
+  ]
+}

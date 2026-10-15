@@ -1,0 +1,11 @@
+# Engineering demand and public capability boundary
+
+User: timing-optimization developer selecting a legal critical-driver replacement. Decision: which immutable-base alternative to measure, then which measured/fully guarded candidate to return. Engineering endpoint: total selection time at justified local-regret and global WNS/TNS/ERC quality; no dense endpoint-prediction objective is substituted.
+
+R01 estimate (raw lines44–67), arrivalDelay109–117 and journal restore124–132 demonstrate a local measured consumer. R02 buildContext1339–1415/estimate1417–1440 demonstrates the existing cheap-estimation context. These sources do not establish profiling fractions, number of compatible alternatives, complete adapter correctness or customer demand. A complete implementation must preserve the consumer's cap checks and upstream load response; current source evidence is not a timing-oracle certification.
+
+R13 advertises physically aware ECO guidance and machine-learning power recovery/PBA in Core Static Timing Analysis. This is capability advertising only. Proprietary internals, matched-workload performance and product licensing remain unknown. No commercial tool absence, industry-wide gap or superiority is asserted. No credentials or restricted vendor documentation were sought.
+
+The research gap is conditional: after strong current calibration, are inexpensive signed contrast features useful for sequential measurement decisions? Current measurements do not answer it. EXP-001 must inventory lawful candidate counts and caller demand; EXP-005 must fix meaningful time/regret/global tolerances before candidate evaluation; EXP-006 must demonstrate downstream quality. An open-source feature omission alone is not a contribution. If candidate lists are tiny or exact incremental timing is already cheaper than feature construction, stop this utility claim.
+
+The resource brief's provisional 20% timing and endpoint-error thresholds belong to an earlier broad screening contract; this finite selection policy does not inherit them as validated demand. No calibrated minimum effect or practitioner endorsement is available. Readiness remains blocked until tolerances and actual owners/resources are specified; source mapping and algebra remain productive research.
