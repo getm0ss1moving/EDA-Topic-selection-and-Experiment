@@ -75,7 +75,9 @@
   },
   "execution_status": "prepared; no model dispatched yet",
   "setup_notes": [
-    "Initial shortened prepare reference was rejected before creating seats; full committed SHA used successfully."
+    "Initial shortened prepare reference was rejected before creating seats; full committed SHA used successfully.",
+    "Initial GitHub CI found the dry-run test depended on local origin spelling; coordinator dry-run now uses local HEAD without network and the test supplies its own Git identity. Frozen scientific policy inputs remain at b1bb69f."
   ],
-  "scope": "Four additional cycles each for D04/D05; 24 scientific jobs plus eight fresh independent protocol audits; no new EDA resource allocation."
+  "scope": "Four additional cycles each for D04/D05; 24 scientific jobs plus eight fresh independent protocol audits; no new EDA resource allocation.",
+  "coordinator_fix_commit": "5a69c9a"
 }
