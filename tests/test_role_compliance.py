@@ -224,6 +224,7 @@ class AuditedLoopTests(unittest.TestCase):
 
     def test_migrated_consent_cycle_keeps_prior_substantive_round_and_closure(self):
         self.c.pop('stop_after_rounds');self.action='consent_experiment'
+        l.save(self.home/'settings.json',self.c)
         for _ in range(3):self.science()
         self.audit();l.audit_collect(self.c,self.home,'D05')
         for _ in range(3):self.science()
@@ -235,6 +236,22 @@ class AuditedLoopTests(unittest.TestCase):
         t=l.read(self.home/'state.json')['topics']['EDA-0002']
         self.assertEqual(t['round'],1);self.assertEqual(len(t['history']),3)
         self.assertEqual(t['closure'],'experiment')
+
+    def test_mechanical_rejections_remain_visible_to_auditor_with_latest_bindings(self):
+        for _ in range(2):self.science()
+        job=l.dispatch(self.c,self.home,'D05');work=Path(job['work'])
+        fixtures.LoopTests.fake(self,self.c,job);a=l.read(work/'JOB.json');v=self.ledger(a)
+        v['activity']['checkout_access']='none with explanation'
+        l.save(work/'release/compliance.json',v);bad=self.freeze(work)
+        with self.assertRaisesRegex(ValueError,'checkout access'):l.collect(self.c,self.home,'D05')
+        self.assertEqual(l.read(work/'mechanical-attempts.json')[0]['release_id'],bad['release_id'])
+        l.save(work/'release/compliance.json',self.ledger(a));good=self.freeze(work)
+        l.collect(self.c,self.home,'D05');audit=Path(l.audit_dispatch(self.c,self.home,'D05')['work'])
+        assignment=l.read(audit/'JOB.json')
+        self.assertEqual(assignment['reviewed_releases']['verifier'],good['release_id'])
+        self.assertEqual(len(assignment['released_inputs']),4)
+        self.assertTrue((audit/'shared/rejected-attempts'/bad['release_id']/'compliance.json').is_file())
+        self.assertEqual(Path(l.read(self.home/'state.json')['publication_queue'][0]['mechanical_releases'][0]).name,bad['release_id'])
 
     def test_identity_and_unreleased_input_are_checked(self):
         a=l.read(Path(l.dispatch(self.c,self.home,'D05')['work'])/'JOB.json')

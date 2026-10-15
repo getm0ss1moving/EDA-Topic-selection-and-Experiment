@@ -639,11 +639,29 @@ def audit_dispatch(c, home, domain):
             shutil.copyfile(source.parent.parent/filename,descriptor/filename)
     (work/'release').mkdir();(work/'submissions').mkdir()
     save(work/'result.schema.json',FINAL)
+    attempt_paths=[];attempt_sources=[]
+    for role,name in record['releases'].items():
+        source=Path(name).parent.parent/'mechanical-attempts.json'
+        if not source.is_file():continue
+        descriptor=work/'shared'/'job-descriptors'/role
+        shutil.copyfile(source,descriptor/source.name)
+        assignment=read(source.parent/'JOB.json')
+        for attempt in read(source):
+            candidate=source.parent/'submissions'/attempt.get('release_id','invalid')
+            try:
+                am,_=rs.verify(candidate)
+                if any(am[k]!=assignment[k] for k in ('role','topic','actor_id','session_id','input_commit','packet_sha256')):continue
+            except (ValueError,OSError,KeyError):continue
+            dest=work/'shared'/'rejected-attempts'/candidate.name
+            if not dest.exists():copy_release(candidate,dest)
+            if str(dest) not in attempt_paths:
+                attempt_paths.append(str(dest));attempt_sources.append(str(candidate))
+    record['mechanical_releases']=attempt_sources
     assignment={'role':'verifier','purpose':'protocol_audit','topic':topic['topic'],'domain':domain,
                 'job_id':work.name,'actor_id':actor,'session_id':session,
                 'input_commit':state['source_commit'],'packet_sha256':seat['packet_sha256'],
                 'reviewed_releases':{r:Path(p).name for r,p in record['releases'].items()},
-                'released_inputs':[str(work/'shared'/Path(p).name) for p in record['releases'].values()],
+                'released_inputs':[str(work/'shared'/Path(p).name) for p in record['releases'].values()]+attempt_paths,
                 'models':c['models'],'compliance_required':True,
                 'batch_round':sum(1 for r in state['publication_queue'][:state['publication_queue'].index(record)+1]
                                   if state['topics'][r['topic']]['domain']==domain)}
@@ -652,7 +670,8 @@ def audit_dispatch(c, home, domain):
             'Start with this JOB.json and policy/docs/ROLE-COMPLIANCE.md; read common policy and ONLY '
             'policy/harness/VERIFIER.md. English artifacts. Do not inspect checkout, private role notes, '
             'transcripts, logs, memories or send agent messages. This is academic semiconductor EDA. '
-            'The released three scientific outputs and public job descriptors are your complete role inputs. '
+            'The released latest three scientific outputs, explicitly supplied rejected mechanical attempts '
+            'if any, and public job descriptors are your complete role inputs. '
             'Check each proposer/challenger/verifier against all nine rules, not the verifier alone. '
             'Write compact verification.md and verification.json per ROLE-COMPLIANCE protocol-audit schema, '
             'workflow.json with purpose protocol_audit and your own compliance.json. '
@@ -686,7 +705,8 @@ def audit_collect(c,home,domain):
         raise ValueError('Auditor cannot review its own scientific output')
     expected=assignment['reviewed_releases']
     try:
-        compliance.validate_ledger(json.loads(p.get('compliance.json',b'{}')),m,assignment,expected.values())
+        compliance.validate_ledger(json.loads(p.get('compliance.json',b'{}')),m,assignment,
+                                   [Path(x).name for x in assignment['released_inputs']])
     except compliance.ProtocolViolation as exc:
         quarantine_cycle(state,state['topics'][record['topic']],job,str(exc),home,record)
         save(home/'state.json',state);raise
@@ -735,7 +755,7 @@ def publish_record(record,c,home,dry_run=False):
             cmd('git','remote','set-url','origin',remote,cwd=repo)
             cmd('git','fetch','--quiet','origin','main',cwd=repo)
             cmd('git','checkout','--quiet','-b',branch,'origin/main',cwd=repo)
-        release_paths=list(record['releases'].values())
+        release_paths=list(record['releases'].values())+record.get('mechanical_releases',[])
         if record.get('compliance_audit'):release_paths.append(record['compliance_audit'])
         for path in release_paths:
             m,payload=rs.verify(path);dest=repo/'runs'/Path(path).name;dest.mkdir(exist_ok=True)
@@ -757,6 +777,7 @@ def publish_record(record,c,home,dry_run=False):
         public={k:v for k,v in record.items() if k!='releases' and not k.startswith('publication_')}
         public['releases']={r:'runs/'+Path(p).name for r,p in record['releases'].items()}
         if record.get('compliance_audit'):public['compliance_audit']='runs/'+Path(record['compliance_audit']).name
+        if record.get('mechanical_releases'):public['mechanical_releases']=['runs/'+Path(p).name for p in record['mechanical_releases']]
         save(repo/'runs'/f'CODEX-ROUND-{record["topic"]}-{key}'/'round.json',public)
         # Registry travels atomically with this round; no registration PR has to merge first.
         registry_path=repo/'config/roles.json';registered=read(registry_path)
@@ -854,6 +875,11 @@ def collect(c,home,domain):
         quarantine_cycle(state,t,job,str(e),home)
         save(home/'state.json',state);raise
     except (ValueError,OSError) as e:
+        attempts=Path(job['work'])/'mechanical-attempts.json'
+        entries=read(attempts) if attempts.exists() else []
+        entry={'release_id':result.get('release_id'),'error':str(e),'scope':'Mechanical rejection, not an independent misconduct finding'}
+        if entry not in entries:entries.append(entry)
+        save(attempts,entries)
         save(Path(job['work'])/'retry-note.json',{'mechanical_error':str(e),
               'instruction':'Repair your own output; do not invent scientific agreement.'})
         raise
