@@ -1,0 +1,47 @@
+{
+  "role": "proposer",
+  "phase": "research",
+  "topic": "EDA-0001",
+  "domain": "D04",
+  "batch_round": 1,
+  "actor_id": "ChatGPT-P04-PHYSICAL",
+  "session_id": "1a859cdd-08fa-46af-a2fe-1a6fc872d695",
+  "input_commit": "a48f03d4bc254c0b0957d0fe0f265e072d6cf49a",
+  "packet_sha256": "f24d6d0842a9a214e52469c518bae370fe1e11f48069736da9420adc325a6554",
+  "operational_outcome": "complete_research_candidate_not_experiment_ready",
+  "scientific_status": "Novelty, owner-cut utility, demand threshold, datasets, allocation and implementation remain unresolved. Independent challenger and verifier review requested through file transport.",
+  "next_action": "independent_challenge",
+  "forecast_exposure": "No other-role forecasts or private files read; assigned shared directory contains no released inputs. Review explicitly unblinded.",
+  "coverage": {
+    "duplicate_prior_art": "unresolved",
+    "mechanism": "unresolved",
+    "composition": "unresolved",
+    "demand": "unresolved",
+    "industry_gap": "unresolved",
+    "headroom": "unresolved",
+    "contests": "unresolved",
+    "experiments": "unresolved",
+    "cost": "unresolved"
+  },
+  "checks": {
+    "full_repository_validate": "Not run: standalone packet lacks complete repository and foreign harnesses; prompt prohibits checkout inspection. Trusted freeze/verify is the local check.",
+    "routing_experiments_run": false,
+    "compute_authorized": false,
+    "consent": "pending; no signatures generated for other roles"
+  },
+  "output_paths": [
+    "contest-audit.md",
+    "direction-control.json",
+    "experiment-plan.md",
+    "forecast.json",
+    "industry-gap.md",
+    "prior-art.csv",
+    "proposal.md",
+    "responses.md",
+    "search-log.md",
+    "sources.json",
+    "tasklist.md",
+    "workflow.json"
+  ],
+  "run_record": "runs/P04-R1.json in assigned job root; provenance also bound by SUBMISSION.json"
+}

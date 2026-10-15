@@ -1,0 +1,324 @@
+[
+  {
+    "id": "S00",
+    "title": "Assigned frozen research brief and job policy",
+    "url": "packet:policy/config/research-brief.json",
+    "source_type": "owner_policy_packet",
+    "publication_date": "2026-10-15",
+    "retrieved_utc": "2026-10-15",
+    "access_level": "full",
+    "locator": "compute; available_tools; available_pdks; available_designs; primary_metric; minimum_meaningful_effect; feasibility_status",
+    "supported_claim_ids": [
+      "CLM-012"
+    ],
+    "limitations": "Infrastructure assertions are supplied packet facts, not independently rerun. Caps explicitly provisional; prompt grants no new experiment compute.",
+    "version": "input a48f03d4bc254c0b0957d0fe0f265e072d6cf49a; packet f24d6d0842a9a214e52469c518bae370fe1e11f48069736da9420adc325a6554",
+    "sha256": null,
+    "retrieval_time_precision": "UTC date; exact per-source request time not recorded"
+  },
+  {
+    "id": "S01",
+    "title": "ISPD 2018 Initial Detailed Routing Contest",
+    "url": "https://www.ispd.cc/contests/18/",
+    "source_type": "official_contest",
+    "publication_date": "2018",
+    "retrieved_utc": "2026-10-15",
+    "access_level": "full",
+    "locator": "Abstract and Figure 1; Evaluation kit description; benchmark update history",
+    "supported_claim_ids": [
+      "CLM-001"
+    ],
+    "limitations": "No official evaluator or benchmark experiment run; Innovus dependency not available.",
+    "version": null,
+    "sha256": null,
+    "retrieval_time_precision": "UTC date; exact per-source request time not recorded"
+  },
+  {
+    "id": "S02",
+    "title": "A Machine Learning Approach to Improving Timing Consistency between Global Route and Detailed Route",
+    "url": "https://arxiv.org/html/2305.06917",
+    "source_type": "primary_paper",
+    "publication_date": "2023-10-02",
+    "retrieved_utc": "2026-10-15",
+    "access_level": "full",
+    "locator": "Sections 1, 2.1, 3.1 and 5.2; Table 1; Figures 2\u20135",
+    "supported_claim_ids": [
+      "CLM-002"
+    ],
+    "limitations": "Full HTML accessed, not reproduced. Reported gains and oracle study do not establish fixed-route repair headroom. Version formatting contains inconsistent journal metadata, so use arXiv version.",
+    "version": "2305.06917v2",
+    "sha256": null,
+    "retrieval_time_precision": "UTC date; exact per-source request time not recorded"
+  },
+  {
+    "id": "S03",
+    "title": "TritonRoute-WXL: The Open Source Router with Integrated DRC Engine",
+    "url": "https://vlsicad.ucsd.edu/Publications/Journals/j136.pdf",
+    "source_type": "primary_author_manuscript",
+    "publication_date": "2021",
+    "retrieved_utc": "2026-10-15",
+    "access_level": "full",
+    "locator": "Section V-E; Section VI-A/B/C; Figures 14\u201315; Algorithms 11\u201312 (PDF pages 9\u201311)",
+    "supported_claim_ids": [
+      "CLM-003"
+    ],
+    "limitations": "Accepted-manuscript header, DOI 10.1109/TCAD.2021.3079268; not a verified latest OpenROAD description. Numerical results not reproduced.",
+    "version": "author-hosted accepted manuscript",
+    "sha256": null,
+    "retrieval_time_precision": "UTC date; exact per-source request time not recorded"
+  },
+  {
+    "id": "S04",
+    "title": "Faster goal-oriented shortest path search for bulk and incremental detailed routing",
+    "url": "https://link.springer.com/article/10.1007/s10107-023-01962-4",
+    "source_type": "primary_paper",
+    "publication_date": "2023-05-24",
+    "retrieved_utc": "2026-10-15",
+    "access_level": "full",
+    "locator": "Sections 5.1 and 5.2; Figure 9; published metadata (2024 volume 206, pp.3\u201332)",
+    "supported_claim_ids": [
+      "CLM-004"
+    ],
+    "limitations": "Paper full text accessed; BonnRoute product code and actual policy implementation not acquired. CC BY 4.0 article.",
+    "version": null,
+    "sha256": null,
+    "retrieval_time_precision": "UTC date; exact per-source request time not recorded"
+  },
+  {
+    "id": "S05",
+    "title": "Effective and Efficient Detailed Routing with Adaptive Rip-up Scheme and Pin Access Refinement",
+    "url": "https://chengengjie.github.io/papers/C17-GLSVLSI21-DR.pdf",
+    "source_type": "primary_author_paper",
+    "publication_date": "2022-06-06",
+    "retrieved_utc": "2026-10-15",
+    "access_level": "full",
+    "locator": "Section 2.1 and subparts; Figures 2\u20134, PDF pages 2\u20133",
+    "supported_claim_ids": [
+      "CLM-005"
+    ],
+    "limitations": "Filename contains GLSVLSI21 but paper explicitly states GLSVLSI 2022 and DOI 10.1145/3526241.3530361. Correct year is taken from paper. Not reproduced.",
+    "version": null,
+    "sha256": null,
+    "retrieval_time_precision": "UTC date; exact per-source request time not recorded"
+  },
+  {
+    "id": "S06",
+    "title": "Pinned OpenROAD detailed-routing source and command documentation",
+    "url": "https://github.com/The-OpenROAD-Project/OpenROAD/blob/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/src/drt/src/dr/FlexDR_maze.cpp",
+    "source_type": "primary_code",
+    "publication_date": "2024-06-03",
+    "retrieved_utc": "2026-10-15",
+    "access_level": "full",
+    "locator": "mazeIterInit_sortRerouteNets lines1477\u20131521; mazeIterInit_sortRerouteQueue lines1523\u20131541; route_queue_main lines1755\u20131927; src/drt/README.md lines98\u201399",
+    "supported_claim_ids": [
+      "CLM-006"
+    ],
+    "limitations": "Read via raw GitHub and pinned commit API; no compile/run or fixture control-flow trace. Source selection does not prove seed effectiveness. BSD-3-Clause notices remain upstream.",
+    "version": "b16bda7e82721d10566ff7e2b68f1ff0be9f9e38",
+    "sha256": "7da69da52d434f63c9d535d0b63c7f5c7a11b810168fcbd46a0e93d9fe068b15",
+    "retrieval_time_precision": "UTC date; exact per-source request time not recorded"
+  },
+  {
+    "id": "S07",
+    "title": "Incremental Capacitance Extraction and its Application to Iterative Timing-Driven Detailed Routing",
+    "url": "https://www.cecs.uci.edu/~papers/compendium94-03/papers/1999/ispd99/htmfiles/dec_hp/ispdabs.htm",
+    "source_type": "primary_proceedings_abstract",
+    "publication_date": "1999-04-12",
+    "retrieved_utc": "2026-10-15",
+    "access_level": "abstract",
+    "locator": "ISPD99 entry at p.42; DOI 10.1145/299996.300018",
+    "supported_claim_ids": [
+      "CLM-007"
+    ],
+    "limitations": "Original abstract accessed. PDF variants and IEEE retrieval attempts failed; exact blocker-selection method unverified. Do not claim full-method review.",
+    "version": null,
+    "sha256": null,
+    "retrieval_time_precision": "UTC date; exact per-source request time not recorded"
+  },
+  {
+    "id": "S08",
+    "title": "Accelerating Detailed Routing Convergence through Offline Reinforcement Learning",
+    "url": "https://arxiv.org/html/2512.03594",
+    "source_type": "primary_preprint",
+    "publication_date": "2026-07-17",
+    "retrieved_utc": "2026-10-15",
+    "access_level": "full",
+    "locator": "Sections II\u2013V; especially III state/weight generation and V methodology",
+    "supported_claim_ids": [
+      "CLM-008"
+    ],
+    "limitations": "Version 2 newer than 2025 submission. No training/data reproduction; applicability to fixed-route timing repair not established. CC BY-SA 4.0 indicated.",
+    "version": "2512.03594v2",
+    "sha256": null,
+    "retrieval_time_precision": "UTC date; exact per-source request time not recorded"
+  },
+  {
+    "id": "S09",
+    "title": "ISPD25 Contest: Performance-Driven Large Scale Global Routing organizer index",
+    "url": "https://github.com/liangrj2014/ISPD25_contest/blob/ced27e2991caaf1d2c4c3ccf497b205cdbea8374/index.md",
+    "source_type": "official_contest_code",
+    "publication_date": "2025-04-08",
+    "retrieved_utc": "2026-10-15",
+    "access_level": "full",
+    "locator": "Contest Introduction; Problem Formulation; Evaluation metrics details; Final Submissions",
+    "supported_claim_ids": [
+      "CLM-009"
+    ],
+    "limitations": "Rules/results text accessed; linked evaluation script and winner containers not executed; large resource limits do not transfer to this job.",
+    "version": "ced27e2991caaf1d2c4c3ccf497b205cdbea8374",
+    "sha256": "09ba5819020c49abbc58aa56b3390c1376d9f85c4074ffa1d460bb2ffb67d0c8",
+    "retrieval_time_precision": "UTC date; exact per-source request time not recorded"
+  },
+  {
+    "id": "S10",
+    "title": "IC Compiler II: Place and Route Solution",
+    "url": "https://www.synopsys.com/implementation-and-signoff/physical-implementation/ic-compiler.html",
+    "source_type": "official_vendor_documentation",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-15",
+    "access_level": "full",
+    "locator": "About IC Compiler II; key technologies",
+    "supported_claim_ids": [
+      "CLM-013"
+    ],
+    "limitations": "Advertised capability only; product internals, independent performance and commercial access unknown.",
+    "version": null,
+    "sha256": null,
+    "retrieval_time_precision": "UTC date; exact per-source request time not recorded"
+  },
+  {
+    "id": "S11",
+    "title": "Dr. CU source distribution",
+    "url": "https://github.com/cuhk-eda/dr-cu/blob/3d81988d741da36d2612f3443165970e0125bccc/README.md",
+    "source_type": "primary_code_readme",
+    "publication_date": "2021-04-27",
+    "retrieved_utc": "2026-10-15",
+    "access_level": "full",
+    "locator": "README introduction; paper bibliography; version consistent with ICCAD paper statement",
+    "supported_claim_ids": [],
+    "limitations": "README accessed and hashed; detailed algorithm/code build and full original Dr. CU papers not inspected in this turn.",
+    "version": "3d81988d741da36d2612f3443165970e0125bccc",
+    "sha256": "46cbe915fdaa08ee61a568e9831e55ff9601a4c87a0808af50323864f4cf6327",
+    "retrieval_time_precision": "UTC date; exact per-source request time not recorded"
+  },
+  {
+    "id": "S12",
+    "title": "ISPD 2019 Initial Detailed Routing Contest",
+    "url": "https://www.ispd.cc/contests/19/",
+    "source_type": "official_contest",
+    "publication_date": "2019",
+    "retrieved_utc": "2026-10-15",
+    "access_level": "full",
+    "locator": "Official benchmark and evaluation sections",
+    "supported_claim_ids": [],
+    "limitations": "Page accessed; no complete winner technical-report inspection or official evaluation run.",
+    "version": null,
+    "sha256": null,
+    "retrieval_time_precision": "UTC date; exact per-source request time not recorded"
+  },
+  {
+    "id": "S13",
+    "title": "ISPD 2025 official winners",
+    "url": "https://www.ispd.cc/contests/25/index.html",
+    "source_type": "official_contest",
+    "publication_date": "2025",
+    "retrieved_utc": "2026-10-15",
+    "access_level": "full",
+    "locator": "Contest Winners ordered list",
+    "supported_claim_ids": [],
+    "limitations": "Names/ranks only; not a winner algorithm description.",
+    "version": null,
+    "sha256": null,
+    "retrieval_time_precision": "UTC date; exact per-source request time not recorded"
+  },
+  {
+    "id": "S14",
+    "title": "ISPD 2026 official winners",
+    "url": "https://www.ispd.cc/contests/26/index.html",
+    "source_type": "official_contest",
+    "publication_date": "2026",
+    "retrieved_utc": "2026-10-15",
+    "access_level": "full",
+    "locator": "Contest Winners ordered list",
+    "supported_claim_ids": [],
+    "limitations": "Names/ranks only; detailed winner methods remain unresolved.",
+    "version": null,
+    "sha256": null,
+    "retrieval_time_precision": "UTC date; exact per-source request time not recorded"
+  },
+  {
+    "id": "S15",
+    "title": "ISPD26 Contest organizer repository",
+    "url": "https://github.com/ABKGroup/ISPD26-Contest/blob/f7b29d242fc7d441f3b4eadc556f40099ccca067/README.md",
+    "source_type": "official_contest_code",
+    "publication_date": "2026-05-03",
+    "retrieved_utc": "2026-10-15",
+    "access_level": "full",
+    "locator": "README Table of Contents and Timeline",
+    "supported_claim_ids": [],
+    "limitations": "README inspected and hashed; linked ASAP7/evaluator/benchmarks neither executed nor imported; no right to redistribute inferred.",
+    "version": "f7b29d242fc7d441f3b4eadc556f40099ccca067",
+    "sha256": "29c95e3df2f051f14ebb45ee71be7c3d42d5302c8c12d7f2249a45901dc0ab50",
+    "retrieval_time_precision": "UTC date; exact per-source request time not recorded"
+  },
+  {
+    "id": "S16",
+    "title": "Invited: Post-Placement Buffering and Sizing Contest",
+    "url": "https://vlsicad.ucsd.edu/Publications/Conferences/421/c421.pdf",
+    "source_type": "primary_organizer_paper",
+    "publication_date": "2026-03-15",
+    "retrieved_utc": "2026-10-15",
+    "access_level": "abstract",
+    "locator": "Search-index accessible Section 2.1 Problem Definition",
+    "supported_claim_ids": [],
+    "limitations": "Section excerpt retrieved in search; full PDF was not opened/inspected. No full-access claim. DOI 10.1145/3764386.3779616.",
+    "version": null,
+    "sha256": null,
+    "retrieval_time_precision": "UTC date; exact per-source request time not recorded"
+  },
+  {
+    "id": "S17",
+    "title": "RC-Scaled Timing-Driven Routing: Bridging Targeted Timing Optimization and Massively Parallel Global Routing",
+    "url": "https://epapers2.org/iscas2026/ESR/paper_details.php?paper_id=1782",
+    "source_type": "primary_conference_abstract",
+    "publication_date": "2026",
+    "retrieved_utc": "2026-10-15",
+    "access_level": "abstract",
+    "locator": "Paper ID1782 abstract and acceptance information",
+    "supported_claim_ids": [],
+    "limitations": "Abstract only; full method, authors, code and quantitative claims not independently checked.",
+    "version": null,
+    "sha256": null,
+    "retrieval_time_precision": "UTC date; exact per-source request time not recorded"
+  },
+  {
+    "id": "S18",
+    "title": "OpenROAD current global-routing documentation",
+    "url": "https://openroad.readthedocs.io/en/latest/main/src/grt/README.html",
+    "source_type": "official_documentation",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-15",
+    "access_level": "full",
+    "locator": "global_route options critical_nets_percentage, resistance_aware and snapshot_batched_width",
+    "supported_claim_ids": [],
+    "limitations": "Moving latest page observed on retrieval. Must not assume current features exist in pinned 2024 commit; only pinned README critical_nets_percentage was separately checked.",
+    "version": null,
+    "sha256": null,
+    "retrieval_time_precision": "UTC date; exact per-source request time not recorded"
+  },
+  {
+    "id": "S19",
+    "title": "TritonRoute-WXL public distribution",
+    "url": "https://github.com/ABKGroup/TritonRoute-WXL/blob/cdca66c5b03b4c80f4b8f7ef1586fb3de3a4561d/README.md",
+    "source_type": "primary_code_readme",
+    "publication_date": "2020-11-03",
+    "retrieved_utc": "2026-10-15",
+    "access_level": "full",
+    "locator": "README building/running/interfaces and license",
+    "supported_claim_ids": [],
+    "limitations": "Readme/hash only. Not rebuilt or evidence of maintained current release. BSD 3-clause stated.",
+    "version": "cdca66c5b03b4c80f4b8f7ef1586fb3de3a4561d",
+    "sha256": "6358c1ae832332ee697a8c8b2e7ca13f8c555cf36c36f59f6f8d1ebbbe35f589",
+    "retrieval_time_precision": "UTC date; exact per-source request time not recorded"
+  }
+]

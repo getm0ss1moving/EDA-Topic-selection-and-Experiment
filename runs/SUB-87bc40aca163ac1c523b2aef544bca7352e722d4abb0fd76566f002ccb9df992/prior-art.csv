@@ -1,0 +1,9 @@
+source_id,task_formulation,mechanism,data,evaluation,assumptions,limitation,overlap_with_proposal,proposed_distinction
+C01,Minimum constraint removal,subset-state best-first and dominance,graphs,not reproduced,fixed labels,no physical reembedding,owner-set selection,cut pruning and joint reconstruction still require distinction
+C02,Length-bounded MCR,bounded path/set search,manipulation graphs,not reproduced,path-length and label model,not RC delay,budget plus minimal labels,compare exact objective and pruning on expanded graph
+C03,Frontier candidate removal,bidirectional frontier labels and reduced-graph refinement,robot motion graphs,not reproduced,candidate coverage and graph model,no relocation planning,frontier-guided owner selection,not proven same cut; directed adaptation unresolved
+C04,Concurrent detailed routing,multicommodity ILP design rules and accelerations,routing subregions,not reproduced,its DRC and objective model,not fixed post-route WNS target,joint reconstruction,selection coupling remains hypothesis
+C06,Detailed route repair,aggressor/victim queue,ISPD routing,not reproduced,marker-driven repair,not exact proposed selector,blocker reroute,clean timing-triggered owner selection
+C07,Adaptive repair,topology-aware region expansion,detailed routing,not reproduced,retained-path repair,not selected minimum labels,region/removal interactions,cut-driven owner policy
+C08,Incremental routing,high-cost backup through existing wires,BonnRoute,not reproduced,few changes incremental flow,private policy code uninspected,blocker release and timing preservation,exact policy equivalence unresolved
+C12,Timing-driven global routing,criticality weights and pattern routing,contest benchmarks,abstract only,global routing,different workflow stage,timing/congestion tradeoff,not a direct fixed-design comparator
