@@ -1,0 +1,26 @@
+{
+  "affected_actor": "ChatGPT-C05-TIMING-B03-EDA-0007",
+  "affected_release": "SUB-56f872e4f80bf5014b43024f33adda8011fdcdb0d211168bb549f3309a939ee5",
+  "affected_role": "challenger",
+  "code_repair": "Append every copied consent target to receiving JOB.released_inputs and require a proposer target.",
+  "coordinator_diagnosis": "Consent target was copied into shared by job_for but omitted from paths/JOB.released_inputs. Extra target is a prior public proposer release, not an identified private note. This is a scope ambiguity/transport defect; actual private-file access is not established. Preserve declaration, do not erase it or retroactively edit the original JOB.",
+  "disclosed_read_releases": [
+    "SUB-47b431b4e6d39d744a6de744a3528c7571a5d718f6fc5716d5f1795875671a81",
+    "SUB-1d2e343cab1599577d312783ff91916761e548b2d4e1d7749b3071f38416b8ca",
+    "SUB-8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f"
+  ],
+  "extra_release": "SUB-8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f",
+  "incident_id": "INCIDENT-933399ba-d479-4f5b-b5d7-37c80603f4aa",
+  "independent_review_status": "requested; not an independent finding yet",
+  "job_released_inputs": [
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261015/EDA-0007/ChatGPT-C05-TIMING-B03-EDA-0007/jobs/f9276164-9120-4284-8d47-a9354c7f09ed/shared/predecessor/SUB-e0cef865c5877d07c062554b61e073024cb0f6ed28b7ef45f31c19d7a5cb335a",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261015/EDA-0007/ChatGPT-C05-TIMING-B03-EDA-0007/jobs/f9276164-9120-4284-8d47-a9354c7f09ed/shared/predecessor/SUB-f1c9f13a026274de52f4988e533f9ccc40d00088efdf163f11c15edfebd76c47",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261015/EDA-0007/ChatGPT-C05-TIMING-B03-EDA-0007/jobs/f9276164-9120-4284-8d47-a9354c7f09ed/shared/predecessor.json",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261015/EDA-0007/ChatGPT-C05-TIMING-B03-EDA-0007/jobs/f9276164-9120-4284-8d47-a9354c7f09ed/shared/SUB-47b431b4e6d39d744a6de744a3528c7571a5d718f6fc5716d5f1795875671a81",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261015/EDA-0007/ChatGPT-C05-TIMING-B03-EDA-0007/jobs/f9276164-9120-4284-8d47-a9354c7f09ed/shared/SUB-1d2e343cab1599577d312783ff91916761e548b2d4e1d7749b3071f38416b8ca"
+  ],
+  "mechanical_trigger": "Unreleased input disclosed; stop and preserve evidence, do not erase disclosure",
+  "observed_location": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261015/EDA-0007/ChatGPT-C05-TIMING-B03-EDA-0007/jobs/f9276164-9120-4284-8d47-a9354c7f09ed/shared/SUB-8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f",
+  "prompt_statement": "The shared folder holds explicitly released inputs",
+  "response": "Conservative fresh full-cycle replacement from clean prior round; tainted/ambiguous attempt not counted."
+}

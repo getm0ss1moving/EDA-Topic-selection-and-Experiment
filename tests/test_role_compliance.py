@@ -277,6 +277,14 @@ class AuditedLoopTests(unittest.TestCase):
         self.assertTrue((receiver/'shared'/target).is_dir())
         self.assertIn(str(receiver/'shared'/target),assignment['released_inputs'])
 
+    def test_auditor_may_read_explicit_metadata_only_incident_release_id(self):
+        for _ in range(3):self.science()
+        work=self.audit();a=l.read(work/'JOB.json');sid='SUB-'+'e'*64
+        a['released_metadata_ids']=[sid];l.save(work/'JOB.json',a)
+        ledger=self.ledger(a);ledger['read_releases']=[sid]
+        l.save(work/'release/compliance.json',ledger);self.freeze(work)
+        self.assertEqual(l.audit_collect(self.c,self.home,'D05')['status'],'audit_collected')
+
     def test_identity_and_unreleased_input_are_checked(self):
         a=l.read(Path(l.dispatch(self.c,self.home,'D05')['work'])/'JOB.json')
         ledger=self.ledger(a);manifest={k:a[k] for k in ('role','actor_id','session_id','input_commit','packet_sha256')}

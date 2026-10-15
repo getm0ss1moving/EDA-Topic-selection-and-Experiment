@@ -746,7 +746,8 @@ def audit_collect(c,home,domain):
     expected=assignment['reviewed_releases']
     try:
         compliance.validate_ledger(json.loads(p.get('compliance.json',b'{}')),m,assignment,
-                                   [Path(x).name for x in assignment['released_inputs']])
+                                   [Path(x).name for x in assignment['released_inputs']]+
+                                   assignment.get('released_metadata_ids',[]))
     except compliance.ProtocolViolation as exc:
         quarantine_cycle(state,state['topics'][record['topic']],job,str(exc),home,record)
         save(home/'state.json',state);raise
@@ -798,6 +799,17 @@ def export_public_descriptors(record,repo,round_path):
         manifest['roles'][role]={'release_id':snapshot.name,'root':str(dest.relative_to(repo)),
                                'files':{name:sha(dest/name) for name in paths}}
     manifest['locator_map']['auditor JOB.json']=str(round_path/'job-descriptors/protocol_audit/JOB.json')
+    supplement=audit_work/'shared/protocol-incident'
+    if supplement.is_dir():
+        files={}
+        for name in ('coordinator-report.json','JOB.json','prompt.txt','compliance.json',
+                     'SUBMISSION.json','source-codex-loop.py','INPUTS.json'):
+            if (supplement/name).is_file():
+                dest=repo/round_path/'protocol-incident'/name;dest.parent.mkdir(parents=True,exist_ok=True)
+                dest.write_bytes(rs.regular(supplement/name));files[name]=sha(dest)
+        manifest['supplemental_inputs']={'root':str(round_path/'protocol-incident'),'files':files,
+            'scope':'Explicit incident metadata/common public code only; no quarantined scientific objections or private traces.'}
+        manifest['locator_map']['shared/protocol-incident/']=str(round_path/'protocol-incident')+'/'
     save(repo/round_path/'DESCRIPTORS.json',manifest)
     return manifest
 
