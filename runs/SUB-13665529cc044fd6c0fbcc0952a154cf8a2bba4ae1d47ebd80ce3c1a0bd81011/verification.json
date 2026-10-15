@@ -1,0 +1,307 @@
+{
+  "decision": "revise",
+  "verifier_session": "a194d866-d694-43ac-8b46-6600f0371930",
+  "actor_id": "ChatGPT-V04-PHYSICAL-EDA-0005",
+  "topic": "EDA-0005",
+  "input_commit": "f68c1492c05be3fac5622deac4bb479eabf957de",
+  "packet_sha256": "bc3345e6370fc26e78906f23270f1a60d2f597e32fe78553f4cdacac0dde3ad7",
+  "dossier_digest": "bbe9b4d25e82dfaff9a751d50fd1d299547533b63f966bdf5a1373fa4f83df8e",
+  "reviewed_proposer_release": "SUB-5dc96f7c6ba6ea7f2d1cf5940be29d9cd08da069e1694ce3b7822e6c4f6e4243",
+  "adjudicated_challenger_releases": [
+    "SUB-5596d53194873abeed4cccdb0d140e212c4ec8bf398a28f1c76c16800085c45b"
+  ],
+  "gates": {
+    "novelty": false,
+    "mechanism": false,
+    "utility": false,
+    "contest_originality": false,
+    "headroom": false,
+    "feasibility": false,
+    "direction_integrity": true,
+    "experiment_consensus": false
+  },
+  "direction_penalty_checked": true,
+  "direction_penalties": {
+    "combination_drift": 0,
+    "demand_drift": 0,
+    "total": 0
+  },
+  "experiment_consensus_checked": true,
+  "abandonment_process_checked": false,
+  "source_checks": [
+    {
+      "id": "V01",
+      "title": "OpenROAD RepairHold",
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/8da6ac250b0349c346d1abed7c2c43107f4ff6f7/src/rsz/src/RepairHold.cc",
+      "version": "8da6ac250b0349c346d1abed7c2c43107f4ff6f7",
+      "locator": "repairEndHold, web lines 535\u2013648",
+      "access": "full_selected",
+      "retrieved": "2026-10-15",
+      "limitations": "Shared violating loads, setup guard and journal restore independently read; not a global joint-site solver audit."
+    },
+    {
+      "id": "V02",
+      "title": "Semiconductor hold time fixing",
+      "url": "https://patents.google.com/patent/US20140165019A1/en",
+      "version": "2014-06-12 publication",
+      "locator": "Figure 2 description, web lines 426\u2013429; Summary",
+      "access": "full_selected",
+      "retrieved": "2026-10-15",
+      "limitations": "Placement may depend on inserted hold buffers. Broader than coarse reservation; not proof of identical post-CTS finite-option treatment."
+    },
+    {
+      "id": "V03",
+      "title": "Global Interconnect Optimization",
+      "url": "https://www.or.uni-bonn.de/~held/publications/brb_jrnl.pdf",
+      "version": "author manuscript; publisher DOI 10.1145/3587044, 2023-09-09",
+      "locator": "Section 2 pp.3\u20134; Section 3.4 pp.5\u20136",
+      "access": "full_selected",
+      "retrieved": "2026-10-15",
+      "limitations": "Author PDF now accessible independently. Resource coupling is prior; fixed non-repeating-cell bin usage differs from candidate data-cell relocation. Manuscript header is not final publisher metadata. No performance transfer."
+    },
+    {
+      "id": "V04",
+      "title": "Post-Placement Buffering and Sizing Contest",
+      "url": "https://vlsicad.ucsd.edu/Publications/Conferences/421/c421.pdf",
+      "version": "ISPD 2026",
+      "locator": "Section 5.3 p.7, web lines 577\u2013610",
+      "access": "full_selected",
+      "retrieved": "2026-10-15",
+      "limitations": "Post-CTS and hold are roadmap extensions under consideration, not evidence a 2027 contest already executed."
+    },
+    {
+      "id": "V05",
+      "title": "Perturbation constrained buffer planning",
+      "url": "https://rajivranjan.net/wp-content/uploads/2019/07/52.pdf",
+      "version": "JPDC 103 (2017), DOI 10.1016/j.jpdc.2016.11.013",
+      "locator": "Section 3.1 Eq.3 p.5; Section 3.2 p.6",
+      "access": "full_selected",
+      "retrieved": "2026-10-15",
+      "limitations": "Gate movement and occupancy-constrained buffer holes already exist; no same-assumption min-delay repair selector established."
+    },
+    {
+      "id": "V06",
+      "title": "AgenticPD",
+      "url": "https://arxiv.org/html/2607.04758v3",
+      "version": "v3, 2026-10-04",
+      "locator": "Section 2.1; Algorithm 1 discussion; Section 4.1",
+      "access": "full_selected",
+      "retrieved": "2026-10-15",
+      "limitations": "GR incumbent selection followed by final DR confirmed; no gain reproduced."
+    },
+    {
+      "id": "V07",
+      "title": "ICCAD 2025 problems",
+      "url": "https://www.iccad-contest.org/2025/Problems.html",
+      "version": "2025 dynamic index",
+      "locator": "Problem C, web lines 58\u201364",
+      "access": "full_index",
+      "retrieved": "2026-10-15",
+      "limitations": "Simultaneous sizing/buffering/relocation title confirmed; winner methods not inspected."
+    },
+    {
+      "id": "V08",
+      "title": "ICCAD 2026 problems",
+      "url": "https://www.iccad-contest.org/2026/Problems.html",
+      "version": "2026 dynamic index",
+      "locator": "Problems A/B/C, web lines 34\u201359",
+      "access": "full_index",
+      "retrieved": "2026-10-15",
+      "limitations": "Current C is FloorSet; index is not a winner-method comparison."
+    },
+    {
+      "id": "V09",
+      "title": "Multi-Corner Delay Padding",
+      "url": "https://www.aspdac.com/aspdac2026/archive/pdf/3E-2.pdf",
+      "version": "ASP-DAC 2026 lead",
+      "locator": "Direct PDF open",
+      "access": "unavailable",
+      "retrieved": "2026-10-15",
+      "limitations": "Tool returned Internal Error; full method unresolved."
+    }
+  ],
+  "objections": [
+    {
+      "id": "OBJ-001",
+      "verdict": "valid",
+      "blocking": true,
+      "rationale": "Present B3/C treatment difference is unspecified. Same table implies equal optimum; equal transcripts require additionally equal order/ties/stops. Supply side-by-side pseudocode and mocked charged-call traces, or label B3 an equivalence oracle and define a faithful practical comparator. Does not refute all useful combinations.",
+      "source_refs": [
+        "frozen proposal experiment-plan B3/C",
+        "frozen challenge OBJ-001"
+      ]
+    }
+  ],
+  "claim_checks": [
+    {
+      "id": "CLM-001",
+      "source_locator": "S01/S02 supplied records, not independently reopened",
+      "verdict": "unresolved",
+      "blocking": false,
+      "action": "Generic orchestration is not the selected novelty; no performance inference. Reopen if later decision-critical."
+    },
+    {
+      "id": "CLM-002",
+      "source_locator": "V06 Section 2.1 / Algorithm 1",
+      "verdict": "valid",
+      "blocking": false,
+      "action": "GR-search/final-DR description checked in v3; no reproduction."
+    },
+    {
+      "id": "CLM-003",
+      "source_locator": "V01 repairEndHold lines 535\u2013648",
+      "verdict": "valid",
+      "blocking": false,
+      "action": "Shared loads and rollback supported; one-buffer-per-endpoint control would be unfair."
+    },
+    {
+      "id": "CLM-004",
+      "source_locator": "S12 abstract/introduction, not reopened",
+      "verdict": "unresolved",
+      "blocking": true,
+      "action": "General need plausible, but this source and candidate-specific incidence remain unverified. Do not treat as measured demand."
+    },
+    {
+      "id": "CLM-005",
+      "source_locator": "V02 Summary / Figure 2",
+      "verdict": "valid",
+      "blocking": false,
+      "action": "Hold-resource reservation and placement feedback are prior, without an identical-method finding."
+    },
+    {
+      "id": "CLM-006",
+      "source_locator": "V07 Problem C",
+      "verdict": "valid",
+      "blocking": false,
+      "action": "Combined relocation/buffering/sizing task exists; winner-method overlap remains unresolved."
+    },
+    {
+      "id": "CLM-007",
+      "source_locator": "V03 Sections 2,3.4",
+      "verdict": "valid",
+      "blocking": false,
+      "action": "Routing/placement/timing/power coupling established. Fixed ordinary-cell bin occupancy limits transfer; published equivalence not established."
+    },
+    {
+      "id": "CLM-008",
+      "source_locator": "P Analytical witness, independently checked arithmetic",
+      "verdict": "valid",
+      "blocking": false,
+      "action": "A+B conflicts at s1; A+C=50 is best feasible pair without shared repair. Shared repair changes feasibility. Abstract modeling witness only."
+    },
+    {
+      "id": "CLM-009",
+      "source_locator": "P mechanism; experiment-plan B3/C; OBJ-001",
+      "verdict": "unresolved",
+      "blocking": true,
+      "action": "Research-worthy conditional hypothesis, with operational delta still missing; neither novel benefit nor impossibility demonstrated."
+    },
+    {
+      "id": "CLM-010",
+      "source_locator": "P tasklist EXP-001\u2013007; absent locked inputs/resources",
+      "verdict": "unresolved",
+      "blocking": true,
+      "action": "Demand, affordable cost, representative inputs and commercial comparison unknown. No full-flow allocation."
+    },
+    {
+      "id": "CLM-011",
+      "source_locator": "P finite-table formulation and exhaustive-search argument",
+      "verdict": "valid",
+      "blocking": false,
+      "action": "Exact enumeration decides stated predicates only; physical completeness and signoff do not follow."
+    },
+    {
+      "id": "CLM-012",
+      "source_locator": "V04 Section 5.3",
+      "verdict": "valid",
+      "blocking": false,
+      "action": "Roadmap explicitly contemplates post-CTS/hold; preserve future/under-consideration qualification."
+    },
+    {
+      "id": "CLM-013",
+      "source_locator": "JOB/prompt; policy INNOVATION-BATCH-0002",
+      "verdict": "valid",
+      "blocking": true,
+      "action": "Only reading/analytical work authorized; resources and dual consents still prerequisite to physical pilot."
+    },
+    {
+      "id": "CLM-014",
+      "source_locator": "S08/S09/S24 records not reopened",
+      "verdict": "unresolved",
+      "blocking": false,
+      "action": "Nonselected prediction context; no favorable performance/novelty claim accepted from these records."
+    },
+    {
+      "id": "CLM-015",
+      "source_locator": "V05 Section 3.1 Eq.3 / Section 3.2",
+      "verdict": "valid",
+      "blocking": false,
+      "action": "Moving gates to provide buffer holes is known; distinguish action-conditioned hold semantics and realized joint selection."
+    },
+    {
+      "id": "C favorable finite-model/guardrail finding",
+      "source_locator": "P experiment-plan Primary metric; V01; direct finite reasoning",
+      "verdict": "valid",
+      "blocking": false,
+      "action": "Full slack/endpoint and existing-hold nonworsening semantics are present. Copy them consistently into abbreviated contracts; this is not an additional fatal objection."
+    },
+    {
+      "id": "Cost bound / forecast",
+      "source_locator": "P Analytical cost paragraph; forecast.json",
+      "verdict": "valid",
+      "blocking": false,
+      "action": "K+V<R and savings ceiling follow only for identical outcomes and other work. R unknown; null forecasts appropriate, no saturation or gain established."
+    },
+    {
+      "id": "Contest/winner and closest-method completeness",
+      "source_locator": "V03 now available; V09 failed; V07/V08 index only",
+      "verdict": "unresolved",
+      "blocking": true,
+      "action": "Repair source map using accessible author PDF; full S11/S12, recent padding and winner methods remain gaps. Missing access is not novelty."
+    }
+  ],
+  "tasklist_sha256": "c8db0c6fac758cc91e5346f13b0b062cc8e8a4c6e20463a7eebdfc735b1ca095",
+  "experiment_consensus": {
+    "status": "absent",
+    "proposer_session": "07ec73dc-1bf7-4f5c-999f-b589460c1e5e",
+    "challenger_session": "c62e4d94-9488-43f2-906b-26539500b642",
+    "matching_consents": false
+  },
+  "independence": {
+    "exposure": "Unblinded exact released pair only; no historical scientific approval inherited. Fresh assigned job; no foreign private notes, conversations or memory read.",
+    "policy_hashes_verified": 31,
+    "proposal_file_hashes_verified": 12,
+    "challenge_file_hashes_verified": 7,
+    "logical_sessions_distinct": true,
+    "backend_model": "Requested configuration only; physical backend not independently audited."
+  },
+  "research_position": "research_worthy_unresolved_not_experiment_ready",
+  "next_action": "revise",
+  "validation_scope": "Standalone trusted freeze; full-repository validation belongs to coordinator. No checkout access or full project validation pass claimed.",
+  "execution": {
+    "physical_runs": 0,
+    "training_runs": 0,
+    "new_compute_allocation": false,
+    "scientific_messages_sent": 0
+  },
+  "search_log": [
+    {
+      "query": "Global Interconnect Optimization resource sharing",
+      "engine": "web search",
+      "date": "2026-10-15",
+      "result": "Publisher indexed method plus independently opened author manuscript; closest resource formulation checked."
+    },
+    {
+      "query": "post CTS hold placement buffer joint optimization",
+      "engine": "web search",
+      "date": "2026-10-15",
+      "result": "Primary power/hold/setup weighting and TimeBoost leads found, not method-audited; secondary tutorials excluded from verdict."
+    }
+  ],
+  "remaining_search": "Bounded review, not exhaustive; no claim that two expansions found no closer work.",
+  "output_paths": [
+    "release/verification.md",
+    "release/verification.json",
+    "release/workflow.json"
+  ]
+}

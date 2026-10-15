@@ -1,0 +1,14 @@
+{
+  "role": "verifier",
+  "reviewed_proposer_release": "SUB-5dc96f7c6ba6ea7f2d1cf5940be29d9cd08da069e1694ce3b7822e6c4f6e4243",
+  "adjudicated_challenger_releases": [
+    "SUB-5596d53194873abeed4cccdb0d140e212c4ec8bf398a28f1c76c16800085c45b"
+  ],
+  "next_action": "revise",
+  "decision": "revise",
+  "topic": "EDA-0005",
+  "session_id": "a194d866-d694-43ac-8b46-6600f0371930",
+  "input_commit": "f68c1492c05be3fac5622deac4bb479eabf957de",
+  "packet_sha256": "bc3345e6370fc26e78906f23270f1a60d2f597e32fe78553f4cdacac0dde3ad7",
+  "reason": "Operational B3/C distinction needs specification; useful-combination hypothesis unresolved and not experiment-ready."
+}
