@@ -1,0 +1,274 @@
+[
+  {
+    "id": "C2-S01",
+    "title": "OpenSTA DmpCeff implementation",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/e01d3f163f483f233db00410b6515a767a6ca03b/dcalc/DmpCeff.cc",
+    "type": "source_code",
+    "published": "unknown",
+    "retrieved": "2026-10-15T07:58:14.441196+00:00",
+    "locator": "DmpCap lines 737-773; setCeffAlgorithm 1545-1585; gateModelRd 1630-1648",
+    "access": "full",
+    "claims": [
+      "COV-C2-S01"
+    ],
+    "limitations": "CAP local semantics; not full graph proof",
+    "version": "e01d3f163f483f233db00410b6515a767a6ca03b",
+    "license": "Public read access; no full copyrighted text or benchmark redistributed"
+  },
+  {
+    "id": "C2-S02",
+    "title": "OpenSTA TableModel implementation",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/e01d3f163f483f233db00410b6515a767a6ca03b/liberty/TableModel.cc",
+    "type": "source_code",
+    "published": "unknown",
+    "retrieved": "2026-10-15T07:58:14.441196+00:00",
+    "locator": "Table2::findValue lines 1012-1068",
+    "access": "full",
+    "claims": [
+      "OBJ-003"
+    ],
+    "limitations": "Float input/return and double intermediates; scaling and graph contracts not proven",
+    "version": "e01d3f163f483f233db00410b6515a767a6ca03b",
+    "license": "Public read access; no full copyrighted text or benchmark redistributed"
+  },
+  {
+    "id": "C2-S03",
+    "title": "A Unified Multi-Corner Multi-Mode Static Timing Analysis Engine",
+    "url": "https://www.aspdac.com/aspdac2010/Archive_Folder/pdf/8B-2.pdf",
+    "type": "conference_slides",
+    "published": "2010",
+    "retrieved": "2026-10-15T07:58:14.441196+00:00",
+    "locator": "slides 15,18-23,28",
+    "access": "full",
+    "claims": [
+      "OBJ-003"
+    ],
+    "limitations": "Linear model and worst-delay objective; no engine-equivalence claim",
+    "version": "as accessed",
+    "license": "Public read access; no full copyrighted text or benchmark redistributed"
+  },
+  {
+    "id": "C2-S04",
+    "title": "Efficient Block-based Parameterized Timing Analysis Covering All Potentially Critical Paths",
+    "url": "https://www.eecg.utoronto.ca/~najm/papers/iccad08-khaled.pdf",
+    "type": "paper",
+    "published": "2008",
+    "retrieved": "2026-10-15T07:58:14.441196+00:00",
+    "locator": "sections 4.1-4.2 PRUNE and PRUNE_LB",
+    "access": "full",
+    "claims": [
+      "OBJ-003"
+    ],
+    "limitations": "Parameterized affine method; runtime not transferred",
+    "version": "as accessed",
+    "license": "Public read access; no full copyrighted text or benchmark redistributed"
+  },
+  {
+    "id": "C2-S05",
+    "title": "Parameterized Timing Analysis with General Delay Models and Arbitrary Variation Sources",
+    "url": "https://www.eecg.utoronto.ca/~najm/papers/dac08-khaled.pdf",
+    "type": "paper",
+    "published": "2008",
+    "retrieved": "2026-10-15T07:58:14.441196+00:00",
+    "locator": "section 3 properties 1-3 and equations 4-12",
+    "access": "full",
+    "claims": [
+      "OBJ-003"
+    ],
+    "limitations": "Function-class assumptions differ from numerical engine semantics",
+    "version": "as accessed",
+    "license": "Public read access; no full copyrighted text or benchmark redistributed"
+  },
+  {
+    "id": "C2-S06",
+    "title": "ISPD26 contest description v2.2",
+    "url": "https://www.ispd.cc/contests/26/ISPD26_contest_description.pdf",
+    "type": "official_rules",
+    "published": "unknown",
+    "retrieved": "2026-10-15T07:58:14.441196+00:00",
+    "locator": "section 2 Constraints, PDF page 3",
+    "access": "full",
+    "claims": [
+      "COV-C2-S06"
+    ],
+    "limitations": "Setup single-mode ideal-clock only; per-asset rights not audited",
+    "version": "as accessed",
+    "license": "Public read access; no full copyrighted text or benchmark redistributed"
+  },
+  {
+    "id": "C2-S07",
+    "title": "Invited: Post-Placement Buffering and Sizing Contest",
+    "url": "https://vlsicad.ucsd.edu/Publications/Conferences/421/c421.pdf",
+    "type": "organizer_paper",
+    "published": "2026",
+    "retrieved": "2026-10-15T07:58:14.441196+00:00",
+    "locator": "sections 2.3 and 5.3",
+    "access": "full",
+    "claims": [
+      "COV-C2-S07"
+    ],
+    "limitations": "Roadmap is prospective, not current MCMM fixture",
+    "version": "as accessed",
+    "license": "Public read access; no full copyrighted text or benchmark redistributed"
+  },
+  {
+    "id": "C2-S08",
+    "title": "ISPD26 direct contest index",
+    "url": "https://www.ispd.cc/contests/26/index.html",
+    "type": "official_results",
+    "published": "unknown",
+    "retrieved": "2026-10-15T07:58:14.441196+00:00",
+    "locator": "Contest Winners and Contest Resources",
+    "access": "full",
+    "claims": [
+      "COV-C2-S08"
+    ],
+    "limitations": "Ranking is not winner algorithm evidence",
+    "version": "as accessed",
+    "license": "Public read access; no full copyrighted text or benchmark redistributed"
+  },
+  {
+    "id": "C2-S09",
+    "title": "Methods systems and articles of manufacture for multi-mode multi-corner physical optimization of electronic designs",
+    "url": "https://patents.google.com/patent/US10133842B1/en",
+    "type": "patent",
+    "published": "2018-11-20",
+    "retrieved": "2026-10-15T07:58:14.441196+00:00",
+    "locator": "FIGS.1-3; claims 6-9; description steps 204-210 and 308-314",
+    "access": "full",
+    "claims": [
+      "COV-C2-S09"
+    ],
+    "limitations": "Local-view pruning after timing characterization; no implementation/performance or legal conclusion",
+    "version": "as accessed",
+    "license": "Public read access; no full copyrighted text or benchmark redistributed"
+  },
+  {
+    "id": "C2-S10",
+    "title": "MLCAD2026 LLM-based Algorithm Discovery for Timing Optimization",
+    "url": "https://asu-vda-lab.github.io/MLCAD26-Contest/",
+    "type": "official_contest",
+    "published": "2026",
+    "retrieved": "2026-10-15T07:58:14.441196+00:00",
+    "locator": "Contest Overview; Contest Details; Final Results tables",
+    "access": "full",
+    "claims": [
+      "COV-C2-S10"
+    ],
+    "limitations": "Methods/winner code not inspected; no exact-certificate overlap established",
+    "version": "as accessed",
+    "license": "Public read access; no full copyrighted text or benchmark redistributed"
+  },
+  {
+    "id": "C2-S11",
+    "title": "SetupKit: Efficient Multi-Corner Setup/Hold Time Characterization Using Bias-Enhanced Interpolation and Active Learning",
+    "url": "https://arxiv.org/abs/2512.00044",
+    "type": "preprint",
+    "published": "2025",
+    "retrieved": "2026-10-15T07:58:14.441196+00:00",
+    "locator": "abstract and submission record",
+    "access": "abstract",
+    "claims": [
+      "COV-C2-S11"
+    ],
+    "limitations": "Characterization rather than full-graph report pruning; no quantitative claim transferred",
+    "version": "as accessed",
+    "license": "Public read access; no full copyrighted text or benchmark redistributed"
+  },
+  {
+    "id": "C2-S12",
+    "title": "Timing Analysis Agent: Autonomous Multi-Corner Multi-Mode Timing Debugging with Timing Debug Relation Graph",
+    "url": "https://arxiv.org/abs/2504.11502",
+    "type": "preprint",
+    "published": "2025-04-15",
+    "retrieved": "2026-10-15T07:58:14.441196+00:00",
+    "locator": "title/abstract",
+    "access": "abstract",
+    "claims": [
+      "COV-C2-S12"
+    ],
+    "limitations": "Debugging workflow; full method not inspected",
+    "version": "as accessed",
+    "license": "Public read access; no full copyrighted text or benchmark redistributed"
+  },
+  {
+    "id": "C2-S13",
+    "title": "ASP-DAC2026 official program",
+    "url": "https://www.aspdac.com/aspdac2026/archive/program/program-abstract.html",
+    "type": "official_program",
+    "published": "2026",
+    "retrieved": "2026-10-15T07:58:14.441196+00:00",
+    "locator": "HeteroLatch entry and session 3E-2",
+    "access": "abstract",
+    "claims": [
+      "COV-C2-S13"
+    ],
+    "limitations": "Heterogeneous latch timing and multicorner padding leads; no numerical performance adopted",
+    "version": "as accessed",
+    "license": "Public read access; no full copyrighted text or benchmark redistributed"
+  },
+  {
+    "id": "C2-S14",
+    "title": "PrimeTime static timing analysis",
+    "url": "https://www.synopsys.com/implementation-and-signoff/signoff/primetime.html",
+    "type": "vendor",
+    "published": "unknown",
+    "retrieved": "2026-10-15T07:58:14.441196+00:00",
+    "locator": "MCMM and performance product sections",
+    "access": "full",
+    "claims": [
+      "COV-C2-S14"
+    ],
+    "limitations": "Advertising only; internals and comparable benchmark results unknown",
+    "version": "as accessed",
+    "license": "Public read access; no full copyrighted text or benchmark redistributed"
+  },
+  {
+    "id": "C2-S15",
+    "title": "2026 CAD Contest at ICCAD",
+    "url": "https://www.iccad-contest.org/2026/",
+    "type": "official_contest",
+    "published": "2026",
+    "retrieved": "2026-10-15T07:58:14.441196+00:00",
+    "locator": "Contest Problems A-C and schedule",
+    "access": "full",
+    "claims": [
+      "COV-C2-S15"
+    ],
+    "limitations": "Overview only; detailed task/winner completeness unresolved",
+    "version": "as accessed",
+    "license": "Public read access; no full copyrighted text or benchmark redistributed"
+  },
+  {
+    "id": "C2-S16",
+    "title": "TCAD2010 author PDF access attempt",
+    "url": "https://algos.inesc-id.pt/projects/rav/Silva10.pdf",
+    "type": "paper",
+    "published": "2010",
+    "retrieved": "2026-10-15T07:58:14.441196+00:00",
+    "locator": "requested original PDF",
+    "access": "metadata",
+    "claims": [
+      "COV-C2-S16"
+    ],
+    "limitations": "Web open internal error; method not checked this round",
+    "version": "as accessed",
+    "license": "Public read access; no full copyrighted text or benchmark redistributed"
+  },
+  {
+    "id": "C2-S17",
+    "title": "ACM DOI 10.1145/3816045 access attempt",
+    "url": "https://dl.acm.org/doi/10.1145/3816045",
+    "type": "paper",
+    "published": "unknown",
+    "retrieved": "2026-10-15T07:58:14.441196+00:00",
+    "locator": "DOI landing request",
+    "access": "metadata",
+    "claims": [
+      "COV-C2-S17"
+    ],
+    "limitations": "Web open internal error; no full-method conclusion",
+    "version": "as accessed",
+    "license": "Public read access; no full copyrighted text or benchmark redistributed"
+  }
+]

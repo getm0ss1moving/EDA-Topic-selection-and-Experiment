@@ -1,0 +1,321 @@
+{
+  "decision": "revise",
+  "verifier_session": "c411c94b-521d-48a9-b109-4489482b9cc6",
+  "actor_id": "ChatGPT-V05-TIMING",
+  "input_commit": "a48f03d4bc254c0b0957d0fe0f265e072d6cf49a",
+  "packet_sha256": "c185aa8014f1936a775c86d3e418766e774100191d7c3658608e9790e9f5d7d2",
+  "reviewed_proposer_release": "SUB-a806c4dc87a5851aa442cab252006b29abb325ead730688f609e5187446cf7da",
+  "adjudicated_challenger_releases": [
+    "SUB-74e2057df298eb5622da2f9b9ac90aab34b6bc351ab27f9e0c717e80ef60d6c6"
+  ],
+  "batch_round": 2,
+  "dossier_digest": "c2ee50b06224fe87b3db7f43b387bf2e9a3e43cf57a5ee9080bd4d3a1a628b3a",
+  "dossier_digest_scope": "Exact supplied proposer release including SUBMISSION.json, not canonical integrated dossier; recompute on integration.",
+  "gates": {
+    "novelty": false,
+    "mechanism": false,
+    "utility": false,
+    "contest_originality": false,
+    "headroom": false,
+    "feasibility": false,
+    "direction_integrity": false,
+    "experiment_consensus": false
+  },
+  "direction_penalty_checked": true,
+  "direction_penalties": {
+    "combination_drift": 1,
+    "demand_drift": 0,
+    "total": 1
+  },
+  "experiment_consensus_checked": true,
+  "abandonment_process_checked": true,
+  "source_checks": [
+    {
+      "source_id": "V2-S01",
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/e01d3f163f483f233db00410b6515a767a6ca03b/dcalc/DmpCeff.cc",
+      "title": "Pinned OpenSTA DmpCeff",
+      "locator": "DmpCap::init/gateDelaySlew/loadDelaySlew; setCeffAlgorithm",
+      "verdict": "valid",
+      "entailment": "CAP total load and local delay/slew behavior match schematic trace; zero rpi selects CAP. Whole-engine enclosure remains unproved.",
+      "access": "full",
+      "retrieved": "2026-10-15",
+      "limitations": "Only named locators reviewed; no performance transfer or full-method certification."
+    },
+    {
+      "source_id": "V2-S02",
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/e01d3f163f483f233db00410b6515a767a6ca03b/liberty/TableModel.cc",
+      "title": "Pinned OpenSTA TableModel",
+      "locator": "Table2::findValue, two-axis branch and return",
+      "verdict": "valid",
+      "entailment": "Four-term bilinear expression uses double intermediates with float inputs and return. Real range algebra alone does not prove numerical enclosure.",
+      "access": "full",
+      "retrieved": "2026-10-15",
+      "limitations": "Only named locators reviewed; no performance transfer or full-method certification."
+    },
+    {
+      "source_id": "V2-S03",
+      "url": "https://www.aspdac.com/aspdac2010/Archive_Folder/pdf/8B-2.pdf",
+      "title": "Unified MCMM STA engine",
+      "locator": "slides 18-23; slide 21 Dcurrent",
+      "verdict": "valid",
+      "entailment": "Incumbent bound pruning predates proposal; different parameterized objective prevents full equivalence inference.",
+      "access": "full",
+      "retrieved": "2026-10-15",
+      "limitations": "Only named locators reviewed; no performance transfer or full-method certification."
+    },
+    {
+      "source_id": "V2-S04",
+      "url": "https://www.eecg.utoronto.ca/~najm/papers/iccad08-khaled.pdf",
+      "title": "Efficient Block-based Parameterized Timing Analysis",
+      "locator": "sections 4.1-4.2, PDF page 5",
+      "verdict": "valid",
+      "entailment": "Affine exact/sufficient pruning supplies close context; not the full submitted report semantics.",
+      "access": "full",
+      "retrieved": "2026-10-15",
+      "limitations": "Only named locators reviewed; no performance transfer or full-method certification."
+    },
+    {
+      "source_id": "V2-S05",
+      "url": "https://www.eecg.utoronto.ca/~najm/papers/dac08-khaled.pdf",
+      "title": "Parameterized Timing Analysis with General Delay Models",
+      "locator": "section 3, properties 1-3, PDF page 2",
+      "verdict": "valid",
+      "entailment": "General function-class bounds have assumptions; nonlinear language alone is not novelty.",
+      "access": "full",
+      "retrieved": "2026-10-15",
+      "limitations": "Only named locators reviewed; no performance transfer or full-method certification."
+    },
+    {
+      "source_id": "V2-S06",
+      "url": "https://www.ispd.cc/contests/26/ISPD26_contest_description.pdf",
+      "title": "ISPD26 rules v2.2",
+      "locator": "section 2, PDF page 3",
+      "verdict": "valid",
+      "entailment": "Setup, single mode and ideal clock; unsuitable unchanged for declared representative target.",
+      "access": "full",
+      "retrieved": "2026-10-15",
+      "limitations": "Only named locators reviewed; no performance transfer or full-method certification."
+    },
+    {
+      "source_id": "V2-S07",
+      "url": "https://vlsicad.ucsd.edu/Publications/Conferences/421/c421.pdf",
+      "title": "Post-Placement Buffering and Sizing Contest",
+      "locator": "sections 2.3 and 5.3, PDF pages 2 and 7",
+      "verdict": "valid",
+      "entailment": "Single PVT current scope and prospective MCMM/hold/post-CTS distinction corroborated.",
+      "access": "full",
+      "retrieved": "2026-10-15",
+      "limitations": "Only named locators reviewed; no performance transfer or full-method certification."
+    },
+    {
+      "source_id": "V2-S08",
+      "url": "https://www.ispd.cc/contests/26/index.html",
+      "title": "Official ISPD26 results",
+      "locator": "Contest Winners and Resources",
+      "verdict": "valid",
+      "entailment": "Direct rankings are present; algorithms and all linked asset rights remain unverified.",
+      "access": "full",
+      "retrieved": "2026-10-15",
+      "limitations": "Only named locators reviewed; no performance transfer or full-method certification."
+    },
+    {
+      "source_id": "V2-S09",
+      "url": "https://patents.google.com/patent/US10133842B1/en",
+      "title": "Multi-mode multi-corner physical optimization patent",
+      "locator": "claims 1,4,6-9",
+      "verdict": "valid",
+      "entailment": "Timing characterization followed by local violating/worst/propagated view selection is described. This is neither proof of deployed capability nor own-table pre-analysis certificate equivalence.",
+      "access": "full",
+      "retrieved": "2026-10-15",
+      "limitations": "Only named locators reviewed; no performance transfer or full-method certification."
+    },
+    {
+      "source_id": "V2-S10",
+      "url": "https://algos.inesc-id.pt/projects/rav/Silva10.pdf",
+      "title": "Effective Corner-Based Techniques for Variation-Aware IC Timing Verification",
+      "locator": "original PDF; DOI 10.1109/TCAD.2009.2034343",
+      "verdict": "unresolved",
+      "entailment": "Direct reopen returned internal error; indexed author-PDF and bibliographic metadata only. Full-method novelty comparison unresolved.",
+      "access": "metadata",
+      "retrieved": "2026-10-15",
+      "limitations": "Only named locators reviewed; no performance transfer or full-method certification."
+    },
+    {
+      "source_id": "V2-S11",
+      "url": "https://asu-vda-lab.github.io/MLCAD26-Contest/",
+      "title": "MLCAD26 contest",
+      "locator": "Overview and Final Results",
+      "verdict": "valid",
+      "entailment": "Timing optimization contest and rankings are accessible; no winner algorithm or exact certificate equivalence established.",
+      "access": "full",
+      "retrieved": "2026-10-15",
+      "limitations": "Only named locators reviewed; no performance transfer or full-method certification."
+    }
+  ],
+  "objections": [
+    {
+      "id": "OBJ-001",
+      "verdict": "valid",
+      "blocking": false,
+      "resolution": "resolved",
+      "rationale": "Original missing paired specification is repaired by PS-02 common operations 1-10 and TR-02. This closes the documentation concern, not engine proof or contribution gates.",
+      "action": "Retain paired specification and conditional negative result.",
+      "source_ids": [
+        "V2-S01",
+        "V2-S02"
+      ]
+    },
+    {
+      "id": "OBJ-002",
+      "verdict": "valid",
+      "blocking": false,
+      "resolution": "resolved",
+      "rationale": "Original ISPD audit omission is repaired; current scope is correctly excluded. Winner method coverage and per-asset rights remain separate unresolved gates.",
+      "action": "Retain scoped contest exclusion; finish wider winner/rights audit before readiness.",
+      "source_ids": [
+        "V2-S06",
+        "V2-S07",
+        "V2-S08"
+      ]
+    },
+    {
+      "id": "OBJ-003",
+      "verdict": "valid",
+      "blocking": true,
+      "resolution": "open",
+      "rationale": "P-RANGE sole changed primitive relative to B1-NAT is shared with B1+ by definition. Equal initial states, transfer functions and deterministic refinement imply identical eligibility and exact-work union. H2 attribution fails locally; no universal historical duplication/dead-end is established.",
+      "action": "Before coding, supply a genuinely additional anchor-preserving delta and equal-information witness, or retain null and park at the prescribed boundary.",
+      "source_ids": [
+        "V2-S02",
+        "V2-S03",
+        "V2-S04",
+        "V2-S05"
+      ]
+    },
+    {
+      "id": "OBJ-004",
+      "verdict": "valid",
+      "blocking": true,
+      "resolution": "open",
+      "rationale": "TASK-02E consumes a pinned executable operation adapter after TASK-00, while TASK-02P only authors proof/fixtures; reference build appears later in TASK-04 and implementation later in TASK-06. No earlier executable provenance/producer is supplied. This blocks executable readiness only.",
+      "action": "Add explicit allocated bounded reference/primitive-adapter producers before TASK-02E, or pin a verified existing executable; rehash task list and recollect consent. No build now. ",
+      "source_ids": []
+    }
+  ],
+  "positive_claim_checks": [
+    {
+      "id": "CLM-044 / PS-02",
+      "locator": "proposal PS-02 items 1-10 and sole delta",
+      "verdict": "valid",
+      "blocking": false,
+      "rationale": "Paired operational specification is materially repaired; requirements are not an implemented soundness proof."
+    },
+    {
+      "id": "CLM-045 / TR-02",
+      "locator": "V2-S01/02; proposal TR-02",
+      "verdict": "valid",
+      "blocking": false,
+      "rationale": "Independent real algebra yields f(u)=3+u, range [3,4], natural enclosure [0,7]; stated lower bounds follow under stipulated eta/setup assumptions. Not engine or runtime measurement."
+    },
+    {
+      "id": "CLM-043 / H2",
+      "locator": "PS-02 B1+ and conditional induction",
+      "verdict": "unsupported",
+      "blocking": true,
+      "rationale": "No nontrivial algorithmic advantage remains for submitted P-RANGE versus B1+; do not weaken strengthened baseline."
+    },
+    {
+      "id": "CLM-042 / H1 and exact reports",
+      "locator": "V2-S01/02; PS-02 UNKNOWN/fallback/WNS rules",
+      "verdict": "unresolved",
+      "blocking": true,
+      "rationale": "20% is a conditional screening target; full numeric/clock/tag/report/closure proof and measurements absent."
+    },
+    {
+      "id": "CLM-030 / closest prior art",
+      "locator": "V2-S03/04/05/09/10",
+      "verdict": "partially_valid",
+      "blocking": true,
+      "rationale": "Broad absence-of-safe-pruning premise correctly withdrawn. Full report-semantic equivalence and recent closest-method search remain unresolved."
+    },
+    {
+      "id": "CLM-035 / contest readiness",
+      "locator": "V2-S06/07/08/11",
+      "verdict": "partially_valid",
+      "blocking": true,
+      "rationale": "ISPD repair verified; exhaustive winner overlap and linked asset licenses remain unverified."
+    },
+    {
+      "id": "Utility / industry gap",
+      "locator": "industry-gap.md; V2-S09",
+      "verdict": "unresolved",
+      "blocking": true,
+      "rationale": "Turnaround objective plausible; restricted CPC demand, threshold calibration and comparable commercial gap not established."
+    },
+    {
+      "id": "Headroom / cost / forecasts",
+      "locator": "forecast.json; tasklist; independent-estimate.md",
+      "verdict": "unresolved",
+      "blocking": true,
+      "rationale": "Unique union and overhead determine savings; eight hours sum correctly but are neither allocation nor feasible measured estimate. No saturation theorem."
+    },
+    {
+      "id": "Readiness / consent / abandonment",
+      "locator": "tasklist TASK-00; direction-control abandonment",
+      "verdict": "unresolved",
+      "blocking": true,
+      "rationale": "Three-family/three-corner inputs, proof, DAG and allocation absent. No dual experiment or abandonment consents; local null is insufficient for universal abandonment."
+    }
+  ],
+  "tasklist_sha256": "b166cb871081bc3241c6885036263eae45858d3f453d85f73e44279c2cb6e572",
+  "consensus": {
+    "matching_consents": false,
+    "reason": "Both current releases explicitly decline experimental agreement; neither contains an abandonment signature."
+  },
+  "independence": {
+    "review_unblinded": true,
+    "own_previous_read": true,
+    "legacy_handover_read": true,
+    "legacy_verdict_applies_to": "R0 only; not current verification",
+    "foreign_private_material_read": false,
+    "sessions_distinct": true,
+    "logical_registration": "JOB and verified manifests bind three distinct seats. Standalone packet does not attest physical model identity or external registry."
+  },
+  "run_record": {
+    "output_paths": [
+      "release/verification.md",
+      "release/verification.json",
+      "release/workflow.json"
+    ],
+    "checks": [
+      "Both input release manifests verified",
+      "Exact proposer directory digest recomputed",
+      "Task SHA-256 recomputed",
+      "Output JSON parse and trusted self-freeze"
+    ],
+    "full_repository_validate": "Not run: standalone packet exception in prompt; coordinator validates publication. Checkout not accessed.",
+    "experiments": "None; no compute allocated",
+    "searches": [
+      {
+        "query": "exact multicorner timing pruning certificate 2026 2025",
+        "engine": "web search",
+        "date": "2026-10-15",
+        "result": "Mostly irrelevant certificate sources and SetupKit characterization lead; no novelty conclusion."
+      },
+      {
+        "query": "10.1109/TCAD.2009.2034343",
+        "engine": "web search",
+        "date": "2026-10-15",
+        "result": "Original indexed author PDF and bibliographic record; direct full text failed."
+      }
+    ],
+    "search_stop": "Bounded verification; no claim of two-expansion novelty closure. Recent full papers, winner methods and other unreviewed critical claims remain unresolved."
+  },
+  "reversal_conditions": [
+    "Support an additional anchor-preserving mechanism against unrestricted B1+",
+    "Discharge enabled engine arithmetic/classification/closure/report proof",
+    "Repair executable producer DAG and establish licensed representative inputs, demand and actual allocation",
+    "Resolve full-method novelty leads, obtain zero accepted-topic drift and matching same-revision task-hash consents"
+  ],
+  "parking": "Cycle 2 revise is allowed. After three substantive nonconvergent rounds park with precise open questions; do not manufacture joint abandonment or acceptance."
+}

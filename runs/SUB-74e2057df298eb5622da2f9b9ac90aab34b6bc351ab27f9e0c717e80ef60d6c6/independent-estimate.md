@@ -1,0 +1,9 @@
+# Independent estimate and falsification priority
+
+Unblinded review: the frozen proposal disclosed its 20% target, local composition null and unresolved forecasts before this assessment. No forecast-blindness claim; forecast.json was not opened.
+
+Analytical result, not measurement: PS-02 P and B1+ have identical certificate/refinement decisions under common primitives and deterministic schedules. Expected algorithmic exact-work advantage for the submitted delta is therefore zero under those assumptions. This says nothing numerical about different low-level implementations or about a future additional mechanism.
+
+Runtime versus full analysis remains unknown. Normalize full time to 1; let f be its avoidable unique data-work fraction and h the added clock/classification/enclosure/cache/report overhead not shared with full timing. Under equal costs for retained operations, reduction is f-h, so the provisional 0.20 target requires f>=0.20+h. This is accounting, not a measured prediction or universal bound. Fully shared dependency cones or WNS-only expansion can force f=0 despite many certified endpoints. Favorable independent cones could have f>0, but no available measurement fixes its size. No meaningful empirical interval or success probability is justified.
+
+Priorities: (1) decide nontrivial delta before timing; (2) prove enabled operation/closure/report contracts and author falsifiers; (3) resolve input rights/characterized scenarios, actual allocation and build DAG; (4) only then measure unique-work ceiling and overhead; (5) compare full, strengthened composition and incremental workloads. Preserve negative outcomes. Numerical headroom, source-maintenance labor and end-to-end feasibility remain unresolved. No claim of theoretical saturation or research-wide impossibility.
