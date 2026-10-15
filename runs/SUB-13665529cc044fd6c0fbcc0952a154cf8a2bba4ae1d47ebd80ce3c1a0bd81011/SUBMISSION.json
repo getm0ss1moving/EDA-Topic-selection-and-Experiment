@@ -1,0 +1,14 @@
+{
+  "actor_id": "ChatGPT-V04-PHYSICAL-EDA-0005",
+  "files": {
+    "verification.json": "aae32a1efc3b5a36ef61a245246513f81c3a625a36438b54c5cfbf51906510cf",
+    "verification.md": "b55a8c5eeff0bf18dd7b92121fa81cfe59a33f584fe70b695a4088e72e9ee0bc",
+    "workflow.json": "657ec8b9bdc5f54a571bdb059ca83fdbc2f104096484283680741bf37bff9ec6"
+  },
+  "input_commit": "f68c1492c05be3fac5622deac4bb479eabf957de",
+  "packet_sha256": "bc3345e6370fc26e78906f23270f1a60d2f597e32fe78553f4cdacac0dde3ad7",
+  "role": "verifier",
+  "schema": 1,
+  "session_id": "a194d866-d694-43ac-8b46-6600f0371930",
+  "topic": "EDA-0005"
+}

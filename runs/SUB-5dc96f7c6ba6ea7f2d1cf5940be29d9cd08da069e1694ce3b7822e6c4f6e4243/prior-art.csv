@@ -1,0 +1,25 @@
+source_id,task,mechanism,data,evaluation,assumptions,limitation,overlap,distinction
+S01,EDA flow automation,task decomposition and tool scripts,EDA APIs/tasks,script task success,tool interfaces,not this repair workload,agent orchestration,not selected novelty
+S02,multi-agent EDA automation,divergent scripts and selector,task demos,automation success,prompt/controller access,not physical joint resource test,cooperation prior,agent number not contribution
+S03,physical flow tuning,stage-state tree and branch-conditioned agents,six design/technology combinations,GR loop; final DR,paper v3 protocol,not reproduced,cross-stage state prior,concrete repair options unestablished
+S04,agentic physical implementation,stage context/knowledge/state reuse,official source,read only,pinned commit,paper-code version alignment untested,hold diagnostic already present,not proof of missing capability
+S05,post-CTS repair,native setup/hold commands,tool documentation,none here,propagated clocks,dynamic documentation,setup protection prior,new interface must exceed native
+S06,hold optimization,shared-load insertion and rollback,pinned source,none here,current code only,not executed,shared repair and rollback prior,joint placement admission hypothesis
+S07,incremental routing,modified-net GR listener,tool docs,none here,router semantics,not DR guarantee,oracle integration,no new incremental-router claim
+S08,GR to DR consistency,prediction-guided physical optimization,paper flow designs,reported downstream timing,available physical features,not reproduced,learned guidance prior,focus physical repair-option decision
+S09,preroute timing prediction,topological residual graph learning,21-circuit paper dataset,prediction accuracy,feature/table access,not repair-resource labels,bounded unified timing prior,candidate B not selected
+S10,AI EDA infrastructure,common vectorization/interfaces,paper iDATA description,multiple tasks,dataset rights/access,not joint-model proof,shared physical representation,library alone not novelty
+S11,incremental detailed placement,early/late timing and congestion,ICCAD2015,publisher abstract only,bounded displacement,full method unresolved,same user decision neighborhood,must check same repair coupling
+S12,hold closure,power-aware transformation policy,industrial post-CTS sample in paper,publisher preview only,commercial/industrial context,full method inaccessible,repair side effects prior,no transferred gain or gap claim
+S13,buffer planning,ILP movement and legal buffer holes,author paper layouts,formulation inspected,bounded gate movement,not reproduced,physical occupancy planning prior,action-induced hold options candidate delta
+S14,hold fixing,early placement/routing reservation,public patent,no measurement here,ideal-clock estimate in disclosure,not production audit,reservation prior,specific joint alternatives remain question
+S15,buffering/sizing contest,constraints/evaluation and roadmap,public and hidden designs,GR-based score,ASAP7 toolkit,not ready post-CTS DR dataset,hold roadmap already supplied,must exceed announced task
+S16,contest baseline,repair/legalize/GR script,public code,read only,pinned commit,not executed,strong native procedure,adaptation costs charged
+S17,joint physical ECO contest,sizing buffering relocation,official material,corrected joint winners,public wrappers,method packs unavailable,joint actions already supplied,contest task not contribution
+S18,winner report,hybrid discrete/differentiable approach,team article,qualitative claims only,team publicity,not full method,hybrid composition competitor,no performance transfer
+S19,ISPD2026 results,official winner listing,official page,ranking only,official index,algorithms uninspected,winner audit dependency,no novelty conclusion
+S20,commercial implementation,advertised concurrent optimization,official product page,no matched evaluation,vendor claims only,internal details unknown,broad demand already addressed,no industry absence claim
+S21,incremental placement contest,timing-oriented placement task,2015 page,official results,historical scoring,winner slides inaccessible,existing placement task,no organizer-task novelty
+S22,interconnect synthesis,multi-resource sharing,industrial paper context,abstract/snippets,resource price model,full comparison unresolved,global coupling prior,not a resource-price novelty claim
+S23,multi-corner delay padding,path relationship/dual decomposition lead,presentation,metadata only,not checked,full method unresolved,close recent hold work,EXP-001 access gate
+S24,physical DSE,adaptive tuning/fidelity context,official docs,none here,dynamic version,not reproduced,cheap/full evaluation prior,not scheduler novelty

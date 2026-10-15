@@ -1,0 +1,61 @@
+{
+  "role": "proposer",
+  "topic": "EDA-0005",
+  "round": 1,
+  "phase": "research",
+  "assessment": "unresolved",
+  "recommendation": "Continue independent C/V evidence refinement; no physical pilot or training authorization.",
+  "actor_id": "ChatGPT-P04-PHYSICAL-EDA-0005",
+  "session_id": "07ec73dc-1bf7-4f5c-999f-b589460c1e5e",
+  "input_commit": "f68c1492c05be3fac5622deac4bb479eabf957de",
+  "packet_sha256": "b9b3d8bc704ac6b8b70e549417c704d5f4a0f3d966bdfe6c33bc9af9790bdef6",
+  "tasklist_sha256": "c8db0c6fac758cc91e5346f13b0b062cc8e8a4c6e20463a7eebdfc735b1ca095",
+  "experiment_consent": "not_issued_unresolved_dependencies",
+  "abandonment_consent": "not_issued",
+  "coverage": {
+    "duplicate_prior_art": "unresolved",
+    "mechanism": "specified_with_finite_model_scope",
+    "composition": "unresolved",
+    "demand": "unresolved",
+    "industry_gap": "no_absence_claim",
+    "headroom": "conditional_bound_only",
+    "contests": "unresolved_winner_methods",
+    "experiments": "conditional_plan_only",
+    "cost": "ledger_defined_no_local_physical_measurement"
+  },
+  "provenance_checks": {
+    "policy_files": 31,
+    "policy_hash_mismatches": 0,
+    "historical_release_files_checked": [
+      3,
+      7,
+      12
+    ],
+    "historical_hash_mismatches": 0,
+    "historical_approval_inherited": false
+  },
+  "execution": {
+    "source_reading": true,
+    "analytical_fixture": "7 constructed subsets, standard-library Python; ordinary matching/serial control acknowledged",
+    "physical_runs": 0,
+    "training_runs": 0,
+    "paid_provider_calls": 0,
+    "new_compute_allocation": false,
+    "scientific_messages_sent": 0,
+    "scientific_subagents_spawned": 0,
+    "checkout_accessed": false
+  },
+  "validation_scope": "Trusted standalone freeze and own-release JSON/source-link checks. Full repository validation is coordinator publication duty per job; no false full-checkout pass.",
+  "release_output": "release/",
+  "submission_queue": "submissions/",
+  "source_log": "search-log.md",
+  "source_records": "sources.json",
+  "model_provenance": "Requested model/effort from JOB only; no independent backend audit claim.",
+  "local_checks": [
+    "12 role-owned files present",
+    "All JSON parses;24 unique source IDs and24 CSV rows",
+    "All Sxx references resolve",
+    "No TBD/TODO placeholders",
+    "Tasklist SHA-256 matches workflow"
+  ]
+}

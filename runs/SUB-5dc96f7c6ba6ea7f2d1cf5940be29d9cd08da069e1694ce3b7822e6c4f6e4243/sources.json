@@ -1,0 +1,373 @@
+[
+  {
+    "id": "S01",
+    "title": "ChatEDA: A Large Language Model Powered Autonomous Agent for EDA",
+    "url": "https://arxiv.org/html/2308.10204v4",
+    "type": "primary_paper",
+    "published": "2024-09-21",
+    "retrieved": "2026-10-15",
+    "locator": "Section III-A through III-C; Fig.2; version4",
+    "access": "full",
+    "claims": [
+      "CLM-001"
+    ],
+    "limitations": "Framework sections inspected; no reported result reproduced. Author PDF also opened.",
+    "version": "arXiv:2308.10204v4",
+    "related_urls": [
+      "https://wuhy68.github.io/paper/TCAD24-ChatEDA.pdf"
+    ]
+  },
+  {
+    "id": "S02",
+    "title": "Divergent Thoughts toward One Goal: LLM-based Multi-Agent Collaboration System for Electronic Design Automation",
+    "url": "https://arxiv.org/html/2502.10857v1",
+    "type": "primary_paper",
+    "published": "2025-02-15",
+    "retrieved": "2026-10-15",
+    "locator": "Sections3.1\u20133.3, agent/message definitions and decision-making; \u00a74.1 evaluation semantics",
+    "access": "full",
+    "claims": [
+      "CLM-001"
+    ],
+    "limitations": "Method inspected; script-success evaluation is not a physical-repair benchmark here.",
+    "version": "arXiv:2502.10857v1"
+  },
+  {
+    "id": "S03",
+    "title": "AgenticPD: A Stage-Aware Agentic Framework for Closed-Loop Physical Design Optimization",
+    "url": "https://arxiv.org/html/2607.04758v3",
+    "type": "primary_paper",
+    "published": "2026-10-04",
+    "retrieved": "2026-10-15",
+    "locator": "Section2.1; complete Section3.1\u20133.4; Algorithm1 lines1\u201315; \u00a74.1",
+    "access": "full",
+    "claims": [
+      "CLM-002"
+    ],
+    "limitations": "Use v3 GR search/final-incumbent DR. Earlier opened v1 has a different evaluation description. No reported gains transferred.",
+    "version": "arXiv:2607.04758v3"
+  },
+  {
+    "id": "S04",
+    "title": "AgenticPD author-linked implementation",
+    "url": "https://github.com/Flians/AgenticPD/tree/3456161b829ee2cc4888cbe57b279d2733452367",
+    "type": "primary_code",
+    "published": "2026-09-03",
+    "retrieved": "2026-10-15",
+    "locator": "README.md lines28\u201354,268\u2013303; src/agenticpd/agents/stage_agent.py lines192\u2013233; knowledge/graph.yaml lines164\u2013173; flow/checkpoint.py lines55\u2013106",
+    "access": "full",
+    "claims": [
+      "CLM-002"
+    ],
+    "limitations": "Selected implementation/interface inspection only; not built. Repository commit predates v3. Knowledge text is a heuristic, not a universal diagnosis.",
+    "version": "3456161b829ee2cc4888cbe57b279d2733452367",
+    "files_sha256": {
+      "README.md": "7f312dd0cc829589a3a815773e3be2454052eb93f994b1e58661c9b68332dfcf",
+      "src/agenticpd/agents/stage_agent.py": "3369d49c562f7fc635cd051365283ef37bdd94091b7940fcbf56ef5faf1cd937",
+      "src/agenticpd/knowledge/graph.yaml": "ca0c0316b8a2a4bfd55d7278ec59159c6debedae183a536ac7b43b4c512dbccc",
+      "src/agenticpd/flow/checkpoint.py": "c67a3b853f80a56cc3fd2fdc321797b931ce27a37ce1e4d9e5eb7fcc25b6e913"
+    }
+  },
+  {
+    "id": "S05",
+    "title": "OpenROAD Gate Resizer documentation",
+    "url": "https://openroad.readthedocs.io/en/latest/main/src/rsz/README.html",
+    "type": "official_documentation",
+    "published": "unknown",
+    "retrieved": "2026-10-15",
+    "locator": "Repair Timing; options -allow_setup_violations, -sequence, setup/hold margins",
+    "access": "full",
+    "claims": [
+      "CLM-003"
+    ],
+    "limitations": "Dynamic documentation. Source pin S06 is inspected, but no local executable equivalence is asserted."
+  },
+  {
+    "id": "S06",
+    "title": "OpenROAD RepairHold and Resizer source",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/8da6ac250b0349c346d1abed7c2c43107f4ff6f7/src/rsz/src/RepairHold.cc",
+    "type": "primary_code",
+    "published": "2026-10-15",
+    "retrieved": "2026-10-15",
+    "locator": "RepairHold.cc lines500\u2013520,574\u2013599,613\u2013684,713\u2013772; Resizer.cc lines5506\u20135539",
+    "access": "full",
+    "claims": [
+      "CLM-003"
+    ],
+    "limitations": "Read-only source inspection. Shared-load timing guards and journals are not a proof about all current placement behaviors.",
+    "version": "8da6ac250b0349c346d1abed7c2c43107f4ff6f7",
+    "files_sha256": {
+      "RepairHold.cc": "5e5fd39774743e612f2337ca6e86af352bf50b07ce30870ba832b33eeee77f9f",
+      "Resizer.cc": "ff3adf14a5f8f9059a293b7fbfbf39ce4138f008294c43fd86d6cc46c6024b85"
+    }
+  },
+  {
+    "id": "S07",
+    "title": "OpenROAD Global Routing documentation",
+    "url": "https://openroad.readthedocs.io/en/latest/main/src/grt/README.html",
+    "type": "official_documentation",
+    "published": "unknown",
+    "retrieved": "2026-10-15",
+    "locator": "Global Route options -start_incremental/-end_incremental; Read Global Routing Segments",
+    "access": "full",
+    "claims": [
+      "CLM-010"
+    ],
+    "limitations": "Interface access does not validate candidate integration or DR routability. Dynamic page; pin an executable for experiments."
+  },
+  {
+    "id": "S08",
+    "title": "A Machine Learning Approach to Improving Timing Consistency between Global Route and Detailed Route",
+    "url": "https://arxiv.org/html/2305.06917v1",
+    "type": "primary_paper",
+    "published": "2023-05-11",
+    "retrieved": "2026-10-15",
+    "locator": "Abstract; \u00a71 physical flow discussion; post-GR optimization evaluation, Table4 and associated discussion",
+    "access": "full",
+    "claims": [
+      "CLM-014"
+    ],
+    "limitations": "Selected method/flow/evaluation sections inspected; no result reproduced or guarantee transferred.",
+    "version": "arXiv:2305.06917v1"
+  },
+  {
+    "id": "S09",
+    "title": "PreRoutGNN for Timing Prediction with Order Preserving Partition: Global Circuit Pre-training, Local Delay Learning and Attentional Cell Modeling",
+    "url": "https://arxiv.org/html/2403.00012v1",
+    "type": "primary_paper",
+    "published": "2024-02-27",
+    "retrieved": "2026-10-15",
+    "locator": "Abstract; Residual Local Learning of Signal Delay; Eq.3; AppendixF and endpoint discussion",
+    "access": "full",
+    "claims": [
+      "CLM-014"
+    ],
+    "limitations": "Timing representation prior, not evidence of action-conditioned repair-resource prediction or downstream relocation benefits.",
+    "version": "arXiv:2403.00012v1"
+  },
+  {
+    "id": "S10",
+    "title": "AiEDA: An Open-Source AI-Aided Design Library for Design-to-Vector",
+    "url": "https://arxiv.org/html/2511.05823v1",
+    "type": "primary_paper",
+    "published": "2025-11-08",
+    "retrieved": "2026-10-15",
+    "locator": "Introduction/TableI; design-to-vector and task/interface descriptions",
+    "access": "full",
+    "claims": [
+      "CLM-014"
+    ],
+    "limitations": "Shared infrastructure is not automatically one unified predictive model. No training or full dataset acquisition.",
+    "version": "arXiv:2511.05823v1",
+    "repository_metadata_commit": "788857fad4ce5e14cafd4c2ce55eebebdd45f50b"
+  },
+  {
+    "id": "S11",
+    "title": "Routing-Aware Incremental Timing-Driven Placement",
+    "url": "https://ieeexplore.ieee.org/document/7560212/",
+    "type": "primary_paper",
+    "published": "2016-07-11",
+    "retrieved": "2026-10-15",
+    "locator": "Publisher Abstract; DOI10.1109/ISVLSI.2016.23",
+    "access": "abstract",
+    "claims": [
+      "CLM-009"
+    ],
+    "limitations": "Full method not accessed; cannot exclude same-action repair planning. Published improvement figures are not used as local evidence."
+  },
+  {
+    "id": "S12",
+    "title": "Power-aware hold optimization for ASIC physical synthesis",
+    "url": "https://www.sciencedirect.com/science/article/pii/S0167926020302649",
+    "type": "primary_paper",
+    "published": "2021-01",
+    "retrieved": "2026-10-15",
+    "locator": "Publisher Abstract; Introduction paragraphs on indirect fixes after legalization/routing; section snippets; DOI10.1016/j.vlsi.2020.08.003",
+    "access": "abstract",
+    "claims": [
+      "CLM-004",
+      "CLM-010"
+    ],
+    "limitations": "Publisher preview through search; full algorithms/tables unavailable. General demand evidence only; no local performance transfer."
+  },
+  {
+    "id": "S13",
+    "title": "A CPS framework based perturbation constrained buffer planning approach in VLSI design",
+    "url": "https://rajivranjan.net/wp-content/uploads/2019/07/52.pdf",
+    "type": "primary_paper",
+    "published": "2016-12-20",
+    "retrieved": "2026-10-15",
+    "locator": "Section3.1 Eq.3 and occupancy constraints/Fig.5; \u00a73.2 strip division",
+    "access": "full",
+    "claims": [
+      "CLM-015"
+    ],
+    "limitations": "Author-hosted eight-page journal paper, JPDC103(2017)3\u201310. Selected formulation inspected; no implementation reproduced.",
+    "doi": "10.1016/j.jpdc.2016.11.013"
+  },
+  {
+    "id": "S14",
+    "title": "US20140165019A1 \u2014 Semiconductor hold time fixing",
+    "url": "https://patents.google.com/patent/US20140165019A1/en",
+    "type": "public_patent_disclosure",
+    "published": "2014-06-12",
+    "retrieved": "2026-10-15",
+    "locator": "Summary; Fig.1/Fig.7 placement-region discussion; claims1,4,6,9; resource reservation description",
+    "access": "full",
+    "claims": [
+      "CLM-005"
+    ],
+    "limitations": "Public technical disclosure only. No assertion about legal status, ownership permissions, production use or comparative measurements."
+  },
+  {
+    "id": "S15",
+    "title": "Invited: Post-Placement Buffering and Sizing Contest",
+    "url": "https://vlsicad.ucsd.edu/Publications/Conferences/421/c421.pdf",
+    "type": "official_contest_paper",
+    "published": "2026-03-15",
+    "retrieved": "2026-10-15",
+    "locator": "Sections1\u20134; \u00a75.3 Two-year Roadmap; pp1\u20134 and7; DOI10.1145/3764386.3779616",
+    "access": "full",
+    "claims": [
+      "CLM-006",
+      "CLM-012",
+      "CLM-010"
+    ],
+    "limitations": "Organizer paper; GR-scored2026 task and proposed2027 extensions differ from this final-DR post-CTS study. Current scoring weights need repository pin."
+  },
+  {
+    "id": "S16",
+    "title": "ISPD26 official baseline and repository",
+    "url": "https://github.com/ABKGroup/ISPD26-Contest/tree/f7b29d242fc7d441f3b4eadc556f40099ccca067",
+    "type": "primary_code",
+    "published": "unknown",
+    "retrieved": "2026-10-15",
+    "locator": "scripts/evaluation_baseline.tcl lines54\u2013106; README timelines and benchmark/resource descriptions",
+    "access": "full",
+    "claims": [
+      "CLM-006"
+    ],
+    "limitations": "Baseline source read; not executed or adapted. Does not supply a ready post-CTS hold benchmark or transfer contest hardware allocation.",
+    "version": "f7b29d242fc7d441f3b4eadc556f40099ccca067",
+    "files_sha256": {
+      "scripts/evaluation_baseline.tcl": "434969ec03b7a1637c74b42a24f23c27925ed7b6eb9f9917f96df76634fd920a",
+      "README.md": "29c95e3df2f051f14ebb45ee71be7c3d42d5302c8c12d7f2249a45901dc0ab50"
+    }
+  },
+  {
+    "id": "S17",
+    "title": "ICCAD2025 official problem index and corrected winners",
+    "url": "https://www.iccad-contest.org/2025/Problems.html",
+    "type": "official_contest",
+    "published": "2025",
+    "retrieved": "2026-10-15",
+    "locator": "Problem C section; Winners.html Problem C and runtime-statistics correction paragraph",
+    "access": "full",
+    "claims": [
+      "CLM-006"
+    ],
+    "limitations": "Public Drive problem/top3 wrappers opened but contents unavailable. Full winner method comparison remains unresolved.",
+    "related_urls": [
+      "https://www.iccad-contest.org/2025/Winners.html",
+      "https://drive.google.com/file/d/1Z7VOMX9vpcILlp3A3DggwvZMLM5pHwHp/view",
+      "https://drive.google.com/file/d/1yZstdjFc30xt9RYz583ecb8_jnDE1F9O/view"
+    ]
+  },
+  {
+    "id": "S18",
+    "title": "CUHK team report: first place in2025 CAD Contest at ICCAD",
+    "url": "https://www.cse.cuhk.edu.hk/news/achievements/iccad2025/",
+    "type": "primary_team_report",
+    "published": "2025-12-01",
+    "retrieved": "2026-10-15",
+    "locator": "Article paragraph describing hybrid discrete/gradient approach",
+    "access": "full",
+    "claims": [
+      "CLM-006"
+    ],
+    "limitations": "Team publicity only. Organizer correction in S17 governs ranking; no winner algorithm or gain independently reproduced."
+  },
+  {
+    "id": "S19",
+    "title": "ISPD26 official contest winners/resources",
+    "url": "https://www.ispd.cc/contests/26/index.html",
+    "type": "official_contest",
+    "published": "2026",
+    "retrieved": "2026-10-15",
+    "locator": "Contest Winners; Contest Resources/GitHub link",
+    "access": "full",
+    "claims": [
+      "CLM-006"
+    ],
+    "limitations": "Winner identities/resources inspected, not full winning mechanisms. No contest result is reused as candidate evidence."
+  },
+  {
+    "id": "S20",
+    "title": "Synopsys IC Compiler II product page",
+    "url": "https://www.synopsys.com/implementation-and-signoff/physical-implementation/ic-compiler.html",
+    "type": "official_vendor_capability",
+    "published": "unknown",
+    "retrieved": "2026-10-15",
+    "locator": "About IC Compiler II, key technologies and concurrent clock/data optimization paragraphs",
+    "access": "full",
+    "claims": [
+      "CLM-010"
+    ],
+    "limitations": "Advertising supports public capability claims only; internals and controlled superiority unknown. No commercial access established."
+  },
+  {
+    "id": "S21",
+    "title": "ICCAD2015 Incremental Timing-driven Placement official page",
+    "url": "https://www.iccad-contest.org/2015/problem_C/default.html",
+    "type": "official_contest",
+    "published": "2015",
+    "retrieved": "2026-10-15",
+    "locator": "Contest Description; Evaluation Results final winner links; announcements",
+    "access": "full",
+    "claims": [
+      "CLM-006"
+    ],
+    "limitations": "2015 winner method slide link failed. Old incremental placement evaluation is not final-DR evidence here."
+  },
+  {
+    "id": "S22",
+    "title": "Global Interconnect Optimization",
+    "url": "https://doi.org/10.1145/3587044",
+    "type": "primary_paper",
+    "published": "2023-09-09",
+    "retrieved": "2026-10-15",
+    "locator": "Publisher abstract; search-indexed \u00a73.2\u20133.3 and \u00a74.6 snippets",
+    "access": "abstract",
+    "claims": [
+      "CLM-007"
+    ],
+    "limitations": "Direct publisher open failed; only abstract/selected section snippets inspected. Broad resource coupling is prior; exact same-assumption reduction remains unresolved.",
+    "doi": "10.1145/3587044"
+  },
+  {
+    "id": "S23",
+    "title": "Novel Multi-Corner Delay Padding using Path Relationship Analysis and Dual Decomposition \u2014 ASP-DAC2026 presentation",
+    "url": "https://www.aspdac.com/aspdac2026/archive/pdf/3E-2.pdf",
+    "type": "primary_presentation",
+    "published": "2026-01",
+    "retrieved": "2026-10-15",
+    "locator": "Presentation title and Experimental setup slide lead;23-page PDF identified",
+    "access": "metadata",
+    "claims": [],
+    "limitations": "Partial extraction; repeated section opens failed. Current close-work lead requiring method access, not support for a novelty or performance claim."
+  },
+  {
+    "id": "S24",
+    "title": "OpenROAD Design Space Exploration and Automated Tuning",
+    "url": "https://openroad.readthedocs.io/en/latest/contrib/DesignSpaceExploration.html",
+    "type": "official_documentation",
+    "published": "unknown",
+    "retrieved": "2026-10-15",
+    "locator": "Sections on estimates, full-flow signals and search/tuning",
+    "access": "full",
+    "claims": [
+      "CLM-014"
+    ],
+    "limitations": "Dynamic interface documentation; no local tuning run or new adaptive-scheduling claim."
+  }
+]
