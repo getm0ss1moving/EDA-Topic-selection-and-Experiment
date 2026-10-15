@@ -1,0 +1,52 @@
+{
+  "completed_cycles": {
+    "D04": 0,
+    "D05": 0
+  },
+  "input_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+  "jobs": [],
+  "logical_scientific_seats": [
+    {
+      "packet_sha256": "370dd0d14ce8fee3864991b64280be571a92d7591ca2400a9932e89a86949a65",
+      "role": "challenger",
+      "session_id": "b789be3f-0354-4526-807b-b75b91d1f374",
+      "topic": "EDA-0007"
+    },
+    {
+      "packet_sha256": "8d27771f88c17fa1ac3ec3b3a02d3f7cd8f1b4d9e8572341d5ee8cc681d52632",
+      "role": "proposer",
+      "session_id": "5353d53c-1279-4e6e-8f34-409221f059aa",
+      "topic": "EDA-0007"
+    },
+    {
+      "packet_sha256": "5b6045e682cf0edf1e4ed1bcd48a163db1e64d6292397242d5263dcb6772fd54",
+      "role": "verifier",
+      "session_id": "04124b28-c866-4c3a-879c-f1d3ceac97fc",
+      "topic": "EDA-0007"
+    },
+    {
+      "packet_sha256": "48d40bb5ac63cd51e5b07f3150ce125e6f8e58660ee28c13c5cb0d811f4c3935",
+      "role": "challenger",
+      "session_id": "94045552-61ca-4bb4-a950-c6de444a88ed",
+      "topic": "EDA-0008"
+    },
+    {
+      "packet_sha256": "a33f0dab9f9ecf62d70001cc3343663f307218e16e69f418d8843619cab37db3",
+      "role": "proposer",
+      "session_id": "b68834d9-8d64-4081-8599-01722d58110e",
+      "topic": "EDA-0008"
+    },
+    {
+      "packet_sha256": "d5dd4815d595e6eca62ed6640e0a91f111ead1203b0ebd491e738f112f851963",
+      "role": "verifier",
+      "session_id": "370f04ea-8378-4c1f-ab83-2fa830453d13",
+      "topic": "EDA-0008"
+    }
+  ],
+  "merged": [],
+  "protocol_audits": [],
+  "published": {},
+  "scientific_releases": [],
+  "scope": "Frozen byte/binding audit and independent protocol findings, not proof of unseen actions, scientific truth or OS confinement.",
+  "status": "in_progress"
+}
