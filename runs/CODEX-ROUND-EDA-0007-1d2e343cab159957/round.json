@@ -2,6 +2,7 @@
   "compliance_audit": "runs/SUB-399339b3dae4b21aa15b73db0d76cdf065e86a7be3ec7a36f60f6246f91637cd",
   "compliance_gate": "clear_within_scope",
   "decision": "revise",
+  "descriptor_manifest": "runs/CODEX-ROUND-EDA-0007-1d2e343cab159957/DESCRIPTORS.json",
   "registrations": {
     "sessions": [
       {
