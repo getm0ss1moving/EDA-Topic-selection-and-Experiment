@@ -1,0 +1,14 @@
+# Challenger R3 task-list contribution
+
+This is a conditional review supplement, not replacement proposer science or consent. Target is the exact frozen R3 release named in workflow.json. Existing T01–T08 remain the working sequence. No experiment authorized.
+
+| Task / owner | Procedure and expected artifact | Pass/fail and dependency |
+|---|---|---|
+| T01 evidence / proposer and challenger separately | Complete remaining original-method and winner-policy mapping; classify any stronger bounded label policy before locking B4. Preserve actual access level and chronology. | No universal novelty from absent sources; any full-equivalence finding needs an explicit useful-distinction test. Reading only now. |
+| T02–T04 readiness / resource owner and allocated engineer; proposer documents | Preserve existing rights/design/corner/SDC pins, demand thresholds and absolute cost cap, actual allocation, code/config/command/path limits, independent checker scope and effective perturbation traces. | No physical run or consent while absent. Preliminary design names and GCD smoke are insufficient. |
+| T04/T05 amortization ledger / allocated engineer | In existing leaf timer schema identify avoidable reachability U, saved work A, cache overhead K and other work V; record clause counts/size, reuse, lookup and construction costs. Output per-case ledger and binding-cap trace. | In equal-prefix stratum saved wall/CPU must agree with A-K within declared accounting tolerance; do not infer speedup from number of pruned sets. Allocation and unchanged dual consent required. |
+| T05 correctness / allocated engineer, verifier reviews | Existing CT06 ranks and useful-superset fixtures; complete tiny target/assignment truth tables; same-prefix WNS equality and valid-cut checking. | Any false cut, useful-superset loss or inconsistent completed-prefix result halts. Exact only within complete declared finite domain. |
+| T07 fairness/value / allocated runner and proposer | Preserve B0–B4/M, all cases and failures; separate subset/time/state/RSS-cap strata. Compare strong B4 with identical common engine; report whole-flow and absolute marginal cost. | No contribution claim from B3-only win, weakened B4, free cache work or dropping zero-opportunity designs. |
+| T08 final bounded position / each scientific role independently | Fourth complete cycle: resolve or park with exact missing input/resource/evidence list and resurrection conditions. | No forced consent or abandonment. New mechanism requires new ID. |
+
+Current consent withheld for missing executable dependencies, not distrust of repaired arithmetic. Reopening for consent requires an earlier frozen complete plan with pinned scientific dependencies, actual resources, fair comparators and executable correctness oracles; both roles independently sign identical tasklist bytes.
