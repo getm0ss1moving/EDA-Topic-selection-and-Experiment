@@ -1,0 +1,17 @@
+# R3 independent source search log
+
+Date: 2026-10-15 UTC. Sources are public primary papers, code and official contest pages. Read-only research; no builds, calibration, benchmarks or new compute expenditure. Original PDFs/text stay in job-local scratch outside the project checkout and are excluded from release.
+
+1. Read R00 exact current proposal/plan/tasklist and released own R2 criticism plus the explicitly shared ruling. Closed historical omissions only after matching current text and source evidence. Did not infer approval from the historical verifier.
+2. Initial batched web search: `"minimum constraint removal" "cut" path`; `"detailed routing" "2026" timing rip up SAT`; `ISPD 2026 contest winners routing 2025 MyGR`. Tool connection failed; no results treated as evidence.
+3. Direct original reading: R01 §3.2; R03 §4.1 and §7.2; R05 §§5.1–5.2; R07/R08 exact official index pages. Relevant to current repaired equations, pruning and contest scope.
+4. Public code: fetched pinned R06 raw file and inspected two sort functions. SHA recorded in sources. Fetched R04 author PDF and inspected §IV Eq.1–5. First R02 urllib request had TLS handshake timeout; ordinary curl succeeded, pdftotext §III A–D inspected. No access control bypass.
+5. Independent expansion one: web queries `"minimum constraint removal" "2026"` and `"routing" "rip up" "SAT" 2026`. Recovered R02 institutional metadata and R11 recent preprint; discovered R12 standard-cell SAT lead outside proposer bibliography. PCB/FPGA results not used as exact chip post-route equivalents. A motion-infeasibility article indexed November2026 has uncertain cutoff relevance and is not relied on.
+6. Broader contest/code expansion: R09 2026 ICCAD official index and R10 MyGR distribution README inspected. Winner list/README do not establish actual winning policy equivalence. No complete forward-citation, repository-issue or winner-container audit claimed.
+7. Expansion two requested `"Solving Subgraph Extraction Problems" "Search"` and `"post-route" "timing" "routing" 2026 cut repair`, plus R12 full PDF and R11 full PDF. Retrieval outcome logged separately if returned. A search lead is not a full method inspection.
+
+Stop reason: bounded review/search budget, not two clean exhaustive expansions. Missing 1999 full method, strongest newer bounded-label implementation, actual winner core code/version and comprehensive forward citations remain explicit residual novelty risk. No assertion of absence of newer work or of universal dead end. Provisional costs and source-reported runtimes are not measurements of this proposal.
+
+Validation: standalone role freeze/verify plus JSON parsing and content hashes. Full project.py validate requires the forbidden project checkout and is assigned to coordinator publication; no substitute claim of canonical validation. Run provenance is in runs/challenger-round3.json.
+
+Final expansion outcomes: second query batch returned primary R13 arXiv2606.13834 and R14 arXiv2608.23602, plus placement/FPGA and ECO leads. Reopened R13 full HTML to Table1/§4 MCR example, R14 v2 abstract, and R12 original PDF §4.2. R12 explicitly describes whole-net backjumping; R13 cites Hauser2014, giving a concrete forward-citation expansion. Excluded CoEvoP&R placement changes from direct same-anchor comparison; did not rely on secondary post-route tutorial claims. Full R11 request output was truncated before its result, so source record conservatively stays abstract. Search remains budget-limited, not exhaustive.

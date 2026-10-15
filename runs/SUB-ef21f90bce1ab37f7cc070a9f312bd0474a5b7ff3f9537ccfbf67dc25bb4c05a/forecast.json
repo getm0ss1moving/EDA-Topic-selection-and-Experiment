@@ -1,0 +1,29 @@
+{
+  "kind": "forecast_not_measurement",
+  "metric": "Paired change in full-design post-route minimum setup slack versus strongest equal-budget repair baseline",
+  "unit": "ns",
+  "baseline_source": "Not measured; strongest B2/B3/B4 standard composition must be reproduced after T01\u2013T04, allocation, dual consent and readiness. GCD smoke does not calibrate candidate effect.",
+  "direction": "Higher slack is better; both signs plausible before the acceptance filter.",
+  "pessimistic": null,
+  "base": null,
+  "optimistic": null,
+  "confidence": null,
+  "assumptions": [
+    "No numerical forecast is supportable before variance, representative designs and baseline measurements.",
+    "Committed transactions reject regressions but rejected work may exceed the runtime guardrail.",
+    "The +0.02 ns screen is a provisional packet threshold, not a predicted gain.",
+    "Novelty, failure prevalence, compute allocation and selective-routing integration remain unresolved.",
+    "R2 exact independent-tie plateau can yield zero whole-design improvement despite local opportunities.",
+    "Six-arm comparison requires 90 complete arm records before development and rejected work; no fit or runtime forecast established.",
+    "MCR label-set composition and frontier prior art weaken the prior distinction; no new numerical probability is fabricated.",
+    "R3 n>=23 cardinality-first256 prefix excludes all triples; at n22 only first2 triples.",
+    "R3 same-completed-prefix B3/M result equality removes a target-coverage claim in the subset-cap-binding stratum.",
+    "Ordinary enabled-arc/flow formulation represents same frozen target relation; no generic SAT/cut novelty or expected cache advantage established."
+  ],
+  "calibration_plan": "After T01\u2013T04 and consent, use development-only graph and physical baseline data to preregister intervals before test outcomes. Keep nulls if uncalibrated; never transfer gains reported by prior work.",
+  "forecast_intervals": {
+    "effect_ns": null,
+    "runtime_ratio": null,
+    "reason": "No topic-level experimental measurements or calibrated prior distribution; fabricating quantiles would violate the evidence contract."
+  }
+}

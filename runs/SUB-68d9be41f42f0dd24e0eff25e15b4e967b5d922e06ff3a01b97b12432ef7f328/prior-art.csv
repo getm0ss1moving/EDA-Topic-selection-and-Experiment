@@ -1,0 +1,10 @@
+source_id,task_formulation,mechanism,data,evaluation,assumptions,limitation,overlap_with_proposal,proposed_distinction
+R01,Target minimum owner labels,Subset-state search/inclusion dominance,Robotic graph,No reproduction,Frozen labels,No physical rehoming,Target selection overlaps exactly under reduction,Useful cached checks versus strong composition unknown
+R02,Overflow net release,SAT keep assumptions/UNSAT cores,GR benchmarks,No reproduction,Overflow capacity,Not target reachability,Failure-derived Boolean selection,Predicate differs; generic formulation is conventional
+R03,Constrained roadmap path,Lazy path-edge cuts,Robotic planning,No reproduction,Path validity,Not owner release,Lazy selection/oracle structure,No full equivalence
+R04,Concurrent detailed routing,Binary commodity flow and capacities,Routing cases,No reproduction,Declared rule model,No fixed-clean-route benefit established,Joint reconstruction,Cut selector only remains hypothetical distinction
+R05,Incremental routing,Reservations and existing-wire backup,Industrial paper instances,No reproduction,Routing-cost graph,No product code,Blocker displacement/preservation,Cut amortization value unresolved
+R10,Global routing,README GPU timing routing,ISPD25 origin,README only,CUDA,Core policy unread,Winner-neighborhood lead,Different workflow not drop-in baseline
+R12,Standard-cell transistor routing,Decision-guided SAT and whole-net backjumping,Commercial cells in paper,No reproduction,Rule-SAT encoding,Different task/data access,Conflict-guided net removal,Fixed-clean-route timing value unknown
+R13,General subgraph selection including MCR representation,DoM reward/penalty heuristic,Six graph families,No reproduction,Scoring formulation,No R3 workload evaluation checked,Owner-removal reachability selection,Same-budget usefulness unknown
+R14,FPGA post-route timing ECO,Validation-gated checkpoint actions,FPGA checkpoints per abstract,Abstract only,Vivado/RapidWright,Not fixed ASIC owner selection,Transaction validation,Mechanism equivalence not established

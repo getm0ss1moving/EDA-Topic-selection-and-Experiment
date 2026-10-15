@@ -1,0 +1,10 @@
+{
+  "role": "verifier",
+  "reviewed_proposer_release": "SUB-ef21f90bce1ab37f7cc070a9f312bd0474a5b7ff3f9537ccfbf67dc25bb4c05a",
+  "adjudicated_challenger_releases": [
+    "SUB-68d9be41f42f0dd24e0eff25e15b4e967b5d922e06ff3a01b97b12432ef7f328"
+  ],
+  "next_action": "park",
+  "batch_round": 3,
+  "reason": "Park for unresolved scientific novelty/utility/headroom/readiness after three substantive cycles. No active blocking documentary OBJ remains. This is evidence-backed non-acceptance, not refutation or joint abandonment; fourth bounded cycle remains available for final closeout under owner batch policy."
+}
