@@ -1,0 +1,6 @@
+source_id,task,mechanism,overlap,distinction,limits
+S01,constrained BO,two-step posterior lookahead,same scheduling principle,physical W not established here,independent objective/constraint priors
+S02,gate sizing,offset calibration/incremental optimization,strong cheap mean baseline,no identical W covariance identified,historical settings
+S03,physical gate sizing,electrical directional gradients/multilevel calibration,physical slew/load features,residual-conditioned selective evaluation not established as identical,different global flow/hardware
+S07,experimental design,online lookahead scenario planning,planning is not new,different information objective,abstract only
+S09,contest winner,reported hybrid signoff/gradient approach,hybrid architecture already advertised,precise mechanism unknown,institutional announcement only

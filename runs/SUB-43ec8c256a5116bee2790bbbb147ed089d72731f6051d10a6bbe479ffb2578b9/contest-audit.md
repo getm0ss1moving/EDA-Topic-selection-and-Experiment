@@ -1,0 +1,11 @@
+# Contest and winner-method audit, R3
+
+Current reads T11/T12/T13/T14 cover the official 2026 contest paper, winner list, pinned 2027 README and actual program-link destinations. T11 section2.3 states single-corner ideal-clock late/setup context; section2.2 names VT swapping and the three library variant categories. These define context only. They do not prove this consumer has three alternate legal candidates, authorize benchmark use, allocate compute or expand the anchored topic. T13's newer title is MCMM post-CTS; that is context, not an accepted scope pivot or a completed 2027 outcome.
+
+T12 identifies IRISLab, PTSD and HLFC as 2026 winners; no algorithm is authenticated from team identities. T14's request for the 2026 program redirects to a 2027 route displaying a 2026 program. Its contest-summary slide link91 actually points to https://www.ispd.cc/slides/2025/protected/16_1_slides.pdf, and the reader rejects its reported122920554-byte length. The path year is a mismatch; the deck content was not inspected and cannot be certified as either a 2026 winner report or a different-year method. No authentication or size-limit bypass was attempted. Earlier wrong-year deck observations stay historical.
+
+T08 is a separate DAC2026 paper evaluating ICCAD2025 winner flows in section4.2. It is not an ISPD2026 winner method. Its runtime-comparability qualification is another reason not to import author gains or machine comparisons into this dossier. Current strongest winner equivalence remains unresolved after bounded team/program/citation expansion. Historical evaluator/contest entries in sources.json are not refreshed approvals.
+
+Novelty must be the useful residual physical-W system tradeoff under fair information/cost, beyond strong calibration and provided contest ideas. Reproducing an organizer task, hint, baseline or winner is insufficient. Missing winner access does not imply novelty. Required EXP-001 resolution: team-authenticated papers/slides/code, exact edition/version, information/cost contract and overlap with the proposed W construction. Current failure is candidly preserved.
+
+Locators: raw UTF-8 code uses one-based lines and recorded SHA256; PDFs use one-based physical pages plus section/equation. Web rendering lines are zero-based and are never raw source numbers. Full-paper files are not released.
