@@ -2,12 +2,12 @@
 
 ## Objective
 
-Identify a concrete EDA bottleneck; map the closest prior solutions; locate a demonstrable limitation; propose a causal mechanism; define a falsifiable hypothesis and a feasible experiment. Cover Agentic EDA, AI for EDA, and traditional algorithmic EDA without preferring an AI component for its own sake.
+Identify a concrete EDA bottleneck; map the closest prior solutions; locate a demonstrable limitation; propose a causal mechanism; define a falsifiable hypothesis and a feasible experiment. Cover Agentic EDA, AI for EDA, and traditional algorithmic EDA. High-quality combinations of agents, learned models and traditional/exact methods are eligible alongside structural innovations. Explore both fragmented-to-unified prediction and unified-to-specialized/hybrid analysis without assuming either architecture wins. Apply [the innovation strategy](INNOVATION-STRATEGY.md): prefer a useful, evidenced contribution over method labels.
 
 ## Hard gates
 
 - Novelty: identify the nearest papers, implementations, contest statements and winner solutions. Search terminology variants and citation neighborhoods. A missing search result is not proof of novelty.
-- Nontrivial contribution: a combination must produce a new mechanism, interaction, formulation, guarantee, or demonstrated capability unavailable from a straightforward composition. Structural novelty also needs evidence and utility.
+- Nontrivial contribution: a combination may contribute a new interaction, formulation, guarantee, cost/reliability tradeoff or demonstrated useful capability beyond the strongest applicable prior systems and straightforward composition under comparable conditions. Components may be known; a systems contribution need not prove mathematical novelty or super-additive gains. Merely assembling components or adding compute is insufficient. Structural novelty also needs evidence and utility.
 - Engineering utility: specify the user, workflow stage, decision, deployment constraints and meaningful improvement threshold. A proxy alone is insufficient without a measured relation to the downstream objective.
 - Remaining headroom: distinguish a proven lower bound, a bound under restrictive assumptions, an empirical plateau and a compute-limited baseline. A claim of saturation needs its assumptions and residual gap. Challengers bear the same evidence burden as proposers.
 - Contest originality: implementing a supplied baseline, organizer hint, known winner approach, or unfinished task is not by itself a research contribution. A new limitation beyond the given idea may qualify if explicitly demonstrated.
@@ -17,7 +17,9 @@ Identify a concrete EDA bottleneck; map the closest prior solutions; locate a de
 
 ## Direction-drift penalty
 
-Score two penalties independently on every substantive revision: `combination_drift` and `demand_drift`, each from 0 to 3. Zero preserves the anchor. One is a minor implementation-level drift that still preserves the causal mechanism and downstream need. Two means the proposed contribution has materially become a straightforward composition, or its objective has shifted to a weakly justified proxy/user need. Three means the original research question has effectively been replaced. Penalties are lexicographic governance constraints: reported PPA, runtime, model score, or search convenience cannot compensate for them. Any component at 2 or above, or total at 3 or above, blocks further experimental advancement until the original anchor is restored or a joint-abandonment review begins. Accepted topics require a total of zero.
+Score two penalties independently on every substantive revision: `combination_drift` and `demand_drift`, each from 0 to 3. These measure unsupported degradation of the frozen contribution or need, not whether the method is a combination. Zero preserves the anchor, including justified component reuse and implementation repairs. One records a small, evidence-backed but unresolved departure or weakening; ordinary anchor-preserving improvements do not automatically earn a penalty. Two means the contribution has materially been replaced by unsupported straightforward assembly, or its objective has shifted to a weakly justified proxy/user need. Three means the original research question has effectively been replaced. A supported useful combination can score zero. A genuinely different mechanism receives a new topic ID with predecessor evidence retained.
+
+Penalties are lexicographic governance constraints: reported PPA, runtime, model score, or search convenience cannot compensate for them. Any component at 2 or above, or total at 3 or above, blocks further experimental advancement until the original anchor is restored or a joint-abandonment review begins. Accepted topics require a total of zero. Historical frozen scores and verdicts are not retroactively rewritten by this clarification.
 
 ## Joint abandonment
 

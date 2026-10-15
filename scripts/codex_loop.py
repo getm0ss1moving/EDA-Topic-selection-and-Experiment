@@ -33,7 +33,7 @@ project = module('project')
 ROLES = ('proposer', 'challenger', 'verifier')
 COVERAGE = {'duplicate_prior_art','mechanism','composition','demand','industry_gap',
             'headroom','contests','experiments','cost'}
-COMMON = ('CHARTER', 'WORKFLOW', 'EVIDENCE', 'ISOLATION', 'AUTO-ROUND', 'SELF-SUBMISSION', 'CODEX-AUTOMATION')
+COMMON = ('CHARTER', 'WORKFLOW', 'EVIDENCE', 'ISOLATION', 'AUTO-ROUND', 'SELF-SUBMISSION', 'CODEX-AUTOMATION', 'INNOVATION-STRATEGY')
 FINAL = {'type':'object','properties':{'status':{'type':'string','enum':['complete','blocked']},
          'release_id':{'type':['string','null']},'reason':{'type':'string'}},
          'required':['status','release_id','reason'],'additionalProperties':False}

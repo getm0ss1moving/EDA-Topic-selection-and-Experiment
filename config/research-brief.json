@@ -92,5 +92,21 @@
   "human_owner": "getm0ss1moving",
   "max_review_rounds": 4,
   "feasibility_status": "Infrastructure smoke verified; topic-level R1 feasibility remains conditional on representative designs, baseline reproduction, domain oracle and role review.",
-  "review_policy": "Owner-authorized bounded batch: D04 and D05 run concurrently; each domain stops after four completed proposer/challenger/verifier cycles, including any successor candidates. Report unresolved evidence honestly."
+  "review_policy": "Owner-authorized bounded batch: D04 and D05 run concurrently; each domain stops after four completed proposer/challenger/verifier cycles, including any successor candidates. Report unresolved evidence honestly.",
+  "innovation_policy": {
+    "decided_by": "human owner",
+    "decided_on": "2026-10-15",
+    "preference": "Seek high-quality combination contributions and, where supported, structural innovations for chip EDA.",
+    "eligible_routes": [
+      "Agentic EDA and cooperating algorithmic agents",
+      "AI for EDA: fragmented-to-unified prediction",
+      "Unified-to-specialist or learned/traditional/exact hybrid methods",
+      "Traditional EDA and cross-stage system contributions"
+    ],
+    "assessment": "Test the claimed useful system-level delta against strong applicable prior systems and straightforward composition; do not reject known components by category.",
+    "combination_drift": "Unsupported degradation of the frozen contribution, not a penalty for using combinations.",
+    "precision_contract": "Distinguish approximate prediction, probabilistic guarantees and scoped engine-relative exactness.",
+    "strategy_document": "docs/INNOVATION-STRATEGY.md",
+    "execution_effect": "Direction clarification only; no restart of the completed bounded batch, new resource allocation or change to historical frozen decisions."
+  }
 }

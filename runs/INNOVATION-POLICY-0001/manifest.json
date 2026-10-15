@@ -1,0 +1,31 @@
+{
+  "run_id": "INNOVATION-POLICY-0001",
+  "kind": "coordinator governance clarification, not scientific verification",
+  "input_commit": "c8bed32e65c8fd306b3f8f6b3d14939a357522d3",
+  "owner_directive": "Seek high-quality combinations and structural innovations, including multiple EDA agents, unified prediction and selective specialist/exact alternatives.",
+  "scope": "Future policy/harness/template/packet delivery only. Historical scientific outputs and completed runtime unchanged.",
+  "changed_files": {
+    "README.md": "54a8c31f2e63d344eba74e1b66335cf4682ce67f187a4d51696a24e156f18051",
+    "config/research-brief.json": "b00d032ec53d941a7753d0001bacbf4e12d0d37067cee83ba3274466cf2090ce",
+    "docs/CHARTER.md": "bd179c76f4013c93e6c9cec54eb316c5ab552841f388263b1d8b3d9a6bb3fb25",
+    "docs/CODEX-AUTOMATION.md": "bb536c0c65c52c579672ab9584f148888c4be965cd9505c6daa6d8238527affb",
+    "docs/INNOVATION-STRATEGY.md": "de5db6d33f2322ee0e2c912bc9d2d9fbde8b3595edc25ef0e28ce1c9c1ae60da",
+    "harness/PROPOSER.md": "11336ae728fbcdb3545b9d2734b65219e2dc1ed3e5ae69d3ca227f53d2c3f828",
+    "harness/CHALLENGER.md": "16129155ff4206e94f7bbe5e32135a2c60cb6c644d6ef367423f96f19b26f093",
+    "harness/VERIFIER.md": "9dff0b6500d582cac8ba8620f384e49c2cba6b4884dabb87433d4b666711e101",
+    "scripts/codex_loop.py": "d9db3f5c7689612cb08efbad465128ac5df55170c4af0ae932544994877a18a9",
+    "templates/topic/direction-control.json": "5ded2e047261cae2328c09434510f14a25ad5f9ec648f96251c4781ff6dc9ad9",
+    "templates/topic/experiment-plan.md": "641d5149a76993df46943a8f5677b158e91dff7fabb576db53a658375d42de35",
+    "templates/topic/proposal.md": "a0b1b759ee9a05ce3dc684214706f425da52c18bf520410d8a4e4aaf8b021d97",
+    "tests/test_codex_loop.py": "f3be70c1f5a8bf47143ee63c7eceb0e2549752700e2b50c1938f7e7ac0f33651"
+  },
+  "research_access": "Primary abstracts/metadata for four papers plus selected full official OpenROAD documentation, sources and limits in docs/INNOVATION-STRATEGY.md. Not a novelty verdict.",
+  "validation": [
+    "112 unit tests passed; new test verifies all three role packets include the strategy and exclude foreign harnesses.",
+    "python3 scripts/project.py validate passed",
+    "git diff --check passed"
+  ],
+  "live_model_roles_started": 0,
+  "experiments_started": 0,
+  "new_resources_allocated": false
+}
