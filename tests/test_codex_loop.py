@@ -63,6 +63,23 @@ class LoopTests(unittest.TestCase):
             self.assertEqual([p.name for p in (packet/'harness').iterdir()],
                              [role.upper()+'.md'])
             l.verify_packet(seat)
+    def test_custom_batch_brief_reaches_all_roles_and_job(self):
+        c=dict(self.c,batch_brief='docs/INNOVATION-BATCH-0002.md')
+        with patch.object(l,'frozen',side_effect=lambda ref,name:(ROOT/name).read_bytes()):
+            state=l.prepare(c,self.home/'custom',l.git('rev-parse','HEAD'))
+        t=state['topics']['EDA-0002']
+        for seat in t['seats'].values():
+            self.assertEqual((Path(seat['packet'])/c['batch_brief']).read_bytes(),
+                             (ROOT/c['batch_brief']).read_bytes())
+            l.verify_packet(seat)
+        job=l.job_for(state,t,c);work=Path(job['work'])
+        self.assertEqual(l.read(work/'JOB.json')['batch_brief'],c['batch_brief'])
+        self.assertIn('policy/'+c['batch_brief'],(work/'prompt.txt').read_text())
+    def test_batch_brief_cannot_escape_docs(self):
+        for i,name in enumerate(('../AGENTS.md','/tmp/brief.md','.','harness/VERIFIER.md')):
+            with self.subTest(name=name),patch.object(l,'frozen',side_effect=lambda ref,name:(ROOT/name).read_bytes()):
+                with self.assertRaises(ValueError):
+                    l.prepare(dict(self.c,batch_brief=name),self.home/f'invalid-{i}',l.git('rev-parse','HEAD'))
     def test_three_roles_then_proposer_without_human_wakeup(self):
         self.assertEqual(self.tick()['next_role'],'challenger')
         self.assertEqual(self.tick()['next_role'],'verifier')
