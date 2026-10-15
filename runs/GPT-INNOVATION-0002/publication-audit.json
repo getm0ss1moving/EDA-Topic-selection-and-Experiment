@@ -1,0 +1,203 @@
+{
+  "checked_at_utc": "2026-10-15T12:40:14.158589+00:00",
+  "public_main_commit": "bc3b00bc42a3d6821bd8cffb74297bb2b992e0f1",
+  "releases": [
+    {
+      "manifest_sha256": "5dc96f7c6ba6ea7f2d1cf5940be29d9cd08da069e1694ce3b7822e6c4f6e4243",
+      "payload_files": 12,
+      "release_id": "SUB-5dc96f7c6ba6ea7f2d1cf5940be29d9cd08da069e1694ce3b7822e6c4f6e4243",
+      "role": "proposer",
+      "runtime_bytes_identical": true,
+      "topic": "EDA-0005"
+    },
+    {
+      "manifest_sha256": "5596d53194873abeed4cccdb0d140e212c4ec8bf398a28f1c76c16800085c45b",
+      "payload_files": 7,
+      "release_id": "SUB-5596d53194873abeed4cccdb0d140e212c4ec8bf398a28f1c76c16800085c45b",
+      "role": "challenger",
+      "runtime_bytes_identical": true,
+      "topic": "EDA-0005"
+    },
+    {
+      "manifest_sha256": "13665529cc044fd6c0fbcc0952a154cf8a2bba4ae1d47ebd80ce3c1a0bd81011",
+      "payload_files": 3,
+      "release_id": "SUB-13665529cc044fd6c0fbcc0952a154cf8a2bba4ae1d47ebd80ce3c1a0bd81011",
+      "role": "verifier",
+      "runtime_bytes_identical": true,
+      "topic": "EDA-0005"
+    },
+    {
+      "manifest_sha256": "be8b1d040fc4856fb38e189557fdbca28beaa904fcfdb148ddc05666e3c9d8cf",
+      "payload_files": 12,
+      "release_id": "SUB-be8b1d040fc4856fb38e189557fdbca28beaa904fcfdb148ddc05666e3c9d8cf",
+      "role": "proposer",
+      "runtime_bytes_identical": true,
+      "topic": "EDA-0005"
+    },
+    {
+      "manifest_sha256": "5d47dfbc9c38c726d5892ca2972adb974de68113b05a8b611481a1c3c2938b3c",
+      "payload_files": 7,
+      "release_id": "SUB-5d47dfbc9c38c726d5892ca2972adb974de68113b05a8b611481a1c3c2938b3c",
+      "role": "challenger",
+      "runtime_bytes_identical": true,
+      "topic": "EDA-0005"
+    },
+    {
+      "manifest_sha256": "0ab1e723b03d1e3c6afe2f93f637593d4eb24d8d9012ea42d53269c0994b2b6c",
+      "payload_files": 3,
+      "release_id": "SUB-0ab1e723b03d1e3c6afe2f93f637593d4eb24d8d9012ea42d53269c0994b2b6c",
+      "role": "verifier",
+      "runtime_bytes_identical": true,
+      "topic": "EDA-0005"
+    },
+    {
+      "manifest_sha256": "0560b970e5efe91097368175b0f509b124d01d846ca8ced996b75c2739f69e33",
+      "payload_files": 12,
+      "release_id": "SUB-0560b970e5efe91097368175b0f509b124d01d846ca8ced996b75c2739f69e33",
+      "role": "proposer",
+      "runtime_bytes_identical": true,
+      "topic": "EDA-0005"
+    },
+    {
+      "manifest_sha256": "a2e3f91bd8e03f63cd17d7b3fb585c6d436d33908305d5ee7d7f618bbd6f9d12",
+      "payload_files": 7,
+      "release_id": "SUB-a2e3f91bd8e03f63cd17d7b3fb585c6d436d33908305d5ee7d7f618bbd6f9d12",
+      "role": "challenger",
+      "runtime_bytes_identical": true,
+      "topic": "EDA-0005"
+    },
+    {
+      "manifest_sha256": "db9c674a154f7674a72a250d36002a9fa72009a59f84944ef72aaa90d3037a33",
+      "payload_files": 3,
+      "release_id": "SUB-db9c674a154f7674a72a250d36002a9fa72009a59f84944ef72aaa90d3037a33",
+      "role": "verifier",
+      "runtime_bytes_identical": true,
+      "topic": "EDA-0005"
+    },
+    {
+      "manifest_sha256": "169c721aec094e48787e49a1cb3da4fd5840b5c2aeb1dcddbd7ba51101ee78dc",
+      "payload_files": 12,
+      "release_id": "SUB-169c721aec094e48787e49a1cb3da4fd5840b5c2aeb1dcddbd7ba51101ee78dc",
+      "role": "proposer",
+      "runtime_bytes_identical": true,
+      "topic": "EDA-0006"
+    },
+    {
+      "manifest_sha256": "29c37dc5d77c7f982c6e5983e65e4653a71d75c8278dd50a3b7f17c2f1a0cd10",
+      "payload_files": 7,
+      "release_id": "SUB-29c37dc5d77c7f982c6e5983e65e4653a71d75c8278dd50a3b7f17c2f1a0cd10",
+      "role": "challenger",
+      "runtime_bytes_identical": true,
+      "topic": "EDA-0006"
+    },
+    {
+      "manifest_sha256": "8001e5f9df9ea0a26943e0c9d3710bfcacc170bcf01623dd198adeb57f63478f",
+      "payload_files": 3,
+      "release_id": "SUB-8001e5f9df9ea0a26943e0c9d3710bfcacc170bcf01623dd198adeb57f63478f",
+      "role": "verifier",
+      "runtime_bytes_identical": true,
+      "topic": "EDA-0006"
+    },
+    {
+      "manifest_sha256": "a18df7c82355639157174a8f957f294a4dabd4f66f741c76001694948aed326c",
+      "payload_files": 12,
+      "release_id": "SUB-a18df7c82355639157174a8f957f294a4dabd4f66f741c76001694948aed326c",
+      "role": "proposer",
+      "runtime_bytes_identical": true,
+      "topic": "EDA-0006"
+    },
+    {
+      "manifest_sha256": "de19f2a38b3e2fcbf5d5b7871f119e8bf7b869b7568889c777cc45228e942c91",
+      "payload_files": 7,
+      "release_id": "SUB-de19f2a38b3e2fcbf5d5b7871f119e8bf7b869b7568889c777cc45228e942c91",
+      "role": "challenger",
+      "runtime_bytes_identical": true,
+      "topic": "EDA-0006"
+    },
+    {
+      "manifest_sha256": "91607fe56d889209b6e7be4232bb7993e669dba37c9435c995712d22b4a249e2",
+      "payload_files": 3,
+      "release_id": "SUB-91607fe56d889209b6e7be4232bb7993e669dba37c9435c995712d22b4a249e2",
+      "role": "verifier",
+      "runtime_bytes_identical": true,
+      "topic": "EDA-0006"
+    },
+    {
+      "manifest_sha256": "d429cded9cc5d08dd46bf714e509bafc839b7ebbbeded9ba13c9e3e58263149c",
+      "payload_files": 12,
+      "release_id": "SUB-d429cded9cc5d08dd46bf714e509bafc839b7ebbbeded9ba13c9e3e58263149c",
+      "role": "proposer",
+      "runtime_bytes_identical": true,
+      "topic": "EDA-0006"
+    },
+    {
+      "manifest_sha256": "c00a87f1c49c2d945b61ffeb51538575f5c672bf677495595ef34be539daf613",
+      "payload_files": 8,
+      "release_id": "SUB-c00a87f1c49c2d945b61ffeb51538575f5c672bf677495595ef34be539daf613",
+      "role": "challenger",
+      "runtime_bytes_identical": true,
+      "topic": "EDA-0006"
+    },
+    {
+      "manifest_sha256": "0c53ae6e96e1b411248d73dae700fc0028ed69b1d674e0bc1c0cf52d507ba371",
+      "payload_files": 3,
+      "release_id": "SUB-0c53ae6e96e1b411248d73dae700fc0028ed69b1d674e0bc1c0cf52d507ba371",
+      "role": "verifier",
+      "runtime_bytes_identical": true,
+      "topic": "EDA-0006"
+    },
+    {
+      "manifest_sha256": "e0cef865c5877d07c062554b61e073024cb0f6ed28b7ef45f31c19d7a5cb335a",
+      "payload_files": 12,
+      "release_id": "SUB-e0cef865c5877d07c062554b61e073024cb0f6ed28b7ef45f31c19d7a5cb335a",
+      "role": "proposer",
+      "runtime_bytes_identical": true,
+      "topic": "EDA-0007"
+    },
+    {
+      "manifest_sha256": "373c606bec3ab48f9ff6871096ef98823c923e7a784f7873c19f1ddea7ca1b1c",
+      "payload_files": 7,
+      "release_id": "SUB-373c606bec3ab48f9ff6871096ef98823c923e7a784f7873c19f1ddea7ca1b1c",
+      "role": "challenger",
+      "runtime_bytes_identical": true,
+      "topic": "EDA-0007"
+    },
+    {
+      "manifest_sha256": "f1c9f13a026274de52f4988e533f9ccc40d00088efdf163f11c15edfebd76c47",
+      "payload_files": 3,
+      "release_id": "SUB-f1c9f13a026274de52f4988e533f9ccc40d00088efdf163f11c15edfebd76c47",
+      "role": "verifier",
+      "runtime_bytes_identical": true,
+      "topic": "EDA-0007"
+    },
+    {
+      "manifest_sha256": "1c2deaff2701f8108c4f9d6fdca3298698c7aa4a8273f9e9036232c12bde533c",
+      "payload_files": 12,
+      "release_id": "SUB-1c2deaff2701f8108c4f9d6fdca3298698c7aa4a8273f9e9036232c12bde533c",
+      "role": "proposer",
+      "runtime_bytes_identical": true,
+      "topic": "EDA-0008"
+    },
+    {
+      "manifest_sha256": "a602a69c8d241294ba08a561d4471f2945f3416673b66de648bb72e6c31b9f97",
+      "payload_files": 7,
+      "release_id": "SUB-a602a69c8d241294ba08a561d4471f2945f3416673b66de648bb72e6c31b9f97",
+      "role": "challenger",
+      "runtime_bytes_identical": true,
+      "topic": "EDA-0008"
+    },
+    {
+      "manifest_sha256": "177346f5d1b164d8184704393d6b7f5f9b7cd7524a06d2d8e7950d7e7ee7bd4b",
+      "payload_files": 3,
+      "release_id": "SUB-177346f5d1b164d8184704393d6b7f5f9b7cd7524a06d2d8e7950d7e7ee7bd4b",
+      "role": "verifier",
+      "runtime_bytes_identical": true,
+      "topic": "EDA-0008"
+    }
+  ],
+  "scope": "All 24 frozen submissions reopened from public origin/main; all payload and manifest bytes identical to collected runtime releases, regular files only.",
+  "source_branch": "refs/heads/codex/gpt-innovation-source-20261015",
+  "source_commit": "f68c1492c05be3fac5622deac4bb479eabf957de",
+  "source_tag": "refs/tags/codex/gpt-innovation-source-20261015",
+  "verified_release_count": 24
+}

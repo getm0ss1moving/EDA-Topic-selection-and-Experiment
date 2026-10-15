@@ -1,9 +1,9 @@
 {
   "completed_cycles": {
-    "D04": 3,
-    "D05": 3
+    "D04": 4,
+    "D05": 4
   },
-  "completed_rounds": 6,
+  "completed_rounds": 8,
   "coordinator_script_sha256_at_audit": "1439ff6bfc5183cd1a3651f8e2fde2f34f96d0fd09648df4320dacc26315bf22",
   "input_commit": "f68c1492c05be3fac5622deac4bb479eabf957de",
   "jobs": [
@@ -984,19 +984,23 @@
     "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/48",
     "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/49",
     "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/50",
-    "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/51"
+    "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/51",
+    "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/52",
+    "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/53"
   ],
   "published": {
     "SUB-0ab1e723b03d1e3c6afe2f93f637593d4eb24d8d9012ea42d53269c0994b2b6c": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/49",
     "SUB-0c53ae6e96e1b411248d73dae700fc0028ed69b1d674e0bc1c0cf52d507ba371": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/50",
     "SUB-13665529cc044fd6c0fbcc0952a154cf8a2bba4ae1d47ebd80ce3c1a0bd81011": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/47",
+    "SUB-177346f5d1b164d8184704393d6b7f5f9b7cd7524a06d2d8e7950d7e7ee7bd4b": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/53",
     "SUB-8001e5f9df9ea0a26943e0c9d3710bfcacc170bcf01623dd198adeb57f63478f": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/46",
     "SUB-91607fe56d889209b6e7be4232bb7993e669dba37c9435c995712d22b4a249e2": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/48",
-    "SUB-db9c674a154f7674a72a250d36002a9fa72009a59f84944ef72aaa90d3037a33": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/51"
+    "SUB-db9c674a154f7674a72a250d36002a9fa72009a59f84944ef72aaa90d3037a33": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/51",
+    "SUB-f1c9f13a026274de52f4988e533f9ccc40d00088efdf163f11c15edfebd76c47": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/52"
   },
   "scope": "Released bytes and coordinator metadata; not scientific truth or OS confinement.",
   "snapshot_note": "Hashes reflect this audit; requested models are not independently attested.",
-  "status": "in_progress",
+  "status": "bounded_batch_complete",
   "verified_releases": [
     {
       "file_count": 12,
@@ -1159,6 +1163,14 @@
       "topic": "EDA-0007"
     },
     {
+      "file_count": 3,
+      "release_id": "SUB-f1c9f13a026274de52f4988e533f9ccc40d00088efdf163f11c15edfebd76c47",
+      "role": "verifier",
+      "session_id": "70cb4f98-b54d-4c6d-add6-4d862ef9f663",
+      "submission_manifest_sha256": "f1c9f13a026274de52f4988e533f9ccc40d00088efdf163f11c15edfebd76c47",
+      "topic": "EDA-0007"
+    },
+    {
       "file_count": 12,
       "release_id": "SUB-1c2deaff2701f8108c4f9d6fdca3298698c7aa4a8273f9e9036232c12bde533c",
       "role": "proposer",
@@ -1172,6 +1184,14 @@
       "role": "challenger",
       "session_id": "f97dd41a-b8f4-4ed4-8073-c18281254f38",
       "submission_manifest_sha256": "a602a69c8d241294ba08a561d4471f2945f3416673b66de648bb72e6c31b9f97",
+      "topic": "EDA-0008"
+    },
+    {
+      "file_count": 3,
+      "release_id": "SUB-177346f5d1b164d8184704393d6b7f5f9b7cd7524a06d2d8e7950d7e7ee7bd4b",
+      "role": "verifier",
+      "session_id": "6d337b5b-f9f0-44f8-aa22-8aeea66b2301",
+      "submission_manifest_sha256": "177346f5d1b164d8184704393d6b7f5f9b7cd7524a06d2d8e7950d7e7ee7bd4b",
       "topic": "EDA-0008"
     }
   ]

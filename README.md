@@ -10,7 +10,7 @@ Current research preference: [useful combinations and structural innovation](doc
 
 1. Read [the charter](docs/CHARTER.md), [workflow](docs/WORKFLOW.md), and [isolation policy](docs/ISOLATION.md).
 2. The human owner fills [the research brief](config/research-brief.json), including domain, compute, tools, datasets, and publication constraints. Unknown constraints remain explicitly unknown.
-3. After the governance pause is explicitly released, enroll independent sessions using [the coordinator runbook](harness/COORDINATOR.md). Proposer, challenger, and verifier have separate harnesses and file packets.
+3. Follow [the active automation contract](docs/CODEX-AUTOMATION.md) for separate logical seats, fresh role jobs and released-file transport. A completed finite batch is not authorization for another batch; use a new bounded owner brief rather than resetting its counters.
 4. Create a draft: `python3 scripts/project.py init EDA-0001`.
 5. Produce and contest evidence through PRs. Only confirmed dossiers enter `topics/`.
 6. Validate with `python3 scripts/project.py validate` and `python3 -m unittest discover -s tests -v`.
@@ -35,11 +35,13 @@ All research artifacts, role interactions, and technical reviews use English. Hu
 
 ## Current status
 
-The 2026-10-15 bounded ChatGPT batch completed four full proposer/challenger/verifier cycles per domain for D04 and D05: eight rounds and 24 hash-verified role releases. Each original topic was parked after three cycles; one separately numbered successor per domain received the final cycle. Both successors were also parked. No topic passed experimental admission, no joint-abandonment signatures were fabricated, and no EDA experiment or fifth cycle was launched.
+The new innovation batch `GPT-INNOVATION-0002` completed four full proposer/challenger/verifier cycles per domain for D04 and D05: eight merged round PRs and 24 hash-verified role releases. EDA-0005 and EDA-0006 were parked after three cycles; the final cycle independently reviewed successor EDA-0008 (physical action-order prediction) and EDA-0007 (electrical-contrast modeling for selective timing evaluation). Both successors were also parked with concrete revision and reopening conditions. No topic passed experimental admission, no joint-abandonment signatures were fabricated, and no new EDA experiment or fifth cycle was launched.
 
-Read the owner's requested [Chinese topic report](reports/final/GPT-FOUR-ROUNDS-20261015.zh-CN.md), [round/release index](runs/GPT-FOUR-ROUNDS-0001/topic-index.json), and [release audit](runs/GPT-FOUR-ROUNDS-0001/release-audit.json). Scientific originals remain English. Current models are proposer gpt-6.1-sol/high, challenger gpt-6-astra/low, verifier gpt-6.1-sol/low. The batch used fresh app agents; no running unattended service is claimed.
+Read the latest [Chinese topic report](reports/final/GPT-INNOVATION-0002.zh-CN.md), [round/release index](runs/GPT-INNOVATION-0002/topic-index.json), [public-byte audit](runs/GPT-INNOVATION-0002/publication-audit.json) and [actual stop check](runs/GPT-INNOVATION-0002/stop-check.json). Scientific originals remain English. Requested models are proposer gpt-6.1-sol/high, challenger gpt-6-astra/low, verifier gpt-6.1-sol/low. Each job used a fresh app agent; no running unattended service or independently attested backend identity is claimed.
 
-The scope is academic chip EDA using public or legitimately accessible research material. Public vendor information does not establish the absence of proprietary capabilities. The [scope/event record](runs/GPT-FOUR-ROUNDS-0001/SCOPE.md) distinguishes an automatic platform flag from intermittent publication TLS failures.
+The earlier batch `GPT-FOUR-ROUNDS-0001` and its [Chinese report](reports/final/GPT-FOUR-ROUNDS-20261015.zh-CN.md) remain historical. The new innovation strategy does not rewrite its frozen scores, decisions or signatures.
+
+The scope is academic chip EDA using public or legitimately accessible research material. Public vendor information does not establish the absence of proprietary capabilities. The current [runtime-event record](runs/GPT-INNOVATION-0002/runtime-incidents.json) preserves a platform classification interruption and a same-verifier inventory repair; neither was counted as a completed round before valid collection.
 
 Repository: https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment
 
