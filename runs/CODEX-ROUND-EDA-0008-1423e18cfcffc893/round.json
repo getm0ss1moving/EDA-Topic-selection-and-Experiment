@@ -2,6 +2,7 @@
   "compliance_audit": "runs/SUB-1d05911d8e35b90fb0e6991b4d15e1cb7ed17fe0859b2a1a7316091a6778695c",
   "compliance_gate": "nonblocking_findings",
   "decision": "revise",
+  "descriptor_manifest": "runs/CODEX-ROUND-EDA-0008-1423e18cfcffc893/DESCRIPTORS.json",
   "mechanical_releases": [
     "runs/SUB-c8a5acd8deacbb1be7f9decbb9890eb5a3d6fc162bd3fb85df94efa8a1c284d3"
   ],
