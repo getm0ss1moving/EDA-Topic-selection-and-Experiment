@@ -1,0 +1,145 @@
+[
+  {
+    "id": "C3-S01",
+    "title": "HyPAS: A Hybrid Optimization Framework for Placement and Sizing Co-Optimization",
+    "url": "https://wuqian-tang.github.io/files/papers/2026-dac-hypas.pdf",
+    "type": "primary_author_paper",
+    "published": "2026-07-26",
+    "retrieved_utc": "2026-10-15T11:54:56.097552+00:00",
+    "access": "full",
+    "locator": "Sections 3.2\u20133.7 and 4; Figure 2",
+    "limitations": "Hybrid comparator; current hold/final-DR equivalence not established; no gains reproduced",
+    "claims": [
+      "OBJ-002"
+    ],
+    "sha256": "d843ea04b2746e449c7ded65ab06bb5f5d9d11f969251962c6feec7bdb930ca0"
+  },
+  {
+    "id": "C3-S02",
+    "title": "OpenROAD Resizer.cc",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/8da6ac250b0349c346d1abed7c2c43107f4ff6f7/src/rsz/src/Resizer.cc",
+    "type": "primary_code",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-15T11:54:56.097640+00:00",
+    "access": "full",
+    "locator": "insertBufferPostProcess lines 6094\u20136118; setLocation 6121\u20136125",
+    "limitations": "Selected source read, not built/run",
+    "claims": [
+      "C3-source-audit"
+    ],
+    "sha256": "ff3adf14a5f8f9059a293b7fbfbf39ce4138f008294c43fd86d6cc46c6024b85"
+  },
+  {
+    "id": "C3-S03",
+    "title": "OpenROAD Place.cpp",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/8da6ac250b0349c346d1abed7c2c43107f4ff6f7/src/dpl/src/Place.cpp",
+    "type": "primary_code",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-15T11:54:56.097642+00:00",
+    "access": "full",
+    "locator": "Opendp::legalCellPos lines 1348\u20131373",
+    "limitations": "May alter coordinates; no whole-program/API-absence claim",
+    "claims": [
+      "C3-source-audit"
+    ],
+    "sha256": "b8eaf11288695842a41ed9ca57ffc39a6d8476410dce81b5459fe52619659542"
+  },
+  {
+    "id": "C3-S04",
+    "title": "Global Interconnect Optimization",
+    "url": "https://www.or.uni-bonn.de/~held/publications/brb_jrnl.pdf",
+    "type": "primary_author_paper",
+    "published": "2023-09-09",
+    "retrieved_utc": "2026-10-15T11:54:56.097643+00:00",
+    "access": "full",
+    "locator": "Sections 2,3.4\u20133.5,4.6; DOI 10.1145/3587044",
+    "limitations": "Selected formulation; no fixed-clock minimum-delay relocation reduction or replicated gain",
+    "claims": [
+      "OBJ-002"
+    ]
+  },
+  {
+    "id": "C3-S05",
+    "title": "A Collaborative Optimization Framework for Timing-Driven Detailed Placement",
+    "url": "https://service.jices.cn/EN/10.20193/j.ices2097-4191.2025.0158",
+    "type": "primary_publisher_abstract",
+    "published": "2026-07-20",
+    "retrieved_utc": "2026-10-15T11:54:56.097644+00:00",
+    "access": "abstract",
+    "locator": "History and Abstract; web lines 69\u201380",
+    "limitations": "LCB-reallocation lead; no full method/code or gain verification",
+    "claims": [
+      "C3-source-audit"
+    ]
+  },
+  {
+    "id": "C3-S06",
+    "title": "OpenROAD repair_timing effort issue 10900",
+    "url": "https://github.com/The-OpenROAD-Project/OpenROAD/issues/10900",
+    "type": "primary_practitioner_issue",
+    "published": "2026-07-13",
+    "retrieved_utc": "2026-10-15T11:54:56.097645+00:00",
+    "access": "full",
+    "locator": "Description and Additional Context / known prototype weaknesses",
+    "limitations": "Anecdotal one-design discussion, no candidate-specific incidence",
+    "claims": [
+      "C3-source-audit"
+    ]
+  },
+  {
+    "id": "C3-S07",
+    "title": "Invited: Post-Placement Buffering and Sizing Contest",
+    "url": "https://vlsicad.ucsd.edu/Publications/Conferences/421/c421.pdf",
+    "type": "official_contest_paper",
+    "published": "2026-03-15",
+    "retrieved_utc": "2026-10-15T11:54:56.097647+00:00",
+    "access": "full",
+    "locator": "Sections 5.2\u20135.3, pp.6\u20137",
+    "limitations": "Future extension is not implemented contest result",
+    "claims": [
+      "C3-source-audit"
+    ]
+  },
+  {
+    "id": "C3-S08",
+    "title": "ISPD26 contest winners and resources",
+    "url": "https://www.ispd.cc/contests/26/index.html",
+    "type": "official_contest",
+    "published": "2026",
+    "retrieved_utc": "2026-10-15T11:54:56.097648+00:00",
+    "access": "full",
+    "locator": "Contest Winners; Contest Resources",
+    "limitations": "Winner names not winning methods; no hidden cases retrieved",
+    "claims": [
+      "C3-source-audit"
+    ]
+  },
+  {
+    "id": "C3-S09",
+    "title": "2026 CAD Contest problems",
+    "url": "https://www.iccad-contest.org/2026/Problems.html",
+    "type": "official_contest",
+    "published": "2026",
+    "retrieved_utc": "2026-10-15T11:54:56.097649+00:00",
+    "access": "full",
+    "locator": "Problem C FloorSet",
+    "limitations": "Index only, not full method audit",
+    "claims": [
+      "C3-source-audit"
+    ]
+  },
+  {
+    "id": "C3-S10",
+    "title": "2025 CAD Contest corrected winners",
+    "url": "https://www.iccad-contest.org/2025/Winners.html",
+    "type": "official_contest",
+    "published": "2025",
+    "retrieved_utc": "2026-10-15T11:54:56.097650+00:00",
+    "access": "full",
+    "locator": "Problem C ranking and correction notice",
+    "limitations": "Full original winning implementation still uninspected",
+    "claims": [
+      "C3-source-audit"
+    ]
+  }
+]
