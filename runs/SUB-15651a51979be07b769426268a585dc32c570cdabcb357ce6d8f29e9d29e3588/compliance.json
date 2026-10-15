@@ -1,0 +1,178 @@
+{
+  "schema": 1,
+  "role": "proposer",
+  "actor_id": "ChatGPT-P04-PHYSICAL-B03-EDA-0008",
+  "session_id": "b68834d9-8d64-4081-8599-01722d58110e",
+  "input_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+  "packet_sha256": "a33f0dab9f9ecf62d70001cc3343663f307218e16e69f418d8843619cab37db3",
+  "job_id": "f059c7d1-1da3-4b27-b373-cf995f205d79",
+  "read_releases": [
+    "SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4",
+    "SUB-1423e18cfcffc89303d1daabf192e80dcb00716aa283af514c89f5bb96058f5e",
+    "SUB-0ddb73ca97e1fc1b27f33363b8b06817e6794e7c7a51e8755934918cc9ef8f02"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0
+  },
+  "rules": {
+    "inputs": {
+      "status": "deviation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "prompt.txt",
+        "search-log.md: Input/provenance and disclosed limits",
+        "compliance.json: incidents[0]"
+      ],
+      "limits": "First JOB/prompt only; then filenames under assigned policy/own-previous/shared enumerated before completing policy text. Contents of released science read only after policy/own harness. This input-order deviation is retained, not erased. No checkout discovery."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md: actual release reads",
+        "compliance.json: activity"
+      ],
+      "limits": "Only assigned/current released outputs and own prior science read; no other role harness/private notes/session/memory or queried parent conversation. Dispatch context includes common user/workspace instructions and assignment. Self-report cannot attest backend freshness/model or unseen actions; no private scientific exposure disclosed."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "release/",
+        "scratch/",
+        "runs/activity.json",
+        "submissions/",
+        "result.json"
+      ],
+      "limits": "All writes remain in this job. Public full papers/result archive stay in scratch, excluded from release. No checkout/foreign actor files/branches edited."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "sources.json: current_job_access/locator/limitations",
+        "search-log.md: queries,original-paper/archive observations",
+        "contest-audit.md"
+      ],
+      "limits": "R09 and R18 access limits genuinely advanced via normal public download flows; failed prior attempts preserved. Selected locators,not exhaustive methods/code coverage; no access bypass,forged nonce,credential retrieval or reproduced chip claim."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "proposal.md: CLM-019/020/021/022",
+        "search-log.md: scalar checker",
+        "forecast.json"
+      ],
+      "limits": "Physical incidence,rank structure,learning/downstream utility remain hypotheses; scalar checker/file counts are labeled own observations. No calibrated performance forecast,universal novelty,commercial shortfall or independent approval claimed."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "experiment-consent.json",
+        "tasklist.md: EXP-000",
+        "workflow.json"
+      ],
+      "limits": "Only own pending consent with null signed revision/hash. Revised bytes need new exact matching P/C consent; no inherited or fabricated agreement or abandonment vote."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "policy/docs/INNOVATION-BATCH-0003.md",
+        "search-log.md: scope",
+        "experiment-plan.md: allocation/cost"
+      ],
+      "limits": "Zero EDA builds/runs/training/paidAPI/GPU/remote/subagent execution. Public source retrieval,PDF text extraction,ZIP member reads and a tiny standard-library random algebra check only. Historical results ZIP is source evidence,not an allocated/rights-cleared experimental dataset."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "direction-control.json",
+        "responses.md: C-T02",
+        "proposal.md: preserved anchor"
+      ],
+      "limits": "Original physical stage,pair,user and post-DR complete-cost endpoint retained. New rank restriction is an explicit candidate within residual/order mechanism and can fail. Author drift=0+0 is not independent merit verification."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "workflow.json",
+        "search-log.md: Outputs and checks",
+        "result.json"
+      ],
+      "limits": "Own trusted freeze/verify and local ledger checks only; no PR creation,approval or merge. Coordinator must perform full-repository validation and publication; freeze does not establish scientific truth."
+    }
+  },
+  "operations": [
+    {
+      "operation": "First read JOB.json and prompt.txt",
+      "references": [
+        "JOB.json",
+        "prompt.txt"
+      ]
+    },
+    {
+      "operation": "Premature filename enumeration inside assigned job then common-policy/own-harness read",
+      "references": [
+        "search-log.md: Input/provenance",
+        "policy/docs/ROLE-COMPLIANCE.md"
+      ],
+      "limits": "INC-P02-001; no scientific contents before policy reading; initial truncated policy output followed by explicit rereads."
+    },
+    {
+      "operation": "Read own previous release and explicitly paired adjudicated current P/C/V files",
+      "references": [
+        "search-log.md: actually read scientific releases"
+      ],
+      "limits": "Only three releases listed in read_releases; older predecessor scientific bytes not reopened."
+    },
+    {
+      "operation": "Independent external primary research and source-only extraction",
+      "references": [
+        "sources.json R01/R04/R06-R09/R13-R18",
+        "search-log.md: exact queries and access attempts"
+      ],
+      "limits": "Downloaded public source code not executed. R09 author PDF and R18 historical result ZIP read normally without authentication/bypass; all payloads excluded from release."
+    },
+    {
+      "operation": "Tiny own scalar and table analytical check",
+      "references": [
+        "search-log.md: code/output",
+        "scratch/contract-result.json"
+      ],
+      "result": "500 random vectors,2000 masked cases; 9 masks,49 observation submasks; rank and direct-ReLU witnesses; no fitting/training/EDA."
+    },
+    {
+      "operation": "Write complete English proposer revision and local run manifest",
+      "references": [
+        "release/",
+        "runs/activity.json"
+      ],
+      "limits": "Preserve historical limits/negative claims; new task/dependency hashes do not create consent."
+    },
+    {
+      "operation": "Local structural/hash/ledger validation and trusted self-freeze/verify",
+      "references": [
+        "policy/scripts/role_submission.py",
+        "policy/scripts/role_compliance.py",
+        "submissions/",
+        "result.json"
+      ],
+      "limits": "Outcome recorded in result.json after completion; coordinator alone handles full-checkout validate/publication."
+    }
+  ],
+  "incidents": [
+    {
+      "id": "INC-P02-001",
+      "rule": "inputs",
+      "kind": "procedural_input_order_deviation",
+      "description": "After first reading only JOB.json/prompt.txt, ran rg --files over assigned policy/,own-previous/,shared/ before completing common-policy text; this enumerated allowed released filenames prematurely. Scientific file contents were not opened before common-policy/own-harness reading.",
+      "scope": "Assigned job filenames only; no checkout/home/session/private-note discovery or private scientific content disclosed.",
+      "action": "Stopped discovery,read required policy and only PROPOSER harness,continued using explicitly released materials; preserve this disclosure for independent protocol audit.",
+      "needs_independent_review": true
+    }
+  ],
+  "observability": "Self-authored public activity ledger, not a complete tool trace, OS audit, backend-model attestation or evidence that unseen undisclosed actions did not occur."
+}

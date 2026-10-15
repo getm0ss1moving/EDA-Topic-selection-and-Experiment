@@ -1,0 +1,7 @@
+{
+  "session_id": "b68834d9-8d64-4081-8599-01722d58110e",
+  "decision": "pending",
+  "signed_revision": null,
+  "tasklist_sha256": null,
+  "rationale": "Revision 2 changes task/dependency/parameter/process contracts and requires independent review. Resources, implementation locks, original winner methods and engineering thresholds remain unresolved; no execution agreement or inherited signature."
+}

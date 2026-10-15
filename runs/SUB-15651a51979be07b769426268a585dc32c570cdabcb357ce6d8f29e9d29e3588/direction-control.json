@@ -1,0 +1,84 @@
+{
+  "state": "continue",
+  "anchor": {
+    "problem": "Select useful order of one width-changing resize and one distinct-cell relocation at legal pre-CTS placement, including per-primitive legalization externalities.",
+    "engineering_user": "Physical implementation engineer deciding the next paired post-placement optimization attempt.",
+    "downstream_need": "Legal equivalent routable post-DR outcome with useful setup/PPA quality per complete iteration cost.",
+    "causal_mechanism": "Predict symmetric joint residual and antisymmetric two-order contrast from current state and frozen intents; communicate to timing/congestion proposal specialists; rank scoped real-tool rollouts and accept only realized checked incumbents.",
+    "mechanism_invariants": [
+      "Exactly two typed edits per pair, single declared PVT and ideal-clock pre-CTS checkpoint",
+      "Action intents frozen at initial state; actual global returned geometry recorded after each legalization",
+      "Only initial deployable features; no untried-order or future-route labels at inference",
+      "Direct same-data nonlinear and conventional adaptive/lookahead baselines; central identical-model equivalence control",
+      "Charge labels training proposals model/tool calls failures restores final suffix; KEEP/FAIL/UNKNOWN explicit",
+      "No claim of multi-agent necessity, new expressivity, exact prediction or global physical optimality"
+    ],
+    "forbidden_pivots": [
+      "Reverting to predecessor hold-repair matching/table admission under this ID",
+      "Generic stage scripting checkpoint reuse transaction support or joint QoR heads as the contribution",
+      "Adding more agents inputs labels compute or a larger model to conceal failed contrast utility",
+      "Switching downstream demand to isolated prediction MSE or HPWL",
+      "Post-CTS hold/multi-corner/IR/signoff guarantee without new evidence and review"
+    ]
+  },
+  "penalties": {
+    "combination_drift": {
+      "score": 0,
+      "rationale": "Same residual/two-order mechanism; fresh-process reference and explicit rank-restricted residual factorization make confounds/inductive bias testable. Known direct bilinear equivalence is acknowledged; useful EDA value remains conditional.",
+      "evidence_refs": [
+        "proposal.md: CLM-018/019/020",
+        "experiment-plan.md: explicit comparator contract",
+        "responses.md: OBJ-101/C-T02"
+      ]
+    },
+    "demand_drift": {
+      "score": 0,
+      "rationale": "Same physical implementation user and complete-cost post-DR endpoint; no switch to matrix rank, MSE or abstract agent count as success.",
+      "evidence_refs": [
+        "industry-gap.md",
+        "EXP-003",
+        "EXP-007"
+      ]
+    },
+    "total": 0
+  },
+  "revision_assessment": {
+    "preserves_problem": true,
+    "preserves_engineering_need": true,
+    "preserves_causal_mechanism": true,
+    "changes": [
+      "Fresh executable process branch-reference contract and differential preflight",
+      "Explicit rank-restricted singleton/common/contrast graph and direct-equivalent identity controls",
+      "New full R09 method access and official Top-3 output-archive directory audit",
+      "Correct ISPD PDF p.6 locator; preserve all prior masks/loss/pre-execution repairs"
+    ],
+    "reason": "Anchor-preserving scientific clarification in additional cycle 2; rank restriction is falsifiable and not claimed established. No different stage/action/demand substituted."
+  },
+  "abandonment": {
+    "decision_id": null,
+    "grounds": [],
+    "rationale": null,
+    "evidence_refs": [],
+    "consents": {
+      "proposer": {
+        "session_id": null,
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      },
+      "challenger": {
+        "session_id": null,
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      }
+    },
+    "successor_topic_id": null,
+    "resurrection_conditions": [
+      "Original-method/code overlap audit beyond output archives",
+      "Physical order incidence and rank-prior diagnostics above repeat noise",
+      "Strong direct/generic-low-rank full-cost downstream comparison",
+      "Actual allocated phases, rights/oracles/thresholds and matching consents"
+    ]
+  }
+}
