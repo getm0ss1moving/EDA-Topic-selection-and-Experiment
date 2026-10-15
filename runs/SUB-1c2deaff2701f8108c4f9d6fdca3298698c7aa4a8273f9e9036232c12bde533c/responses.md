@@ -1,0 +1,7 @@
+# Initial successor and released predecessor lessons
+
+No EDA-0008 challenge has yet been adjudicated, so this is not a response to an unseen objection. The supplied predecessor verifier SUB-db9c674a154f7674a72a250d36002a9fa72009a59f84944ef72aaa90d3037a33 adjudicated challenger SUB-a2e3f91bd8e03f63cd17d7b3fb585c6d436d33908305d5ee7d7f618bbd6f9d12 against proposer SUB-0560b970e5efe91097368175b0f509b124d01d846ca8ced996b75c2739f69e33. Its park decision is historical evidence, not approval of this revision.
+
+Preserved negatives: identical deterministic transitions imply identical prefix/incumbent behavior; ordinary composition can use the same filtering and options; realized geometry may differ from requested edits; full physical utility, incidence and costs cannot be inferred from toy matching; incomplete winner access does not prove novelty; read-only source access and missing resources do not themselves refute a conditional hypothesis. The new proposal explicitly includes a central identical-model equivalence control and a same-data nonlinear direct predictor. No new labels or agents are free resources.
+
+The predecessor remains parked, not jointly abandoned. This new topic changes stage/problem/mechanism and starts fresh. Initial drift scores are zero for EDA-0008 only; no historical penalty or verdict is overwritten. There is no new experiment/abandonment consent, self-approval, accepted-topic status or fifth cycle. Independent scientific review of this frozen release remains necessary.

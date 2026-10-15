@@ -430,6 +430,48 @@
       "session_id": "70cb4f98-b54d-4c6d-add6-4d862ef9f663",
       "session_kind": "logical file-mediated seat; fresh isolated-input execution per job",
       "topic": "EDA-0007"
+    },
+    {
+      "actor_id": "ChatGPT-C04-PHYSICAL-EDA-0008",
+      "github_login": "getm0ss1moving (transport account only; not an independent reviewer)",
+      "independence_attestation": "Separate role inputs and own files only; shared OS account, policy isolation.",
+      "input_commit": "f68c1492c05be3fac5622deac4bb479eabf957de",
+      "model": "gpt-6-astra",
+      "operator": "getm0ss1moving",
+      "packet_sha256": "de1c4c89689d7325367c281454e0854dc4560878384fa06e79bc173f1076b176",
+      "platform": "OpenAI Codex",
+      "role": "challenger",
+      "session_id": "f97dd41a-b8f4-4ed4-8073-c18281254f38",
+      "session_kind": "logical file-mediated seat; fresh isolated-input execution per job",
+      "topic": "EDA-0008"
+    },
+    {
+      "actor_id": "ChatGPT-P04-PHYSICAL-EDA-0008",
+      "github_login": "getm0ss1moving (transport account only; not an independent reviewer)",
+      "independence_attestation": "Separate role inputs and own files only; shared OS account, policy isolation.",
+      "input_commit": "f68c1492c05be3fac5622deac4bb479eabf957de",
+      "model": "gpt-6.1-sol",
+      "operator": "getm0ss1moving",
+      "packet_sha256": "902c835a49a37e44c9293ff68adf20bc7f59c55f29b89034b775aaf590dd1c9f",
+      "platform": "OpenAI Codex",
+      "role": "proposer",
+      "session_id": "5c8977fd-e0d6-4baf-98c8-44aa3dea89c3",
+      "session_kind": "logical file-mediated seat; fresh isolated-input execution per job",
+      "topic": "EDA-0008"
+    },
+    {
+      "actor_id": "ChatGPT-V04-PHYSICAL-EDA-0008",
+      "github_login": "getm0ss1moving (transport account only; not an independent reviewer)",
+      "independence_attestation": "Separate role inputs and own files only; shared OS account, policy isolation.",
+      "input_commit": "f68c1492c05be3fac5622deac4bb479eabf957de",
+      "model": "gpt-6.1-sol",
+      "operator": "getm0ss1moving",
+      "packet_sha256": "08368a5b4cdec4b2456cab9ea1bf5c0ec290cbc105ef258822bcdb600e6dcfdb",
+      "platform": "OpenAI Codex",
+      "role": "verifier",
+      "session_id": "6d337b5b-f9f0-44f8-aa22-8aeea66b2301",
+      "session_kind": "logical file-mediated seat; fresh isolated-input execution per job",
+      "topic": "EDA-0008"
     }
   ],
   "verifier_identity_corrections": [

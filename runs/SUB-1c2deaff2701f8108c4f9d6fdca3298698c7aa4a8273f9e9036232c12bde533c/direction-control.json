@@ -1,0 +1,77 @@
+{
+  "state": "continue",
+  "anchor": {
+    "problem": "Select useful order of one width-changing resize and one distinct-cell relocation at legal pre-CTS placement, including per-primitive legalization externalities.",
+    "engineering_user": "Physical implementation engineer deciding the next paired post-placement optimization attempt.",
+    "downstream_need": "Legal equivalent routable post-DR outcome with useful setup/PPA quality per complete iteration cost.",
+    "causal_mechanism": "Predict symmetric joint residual and antisymmetric two-order contrast from current state and frozen intents; communicate to timing/congestion proposal specialists; rank scoped real-tool rollouts and accept only realized checked incumbents.",
+    "mechanism_invariants": [
+      "Exactly two typed edits per pair, single declared PVT and ideal-clock pre-CTS checkpoint",
+      "Action intents frozen at initial state; actual global returned geometry recorded after each legalization",
+      "Only initial deployable features; no untried-order or future-route labels at inference",
+      "Direct same-data nonlinear and conventional adaptive/lookahead baselines; central identical-model equivalence control",
+      "Charge labels training proposals model/tool calls failures restores final suffix; KEEP/FAIL/UNKNOWN explicit",
+      "No claim of multi-agent necessity, new expressivity, exact prediction or global physical optimality"
+    ],
+    "forbidden_pivots": [
+      "Reverting to predecessor hold-repair matching/table admission under this ID",
+      "Generic stage scripting checkpoint reuse transaction support or joint QoR heads as the contribution",
+      "Adding more agents inputs labels compute or a larger model to conceal failed contrast utility",
+      "Switching downstream demand to isolated prediction MSE or HPWL",
+      "Post-CTS hold/multi-corner/IR/signoff guarantee without new evidence and review"
+    ]
+  },
+  "penalties": {
+    "combination_drift": {
+      "score": 0,
+      "rationale": "Fresh topic with explicit representation hypothesis; known components and equivalence control acknowledged.",
+      "evidence_refs": [
+        "proposal.md",
+        "CLM-013"
+      ]
+    },
+    "demand_drift": {
+      "score": 0,
+      "rationale": "Fresh fixed user/stage/downstream anchor; representative demand remains unresolved rather than changed.",
+      "evidence_refs": [
+        "S06",
+        "S11",
+        "EXP-003"
+      ]
+    },
+    "total": 0
+  },
+  "revision_assessment": {
+    "preserves_problem": true,
+    "preserves_engineering_need": true,
+    "preserves_causal_mechanism": true,
+    "changes": [],
+    "reason": "Initial EDA-0008 anchor; distinct successor, no EDA-0005 approval inherited."
+  },
+  "abandonment": {
+    "decision_id": null,
+    "grounds": [],
+    "rationale": null,
+    "evidence_refs": [],
+    "consents": {
+      "proposer": {
+        "session_id": null,
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      },
+      "challenger": {
+        "session_id": null,
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      }
+    },
+    "successor_topic_id": null,
+    "resurrection_conditions": [
+      "Resolve exact prior overlap",
+      "Show real economically relevant order contrast and fair direct-baseline delta",
+      "Lock actual rights resources endpoint oracle and dual consent"
+    ]
+  }
+}
