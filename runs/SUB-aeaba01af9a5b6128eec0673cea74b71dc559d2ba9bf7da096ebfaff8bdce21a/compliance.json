@@ -1,0 +1,178 @@
+{
+  "schema": 1,
+  "role": "proposer",
+  "actor_id": "ChatGPT-P04-PHYSICAL-B03-EDA-0009",
+  "session_id": "a6cdf350-7e86-4988-92ca-660db08d6d53",
+  "input_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+  "packet_sha256": "025ffe86fbd9a4fa31105c4bf0487d2b68d9515524613109f60e8d196d6acb49",
+  "job_id": "bc8ea4a2-c017-49ed-806d-dade647caae2",
+  "read_releases": [
+    "SUB-871f669003b3f9e0bf3e000e214a1d897e997cb043492f7a9e31a7404d85917c",
+    "SUB-63d98250bf2d3b9407c62009b03af558f52923b0ca2eee7a9c23aba2375d4b44",
+    "SUB-6e5bf1d98fce234bd3a92fe7baa53b72ecd534c846bd7b89a80359451044da95"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0
+  },
+  "rules": {
+    "inputs": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json exact identity and input bindings",
+        "prompt.txt",
+        "policy/docs/CHARTER.md,WORKFLOW.md,EVIDENCE.md,ISOLATION.md,ROLE-COMPLIANCE.md,INNOVATION-BATCH-0003.md,INNOVATION-STRATEGY.md,CODEX-AUTOMATION.md,SELF-SUBMISSION.md",
+        "policy/harness/PROPOSER.md only; brief/templates/trusted submission script",
+        "responses.md released predecessor file list"
+      ],
+      "limits": "Only assigned job/policy and explicit shared outputs were read locally; initial large cat outputs included truncation, followed by focused policy/harness reads. No checkout path was opened. Backend model configuration is requested, not independently attested."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "activity.checkout_access=none",
+        "Shared predecessor proposal.md, challenges.md and paired verification.md only",
+        "search-log.md access account; no agent/session/memory tools invoked"
+      ],
+      "limits": "Unblinded released historical outputs were exposed; no blindness or OS isolation is claimed. No foreign private reads disclosed. This self-report cannot rule out unobservable actions; it is not an independent protocol audit."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "Own job root analytic_check.py, make_release.py, finish_release.py",
+        "Own release/*.md, *.json and prior-art.csv",
+        "Own submissions/SUB-* and result.json through terminal self-freeze procedure"
+      ],
+      "limits": "All actual writes were within the assigned job. Own assembly scripts are scratch, not released or imported from elsewhere. Published allowlisted output contains no paper copies or restricted design data."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "sources.json 24 source entries with actual access/version/locator limits",
+        "search-log.md Q01\u2013Q24 and source-open failures",
+        "prior-art.csv nearest mechanisms"
+      ],
+      "limits": "Selected full-method reading is explicitly narrower than full implementation audit; abstract and secondary/index-only evidence stays limited. S15 primary and exact original winner/current code remain unresolved. Source/metadata error would not itself prove deliberate fabrication."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "proposal.md claim ledger CLM-001\u2013CLM-015",
+        "forecast.json numeric values null",
+        "search-log.md final toy script/stdout and initial additive-diagnostic correction"
+      ],
+      "limits": "Toy geometry/probabilities are stipulated inputs and own analytic observations, not EDA measurements. No source speedup reproduced or new theorem, universal novelty, physical incidence or signoff guarantee claimed. Terminal-success toy still assumes independent outcomes absent physical validation."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "experiment-consent.json only own pending vote",
+        "tasklist.md and workflow.json matching SHA-256",
+        "responses.md unsigned tasklist hash"
+      ],
+      "limits": "No signature for another role and no agreement with a self-containing target. No experiment or abandonment consensus exists. Future edits require earlier immutable target, matching independent P/C signatures and verification."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "activity new_eda_runs=0,training_runs=0,new_paid_api_calls=0",
+        "search-log.md stdlib analytic checker only",
+        "experiment-plan.md EXP-000 CLOSED; future resource caps labelled unapproved requests"
+      ],
+      "limits": "Existing entitlement source retrieval and tiny own analytical code only. No downloaded-code execution, EDA build/flow, new GPU/remote/paid allocation or training. The provisional historical brief is not a current resource grant; wall-clock tool latency is not a benchmark."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "direction-control.json initial EDA-0009 anchor and 0+0 self-assessment",
+        "responses.md preserved EDA-0008 parked negatives",
+        "proposal.md distinct route-checking mechanism and explicit counter-hypotheses"
+      ],
+      "limits": "Fresh topic ID used because substage and mechanism changed. No predecessor approval or independent verification inherited; zero drift is not scientific merit. New novelty/demand/readiness unresolved."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "workflow.json research only; no pilot request",
+        "Own trusted policy/scripts/role_submission.py freeze/verify command",
+        "result.json and immutable SUBMISSION.json identify actual success when created"
+      ],
+      "limits": "Role performs self-freeze only and neither creates/approves/merges scientific PR nor publishes through credentials. Full repository validation/publication is coordinator work under prompt. Structural freeze is not scientific approval."
+    }
+  },
+  "operations": [
+    {
+      "kind": "read",
+      "references": [
+        "JOB.json",
+        "prompt.txt",
+        "policy common documents",
+        "policy/harness/PROPOSER.md",
+        "policy/templates/topic/*",
+        "policy/scripts/role_submission.py",
+        "policy/domains/D04/brief.json",
+        "policy/config/research-brief.json",
+        "shared/predecessor.json"
+      ],
+      "note": "Only assigned job tree; no checkout discovery. Before external research read required common policy and own harness."
+    },
+    {
+      "kind": "read_released_inputs",
+      "references": [
+        "SUB-871f669003b3f9e0bf3e000e214a1d897e997cb043492f7a9e31a7404d85917c",
+        "SUB-63d98250bf2d3b9407c62009b03af558f52923b0ca2eee7a9c23aba2375d4b44",
+        "SUB-6e5bf1d98fce234bd3a92fe7baa53b72ecd534c846bd7b89a80359451044da95"
+      ],
+      "note": "Actually opened predecessor proposer proposal.md, challenger challenges.md and matching verifier verification.md. All are explicitly supplied releases."
+    },
+    {
+      "kind": "external_research",
+      "references": [
+        "search-log.md Q01\u2013Q24",
+        "sources.json S01\u2013S21 including letter variants"
+      ],
+      "note": "Public web search/open/find; primary methods and abstract/index-only leads separately labelled. Failed public openings did not trigger access-control bypass."
+    },
+    {
+      "kind": "own_tiny_analysis",
+      "references": [
+        "search-log.md fenced Python and final stdout"
+      ],
+      "note": "Stdlib own analytic_check.py; original additive diagnostic then corrected terminal-success toy. Assembly reran final script to capture reproducible output. Zero EDA/training."
+    },
+    {
+      "kind": "write",
+      "references": [
+        "release/",
+        "make_release.py",
+        "finish_release.py"
+      ],
+      "note": "Own dossier assembly and ordinary corrections only. No other role output modified."
+    },
+    {
+      "kind": "local_validation",
+      "references": [
+        "workflow.json tasklist_sha256",
+        "sources.json IDs",
+        "search-log.md"
+      ],
+      "note": "JSON parse, no TBD/Chinese artifact prose, Markdown source-ID resolution, tasklist SHA check. First own check caught unresolved generic S08 alias; replaced with exact S08a/S08b before freeze; then checks passed. This is a corrected drafting error, not erased scientific evidence or external access incident."
+    },
+    {
+      "kind": "self_submission_procedure",
+      "references": [
+        "policy/scripts/role_submission.py",
+        "submissions/",
+        "result.json"
+      ],
+      "note": "After this ledger is written invoke trusted freeze then verify. Their successful manifest/result records actual completion; this row does not pre-claim an unexecuted success. No full project validate attempted because packet is standalone and checkout prohibited."
+    }
+  ],
+  "incidents": [],
+  "observability": "Self-authored public activity ledger, not a complete tool trace or proof of absent undisclosed actions. No rule violation is disclosed. Separate independent three-role protocol audit remains required; model backend and shared-OS confinement are not independently attested."
+}

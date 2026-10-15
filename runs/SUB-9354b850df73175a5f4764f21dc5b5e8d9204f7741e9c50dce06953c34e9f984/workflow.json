@@ -1,0 +1,22 @@
+{
+  "role": "challenger",
+  "reviewed_proposer_release": "SUB-aeaba01af9a5b6128eec0673cea74b71dc559d2ba9bf7da096ebfaff8bdce21a",
+  "assessment": "unresolved",
+  "coverage": {
+    "duplicate_prior_art": "unresolved",
+    "mechanism": "unresolved",
+    "composition": "unresolved",
+    "demand": "unresolved",
+    "industry_gap": "unresolved",
+    "headroom": "unresolved",
+    "contests": "supported",
+    "experiments": "unresolved",
+    "cost": "unresolved"
+  },
+  "recommendation": "park_at_finite_batch_close",
+  "direction_penalties": {
+    "combination_drift": 0,
+    "demand_drift": 0
+  },
+  "reviewed_tasklist_sha256": "3bebf6e0df640b3755ede2c770a9c8d8e782b7d989a311e5e73ef984e96a6744"
+}

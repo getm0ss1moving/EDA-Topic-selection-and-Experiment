@@ -1,0 +1,18 @@
+{
+  "role": "proposer",
+  "topic": "EDA-0009",
+  "batch_round": 4,
+  "batch_round_limit": 4,
+  "phase": "research",
+  "assessment": "unresolved",
+  "position": "Conditional systems hypothesis; no pilot request; retain for final independent review and park at finite-batch close if unresolved.",
+  "tasklist_sha256": "3bebf6e0df640b3755ede2c770a9c8d8e782b7d989a311e5e73ef984e96a6744",
+  "experiment_gate": "CLOSED",
+  "experiment_consent": "pending",
+  "predecessor_topic": "EDA-0008",
+  "predecessor_status": "parked; negatives preserved; no approval inherited",
+  "new_eda_runs": 0,
+  "training_runs": 0,
+  "source_search_cutoff_utc": "2026-10-15",
+  "local_checks": "Own tiny stdlib analytical checker and JSON/reference/hash checks; trusted freeze/verify; full project validation at coordinator publication."
+}

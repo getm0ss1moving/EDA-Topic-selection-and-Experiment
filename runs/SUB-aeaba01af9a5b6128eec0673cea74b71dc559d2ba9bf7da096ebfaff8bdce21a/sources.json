@@ -1,0 +1,358 @@
+[
+  {
+    "id": "S01",
+    "title": "TritonRoute-WXL: The Open-Source Router With Integrated DRC Engine",
+    "url": "https://vlsicad.ucsd.edu/Publications/Journals/j136.pdf",
+    "source_type": "author_paper",
+    "publication_date": "2022",
+    "retrieved_utc": "2026-10-15",
+    "locator": "PDF page 9, section V-E Incremental DRC Checking Capability, and pages 9\u201310 section VI-B queue-based ripup-and-reroute; browser raw lines 838\u2013925",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-001",
+      "CLM-007"
+    ],
+    "limitations": "Selected full-method sections inspected. Incremental per-net checks and queue already exist. No results reproduced; author PDF may precede journal typesetting.",
+    "version": "TCAD 41(4), DOI 10.1109/TCAD.2021.3079268; un-hashed author PDF"
+  },
+  {
+    "id": "S02",
+    "title": "OpenDRC: An Efficient Open-Source Design Rule Checking Engine with Hierarchical GPU Acceleration",
+    "url": "https://zyh0911.github.io/assets/pdf/OpenDRC.pdf",
+    "source_type": "author_paper",
+    "publication_date": "2023",
+    "retrieved_utc": "2026-10-15",
+    "locator": "PDF page 3, section IV-C Task Pruning from Hierarchy Tree, raw lines 218\u2013286; sections IV-D/E",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-002"
+    ],
+    "limitations": "Selected methods establish result reuse under geometric invariants and pair-context restrictions. No code execution, no statement about all current implementations.",
+    "version": "DAC2023 DOI 10.1109/DAC56929.2023.10247734; metadata crosscheck https://research.cuhk.edu.hk/en/publications/opendrc-an-efficient-open-source-design-rule-checking-engine-with-2/"
+  },
+  {
+    "id": "S02a",
+    "title": "opendrc/opendrc public repository landing page",
+    "url": "https://github.com/opendrc/opendrc",
+    "source_type": "repository_metadata",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-15",
+    "locator": "Landing page MIT license link and main/history metadata, browser lines 142\u2013184",
+    "access_level": "metadata",
+    "supported_claim_ids": [
+      "CLM-002"
+    ],
+    "limitations": "Landing/license metadata only. No maintained-status assertion or stable commit established; implementation audit deferred. No code downloaded/executed.",
+    "version": "retrieved 2026-10-15"
+  },
+  {
+    "id": "S03",
+    "title": "Invited Paper: Heterogeneous Acceleration for Design Rule Checking",
+    "url": "https://www.cse.cuhk.edu.hk/~byu/papers/C188-ICCAD2023-HeteroDRC.pdf",
+    "source_type": "author_paper",
+    "publication_date": "2023",
+    "retrieved_utc": "2026-10-15",
+    "locator": "PDF pages 1\u20133 background, page 6 section V-C/V-D, raw lines 400\u2013448; references [28]/[35]/[36]",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-003",
+      "CLM-007"
+    ],
+    "limitations": "Selected full-method sections inspected. CPU/GPU concurrency, data transfer and small-task dispatch are prior. No speedup transferred or reproduced.",
+    "version": "ICCAD2023 author PDF"
+  },
+  {
+    "id": "S04",
+    "title": "DRC-Aid: Design-Rule Correction via Agentic Framework utilizing Inference-Time Large Language Models",
+    "url": "https://arxiv.org/html/2607.22761v1",
+    "source_type": "preprint",
+    "publication_date": "2026-07-23",
+    "retrieved_utc": "2026-10-15",
+    "locator": "Sections 3.1 controller, 3.2 Rule/Connectivity Engine, 3.3 verification, 3.4 Global Memory; rendered raw lines 103\u2013196",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-004"
+    ],
+    "limitations": "Selected full methods inspected. Bounded repair, verification, backtracking and state fingerprints are established in a transistor-layout setting. No code repository verified or experiment reproduced.",
+    "version": "arXiv:2607.22761v1; abs metadata separately opened"
+  },
+  {
+    "id": "S05",
+    "title": "Incremental Layout Analysis",
+    "url": "https://patents.google.com/patent/US20120047479A1/en",
+    "source_type": "published_patent_description",
+    "publication_date": "2012-02-23",
+    "retrieved_utc": "2026-10-15",
+    "locator": "Description: Detecting Differences/hashed geometry raw lines 525\u2013539; Halos 553\u2013562; Selection of Analysis Criteria 569\u2013573; publication metadata 34\u201335",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-005"
+    ],
+    "limitations": "Selected published patent description inspected, not legal validity/claim construction. Hash-based change detection and contextual halos are old; no implementation performance adopted.",
+    "version": "US20120047479A1; priority 2007-03-09 as listed, not legal conclusion"
+  },
+  {
+    "id": "S06",
+    "title": "An Experimental Analysis of Self-Adjusting Computation",
+    "url": "https://www.cs.cmu.edu/~guyb/papers/ABBT06.pdf",
+    "source_type": "author_paper",
+    "publication_date": "2006",
+    "retrieved_utc": "2026-10-15",
+    "locator": "PDF page 1 abstract and introduction; dependence graphs and memoization; selected primary full text",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-006"
+    ],
+    "limitations": "General dynamic dependency and reuse foundations only. No new incremental-computation theorem claimed; cannot transfer reported application performance to DRC.",
+    "version": "PLDI2006; DOI 10.1145/1133255.1133993"
+  },
+  {
+    "id": "S06a",
+    "title": "A Consistent Semantics of Self-Adjusting Computation",
+    "url": "https://arxiv.org/abs/1106.0478",
+    "source_type": "preprint_abstract",
+    "publication_date": "2011-06-02",
+    "retrieved_utc": "2026-10-15",
+    "locator": "Abstract and v1 submission history",
+    "access_level": "abstract",
+    "supported_claim_ids": [
+      "CLM-006"
+    ],
+    "limitations": "Abstract-level correctness lead only; no full proof audited or physical certification inherited.",
+    "version": "arXiv:1106.0478v1"
+  },
+  {
+    "id": "S07",
+    "title": "X-Check: GPU-Accelerated Design Rule Checking via Parallel Sweepline Algorithms",
+    "url": "https://www.cse.cuhk.edu.hk/~byu/papers/C149-ICCAD2022-GPU-DRC.pdf",
+    "source_type": "author_paper",
+    "publication_date": "2022-10-30",
+    "retrieved_utc": "2026-10-15",
+    "locator": "Section 5.1 Dynamic Algorithm Selection; 5.2 sorting and 5.3 granularity; selected primary indexed method excerpt plus PDF opening",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-003"
+    ],
+    "limitations": "Dynamic CPU/GPU choice and overhead-aware execution already exist. Selected sections, not full implementation audit; no GPU allocated here.",
+    "version": "ICCAD2022 DOI 10.1145/3508352.3549383"
+  },
+  {
+    "id": "S08a",
+    "title": "Shift left for more efficient block design and chip integration",
+    "url": "https://blogs.sw.siemens.com/calibre/2024/07/26/shift-left-for-more-efficient-block-design-and-chip-integration/",
+    "source_type": "official_vendor_description",
+    "publication_date": "2024-07-26",
+    "retrieved_utc": "2026-10-15",
+    "locator": "Section DRC error debugging integrated in the design layout environment; Figure 4 discussion",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-007"
+    ],
+    "limitations": "Supports only advertised region checking during P&R edits. Vendor savings figures are not independently verified or used as forecasts. Internal algorithms unknown.",
+    "version": "retrieved 2026-10-15"
+  },
+  {
+    "id": "S08b",
+    "title": "How to Track DRC Regions in your design with Calibre RealTime",
+    "url": "https://resources.sw.siemens.com/en-US/video-how-to-track-drc-regions-in-your-design-with-calibre-realtime/",
+    "source_type": "official_vendor_description",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-15",
+    "locator": "Public page description, browser raw lines 0\u20138; not video transcript",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-007"
+    ],
+    "limitations": "Advertised stored/previously checked regions only. Video not watched, no internal caching or measured comparison established.",
+    "version": "retrieved 2026-10-15"
+  },
+  {
+    "id": "S09",
+    "title": "OpenROAD detailed routing documentation at pinned commit",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/src/drt/README.md",
+    "source_type": "pinned_official_documentation",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-15",
+    "locator": "Raw physical lines 0\u201314 components; 31\u201357 command; 173\u2013182 developer commands; 226\u2013228 license",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-014"
+    ],
+    "limitations": "Documents detailed routing, step/check interface and BSD3 claim, not an implemented obligation/cache adapter or verified full oracle. No executable run.",
+    "version": "commit b16bda7e82721d10566ff7e2b68f1ff0be9f9e38; current unpinned page also checked https://openroad.readthedocs.io/en/latest/main/src/drt/README.html"
+  },
+  {
+    "id": "S10",
+    "title": "ISPD2018 Initial Detailed Routing Contest",
+    "url": "https://www.ispd.cc/contests/18/",
+    "source_type": "official_contest",
+    "publication_date": "2018",
+    "retrieved_utc": "2026-10-15",
+    "locator": "Evaluation Usage raw lines 121\u2013127; Contest Result 128\u2013151; FAQ 171\u2013187",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-012"
+    ],
+    "limitations": "Rules and winner identity checked; exact original winner code/binary mechanism not inspected or executed. Innovus-generated reports in scoring are not an available local license.",
+    "version": "retrieved 2026-10-15"
+  },
+  {
+    "id": "S11",
+    "title": "ISPD2019 Initial Detailed Routing Contest",
+    "url": "https://www.ispd.cc/contests/19/",
+    "source_type": "official_contest",
+    "publication_date": "2019",
+    "retrieved_utc": "2026-10-15",
+    "locator": "Final Contest Result raw lines 154\u2013175; Final Solution Files lines 177\u2013201",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-012"
+    ],
+    "limitations": "Winner identity and output artifact categories checked. DEF/reports are not source-code audit; archives not downloaded. Full baseline mechanism unresolved.",
+    "version": "retrieved 2026-10-15"
+  },
+  {
+    "id": "S12",
+    "title": "ISPD2025 Performance-Driven Large Scale Global Routing",
+    "url": "https://www.ispd.cc/contests/25/index.html",
+    "source_type": "official_contest",
+    "publication_date": "2025",
+    "retrieved_utc": "2026-10-15",
+    "locator": "Contest title and Contest Winners list",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-012"
+    ],
+    "limitations": "Global-routing stage only; not proof of detailed DRC checking capability or novelty. Exact winner methods not audited.",
+    "version": "retrieved 2026-10-15"
+  },
+  {
+    "id": "S13",
+    "title": "ISPD2026 Post-Placement Buffering and Sizing",
+    "url": "https://www.ispd.cc/contests/26/index.html",
+    "source_type": "official_contest",
+    "publication_date": "2026",
+    "retrieved_utc": "2026-10-15",
+    "locator": "Title, Contest Winners and Resources, raw lines 0\u201318",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-012"
+    ],
+    "limitations": "Stage differs from detailed-route geometric validation; winner names not method evidence. No winning source evaluated.",
+    "version": "retrieved 2026-10-15"
+  },
+  {
+    "id": "S14",
+    "title": "SCALE: Self-Supervised Constraint-Aware Layout GEneration for Local P&R DRV Fixing at Advanced Nodes",
+    "url": "https://arxiv.org/abs/2607.21850",
+    "source_type": "preprint_abstract",
+    "publication_date": "2026",
+    "retrieved_utc": "2026-10-15",
+    "locator": "Abstract and metadata",
+    "access_level": "abstract",
+    "supported_claim_ids": [],
+    "limitations": "Adjacent local layout generation/DRC-VLM lead only. No full method or source audit; no copied claims of benchmark superiority.",
+    "version": "retrieved 2026-10-15"
+  },
+  {
+    "id": "S15",
+    "title": "An incremental design rule checking method, computer device and computer readable storage medium \u2014 CN122839978A lead",
+    "url": "https://eureka.patsnap.com/patent/CN122839978A",
+    "source_type": "secondary_patent_index",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-15",
+    "locator": "Indexed excerpt naming rule dependency graphs, active rule filtering and boundary effects",
+    "access_level": "metadata",
+    "supported_claim_ids": [
+      "CLM-013"
+    ],
+    "limitations": "Primary Google Patents English/Chinese open attempts failed. Secondary text raises strong overlap risk but is not verified novelty/refutation evidence. Exact date, official publication text and applicability unresolved.",
+    "version": "retrieved 2026-10-15"
+  },
+  {
+    "id": "S16",
+    "title": "Official ISPD previous contests archive/navigation",
+    "url": "https://ispd.cc/ispd2027/index.php?page=contests",
+    "source_type": "official_contest_archive",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-15",
+    "locator": "Previous Contests year/title list",
+    "access_level": "metadata",
+    "supported_claim_ids": [
+      "CLM-012"
+    ],
+    "limitations": "Search-indexed official list; current URL navigation does not establish a finalized future contest method. Archive root /contests.html failed.",
+    "version": "retrieved 2026-10-15"
+  },
+  {
+    "id": "S17",
+    "title": "AgenticPD: A Stage-Aware Agentic Framework for Closed-Loop Physical Design Optimization",
+    "url": "https://arxiv.org/abs/2607.04758v3",
+    "source_type": "preprint_abstract",
+    "publication_date": "2026-10-04",
+    "retrieved_utc": "2026-10-15",
+    "locator": "Abstract browser lines 16\u201318; v3 history lines 28\u201330",
+    "access_level": "abstract",
+    "supported_claim_ids": [
+      "CLM-015"
+    ],
+    "limitations": "Fresh abstract-level reopening only. Stage agents, judge and structured history are prior; no full-method, code or performance reproduction.",
+    "version": "arXiv:2607.04758v3"
+  },
+  {
+    "id": "S18",
+    "title": "Divergent Thoughts toward One Goal: LLM-based Multi-Agent Collaboration System for Electronic Design Automation",
+    "url": "https://arxiv.org/abs/2502.10857v1",
+    "source_type": "preprint_abstract",
+    "publication_date": "2025-02-15",
+    "retrieved_utc": "2026-10-15",
+    "locator": "Abstract lines 16\u201318",
+    "access_level": "abstract",
+    "supported_claim_ids": [
+      "CLM-015"
+    ],
+    "limitations": "Generic EDAid multi-agent collaboration context only; not full mechanism or measured-gain evidence.",
+    "version": "arXiv:2502.10857v1"
+  },
+  {
+    "id": "S19",
+    "title": "Rule2DRC: Benchmarking LLM Agents for DRC Script Synthesis with Execution-Guided Test Generation",
+    "url": "https://arxiv.org/abs/2605.15669",
+    "source_type": "preprint_abstract",
+    "publication_date": "2026-05-15",
+    "retrieved_utc": "2026-10-15",
+    "locator": "Abstract lines 16\u201318",
+    "access_level": "abstract",
+    "supported_claim_ids": [
+      "CLM-015"
+    ],
+    "limitations": "Script-synthesis/test-selection stage differs from route patch selection. Execution feedback itself cannot be claimed new; full method/code not inspected.",
+    "version": "arXiv:2605.15669v1"
+  },
+  {
+    "id": "S20",
+    "title": "ChatEDA: A Large Language Model Powered Autonomous Agent for EDA",
+    "url": "https://arxiv.org/abs/2308.10204v4",
+    "source_type": "preprint_abstract",
+    "publication_date": "2024-09-21",
+    "retrieved_utc": "2026-10-15",
+    "locator": "Abstract lines 16\u201318; version history",
+    "access_level": "abstract",
+    "supported_claim_ids": [],
+    "limitations": "Generic tool/task execution prior lead, no detailed-route overlap conclusion or performance transfer.",
+    "version": "arXiv:2308.10204v4"
+  },
+  {
+    "id": "S21",
+    "title": "Magic incremental-checker historical source lead",
+    "url": "https://www2.eecs.berkeley.edu/Pubs/TechRpts/1983/CSD-83-154.pdf",
+    "source_type": "primary_indexed_excerpt",
+    "publication_date": "1983",
+    "retrieved_utc": "2026-10-15",
+    "locator": "Search indexed excerpt headed Magic\u2019s Incremental Design-Rule Checker December 7 1983; S03 reference [28] lists DAC1984 pp160\u2013165",
+    "access_level": "metadata",
+    "supported_claim_ids": [],
+    "limitations": "Primary full historical checker not opened; bibliography and indexed passage are discovery only. Separate CSD-86-264.pdf direct opening failed. EXP-001 must reopen precise original, no novelty absence claim.",
+    "version": "retrieved 2026-10-15"
+  }
+]
