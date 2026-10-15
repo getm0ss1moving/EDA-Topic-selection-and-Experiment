@@ -1,0 +1,5 @@
+source_id,task,mechanism,assumptions,overlap,distinction_or_limit
+C2-S01,hold repair,shared-load buffering and rollback,pinned OpenROAD,shared repairs and checking,not a complete joint-site optimizer audit
+C2-S02,placement sizing co-optimization,discrete repair plus differentiable refinement,author abstract only,physical feedback hybrid,exact hold-site option treatment unknown
+C2-S05,incremental placement contest,combined sizing buffering relocation,publisher abstract,combined edits,full winner methods uninspected
+C2-S03,repair effort policy,cost and stop-policy discussion,one-design anecdote,general hold expense,no candidate incidence measurement
