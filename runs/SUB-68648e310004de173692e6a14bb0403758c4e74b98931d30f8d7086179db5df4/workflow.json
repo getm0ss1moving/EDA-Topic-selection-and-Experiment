@@ -1,0 +1,19 @@
+{
+  "role": "challenger",
+  "reviewed_proposer_release": "SUB-7c6b1c85bbe65f26c8882bf0474a3c913417f740de75096fd57329377c32612e",
+  "assessment": "unresolved",
+  "coverage": {
+    "duplicate_prior_art": "supported",
+    "mechanism": "supported",
+    "composition": "supported",
+    "demand": "unresolved",
+    "industry_gap": "unresolved",
+    "headroom": "unresolved",
+    "contests": "unresolved",
+    "experiments": "supported",
+    "cost": "supported"
+  },
+  "recommendation": "park_after_final_domain_cycle",
+  "experiment_consent": "not_given",
+  "abandonment_consent": "not_given"
+}
