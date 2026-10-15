@@ -1,0 +1,50 @@
+{
+  "run_id": "CLD-P05-SELF-0001",
+  "label": "self-initiated",
+  "session_id": "76d0bf61-78f7-4b93-a557-7c29f1a2cbe8",
+  "actor_id": "Claude-P05-TIMING",
+  "role": "proposer",
+  "topic": "EDA-0002",
+  "input_provenance": {
+    "packet_sha256": "ff20816f623585d4bf7ba7b13d79db58aab90a2e947cd05c719cd93f3574602d",
+    "input_commit": "d437c2f660906efe9351a90451905826d00b63e3",
+    "amendment": "CLD-P05-AMEND-0001, AMENDMENT.json SHA-256 3f2a177751f11e0ff2e0d5249007bc6cfb74bf6d557329565cbea5509643cc61, ref 2121532bfca928900f4252e796d7570fdb1ea224"
+  },
+  "authority": "Owner decision 3 of 2026-10-14 (receipts/CLD-P05-AMEND-0001-owner-decisions.json): self-initiated reading allowed while waiting, including SRC-066 to SRC-068; no freeze or send before a valid verified-challenge delivery. Amendment rule 1: external reading without per-source approval.",
+  "started_at_utc": "2026-10-14T10:44Z (host clock)",
+  "completed_at_utc": "2026-10-14T10:55Z (host clock)",
+  "clock_note": "Host clock, which agreed with a GitHub Date header to within about 10 s at 10:27Z (receipt CLD-P05-AMEND-0001).",
+  "queries": [
+    {"id": "Q48", "tool": "WebSearch", "query": "Heloue Najm \"Parameterized timing analysis with general delay models and arbitrary variation sources\" DAC 2008 pdf", "used": "eecg.utoronto.ca/~najm/papers/dac08-khaled.pdf (SRC-068); also listed tau08-khaled.pdf, not opened"},
+    {"id": "Q49", "tool": "WebSearch", "query": "\"worst-delay corner\" Silva Silveira Phillips DATE 2007", "used": "DBLP metadata (DATE 2007 pp. 1617-1622); patent US8245167 lead; TCAD 2010 lead"},
+    {"id": "Q50", "tool": "WebSearch", "query": "\"Effective Corner-Based Techniques for Variation-Aware IC Timing Verification\" pdf", "used": "no copy found"},
+    {"id": "Q51", "tool": "WebSearch", "query": "exact worst-case slack all process corners branch and bound static timing \"setup and hold\" corner pruning guarantee", "used": "NTU 2009 thesis lead; otherwise known sources"},
+    {"id": "Q52", "tool": "WebSearch", "query": "Guerra e Silva Phillips Silveira \"corner-based\" timing verification IEEE Transactions Computer-Aided Design 2010", "used": "DBLP metadata TCAD 29(1):157-162; DAC 2010 speedpath lead"},
+    {"id": "Q53", "tool": "WebFetch (OpenAlex API)", "query": "works?search=Effective Corner-Based Techniques for Variation-Aware IC Timing Verification", "used": "W2142000962, DOI 10.1109/TCAD.2009.2034343, abstract, not open access"},
+    {"id": "Q54", "tool": "WebFetch (OpenAlex API)", "query": "works?search=Efficient computation of the worst-delay corner", "used": "W4248062893 (DOI 10.1109/DATE.2007.364533), W2148507902 (DOI 10.5555/1266366.1266721)"},
+    {"id": "Q55", "tool": "WebFetch (OpenAlex API)", "query": "works?filter=cites:W4248062893|W2148507902|W2142000962", "used": "31 citing works; six abstracts fetched (Q56)"},
+    {"id": "Q56", "tool": "WebFetch (OpenAlex API)", "query": "works?filter=doi:10.1109/isocc.2014.7087611|10.1109/tcad.2025.3581474|10.1145/3816045|10.1145/1837274.1837343|10.1145/2206781.2206816|10.1109/iccd.2014.6974699", "used": "abstracts; no closer mechanism"}
+  ],
+  "documents_fetched": [
+    {"source": "SRC-066", "url": "https://www.eecg.utoronto.ca/~najm/papers/iccad08-khaled.pdf", "route": "direct WebFetch returned binary without text; read via https://r.jina.ai/ text extraction", "access": "full (extraction plus summarizing fetch layer)"},
+    {"source": "SRC-067", "url": "https://past.date-conference.com/proceedings-archive/2007/DATE07/PDFFILES/11.4_3.PDF", "route": "r.jina.ai text extraction; located via the DATE 2007 archive table of contents (DATETOC.HTM). The INESC-ID copy https://algos.inesc-id.pt/projects/powerplan/IC6.pdf failed (HTTP 422 through extraction, socket closed directly)", "access": "full (extraction plus summarizing fetch layer; no page numbers)"},
+    {"source": "SRC-068", "url": "https://www.eecg.utoronto.ca/~najm/papers/dac08-khaled.pdf", "route": "r.jina.ai text extraction", "access": "full (extraction plus summarizing fetch layer)"},
+    {"source": "SRC-012", "url": "https://www.eecg.utoronto.ca/~najm/papers/dac11-sari.pdf", "route": "r.jina.ai text extraction", "access": "full (extraction plus summarizing fetch layer)"},
+    {"source": "new: US8245167B1", "url": "https://patents.google.com/patent/US8245167B1/en", "route": "WebFetch, two parts (offset 0 and 100000)", "access": "full page"},
+    {"source": "new: NTU thesis 2009", "url": "https://tdr.lib.ntu.edu.tw/jspui/handle/123456789/42970?mode=full", "route": "WebFetch", "access": "metadata and abstract; full text fee-licensed and not public"}
+  ],
+  "access_limitations": [
+    "Bash network remains GitHub and arXiv only. A curl to www.eecg.utoronto.ca was denied by the sandbox proxy (deny network-outbound, host not on the allow list), so no paper bytes were saved and no paper file hash exists.",
+    "Direct WebFetch returned the SRC-066 PDF as compressed binary without extractable text. The tool saved a binary copy in a directory the file tools are denied, so it was not read.",
+    "All paper content passed through two intermediaries: the r.jina.ai extraction service and WebFetch's summarizing model. Locators and short quotes are as returned and need verifier re-checking against the originals.",
+    "The TCAD 2010 full text is not open access (OpenAlex is_oa false). The NTU thesis full text is fee-licensed. Neither was obtained, and no authentication was bypassed."
+  ],
+  "outputs": [
+    "runs/CLD-P05-SELF-0001/reading-notes.md",
+    "runs/CLD-P05-SELF-0001/manifest.json"
+  ],
+  "dossier_changed": false,
+  "lab_runner_jobs": "None",
+  "challenger_material": "None read in this run. The repository was not accessed. SRC-066 and SRC-067 had first reached the proposer as leads in the challenger's first pass (exposure recorded in runs/CLD-P05-REVISION-0002/manifest.json); the papers were read from public hosts.",
+  "background_wait": "The round_transmit.py wait started at 10:29Z kept running through this run; no delivery had arrived when this record was written."
+}

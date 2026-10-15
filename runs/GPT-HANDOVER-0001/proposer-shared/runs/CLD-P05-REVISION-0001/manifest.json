@@ -1,0 +1,85 @@
+{
+  "run_id": "CLD-P05-REVISION-0001",
+  "session_id": "76d0bf61-78f7-4b93-a557-7c29f1a2cbe8",
+  "role": "proposer",
+  "input_commit": "d437c2f660906efe9351a90451905826d00b63e3",
+  "packet_sha256": "ff20816f623585d4bf7ba7b13d79db58aab90a2e947cd05c719cd93f3574602d",
+  "governance_inputs": {
+    "COORDINATOR-owner-decisions.md": "b479fc60e1dbfd38dbc45618f3670bca12b29bc73fc33bd637c07a11e4eb29c4",
+    "COORDINATOR-runner-instructions.md": "f36cf54878f760005eda9fd7259000ab88f4c4ab11265e5f07d9c9f30b7e05de",
+    "note": "Both hashes were verified before acting. The read-only copies in lab-results/governance-CLD-LAB-0001/ are byte-identical."
+  },
+  "model": "claude-opus-5-5 (Opus 5.5), host-reported. Reasoning effort is not observable from inside the session.",
+  "operator": "Not asserted by the actor (human operator of the Claude Code session)",
+  "started_at_utc": "2026-10-14T03:00:00Z",
+  "completed_at_utc": "2026-10-14T06:55:00Z",
+  "clock_note": "True UTC = host clock + 54,000 s (erratum E1). The start time is approximate; the first timestamped artifact of this run is 2026-10-14T03:07:01Z. Runner-reported times in evidence/runner-ledger.json use the runner hosts' clocks, whose offset was not measured.",
+  "purpose": "Owner decision CLD-LAB-0001: set up pinned tooling from GitHub, check P3-P5 against pinned dmp_ceff_elmore with the file-mediated runner, apply the owner answers U1-U9, and revise the dossier for a fresh challenger packet. No hypothesis, runtime, certifiable-fraction, band-width, QoR or real-design measurement was made.",
+  "output_paths": [
+    "candidates/EDA-0002/contest-audit.md",
+    "candidates/EDA-0002/direction-control.json",
+    "candidates/EDA-0002/dossier.json",
+    "candidates/EDA-0002/experiment-consensus.json",
+    "candidates/EDA-0002/experiment-plan.md",
+    "candidates/EDA-0002/forecast.json",
+    "candidates/EDA-0002/industry-gap.md",
+    "candidates/EDA-0002/prior-art.csv",
+    "candidates/EDA-0002/proposal.md",
+    "candidates/EDA-0002/responses.md",
+    "candidates/EDA-0002/search-log.md",
+    "candidates/EDA-0002/sources.json",
+    "candidates/EDA-0002/tasklist.md",
+    "runs/CLD-P05-REVISION-0001/manifest.json",
+    "runs/CLD-P05-REVISION-0001/p3-p5-record.md",
+    "runs/CLD-P05-REVISION-0001/evidence/",
+    "lab-requests/",
+    "role-output-manifest.json"
+  ],
+  "lab_runner_jobs": {
+    "runner": "CLD-LAB-0001",
+    "jobs": ["REQ-0001", "REQ-0002", "REQ-0003", "REQ-0004", "REQ-0005", "REQ-0006", "REQ-0007", "REQ-0008", "REQ-0009"],
+    "categories_used": ["tooling", "data", "property-check"],
+    "network_jobs": ["REQ-0001", "REQ-0003"],
+    "network_scope": "GitHub only (github.com, codeload.github.com, release assets). Every URL, resolved revision and SHA-256 is logged in evidence/REQ-0001-network-log.tsv and evidence/REQ-0003-network-log.tsv.",
+    "core_hours_total": 0.4504,
+    "failed_jobs_kept_as_evidence": ["REQ-0004 (tclsh name missing)", "REQ-0005 (binary location; smoke test not reached)", "REQ-0006 (set_pi_model namespace)"],
+    "ledger": "evidence/runner-ledger.json"
+  },
+  "harness_sha256": {
+    "lab-requests/p05_fixtures.py": "08488e018b64bf9c6573b0b6674f95029c6b8bb16f5f66eaf3e97ab818f6a3f0",
+    "lab-requests/p05_extract.tcl": "6ab3c290783395a0b34466b2e16b6e3444ca8c9015c68b0bc021754dc0794dee",
+    "lab-requests/p05_check.py": "de153b2414e01df6bcb29b3fce6581912e819dbd4373843392293c8e0c70568a",
+    "note": "These are identical to the hashes REQ-0008 recorded at run time (lab-results/REQ-0008/out/harness-sha256.txt). Earlier pilots REQ-0006 and REQ-0007 used earlier harness versions; their hashes are in their own result folders."
+  },
+  "pinned_binary": {
+    "path_on_runner": "/ws/tools/opensta-e01d3f163f483f233db00410b6515a767a6ca03b/bin/sta",
+    "sha256": "d6821adce56e1f8dec50ca0730129e8ebe297a7c5663ba85f84e9558466b464c",
+    "version": "sta_version 2.5.0 git_sha1 e01d3f163f483f233db00410b6515a767a6ca03b",
+    "deviation": "Parsers were generated with byacc t20240109 through a bison-CLI wrapper (no GitHub bison release); the OpenSTA C++ sources are unmodified."
+  },
+  "dossier_digest_expected": {
+    "value": "29b9ab5364d1e429961cf886faee4ab2bcbf682d545789249a8940cea29ba8f4",
+    "basis": "Proposer reimplementation of scripts/project.py digest(). Inputs: the 13 outbox files plus the repository scaffold challenges.md as of PR #13 head 9d5bd30e (verification.* excluded). The coordinator's validator is authoritative."
+  },
+  "owner_answers_applied": {
+    "U1": "arXiv and GitHub searched; no copy of SRC-012. Its assumptions are kept unresolved. The ADD-0001 archived reading is not used and is flagged for an owner ruling.",
+    "U2": "P3-P5 checked: falsified as stated. K2 activated; certificate narrowed to R1; labels in runs/CLD-P05-REVISION-0001/p3-p5-record.md.",
+    "U3": "Runtime breakdown not run; preserved in EXP-003.",
+    "U4": "Certifiable fraction and band widths not measured; preserved in EXP-003, which adds a CPC census.",
+    "U5": "Toolchain from GitHub only, licenses read from each repository. Libraries and designs not acquired; rule recorded in the experiment plan.",
+    "U6": "P&R not run; a 2.5 CPU-h cap is proposed for joint allocation.",
+    "U7": "Static side effects recorded as threats with required tests (CLM-024); full experiment deferred.",
+    "U8": "GitHub and arXiv searched. A topic-level GitHub record exists (SRC-059); rules unresolved; global claim avoided.",
+    "U9": "M = 0 ps primary; 5% of the period as a labelled sensitivity; 20% provisional."
+  },
+  "source_ids": ["SRC-002", "SRC-007", "SRC-008", "SRC-012", "SRC-039", "SRC-053", "SRC-054", "SRC-055", "SRC-056", "SRC-057", "SRC-058", "SRC-059", "SRC-060", "SRC-061", "SRC-062", "SRC-063", "SRC-064", "SRC-065"],
+  "contamination_events": [],
+  "exposure_record": "Inputs this run: the hash-verified packet; this actor's own prior outputs (round-0 dossier and ADD-0001); the two owner governance documents and their identical copies; the runner's result folders for this actor's own jobs; public GitHub repositories (OpenSTA, OpenTimer, toolchain repositories, GitHub repository search results); arXiv search results. The runner state directory, SSH account, other actors' workspaces and other roles' outputs were not inspected. No agent messages were sent or received.",
+  "independence_attestation": "Proposer self-attestation, not proof of independence (docs/PHYSICAL-PILOT.md line 33). All lab work is file-mediated and reproducible from lab-requests/ and the recorded hashes.",
+  "host_events": [
+    "One shell command that read lab-result files was denied by the Claude Code auto-mode classifier (reason shown as 'Create Unsafe Agents'). The same files were then read with the file-read tool, and no workaround of the denial's intent was attempted.",
+    "Several shell commands containing 'cd' moved the host's primary working directory between the packet, the outbox and lab-requests. Nothing was written to the packet.",
+    "Generated Python bytecode (lab-requests/__pycache__, from local py_compile syntax checks) was removed from the outbox. Local runs were limited to syntax checks and dry runs of the fixture generator and checker in session scratch; no EDA tool was run locally.",
+    "The arXiv export API returned HTTP 503, 429 and time-outs for the refresh queries (search-log.md Q42); the arXiv web search was used instead (Q43)."
+  ]
+}

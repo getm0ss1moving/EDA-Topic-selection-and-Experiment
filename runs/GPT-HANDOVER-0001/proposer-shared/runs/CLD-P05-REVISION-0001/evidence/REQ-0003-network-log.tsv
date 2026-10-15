@@ -1,0 +1,12 @@
+url	resolved_revision	sha256	note
+https://github.com/Kitware/CMake/releases/download/v3.27.9/cmake-3.27.9-linux-x86_64.tar.gz	v3.27.9	72b01478eeb312bf1a0136208957784fe55a7b587f8d9f9142a7fc9b0b9e9a28	Kitware release asset
+https://github.com/Kitware/CMake/releases/download/v3.27.9/cmake-3.27.9-SHA-256.txt	v3.27.9	0fd378a85422c879b3b58a2a4bb7df2c5ea72d4fae5fd7bd28b3cdaa6525976a	Kitware published checksums
+https://github.com/westes/flex/releases/download/v2.6.4/flex-2.6.4.tar.gz	v2.6.4	e87aae032bf07c26f85ac0ed3250998c37621d95f8bd748b31f15b33c45ee995	westes/flex release asset
+https://github.com/ThomasDickey/byacc-snapshots.git refs/tags/t20240109	e01013932bcac8d1ee32485248aca5fb9acf8612	-	git ls-remote tag resolution
+https://codeload.github.com/ThomasDickey/byacc-snapshots/tar.gz/e01013932bcac8d1ee32485248aca5fb9acf8612	e01013932bcac8d1ee32485248aca5fb9acf8612	5ad4ada6954324fb959da64a3fd12b59677e9d4f3a7eb4206f246aa6dd5d8602	tag t20240109
+https://github.com/tcltk/tcl.git refs/tags/core-8-6-13	338c6692672696a76b6cb4073820426406c6f3f9	-	git ls-remote tag resolution
+https://codeload.github.com/tcltk/tcl/tar.gz/338c6692672696a76b6cb4073820426406c6f3f9	338c6692672696a76b6cb4073820426406c6f3f9	03c142bc61d24053d2a52eaa1a6a7d7edd95974f55b60f1ff6b5d469a9e0ab11	tag core-8-6-13
+https://github.com/swig/swig.git refs/tags/v4.1.1	77323a0f07562b7d90d36181697a72a909b9519a	-	git ls-remote tag resolution
+https://codeload.github.com/swig/swig/tar.gz/77323a0f07562b7d90d36181697a72a909b9519a	77323a0f07562b7d90d36181697a72a909b9519a	79d42de47f0644ccf2164a93a24b523dee70e6bea3f43ff597b1a204ca9157d9	tag v4.1.1
+https://github.com/eigenteam/eigen-git-mirror.git refs/tags/3.3.7	cf794d3b741a6278df169e58461f8529f43bce5d	-	git ls-remote tag resolution
+https://codeload.github.com/eigenteam/eigen-git-mirror/tar.gz/cf794d3b741a6278df169e58461f8529f43bce5d	cf794d3b741a6278df169e58461f8529f43bce5d	c7f57546eaacf7aab2c7471285119a5456f7ccdc86c86530a047eed6ca96aa9c	tag 3.3.7

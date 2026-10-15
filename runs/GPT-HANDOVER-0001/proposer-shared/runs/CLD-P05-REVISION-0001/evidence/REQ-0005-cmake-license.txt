@@ -1,0 +1,9 @@
+## CMake license: cmake-3.27.9/doc/cmake/Copyright.txt sha256=4a01ccf2dc580ba570d02bc015bbe0ec92f1f318717aae9540ba841ba7946756
+CMake - Cross Platform Makefile Generator
+Copyright 2000-2023 Kitware, Inc. and Contributors
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+

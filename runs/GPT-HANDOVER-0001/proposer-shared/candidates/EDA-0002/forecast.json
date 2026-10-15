@@ -1,0 +1,22 @@
+{
+  "kind": "forecast_not_measurement",
+  "metric": "Relative end-to-end wall-time reduction R = (T_B0 - T_P) / T_B0 x 100 of screened MCMM analysis P against full single-run multi-corner pinned OpenSTA B0, conditional on identical decision sets D_M(S) (guardrails G1-G4)",
+  "unit": "percent (relative reduction of wall time; not percentage points)",
+  "baseline_source": "B0 to be measured in EXP-006 (pinned OpenSTA e01d3f163f483f233db00410b6515a767a6ca03b, define_corners with all scenarios, same container and threads). No baseline measurement exists yet.",
+  "direction": "higher is better",
+  "pessimistic": null,
+  "base": null,
+  "optimistic": null,
+  "confidence": null,
+  "assumptions": [
+    "No numerical forecast is given. No baseline runtime, phase breakdown, certification rate or bound band width has been measured, and experiments are not authorized. Any number would be invented.",
+    "Round 1 (K2 activated): P3-P5 are falsified, and P now certifies only cones whose data nets are capacitive-path certain (R1). The attainable R is therefore additionally bounded above by the CPC share of (endpoint, scenario) fan-in cones. That share is unmeasured: owner item U4 defers real-design measurement. The proposer's [INF] expectation is that the share may be small, because the CPC test requires reduced Rpi below about 1/1000 of the driver's Rd. This lowers the plausibility of H1 but is not a number.",
+    "Structural cost model (not a forecast): R is approximately 1 - mean_s(b_s + r_s), where b_s is the clock and bound pass cost and r_s the refinement cost at scenario s, both relative to exact analysis of s, diluted by shared fixed costs (parsing, graph build). All terms are unmeasured.",
+    "Floor: R can be negative (net slowdown) if few triples certify, because the method falls back to exact analysis plus bound overhead.",
+    "Ceiling: the oracle screen O bounds R from above for any screen. It is measured in EXP-003.",
+    "Scenario sets available on open data are small (ASAP7 K=3; SKY130 K<=16 PVT) with a single RC corner, so measured R may understate the effect at advanced-node scenario counts. Any such extrapolation will be labeled inference, not measurement.",
+    "Null values will be replaced by pessimistic/base/optimistic ranges after EXP-003, from measured phase costs and oracle and bound certification rates, before any candidate evaluation (EXP-006).",
+    "Round 1b: the challenger's independent estimate was read on the owner's instruction. It gives no number ('unknown'), so no challenger value can anchor this forecast. Two additions can only lower the attainable R: endpoints matched by timing exceptions are never certified (P8), and the rounding allowance (P9) slightly widens bounds. In edit loops, R against incremental exact timing (B6) is a separate secondary quantity (CH8) and is not forecast."
+  ],
+  "calibration_plan": "After EXP-003, set pessimistic/base/optimistic R per design and scenario set from (i) measured phase costs, (ii) the CPC share and the R1 bound-certification rate computed offline on B0 data, and (iii) the oracle ceiling, recording the assumptions. After EXP-006/007, compare measured R with these ranges using the same metric, designs and budget; report hit or miss per design and the signed error; archive the comparison in EXP-008."
+}

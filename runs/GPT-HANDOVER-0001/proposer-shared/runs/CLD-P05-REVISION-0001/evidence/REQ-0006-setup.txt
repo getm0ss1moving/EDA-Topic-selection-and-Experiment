@@ -1,0 +1,5 @@
+binary: d6821adce56e1f8dec50ca0730129e8ebe297a7c5663ba85f84e9558466b464c  /ws/tools/opensta-e01d3f163f483f233db00410b6515a767a6ca03b/bin/sta
+source tree status (tracked files; untracked build outputs listed with ??):
+HEAD: e01d3f163f483f233db00410b6515a767a6ca03b
+sta_version 2.5.0 git_sha1 e01d3f163f483f233db00410b6515a767a6ca03b
+delay_calc_names arnoldi ccs_ceff ccs_sim dmp_ceff_elmore dmp_ceff_two_pole lumped_cap unit

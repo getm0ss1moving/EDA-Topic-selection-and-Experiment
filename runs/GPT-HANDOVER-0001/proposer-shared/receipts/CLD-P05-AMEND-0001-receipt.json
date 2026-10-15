@@ -1,0 +1,141 @@
+{
+  "amendment_id": "CLD-P05-AMEND-0001",
+  "session_id": "76d0bf61-78f7-4b93-a557-7c29f1a2cbe8",
+  "actor_id": "Claude-P05-TIMING",
+  "role": "proposer",
+  "topic": "EDA-0002",
+  "amendment_sha256": "3f2a177751f11e0ff2e0d5249007bc6cfb74bf6d557329565cbea5509643cc61",
+  "amendment_commit": "2121532bfca928900f4252e796d7570fdb1ea224",
+  "files_verified": true,
+  "files_verified_detail": "All 19 paths listed in AMENDMENT.json (CHANGES.md and 18 files under files/) match their SHA-256 values. The bundle contains no unlisted files. Checked with a short Python hash loop, run in isolated mode.",
+  "recorded_at_utc": "2026-10-14T10:28:04Z",
+  "recorded_at_note": "Host clock reading. At 10:27:09Z by the host clock, a GitHub API response carried the Date header 10:27:00 GMT, so the host clock now agrees with server time to within about 10 s. The 54,000 s offset of erratum E1 is not observed in this check (see conflicts_or_questions).",
+  "documents_read": [
+    "CHANGES.md",
+    "files/AGENTS.md",
+    "files/docs/ISOLATION.md",
+    "files/harness/PROPOSER.md",
+    "files/docs/AUTO-ROUND.md",
+    "files/config/round-transport.json",
+    "files/docs/SELF-SUBMISSION.md",
+    "files/docs/WORKFLOW.md",
+    "files/docs/EVIDENCE.md",
+    "files/docs/EXPERIMENTS.md",
+    "files/docs/CHARTER.md",
+    "files/docs/GITHUB.md",
+    "files/domains/D05/README.md",
+    "files/templates/topic/verification.md",
+    "files/scripts/round_transmit.py",
+    "files/scripts/role_submission.py",
+    "files/config/launch-release.json (assignments and role_handoffs only)",
+    "files/config/research-brief.json and files/domains/D05/brief.json (as diffs against the packet copies)"
+  ],
+  "rules_acknowledged": [
+    {
+      "rule": 1,
+      "topic": "External reading",
+      "effect": "The GitHub/arXiv-only reading rule, including the CLD-LAB-0001 one, no longer applies. Owner decisions U1 (SRC-012 only via arXiv/GitHub) and U5 (GitHub/arXiv only) are superseded for reading, and the access part of open question 6 in proposal.md (SRC-066 to SRC-068) is answered by this rule. WebFetch now reaches other domains. Bash network access remains GitHub and arXiv only. Reading does not authorize executing downloaded code, experiments, new spending or bypassing authentication. Blocked or inaccessible sources will be logged in search-log.md as access limitations. No new reading was done in this turn."
+    },
+    {
+      "rule": 2,
+      "topic": "Challenger output: verified only",
+      "effect": "From now on, I open challenger output only inside a valid verified-challenge delivery that carries the verifier's adjudication. I will not open the project repository, its branches, pull requests, forks, mirrors or search results that lead there by any route. My earlier exposure (listed under challenger_material_seen) stays on record and authorizes no further reads. Round 1b (CLD-P05-REVISION-0002) was built from the challenger's unadjudicated first pass, read on the owner's chat instruction. That route is now excluded even by owner exception; see conflicts_or_questions."
+    },
+    {
+      "rule": 3,
+      "topic": "Auto round transport",
+      "effect": "Within a round, releases move only between local inboxes, and nothing goes to GitHub. After each future freeze I run round_transmit.py send myself, then wait in the background on my own inbox using the seen-file processed-deliveries.json in my outbox. I open only deliveries reported valid, acknowledge each one after handling it, and name the delivery IDs I used in my next release's provenance. Before relying on them, I read round_transmit.py and role_submission.py from this bundle."
+    },
+    {
+      "rule": 4,
+      "topic": "Self-submission and freeze",
+      "effect": "I freeze my own releases with role_submission.py freeze, without a human freeze. Releases contain only allowlisted proposer files. dossier.json, experiment-consensus.json and run manifests are not proposer release files. Any consent goes in my own experiment-consent.json for this session only. Freezing is not acceptance and authorizes no experiment. Per CHANGES.md, I did not freeze anything in this turn, and the R1b output is already with the challenger."
+    },
+    {
+      "rule": 5,
+      "topic": "Proposer checklist",
+      "effect": "The current dossier has no explicit Coverage, Gap, Contribution, Demand, Headroom, Contests and Delivery sections. They will be added in the next revision, which follows a verified-challenge delivery; the dossier is not revised in this turn. Only adjudicated objections will receive scientific responses. Work done while a challenge is pending will be labelled self-initiated."
+    },
+    {
+      "rule": 6,
+      "topic": "Preparation versus execution",
+      "effect": "Tool installation, data preparation and bounded correctness checks need an explicit scoped allocation and cannot be relabelled experiments. The P3-P5 checks of round 1 ran under the CLD-LAB-0001 allocation. In the next revision, tasklist.md dependencies (baseline versions, metrics, thresholds, budgets, splits, oracle, stop rules) will be bound by content or SHA-256. Changing a bound dependency resets both consents. No runner job was submitted in this turn."
+    },
+    {
+      "rule": 7,
+      "topic": "Review scope",
+      "effect": "Human CONFIRM is required only under topics/ and reports/final/. The coordinator may merge intermediate PRs after checks pass. I do not approve or merge, and nothing in this turn affects that."
+    },
+    {
+      "rule": 8,
+      "topic": "Assignments",
+      "effect": "For EDA-0002, the challenger is Codex-C05-TIMING-R2 and the verifier is DeepSeek-V02-PHYSICAL, per config/launch-release.json and config/round-transport.json. The role names in domains/D05/brief.json and its README are outdated; the release file is authoritative. My R1b records state that no verifier was assigned; that was true when they were written and will be updated in the next revision."
+    },
+    {
+      "rule": 9,
+      "topic": "Budget",
+      "effect": "Nothing changes for me. I use the existing Claude subscription, with no paid API, GPU, top-up or cloud purchase. The prepaid DeepSeek allowance applies only to the DeepSeek actors it names."
+    },
+    {
+      "rule": 10,
+      "topic": "Policy amendments",
+      "effect": "This receipt records the amendment and its hashes before any further scientific action. The frozen packet ff20816f... is not edited; files in this bundle supersede the packet copies at the same paths, and all other packet files stay in force. templates/topic/verification.md was read for completeness; it is the verifier's format."
+    }
+  ],
+  "challenger_material_seen": [
+    {
+      "artifact": "runs/CDX-C05-INDEPENDENT-0001/ (8 files: blocker.md, first-pass-plan.md, independent-estimate.md, independent-search.md, output-manifest.json, readiness.json, sources.json, transport.json), the independent first pass of Codex-C05-TIMING-R2",
+      "location": "getm0ss1moving/EDA-Topic-selection-and-Experiment, branch codex/challenger-initial-search, commit b7822234587292124a6d033167beb5f9d942e818",
+      "how_received": "Fetched by the proposer from raw.githubusercontent.com on 2026-10-14, on the human owner's chat instruction ('now we haven't set the verifier so just check the challenger's output again and optimize your proposal'). The proposer had declined to read it in the previous turn. Hashes are in runs/CLD-P05-REVISION-0002/manifest.json.",
+      "verifier_adjudication": false,
+      "use": "Leads and proposed tests in round 1b (responses.md CF-01 to CF-14). The pass states that it raises no topic-specific objection."
+    },
+    {
+      "artifact": "Repository metadata that describes challenger work: titles, states and bodies of PRs #18, #20 and #21; the PR list and branch list; compare metadata for main...codex/challenger-initial-search (file names and commit message only)",
+      "location": "getm0ss1moving/EDA-Topic-selection-and-Experiment",
+      "how_received": "GitHub REST API, read by the proposer on 2026-10-14 while looking for challenges after the owner asked it to check the challenger's challenges",
+      "verifier_adjudication": false,
+      "use": "Located the first pass; no scientific content adopted from it"
+    },
+    {
+      "artifact": "candidates/EDA-0002/challenges.md on main 86fb60b3 (the unchanged TBD scaffold, SHA-256 8f59fa4fbefdad8e6f20ecc5023ee7093327cc886b467ce94c0a50cf1667f627) and the coordinator's runs/CDX-CHALLENGER-SUCCESSION-0001/handoff.md (SHA-256 f4e6856685e27e7897603b3f4e334bb5d3ebe3accc8663a4388ebc12e31238b2)",
+      "location": "getm0ss1moving/EDA-Topic-selection-and-Experiment, main",
+      "how_received": "GitHub REST API, same reads as above. The scaffold holds no challenger content; the handoff is a coordinator record.",
+      "verifier_adjudication": false,
+      "use": "Confirmed that no challenge had been filed in the candidate"
+    },
+    {
+      "artifact": "Status statements about challenger work in this amendment: config/round-transport.json challenger_stage_basis (PRs #22 and #26) and config/launch-release.json role_handoffs ('the DeepSeek challenger filed and transported its round-1 challenge before the handoff')",
+      "location": "COORDINATOR-AMENDMENT-0001/files/config/",
+      "how_received": "Coordinator amendment bundle in my round inbox",
+      "verifier_adjudication": false,
+      "use": "None. Only metadata; no challenge content."
+    }
+  ],
+  "challenger_material_not_seen": "No output of the former challenger DeepSeek-C05-TIMING, including the round-1 challenge mentioned in role_handoffs. No challenger material reached me through a verified-challenge delivery: none exists yet. ADD-0001 (runs/CLD-P05-ADDENDUM-0001) read no challenger material; it hashed the challenges.md scaffold without reading it.",
+  "runtime_checks": {
+    "webfetch_outside_github_arxiv": {
+      "succeeded": true,
+      "url": "https://www.eejournal.com/article/20121206-cadence/",
+      "detail": "Connectivity check on SRC-020, a page already read in round 0. Only the title was requested and returned ('How to Close Timing with Hundreds of Multi-Mode/Multi-Corner Views'). No new research content was taken."
+    },
+    "round_transmit_check": {
+      "ran": true,
+      "detail": "python3 -I round_transmit.py check on my inbox exited with status 0: topic EDA-0002, role proposer, 0 deliveries, 0 stray entries. from-verifier is empty."
+    },
+    "background_wait": {
+      "started": true,
+      "started_at_utc": "2026-10-14T10:29Z (host clock)",
+      "detail": "Started as a background Bash command after the receipt was written, as CHANGES.md orders. Uses seen-file processed-deliveries.json (initialized to []) and timeout 86400 s. At 10:29:07Z it had not exited, and its output file was empty; a startup error would have ended it. The sandbox blocks pgrep, so the process list could not be checked directly. As docs/AUTO-ROUND.md notes, model wake-up on delivery is unverified until a real delivery arrives."
+    }
+  },
+  "conflicts_or_questions": [
+    "Round 1b and the verified-only rule. Round 1b (CLD-P05-REVISION-0002, expected digest 291fb885...) adopted items prompted by the challenger's unadjudicated first pass, which I read from the repository on the owner's instruction. The new rule forbids that route even by owner exception, and the contamination procedure in docs/ISOLATION.md may require stopping the affected role and starting a replacement session. I have already withdrawn independence for those items (independence_consequence in the R1b manifest). The owner must decide whether the contamination procedure applies to this proposer session or whether a written exception is recorded. I will not undo or extend that exposure.",
+    "R1b status. CHANGES.md says my R1b output is already with the challenger, and round-transport.json cites PR #26. I did not freeze R1b, and I have not verified what PR #26 transported; I am not reading the repository now. Please confirm that the transported bytes are my 13 outbox files with digest 291fb88515607ee0ac7a3c53c30ed9d84411b1274a222694a9c44d2a841db012, excluding the empty .claude folders.",
+    "Self-initiated work while waiting. PROPOSER.md allows self-initiated investigation while a challenge is pending. CHANGES.md says my next scientific input is a verified-challenge delivery. I read this as: no research in this turn, and further work only after a delivery or owner instruction. In particular, I will not read SRC-066 to SRC-068 now, although rule 1 permits it. Please say if self-initiated reading during the wait is intended.",
+    "Clock. Erratum E1 (true UTC = host clock + 54,000 s) was measured against GitHub Date headers in earlier turns. Now the host clock agrees with GitHub to within about 10 s, so the host clock appears to have been corrected between turns. Recorded times in earlier runs stay as written. New records will use the host clock, checked against a server Date header.",
+    "Release contents. dossier.json and experiment-consensus.json are not in the proposer allowlist of role_submission.py, so the next self-frozen release will omit them, and the coordinator integrates consent from experiment-consent.json. No action needed unless the coordinator expects otherwise.",
+    "Outdated owner questions. Of the open questions in my last status: access to SRC-066 to SRC-068 is answered by rule 1, and 'freeze and release' is replaced by actor-owned freeze (rule 4). Still open: whether the edit-loop comparison stays in the pilot, ADD-0001 admissibility, the bison build, runner budget accounting and the P&R allocation."
+  ],
+  "actions_not_taken": "No freeze, transmission, dossier revision, new research, runner job, git operation, approval, merge or signature. Nothing was written to any inbox. The packet and the amendment bundle were not edited."
+}

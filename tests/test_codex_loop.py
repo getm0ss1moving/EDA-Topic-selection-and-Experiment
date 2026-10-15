@@ -17,6 +17,8 @@ class LoopTests(unittest.TestCase):
         self.c=l.read(ROOT/'config/codex-research.json')
         self.c['topics']={'EDA-0002':dict(self.c['topics']['EDA-0002'],seed_prefix=None)}
         self.c['publication']={'enabled':False,'auto_merge':False}
+        self.c.pop('stop_after_rounds',None)
+        self.c['max_substantive_rounds']=3
         # Fixture exports current test source bytes; no production deployment claim.
         with patch.object(l,'frozen',side_effect=lambda ref,name:(ROOT/name).read_bytes()):
             self.state=l.prepare(self.c,self.home,l.git('rev-parse','HEAD'))
@@ -177,6 +179,26 @@ class LoopTests(unittest.TestCase):
         a=l.read(work/'JOB.json');release=l.rs.freeze(work/'release',work/'submissions','verifier',a['actor_id'],a['session_id'],a['topic'],a['input_commit'],a['packet_sha256'])
         with self.assertRaisesRegex(ValueError,'omitted'):
             l.validate_result(state,t,job,{'status':'complete','release_id':release.name})
+    def test_four_completed_cycles_stop_further_dispatch(self):
+        self.c['stop_after_rounds']=4;self.c['max_substantive_rounds']=4
+        l.save(self.home/'settings.json',self.c)
+        for _ in range(12):self.tick()
+        t=self.topic();self.assertEqual(t['round'],4)
+        self.assertEqual(t['status'],'stopped_after_round_limit')
+        self.assertEqual(l.dispatch(self.c,self.home,'D05')['status'],'finished')
+        self.assertEqual(self.tick()['status'],'idle')
+    def test_app_backend_does_not_use_native_model_fallback(self):
+        with self.assertRaisesRegex(ValueError,'app-agent'):
+            l.execute({'backend':'codex_app_agents'},{})
+    def test_two_domain_jobs_can_be_dispatched_without_shared_workspaces(self):
+        state=l.read(self.home/'state.json')
+        entry=l.read(ROOT/'config/codex-research.json')['topics']['EDA-0001']
+        with patch.object(l,'frozen',side_effect=lambda ref,name:(ROOT/name).read_bytes()):
+            l.add_topic(state,self.c,self.home,'EDA-0001',entry)
+        l.save(self.home/'state.json',state);l.transport_config(state,self.home)
+        a=l.dispatch(self.c,self.home,'D04');b=l.dispatch(self.c,self.home,'D05')
+        self.assertNotEqual(a['work'],b['work'])
+        self.assertEqual(a['role'],'proposer');self.assertEqual(b['role'],'proposer')
 
 
 class ReleaseBindings(unittest.TestCase):

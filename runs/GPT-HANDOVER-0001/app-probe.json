@@ -1,0 +1,7 @@
+{
+  "requested_model": "gpt-6.1-sol",
+  "requested_effort": "low",
+  "kind": "synthetic_backend_probe",
+  "write_test": "passed",
+  "configuration_statement": "The configuration was supplied by the caller; actual model introspection may be unavailable."
+}

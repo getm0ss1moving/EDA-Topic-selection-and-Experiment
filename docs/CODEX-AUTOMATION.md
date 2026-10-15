@@ -1,3 +1,7 @@
+# Active four-round handover batch (2026-10-15)
+
+Owner update: proposer uses `gpt-6.1-sol` high; verifier uses `gpt-6.1-sol` low; challenger retains `gpt-6-astra` low. D04 and D05 execute concurrently, with four complete P/C/V cycles per domain and then a hard stop. The native CLI rejected this account/model pairing, so the exact models run through fresh Codex app agents using `codex_loop.py dispatch/collect`. No native model fallback is permitted. The coordinator keeps running through the bounded batch and publishes each round. The final owner synthesis is Chinese by explicit request; scientific role artifacts stay English.
+
 # ChatGPT-only automatic research contract
 
 Effective 2026-10-15. This is the current operational contract for all three roles.

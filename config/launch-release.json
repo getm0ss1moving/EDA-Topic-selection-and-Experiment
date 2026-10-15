@@ -39,7 +39,7 @@
     "ChatGPT-P04-PHYSICAL",
     "ChatGPT-P05-TIMING"
   ],
-  "max_concurrent_scientific_sessions": 1,
+  "max_concurrent_scientific_sessions": 2,
   "fresh_sessions_required": true,
   "old_sessions_are_inputs": false,
   "communication": "Files only. Separate role workspaces and fresh ephemeral Codex executions; no inherited conversations, shared memory or foreign private outputs.",
@@ -51,5 +51,12 @@
     }
   },
   "supersedes_release": "PHYSICAL-ROLE-CREATION-0001",
-  "owner_authority": "Owner instructions 2026-10-15: adapt only ChatGPT proposer/challenger/verifier; autonomous complete research circuit, abandon invalid topics, select useful ones, publish each round; remove incidental manual gates."
+  "owner_authority": "Owner instructions 2026-10-15: adapt only ChatGPT proposer/challenger/verifier; autonomous complete research circuit, abandon invalid topics, select useful ones, publish each round; remove incidental manual gates.",
+  "batch_policy": {
+    "stop_after_completed_rounds_per_domain": 4,
+    "backend": "codex_app_agents",
+    "proposer_model": "gpt-6.1-sol high",
+    "verifier_model": "gpt-6.1-sol low",
+    "owner_summary_language": "Chinese"
+  }
 }

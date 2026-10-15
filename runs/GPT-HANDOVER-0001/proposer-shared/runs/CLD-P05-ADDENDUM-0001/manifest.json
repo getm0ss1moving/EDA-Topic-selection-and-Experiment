@@ -1,0 +1,24 @@
+{
+  "run_id": "CLD-P05-ADDENDUM-0001",
+  "session_id": "76d0bf61-78f7-4b93-a557-7c29f1a2cbe8",
+  "role": "proposer",
+  "input_commit": "d437c2f660906efe9351a90451905826d00b63e3",
+  "packet_sha256": "ff20816f623585d4bf7ba7b13d79db58aab90a2e947cd05c719cd93f3574602d",
+  "model": "claude-opus-5-5 (Opus 5.5), host-reported. Reasoning effort is not observable from inside the session.",
+  "operator": "Not asserted by the actor (human operator of the Claude Code session)",
+  "started_at_utc": "2026-10-13T10:37:23Z",
+  "completed_at_utc": "2026-10-13T11:05:00Z",
+  "clock_note": "True UTC, computed as host clock + 54,000 s (measured offset 53,987-53,999 s against GitHub Date headers). The start time is the first network artifact of this run; the access guide was read about one minute earlier.",
+  "output_paths": [
+    "addenda/EDA-0002/ADD-0001/transport-check.md",
+    "addenda/EDA-0002/ADD-0001/evidence-addendum.md",
+    "addenda/EDA-0002/ADD-0001/addendum-search-log.md",
+    "addenda/EDA-0002/ADD-0001/sources-addendum.json",
+    "runs/CLD-P05-ADDENDUM-0001/manifest.json",
+    "addendum-output-manifest.json"
+  ],
+  "source_ids": ["SRC-012", "SRC-039", "SRC-053", "SRC-054", "SRC-055", "SRC-056", "SRC-057", "SRC-058"],
+  "contamination_events": [],
+  "exposure_record": "The repository was read on the human owner's request, scoped to the transport of this actor's own dossier. Read in full: PR #13 metadata and body, the DeepSeek transport manifest, scripts/project.py at the PR head (read, not executed), and this actor's own transported files. Read as metadata only: titles of PRs #1-#16; review states and the CONFIRM body on PR #13; check-run names and outcomes. Hashed but not read: the challenges.md scaffold at the PR head. Only the first line of the chatgpt-codex-connector[bot] review was displayed, as API metadata; its body was not read. No challenger, verifier or other-role material was read. The human's acquisition note EDA_Source_Access_Guide.md was read as a list of access routes.",
+  "independence_attestation": "Proposer self-attestation, not proof of independence (docs/PHYSICAL-PILOT.md line 33). Inputs in this run: the hash-verified packet; this actor's own prior outputs; the human owner's request and acquisition note; the public repository state listed in exposure_record; and the public sources in addenda/EDA-0002/ADD-0001/sources-addendum.json. No agent messages were sent or received."
+}

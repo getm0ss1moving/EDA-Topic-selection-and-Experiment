@@ -1,0 +1,361 @@
+{
+  "run_id": "CLD-P05-HANDOFF-0001",
+  "record_type": "proposer handoff",
+  "session_id": "76d0bf61-78f7-4b93-a557-7c29f1a2cbe8",
+  "actor_id": "Claude-P05-TIMING",
+  "role": "proposer",
+  "topic": "EDA-0002",
+  "instruction": "Human owner, chat, 2026-10-15: 'conclude your task and claim your project's critical file to let another model to keep on your work'",
+  "written_at_utc": "2026-10-15T04:46:53Z (host clock)",
+  "handoff_document": "HANDOFF.md",
+  "dossier_digest": {
+    "value": "291fb88515607ee0ac7a3c53c30ed9d84411b1274a222694a9c44d2a841db012",
+    "recomputed_at_handoff": true,
+    "basis": "tools/digest.py over the 13 files of candidates/EDA-0002/ plus the repository scaffold challenges.md (SHA-256 8f59fa4fbefdad8e6f20ecc5023ee7093327cc886b467ce94c0a50cf1667f627); verification.* excluded. Matches the coordinator-reported value for the PR #26 transport. tools/check_dossier.py: 71 sources, 29 claims, 19 prior-art rows, no problems."
+  },
+  "role_output_manifest_before_handoff_sha256": "bb25e8ec80eb5c5f90613ffd854f9b5bdaefc3cb7f62a894856bed754e169f1d",
+  "background_wait": "Task bi86z6o18 (round_transmit.py wait, seen-file processed-deliveries.json, timeout 86400 s, started 2026-10-14T10:29Z) had produced no output at handoff, so no delivery had arrived. The sandbox blocks ps and pgrep, so the actor could not stop it. The operator must end this session or stop the task before a successor starts its own wait (one consumer per role).",
+  "deliveries_acknowledged": [],
+  "releases_frozen": [],
+  "changes_in_this_run": [
+    "HANDOFF.md written.",
+    "tools/digest.py, tools/check_dossier.py and tools/pdftext.swift copied from session scratch into the outbox (proposer-authored helpers; not authoritative validators).",
+    "AUTO-RESEARCH-REQUIREMENTS.md section A-01 corrected: a local PDFKit extractor exists (tools/pdftext.swift), so the gap is acquiring PDF bytes, not extracting text.",
+    "role-output-manifest.json rebuilt."
+  ],
+  "dossier_changed": false,
+  "not_included": "Session scratch (private to this session; not needed by a successor), the conversation transcript and any private reasoning.",
+  "inventory_note": "All regular files in the outbox except this manifest and role-output-manifest.json; empty host directories .claude/ excluded.",
+  "inventory": [
+    {
+      "path": "AUTO-RESEARCH-REQUIREMENTS.md",
+      "sha256": "b7059b623a4aedaa50dc9754d4cd9c47a03b1a02e001f2833fc86b01cca807bb",
+      "bytes": 30197
+    },
+    {
+      "path": "HANDOFF.md",
+      "sha256": "c924e4045f5e481075a6dd939d1d33686bfea58b684033ff027a8733f7b74bcb",
+      "bytes": 14536
+    },
+    {
+      "path": "addenda/EDA-0002/ADD-0001/addendum-search-log.md",
+      "sha256": "a6b17078fd7ff616cd08579b2529f5d433179bd1981497975c89594816ce0fd4",
+      "bytes": 3376
+    },
+    {
+      "path": "addenda/EDA-0002/ADD-0001/evidence-addendum.md",
+      "sha256": "2ac265d35cb4c2d132d1fd3d427d214046448f0160230dc8e4bbda994fe7d974",
+      "bytes": 18326
+    },
+    {
+      "path": "addenda/EDA-0002/ADD-0001/sources-addendum.json",
+      "sha256": "85b101bb2a4033c00589afd179cbc2d1cd0cd69d7d620f01101892dbf9e2ae53",
+      "bytes": 8611
+    },
+    {
+      "path": "addenda/EDA-0002/ADD-0001/transport-check.md",
+      "sha256": "7f2804cc0aa21500c4f72544680fae731adcafc9a082dd3105119331eed767bf",
+      "bytes": 6543
+    },
+    {
+      "path": "addendum-output-manifest.json",
+      "sha256": "d22bb2ba08194c3d71ab1ebf7bedd86bfd89a0e7330e6a284ffb93916f46aa0d",
+      "bytes": 6002
+    },
+    {
+      "path": "candidates/EDA-0002/contest-audit.md",
+      "sha256": "d6f4b93aa84eec228f1aae71ed4ed49133b116e5719fd0e8e8b178f12aba4864",
+      "bytes": 4535
+    },
+    {
+      "path": "candidates/EDA-0002/direction-control.json",
+      "sha256": "960f4b24f9347478af53387aa5853486a29a6f42bced63345574192ec438e29e",
+      "bytes": 7295
+    },
+    {
+      "path": "candidates/EDA-0002/dossier.json",
+      "sha256": "5fffcb642e17ecf263d6d13584f3348be6daa2a272d78a953e6ecba9f5e66df3",
+      "bytes": 250
+    },
+    {
+      "path": "candidates/EDA-0002/experiment-consensus.json",
+      "sha256": "26e806f303ceadc833228c9d4ee7cd8618b549320ff18469d800cf36532ef1a9",
+      "bytes": 2232
+    },
+    {
+      "path": "candidates/EDA-0002/experiment-plan.md",
+      "sha256": "829f14704acf39676638fb183e57a6cde299b91edb7977e81dc63f981e2b4fd3",
+      "bytes": 21071
+    },
+    {
+      "path": "candidates/EDA-0002/forecast.json",
+      "sha256": "1dacccdb35df1a7a702bb992698631dcaded574ee5841876c41775604290cd52",
+      "bytes": 3323
+    },
+    {
+      "path": "candidates/EDA-0002/industry-gap.md",
+      "sha256": "a164ed8b2d09a42d3c8916f66a3cff5e21fcb988edf8b7ac6812fef8925c8d7a",
+      "bytes": 6715
+    },
+    {
+      "path": "candidates/EDA-0002/prior-art.csv",
+      "sha256": "1fde9749217f26be303e577fb2369dd16d4b6123df64a9794f41756e27da69ee",
+      "bytes": 10239
+    },
+    {
+      "path": "candidates/EDA-0002/proposal.md",
+      "sha256": "7d0ced47b4ee92ba2a968bbea7cfbc7d443c5cb51cad42358671b4d7e11e32ca",
+      "bytes": 53194
+    },
+    {
+      "path": "candidates/EDA-0002/responses.md",
+      "sha256": "ea9234cb00f8935841ce5d3d9c3edfe25ba3869d701071d5b0397f8a8bf70afd",
+      "bytes": 7724
+    },
+    {
+      "path": "candidates/EDA-0002/search-log.md",
+      "sha256": "9b0e6cc2ef26c1cf876229b9ab9ac789fb293f5bae1a1188f08fdeea38311a6a",
+      "bytes": 24073
+    },
+    {
+      "path": "candidates/EDA-0002/sources.json",
+      "sha256": "ffdca6c5d3ecf310476d1a52ec2908794e703bf384b460aab64ea28d3359c96f",
+      "bytes": 64357
+    },
+    {
+      "path": "candidates/EDA-0002/tasklist.md",
+      "sha256": "bb1f2e6c4ee63273b45b78041a921bbc77fca09e6a4263b48cec27150905d0ef",
+      "bytes": 15250
+    },
+    {
+      "path": "first-pass-plan.md",
+      "sha256": "63e75503d8bc9233b5a06650ccb0053b7956affecab41be272cf8ab6f559bfcf",
+      "bytes": 32302
+    },
+    {
+      "path": "lab-requests/REQ-0001.json",
+      "sha256": "6070fabb00bfaa70948fc776cbbb752a9d227de26e61142e5ba301999f59e006",
+      "bytes": 432
+    },
+    {
+      "path": "lab-requests/REQ-0001.sh",
+      "sha256": "7ba027d966ec3fd2a6cb7ea93965ff3a0e16165972cac504d5cb88a6e13bd834",
+      "bytes": 3378
+    },
+    {
+      "path": "lab-requests/REQ-0002.json",
+      "sha256": "29eba03cdb5a13e3735b77cb633cb03e86dde5577f3b2ba88a05c994ef68adc8",
+      "bytes": 379
+    },
+    {
+      "path": "lab-requests/REQ-0002.sh",
+      "sha256": "d5941a488acfc121ac8204c1fcdd4adcf8c0294e82476c4d72e7191c3fb130f4",
+      "bytes": 1872
+    },
+    {
+      "path": "lab-requests/REQ-0003.json",
+      "sha256": "7510803f886ae0284812c893dcc0256e682abd8de6d5959232701fbdedbdbde0",
+      "bytes": 588
+    },
+    {
+      "path": "lab-requests/REQ-0003.sh",
+      "sha256": "df28c61adb57edf1c0c17cd3f13c0bf888840b426cf2be554761e5208e47dcad",
+      "bytes": 3759
+    },
+    {
+      "path": "lab-requests/REQ-0004.json",
+      "sha256": "c563211af9c30baeba94b5bdc3806ae16b6329670343f706f0c9067bdae2c316",
+      "bytes": 476
+    },
+    {
+      "path": "lab-requests/REQ-0004.sh",
+      "sha256": "ebe83e497b9118b056fe51571c84b0614a33ae688e01fb9102b6be3c03262481",
+      "bytes": 4647
+    },
+    {
+      "path": "lab-requests/REQ-0005.json",
+      "sha256": "c7b0f728f1074536d62b93c210d7ebd0ffd8db4bb49d5d7cdae5d037d190e8f3",
+      "bytes": 461
+    },
+    {
+      "path": "lab-requests/REQ-0005.sh",
+      "sha256": "4424b4286f39cf5e6a41da25d0a1723137efcb8190c047db3accc64198a38123",
+      "bytes": 5018
+    },
+    {
+      "path": "lab-requests/REQ-0006.json",
+      "sha256": "98eceea83e0aab12c3090f2a232005f7ec00adae7915524cb2265cf909808580",
+      "bytes": 520
+    },
+    {
+      "path": "lab-requests/REQ-0006.sh",
+      "sha256": "0a10a13f3c36381f179d720d4330a911e1a02daebc846faf043bd8aaccc2a875",
+      "bytes": 2770
+    },
+    {
+      "path": "lab-requests/REQ-0007.json",
+      "sha256": "e9c4021b62fbdf98868c97b2eeb60f281c6dca6424f4be31bf78fd338f6ee852",
+      "bytes": 511
+    },
+    {
+      "path": "lab-requests/REQ-0007.sh",
+      "sha256": "7ed057a3cdd73e7b2a0d44cc06a29e640f5df022ccd9d0961ffb215d8922414c",
+      "bytes": 2841
+    },
+    {
+      "path": "lab-requests/REQ-0008.json",
+      "sha256": "9b149a41922677adee9f683f233733f1316193932ff28195f419311348c8278b",
+      "bytes": 527
+    },
+    {
+      "path": "lab-requests/REQ-0008.sh",
+      "sha256": "5bea3a3619dd988c2ce64295f135dae5c680b8ce5d74e6ea553fe270992a1107",
+      "bytes": 3155
+    },
+    {
+      "path": "lab-requests/REQ-0009.json",
+      "sha256": "8ded4ff6daa8dc36a4ac701598459c8ff64544a775e8f322c9eccca97cb134b5",
+      "bytes": 359
+    },
+    {
+      "path": "lab-requests/REQ-0009.sh",
+      "sha256": "63549997563e9e3afc41e2cc8357ee865068fea3704318d21e0f88ae31a7f860",
+      "bytes": 1432
+    },
+    {
+      "path": "lab-requests/p05_check.py",
+      "sha256": "de153b2414e01df6bcb29b3fce6581912e819dbd4373843392293c8e0c70568a",
+      "bytes": 13196
+    },
+    {
+      "path": "lab-requests/p05_extract.tcl",
+      "sha256": "6ab3c290783395a0b34466b2e16b6e3444ca8c9015c68b0bc021754dc0794dee",
+      "bytes": 2004
+    },
+    {
+      "path": "lab-requests/p05_fixtures.py",
+      "sha256": "08488e018b64bf9c6573b0b6674f95029c6b8bb16f5f66eaf3e97ab818f6a3f0",
+      "bytes": 20514
+    },
+    {
+      "path": "processed-deliveries.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "path": "readiness.json",
+      "sha256": "99985e135b66f10eb95d86738e772050debefdf6e6b4b22a53c21cef6a02afa5",
+      "bytes": 28278
+    },
+    {
+      "path": "receipts/CLD-P05-AMEND-0001-owner-decisions.json",
+      "sha256": "1698be7a7ddd1baa66ee7ca8398da3d2422aee35e2b54962dbb8c8df2112e0b9",
+      "bytes": 3469
+    },
+    {
+      "path": "receipts/CLD-P05-AMEND-0001-receipt.json",
+      "sha256": "8bdb7d72e65483daa1d4f1f1e7b9abae9fc23d126b4f786c92c1d2355d3cf386",
+      "bytes": 13869
+    },
+    {
+      "path": "runs/CLD-P05-ADDENDUM-0001/manifest.json",
+      "sha256": "944a4338fc507b46c29cbbb284094218c9fd75314d9ffd727fc90d3318dae93a",
+      "bytes": 2429
+    },
+    {
+      "path": "runs/CLD-P05-RESEARCH-0001/manifest.json",
+      "sha256": "5eeb8b71f9df0486135455e4c4f6bd2cac70bbe7accc78686da9fa2f7201a707",
+      "bytes": 2686
+    },
+    {
+      "path": "runs/CLD-P05-REVISION-0001/evidence/REQ-0001-network-log.tsv",
+      "sha256": "4a11a16167f2683acf70c0e6ac2b5cd55294f960a1b593d8145c0c2063d6ccfa",
+      "bytes": 507
+    },
+    {
+      "path": "runs/CLD-P05-REVISION-0001/evidence/REQ-0003-licenses.txt",
+      "sha256": "65386310a9a130576278e08cbaed30b16cb66ea2c5be9abcb737e08c0eef9c5e",
+      "bytes": 5685
+    },
+    {
+      "path": "runs/CLD-P05-REVISION-0001/evidence/REQ-0003-network-log.tsv",
+      "sha256": "f484a69b1a38438aceaddb8c591cf301889c268803d873cd7d3954e72f9192e8",
+      "bytes": 1964
+    },
+    {
+      "path": "runs/CLD-P05-REVISION-0001/evidence/REQ-0005-cmake-license.txt",
+      "sha256": "397352eda0b5d752e4f531ce4b3acb564f9f26ce8329e8e2532194e1fb9b90e3",
+      "bytes": 386
+    },
+    {
+      "path": "runs/CLD-P05-REVISION-0001/evidence/REQ-0006-setup.txt",
+      "sha256": "d6df68e7c7d3e5aecdf90fd581e2c4d51fc10b670f00dbab84bc8bb29528feac",
+      "bytes": 424
+    },
+    {
+      "path": "runs/CLD-P05-REVISION-0001/evidence/REQ-0008-counterexamples.csv",
+      "sha256": "4e81d0a3990c869a5354e1dc70e5ea5cf90186624209fa60436a71a57910b266",
+      "bytes": 40768
+    },
+    {
+      "path": "runs/CLD-P05-REVISION-0001/evidence/REQ-0008-fixture-sha256.txt",
+      "sha256": "ad347bf41d55a964d470e615db0deb6a53c182c76f2f2b2c1bbfda707a97a4d6",
+      "bytes": 534
+    },
+    {
+      "path": "runs/CLD-P05-REVISION-0001/evidence/REQ-0008-summary.json",
+      "sha256": "bc9a8cf03f7c735d74083b9bbbb37b7f77953150f3080a1775df2a2957eb1631",
+      "bytes": 18185
+    },
+    {
+      "path": "runs/CLD-P05-REVISION-0001/evidence/REQ-0009-build-config.txt",
+      "sha256": "2e05e4583d5e31aa566945f2946a535e776d5fda1d1a3933dcc35fe7939c79f0",
+      "bytes": 2382
+    },
+    {
+      "path": "runs/CLD-P05-REVISION-0001/evidence/runner-ledger.json",
+      "sha256": "bff0f521667cf86bbc8f765c9b58a7ace20db11b88ca04b3f8aaa5580357e907",
+      "bytes": 16446
+    },
+    {
+      "path": "runs/CLD-P05-REVISION-0001/manifest.json",
+      "sha256": "de04a62fb7f055aaa1556ecd09880504e08016e108003a7038b30346fd9bf1d5",
+      "bytes": 7397
+    },
+    {
+      "path": "runs/CLD-P05-REVISION-0001/p3-p5-record.md",
+      "sha256": "4f027002c9bb4f507429b158fdd2c10637c799a4400bc1c45aae0e7e744a5dba",
+      "bytes": 18619
+    },
+    {
+      "path": "runs/CLD-P05-REVISION-0002/manifest.json",
+      "sha256": "d16a5225e6944af6c30435c4b7459c8dd5e001826044c3b88ff55221ef5496e4",
+      "bytes": 9120
+    },
+    {
+      "path": "runs/CLD-P05-SELF-0001/manifest.json",
+      "sha256": "048779eeb576362805d9a62126c350f75c060831cd03daf0fe8acbb477f9a79c",
+      "bytes": 6063
+    },
+    {
+      "path": "runs/CLD-P05-SELF-0001/reading-notes.md",
+      "sha256": "ae75134e03428a312adb55fd4578b2124d1ccd1038825b38d2b4204c325392db",
+      "bytes": 12299
+    },
+    {
+      "path": "tools/check_dossier.py",
+      "sha256": "1ca5b889261a8bf5c7a196f1bcd7929b61a4e133c3cc1f360e98099c9030ea13",
+      "bytes": 3286
+    },
+    {
+      "path": "tools/digest.py",
+      "sha256": "baacd7a915012e964c55efe062ceabef8d83faef59a711ad2975f4d479c9e9a6",
+      "bytes": 500
+    },
+    {
+      "path": "tools/pdftext.swift",
+      "sha256": "b9d7107b8b031eca75bcc2e758e11e7608c1827df3601fb15e13bde39691c999",
+      "bytes": 383
+    }
+  ]
+}

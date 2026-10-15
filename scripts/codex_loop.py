@@ -45,7 +45,7 @@ def save(p, data):
     tmp=p.with_suffix('.tmp'); tmp.write_bytes(rs.encoded(data)); os.replace(tmp,p)
 def sha(p): return hashlib.sha256(Path(p).read_bytes()).hexdigest()
 def git(*args, cwd=ROOT): return subprocess.check_output(['git',*args],cwd=cwd,text=True).strip()
-def frozen(ref, name): return subprocess.check_output(['git','show',f'{ref}:{name}'],cwd=ROOT)
+def frozen(ref, name): return subprocess.check_output(['git','show',f'{ref}:{name}'],cwd=ROOT,stderr=subprocess.DEVNULL)
 def freeze_tree(path):
     for p in path.rglob('*'): p.chmod(0o555 if p.is_dir() else 0o444)
     path.chmod(0o555)
@@ -79,6 +79,13 @@ def add_topic(state,c,home,topic,entry,seed=True):
         names += [str(p.relative_to(ROOT)) for p in (ROOT/'templates/topic').iterdir() if p.is_file()]
         for name in names:
             p=packet/name;p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(frozen(state['source_commit'],name))
+        for prefix in entry.get('handover_prefixes',{}).get(role,[]):
+            listed=git('ls-tree','-r','--name-only',state['source_commit'],'--',prefix).splitlines()
+            for name in listed:
+                if not name.startswith(prefix):raise ValueError('Handover prefix escape')
+                dest=packet/'released-handover'/name[len(prefix):]
+                dest.parent.mkdir(parents=True,exist_ok=True)
+                dest.write_bytes(frozen(state['source_commit'],name))
         if role=='proposer' and seed and entry.get('seed_prefix'):
             # Historical *released* proposal only. No old challenge/verifier or private notes.
             for name in rs.FILES['proposer']:
@@ -177,7 +184,7 @@ def job_for(state,t,c):
             if not found:raise ValueError('Adjudicated release missing from history')
             copy_release(found[-1],shared/sid);paths.append(str(shared/sid))
     if role in t['latest']:
-        copy_release(t['latest'][role],work/'own-previous')
+        copy_release(t['latest'][role],work/'own-previous'/Path(t['latest'][role]).name)
     # Consent signatures may refer to an earlier proposer release. Release it explicitly.
     for r in ('proposer','challenger'):
         if r not in t['latest']:continue
@@ -194,7 +201,10 @@ def job_for(state,t,c):
                 'actor_id':seat['actor_id'],'session_id':seat['session_id'],'input_commit':state['source_commit'],
                 'packet_sha256':seat['packet_sha256'],'phase':t.get('closure') or 'research',
                 'released_inputs':paths,'previous_proposal_release':Path(t['latest']['proposer']).name if t['latest'].get('proposer') else None,
-                'readiness': 'logical seat registered locally; CLI model execution not yet observed'}
+                'batch_round':sum(x['round'] for x in state['topics'].values() if x['domain']==t['domain'])+1,
+                'batch_round_limit':c.get('stop_after_rounds'),
+                'models':c['models'],
+                'readiness': 'logical seat registered; actual host model is recorded by the execution backend'}
     save(work/'JOB.json',assignment)
     prompt=(f'Run only the {role} role for {t["topic"]}. All artifacts and replies English. '
         'Read JOB.json, policy/docs/CODEX-AUTOMATION.md, common policy, and only your own harness. '
@@ -213,6 +223,21 @@ def job_for(state,t,c):
         'python3 policy/scripts/role_submission.py freeze --source release --queue submissions '
         f'--role {role} --actor {seat["actor_id"]} --session {seat["session_id"]} --topic {t["topic"]} '
         f'--ref {state["source_commit"]} --packet {seat["packet_sha256"]}\n')
+    prompt += ('This owner-authorized batch has exactly four completed P/C/V cycles per domain. '
+               'D04 and D05 run independently in parallel. Use this round to make concrete scientific progress; '
+               'do not spend it merely asking for infrastructure permission. On rounds 1-3, refine or '
+               'collect matching consents as appropriate; on round 4 give your final evidence-backed '
+               'feasibility/novelty and task-list position, including any unresolved limits. '
+               'No new experiment compute is granted by this batch. Inherited R1b includes earlier '
+               'unadjudicated first-pass material and is explicitly unblinded; do not inherit independence '
+               'or treat historical verifier findings as verification of the new revision. '
+               'Use released-handover for your own predecessor\'s shared files, never its transcript or scratch. '
+               'Write final protocol JSON to result.json in the job root after self-freezing, with status, release_id, reason.\n')
+    prompt += ('The coordinator runs full-repository validation during publication. This standalone job '
+               'does not contain the entire repository or foreign harnesses; use the trusted freeze validator '
+               'for your own release and record any limited local checks. Do not browse the checkout to '
+               'satisfy a legacy validation instruction. Complete a candid research release even if '
+               'scientific gates remain unresolved; that is a review outcome, not an infrastructure block.\n')
     (work/'prompt.txt').write_text(prompt)
     return {'role':role,'work':str(work),'attempt':0}
 
@@ -229,6 +254,8 @@ def command(c,role,work):
 
 
 def execute(c,job):
+    if c.get('backend')=='codex_app_agents':
+        raise ValueError('This batch requires exact-model app-agent dispatch/collect; native CLI refused this account/model')
     work=Path(job['work'])
     if (work/'result.json').is_file():return read(work/'result.json')
     if (work/'process.json').exists():
@@ -361,11 +388,14 @@ def accept_result(state,t,job,result,home):
     if role=='proposer':t['phase']='challenger'
     elif role=='challenger':t['phase']='verifier'
     else:
-        action=flow['next_action'];t['round']+=0 if t['closure'] else 1
+        action=flow['next_action'];t['round']+=1 if read(home/'settings.json').get('stop_after_rounds') else (0 if t['closure'] else 1)
         record={'topic':t['topic'],'round':t['round'],'decision':action,
                 'releases':dict(t['latest']),'registrations':registry(state),
                 'verification_release':snapshot.name,'source_commit':state['source_commit']}
         state['publication_queue'].append(record)
+        limit=read(home/'settings.json').get('stop_after_rounds')
+        completed=sum(x['round'] for x in state['topics'].values() if x['domain']==t['domain'])
+        t['last_scientific_decision']=action
         if action in ('accept_for_pilot','abandon','park'):
             t['status']={'accept_for_pilot':'selected_for_pilot','abandon':'abandoned','park':'parked'}[action]
         elif t['round']>=read(home/'settings.json')['max_substantive_rounds'] and action=='revise':
@@ -373,11 +403,18 @@ def accept_result(state,t,job,result,home):
         else:
             t['closure']={'consent_experiment':'experiment','consent_abandonment':'abandonment'}.get(action)
             t['phase']='proposer'
+        if limit and completed>=limit:
+            t['status']='stopped_after_round_limit'
+        elif limit and action=='accept_for_pilot':
+            # Extra rounds are audits, not a silent override of the scientific verdict.
+            t['status']='researching';t['phase']='proposer';t['closure']='experiment'
     t['job']=None;t['not_before']=0
 
 
 def successor(state,t,c,home):
     if t['status'] not in ('abandoned','parked') or t.get('successor'):return
+    if c.get('stop_after_rounds') and sum(x['round'] for x in state['topics'].values()
+            if x['domain']==t['domain'])>=c['stop_after_rounds']:return
     cap=c.get('max_topics_per_domain')
     if cap and sum(x['domain']==t['domain'] for x in state['topics'].values())>=cap:return
     ids=[int(x[4:]) for x in state['topics']]
@@ -475,6 +512,51 @@ def merge_checked(url):
     return True
 
 
+def dispatch(c,home,domain):
+    """Prepare one exact-model app-agent job; never spawn a native fallback."""
+    state=read(home/'state.json')
+    for t in list(state['topics'].values()):successor(state,t,c,home)
+    done=sum(t['round'] for t in state['topics'].values() if t['domain']==domain)
+    if c.get('stop_after_rounds') and done>=c['stop_after_rounds']:
+        save(home/'state.json',state);return {'status':'finished','domain':domain,'rounds':done}
+    choices=[t for t in state['topics'].values() if t['domain']==domain and t['status']=='researching']
+    if not choices:return {'status':'no_ready_topic','domain':domain}
+    t=choices[0]
+    if not t['job']:t['job']=job_for(state,t,c)
+    save(home/'state.json',state)
+    return {'status':'ready','topic':t['topic'],'domain':domain,**t['job'],**c['models'][t['phase']]}
+
+
+def collect(c,home,domain):
+    state=read(home/'state.json')
+    choices=[t for t in state['topics'].values() if t['domain']==domain and t['job']]
+    if len(choices)!=1:raise ValueError('Exactly one dispatched job is required')
+    t=choices[0];job=t['job'];result=read(Path(job['work'])/'result.json')
+    try:
+        accept_result(state,t,job,result,home)
+    except (ValueError,OSError) as e:
+        save(Path(job['work'])/'retry-note.json',{'mechanical_error':str(e),
+              'instruction':'Repair your own output; do not invent scientific agreement.'})
+        raise
+    save(home/'state.json',state)
+    return {'status':'collected','topic':t['topic'],'role':job['role'],'rounds':t['round'],
+            'next_role':t['phase'],'topic_status':t['status']}
+
+
+def publish_pending(c,home):
+    state=read(home/'state.json');out=[]
+    for rec in state['publication_queue']:
+        key=rec['verification_release']
+        if key not in state['published']:
+            state['published'][key]=publish_record(rec,c,home)
+            save(home/'state.json',state)
+        out.append(state['published'][key])
+    if c['publication'].get('auto_merge'):
+        for url in out:
+            if url not in state.setdefault('merged',[]) and merge_checked(url):state['merged'].append(url)
+    save(home/'state.json',state);return out
+
+
 def tick(c,home,executor=execute,publisher=publish_record):
     state=read(home/'state.json')
     # Publish independently of scientific advancement; a GitHub outage cannot lose a round.
@@ -526,6 +608,9 @@ def main():
     a=sub.add_parser('prepare');a.add_argument('--ref',required=True)
     sub.add_parser('status');sub.add_parser('tick');sub.add_parser('watch')
     sub.add_parser('preflight')
+    for name in ('dispatch','collect'):
+        q=sub.add_parser(name);q.add_argument('--domain',choices=['D04','D05'],required=True)
+    sub.add_parser('publish-pending')
     args=p.parse_args();c,home=config(args.config)
     if args.command=='preflight':
         print(subprocess.check_output([c['cli'],'--version'],text=True).strip())
@@ -538,6 +623,9 @@ def main():
         with open(home/'coordinator.lock','w') as lock:
             fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
             if args.command=='tick':out=tick(c,home)
+            elif args.command=='dispatch':out=dispatch(c,home,args.domain)
+            elif args.command=='collect':out=collect(c,home,args.domain)
+            elif args.command=='publish-pending':out=publish_pending(c,home)
             else:
                 while True:
                     print(json.dumps(tick(c,home)),flush=True)

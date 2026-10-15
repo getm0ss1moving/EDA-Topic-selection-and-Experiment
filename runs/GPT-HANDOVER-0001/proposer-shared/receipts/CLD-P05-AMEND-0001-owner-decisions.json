@@ -1,0 +1,36 @@
+{
+  "record_type": "owner decisions received after receipt CLD-P05-AMEND-0001",
+  "session_id": "76d0bf61-78f7-4b93-a557-7c29f1a2cbe8",
+  "actor_id": "Claude-P05-TIMING",
+  "topic": "EDA-0002",
+  "received_at_utc": "2026-10-14T10:44Z (host clock)",
+  "channel": "Human owner's chat message in this session, pasted text headed 'Owner decisions, 2026-10-14.'",
+  "answers": "conflicts_or_questions in receipts/CLD-P05-AMEND-0001-receipt.json",
+  "decisions": [
+    {
+      "item": 1,
+      "subject": "Round 1b and the verified-only rule",
+      "decision_as_received": "Round 1b: keep this session; no replacement. Written exception: [your reason, e.g. \"I allowed it to keep round 1 moving while the challenger and verifier seats were being reassigned.\"]. Your CF-01 to CF-14 responses count only after the verifier rules on the objections they answer; keep the independence withdrawal you recorded.",
+      "effect": "This session continues as the EDA-0002 proposer, with no replacement. CF-01 to CF-14 in responses.md have no standing as responses until the verifier rules on the objections they answer. The independence withdrawal in runs/CLD-P05-REVISION-0002/manifest.json (independence_consequence) stays in force.",
+      "open_point": "The exception's rationale was received as an unfilled template placeholder ('[your reason, e.g. ...]'). The proposer does not write the owner's rationale. docs/ISOLATION.md and AGENTS.md require a written rationale for a human exception, so the exception is recorded as decided but its rationale as missing until the owner supplies it. The example text in the placeholder is not adopted as the owner's reason."
+    },
+    {
+      "item": 2,
+      "subject": "R1b transport",
+      "decision_as_received": "The coordinator confirmed that the challenger received exactly your 13 dossier files, byte for byte; with the empty challenges.md scaffold they give 291fb88515607ee0ac7a3c53c30ed9d84411b1274a222694a9c44d2a841db012.",
+      "effect": "The coordinator-reported digest equals the proposer's expected digest in runs/CLD-P05-REVISION-0002/manifest.json. The proposer did not verify the transported bytes itself; it did not read the repository, per rule 2."
+    },
+    {
+      "item": 3,
+      "subject": "Reading while waiting",
+      "decision_as_received": "While waiting, self-initiated reading is allowed, including SRC-066 to SRC-068. Label it self-initiated. Do not freeze or send a release until a valid verified-challenge delivery arrives, then fold the reading into your response. Keep the background wait running; restart it if it stopped.",
+      "effect": "Self-initiated reading is recorded in runs/CLD-P05-SELF-0001/. The dossier under candidates/EDA-0002/ is not edited until a valid verified-challenge delivery arrives; the reading is folded into that response. No freeze and no send before then. The background wait keeps running and is restarted if it stops."
+    },
+    {
+      "item": "4-6",
+      "subject": "Clock, release contents, remaining open questions",
+      "decision_as_received": "Clock noted; release contents are as designed; the remaining open questions stay open until they block work.",
+      "effect": "New records use the host clock, checked against a server Date header. Releases omit dossier.json and experiment-consensus.json, as designed. Still open: the edit-loop comparison, ADD-0001 admissibility, the bison build, runner budget accounting and the P&R allocation."
+    }
+  ]
+}

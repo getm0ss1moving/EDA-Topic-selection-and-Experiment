@@ -1,0 +1,57 @@
+{
+  "record_type": "role_output_manifest_addendum",
+  "language": "en",
+  "actor_id": "Claude-P05-TIMING",
+  "call_sign": "CLD-Origin-TIMING",
+  "role": "proposer",
+  "topic": "EDA-0002",
+  "session_id": "76d0bf61-78f7-4b93-a557-7c29f1a2cbe8",
+  "run_id": "CLD-P05-ADDENDUM-0001",
+  "input_commit": "d437c2f660906efe9351a90451905826d00b63e3",
+  "packet_sha256": "ff20816f623585d4bf7ba7b13d79db58aab90a2e947cd05c719cd93f3574602d",
+  "packet_reverification": "2026-10-13T11:03Z (true UTC): PACKET.json hash matches; 31 of 31 listed files match; no unlisted files.",
+  "request": "The human owner asked the author to check DeepSeek's upload of this outbox to the GitHub repository, to confirm it or propose changes, and to use EDA_Source_Access_Guide.md to obtain the papers and contest material needed.",
+  "outcome": {
+    "transport": "PR #13 is a correct, byte-identical transport. The dossier digest 8d6bd047... was recomputed independently. No repository change is requested; see transport-check.md.",
+    "evidence": "SRC-012 was read in full and does not trigger K1 (proposer assessment, needs verifier re-check). The distinction from SRC-012 narrows to D1-D3, so K2 and K3 now decide the novelty claim. TAU 2018/2019 are resolved at summary level, neither is about MCMM screening, and the round-0 'login wall' statement is corrected. Round-0 timestamps are about 15 h early (erratum E1).",
+    "round_0_files": "Unchanged. All 14 round-0 output hashes in role-output-manifest.json (ed13d070...) re-verified."
+  },
+  "outputs": [
+    {"path": "addenda/EDA-0002/ADD-0001/addendum-search-log.md", "sha256": "a6b17078fd7ff616cd08579b2529f5d433179bd1981497975c89594816ce0fd4", "bytes": 3376},
+    {"path": "addenda/EDA-0002/ADD-0001/evidence-addendum.md", "sha256": "2ac265d35cb4c2d132d1fd3d427d214046448f0160230dc8e4bbda994fe7d974", "bytes": 18326},
+    {"path": "addenda/EDA-0002/ADD-0001/sources-addendum.json", "sha256": "85b101bb2a4033c00589afd179cbc2d1cd0cd69d7d620f01101892dbf9e2ae53", "bytes": 8611},
+    {"path": "addenda/EDA-0002/ADD-0001/transport-check.md", "sha256": "7f2804cc0aa21500c4f72544680fae731adcafc9a082dd3105119331eed767bf", "bytes": 6543},
+    {"path": "runs/CLD-P05-ADDENDUM-0001/manifest.json", "sha256": "944a4338fc507b46c29cbbb284094218c9fd75314d9ffd727fc90d3318dae93a", "bytes": 2429}
+  ],
+  "outputs_note": "This manifest cannot contain its own hash. The addendum is not a dossier revision. The coordinator decides whether to release it now or fold it into round 1 (evidence-addendum.md section 6).",
+  "transport_suggestion": "If transported, place the addendum under a path the validator accepts, for example runs/CLD-P05-ADDENDUM-0001/. Placing it inside candidates/EDA-0002/ would change the dossier digest. Also consider transporting role-output-manifest.json (transport-check.md note 1).",
+  "input_provenance_events": [
+    "The human's acquisition note /Users/duanzeyu/Desktop/EDA_Source_Access_Guide.md was read with the file-read tool on the human's instruction; it is outside the sandbox's Bash read allowlist. Local copies named in the note under EDA-source-downloads were not read; the same files were fetched from the official URLs and their hashes matched the note.",
+    "The GitHub REST API and raw.githubusercontent.com were read without authentication (the gh CLI is absent). Scope is listed in runs/CLD-P05-ADDENDUM-0001/manifest.json exposure_record.",
+    "scripts/project.py was downloaded to scratch and read, but not executed. A short reimplementation of its digest() function was run on files fetched from the PR head.",
+    "The SRC-012 PDF came from an Internet Archive capture because the author host's TLS handshake timed out. TLS verification was never disabled. The PDF, TAU slides and extracted text stay in session scratch and are not placed in the outbox.",
+    "The session's existing PDFKit text extractor (a reading aid disclosed in round 0) was reused on three PDFs. No EDA tool was run.",
+    "One verbose curl diagnostic printed the sandbox proxy's session credentials to the tool output. They are not reproduced in any file.",
+    "Two shell commands containing 'cd' moved the host's primary working directory, first to the packet and then back to the outbox. Nothing was written to the packet; it was re-verified afterwards.",
+    "Heredoc temp-file creation failed again under the sandbox, as in round 0. Scripts were written with the file-write tool into scratch instead.",
+    "Host clock offset measured as 53,987-53,999 s behind GitHub Date headers. All addendum timestamps are corrected by +54,000 s."
+  ],
+  "unresolved_questions": [
+    "Verifier re-check of the SRC-012 reading and of the K1 assessment (evidence-addendum.md section 1.2).",
+    "U10: content of NIO (ICSICT 2014, DOI 10.1109/ICSICT.2014.7021608); abstract withheld, title only.",
+    "Forward citations of SRC-013, SRC-016 and SRC-017 are still unsearched; for SRC-012 the screen was mostly title-level.",
+    "Google-hosted TAU 2018/2019 rules, file formats, winner presentations and benchmarks; access state unverified.",
+    "Whether the coordinator releases this addendum now or folds it into round 1; folding changes the dossier digest.",
+    "Whether the chatgpt-codex-connector[bot] review on PR #13 should be routed into the challenge/verification files; the author did not read it.",
+    "Round-0 U2-U7 and U9 are unchanged."
+  ],
+  "actions_not_taken": [
+    "No edit to any round-0 file (candidates/EDA-0002/*, runs/CLD-P05-RESEARCH-0001/manifest.json, role-output-manifest.json, readiness.json, first-pass-plan.md).",
+    "No git operation, push, PR, comment, review, approval or merge.",
+    "No reading of the bot review body, challenger or verifier material, other PR contents, or other actors' files.",
+    "No EDA tool run (DQ-07).",
+    "No contact with TAU organizers; the access guide's suggested email was not sent.",
+    "No write outside the outbox, apart from session scratch."
+  ],
+  "written_at_utc": "2026-10-13T11:05:00Z"
+}
