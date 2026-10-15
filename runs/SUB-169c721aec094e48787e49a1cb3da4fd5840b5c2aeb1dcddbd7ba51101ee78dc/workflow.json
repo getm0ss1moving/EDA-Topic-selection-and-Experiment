@@ -1,0 +1,50 @@
+{
+  "role": "proposer",
+  "topic": "EDA-0006",
+  "batch_round": 1,
+  "assessment": "unresolved",
+  "next_action": "independent_challenge",
+  "input_commit": "f68c1492c05be3fac5622deac4bb479eabf957de",
+  "packet_sha256": "0a344dc225723839dc6a224d16376f44459179b3b83746986b2c1253a8dd1466",
+  "actor_id": "ChatGPT-P05-TIMING-EDA-0006",
+  "session_id": "53d6f5d7-1d68-4d5a-a081-2a7df44a34b0",
+  "source_cutoff_utc": "2026-10-15",
+  "forecast_exposure": "Unblinded; explicitly released historical P/V outputs read, no current challenge/verifier output supplied",
+  "scientific_state": "Research hypothesis only; kernel-count benefit versus complete cache explicitly absent; scheduler-value novelty and scoped demand unresolved",
+  "resource_status": "No new EDA/training/GPU/API allocation; only source reading, derivation and tiny stdlib analytical check completed",
+  "local_checks": [
+    "Python toy output-byte equality/counter checks passed; not an EDA benchmark",
+    "Source retrieval hashes and code function locators recorded",
+    "Trusted role_submission freeze/verify will check own allowed release",
+    "Standalone job lacks full repository; coordinator runs project.py validate during publication"
+  ],
+  "scratch": "/tmp/eda0006-p05-r1-research",
+  "outputs": [
+    "contest-audit.md",
+    "direction-control.json",
+    "experiment-plan.md",
+    "forecast.json",
+    "industry-gap.md",
+    "prior-art.csv",
+    "proposal.md",
+    "responses.md",
+    "search-log.md",
+    "sources.json",
+    "tasklist.md",
+    "workflow.json"
+  ],
+  "tasklist_sha256": "f9fc38cf9c0cef8c6bfc289808904e8fa7c367e1f029cb4c8774605564ea7d35",
+  "coverage": {
+    "duplicate_prior_art": "unresolved",
+    "mechanism": "unresolved",
+    "composition": "unresolved",
+    "demand": "unresolved",
+    "industry_gap": "unresolved",
+    "headroom": "unresolved",
+    "contests": "unresolved",
+    "experiments": "unresolved",
+    "cost": "supported_as_accounting_specification_only"
+  },
+  "consents": "none; no current immutable proposer target exists for same-release consent",
+  "analytical_check_source_sha256": "59bcad8658b2b323dfe49c3975dd2705598e3c43edab54561db6a24e13eef501"
+}

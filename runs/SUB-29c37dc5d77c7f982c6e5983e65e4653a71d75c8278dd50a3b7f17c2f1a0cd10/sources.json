@@ -1,0 +1,194 @@
+[
+  {
+    "id": "C01",
+    "title": "Faster Variational Execution with Transparent Bytecode Transformation",
+    "url": "https://www.cs.cmu.edu/~ckaestne/pdf/oopsla18.pdf",
+    "source_type": "author_hosted_paper",
+    "publication_date": "2018-11",
+    "retrieved_at_utc": "2026-10-15T11:10:44.382979+00:00",
+    "locator": "Sections 2, 3.1, 3.2, 4 and 5; Fig.1; printed pages 117:7-117:18",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "OBJ-001"
+    ],
+    "limitations": "Conditional-value and execution-sharing methods read; no Java performance reproduced; EDA equivalence is reviewer inference.",
+    "version": "DOI 10.1145/3276487",
+    "rights": "Public reading only; no full paper or source copies released. Implementation reuse requires a separate license review."
+  },
+  {
+    "id": "C02",
+    "title": "VarexC implementation",
+    "url": "https://raw.githubusercontent.com/chupanw/vbc/1221ef110e2b46951ab01319e97fa5d7dd84a724/src/main/java/edu/cmu/cs/varex/VImpl.java",
+    "source_type": "source_code",
+    "publication_date": "unknown",
+    "retrieved_at_utc": "2026-10-15T11:10:44.382979+00:00",
+    "locator": "VImpl.java map/flatMap lines107-158, addVToMap lines160-172, put lines173-177, checkInvariant lines61-70; VHashMap.java put lines22-30",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "OBJ-001"
+    ],
+    "limitations": "Selected functions only; restriction/exception semantics are not an exact timing implementation; no build or execution. Commit obtained from public GitHub tree API.",
+    "version": "1221ef110e2b46951ab01319e97fa5d7dd84a724",
+    "rights": "Public reading only; no full paper or source copies released. Implementation reuse requires a separate license review."
+  },
+  {
+    "id": "C03",
+    "title": "Reducing runtime and memory requirements of static timing analysis",
+    "url": "https://patents.google.com/patent/US8839167B1/en",
+    "source_type": "patent",
+    "publication_date": "2014-09-16",
+    "retrieved_at_utc": "2026-10-15T11:10:44.382979+00:00",
+    "locator": "Fig.7 steps705-750; following single-copy canonical and deterministic-data paragraphs; browser lines554-579",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "OBJ-001"
+    ],
+    "limitations": "Correct B1 identifier replaces inaccessible B2 lead; optional tolerances not a byte-exact full-state proof; no legal status or commercial deployment conclusion.",
+    "version": "US8839167B1",
+    "rights": "Public reading only; no full paper or source copies released. Implementation reuse requires a separate license review."
+  },
+  {
+    "id": "C04",
+    "title": "OpenROAD Resizer source",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/8da6ac250b0349c346d1abed7c2c43107f4ff6f7/src/rsz/src/Resizer.cc",
+    "source_type": "source_code",
+    "publication_date": "unknown",
+    "retrieved_at_utc": "2026-10-15T11:10:44.382979+00:00",
+    "locator": "findResizeSlacks, findResizeSlacks1; raw local lines3232 onward (web line numbers differ); comments API for timing driven placement; repairSetup and fullyRebuffer calls",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "OBJ-002"
+    ],
+    "limitations": "Selected functions not all callers. No execution; absence of candidate enumeration in this function is not absence in whole system.",
+    "version": "8da6ac250b0349c346d1abed7c2c43107f4ff6f7",
+    "rights": "Public reading only; no full paper or source copies released. Implementation reuse requires a separate license review."
+  },
+  {
+    "id": "C05",
+    "title": "Speeding Up Physical Synthesis with Transactional Timing Analysis",
+    "url": "https://web.eecs.umich.edu/~imarkov/pubs/jour/dt10-sta.pdf",
+    "source_type": "author_hosted_paper",
+    "publication_date": "2010-09",
+    "retrieved_at_utc": "2026-10-15T11:10:44.382979+00:00",
+    "locator": "Printed pp.18-19 Case 2 Candidate selection transforms and Incorporation of transactions",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "OBJ-002"
+    ],
+    "limitations": "Historical general workflow, not present scoped frequency or measured repetition. Web fetch failed; direct public download and pdftotext succeeded.",
+    "version": "DOI 10.1109/MDT.2010.76",
+    "rights": "Public reading only; no full paper or source copies released. Implementation reuse requires a separate license review."
+  },
+  {
+    "id": "C06",
+    "title": "ISPD26 official contest results",
+    "url": "https://www.ispd.cc/contests/26/index.html",
+    "source_type": "official_contest",
+    "publication_date": "unknown",
+    "retrieved_at_utc": "2026-10-15T11:10:44.382979+00:00",
+    "locator": "Contest Winners and Contest Resources",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "contest-audit"
+    ],
+    "limitations": "Winner identities only; no verified winner method found in bounded search.",
+    "version": "retrieved 2026-10-15",
+    "rights": "Public reading only; no full paper or source copies released. Implementation reuse requires a separate license review."
+  },
+  {
+    "id": "C07",
+    "title": "ISPD27 contest evaluator",
+    "url": "https://raw.githubusercontent.com/ABKGroup/ISPD27-Contest/faef83cacf70fa7923be07816d804ca9c1cef68e/evaluator/README.md",
+    "source_type": "official_contest",
+    "publication_date": "unknown",
+    "retrieved_at_utc": "2026-10-15T11:10:44.382979+00:00",
+    "locator": "Run your tool and score; Evaluation and scoring; MCMM_CONFIG input",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "contest-audit"
+    ],
+    "limitations": "No evaluator run; current draft may change; no benchmark license transfer inferred.",
+    "version": "faef83cacf70fa7923be07816d804ca9c1cef68e",
+    "rights": "Public reading only; no full paper or source copies released. Implementation reuse requires a separate license review."
+  },
+  {
+    "id": "C08",
+    "title": "2026 CAD Contest at ICCAD",
+    "url": "https://www.iccad-contest.org/2026/index.html",
+    "source_type": "official_contest",
+    "publication_date": "unknown",
+    "retrieved_at_utc": "2026-10-15T11:10:44.382979+00:00",
+    "locator": "Contest Problems and Tentative Schedule",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "contest-audit"
+    ],
+    "limitations": "Index topic inventory, not an exhaustive current contest search or winner algorithm audit.",
+    "version": "retrieved 2026-10-15",
+    "rights": "Public reading only; no full paper or source copies released. Implementation reuse requires a separate license review."
+  },
+  {
+    "id": "C09",
+    "title": "Divergent Thoughts toward One Goal: LLM-based Multi-Agent Collaboration System for Electronic Design Automation",
+    "url": "https://arxiv.org/html/2502.10857v1",
+    "source_type": "paper",
+    "publication_date": "2025-02-15",
+    "retrieved_at_utc": "2026-10-15T11:10:44.382979+00:00",
+    "locator": "Section3 framework roles and selector",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "three-lens"
+    ],
+    "limitations": "Supports general multi-agent precedent only; no superiority or exact timing reduction inferred.",
+    "version": "arXiv:2502.10857v1",
+    "rights": "Public reading only; no full paper or source copies released. Implementation reuse requires a separate license review."
+  },
+  {
+    "id": "C10",
+    "title": "PreRoutGNN for Timing Prediction with Order Preserving Partition",
+    "url": "https://arxiv.org/html/2403.00012v2",
+    "source_type": "paper",
+    "publication_date": "2024-03-12",
+    "retrieved_at_utc": "2026-10-15T11:10:44.382979+00:00",
+    "locator": "Methodology, Table1, Static Timing Analysis and local signal-delay discussion",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "three-lens"
+    ],
+    "limitations": "Pre-routing prediction differs from exact fixed-parasitic candidate scoring; no training or data audit performed.",
+    "version": "arXiv:2403.00012v2",
+    "rights": "Public reading only; no full paper or source copies released. Implementation reuse requires a separate license review."
+  },
+  {
+    "id": "C11",
+    "title": "Simultaneous multi-scenario static noise analysis",
+    "url": "https://patents.google.com/patent/US12518077B1/en",
+    "source_type": "patent",
+    "publication_date": "2026-01-06",
+    "retrieved_at_utc": "2026-10-15T11:10:44.382979+00:00",
+    "locator": "Detailed description Fig.4; browser lines379-406; claims10-12",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "contest-audit"
+    ],
+    "limitations": "Newer primary near-neighbor; worst-case noise merging is not byte-exact per-candidate equality. No legal/commercial performance conclusion.",
+    "version": "US12518077B1",
+    "rights": "Public reading only; no full paper or source copies released. Implementation reuse requires a separate license review."
+  },
+  {
+    "id": "C12",
+    "title": "Scaling Variational Execution thesis",
+    "url": "https://www.cs.cmu.edu/~chupanw/thesis/thesis.pdf",
+    "source_type": "author_thesis",
+    "publication_date": "unknown",
+    "retrieved_at_utc": "2026-10-15T11:10:44.382979+00:00",
+    "locator": "Sections2.2,3.3,3.4 and 3.5; PDF pages17-18,28-43",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "OBJ-001"
+    ],
+    "limitations": "Citation-neighborhood corroboration; selected sections only, no independent experimental reproduction.",
+    "version": "public PDF retrieved 2026-10-15",
+    "rights": "Public reading only; no full paper or source copies released. Implementation reuse requires a separate license review."
+  }
+]

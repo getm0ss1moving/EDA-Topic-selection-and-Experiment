@@ -1,0 +1,7 @@
+{
+  "session_id": "d8a34cff-2715-4f58-943d-cf69b6833887",
+  "decision": "revision_requested",
+  "signed_revision": "SUB-169c721aec094e48787e49a1cb3da4fd5840b5c2aeb1dcddbd7ba51101ee78dc",
+  "tasklist_sha256": "f9fc38cf9c0cef8c6bfc289808904e8fa7c367e1f029cb4c8774605564ea7d35",
+  "rationale": "Add lifted-context reduction and concrete caller/output-contract audit before readiness; allocation, owners and adapter are pending. This is not an agreement."
+}
