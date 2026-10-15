@@ -1,0 +1,11 @@
+{
+  "role": "verifier",
+  "reviewed_proposer_release": "SUB-60a7c8058bd0ca75347337d7edfc23e32fa3eda0cf78f97d1cbfbcaad53b6c45",
+  "adjudicated_challenger_releases": [
+    "SUB-dc827521b95ab9d5bf6d9fa22897f78b042d19fd072ccb6001be4ffb8335996c"
+  ],
+  "next_action": "revise",
+  "batch_round": 2,
+  "scientific_decision": "revise",
+  "experiment_authorized": false
+}

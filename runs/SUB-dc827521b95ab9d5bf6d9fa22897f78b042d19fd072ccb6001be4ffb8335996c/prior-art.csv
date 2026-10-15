@@ -1,0 +1,10 @@
+source_id,task_formulation,mechanism,data,evaluation,assumptions,limitation,overlap,proposed_distinction
+R01,MCR,vertex/set search and subset dominance,robot graphs,source method read,label union,no joint reembedding,target selection,only budgeted cut efficiency hypothesis
+R02,MCR,bidirectional frontier generation and refinement,robot graphs,Section III read,undirected contraction,relocation not computed,frontier owner-set selection,directed cost-state cuts; applicability proof needed
+R03,detailed routing,concurrent MCF constraints,routing regions,Sections I–IV read,grid and boundaries,no exact R2 timing experiment,joint route assignment,selection policy and full-WNS acceptance
+R04,DRC repair,marker queue,DR worker,Alg11–12 read,markers and rerouting,different trigger,blocker handling,legal-route timing target
+R05,DRC repair,adaptive region merging,detail routes,Section2.1 read,region topology,different stage objective,retained boundaries,same clip across arms
+R06,constraint displacement,overlap then move obstacles,robot trajectories,Sections2–4 read,movable objects,not fixed-pin wires,two-stage composition,no generic novelty
+R15,global overflow repair,SAT keep variables and UNSAT-core removal,global capacities,SectionIII full read,overflow constraints,not timing-budget reachability,conflict-guided selective ripup,explicit no-overflow contrast
+R14,motion planning,lazy invalid-path exclusions,roadmaps,Section4.1 read,kinematic feasibility,different clauses,learned rejection,all-owner frontier logic distinct not proven new
+R13,global layer assignment,criticality batching and lookahead DP,ISPD25,method/evaluation read not reproduced,fixed planar projection GPU,not DR repair,timing resource selection,neighboring-stage reference

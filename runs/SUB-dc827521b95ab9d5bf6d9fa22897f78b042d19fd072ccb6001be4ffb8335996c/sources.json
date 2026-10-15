@@ -1,0 +1,217 @@
+[
+  {
+    "id": "R00",
+    "title": "Frozen R2 proposal and dependencies",
+    "url": "shared/SUB-60a7c8058bd0ca75347337d7edfc23e32fa3eda0cf78f97d1cbfbcaad53b6c45",
+    "source_type": "primary_artifact",
+    "publication_date": "2026-10-15",
+    "retrieved_utc": "2026-10-15T08:05:17.851042+00:00",
+    "locator": "proposal.md mechanism steps 3\u20135, CT01/CT03; experiment-plan.md Shared selector contract, Arms, CT04; tasklist.md T01\u2013T08",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "OBJ-001",
+      "OBJ-002",
+      "OBJ-003",
+      "OBJ-004",
+      "OBJ-005"
+    ],
+    "limitations": "Released proposer statements, not independent measurements."
+  },
+  {
+    "id": "R01",
+    "title": "The Minimum Constraint Removal Problem with Three Robotics Applications",
+    "url": "https://motion.cs.illinois.edu/papers/wafr2012-constraintremoval.pdf",
+    "source_type": "primary_research",
+    "publication_date": "2012",
+    "retrieved_utc": "2026-10-15T08:05:17.851042+00:00",
+    "locator": "pp.4\u20136, discrete definition and Section 3.2 subset-state search",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "OBJ-001"
+    ],
+    "limitations": "No experiments reproduced; no full text redistributed."
+  },
+  {
+    "id": "R02",
+    "title": "Graph-Based Heuristics for Minimum Constraint Removal in Cluttered Robot Motion Planning",
+    "url": "https://arxiv.org/pdf/2610.12609v1",
+    "source_type": "primary_research",
+    "publication_date": "2026-10-08",
+    "retrieved_utc": "2026-10-15T08:05:17.851042+00:00",
+    "locator": "Section II, Section III A\u2013C, Algorithms 1\u20133",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "OBJ-001"
+    ],
+    "limitations": "v1; undirected contraction and downstream relocation assumptions differ; HTML failed, PDF inspected."
+  },
+  {
+    "id": "R03",
+    "title": "A Multicommodity Flow-Based Detailed Router With Efficient Acceleration Techniques",
+    "url": "https://www.cse.cuhk.edu.hk/~byu/papers/J27-TCAD2018-MCFRoute.pdf",
+    "source_type": "primary_research",
+    "publication_date": "2018-01",
+    "retrieved_utc": "2026-10-15T08:05:17.851042+00:00",
+    "locator": "pp.217\u2013220 Sections I\u2013IV; directed graph, boundary crosspoints and simultaneous formulation",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "OBJ-001"
+    ],
+    "limitations": "Author PDF fetched with urllib after browser failure; selected sections inspected, not entire solver reproduced."
+  },
+  {
+    "id": "R04",
+    "title": "TritonRoute-WXL: The Open Source Router with Integrated DRC Engine",
+    "url": "https://vlsicad.ucsd.edu/Publications/Journals/j136.pdf",
+    "source_type": "primary_research",
+    "publication_date": "2021",
+    "retrieved_utc": "2026-10-15T08:05:17.851042+00:00",
+    "locator": "Section VI, Algorithms 11\u201312, PDF pp.9\u201310",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "OBJ-001"
+    ],
+    "limitations": "Accepted manuscript; queue-based DRC repair is not a post-route WNS result."
+  },
+  {
+    "id": "R05",
+    "title": "Effective and Efficient Detailed Routing with Adaptive Rip-up Scheme and Pin Access Refinement",
+    "url": "https://chengengjie.github.io/papers/C17-GLSVLSI21-DR.pdf",
+    "source_type": "primary_research",
+    "publication_date": "2022-06",
+    "retrieved_utc": "2026-10-15T08:05:17.851042+00:00",
+    "locator": "Section 2.1 and Figures 2\u20134",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "OBJ-001"
+    ],
+    "limitations": "PDF footer identifies GLSVLSI 2022 despite filename C17-GLSVLSI21; DRC-region repair, no timing transfer."
+  },
+  {
+    "id": "R06",
+    "title": "Locally Optimal Solutions to Constraint Displacement Problems via Path-Obstacle Overlaps",
+    "url": "https://arxiv.org/html/2511.12203v1",
+    "source_type": "primary_research",
+    "publication_date": "2025-11-15",
+    "retrieved_utc": "2026-10-15T08:05:17.851042+00:00",
+    "locator": "Sections 2\u20134, especially Definitions 2\u20133 and overlap/displacement stages",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "OBJ-001"
+    ],
+    "limitations": "No experiments reproduced; no full text redistributed."
+  },
+  {
+    "id": "R07",
+    "title": "ISPD 2025 contest official winners",
+    "url": "https://www.ispd.cc/contests/25/index.html",
+    "source_type": "primary_artifact",
+    "publication_date": "2025",
+    "retrieved_utc": "2026-10-15T08:05:17.851042+00:00",
+    "locator": "Contest Winners numbered list",
+    "access_level": "full",
+    "supported_claim_ids": [],
+    "limitations": "Names/ranks only; does not establish submitted algorithm identity."
+  },
+  {
+    "id": "R08",
+    "title": "ISPD 2026 contest official page",
+    "url": "https://www.ispd.cc/contests/26/index.html",
+    "source_type": "primary_artifact",
+    "publication_date": "2026",
+    "retrieved_utc": "2026-10-15T08:05:17.851042+00:00",
+    "locator": "Title, Contest Winners and resources",
+    "access_level": "full",
+    "supported_claim_ids": [],
+    "limitations": "Post-placement buffering/sizing outside fixed-netlist anchor; no hidden test access."
+  },
+  {
+    "id": "R09",
+    "title": "MyGR source distribution",
+    "url": "https://github.com/StariaReena/MyGR/tree/9b2466982f7e129c45bdefc9f8f653515b372367",
+    "source_type": "primary_artifact",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-15T08:05:17.851042+00:00",
+    "locator": "README Publications/Contest/Prerequisites; router/src/main.cpp route(), initial Lshape call and ripup loop",
+    "access_level": "full",
+    "supported_claim_ids": [],
+    "limitations": "API resolved main to this commit; raw main.cpp inspected. README viewed on moving main; core kernels not inspected. No build. Contest origin is not exact winning-binary equivalence."
+  },
+  {
+    "id": "R10",
+    "title": "OpenROAD pinned routing branch",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/src/drt/src/dr/FlexDR_maze.cpp",
+    "source_type": "primary_artifact",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-15T08:05:17.851042+00:00",
+    "locator": "lines 1477\u20131530 mazeIterInit_sortRerouteNets and mazeIterInit_sortRerouteQueue",
+    "access_level": "full",
+    "supported_claim_ids": [],
+    "limitations": "Static raw code inspected; seed swaps guarded by mazeIter==0 and OR_SEED; actual executed branch not measured."
+  },
+  {
+    "id": "R11",
+    "title": "ICCAD 2026 CAD Contest official problems",
+    "url": "https://www.iccad-contest.org/",
+    "source_type": "primary_artifact",
+    "publication_date": "2026",
+    "retrieved_utc": "2026-10-15T08:05:17.851042+00:00",
+    "locator": "Contest Problems A/B/C and Tentative Schedule",
+    "access_level": "full",
+    "supported_claim_ids": [],
+    "limitations": "Listed netlist exploration, failure bucketing and floorplanning tasks; not proof every contest archive searched."
+  },
+  {
+    "id": "R12",
+    "title": "ISPD 2027 previous-contests page",
+    "url": "https://ispd.cc/ispd2027/index.php?page=contests",
+    "source_type": "primary_artifact",
+    "publication_date": "2026",
+    "retrieved_utc": "2026-10-15T08:05:17.851042+00:00",
+    "locator": "Previous Contests listing",
+    "access_level": "full",
+    "supported_claim_ids": [],
+    "limitations": "Search-visible official index; attempted singular page=contest fetch failed. No finalized 2027 routing task or winner conclusion."
+  },
+  {
+    "id": "R13",
+    "title": "GAP-LA: GPU-Accelerated Performance-Driven Layer Assignment",
+    "url": "https://arxiv.org/html/2507.13375v1",
+    "source_type": "primary_research",
+    "publication_date": "2025-07-13",
+    "retrieved_utc": "2026-10-15T08:05:17.851042+00:00",
+    "locator": "Sections II-D, III-A\u2013D, IV-A",
+    "access_level": "full",
+    "supported_claim_ids": [],
+    "limitations": "Global layer assignment with fixed planar projection; winner-comparison claims are authors measurements, not reproduced or transferred to local detailed repair."
+  },
+  {
+    "id": "R14",
+    "title": "Lazy Probabilistic Roadmaps Revisited",
+    "url": "https://arxiv.org/html/2209.14471",
+    "source_type": "primary_research",
+    "publication_date": "2022-09-28",
+    "retrieved_utc": "2026-10-15T08:05:17.851042+00:00",
+    "locator": "Section 4.1 Eq.(8); Sections 6 and 7",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "OBJ-005"
+    ],
+    "limitations": "Cuts exclude invalid path-edge combinations; not shown equivalent to all-owner frontier clauses."
+  },
+  {
+    "id": "R15",
+    "title": "Selecting Nets to Rip Up and Reroute via SAT",
+    "url": "https://www.cse.cuhk.edu.hk/~byu/papers/J166-TCAD2026-SATRoute.pdf",
+    "source_type": "primary_research",
+    "publication_date": "2026-05-01",
+    "retrieved_utc": "2026-10-15T08:05:17.851042+00:00",
+    "locator": "pp.2137\u20132138 Section III A\u2013D, Eqs.(4)\u2013(5), Algorithm 1; p.2139 Section IV",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "OBJ-005"
+    ],
+    "limitations": "Early online 2025-09-18; DOI 10.1109/TCAD.2025.3611865. Browser/urllib timed out, curl succeeded; full Section III inspected via pdftotext. No performance transfer or execution.",
+    "sha256": "c2c9f5dacb9337e18294d3530a5653636c56e2b80488e353c7085ff2d2223901"
+  }
+]
