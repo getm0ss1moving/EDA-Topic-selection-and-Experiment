@@ -1,0 +1,10 @@
+{
+  "role": "verifier",
+  "reviewed_proposer_release": "SUB-798cbd734b7b9b36d5460af3487a6b0400e1c6e6b7aabb6c576d5a6ecdef0974",
+  "adjudicated_challenger_releases": [
+    "SUB-d4efe5f9b29cc9ce2f4f5db2b7da7c3aa1931b9ccd604d15d77e97ef94bc18f3"
+  ],
+  "next_action": "revise",
+  "assessment": "revise",
+  "reason": "Research revision complete; no fatal duplication established, but novelty, soundness, utility, headroom, data/allocation and consensus remain unresolved."
+}

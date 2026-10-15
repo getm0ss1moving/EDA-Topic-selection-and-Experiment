@@ -1,0 +1,226 @@
+[
+  {
+    "id": "C-S01",
+    "title": "A Fast Approach for Static Timing Analysis Covering All PVT Corners",
+    "url": "https://www.eecg.utoronto.ca/~najm/papers/dac11-sari.pdf",
+    "type": "primary_paper",
+    "published": "2011",
+    "retrieved": "2026-10-15T05:44:21.588210+00:00",
+    "locator": "Sections 2.2, 3.2, 6.1 equations 9-11",
+    "access": "full",
+    "claims": [
+      "REVIEW-COVERAGE"
+    ],
+    "limitations": "Clock-only estimation is prior art; paper discusses dominance margins and restricted endpoint evaluation. No exact all-triple equivalence inferred.",
+    "version": "as accessed",
+    "license": "Source rights retained; no full text redistributed"
+  },
+  {
+    "id": "C-S02",
+    "title": "Efficient Block-Based Parameterized Timing Analysis Covering All Potentially Critical Paths",
+    "url": "https://www.eecg.utoronto.ca/~najm/papers/iccad08-khaled.pdf",
+    "type": "primary_paper",
+    "published": "2008",
+    "retrieved": "2026-10-15T05:44:21.588210+00:00",
+    "locator": "Sections 4.1-4.2 PRUNE/PRUNE_LB; section 5 Table 1 and c2670 discussion",
+    "access": "full",
+    "claims": [
+      "OBJ-001"
+    ],
+    "limitations": "Sufficient pruning plus exact final pruning is established; reported loose-filter speedup can be consumed by exact cleanup. Affine model does not establish OpenSTA equivalence.",
+    "version": "as accessed",
+    "license": "Source rights retained; no full text redistributed"
+  },
+  {
+    "id": "C-S03",
+    "title": "Parameterized Timing Analysis with General Delay Models and Arbitrary Variation Sources",
+    "url": "https://www.eecg.utoronto.ca/~najm/papers/dac08-khaled.pdf",
+    "type": "primary_paper",
+    "published": "2008",
+    "retrieved": "2026-10-15T05:44:21.588210+00:00",
+    "locator": "Section 3 properties 1-3, equations 4-9",
+    "access": "full",
+    "claims": [
+      "OBJ-001"
+    ],
+    "limitations": "Nonlinear bounding is established subject to function-class assumptions; no arbitrary calculator equivalence inferred.",
+    "version": "as accessed",
+    "license": "Source rights retained; no full text redistributed"
+  },
+  {
+    "id": "C-S04",
+    "title": "A Unified Multi-Corner Multi-Mode Static Timing Analysis Engine",
+    "url": "https://www.aspdac.com/aspdac2010/Archive_Folder/pdf/8B-2.pdf",
+    "type": "official_author_slides",
+    "published": "2010",
+    "retrieved": "2026-10-15T05:44:21.588210+00:00",
+    "locator": "Slides 8, 15, 18-23, 28-29",
+    "access": "full",
+    "claims": [
+      "OBJ-001"
+    ],
+    "limitations": "Exact worst delay with linear process models, hybrid path/parameter branch-and-bound and incumbent bound. Slides, not full paper; no exact all-triple Liberty implementation established.",
+    "version": "as accessed",
+    "license": "Source rights retained; no full text redistributed"
+  },
+  {
+    "id": "C-S05",
+    "title": "Variable threshold system and method for multi-corner static timing analysis",
+    "url": "https://patents.google.com/patent/US7681157B2/en",
+    "type": "patent",
+    "published": "2010-03-16",
+    "retrieved": "2026-10-15T05:44:21.588210+00:00",
+    "locator": "Description starting-corner cutoff and step 305; claims",
+    "access": "full",
+    "claims": [
+      "REVIEW-COVERAGE"
+    ],
+    "limitations": "Variable cutoff pruning is a prior formulation. Description uses likely/estimated passing; not proof of the proposed guarantee or shipped product.",
+    "version": "as accessed",
+    "license": "Source rights retained; no full text redistributed"
+  },
+  {
+    "id": "C-S06",
+    "title": "OpenSTA DmpCeff.cc",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/e01d3f163f483f233db00410b6515a767a6ca03b/dcalc/DmpCeff.cc",
+    "type": "source_code",
+    "published": "unknown",
+    "retrieved": "2026-10-15T05:44:21.588210+00:00",
+    "locator": "DmpCap::gateDelaySlew/loadDelaySlew; DmpCeffDelayCalc::setCeffAlgorithm and gateModelRd call",
+    "access": "full",
+    "claims": [
+      "REVIEW-COVERAGE"
+    ],
+    "limitations": "Pinned source reading only; no build or numerical validation. Use function locators because web text line numbers differ from physical source.",
+    "version": "e01d3f163f483f233db00410b6515a767a6ca03b",
+    "license": "Source rights retained; no full text redistributed"
+  },
+  {
+    "id": "C-S07",
+    "title": "OpenSTA TableModel.cc",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/e01d3f163f483f233db00410b6515a767a6ca03b/liberty/TableModel.cc",
+    "type": "source_code",
+    "published": "unknown",
+    "retrieved": "2026-10-15T05:44:21.588210+00:00",
+    "locator": "Table2::findValue bilinear interpolation; GateTableModel::gateDelay",
+    "access": "full",
+    "claims": [
+      "REVIEW-COVERAGE"
+    ],
+    "limitations": "Double intermediate arithmetic and result conversion need enclosure; reading is not a complete operation graph proof.",
+    "version": "e01d3f163f483f233db00410b6515a767a6ca03b",
+    "license": "Source rights retained; no full text redistributed"
+  },
+  {
+    "id": "C-S08",
+    "title": "TAU 2019 contest and TimeBoost report",
+    "url": "https://www.tauworkshop.com/2019/slides/TAU%202019%20Contest-C%20TimeBoost.pdf",
+    "type": "official_team_report",
+    "published": "2019",
+    "retrieved": "2026-10-15T05:44:21.588210+00:00",
+    "locator": "Slides 5-6, 14-15; contest statement https://www.tauworkshop.com/2019/contest.html",
+    "access": "full",
+    "claims": [
+      "REVIEW-COVERAGE"
+    ],
+    "limitations": "Incremental update and engine matching are relevant controls; not an independently reproduced winner or certificate method.",
+    "version": "as accessed",
+    "license": "Source rights retained; no full text redistributed"
+  },
+  {
+    "id": "C-S09",
+    "title": "Invited: Post-Placement Buffering and Sizing Contest",
+    "url": "https://vlsicad.ucsd.edu/Publications/Conferences/421/c421.pdf",
+    "type": "primary_contest_paper",
+    "published": "2026-03",
+    "retrieved": "2026-10-15T05:44:21.588210+00:00",
+    "locator": "Section 2.3 timing assumptions; sections 2.4, 5.2 and 5.3 roadmap; DOI 10.1145/3764386.3779616",
+    "access": "full",
+    "claims": [
+      "OBJ-002"
+    ],
+    "limitations": "2026 contest uses single corner, ideal clock, setup. MCMM/post-CTS/hold are under consideration for 2027, not delivered current features. No benchmark license verification or winner implementation access.",
+    "version": "as accessed",
+    "license": "Source rights retained; no full text redistributed"
+  },
+  {
+    "id": "C-S10",
+    "title": "2026 CAD Contest at ICCAD",
+    "url": "https://www.iccad-contest.org/2026/",
+    "type": "official_contest",
+    "published": "2026",
+    "retrieved": "2026-10-15T05:44:21.588210+00:00",
+    "locator": "Contest problems A-C and schedule",
+    "access": "full",
+    "claims": [
+      "REVIEW-COVERAGE"
+    ],
+    "limitations": "Overview only; not all hints or implementations audited. No universal contest novelty conclusion.",
+    "version": "as accessed",
+    "license": "Source rights retained; no full text redistributed"
+  },
+  {
+    "id": "C-S11",
+    "title": "Tempus Timing Signoff Solution datasheet",
+    "url": "https://www.cadence.com/en_US/home/resources/datasheets/tempus-timing-signoff-solution-ds.html",
+    "type": "vendor_documentation",
+    "published": "unknown",
+    "retrieved": "2026-10-15T05:44:21.588210+00:00",
+    "locator": "Key Features and Benefits; Concurrent Multi-Mode Multi-Corner",
+    "access": "full",
+    "claims": [
+      "REVIEW-COVERAGE"
+    ],
+    "limitations": "Vendor advertises concurrent MCMM and acceleration without loss of accuracy. Advertising is not a controlled comparison or knowledge of internal pruning.",
+    "version": "as accessed",
+    "license": "Source rights retained; no full text redistributed"
+  },
+  {
+    "id": "C-S12",
+    "title": "Effective Corner-Based Techniques for Variation-Aware IC Timing Verification",
+    "url": "https://algos.inesc-id.pt/projects/rav/Silva10.pdf",
+    "type": "primary_paper",
+    "published": "2010",
+    "retrieved": "2026-10-15T05:44:21.588210+00:00",
+    "locator": "Search-indexed author PDF abstract; DOI 10.1109/TCAD.2009.2034343",
+    "access": "abstract",
+    "claims": [
+      "REVIEW-COVERAGE"
+    ],
+    "limitations": "Direct web fetch failed twice; direct urllib attempt SSL EOF. Search-indexed abstract says exact worst delay/slack; full-method overlap unresolved.",
+    "version": "as accessed",
+    "license": "Source rights retained; no full text redistributed"
+  },
+  {
+    "id": "C-S13",
+    "title": "ASAP: Accelerating Corner-Based Timing Analysis With Bayesian Active Self-Attention Neural Process",
+    "url": "https://doi.org/10.1109/TCAD.2025.3581474",
+    "type": "primary_paper_lead",
+    "published": "2026-01",
+    "retrieved": "2026-10-15T05:44:21.588210+00:00",
+    "locator": "DOI and journal issue 45(1), 480-493; discovery through title search",
+    "access": "metadata",
+    "claims": [
+      "REVIEW-COVERAGE"
+    ],
+    "limitations": "Search discovered author-upload abstract lead at ResearchGate; no primary full text reopened, no guarantee or SOTA claim adopted.",
+    "version": "as accessed",
+    "license": "Source rights retained; no full text redistributed"
+  },
+  {
+    "id": "C-S14",
+    "title": "ISPD 2026 program and contest results session",
+    "url": "https://ispd.cc/ispd2026/index.php?page=program",
+    "type": "official_program",
+    "published": "2026",
+    "retrieved": "2026-10-15T05:44:21.588210+00:00",
+    "locator": "Session 16 Contest Summary/Results; redirect to ispd2027 program route",
+    "access": "full",
+    "claims": [
+      "OBJ-002"
+    ],
+    "limitations": "Program redirect has 2027 header but 2026 session content. Search located results session, not validated winning implementation. Do not infer winners or absence of winners.",
+    "version": "as accessed",
+    "license": "Source rights retained; no full text redistributed"
+  }
+]
