@@ -1,0 +1,24 @@
+{
+  "domains": {
+    "D04": {
+      "status": "finished",
+      "domain": "D04",
+      "rounds": 4
+    },
+    "D05": {
+      "status": "finished",
+      "domain": "D05",
+      "rounds": 4
+    }
+  },
+  "pending_jobs": 0,
+  "new_topic_created_by_stop_check": false,
+  "scientific_release_count": 24,
+  "last_scientific_decisions": {
+    "EDA-0005": "park",
+    "EDA-0006": "park",
+    "EDA-0007": "park",
+    "EDA-0008": "park"
+  },
+  "scope": "Actual dispatch calls returned finished; no fifth job was created. This is not a claim about an unattended service."
+}

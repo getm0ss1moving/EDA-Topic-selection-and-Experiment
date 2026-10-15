@@ -79,6 +79,13 @@ def main():
     for name in jobs:
         work = Path(name)
         job = loop.read(work / "JOB.json")
+        input_manifests = []
+        shared = [Path(p) for p in job["released_inputs"] if Path(p).is_dir()]
+        shared += list((work / "own-previous").glob("SUB-*"))
+        for path in shared:
+            manifest, _ = loop.rs.verify(path)
+            input_manifests.append({"release_id": path.name, "role": manifest["role"],
+                                    "manifest_sha256": loop.sha(path / "SUBMISSION.json")})
         dest = RUN / "inputs" / job["topic"] / f"cycle-{job['batch_round']}-{job['role']}"
         dest.mkdir(parents=True, exist_ok=True)
         for filename in ("JOB.json", "prompt.txt"):
@@ -86,7 +93,8 @@ def main():
         job_records.append({"topic": job["topic"], "domain": job["domain"], "role": job["role"],
                             "cycle": job["batch_round"], "requested": job["models"][job["role"]],
                             "job_sha256": loop.sha(work / "JOB.json"),
-                            "prompt_sha256": loop.sha(work / "prompt.txt")})
+                            "prompt_sha256": loop.sha(work / "prompt.txt"),
+                            "released_input_manifests": input_manifests})
     if args.final:
         assert counts == {"D04": 4, "D05": 4}, counts
         assert all(not t.get("job") for t in state["topics"].values())

@@ -1,0 +1,37 @@
+{
+  "actor_id": "ChatGPT-C05-TIMING-EDA-0006",
+  "batch_brief": "docs/INNOVATION-BATCH-0002.md",
+  "batch_round": 2,
+  "batch_round_limit": 4,
+  "domain": "D05",
+  "input_commit": "f68c1492c05be3fac5622deac4bb479eabf957de",
+  "models": {
+    "challenger": {
+      "effort": "low",
+      "model": "gpt-6-astra"
+    },
+    "proposer": {
+      "effort": "high",
+      "model": "gpt-6.1-sol"
+    },
+    "verifier": {
+      "effort": "low",
+      "model": "gpt-6.1-sol"
+    }
+  },
+  "packet_sha256": "fed7c25eec720fe45a8a31c2ee2d61148ebac3df8ae14489baacfbec72439b09",
+  "phase": "research",
+  "previous_proposal_release": "SUB-a18df7c82355639157174a8f957f294a4dabd4f66f741c76001694948aed326c",
+  "readiness": "logical seat registered; actual host model is recorded by the execution backend",
+  "released_inputs": [
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0006/ChatGPT-C05-TIMING-EDA-0006/jobs/42e30621-2df4-4309-91b4-83b7ac0300bd/shared/predecessor/SUB-a9dc2b2421eae654e0f60201c11f172e38bc87864f420a7230cb7cc88b716306",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0006/ChatGPT-C05-TIMING-EDA-0006/jobs/42e30621-2df4-4309-91b4-83b7ac0300bd/shared/predecessor/SUB-4641912acb091a09c8c7f788fbdcd68a89743b3632ae19c31606000ecd6a9cb8",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0006/ChatGPT-C05-TIMING-EDA-0006/jobs/42e30621-2df4-4309-91b4-83b7ac0300bd/shared/predecessor.json",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0006/ChatGPT-C05-TIMING-EDA-0006/jobs/42e30621-2df4-4309-91b4-83b7ac0300bd/shared/SUB-a18df7c82355639157174a8f957f294a4dabd4f66f741c76001694948aed326c",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0006/ChatGPT-C05-TIMING-EDA-0006/jobs/42e30621-2df4-4309-91b4-83b7ac0300bd/shared/SUB-8001e5f9df9ea0a26943e0c9d3710bfcacc170bcf01623dd198adeb57f63478f"
+  ],
+  "role": "challenger",
+  "round": 1,
+  "session_id": "d8a34cff-2715-4f58-943d-cf69b6833887",
+  "topic": "EDA-0006"
+}

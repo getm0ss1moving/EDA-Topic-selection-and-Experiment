@@ -1,0 +1,19 @@
+{
+  "unadjudicated_threads": [
+    {
+      "thread_id": "PRRT_kwDOVElOAM6swCex",
+      "pr": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/48",
+      "comments": [
+        {
+          "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/48#discussion_r4282478876",
+          "createdAt": "2026-10-15T11:38:13Z"
+        }
+      ],
+      "reported_issue": "Automated reviewer reports raw pinned MeasuredVtSwapCandidate.cc locators exceeding file length and generator locators belonging to a separate file; affected R2 source/evidence locators need an author/verifier crosswalk.",
+      "status": "unadjudicated_locator_followup_found_in_final_audit",
+      "effect": "Do not use the questioned R2 locators as promotion evidence until independently rechecked. Topic EDA-0006 is parked; no accepted claim or experiment authorization depends on clearing this note.",
+      "next_step": "At a separately authorized future review, reopen the exact raw file/version and related generator file, bind per-file SHA/line/function locators and independently recheck entailment. Preserve old immutable releases; publish an explicit erratum/superseding release, never silently edit history."
+    }
+  ],
+  "scope": "Coordinator transports a public automated review note, not a scientific verdict. The four-cycle batch stays stopped; no fifth role turn or signature is fabricated."
+}

@@ -34,6 +34,10 @@
   "new_experiment_resources": false,
   "run_id": "GPT-INNOVATION-0002",
   "runtime_root": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015",
+  "setup_merge": "06809a7aa19d4e4f8790375222d63faea091ea30",
+  "setup_pr": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/45",
+  "source_public_ref_verified": "git push confirmed refs/tags/codex/gpt-innovation-source-20261015",
   "source_tag": "refs/tags/codex/gpt-innovation-source-20261015",
-  "target_cycles_per_domain": 4
+  "target_cycles_per_domain": 4,
+  "transport_note": "GitHub merge may complete before gh local branch cleanup; dirty coordinator snapshots are preserved on a separate report branch. Remote merge state is verified separately."
 }

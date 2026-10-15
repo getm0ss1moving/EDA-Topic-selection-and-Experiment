@@ -1,0 +1,25 @@
+[
+  {
+    "job": "7602baca-8d62-4f6a-b6a5-39f25af53b7c",
+    "agent": "/root/innovation_v04_r1",
+    "role": "verifier",
+    "domain": "D04",
+    "cycle": 1,
+    "incident": "App execution returned a possible cybersecurity-risk classification before a scientific result was delivered.",
+    "action": "Coordinator clarified academic semiconductor placement/hold-time/static-timing scope and requested the same job resume only if ordinary runtime safeguards permit.",
+    "completion_claim": false,
+    "resolution": "Same job resumed after scope clarification and independently authored SUB-13665529cc044fd6c0fbcc0952a154cf8a2bba4ae1d47ebd80ce3c1a0bd81011; structural collection passed."
+  },
+  {
+    "job": "1ff6e542-b9ad-4fbe-a87a-5486b354ee9a",
+    "agent": "/root/innovation_v04_r2",
+    "domain": "D04",
+    "role": "verifier",
+    "cycle": 2,
+    "incident": "Collector rejected verifier release because not all literal objection IDs in the included challenger release had verdict rows.",
+    "rejected_release": "SUB-d19866ba957a11b7bb1992216e1d6f98f3b59116cdaf85179f25ab702445fb3f",
+    "action": "Same independent verifier was asked to repair its own inventory and self-freeze a new release; coordinator did not edit scientific files.",
+    "completion_claim": false,
+    "resolution": "Same verifier independently added explicit scope rows and self-froze SUB-0ab1e723b03d1e3c6afe2f93f637593d4eb24d8d9012ea42d53269c0994b2b6c; collection passed."
+  }
+]

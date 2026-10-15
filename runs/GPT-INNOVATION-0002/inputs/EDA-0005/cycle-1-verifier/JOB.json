@@ -1,0 +1,38 @@
+{
+  "actor_id": "ChatGPT-V04-PHYSICAL-EDA-0005",
+  "batch_brief": "docs/INNOVATION-BATCH-0002.md",
+  "batch_round": 1,
+  "batch_round_limit": 4,
+  "domain": "D04",
+  "input_commit": "f68c1492c05be3fac5622deac4bb479eabf957de",
+  "models": {
+    "challenger": {
+      "effort": "low",
+      "model": "gpt-6-astra"
+    },
+    "proposer": {
+      "effort": "high",
+      "model": "gpt-6.1-sol"
+    },
+    "verifier": {
+      "effort": "low",
+      "model": "gpt-6.1-sol"
+    }
+  },
+  "packet_sha256": "bc3345e6370fc26e78906f23270f1a60d2f597e32fe78553f4cdacac0dde3ad7",
+  "phase": "research",
+  "previous_proposal_release": "SUB-5dc96f7c6ba6ea7f2d1cf5940be29d9cd08da069e1694ce3b7822e6c4f6e4243",
+  "readiness": "logical seat registered; actual host model is recorded by the execution backend",
+  "released_inputs": [
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0005/ChatGPT-V04-PHYSICAL-EDA-0005/jobs/7602baca-8d62-4f6a-b6a5-39f25af53b7c/shared/predecessor/SUB-7c6b1c85bbe65f26c8882bf0474a3c913417f740de75096fd57329377c32612e",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0005/ChatGPT-V04-PHYSICAL-EDA-0005/jobs/7602baca-8d62-4f6a-b6a5-39f25af53b7c/shared/predecessor/SUB-68648e310004de173692e6a14bb0403758c4e74b98931d30f8d7086179db5df4",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0005/ChatGPT-V04-PHYSICAL-EDA-0005/jobs/7602baca-8d62-4f6a-b6a5-39f25af53b7c/shared/predecessor/SUB-2b565f85f8830c71269e076e61b110398b1458a10b2299d83e912478629f688a",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0005/ChatGPT-V04-PHYSICAL-EDA-0005/jobs/7602baca-8d62-4f6a-b6a5-39f25af53b7c/shared/predecessor.json",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0005/ChatGPT-V04-PHYSICAL-EDA-0005/jobs/7602baca-8d62-4f6a-b6a5-39f25af53b7c/shared/SUB-5dc96f7c6ba6ea7f2d1cf5940be29d9cd08da069e1694ce3b7822e6c4f6e4243",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0005/ChatGPT-V04-PHYSICAL-EDA-0005/jobs/7602baca-8d62-4f6a-b6a5-39f25af53b7c/shared/SUB-5596d53194873abeed4cccdb0d140e212c4ec8bf398a28f1c76c16800085c45b"
+  ],
+  "role": "verifier",
+  "round": 0,
+  "session_id": "a194d866-d694-43ac-8b46-6600f0371930",
+  "topic": "EDA-0005"
+}

@@ -1,0 +1,8 @@
+{
+  "source_commit": "f68c1492c05be3fac5622deac4bb479eabf957de",
+  "public_branch": "refs/heads/codex/gpt-innovation-source-20261015",
+  "public_tag": "refs/tags/codex/gpt-innovation-source-20261015",
+  "tree": "4276445853c9bbb9fb4d05b90358e4cee221ab12",
+  "verification": "A fresh ordinary non-shallow default clone, with no explicit tag fetch, resolved origin/source-branch and the exact source commit and policy object.",
+  "purpose": "Keep the original input object fetchable by normal all-branch clones as well as explicit tag retrieval; no frozen scientific bytes or input identities changed."
+}
