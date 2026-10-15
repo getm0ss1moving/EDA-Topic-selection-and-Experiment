@@ -30,6 +30,7 @@ def module(name):
 
 rt = module('round_transmit'); rs = rt.rs
 project = module('project')
+compliance = module('role_compliance')
 ROLES = ('proposer', 'challenger', 'verifier')
 COVERAGE = {'duplicate_prior_art','mechanism','composition','demand','industry_gap',
             'headroom','contests','experiments','cost'}
@@ -57,6 +58,8 @@ def config(path):
         raise ValueError('Only the three configured Codex roles are supported')
     if any(not x['model'].startswith('gpt-') for x in c['models'].values()):
         raise ValueError('Non-GPT model route refused')
+    if c.get('require_compliance') and c.get('backend') != 'codex_app_agents':
+        raise ValueError('Audited batches require the app dispatch/collect backend')
     root=(ROOT/c['runtime_root']).resolve()
     if root == ROOT or ROOT in root.parents:
         raise ValueError('Runtime and private work must be outside the checkout')
@@ -76,6 +79,8 @@ def add_topic(state,c,home,topic,entry,seed=True):
         names=['AGENTS.md',f'harness/{role.upper()}.md','config/research-brief.json',
                f'domains/{entry["domain"]}/brief.json','scripts/role_submission.py','scripts/project.py']
         names += [f'docs/{x}.md' for x in COMMON]
+        if c.get('require_compliance'):
+            names += ['docs/ROLE-COMPLIANCE.md', 'scripts/role_compliance.py']
         if c.get('batch_brief'):
             brief=Path(c['batch_brief'])
             if brief.is_absolute() or not brief.parts or '..' in brief.parts or brief.parts[0]!='docs':
@@ -125,7 +130,31 @@ def prepare(c,home,ref):
     home.mkdir(parents=True,exist_ok=True);home.chmod(0o700)
     state={'schema':1,'source_commit':ref,'topics':{},'publication_queue':[],'published':{},'events':[]}
     save(home/'settings.json',c)
-    for topic,entry in c['topics'].items(): add_topic(state,c,home,topic,entry)
+    for topic,entry in c['topics'].items():
+        add_topic(state,c,home,topic,entry)
+        prior=entry.get('continuation_releases')
+        if prior:
+            if set(prior)!=set(ROLES):raise ValueError('Continuation needs an exact released P/C/V triple')
+            exported={}
+            for role,prefix in prior.items():
+                parts=Path(prefix).parts
+                if len(parts)!=2 or parts[0]!='runs' or not rt.SUB.fullmatch(parts[1]):
+                    raise ValueError('Continuation must name public runs/SUB releases')
+                dest=home/'seeds'/topic/parts[1];dest.mkdir(parents=True)
+                for name in git('ls-tree','-r','--name-only',ref,'--',prefix+'/').splitlines():
+                    relative=name[len(prefix)+1:]
+                    if '/' in relative or not relative:raise ValueError('Unexpected continuation file')
+                    (dest/relative).write_bytes(frozen(ref,name))
+                m,_=rs.verify(dest)
+                if m['role']!=role or m['topic']!=topic:raise ValueError('Continuation role/topic mismatch')
+                freeze_tree(dest);exported[role]=str(dest)
+            _,vp=rs.verify(exported['verifier']);v=json.loads(vp['verification.json'])
+            if v.get('reviewed_proposer_release')!=Path(exported['proposer']).name or Path(exported['challenger']).name not in v.get('adjudicated_challenger_releases',[]):
+                raise ValueError('Continuation challenge must be independently adjudicated')
+            record={'topic':topic,'status':'owner_authorized_continuation','releases':exported,
+                    'prior_batch':entry.get('continuation_batch'),'prior_topic_cycles':entry.get('continuation_prior_cycles'),
+                    'note':'Historical released files only; no inherited approval/signatures; retain anchor or use new ID.'}
+            for seat in state['topics'][topic]['seats'].values():save(Path(seat['base'])/'predecessor.json',record)
     transport_config(state,home);save(home/'state.json',state)
     return state
 
@@ -192,6 +221,11 @@ def job_for(state,t,c):
         path=t['latest'].get(sender)
         if path:
             copy_release(path,shared/Path(path).name);paths.append(str(shared/Path(path).name))
+    if role == 'verifier':
+        for record in state['publication_queue']:
+            if record['topic'] == t['topic'] and record.get('compliance_audit'):
+                old = Path(record['compliance_audit'])
+                copy_release(old, shared/old.name); paths.append(str(shared/old.name))
     if role=='proposer' and t['latest'].get('verifier'):
         # Only challenge releases actually covered by this verifier's file may reach proposer.
         v=read(Path(t['latest']['verifier'])/'verification.json')
@@ -220,6 +254,7 @@ def job_for(state,t,c):
                 'batch_round':sum(x['round'] for x in state['topics'].values() if x['domain']==t['domain'])+1,
                 'batch_round_limit':c.get('stop_after_rounds'),
                 'batch_brief':c.get('batch_brief'),
+                'job_id':work.name, 'compliance_required':bool(c.get('require_compliance')),
                 'models':c['models'],
                 'readiness': 'logical seat registered; actual host model is recorded by the execution backend'}
     save(work/'JOB.json',assignment)
@@ -245,6 +280,12 @@ def job_for(state,t,c):
         f'--ref {state["source_commit"]} --packet {seat["packet_sha256"]}\n')
     if c.get('batch_brief'):
         prompt += f'Read the owner batch brief at policy/{c["batch_brief"]} before research. Its scope applies to this and successor topics.\n'
+    if c.get('require_compliance'):
+        prompt += ('Before any discovery, use only this job and its policy, not checkout governance. '
+                   'Read policy/docs/ROLE-COMPLIANCE.md. Include your own compliance.json public activity '
+                   'ledger covering all nine rules, exact identity/job and honest access/operation incidents. '
+                   'Never erase a disclosed exposure to make a validator pass. Do not claim self-report '
+                   'proves unseen actions did not occur. Each full round gets a separate independent protocol audit.\n')
     prompt += ('This owner-authorized batch has exactly four completed P/C/V cycles per domain. '
                'D04 and D05 run independently in parallel. Use this round to make concrete scientific progress; '
                'do not spend it merely asking for infrastructure permission. On rounds 1-3, refine or '
@@ -326,7 +367,7 @@ def consent_check(t,kind):
     if m['role']!='proposer':return False
     _,current=rs.verify(t['latest']['proposer'])
     # A consent-only release cannot change its target's science.
-    names=rs.FILES['proposer']-{'workflow.json','experiment-consent.json','abandonment-consent.json'}
+    names=rs.FILES['proposer']-{'workflow.json','compliance.json','experiment-consent.json','abandonment-consent.json'}
     if any(payload.get(n)!=current.get(n) for n in names):return False
     if kind=='experiment':
         h=rs.sha(payload['tasklist.md'])
@@ -338,7 +379,7 @@ def consent_check(t,kind):
 
 def proposal_digest(payload):
     """Sign frozen proposer scientific bytes, excluding release/consent self-reference."""
-    selected={k:v for k,v in payload.items() if k not in {'workflow.json','experiment-consent.json','abandonment-consent.json'}}
+    selected={k:v for k,v in payload.items() if k not in {'workflow.json','compliance.json','experiment-consent.json','abandonment-consent.json'}}
     with tempfile.TemporaryDirectory() as td:
         for n,b in selected.items():(Path(td)/n).write_bytes(b)
         return project.digest(Path(td))
@@ -355,6 +396,11 @@ def validate_result(state,t,job,result):
         role,t['topic'],s['actor_id'],s['session_id'],state['source_commit'],s['packet_sha256']):
         raise ValueError('Frozen release does not match assigned role/input')
     flow=json.loads(p.get('workflow.json',b'{}'))
+    assignment=read(Path(job['work'])/'JOB.json')
+    if assignment.get('compliance_required'):
+        allowed=[Path(x).name for x in assignment['released_inputs'] if Path(x).is_dir()]
+        allowed += [x.name for x in (Path(job['work'])/'own-previous').glob('SUB-*')]
+        compliance.validate_ledger(json.loads(p.get('compliance.json',b'{}')),m,assignment,allowed)
     if flow.get('role')!=role:raise ValueError('workflow.json role mismatch')
     if role in ('challenger','verifier'):
         if flow.get('reviewed_proposer_release')!=Path(t['latest']['proposer']).name:
@@ -370,7 +416,8 @@ def validate_result(state,t,job,result):
         if v.get('reviewed_proposer_release')!=flow['reviewed_proposer_release'] or v.get('adjudicated_challenger_releases')!=[expected]:
             raise ValueError('Verifier must bind the current proposer/challenger pair')
         _,cp=rs.verify(t['latest']['challenger'])
-        objections=set(re.findall(r'\bOBJ-\d+\b',cp['challenges.md'].decode()))
+        objection_text=b'\n'.join(cp.values()) if assignment.get('compliance_required') else cp['challenges.md']
+        objections=set(re.findall(r'\bOBJ-\d+\b',objection_text.decode()))
         judged={o.get('id',o.get('objection_id')) for o in v.get('objections',[])}
         if not objections<=judged:raise ValueError('Verifier omitted objection verdicts')
         if any(o.get('verdict') not in {'valid','partially_valid','unsupported','refuted','unresolved'}
@@ -460,9 +507,114 @@ def successor(state,t,c,home):
     transport_config(state,home)
 
 
+def pending_audit(state, c, domain):
+    if not c.get('require_compliance'): return None
+    for record in state['publication_queue']:
+        if state['topics'][record['topic']]['domain'] == domain and (
+                not record.get('compliance_audit') or record.get('compliance_gate') == 'blocking_violation'):
+            return record
+
+
+def audit_dispatch(c, home, domain):
+    """Fresh verifier governance job, independent of all three scientific authors."""
+    state=read(home/'state.json');record=pending_audit(state,c,domain)
+    if record is None: return {'status':'no_pending_audit','domain':domain}
+    key=record['verification_release'];audits=state.setdefault('audits',{})
+    if key in audits:
+        return {'status':'ready',**audits[key]['job'],**c['models']['verifier']}
+    topic=state['topics'][record['topic']]
+    base=home/'audits'/key;base.mkdir(parents=True);base.chmod(0o700)
+    packet=base/'packet';packet.mkdir()
+    original=topic['seats']['verifier'];verify_packet(original)
+    for name in read(Path(original['packet'])/'PACKET.json')['files']:
+        dest=packet/name;dest.parent.mkdir(parents=True,exist_ok=True)
+        dest.write_bytes(rs.regular(Path(original['packet'])/name))
+    actor=f'{c.get("audit_actor_prefix","ChatGPT-PROTOCOL")}-{domain}-{topic["topic"]}-R{record["round"]}'
+    session=str(uuid.uuid4())
+    manifest={'source_commit':state['source_commit'],'actor_id':actor,'role':'verifier',
+              'topic':topic['topic'],'purpose':'protocol_audit',
+              'files':{str(p.relative_to(packet)):sha(p) for p in packet.rglob('*') if p.is_file()}}
+    save(packet/'PACKET.json',manifest);freeze_tree(packet)
+    seat={'actor_id':actor,'session_id':session,'packet':str(packet),
+          'packet_sha256':sha(packet/'PACKET.json'),'base':str(base)}
+    work=base/'jobs'/str(uuid.uuid4());work.mkdir(parents=True)
+    shutil.copytree(packet,work/'policy');(work/'shared').mkdir()
+    for role,name in record['releases'].items():
+        source=Path(name);copy_release(source,work/'shared'/source.name)
+        descriptor=work/'shared'/'job-descriptors'/role;descriptor.mkdir(parents=True)
+        for filename in ('JOB.json','prompt.txt'):
+            shutil.copyfile(source.parent.parent/filename,descriptor/filename)
+    (work/'release').mkdir();(work/'submissions').mkdir()
+    save(work/'result.schema.json',FINAL)
+    assignment={'role':'verifier','purpose':'protocol_audit','topic':topic['topic'],'domain':domain,
+                'job_id':work.name,'actor_id':actor,'session_id':session,
+                'input_commit':state['source_commit'],'packet_sha256':seat['packet_sha256'],
+                'reviewed_releases':{r:Path(p).name for r,p in record['releases'].items()},
+                'released_inputs':[str(work/'shared'/Path(p).name) for p in record['releases'].values()],
+                'models':c['models'],'compliance_required':True,
+                'batch_round':sum(1 for r in state['publication_queue'][:state['publication_queue'].index(record)+1]
+                                  if state['topics'][r['topic']]['domain']==domain)}
+    save(work/'JOB.json',assignment)
+    prompt=('Run only the independent protocol-audit mode of the verifier harness. '
+            'Start with this JOB.json and policy/docs/ROLE-COMPLIANCE.md; read common policy and ONLY '
+            'policy/harness/VERIFIER.md. English artifacts. Do not inspect checkout, private role notes, '
+            'transcripts, logs, memories or send agent messages. This is academic semiconductor EDA. '
+            'The released three scientific outputs and public job descriptors are your complete role inputs. '
+            'Check each proposer/challenger/verifier against all nine rules, not the verifier alone. '
+            'Write compact verification.md and verification.json per ROLE-COMPLIANCE protocol-audit schema, '
+            'workflow.json with purpose protocol_audit and your own compliance.json. '
+            'Do not invent an acceptance vote or silently overrule scientific evidence. A potential source '
+            'error needs_scientific_adjudication; a missing measurement honestly labeled as such is not '
+            'misconduct. Distinguish supported deviation, unresolved observation, research defect and '
+            'no violation found within scope. Self-authored ledgers are not complete tool traces. '
+            'No experiments, training, new paid API, subagents or role messaging. '
+            'Self-freeze with this exact identity, then result.json status complete/release_id/reason.\n'
+            'python3 policy/scripts/role_submission.py freeze --source release --queue submissions '
+            f'--role verifier --actor {actor} --session {session} --topic {topic["topic"]} '
+            f'--ref {state["source_commit"]} --packet {seat["packet_sha256"]}\n')
+    (work/'prompt.txt').write_text(prompt)
+    job={'role':'verifier','purpose':'protocol_audit','work':str(work),'attempt':0}
+    audits[key]={'seat':seat,'job':job};save(home/'state.json',state)
+    return {'status':'ready',**job,**c['models']['verifier']}
+
+
+def audit_collect(c,home,domain):
+    state=read(home/'state.json');record=pending_audit(state,c,domain)
+    if record is None:raise ValueError('No pending protocol audit')
+    audit=state['audits'][record['verification_release']];job=audit['job'];seat=audit['seat']
+    work=Path(job['work']);assignment=read(work/'JOB.json');verify_packet(seat)
+    result=read(work/'result.json')
+    if result.get('status')!='complete' or not rt.SUB.fullmatch(result.get('release_id','')):
+        raise ValueError('Protocol audit not complete/frozen')
+    snapshot=work/'submissions'/result['release_id'];m,p=rs.verify(snapshot)
+    for key in ('actor_id','session_id','input_commit','packet_sha256','topic','role'):
+        if m[key]!=assignment[key]:raise ValueError('Audit identity mismatch')
+    if m['session_id'] in {rs.verify(p)[0]['session_id'] for p in record['releases'].values()}:
+        raise ValueError('Auditor cannot review its own scientific output')
+    expected=assignment['reviewed_releases']
+    compliance.validate_ledger(json.loads(p.get('compliance.json',b'{}')),m,assignment,expected.values())
+    disposition=compliance.validate_review(json.loads(p['verification.json']),
+                                          json.loads(p.get('workflow.json',b'{}')),expected)
+    if record['decision'] in ('accept_for_pilot','abandon') and disposition not in ('clear_within_scope','nonblocking_findings'):
+        raise ValueError('Scientific advancement cannot use an unresolved/blocking protocol audit')
+    audit['release']=str(snapshot);audit['disposition']=disposition
+    record['compliance_audit']=str(snapshot);record['compliance_gate']=disposition
+    registration={'session_id':m['session_id'],'actor_id':m['actor_id'],'role':'verifier','topic':m['topic'],
+                  'platform':'OpenAI Codex','model':c['models']['verifier']['model'],'operator':'getm0ss1moving',
+                  'github_login':'getm0ss1moving (transport only)', 'input_commit':m['input_commit'],
+                  'packet_sha256':m['packet_sha256'],'session_kind':'independent governance protocol audit; not scientific acceptance',
+                  'independence_attestation':'Fresh input-only execution distinct from all three scientific authors; policy isolation.'}
+    record['registrations']['sessions'].append(registration)
+    save(home/'state.json',state)
+    return {'status':'audit_collected','topic':m['topic'],'disposition':disposition,'release_id':snapshot.name}
+
+
 def publish_record(record,c,home,dry_run=False):
     """One idempotent branch/PR per completed three-role round, including registrations."""
     key=record['verification_release'][4:20]
+    if c.get('require_compliance') and (not record.get('compliance_audit') or
+                                      record.get('compliance_gate')=='blocking_violation'):
+        raise ValueError('Round publication waits for independent protocol audit/repair')
     branch=f'codex/round-{record["topic"].lower()}-{key}'
     slug='getm0ss1moving/EDA-Topic-selection-and-Experiment'
     def cmd(*a,cwd=ROOT):return subprocess.check_output(a,cwd=cwd,text=True,timeout=60).strip()
@@ -472,18 +624,25 @@ def publish_record(record,c,home,dry_run=False):
     with tempfile.TemporaryDirectory(prefix='eda-codex-publish-') as tmp:
         repo=Path(tmp).resolve()/'repo'
         cmd('git','clone','--quiet','--no-hardlinks',str(ROOT),str(repo))
-        remote=git('remote','get-url','origin')
-        if remote!='https://github.com/'+slug+'.git':raise ValueError('Unexpected remote')
-        cmd('git','remote','set-url','origin',remote,cwd=repo)
-        cmd('git','fetch','--quiet','origin','main',cwd=repo)
-        cmd('git','checkout','--quiet','-b',branch,'origin/main',cwd=repo)
-        for path in record['releases'].values():
+        if dry_run:
+            # A local transport rehearsal must not depend on network or CI's
+            # spelling of origin. Live publication still validates/fetches main.
+            cmd('git','checkout','--quiet','-b',branch,'HEAD',cwd=repo)
+        else:
+            remote=git('remote','get-url','origin')
+            if remote!='https://github.com/'+slug+'.git':raise ValueError('Unexpected remote')
+            cmd('git','remote','set-url','origin',remote,cwd=repo)
+            cmd('git','fetch','--quiet','origin','main',cwd=repo)
+            cmd('git','checkout','--quiet','-b',branch,'origin/main',cwd=repo)
+        release_paths=list(record['releases'].values())
+        if record.get('compliance_audit'):release_paths.append(record['compliance_audit'])
+        for path in release_paths:
             m,payload=rs.verify(path);dest=repo/'runs'/Path(path).name;dest.mkdir(exist_ok=True)
             for n,b in {**payload,'SUBMISSION.json':rs.encoded(m)}.items():
                 if (dest/n).exists() and (dest/n).read_bytes()!=b:raise ValueError('Existing release differs')
                 (dest/n).write_bytes(b)
         # Consents can name an earlier release; publish that target as well.
-        published_ids={Path(p).name for p in record['releases'].values()}
+        published_ids={Path(p).name for p in release_paths}
         for role in ('proposer','challenger'):
             _,payload=rs.verify(record['releases'][role])
             for name in ('experiment-consent.json','abandonment-consent.json'):
@@ -496,6 +655,7 @@ def publish_record(record,c,home,dry_run=False):
                     published_ids.add(target)
         public={k:v for k,v in record.items() if k!='releases' and not k.startswith('publication_')}
         public['releases']={r:'runs/'+Path(p).name for r,p in record['releases'].items()}
+        if record.get('compliance_audit'):public['compliance_audit']='runs/'+Path(record['compliance_audit']).name
         save(repo/'runs'/f'CODEX-ROUND-{record["topic"]}-{key}'/'round.json',public)
         # Registry travels atomically with this round; no registration PR has to merge first.
         registry_path=repo/'config/roles.json';registered=read(registry_path)
@@ -560,6 +720,9 @@ def merge_checked(url):
 def dispatch(c,home,domain):
     """Prepare one exact-model app-agent job; never spawn a native fallback."""
     state=read(home/'state.json')
+    pending=pending_audit(state,c,domain)
+    if pending:return {'status':'awaiting_compliance_audit','domain':domain,
+                       'verification_release':pending['verification_release']}
     for t in list(state['topics'].values()):successor(state,t,c,home)
     done=sum(t['round'] for t in state['topics'].values() if t['domain']==domain)
     if c.get('stop_after_rounds') and done>=c['stop_after_rounds']:
@@ -614,6 +777,8 @@ def publish_pending(c,home):
 
 
 def tick(c,home,executor=execute,publisher=publish_record):
+    if c.get('require_compliance'):
+        raise ValueError('Use dispatch/collect and audit-dispatch/audit-collect for audited app batches')
     state=read(home/'state.json')
     # Publish independently of scientific advancement; a GitHub outage cannot lose a round.
     for rec in state['publication_queue']:
@@ -664,7 +829,7 @@ def main():
     a=sub.add_parser('prepare');a.add_argument('--ref',required=True)
     sub.add_parser('status');sub.add_parser('tick');sub.add_parser('watch')
     sub.add_parser('preflight')
-    for name in ('dispatch','collect'):
+    for name in ('dispatch','collect','audit-dispatch','audit-collect'):
         q=sub.add_parser(name);q.add_argument('--domain',choices=['D04','D05'],required=True)
     sub.add_parser('publish-pending')
     args=p.parse_args();c,home=config(args.config)
@@ -681,6 +846,8 @@ def main():
             if args.command=='tick':out=tick(c,home)
             elif args.command=='dispatch':out=dispatch(c,home,args.domain)
             elif args.command=='collect':out=collect(c,home,args.domain)
+            elif args.command=='audit-dispatch':out=audit_dispatch(c,home,args.domain)
+            elif args.command=='audit-collect':out=audit_collect(c,home,args.domain)
             elif args.command=='publish-pending':out=publish_pending(c,home)
             else:
                 while True:

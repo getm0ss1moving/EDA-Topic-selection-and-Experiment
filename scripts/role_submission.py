@@ -35,6 +35,9 @@ REQUIRED = {
     'challenger': {'challenges.md', 'sources.json', 'search-log.md'},
     'verifier': FILES['verifier'] - {'workflow.json'},
 }
+# Optional for historical compatibility; audited batches require it at collection.
+for _owned in FILES.values():
+    _owned.add('compliance.json')
 # Host artifacts that are never research output (macOS Finder, Claude Code write staging).
 IGNORED = {'.DS_Store', '.claude'}
 CONSENT_KEYS = {'session_id', 'decision', 'signed_revision', 'tasklist_sha256', 'rationale'}
