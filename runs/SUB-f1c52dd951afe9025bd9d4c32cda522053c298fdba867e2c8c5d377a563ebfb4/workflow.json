@@ -1,0 +1,26 @@
+{
+  "role": "proposer",
+  "topic": "EDA-0008",
+  "batch_round": 1,
+  "assessment": "revise",
+  "next_action": "revise",
+  "experiment_ready": false,
+  "experiment_consent": "pending",
+  "preserves_anchor": true,
+  "direction_penalties": {
+    "combination_drift": 0,
+    "demand_drift": 0
+  },
+  "completed_repairs": [
+    "OBJ-001 success/observation contract",
+    "OBJ-002 transformed loss and attribution controls",
+    "OBJ-003 pre-execution gate"
+  ],
+  "limitations": [
+    "No new EDA/build/training allocation",
+    "Full R09 and original winning methods unread",
+    "Physical incidence, downstream gain and practical model delta unmeasured"
+  ],
+  "tasklist_sha256": "84a999c899e3fc5dba277d18959a954a7327db1ed3836b415805a6dc0d98474c",
+  "backend_identity": "Requested model in JOB is gpt-6.1-sol/high; execution-provided role identity only, no independent backend attestation."
+}

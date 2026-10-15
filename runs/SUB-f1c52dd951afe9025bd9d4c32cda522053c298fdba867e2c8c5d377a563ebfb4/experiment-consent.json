@@ -1,0 +1,7 @@
+{
+  "session_id": "b68834d9-8d64-4081-8599-01722d58110e",
+  "decision": "pending",
+  "signed_revision": null,
+  "tasklist_sha256": null,
+  "rationale": "New revision requires independent review; exact phase locks, actual resources, original-method audit and owner thresholds remain unresolved. No execution is authorized."
+}

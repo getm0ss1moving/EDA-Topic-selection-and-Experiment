@@ -1,0 +1,198 @@
+{
+  "schema": 1,
+  "cutoff": "2026-10-15",
+  "sources": [
+    {
+      "id": "R01",
+      "title": "HyPAS: A Hybrid Optimization Framework for Placement and Sizing Co-Optimization",
+      "url": "https://wuqian-tang.github.io/files/papers/2026-dac-hypas.pdf",
+      "source_type": "author-paper",
+      "publication_date": "2026",
+      "retrieved_utc": "2026-10-15T13:43:53.428451+00:00",
+      "locator": "PDF pp.2-3, sections 2.2, 3.1-3.4; Figure 2",
+      "access": "full",
+      "supported_claim_ids": [
+        "CLM-005",
+        "CLM-007",
+        "CLM-014"
+      ],
+      "limitations": "Selected method text inspected, not every result; no code execution or reproduction. Web PDF opening failed; public urllib retrieval succeeded. No assertion of contest-winning lineage from social profiles.",
+      "version": "author PDF as retrieved",
+      "sha256": "d843ea04b2746e449c7ded65ab06bb5f5d9d11f969251962c6feec7bdb930ca0",
+      "rights": "Read accessible author copy; no full copy included in release."
+    },
+    {
+      "id": "R02",
+      "title": "IR-Aware ECO Timing Optimization Using Reinforcement Learning",
+      "url": "https://arxiv.org/html/2402.07781v1",
+      "source_type": "preprint",
+      "publication_date": "2024-02-12",
+      "retrieved_utc": "2026-10-15T13:43:53.428451+00:00",
+      "locator": "Introduction order/choice paragraph; section 3.2 Action/Reward and equation 6",
+      "access": "full",
+      "supported_claim_ids": [
+        "CLM-006"
+      ],
+      "limitations": "Late IR-aware sizing; not the proposed pre-CTS relocation pair. Selected formulation inspected; no reported performance transferred.",
+      "version": "arXiv v1"
+    },
+    {
+      "id": "R03",
+      "title": "AgenticPD: A Stage-Aware Agentic Framework for Closed-Loop Physical Design Optimization",
+      "url": "https://arxiv.org/html/2607.04758v3",
+      "source_type": "preprint",
+      "publication_date": "unknown",
+      "retrieved_utc": "2026-10-15T13:43:53.428451+00:00",
+      "locator": "Sections 3.1-3.4, especially retained tree equations 5-6 and history navigation",
+      "access": "full",
+      "supported_claim_ids": [
+        "CLM-003"
+      ],
+      "limitations": "v3 selected methodology inspected; no code audit or run. No exact pair-representation absence claim.",
+      "version": "arXiv v3; latest date not independently reverified"
+    },
+    {
+      "id": "R04",
+      "title": "OpenROAD MoveCommitter.cc",
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/3549d60529517dc82deb7f0ff769345e9a424911/src/rsz/src/MoveCommitter.cc",
+      "source_type": "source-code",
+      "publication_date": "unknown",
+      "retrieved_utc": "2026-10-15T13:43:53.428451+00:00",
+      "locator": "MoveCommitter::beginJournal, commitJournal, restoreJournal; raw physical lines 482,499,542; web-rendered starts 450,466,506 respectively",
+      "access": "full",
+      "supported_claim_ids": [
+        "CLM-004"
+      ],
+      "limitations": "Only selected code read, not compiled; neither tool compatibility nor complete-state restore of proposed adapter is established. Raw physical line numbers and web-rendered text lines differ.",
+      "version": "3549d60529517dc82deb7f0ff769345e9a424911",
+      "sha256": "ee9f09555c317de9e57e73d5edab56f5f710cd7195206229a31bb54be49c1679"
+    },
+    {
+      "id": "R05",
+      "title": "ResizerAgent README",
+      "url": "https://raw.githubusercontent.com/ASU-VDA-Lab/ResizerAgent/ae402b9bf00b5116b9f2743b3bd8f7c9aed52127/README.md",
+      "source_type": "source-documentation",
+      "publication_date": "unknown",
+      "retrieved_utc": "2026-10-15T13:43:53.428451+00:00",
+      "locator": "Opening specification, Requirements, Run base/repair/backend entries",
+      "access": "full",
+      "supported_claim_ids": [
+        "CLM-014"
+      ],
+      "limitations": "README only; full planner and original paper unread. Post-CTS and provider requirements differ; no provider subscription acquired or invoked.",
+      "version": "ae402b9bf00b5116b9f2743b3bd8f7c9aed52127"
+    },
+    {
+      "id": "R06",
+      "title": "2025 CAD Contest at ICCAD: official Problems",
+      "url": "https://www.iccad-contest.org/2025/Problems.html",
+      "source_type": "official-contest",
+      "publication_date": "2025",
+      "retrieved_utc": "2026-10-15T13:43:53.428451+00:00",
+      "locator": "Problem C, links 29-38 including original Top-3 ZIP; web rendered lines 58-70",
+      "access": "full",
+      "supported_claim_ids": [
+        "CLM-007",
+        "CLM-014"
+      ],
+      "limitations": "Index checked; top-three ZIP preview opened but original archive payload/methods unread. Page content is dynamic, date retrieved recorded."
+    },
+    {
+      "id": "R07",
+      "title": "Invited: Post-Placement Buffering and Sizing Contest",
+      "url": "https://vlsicad.ucsd.edu/Publications/Conferences/421/c421.pdf",
+      "source_type": "author-paper",
+      "publication_date": "2026-03-15",
+      "retrieved_utc": "2026-10-15T13:43:53.428451+00:00",
+      "locator": "PDF pp.2-3 sections 2.1-2.4 and Figure 1; pp.6-7 sections 5.1-5.3 and references",
+      "access": "full",
+      "supported_claim_ids": [
+        "CLM-007",
+        "CLM-014"
+      ],
+      "limitations": "Selected formulation inspected. Non-resized cells fixed; proposed distinct-cell relocation cannot be claimed contest-legal. No transferred benchmark access or compute allocation.",
+      "doi": "10.1145/3764386.3779616",
+      "sha256": "da7022e95d0e86678787a7413b798684cd4989497ddec7cba3d1553ff3ac32d6",
+      "rights": "PDF declares CC BY 4.0; release contains metadata/paraphrase only."
+    },
+    {
+      "id": "R08",
+      "title": "ISPD26 contest winners and resources",
+      "url": "https://www.ispd.cc/contests/26/index.html",
+      "source_type": "official-contest",
+      "publication_date": "2026",
+      "retrieved_utc": "2026-10-15T13:43:53.428451+00:00",
+      "locator": "Contest Winners ordered list and Resources",
+      "access": "full",
+      "supported_claim_ids": [
+        "CLM-014"
+      ],
+      "limitations": "Only names/ranks checked. No original winning algorithm is inferred or recovered."
+    },
+    {
+      "id": "R09",
+      "title": "Improving Timing & Power Trade-off in Post-place Optimization Using Multi-agent Reinforcement Learning",
+      "url": "https://soc.postech.ac.kr/bbs/board.php?bo_table=sub5_1&sca=2024&wr_id=277",
+      "source_type": "author-publication-index",
+      "publication_date": "2024",
+      "retrieved_utc": "2026-10-15T13:43:53.428451+00:00",
+      "locator": "Title, authors, year, paper/slide download links 26/27 and publisher link 28; rendered lines 87-97",
+      "access": "metadata",
+      "supported_claim_ids": [
+        "CLM-014"
+      ],
+      "limitations": "Both author downloads returned expired/invalid token pages. Publisher route asked for robot verification; DOI route failed. No bypass attempted; full method unknown.",
+      "doi": "10.1145/3676536.3676702",
+      "authors": [
+        "Jaemin Seo",
+        "Sejin Park",
+        "Seokhyeong Kang"
+      ]
+    },
+    {
+      "id": "R10",
+      "title": "2026 CAD Contest official Problems",
+      "url": "https://www.iccad-contest.org/Problems",
+      "source_type": "official-contest",
+      "publication_date": "2026",
+      "retrieved_utc": "2026-10-15T13:43:53.428451+00:00",
+      "locator": "Problem A/B/C list, especially FloorSet Challenge",
+      "access": "full",
+      "supported_claim_ids": [
+        "CLM-014"
+      ],
+      "limitations": "Current task index only; not a claim about winner methods or all current work."
+    },
+    {
+      "id": "R11",
+      "title": "Synopsys DSO.ai public product page",
+      "url": "https://www.synopsys.com/ai/ai-powered-eda/dso-ai.html",
+      "source_type": "vendor-documentation",
+      "publication_date": "unknown",
+      "retrieved_utc": "2026-10-15T13:43:53.428451+00:00",
+      "locator": "Opening DSO.ai description; Multi-Objective Design Space Optimization section",
+      "access": "full",
+      "supported_claim_ids": [
+        "CLM-012"
+      ],
+      "limitations": "Advertised capability only. No private internals, measured comparative advantage or commercial shortfall is inferred."
+    },
+    {
+      "id": "R12",
+      "title": "2025 ICCAD CAD Contest Problem C invited paper abstract",
+      "url": "https://ieeexplore.ieee.org/abstract/document/11240847",
+      "source_type": "organizer-paper",
+      "publication_date": "2025-10",
+      "retrieved_utc": "2026-10-15T13:43:53.428451+00:00",
+      "locator": "Indexed Abstract: multi-operator search and GPU/differentiable guidance",
+      "access": "abstract",
+      "supported_claim_ids": [
+        "CLM-007",
+        "CLM-014"
+      ],
+      "limitations": "Search tool exposed organizer abstract. NVIDIA PDF URL returned non-PDF content with urllib and web error; no full-text claim.",
+      "doi": "10.1109/ICCAD66269.2025.11240847"
+    }
+  ],
+  "access_convention": "full denotes accessible document with specified selected locators inspected, not exhaustive page-by-page inspection or reproduction; metadata/abstract restrictions are explicit. Bibliographic 2026 dates not resolved to a day remain year-only. All retrieved in this job."
+}

@@ -1,0 +1,112 @@
+{
+  "schema": 1,
+  "role": "verifier",
+  "actor_id": "ChatGPT-V04-PHYSICAL-B03-EDA-0008",
+  "session_id": "370f04ea-8378-4c1f-ab83-2fa830453d13",
+  "input_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+  "packet_sha256": "d5dd4815d595e6eca62ed6640e0a91f111ead1203b0ebd491e738f112f851963",
+  "job_id": "f437b34b-1e93-448d-b55c-1083168a8a25",
+  "read_releases": [
+    "SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4",
+    "SUB-0ddb73ca97e1fc1b27f33363b8b06817e6794e7c7a51e8755934918cc9ef8f02"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0
+  },
+  "rules": {
+    "inputs": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json: search_log",
+        "verification.json"
+      ],
+      "limits": "Self-authored bounded ledger; no assertion about unseen actions or OS confinement."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json: search_log",
+        "verification.json"
+      ],
+      "limits": "Self-authored bounded ledger; no assertion about unseen actions or OS confinement."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "release/",
+        "submissions/",
+        "result.json (after freeze)"
+      ],
+      "limits": "Self-authored bounded ledger; no assertion about unseen actions or OS confinement."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json: search_log",
+        "verification.json"
+      ],
+      "limits": "Self-authored bounded ledger; no assertion about unseen actions or OS confinement."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json: search_log",
+        "verification.json"
+      ],
+      "limits": "Self-authored bounded ledger; no assertion about unseen actions or OS confinement."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json: experiment_consensus_checked; no role vote created"
+      ],
+      "limits": "Self-authored bounded ledger; no assertion about unseen actions or OS confinement."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json: search_log",
+        "verification.json"
+      ],
+      "limits": "Self-authored bounded ledger; no assertion about unseen actions or OS confinement."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json: search_log",
+        "verification.json"
+      ],
+      "limits": "Self-authored bounded ledger; no assertion about unseen actions or OS confinement."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "trusted role_submission.py freeze; no PR approval or merge"
+      ],
+      "limits": "Self-authored bounded ledger; no assertion about unseen actions or OS confinement."
+    }
+  },
+  "operations": [
+    "First opened exact JOB.json/prompt.txt only. Read frozen common policy and VERIFIER harness. Failed ls of nonexistent policy/harnesses was limited to job policy; used policy/harness/VERIFIER.md subsequently.",
+    "Read only current released P/C scientific files and manifests; historical predecessor releases not read.",
+    "Independent external source/search operations and in-memory PDF extraction as verification.json: search_log; no downloaded code execution.",
+    "Verified all current P/C manifest hashes; computed dossier digest and own tiny scalar enumeration/loss checks.",
+    "Write role-owned release files, run trusted freeze; write result.json after success.",
+    "Initial freeze mechanically rejected sources.json/search-log.md as not verifier-owned names; embedded their contents into verification.json and removed own redundant copies before retry. No scientific content changed.",
+    "Mechanical collection retry: checkout_access normalized to enum none; prior explanatory text preserved verbatim: none; initial environment named checkout but no discovery/read command used it. Read retry-note.json. Scientific judgments unchanged; earlier frozen attempt preserved."
+  ],
+  "incidents": [],
+  "observability": "Self-authored activity ledger, not complete trace. Task dispatched via parent orchestration instruction; no parent scientific conversation, private scientific notes or role messages inspected. Backend model and OS confinement not independently attested."
+}

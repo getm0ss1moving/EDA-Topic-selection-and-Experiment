@@ -1,0 +1,16 @@
+{
+  "role": "challenger",
+  "reviewed_proposer_release": "SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4",
+  "assessment": "revise",
+  "coverage": {
+    "duplicate_prior_art": "unresolved",
+    "mechanism": "unresolved",
+    "composition": "unresolved",
+    "demand": "unresolved",
+    "industry_gap": "unresolved",
+    "headroom": "unresolved",
+    "contests": "unresolved",
+    "experiments": "unresolved",
+    "cost": "unresolved"
+  }
+}

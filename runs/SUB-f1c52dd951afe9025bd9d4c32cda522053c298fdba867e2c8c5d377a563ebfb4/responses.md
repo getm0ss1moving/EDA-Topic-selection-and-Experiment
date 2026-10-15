@@ -1,0 +1,13 @@
+# Response to released, adjudicated predecessor objections
+
+Inputs: proposer SUB-1c2deaff2701f8108c4f9d6fdca3298698c7aa4a8273f9e9036232c12bde533c; challenger SUB-a602a69c8d241294ba08a561d4471f2945f3416673b66de648bb72e6c31b9f97; verifier SUB-177346f5d1b164d8184704393d6b7f5f9b7cd7524a06d2d8e7950d7e7ee7bd4b. Only these explicitly released files are used. The verifier adjudicated all three literal OBJ IDs. This is an unblinded continuation, with no inherited signature or independent approval of new work.
+
+| ID / historical ruling | Author response | Concrete revision / check | Remaining uncertainty |
+|---|---|---|---|
+| OBJ-001 valid | Accept the contract defect. A separate FAIL head did not fully specify rescue or partial metric availability. | proposal.md success table enumerates nine prefix-consistent masks, 49 observation submasks, partial UNKNOWN labels, branch regression/fallback and all-pair denominators. Rescue masks 0101/1010 retained. Own checker passes. | No claim that all masks occur in a physical tool; incidence, gate errors and opportunity cost remain future measured questions. |
+| OBJ-002 valid | Accept attribution gap and the conditional equivalence, without inferring universal no-go. | Full masked quadratic loss, shared singleton-error term, B3-T exact transformed control, B-CD no-residual control, symmetry-matched direct model, common label subsets/normalization/regularization/optimization. Own gradient/loss checks pass. | A useful sharing/conditioning delta may vanish; finite-data or cost advantage is unmeasured. |
+| OBJ-003 partially_valid | Accept graph repair. Historical no-run intent is preserved, not rewritten as an incident. | EXP-002 is now source-only manifest preparation; EXP-000 precedes EXP-002B and every physical build/baseline/incidence/training task. EXP-009 only reviews outcomes. Gate binds immutable phase/tasklist/dependencies/resources/rights/oracle/thresholds and distinct P/C consents plus verifier readiness. | Actual allocation, complete locks and signatures are absent; no execution consent is issued. |
+
+Historical source access gaps and common-policy-only checkout exposure of earlier actors remain in their immutable releases; this actor neither deletes those disclosures nor adopts their independence. Historical parking at the previous batch limit is retained. Current owner batch 0003 authorizes four new research cycles, not a fifth cycle in the old batch and not new experiment resources.
+
+Position: preserve anchor, submit revision for independent evaluation, no agreement or abandonment signature. Pending source/contract/readiness questions are not themselves evidence of dead-end or novelty exhaustion. No raw challenge was requested and no scientific messages were sent.

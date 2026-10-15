@@ -1,0 +1,81 @@
+{
+  "state": "continue",
+  "anchor": {
+    "problem": "Select useful order of one width-changing resize and one distinct-cell relocation at legal pre-CTS placement, including per-primitive legalization externalities.",
+    "engineering_user": "Physical implementation engineer deciding the next paired post-placement optimization attempt.",
+    "downstream_need": "Legal equivalent routable post-DR outcome with useful setup/PPA quality per complete iteration cost.",
+    "causal_mechanism": "Predict symmetric joint residual and antisymmetric two-order contrast from current state and frozen intents; communicate to timing/congestion proposal specialists; rank scoped real-tool rollouts and accept only realized checked incumbents.",
+    "mechanism_invariants": [
+      "Exactly two typed edits per pair, single declared PVT and ideal-clock pre-CTS checkpoint",
+      "Action intents frozen at initial state; actual global returned geometry recorded after each legalization",
+      "Only initial deployable features; no untried-order or future-route labels at inference",
+      "Direct same-data nonlinear and conventional adaptive/lookahead baselines; central identical-model equivalence control",
+      "Charge labels training proposals model/tool calls failures restores final suffix; KEEP/FAIL/UNKNOWN explicit",
+      "No claim of multi-agent necessity, new expressivity, exact prediction or global physical optimality"
+    ],
+    "forbidden_pivots": [
+      "Reverting to predecessor hold-repair matching/table admission under this ID",
+      "Generic stage scripting checkpoint reuse transaction support or joint QoR heads as the contribution",
+      "Adding more agents inputs labels compute or a larger model to conceal failed contrast utility",
+      "Switching downstream demand to isolated prediction MSE or HPWL",
+      "Post-CTS hold/multi-corner/IR/signoff guarantee without new evidence and review"
+    ]
+  },
+  "penalties": {
+    "combination_drift": {
+      "score": 0,
+      "rationale": "Repairs preserve the same pair interaction mechanism and expose possible exact equivalence rather than replacing it.",
+      "evidence_refs": [
+        "proposal.md: success/observability and transformed loss",
+        "responses.md: OBJ-001/002"
+      ]
+    },
+    "demand_drift": {
+      "score": 0,
+      "rationale": "Same post-DR useful-quality versus complete-cost engineering decision; narrow demand remains unresolved.",
+      "evidence_refs": [
+        "industry-gap.md",
+        "EXP-003",
+        "EXP-007"
+      ]
+    },
+    "total": 0
+  },
+  "revision_assessment": {
+    "preserves_problem": true,
+    "preserves_engineering_need": true,
+    "preserves_causal_mechanism": true,
+    "changes": [
+      "Complete semantic/observation mask contract and rescue fallback",
+      "Matched transformed-loss and no-residual attribution controls",
+      "Explicit phase-specific pre-execution gate before any build or experiment"
+    ],
+    "reason": "Anchor-preserving repairs to independently adjudicated predecessor defects; no new stage, endpoint or claimed effect."
+  },
+  "abandonment": {
+    "decision_id": null,
+    "grounds": [],
+    "rationale": null,
+    "evidence_refs": [],
+    "consents": {
+      "proposer": {
+        "session_id": null,
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      },
+      "challenger": {
+        "session_id": null,
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      }
+    },
+    "successor_topic_id": null,
+    "resurrection_conditions": [
+      "Resolve exact prior overlap",
+      "Show real economically relevant order contrast and fair direct-baseline delta",
+      "Lock actual rights resources endpoint oracle and dual consent"
+    ]
+  }
+}
