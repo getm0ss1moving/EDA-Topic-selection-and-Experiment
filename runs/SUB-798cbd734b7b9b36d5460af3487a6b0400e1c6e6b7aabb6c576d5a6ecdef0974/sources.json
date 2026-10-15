@@ -1,0 +1,400 @@
+[
+  {
+    "id": "SRC-H01",
+    "title": "Released predecessor P3-P5 finite-test record",
+    "url": "policy/released-handover/runs/CLD-P05-REVISION-0001/p3-p5-record.md",
+    "type": "released_local_evidence",
+    "published": "2026-10-14",
+    "retrieved": "2026-10-15T05:37:07.924292+00:00",
+    "locator": "Section 5; accompanying evidence/REQ-0008-summary.json keys P3.total, P4.total, P5.total",
+    "access": "full",
+    "claims": [
+      "CLM-018",
+      "CLM-019",
+      "CLM-020",
+      "CLM-031"
+    ],
+    "limitations": "Proposer-origin inherited measurements, not independent verification; no rerun in this session. Summary hash bc9a8cf03f7c735d74083b9bbbb37b7f77953150f3080a1775df2a2957eb1631",
+    "version": "as retrieved",
+    "license": "Copyright retained by source; no full text redistributed"
+  },
+  {
+    "id": "SRC-H02",
+    "title": "Released R1b proposal and explicit handover",
+    "url": "policy/released-seed/proposal.md",
+    "type": "released_local_evidence",
+    "published": "2026-10-15",
+    "retrieved": "2026-10-15T05:37:07.924292+00:00",
+    "locator": "Claim ledger CLM-001 through CLM-029; policy/released-handover/HANDOFF.md sections 1.6, 2",
+    "access": "full",
+    "claims": [
+      "CLM-032",
+      "CLM-033"
+    ],
+    "limitations": "Contains earlier unadjudicated first-pass exposure. Read as lineage only; no historical signatures or acceptance inherited. Proposal hash 7d0ced47b4ee92ba2a968bbea7cfbc7d443c5cb51cad42358671b4d7e11e32ca",
+    "version": "as retrieved",
+    "license": "Copyright retained by source; no full text redistributed"
+  },
+  {
+    "id": "SRC-P01",
+    "title": "Assigned current research allocation and batch instruction",
+    "url": "JOB.json; prompt.txt; policy/config/research-brief.json",
+    "type": "allocation",
+    "published": "2026-10-15",
+    "retrieved": "2026-10-15T05:37:07.924292+00:00",
+    "locator": "prompt.txt last paragraphs; research-brief compute, available_pdks, available_designs, primary_metric and minimum_meaningful_effect",
+    "access": "full",
+    "claims": [
+      "CLM-038",
+      "CLM-039"
+    ],
+    "limitations": "Eight CPU hours are provisional caps, not an allocation. The current batch grants research reading, not new experiment compute.",
+    "version": "as retrieved",
+    "license": "Copyright retained by source; no full text redistributed"
+  },
+  {
+    "id": "SRC-R01",
+    "title": "Effective Corner-Based Techniques for Variation-Aware IC Timing Verification",
+    "url": "https://algos.inesc-id.pt/projects/rav/Silva10.pdf",
+    "type": "paper",
+    "published": "2010-01",
+    "retrieved": "2026-10-15T05:37:07.924292+00:00",
+    "locator": "Abstract indexed under original author-host PDF; DOI 10.1109/TCAD.2009.2034343",
+    "access": "abstract",
+    "claims": [
+      "CLM-030"
+    ],
+    "limitations": "Search index exposed original-paper abstract. Direct web PDF and shell HTTPS failed; HTTP alternative closed connection. No full-method read or source hash. Strongest unresolved worst-slack lead; exactness assumptions remain unchecked.",
+    "version": "as retrieved",
+    "license": "Copyright retained by source; no full text redistributed"
+  },
+  {
+    "id": "SRC-R02",
+    "title": "A Fast Approach for Static Timing Analysis Covering All PVT Corners",
+    "url": "https://www.eecg.utoronto.ca/~najm/papers/dac11-sari.pdf",
+    "type": "paper",
+    "published": "2011",
+    "retrieved": "2026-10-15T05:31:27.684765+00:00",
+    "locator": "Sections 3.1, 6.1 equations 9-11 and 6.2.1; Tables 4 and 11",
+    "access": "full",
+    "claims": [
+      "CLM-030"
+    ],
+    "limitations": "Author-host PDF downloaded and pdftotext inspected. Observational/conditional slack estimation is established; absence of a universal guarantee is scoped to this inspected formulation, not all prior methods.",
+    "version": "as retrieved",
+    "license": "Copyright retained by source; no full text redistributed",
+    "sha256": "399a24613a4d5872d70708546046dbfdefe50d0ccca87ea052a2879f38871072"
+  },
+  {
+    "id": "SRC-R03",
+    "title": "Efficient Block-Based Parameterized Timing Analysis Covering All Potentially Critical Paths",
+    "url": "https://www.eecg.utoronto.ca/~najm/papers/iccad08-khaled.pdf",
+    "type": "paper",
+    "published": "2008",
+    "retrieved": "2026-10-15T05:31:27.680405+00:00",
+    "locator": "Section 2.1 equation 2; sections 2.2.1-2.2.2; sections 4.1-4.2 algorithms PRUNE and PRUNE_LB",
+    "access": "full",
+    "claims": [
+      "CLM-030"
+    ],
+    "limitations": "Direct shell PDF download succeeded after browser PDF error. Affine hyperplane pruning; no runtime numbers transferred.",
+    "version": "as retrieved",
+    "license": "Copyright retained by source; no full text redistributed",
+    "sha256": "39ead684456b8f067d09c6c2e74c7cb2399f4455c3231c8d0070d8a6f26ead7e"
+  },
+  {
+    "id": "SRC-R04",
+    "title": "Parameterized Timing Analysis with General Delay Models and Arbitrary Variation Sources",
+    "url": "https://www.eecg.utoronto.ca/~najm/papers/dac08-khaled.pdf",
+    "type": "paper",
+    "published": "2008",
+    "retrieved": "2026-10-15T05:31:27.895474+00:00",
+    "locator": "Section 3 properties 1-3 and equations 4-5; sections 3.2-3.3; section 4",
+    "access": "full",
+    "claims": [
+      "CLM-030"
+    ],
+    "limitations": "Full author-host PDF and exact extracted text. Bounds and least-squares approximation have different guarantees; do not label every parametric method linear-only.",
+    "version": "as retrieved",
+    "license": "Copyright retained by source; no full text redistributed",
+    "sha256": "c171ff780501636dc3c1c7f75e945ae866df66a1b78f09295c59ff17735f0c9b"
+  },
+  {
+    "id": "SRC-R05",
+    "title": "Efficient Computation of the Worst-Delay Corner",
+    "url": "https://past.date-conference.com/proceedings-archive/2007/DATE07/PDFFILES/11.4_3.PDF",
+    "type": "paper",
+    "published": "2007",
+    "retrieved": "2026-10-15T05:31:28.396016+00:00",
+    "locator": "Sections 2.1-2.3, 4.2, 5.1-5.2",
+    "access": "full",
+    "claims": [
+      "CLM-030"
+    ],
+    "limitations": "Full official archive PDF; delay computation outside supplied timing graph is outside its formulation. Worst-output objective differs from the proposed all-scenario report.",
+    "version": "as retrieved",
+    "license": "Copyright retained by source; no full text redistributed",
+    "sha256": "211957a6cb1d839d8778af8742f149d09350c4e0c08ca8638b1fc6361b17fce7"
+  },
+  {
+    "id": "SRC-R06",
+    "title": "OpenSTA DmpCeff.cc",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/e01d3f163f483f233db00410b6515a767a6ca03b/dcalc/DmpCeff.cc",
+    "type": "repository",
+    "published": "unknown",
+    "retrieved": "2026-10-15T05:31:27.032426+00:00",
+    "locator": "DmpCap::init/gateDelaySlew/loadDelaySlew lines 737-773; setCeffAlgorithm lines 1545-1585",
+    "access": "full",
+    "claims": [
+      "CLM-031",
+      "CLM-032"
+    ],
+    "limitations": "Pinned bytes match historical hash. Code reading confirms branch structure, not a complete soundness proof or runtime measurement.",
+    "version": "e01d3f163f483f233db00410b6515a767a6ca03b",
+    "license": "GPL-3.0 / project dual licensing",
+    "sha256": "edfadea5d90b929d42eb8aec739f0ca54f8e76d129584ea4a1c8e70b6599d186"
+  },
+  {
+    "id": "SRC-R07",
+    "title": "OpenSTA pinned README",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/e01d3f163f483f233db00410b6515a767a6ca03b/README.md",
+    "type": "repository",
+    "published": "unknown",
+    "retrieved": "2026-10-15T05:31:26.862093+00:00",
+    "locator": "Timing Engine and License sections",
+    "access": "full",
+    "claims": [
+      "CLM-037"
+    ],
+    "limitations": "Incremental update is documented. Multi-corner driver configuration still needs reproduction; README is not an end-to-end baseline result.",
+    "version": "e01d3f163f483f233db00410b6515a767a6ca03b",
+    "license": "GPL-3.0 / commercial dual license",
+    "sha256": "6c2fd3b2b52ba1a607fb73821c26a2d0ecc7a48b4e7808377389ffe311c96ce4"
+  },
+  {
+    "id": "SRC-R08",
+    "title": "OpenSTA TableModel.cc",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/e01d3f163f483f233db00410b6515a767a6ca03b/liberty/TableModel.cc",
+    "type": "repository",
+    "published": "unknown",
+    "retrieved": "2026-10-15T05:31:27.037575+00:00",
+    "locator": "GateTableModel::gateDelay lines 104-135; Table2::findValue lines 1012-1068",
+    "access": "full",
+    "claims": [
+      "CLM-032"
+    ],
+    "limitations": "Double arithmetic followed by float returns is visible. This corrects treating all intermediate arithmetic as float32. No outward-rounded bound implementation inspected.",
+    "version": "e01d3f163f483f233db00410b6515a767a6ca03b",
+    "license": "GPL-3.0 / project dual licensing",
+    "sha256": "8326d308abda4e2c8dfd9ac63b9b4bc8d7480c039c9a24f19d4da730c43ed581"
+  },
+  {
+    "id": "SRC-R09",
+    "title": "Branch and bound techniques for computation of critical timing conditions",
+    "url": "https://patents.google.com/patent/US8245167B1/en",
+    "type": "patent",
+    "published": "2012-08-14",
+    "retrieved": "2026-10-15T05:37:07.924292+00:00",
+    "locator": "Claims 1-2, 10, 16-17; description Figures 16A-16B and Timing Delays as Affine Functions or Convex Functions of Parameters",
+    "access": "full",
+    "claims": [
+      "CLM-030",
+      "CLM-036"
+    ],
+    "limitations": "Public patent description, not evidence of a shipped product or full coverage of arbitrary discrete Liberty models. Legal scope not evaluated.",
+    "version": "US8245167B1",
+    "license": "Copyright retained by source; no full text redistributed"
+  },
+  {
+    "id": "SRC-R10",
+    "title": "Interpretable Cross-Corner Timing Prediction Based on XGBoost-SHAP Solution",
+    "url": "https://api.crossref.org/works/10.1145/3816045",
+    "type": "publisher_deposited_metadata",
+    "published": "2026-05-27",
+    "retrieved": "2026-10-15T05:37:07.924292+00:00",
+    "locator": "message.title, message.abstract and message.published",
+    "access": "abstract",
+    "claims": [
+      "CLM-040"
+    ],
+    "limitations": "ACM full-text endpoint failed. Deposited abstract describes prediction and near-100% coverage; it cannot establish missing theorem or experimental fairness. No performance number adopted.",
+    "version": "DOI 10.1145/3816045",
+    "license": "Copyright retained by source; no full text redistributed"
+  },
+  {
+    "id": "SRC-R11",
+    "title": "ASAP: Accelerating Corner-Based Timing Analysis With Bayesian Active Self-Attention Neural Process",
+    "url": "https://api.crossref.org/works/10.1109/TCAD.2025.3581474",
+    "type": "publisher_deposited_metadata",
+    "published": "2026-01",
+    "retrieved": "2026-10-15T05:37:07.924292+00:00",
+    "locator": "message.title, message.published and message.link",
+    "access": "metadata",
+    "claims": [
+      "CLM-040"
+    ],
+    "limitations": "IEEE DOI endpoint failed. Crossref gives January 2026 issue publication; DOI contains 2025. No abstract or method read; preserve uncertainty instead of asserting it lacks certificates.",
+    "version": "DOI 10.1109/TCAD.2025.3581474",
+    "license": "Copyright retained by source; no full text redistributed"
+  },
+  {
+    "id": "SRC-R12",
+    "title": "TAU 2018 contest statement",
+    "url": "https://www.tauworkshop.com/2018/contest.html",
+    "type": "official_contest",
+    "published": "2018",
+    "retrieved": "2026-10-15T05:37:07.924292+00:00",
+    "locator": "Timing contest topic paragraph, web lines 17-20",
+    "access": "full",
+    "claims": [
+      "CLM-035"
+    ],
+    "limitations": "High-level statement read; complete rules and winning implementations not inspected.",
+    "version": "as retrieved",
+    "license": "Copyright retained by source; no full text redistributed"
+  },
+  {
+    "id": "SRC-R13",
+    "title": "TAU 2019 contest statement and resource index",
+    "url": "https://www.tauworkshop.com/2019/contest.html",
+    "type": "official_contest",
+    "published": "2019",
+    "retrieved": "2026-10-15T05:37:07.924292+00:00",
+    "locator": "Goals and prior contests; linked resources https://sites.google.com/view/tau-contest-2019/home/resources lists rules v1.7 and final results",
+    "access": "full",
+    "claims": [
+      "CLM-035"
+    ],
+    "limitations": "Statement and resource index read, not complete rules/benchmarks. No license inferred from public availability.",
+    "version": "as retrieved",
+    "license": "Copyright retained by source; no full text redistributed"
+  },
+  {
+    "id": "SRC-R14",
+    "title": "TAU2019 iTimer team presentation",
+    "url": "https://www.tauworkshop.com/2019/slides/TAU%202019%20Contest-B%20iTimer.pdf",
+    "type": "official_team_report",
+    "published": "2019",
+    "retrieved": "2026-10-15T05:37:07.924292+00:00",
+    "locator": "Slides 2, 5 and 10: formulation, worst-corner identification, multicorner hold fixing",
+    "access": "full",
+    "claims": [
+      "CLM-035"
+    ],
+    "limitations": "PDF metadata title is misleading; slide text identifies iTimer. Scoped algorithm observations only; no measured performance adopted.",
+    "version": "as retrieved",
+    "license": "Copyright retained by source; no full text redistributed"
+  },
+  {
+    "id": "SRC-R15",
+    "title": "TAU2019 TimeBoost team presentation",
+    "url": "https://www.tauworkshop.com/2019/slides/TAU%202019%20Contest-C%20TimeBoost.pdf",
+    "type": "official_team_report",
+    "published": "2019",
+    "retrieved": "2026-10-15T05:37:07.924292+00:00",
+    "locator": "Slides 5-6: main loop and incremental timing updates",
+    "access": "full",
+    "claims": [
+      "CLM-035"
+    ],
+    "limitations": "Official host presentation read; no reproduction or full implementation inspection.",
+    "version": "as retrieved",
+    "license": "Copyright retained by source; no full text redistributed"
+  },
+  {
+    "id": "SRC-R16",
+    "title": "TAU2019 ParallelClosure team presentation",
+    "url": "https://www.tauworkshop.com/2019/slides/TAU%202019%20Contest-A%20Parallel%20Closure.pdf",
+    "type": "official_team_report",
+    "published": "2019",
+    "retrieved": "2026-10-15T05:37:07.924292+00:00",
+    "locator": "Slides 2, 6, 14-16",
+    "access": "full",
+    "claims": [
+      "CLM-035"
+    ],
+    "limitations": "MCMM optimization and parallel/incremental work scheduling; no claim of exact per-scenario certificate novelty exclusion.",
+    "version": "as retrieved",
+    "license": "Copyright retained by source; no full text redistributed"
+  },
+  {
+    "id": "SRC-R17",
+    "title": "ICCAD 2025 official contest",
+    "url": "https://www.iccad-contest.org/2025/",
+    "type": "official_contest",
+    "published": "2025",
+    "retrieved": "2026-10-15T05:37:07.924292+00:00",
+    "locator": "Contest Problems A-C; News and Winners links",
+    "access": "full",
+    "claims": [
+      "CLM-035"
+    ],
+    "limitations": "Overview only; detailed hints and winners not exhaustively read. No global contest-originality conclusion.",
+    "version": "as retrieved",
+    "license": "Copyright retained by source; no full text redistributed"
+  },
+  {
+    "id": "SRC-R18",
+    "title": "ICCAD 2026 official contest",
+    "url": "https://www.iccad-contest.org/2026/",
+    "type": "official_contest",
+    "published": "2026",
+    "retrieved": "2026-10-15T05:37:07.924292+00:00",
+    "locator": "Contest Problems A-C and schedule, web lines 37-53",
+    "access": "full",
+    "claims": [
+      "CLM-035"
+    ],
+    "limitations": "Overview lists netlist exploration, regression bucketing and FloorSet. Award ceremony scheduled November, later than research cutoff; no winner result invented.",
+    "version": "as retrieved",
+    "license": "Copyright retained by source; no full text redistributed"
+  },
+  {
+    "id": "SRC-R19",
+    "title": "PrimeTime official product page",
+    "url": "https://www.synopsys.com/implementation-and-signoff/signoff/primetime.html",
+    "type": "vendor_documentation",
+    "published": "unknown",
+    "retrieved": "2026-10-15T05:37:07.924292+00:00",
+    "locator": "Product overview, signoff and performance sections",
+    "access": "full",
+    "claims": [
+      "CLM-036"
+    ],
+    "limitations": "Advertised capability only; implementation details and controlled comparisons unavailable.",
+    "version": "as retrieved",
+    "license": "Copyright retained by source; no full text redistributed"
+  },
+  {
+    "id": "SRC-R20",
+    "title": "Tempus official product page",
+    "url": "https://www.cadence.com/en_US/home/tools/digital-design-and-signoff/silicon-signoff/tempus-timing-signoff-solution.html",
+    "type": "vendor_documentation",
+    "published": "unknown",
+    "retrieved": "2026-10-15T05:37:07.924292+00:00",
+    "locator": "Product overview and features",
+    "access": "full",
+    "claims": [
+      "CLM-036"
+    ],
+    "limitations": "Advertised signoff capability only. No commercial runtime or certificate absence asserted.",
+    "version": "as retrieved",
+    "license": "Copyright retained by source; no full text redistributed"
+  },
+  {
+    "id": "SRC-R21",
+    "title": "Maintained OpenSTA project overview",
+    "url": "https://github.com/The-OpenROAD-Project/OpenSTA",
+    "type": "repository",
+    "published": "unknown",
+    "retrieved": "2026-10-15T05:37:07.924292+00:00",
+    "locator": "README supported formats, delay calculation and timing engine features",
+    "access": "full",
+    "claims": [
+      "CLM-037"
+    ],
+    "limitations": "Current overview consulted, no full current-code audit. Latest-head improvements cannot be ruled out; performance comparator remains pinned.",
+    "version": "Unpinned overview accessed 2026-10-15",
+    "license": "GPL-3.0 / project dual licensing"
+  }
+]
