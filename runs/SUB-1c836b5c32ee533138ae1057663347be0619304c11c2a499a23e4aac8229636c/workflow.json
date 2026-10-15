@@ -1,0 +1,25 @@
+{
+  "role": "challenger",
+  "reviewed_proposer_release": "SUB-a9dc2b2421eae654e0f60201c11f172e38bc87864f420a7230cb7cc88b716306",
+  "assessment": "unresolved",
+  "coverage": {
+    "duplicate_prior_art": "unresolved",
+    "mechanism": "supported",
+    "composition": "unresolved",
+    "demand": "unresolved",
+    "industry_gap": "unresolved",
+    "headroom": "unresolved",
+    "contests": "unresolved",
+    "experiments": "unresolved",
+    "cost": "unresolved"
+  },
+  "final_batch_round": 4,
+  "no_follow_on_requested": true,
+  "experiment_consent": "not_signed",
+  "abandonment_consent": "not_signed",
+  "direction_drift": {
+    "combination_drift": 0,
+    "demand_drift": 0
+  },
+  "reviewed_tasklist_sha256": "f24d2bfb1611ba6b87705fd1c4d70f1dec38ba08c2d06c250d36a06ba7215c58"
+}

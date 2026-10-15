@@ -1,0 +1,32 @@
+{
+  "kind": "forecast_not_measurement",
+  "topic": "EDA-0004",
+  "metric": "end_to_end_elapsed_time_ratio_P_over_best_exact_Bplus",
+  "unit": "ratio",
+  "baseline_source": [
+    "S02",
+    "S06",
+    "S05"
+  ],
+  "direction": "lower",
+  "pessimistic": null,
+  "base": null,
+  "optimistic": null,
+  "confidence": null,
+  "assumptions": [
+    "A nonroutine representation distinction survives T00/T01; currently unresolved.",
+    "Sound full-state executable certificate exists; currently unproved.",
+    "Licensed representative fixed-load NLDM workflows exist and have repeated pair relations; unmeasured.",
+    "All preprocessing, query, cache, fallback and report costs are charged equally.",
+    "No experiment compute is currently allocated."
+  ],
+  "calibration_plan": "T02 validates scoped demand and threshold; T09 baseline-only variability and future preregistration precede P runs. No numerical forecast interval is defensible now.",
+  "qualitative_forecast": "A negative or null result is plausible because exact scalar suffix values are at least as strong for endpoint elimination and may be cheaper; no probability is assigned.",
+  "provisional_screening_target": {
+    "time_reduction_fraction": 0.2,
+    "maximum_missed_violating_endpoints": 0,
+    "endpoint_output_requirement": "exact under pinned executable model; no 5ps waiver",
+    "status": "provisional research-brief threshold, not a validated user requirement or prediction"
+  },
+  "measurements": []
+}

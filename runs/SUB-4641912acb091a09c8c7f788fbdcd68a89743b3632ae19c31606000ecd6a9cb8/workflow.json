@@ -1,0 +1,11 @@
+{
+  "role": "verifier",
+  "reviewed_proposer_release": "SUB-a9dc2b2421eae654e0f60201c11f172e38bc87864f420a7230cb7cc88b716306",
+  "adjudicated_challenger_releases": [
+    "SUB-1c836b5c32ee533138ae1057663347be0619304c11c2a499a23e4aac8229636c"
+  ],
+  "next_action": "park",
+  "batch_round": 4,
+  "batch_complete": true,
+  "experiment_authorized": false
+}

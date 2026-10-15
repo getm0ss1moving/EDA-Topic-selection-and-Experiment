@@ -1,0 +1,403 @@
+[
+  {
+    "id": "S01",
+    "title": "Slope Propagation in Static Timing Analysis (ICCAD conference version)",
+    "url": "https://cecs.uci.edu/~papers/compendium94-03/papers/2000/iccad00/pdffiles/08a_2.pdf",
+    "source_type": "primary_paper",
+    "publication_date": "2000-11",
+    "retrieved_utc": "2026-10-15T09:16:40.263340+00:00",
+    "locator": "Sections 4.1-4.3, Theorems 4-6; PDF pp.3-5, especially slope-difference bound on p.4",
+    "access": "full",
+    "supported_claim_ids": [
+      "CLM-405",
+      "CLM-407",
+      "CLM-408"
+    ],
+    "limitations": "Local Pareto and slope bounds inspected. The 2002 journal PDF was 403; conference and journal versions must not be conflated. No published performance transferred.",
+    "version": null,
+    "byte_hash": null
+  },
+  {
+    "id": "S02",
+    "title": "On the Signal Bounding Problem in Timing Analysis",
+    "url": "https://cecs.uci.edu/~papers/compendium94-03/papers/2001/iccad01/pdffiles/08d_2.pdf",
+    "source_type": "primary_paper",
+    "publication_date": "2001",
+    "retrieved_utc": "2026-10-15T09:16:40.263340+00:00",
+    "locator": "Sections 3 and 5; equations 12-14; Table 2; Theorem 7; PDF pp.4,7-8",
+    "access": "full",
+    "supported_claim_ids": [
+      "CLM-405",
+      "CLM-407"
+    ],
+    "limitations": "Slew-sensitive bounding/maximal signal methods checked. A tightened sensitivity bound can subsume W1; no claim this old work is only coarse or always monotone.",
+    "version": null,
+    "byte_hash": null
+  },
+  {
+    "id": "S03",
+    "title": "Receiver dependent selection of a worst-case timing event for static timing analysis, US7983891B1",
+    "url": "https://patents.google.com/patent/US7983891B1/en",
+    "source_type": "primary_patent",
+    "publication_date": "2011-07-19",
+    "retrieved_utc": "2026-10-15T09:16:40.263340+00:00",
+    "locator": "Detailed Description, FIGS.1-2, equations 1-3; receiver selection discussion; web lines 239-260,340-341",
+    "access": "full",
+    "supported_claim_ids": [
+      "CLM-405",
+      "CLM-407"
+    ],
+    "limitations": "Receiver-aware selection disclosure is close prior context. Patent disclosure is not deployment, correctness under our contract, or legal advice.",
+    "version": null,
+    "byte_hash": null
+  },
+  {
+    "id": "S04",
+    "title": "Clustering-based signal merging in STA",
+    "url": "https://www.tauworkshop.com/2019/slides/belov__clustering_based_merging_v2.pdf",
+    "source_type": "official_author_slides",
+    "publication_date": "2019-03",
+    "retrieved_utc": "2026-10-15T09:16:40.263340+00:00",
+    "locator": "Slides 2,5-9,11-13 (PDF pages 2,6-10,12-14)",
+    "access": "full",
+    "supported_claim_ids": [
+      "CLM-401",
+      "CLM-407"
+    ],
+    "limitations": "Multiple-signal budget and merge-loss discussion inspected; endpoint PBA demand. Industrial measurements and advanced models are not ours and do not transfer to NLDM.",
+    "version": null,
+    "byte_hash": null
+  },
+  {
+    "id": "S05",
+    "title": "Infinite-depth path-based analysis of operational timing for circuit design, US10776547B1",
+    "url": "https://patents.google.com/patent/US10776547B1/en",
+    "source_type": "primary_patent",
+    "publication_date": "2020-09-15",
+    "retrieved_utc": "2026-10-15T09:16:40.263340+00:00",
+    "locator": "Detailed Description phase merging and crossing waveforms; claims 1-9; web lines 184-200,645-664",
+    "access": "full",
+    "supported_claim_ids": [
+      "CLM-401",
+      "CLM-407"
+    ],
+    "limitations": "Staged signals and dominance already disclosed. No claim of production internals, reproduced speedups, exact commercial equivalence or legal clearance.",
+    "version": null,
+    "byte_hash": null
+  },
+  {
+    "id": "S06",
+    "title": "Static Timing Analysis using Backward Signal Propagation",
+    "url": "https://www.cs.york.ac.uk/rts/docs/SIGDA-Compendium-1994-2004/papers/2004/dac04/pdffiles/p664.pdf",
+    "source_type": "primary_paper",
+    "publication_date": "2004-06",
+    "retrieved_utc": "2026-10-15T09:16:40.263340+00:00",
+    "locator": "Dongwoo Lee, Vladimir Zolotov, David Blaauw; sections 3.1-3.3, equations 2-4, Figures 5-6; proceedings pp.666-668",
+    "access": "full",
+    "supported_claim_ids": [
+      "CLM-406",
+      "CLM-407",
+      "CLM-408"
+    ],
+    "limitations": "Backward delay-versus-slew construction and table interpolation inspected. Exact strengthened scalar comparator is a proposed control, not a reproduced implementation. Its full accuracy/cost model must be matched.",
+    "version": null,
+    "byte_hash": null
+  },
+  {
+    "id": "S07",
+    "title": "Timing path analysis using flow graphs, US12229484B1",
+    "url": "https://patents.google.com/patent/US12229484B1/en",
+    "source_type": "primary_patent",
+    "publication_date": "2025-02-18",
+    "retrieved_utc": "2026-10-15T09:16:40.263340+00:00",
+    "locator": "Detailed Description FIGS.1-3, flow ribbons and interactive module graphs; web lines 142-233",
+    "access": "full",
+    "supported_claim_ids": [
+      "CLM-407"
+    ],
+    "limitations": "Citation-neighborhood lead inspected and excluded as a direct numeric pruning method: relevant passage concerns visual query/aggregation. No title-based duplication allegation.",
+    "version": null,
+    "byte_hash": null
+  },
+  {
+    "id": "S08",
+    "title": "OpenSTA TableModel.cc",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/e01d3f163f483f233db00410b6515a767a6ca03b/liberty/TableModel.cc",
+    "source_type": "primary_source_code",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-15T09:16:40.263340+00:00",
+    "locator": "Table2::findValue, web-rendered lines 959-1017",
+    "access": "full",
+    "supported_claim_ids": [
+      "CLM-402",
+      "CLM-404",
+      "CLM-410"
+    ],
+    "limitations": "Float inputs/return and double interpolation visible; no compiled numeric adapter or source-byte hash independently attested. Source license retained.",
+    "version": "e01d3f163f483f233db00410b6515a767a6ca03b",
+    "byte_hash": null
+  },
+  {
+    "id": "S09",
+    "title": "OpenSTA timing-engine API",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/e01d3f163f483f233db00410b6515a767a6ca03b/doc/StaApi.txt",
+    "source_type": "official_source_documentation",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-15T09:16:40.263340+00:00",
+    "locator": "Search and DelayCalc descriptions, incremental update/tolerance API",
+    "access": "full",
+    "supported_claim_ids": [
+      "CLM-402",
+      "CLM-410"
+    ],
+    "limitations": "Integration context only; not evidence of a ready exhaustive path-specific slew oracle. Documentation source pinned, binary not built.",
+    "version": "e01d3f163f483f233db00410b6515a767a6ca03b",
+    "byte_hash": null
+  },
+  {
+    "id": "S10",
+    "title": "OpenTimer README",
+    "url": "https://github.com/OpenTimer/OpenTimer",
+    "source_type": "official_open_code_readme",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-15T09:16:40.263340+00:00",
+    "locator": "Why OpenTimer; Compile; Run Tests; License; README web lines 223-240,301-305,474-496",
+    "access": "full",
+    "supported_claim_ids": [
+      "CLM-410"
+    ],
+    "limitations": "Advertises graph/path analysis and parallel incremental timing; MIT core and third-party licenses. Reading is unpinned current page; no exhaustive path-slew semantics, code audit or build is claimed.",
+    "version": "unlocked current README retrieved 2026-10-15",
+    "byte_hash": null
+  },
+  {
+    "id": "S11",
+    "title": "Using Machine Learning to Predict Path-Based Slack from Graph-Based Timing Analysis",
+    "url": "https://vlsicad.ucsd.edu/Publications/Conferences/361/c361.pdf",
+    "source_type": "primary_author_paper",
+    "publication_date": "2018",
+    "retrieved_utc": "2026-10-15T09:16:40.263340+00:00",
+    "locator": "DOI 10.1109/ICCD.2018.00096; Abstract and introduction, pp.603-605; Figure 2 and footnote 2",
+    "access": "full",
+    "supported_claim_ids": [
+      "CLM-401",
+      "CLM-407"
+    ],
+    "limitations": "Primary engineering motivation and prediction formulation inspected. Its numerical slowdowns/errors and foundry enablement are not new measurements, licensed inputs or exactness guarantees here.",
+    "version": null,
+    "byte_hash": null
+  },
+  {
+    "id": "S12",
+    "title": "Graph-Learning-Driven Path-Based Timing Analysis Results Predictor from Graph-Based Timing Analysis",
+    "url": "https://www.aspdac.com/aspdac2023/archive/pdf/6D-5.pdf",
+    "source_type": "official_author_slides",
+    "publication_date": "2023",
+    "retrieved_utc": "2026-10-15T09:16:40.263340+00:00",
+    "locator": "Motivation/background and proposed predictor diagram; slides 5-7",
+    "access": "full",
+    "supported_claim_ids": [
+      "CLM-407"
+    ],
+    "limitations": "Official slides, not full paper inspection. Prediction alternative only; no certified endpoint or quantitative comparison claimed.",
+    "version": null,
+    "byte_hash": null
+  },
+  {
+    "id": "S13",
+    "title": "ISPD26 Contest Description v2.2",
+    "url": "https://www.ispd.cc/contests/26/ISPD26_contest_description.pdf",
+    "source_type": "official_contest_rules",
+    "publication_date": "2026",
+    "retrieved_utc": "2026-10-15T09:16:40.263340+00:00",
+    "locator": "Section 2 constraints, PDF p.3; section 3.3.1 metrics",
+    "access": "full",
+    "supported_claim_ids": [
+      "CLM-407",
+      "CLM-410"
+    ],
+    "limitations": "Single-mode ideal-clock setup optimization scope rechecked. Not an exhaustive PBA benchmark definition; platform/design rights need individual checks.",
+    "version": "v2.2",
+    "byte_hash": null
+  },
+  {
+    "id": "S14",
+    "title": "ISPD2026 official results and resources",
+    "url": "https://www.ispd.cc/contests/26/index.html",
+    "source_type": "official_contest_results",
+    "publication_date": "2026",
+    "retrieved_utc": "2026-10-15T09:16:40.263340+00:00",
+    "locator": "Contest Winners and Contest Resources",
+    "access": "full",
+    "supported_claim_ids": [
+      "CLM-407"
+    ],
+    "limitations": "Names/ranks/resources inspected; no winner mechanism or data-use right follows from them.",
+    "version": null,
+    "byte_hash": null
+  },
+  {
+    "id": "S15",
+    "title": "ISPD26 organizer repository",
+    "url": "https://github.com/ABKGroup/ISPD26-Contest",
+    "source_type": "official_contest_open_repository",
+    "publication_date": "2026",
+    "retrieved_utc": "2026-10-15T09:16:40.263340+00:00",
+    "locator": "README table of contents/timeline/leaderboard; top-level BSD-3-Clause notice and submodule listing",
+    "access": "full",
+    "supported_claim_ids": [
+      "CLM-407",
+      "CLM-410"
+    ],
+    "limitations": "No benchmark download, submodule execution or individual asset license clearance. Current README lacks a pinned commit in this dossier. Unfinished tasks alone are not novel.",
+    "version": null,
+    "byte_hash": null
+  },
+  {
+    "id": "S16",
+    "title": "Tempus Timing Signoff Solution DataSheet",
+    "url": "https://www.cadence.com/en_US/home/resources/datasheets/tempus-timing-signoff-solution-ds.html",
+    "source_type": "official_vendor_description",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-15T09:16:40.263340+00:00",
+    "locator": "Overview; Key Features; Concurrent Multi-Mode Multi-Corner; Tempus ECO Option",
+    "access": "full",
+    "supported_claim_ids": [
+      "CLM-401",
+      "CLM-407"
+    ],
+    "limitations": "Advertised timing/ECO, variation/SI/concurrent-view capabilities only. No controlled performance, missing-feature or internal-implementation claim.",
+    "version": null,
+    "byte_hash": null
+  },
+  {
+    "id": "S17",
+    "title": "Adaptive path based analysis process, US12423504B1",
+    "url": "https://patents.google.com/patent/US12423504B1/en",
+    "source_type": "primary_patent",
+    "publication_date": "2025-09-23",
+    "retrieved_utc": "2026-10-15T09:16:40.263340+00:00",
+    "locator": "Detailed Description adaptive target selection; T1/T2 and clock-period thresholds; web lines 848-874",
+    "access": "full",
+    "supported_claim_ids": [
+      "CLM-407"
+    ],
+    "limitations": "Recent adaptive IPBA disclosure inspected at named passages. No broad proof, deployment, performance or legal conclusion.",
+    "version": null,
+    "byte_hash": null
+  },
+  {
+    "id": "S18",
+    "title": "OpenSTA project README and distribution terms",
+    "url": "https://github.com/The-OpenROAD-Project/OpenSTA",
+    "source_type": "official_open_source_readme",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-15T09:16:40.263340+00:00",
+    "locator": "Timing Engine and license paragraphs",
+    "access": "full",
+    "supported_claim_ids": [
+      "CLM-410"
+    ],
+    "limitations": "Public repository advertises query-based incremental updates and GPLv3/alternate commercial licensing. Not a binary or all-dependency rights audit.",
+    "version": null,
+    "byte_hash": null
+  },
+  {
+    "id": "S19",
+    "title": "TAU2019 official program and contest landing page",
+    "url": "https://www.tauworkshop.com/2019/program.html",
+    "source_type": "official_program",
+    "publication_date": "2019-03-18",
+    "retrieved_utc": "2026-10-15T09:16:40.263340+00:00",
+    "locator": "Program March 22 contest session and winner presentation links; companion https://www.tauworkshop.com/2019/contest.html",
+    "access": "full",
+    "supported_claim_ids": [
+      "CLM-407"
+    ],
+    "limitations": "Official program checked; sparse contest landing page supplies no complete rules. One linked presentation subsequently read as S20; other winner methods remain unresolved.",
+    "version": null,
+    "byte_hash": null
+  },
+  {
+    "id": "S20",
+    "title": "ParallelClosure: A Parallel Design Optimizer for Timing Closure",
+    "url": "https://www.tauworkshop.com/2019/slides/TAU%202019%20Contest-A%20Parallel%20Closure.pdf",
+    "source_type": "official_contest_team_slides",
+    "publication_date": "2019-03-22",
+    "retrieved_utc": "2026-10-15T09:16:40.263340+00:00",
+    "locator": "Slides 2,6-12,14-16,19,21; methods, Galois operators, limits",
+    "access": "full",
+    "supported_claim_ids": [
+      "CLM-407"
+    ],
+    "limitations": "Contest-team account of buffering, slew-target sizing and parallel STA. Read method/limits, not reconstructed software. Does not establish use or absence of paired suffix-difference certificates.",
+    "version": null,
+    "byte_hash": null
+  },
+  {
+    "id": "H-P",
+    "title": "Explicitly released EDA-0002 predecessor H-P",
+    "url": "shared/predecessor/SUB-6658c76e5f7210390d0b56e6da5f52ab23356f257be6c1ca35fa9105ad9f2774",
+    "source_type": "released_role_output",
+    "publication_date": "2026-10-15",
+    "retrieved_utc": "2026-10-15T09:16:40.263340+00:00",
+    "locator": "proposal.md CLM-047/048/049, carried dispositions; direction-control.json",
+    "access": "full",
+    "supported_claim_ids": [
+      "CLM-400"
+    ],
+    "limitations": "Trusted manifest verification passed in this job. Prose/output evidence only; no transcript, private reasoning, old approval or signature inherited. Historical fixtures not rerun.",
+    "version": "SUB-6658c76e5f7210390d0b56e6da5f52ab23356f257be6c1ca35fa9105ad9f2774",
+    "byte_hash": null
+  },
+  {
+    "id": "H-C",
+    "title": "Explicitly released EDA-0002 predecessor H-C",
+    "url": "shared/predecessor/SUB-bb62d5a576a0315b05064d88decbaf2a9d2ece6ffa724e45325903548470a101",
+    "source_type": "released_role_output",
+    "publication_date": "2026-10-15",
+    "retrieved_utc": "2026-10-15T09:16:40.263340+00:00",
+    "locator": "challenges.md OBJ-003, NUM-03 and disposition",
+    "access": "full",
+    "supported_claim_ids": [
+      "CLM-400"
+    ],
+    "limitations": "Trusted manifest verification passed in this job. Prose/output evidence only; no transcript, private reasoning, old approval or signature inherited. Historical fixtures not rerun.",
+    "version": "SUB-bb62d5a576a0315b05064d88decbaf2a9d2ece6ffa724e45325903548470a101",
+    "byte_hash": null
+  },
+  {
+    "id": "H-V",
+    "title": "Explicitly released EDA-0002 predecessor H-V",
+    "url": "shared/predecessor/SUB-1057c0a753d7e52927891b9cf2fbc91c3e965ce980795f3ece56d65206d5ea7e",
+    "source_type": "released_role_output",
+    "publication_date": "2026-10-15",
+    "retrieved_utc": "2026-10-15T09:16:40.263340+00:00",
+    "locator": "verification.md outcome/objection/gate tables; verification.json decision and source_checks",
+    "access": "full",
+    "supported_claim_ids": [
+      "CLM-400"
+    ],
+    "limitations": "Trusted manifest verification passed in this job. Prose/output evidence only; no transcript, private reasoning, old approval or signature inherited. Historical fixtures not rerun.",
+    "version": "SUB-1057c0a753d7e52927891b9cf2fbc91c3e965ce980795f3ece56d65206d5ea7e",
+    "byte_hash": null
+  },
+  {
+    "id": "P-BRIEF",
+    "title": "Frozen research brief and assigned job",
+    "url": "policy/config/research-brief.json",
+    "source_type": "owner_packet_policy",
+    "publication_date": "2026-10-15",
+    "retrieved_utc": "2026-10-15T09:16:40.263340+00:00",
+    "locator": "compute.status; primary_metric.D05; minimum_meaningful_effect.D05; prompt.txt final cycle/no-new-compute instruction",
+    "access": "full",
+    "supported_claim_ids": [
+      "CLM-408",
+      "CLM-409",
+      "CLM-410"
+    ],
+    "limitations": "Provisional coordinator caps and thresholds are not an actual allocation or validated user demand. Current job permits source research only.",
+    "version": null,
+    "byte_hash": null
+  }
+]
