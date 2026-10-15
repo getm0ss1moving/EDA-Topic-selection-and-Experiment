@@ -522,6 +522,30 @@ def cycle_checkpoint(t):
     return {k:copy.deepcopy(t[k]) for k in fields if k in t}
 
 
+def remember_rejection(state,t,job,result,error,home):
+    """Coordinator policy storage, outside the retried actor's writable job."""
+    work=Path(job['work']);store=home/'rejected-attempts'/work.name
+    store.mkdir(parents=True,exist_ok=True);store.chmod(0o700)
+    index=store/'index.json';entries=read(index) if index.exists() else []
+    row={'release_id':result.get('release_id'),'error':str(error),
+         'scope':'Mechanical rejection, not an independent misconduct finding','snapshot':None}
+    sid=row['release_id'];seat=t['seats'][job['role']]
+    if isinstance(sid,str) and rt.SUB.fullmatch(sid):
+        try:
+            source=work/'submissions'/sid;m,_=rs.verify(source)
+            expected={'role':job['role'],'topic':t['topic'],'actor_id':seat['actor_id'],
+                      'session_id':seat['session_id'],'input_commit':state['source_commit'],
+                      'packet_sha256':seat['packet_sha256']}
+            if all(m[k]==v for k,v in expected.items()):
+                dest=store/sid
+                if not dest.exists():copy_release(source,dest)
+                rs.verify(dest);row['snapshot']=str(dest)
+        except (ValueError,OSError):pass  # Keep metadata; never export unverified/foreign bytes.
+    if row not in entries:entries.append(row)
+    save(index,entries)
+    save(work/'mechanical-attempts.json',entries)  # Author-facing mirror, not audit authority.
+
+
 def clean_checkpoint(state,t,job,record=None):
     """Migrate older audited in-flight phases using released history only."""
     if t.get('cycle_checkpoint'):return t['cycle_checkpoint']
@@ -641,16 +665,17 @@ def audit_dispatch(c, home, domain):
     save(work/'result.schema.json',FINAL)
     attempt_paths=[];attempt_sources=[]
     for role,name in record['releases'].items():
-        source=Path(name).parent.parent/'mechanical-attempts.json'
+        source=home/'rejected-attempts'/Path(name).parent.parent.name/'index.json'
         if not source.is_file():continue
         descriptor=work/'shared'/'job-descriptors'/role
-        shutil.copyfile(source,descriptor/source.name)
-        assignment=read(source.parent/'JOB.json')
+        shutil.copyfile(source,descriptor/'mechanical-attempts.json')
+        latest_manifest,_=rs.verify(name)
         for attempt in read(source):
-            candidate=source.parent/'submissions'/attempt.get('release_id','invalid')
+            if not attempt.get('snapshot'):continue
+            candidate=Path(attempt['snapshot'])
             try:
                 am,_=rs.verify(candidate)
-                if any(am[k]!=assignment[k] for k in ('role','topic','actor_id','session_id','input_commit','packet_sha256')):continue
+                if any(am[k]!=latest_manifest[k] for k in ('role','topic','actor_id','session_id','input_commit','packet_sha256')):continue
             except (ValueError,OSError,KeyError):continue
             dest=work/'shared'/'rejected-attempts'/candidate.name
             if not dest.exists():copy_release(candidate,dest)
@@ -875,11 +900,7 @@ def collect(c,home,domain):
         quarantine_cycle(state,t,job,str(e),home)
         save(home/'state.json',state);raise
     except (ValueError,OSError) as e:
-        attempts=Path(job['work'])/'mechanical-attempts.json'
-        entries=read(attempts) if attempts.exists() else []
-        entry={'release_id':result.get('release_id'),'error':str(e),'scope':'Mechanical rejection, not an independent misconduct finding'}
-        if entry not in entries:entries.append(entry)
-        save(attempts,entries)
+        remember_rejection(state,t,job,result,e,home)
         save(Path(job['work'])/'retry-note.json',{'mechanical_error':str(e),
               'instruction':'Repair your own output; do not invent scientific agreement.'})
         raise

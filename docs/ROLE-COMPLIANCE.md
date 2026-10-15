@@ -132,3 +132,12 @@ remain in the incident index and cannot be rewritten into clearance. A recovery
 command prepares files; it neither launches a model nor supplies any scientific
 approval. Preserve and report a recovery failure rather than manually clearing
 the quarantine flag.
+
+Mechanical rejections also receive an immediate coordinator copy under
+`rejected-attempts/JOB_ID/`, outside the retried role's job. The index and verified
+owned frozen bytes there are the audit authority; a deletable author-facing
+mirror is only a retry aid. Auditors receive these explicitly released attempts
+alongside the latest three bindings, and publication preserves them. Invalid or
+foreign-identity snapshots are not exported as owned evidence. Frozen hashes and
+read-only files support accidental-change detection under this policy; the shared
+OS account still does not enforce adversarial immutability.

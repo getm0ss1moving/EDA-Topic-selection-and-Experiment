@@ -2,6 +2,7 @@
 import copy
 import json
 import os
+import shutil
 from pathlib import Path
 import tempfile
 import unittest
@@ -245,6 +246,11 @@ class AuditedLoopTests(unittest.TestCase):
         l.save(work/'release/compliance.json',v);bad=self.freeze(work)
         with self.assertRaisesRegex(ValueError,'checkout access'):l.collect(self.c,self.home,'D05')
         self.assertEqual(l.read(work/'mechanical-attempts.json')[0]['release_id'],bad['release_id'])
+        # A retry cannot erase the auditor's evidence by deleting its own mirror/snapshot.
+        (work/'mechanical-attempts.json').unlink()
+        old=work/'submissions'/bad['release_id'];old.chmod(0o700)
+        for item in old.iterdir():item.chmod(0o600)
+        shutil.rmtree(old)
         l.save(work/'release/compliance.json',self.ledger(a));good=self.freeze(work)
         l.collect(self.c,self.home,'D05');audit=Path(l.audit_dispatch(self.c,self.home,'D05')['work'])
         assignment=l.read(audit/'JOB.json')
