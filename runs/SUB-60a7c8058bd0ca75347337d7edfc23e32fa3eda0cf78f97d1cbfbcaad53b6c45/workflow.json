@@ -1,0 +1,44 @@
+{
+  "role": "proposer",
+  "actor_id": "ChatGPT-P04-PHYSICAL",
+  "session_id": "1a859cdd-08fa-46af-a2fe-1a6fc872d695",
+  "topic": "EDA-0001",
+  "domain": "D04",
+  "batch_round": 2,
+  "revision": "R2",
+  "phase": "research",
+  "input_commit": "a48f03d4bc254c0b0957d0fe0f265e072d6cf49a",
+  "packet_sha256": "f24d6d0842a9a214e52469c518bae370fe1e11f48069736da9420adc325a6554",
+  "previous_proposer_release": "SUB-4d1d28908e8092c441ca120da3acc52d46c0181575fb6cafc2b2230126c763dc",
+  "responded_verifier_release": "SUB-3a1895dd42f58f6c71fa80bd6ff6e44e9619b9bb84ba90e2bce7332874e29985",
+  "adjudicated_challenger_release": "SUB-87bc40aca163ac1c523b2aef544bca7352e722d4abb0fd76566f002ccb9df992",
+  "assessment": "revise",
+  "next_requested_action": "independent_challenge",
+  "experiment_ready": false,
+  "experiment_consent": "not_signed",
+  "abandonment_position": "continue_research",
+  "direction_penalties": {
+    "combination_drift": 0,
+    "demand_drift": 0,
+    "total": 0
+  },
+  "unresolved": [
+    "mechanism equivalence and nontrivial useful distinction",
+    "opportunity prevalence and validated thresholds/absolute repair-cost need",
+    "representative design rights and exact pins",
+    "actual compute allocation and full comparator cost",
+    "transaction implementation and independent oracle scope",
+    "exact task-list dual consent"
+  ],
+  "work_performed": [
+    "primary-source reading",
+    "public code inspection",
+    "analytical reasoning",
+    "documentation revision",
+    "structural release checks"
+  ],
+  "experiment_execution": "none; no new experimental compute granted",
+  "review_exposure": "unblinded; only assigned own-previous and explicitly released shared packets",
+  "model_provenance": "JOB requests gpt-6.1-sol/high; actual host configuration is backend-owned and not independently inspected",
+  "run_record": "runs/P04-R2.json"
+}
