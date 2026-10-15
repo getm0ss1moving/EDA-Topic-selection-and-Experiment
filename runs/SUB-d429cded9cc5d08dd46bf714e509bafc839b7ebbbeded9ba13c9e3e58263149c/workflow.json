@@ -1,0 +1,91 @@
+{
+  "role": "proposer",
+  "topic": "EDA-0006",
+  "batch_round": 3,
+  "assessment": "park",
+  "next_action": "independent_challenge",
+  "input_commit": "f68c1492c05be3fac5622deac4bb479eabf957de",
+  "packet_sha256": "0a344dc225723839dc6a224d16376f44459179b3b83746986b2c1253a8dd1466",
+  "actor_id": "ChatGPT-P05-TIMING-EDA-0006",
+  "session_id": "53d6f5d7-1d68-4d5a-a081-2a7df44a34b0",
+  "previous_proposal_release": "SUB-a18df7c82355639157174a8f957f294a4dabd4f66f741c76001694948aed326c",
+  "responded_verifier_release": "SUB-91607fe56d889209b6e7be4232bb7993e669dba37c9435c995712d22b4a249e2",
+  "adjudicated_challenger_release": "SUB-de19f2a38b3e2fcbf5d5b7871f119e8bf7b869b7568889c777cc45228e942c91",
+  "source_cutoff_utc": "2026-10-15",
+  "recorded_at_utc": "2026-10-15T11:43:36.372877+00:00",
+  "scientific_state": "parking_recommended_after_completed_bounded_two_witness_pass; conditional hypothesis distinct from readiness",
+  "witness_results": {
+    "EXP-000R": "no differing capability/cost/reliability witness found in read/operation/lifetime audit",
+    "EXP-001R": "no established unchanged full-vector consumer; prospective fixed guard has smaller sufficient query",
+    "EXP-006B": {
+      "finite_guard_checks": 512,
+      "full_vector_necessity_proved": false,
+      "guarded_choice": "A",
+      "same_summary": [
+        -3,
+        -4,
+        [
+          0,
+          1
+        ]
+      ],
+      "scalar_margin": [
+        1,
+        -1
+      ],
+      "scope": "synthetic integer slack records; not circuit or timing execution",
+      "summary_area_choice": "B",
+      "vector_guard": [
+        true,
+        false
+      ]
+    },
+    "EXP-009A": "favorable scope and adjacent changed kernel reopened; actual baseline path read; winner methods unresolved"
+  },
+  "tasklist_sha256": "80654ed98f5b3578d8e20b855f1e0da0a5845a22525e4ddf4aca9bbd84f16a18",
+  "analytical_check_source_sha256": "2795a570a2792227ddd347fa64363a699f739bf28b5b35c71daf8f9e504fb7d1",
+  "scratch": "/var/folders/1l/87sz0xm96mld4zz640w33nlh0000gn/T/eda0006-p-r3-x8bjn0i6",
+  "forecast_exposure": "unblinded; own prior forecasts and released verifier/challenger material; no independent R3 approval claimed",
+  "coverage": {
+    "duplicate_prior_art": "supported_conditional_reduction_not_universal_exhaustion",
+    "mechanism": "conditional_specification_no_executable_adapter",
+    "composition": "positive_delta_unestablished_after_bounded_pass",
+    "demand": "unchanged_output_consumer_unestablished_after_sufficient_statistic_test",
+    "industry_gap": "unresolved",
+    "headroom": "unmeasured_no_numeric_forecast",
+    "contests": "selected_scope_and_baseline_reopened_winner_methods_unresolved",
+    "experiments": "inactive_park_recommended",
+    "cost": "matched_policy_ledger_only_no_measurement"
+  },
+  "resource_status": "source reading/derivation and 512-record Python stdlib calculation only; no new full-flow/training/GPU/remote/paid API allocation or run",
+  "consents": "none; old R2 pending decision not agreement or inherited signature; no abandonment signed",
+  "direction_drift": {
+    "combination_drift": 0,
+    "demand_drift": 0,
+    "total": 0
+  },
+  "intake_deviation": "Read four common policy docs and listed paths from user checkout before job no-checkout rule known; no withheld science/foreign private material read; subsequent work job/public sources only",
+  "backend_attestation": "logical seat identity only; no physical model attestation fabricated",
+  "local_checks": [
+    "Current P/C/V content-addressed manifests independently verified",
+    "EXP-006B 512-record arithmetic assertions pass",
+    "All JSON parsed; CSV 22 data rows; 12 role-owned artifacts; English/no-TBD check passed",
+    "Frozen anchor byte values identical to own R2 direction anchor; tasklist and embedded script SHA256 matched",
+    "Trusted self-freeze/verify is final submission step; full repository project.py validate reserved for coordinator per standalone prompt"
+  ],
+  "outputs": [
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0006/ChatGPT-P05-TIMING-EDA-0006/jobs/e607e63c-bdc4-48aa-baa0-612cc970f4a3/release/contest-audit.md",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0006/ChatGPT-P05-TIMING-EDA-0006/jobs/e607e63c-bdc4-48aa-baa0-612cc970f4a3/release/direction-control.json",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0006/ChatGPT-P05-TIMING-EDA-0006/jobs/e607e63c-bdc4-48aa-baa0-612cc970f4a3/release/experiment-plan.md",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0006/ChatGPT-P05-TIMING-EDA-0006/jobs/e607e63c-bdc4-48aa-baa0-612cc970f4a3/release/forecast.json",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0006/ChatGPT-P05-TIMING-EDA-0006/jobs/e607e63c-bdc4-48aa-baa0-612cc970f4a3/release/industry-gap.md",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0006/ChatGPT-P05-TIMING-EDA-0006/jobs/e607e63c-bdc4-48aa-baa0-612cc970f4a3/release/prior-art.csv",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0006/ChatGPT-P05-TIMING-EDA-0006/jobs/e607e63c-bdc4-48aa-baa0-612cc970f4a3/release/proposal.md",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0006/ChatGPT-P05-TIMING-EDA-0006/jobs/e607e63c-bdc4-48aa-baa0-612cc970f4a3/release/responses.md",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0006/ChatGPT-P05-TIMING-EDA-0006/jobs/e607e63c-bdc4-48aa-baa0-612cc970f4a3/release/search-log.md",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0006/ChatGPT-P05-TIMING-EDA-0006/jobs/e607e63c-bdc4-48aa-baa0-612cc970f4a3/release/sources.json",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0006/ChatGPT-P05-TIMING-EDA-0006/jobs/e607e63c-bdc4-48aa-baa0-612cc970f4a3/release/tasklist.md",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0006/ChatGPT-P05-TIMING-EDA-0006/jobs/e607e63c-bdc4-48aa-baa0-612cc970f4a3/release/workflow.json"
+  ],
+  "publication": "Coordinator transports exact releases into runs/ and PR; role does not approve or merge"
+}

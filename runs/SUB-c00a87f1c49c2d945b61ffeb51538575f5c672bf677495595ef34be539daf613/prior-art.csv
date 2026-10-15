@@ -1,0 +1,6 @@
+source_id,task_formulation,mechanism,data,evaluation,assumptions,limitation,overlap,distinction
+C301/C302,finite alternative program execution,conditional values and context lifting,finite configurations,not reproduced,adapted exact equality and complete records,not ready EDA implementation,generic mask algebra,system utility remains open
+C306,repeated uncertain-input trials,coalesced execution and recoalescing,program sample inputs,not reproduced,zero threshold separated from approximation,not timing-specific,cross-run sharing,no complete-context timing evidence
+C304,size-up candidate scoring,local delay estimate then commit checks,OpenROAD source,not run,prepared immutable arc inputs,not endpoint-vector consumer,nearby real sizing use,different decision contract
+C303,NLDM lookup and scaling,table model plus cell/PVT closure,OpenSTA source,not run,model and scale dependencies,partial closure only,shared adapter obligation,no established differential cost
+C305/C307/C308,post-placement optimization contest,sizing buffering and evaluated flow,official source,no benchmark execution,ideal-clock data paths; future extensions proposed,winners/final newer rules unresolved,scope relevance,not internal candidate API

@@ -1,0 +1,213 @@
+{
+  "decision": "park",
+  "verifier_session": "a51b3d2a-268d-4e21-b896-97ab1dd7e2c4",
+  "dossier_digest": "3350e1a7425f287a68d8558954450e7e04c421b46d656b215354a86f120c8357",
+  "digest_scope": "project.py digest of exact released proposer directory, including its SUBMISSION manifest; not a canonical accepted-topic digest",
+  "reviewed_proposer_release": "SUB-d429cded9cc5d08dd46bf714e509bafc839b7ebbbeded9ba13c9e3e58263149c",
+  "adjudicated_challenger_releases": [
+    "SUB-c00a87f1c49c2d945b61ffeb51538575f5c672bf677495595ef34be539daf613"
+  ],
+  "input_commit": "f68c1492c05be3fac5622deac4bb479eabf957de",
+  "packet_sha256": "c3fda03df5f6ce9463078ab94f969d3d516729e9c87bd44a999a32ffdedb73b0",
+  "gates": {
+    "novelty": false,
+    "mechanism": false,
+    "utility": false,
+    "contest_originality": false,
+    "headroom": false,
+    "feasibility": false,
+    "direction_integrity": true,
+    "experiment_consensus": false
+  },
+  "direction_penalty_checked": true,
+  "direction_penalties": {
+    "combination_drift": 0,
+    "demand_drift": 0,
+    "total": 0
+  },
+  "experiment_consensus_checked": true,
+  "abandonment_process_checked": true,
+  "experiment_consensus": {
+    "tasklist_sha256": "80654ed98f5b3578d8e20b855f1e0da0a5845a22525e4ddf4aca9bbd84f16a18",
+    "challenger_decision": "pending",
+    "proposer_agreement_present": false,
+    "matching_agreements": false
+  },
+  "abandonment": "No matching abandonment consents or established universal dead end; no abandonment approved.",
+  "source_checks": [
+    {
+      "source_id": "C301",
+      "url": "https://www.cs.cmu.edu/~ckaestne/pdf/oopsla18.pdf",
+      "version": "10.1145/3276487",
+      "locator": "Section 2.1 printed 117:5; Section 3.1 printed 117:9",
+      "access_level": "full",
+      "checked_at_utc": "2026-10-15T11:54:33.585192+00:00",
+      "status": "selected original locators reopened",
+      "limitations": "Selected sections only; no EDA adapter or reproduced performance."
+    },
+    {
+      "source_id": "C302",
+      "url": "https://raw.githubusercontent.com/chupanw/vbc/1221ef110e2b46951ab01319e97fa5d7dd84a724/src/main/java/edu/cmu/cs/varex/VImpl.java",
+      "version": "1221ef110e2b46951ab01319e97fa5d7dd84a724",
+      "locator": "Raw lines117-192: map, flatMap, addVToMap, put",
+      "access_level": "full",
+      "checked_at_utc": "2026-10-15T11:54:33.585192+00:00",
+      "status": "selected original locators reopened",
+      "limitations": "Object equality, interaction restrictions and exceptions need adaptation; not run."
+    },
+    {
+      "source_id": "C303",
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/49b86c95b31c53ba9096b91ef384ae5406b3107c/liberty/TableModel.cc",
+      "version": "49b86c95b31c53ba9096b91ef384ae5406b3107c",
+      "locator": "Raw113-130,273-325,833-853: gateDelay/findValue/scaleFactor",
+      "access_level": "full",
+      "checked_at_utc": "2026-10-15T11:54:33.585192+00:00",
+      "status": "selected original locators reopened",
+      "limitations": "Selected closure only, no full transitive purity or FP audit. Raw file lines differ from web-normalized lines."
+    },
+    {
+      "source_id": "C304",
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/8da6ac250b0349c346d1abed7c2c43107f4ff6f7/src/rsz/src/move/SizeUpMtCandidate.cc",
+      "version": "8da6ac250b0349c346d1abed7c2c43107f4ff6f7",
+      "locator": "Raw37-44 estimate; apply following it",
+      "access_level": "full",
+      "checked_at_utc": "2026-10-15T11:54:33.585192+00:00",
+      "status": "selected original locators reopened",
+      "limitations": "One inspected local-estimate caller, not complete caller population or workload observation."
+    },
+    {
+      "source_id": "C305",
+      "url": "https://vlsicad.ucsd.edu/Publications/Conferences/421/c421.pdf",
+      "version": "10.1145/3764386.3779616",
+      "locator": "Sections5.2-5.3 pp6-7, web lines558-606",
+      "access_level": "full",
+      "checked_at_utc": "2026-10-15T11:54:33.585192+00:00",
+      "status": "selected original locators reopened",
+      "limitations": "Scope and roadmap only; roadmap not final 2027 rules, no winner mechanism."
+    },
+    {
+      "source_id": "C306",
+      "url": "https://www.cs.purdue.edu/homes/xyzhang/Comp/icse11.pdf",
+      "version": "10.1145/1985793.1985872",
+      "locator": "Section5 recoalescing, pp6-7 web lines610-624; Section6 implementation",
+      "access_level": "full",
+      "checked_at_utc": "2026-10-15T11:54:33.585192+00:00",
+      "status": "selected original locators reopened",
+      "limitations": "Selected exact-vs-threshold mode only; no timing adapter or byte-level floating-point equivalence inferred; no gains reproduced."
+    },
+    {
+      "source_id": "C307",
+      "url": "https://ispd.cc/ispd2027/index.php?page=program",
+      "version": "retrieved 2026-10-15",
+      "locator": "Page title ISPD2026 Program and Session16; linked slides",
+      "access_level": "full",
+      "checked_at_utc": "2026-10-15T11:54:33.585192+00:00",
+      "status": "selected original locators reopened",
+      "limitations": "Program page reopened; linked large result slides not fetched or checked. Winner algorithms unresolved."
+    },
+    {
+      "source_id": "C308",
+      "url": "https://www.ispd.cc/contests/26/index.html",
+      "version": "retrieved 2026-10-15",
+      "locator": "Contest Webpage link to https://github.com/ABKGroup/ISPD26-Contest; README table of contents/timeline",
+      "access_level": "full",
+      "checked_at_utc": "2026-10-15T11:54:33.585192+00:00",
+      "status": "selected original locators reopened",
+      "limitations": "Inspected index/repository view does not establish winner method. Dynamic content, not final latest-edition clearance."
+    },
+    {
+      "source_id": "S29",
+      "url": "https://yibolin.com/publications/papers/TIMING_ISEDA2026_Liu.pdf",
+      "locator": "\u00a7III.A\u2013B Eq7\u201311 pp3\u20134",
+      "access_level": "full",
+      "checked_at_utc": "2026-10-15T11:54:33.585192+00:00",
+      "status": "selected method reopened",
+      "limitations": "Approximate changed kernel only; no reproduced measurements."
+    },
+    {
+      "source_id": "S31",
+      "url": "https://raw.githubusercontent.com/ABKGroup/ISPD26-Contest/f7b29d242fc7d441f3b4eadc556f40099ccca067/scripts/evaluation_baseline.tcl",
+      "locator": "raw37\u201354,109\u2013123",
+      "access_level": "full",
+      "checked_at_utc": "2026-10-15T11:54:33.585192+00:00",
+      "status": "source reopened",
+      "limitations": "Not executed; final reporting does not expose all internal candidate queries."
+    }
+  ],
+  "objections": [
+    {
+      "id": "OBJ-001",
+      "verdict": "valid",
+      "blocking": true,
+      "source_locator": "C301 \u00a72.1 printed117:5; C302 raw117\u2013192; C303 raw113\u2013130,273\u2013325,833\u2013853; C306 \u00a75 pp6\u20137",
+      "rationale": "Valid only as a conditional algebra/operation correspondence and missing useful adapter delta. Identical complete records permit induction over identical intersections, kernels and equality classes; matching storage schedules permit equal abstract record memory. No actual EDA implementation, machine-runtime equality, universal duplication or impossibility follows. Require a concrete capability/cost/reliability witness against faithful adapted B++.",
+      "release_id": "SUB-c00a87f1c49c2d945b61ffeb51538575f5c672bf677495595ef34be539daf613",
+      "scope": "All occurrences in included current challenger release; no implicit inherited historical verdict."
+    },
+    {
+      "id": "OBJ-002",
+      "verdict": "valid",
+      "blocking": true,
+      "source_locator": "C304 estimate raw37\u201344; proposal EXP-001R/CLM-612; independent integer calculation",
+      "rationale": "A=(-1,-3,4), B=(-3,-1,4) share WNS=-3,TNS=-4 and violators, but thresholds (-2,-4,0) give margins 1,-1. The fixed guard reduces to a streamed minimum; this does not require dense materialization. Actual or justified prospective interface/retention/latency demand could still establish full-vector utility. No universal absence of users inferred.",
+      "release_id": "SUB-c00a87f1c49c2d945b61ffeb51538575f5c672bf677495595ef34be539daf613",
+      "scope": "All occurrences in included current challenger release; no implicit inherited historical verdict."
+    }
+  ],
+  "claim_checks": [
+    {
+      "id": "CLM-603/609/611",
+      "verdict": "partially_valid",
+      "blocking": true,
+      "source_locator": "C301/C302/C303 locators above; proposal mechanism and closure ledger",
+      "rationale": "Generic mask execution distinction is withdrawn correctly; model/PVT/cell closure matters to both adapters. Conditional soundness is coherent only given complete deterministic operations, FP/tie/report semantics and correct fallback. Selected call-chain audit is not transitive implementation certification; real integration and useful delta remain unverified."
+    },
+    {
+      "id": "CLM-601/610/612",
+      "verdict": "partially_valid",
+      "blocking": true,
+      "source_locator": "C304 estimate/apply; C305 \u00a75.2; S31 baseline raw37\u201354,109\u2013123",
+      "rationale": "Sizing and ideal-clock data-path optimization are real scoped tasks. One local score caller and final baseline reports do not establish the frozen per-candidate endpoint-vector consumer. Historical VT-wide caller interpretation not independently revalidated here and cannot promote readiness."
+    },
+    {
+      "id": "CLM-606 and EXP-006B",
+      "verdict": "partially_valid",
+      "blocking": false,
+      "source_locator": "proposal/experiment-plan finite integer witness; independent three-element calculation",
+      "rationale": "Core guard counterexample and scalar sufficiency independently checked. Reported 512-record run and historical R2 checks remain author-reported bounded evidence, not independently rerun, circuit realizability, FP proof or timing speedup."
+    },
+    {
+      "id": "CLM-608 contest/fidelity",
+      "verdict": "partially_valid",
+      "blocking": true,
+      "source_locator": "C305 \u00a7\u00a75.2\u20135.3; C306 \u00a75; S29 \u00a7III.A\u2013B Eq7\u201311; S31 baseline; C307/C308 official pages",
+      "rationale": "Ideal-clock slice is defensible. Threshold coalescing and ElmoreCeff approximations cannot supply unchanged-kernel byte exactness. 2027 roadmap is not final rules; winner teams/repository links do not verify algorithms. Latest rules, winner methods and wider novelty coverage remain unresolved."
+    },
+    {
+      "id": "CLM-607/headroom/industry gap",
+      "verdict": "valid",
+      "blocking": true,
+      "source_locator": "proposal claim ledger, forecast.json, tasklist.md; current pending consent; owner batch brief",
+      "rationale": "No calibrated reuse/overhead, measured gain, applicable lower bound or production comparison is supplied. Missing compatible adapter/build/rights, named implementer/reproducer, actual allocation and dual agreeing consent prevent readiness. Source reading is permitted; contest resources do not allocate this project resources."
+    },
+    {
+      "id": "CLM-613 parking and drift",
+      "verdict": "valid",
+      "blocking": false,
+      "source_locator": "direction-control.json anchor/penalties; tasklist EXP-PARK and reopen gates",
+      "rationale": "Preserving original mechanism/output while recording negative witness results gives combination_drift=0 and demand_drift=0. Bounded unresolved value/demand supports park, not refutation or joint abandonment. Reopen on both positive witnesses, then resolve correctness/resources/consents."
+    }
+  ],
+  "scientific_state": {
+    "refuted": "Generic executor novelty withdrawn; no universal EDA-system refutation.",
+    "unverified": "Useful adapter delta, full-vector demand, implementation exactness and gain.",
+    "research_worthy": "Conditional hypothesis remains possible; no current sufficient positive witness for selection.",
+    "experiment_ready": false,
+    "demonstrated_useful_eda_gain": false
+  },
+  "reversal_conditions": [
+    "Concrete required capability or cost/reliability delta over faithfully adapted B++ with matched information/memory/adaptation.",
+    "Actual or independently justified prospective consumer of unchanged full-vector contract, comparing streaming/selected-endpoint/sparse queries.",
+    "After both witnesses: complete correctness, build/rights/owners/resources and matching final task-list consents."
+  ]
+}

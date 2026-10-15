@@ -1,0 +1,83 @@
+{
+  "state": "revise_same_problem",
+  "anchor": {
+    "problem": "Repeated scheduling/key/state work when scoring mutually exclusive fixed-topology cell-sizing alternatives from one base checkpoint",
+    "engineering_user": "Timing-optimization developer using a timing engine for candidate selection",
+    "downstream_need": "Obtain identical scoped per-candidate endpoint results and caller decision with lower fully charged iteration cost",
+    "causal_mechanism": "Candidate-membership mask partition refinement across complete deterministic timing operation records, with split on dependency differences and full-output equality coalescence",
+    "mechanism_invariants": [
+      "Same fixed candidate set/base revision and scalar kernels/arithmetic/tie ordering",
+      "Complete observable context including candidate pin-cap/load changes and timing tags; hashes only index full equality",
+      "Disjoint covering candidate masks; no combining alternative edits",
+      "Strong cached incremental/transactional/task-clustered comparison gets the same inputs, memory, batching and reporting",
+      "Unsupported or capped work replays exact original candidate through reference with all costs charged",
+      "Initial exactness is conditional and scoped; real adapter and demand must be established"
+    ],
+    "forbidden_pivots": [
+      "Replace the anchor with generic predict-then-check, agent count, extra trials or model training",
+      "Claim kernel-count superiority over complete-key memoization from the toy",
+      "Count work already skipped by scalar incremental propagation as saved",
+      "Change to a proxy without demonstrated caller decision benefit",
+      "Expand to MCMM/hold/SI/production signoff without explicit proof and coverage audit"
+    ]
+  },
+  "penalties": {
+    "combination_drift": {
+      "score": 0,
+      "rationale": "Identical mask anchor retained with strengthened common-operation/lifetime negative result; no substitute method or invented gain. Merit unresolved is separate from drift.",
+      "evidence_refs": [
+        "CLM-609",
+        "CLM-611",
+        "OBJ-001"
+      ]
+    },
+    "demand_drift": {
+      "score": 0,
+      "rationale": "Frozen full-vector sizing contract retained; prospective smaller-statistic result is adverse evidence, not a change of output or user.",
+      "evidence_refs": [
+        "CLM-612",
+        "OBJ-002"
+      ]
+    },
+    "total": 0
+  },
+  "revision_assessment": {
+    "preserves_problem": true,
+    "preserves_engineering_need": true,
+    "preserves_causal_mechanism": true,
+    "changes": [
+      "Complete bounded adapter read/operation/lifetime witness pass: none found",
+      "Complete prospective consumer/sufficient-statistic test; materialized vector need unresolved",
+      "Reopen favorable scope and adjacent fidelity source; repair actual baseline path",
+      "Recommend parking without joint abandonment or successor"
+    ],
+    "reason": "Concrete negative source/analytical progress preserves the original contract; both witness gates fail advancement."
+  },
+  "abandonment": {
+    "decision_id": null,
+    "grounds": [],
+    "rationale": null,
+    "evidence_refs": [],
+    "consents": {
+      "proposer": {
+        "session_id": null,
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      },
+      "challenger": {
+        "session_id": null,
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      }
+    },
+    "successor_topic_id": null,
+    "resurrection_conditions": [
+      "Concrete caller-required capability or cost/reliability delta beyond faithful EDA-adapted B++ under matched information/memory/adaptation",
+      "Actual or independently justified prospective consumer of unchanged full-vector contract that survives sufficient-smaller-query comparisons",
+      "After BOTH witnesses: full state/FP/recovery, compatible binary, rights, named owners, real allocation and matching task-list consents before experiments"
+    ]
+  },
+  "disposition": "parking_recommended"
+}
