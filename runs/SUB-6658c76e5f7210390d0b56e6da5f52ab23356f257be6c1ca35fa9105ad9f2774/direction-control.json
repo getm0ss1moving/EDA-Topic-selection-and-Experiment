@@ -1,0 +1,95 @@
+{
+  "state": "park_recommended_unresolved",
+  "anchor": {
+    "problem": "Multi-corner (MCMM) static timing analysis cost grows with the number of declared scenarios, and existing reductions save runtime only by skipping scenarios on estimated, empirical, learned or experience-based criteria that cannot guarantee zero missed violations.",
+    "engineering_user": "Timing-closure and signoff engineers (and closure-flow owners) who must obtain timing decisions at every scenario of a declared scenario set during closure iterations and before signoff.",
+    "downstream_need": "The complete decision set of full MCMM analysis of the declared scenario set: every violating (endpoint, scenario, check) triple, exact slacks below a reporting margin M, and WNS/TNS per scenario. It must come with zero missed violations relative to full analysis and with lower end-to-end turnaround.",
+    "causal_mechanism": "Per scenario, an exact clock-network pass plus a cheap data-network bound pass. The bound pass uses only that scenario's own characterized tables and parasitics, and its bounds are sound with respect to the reference engine's delay-calculation semantics. Together they certify (endpoint, scenario, check) triples whose slack lower bound clears M. Exact analysis is then restricted to the fan-in cones of uncertified triples. Decisions equal full analysis by construction; runtime falls because most triples in non-dominant scenarios have margins larger than the bound band.",
+    "mechanism_invariants": [
+      "Zero missed violations relative to full reference analysis of the declared scenario set, by construction under audited soundness properties; never by estimation, calibration or learning",
+      "Exact slack values for every reported triple below the margin M, plus exact WNS/TNS when negative",
+      "No parametric, monotone-in-PVT or learned cross-scenario model; each scenario is bounded from its own characterized data",
+      "Evaluation against the strongest full-MCMM baseline (all scenarios in one pinned OpenSTA run) under equal resources",
+      "One pinned reference engine and delay calculator define soundness; any new calculator needs its own audit"
+    ],
+    "forbidden_pivots": [
+      "Replacing the mechanism with a straightforward combination of prior methods",
+      "Optimizing a proxy without a demonstrated engineering need",
+      "Changing the user or downstream objective to avoid a valid objection",
+      "Replacing sound certificates with estimated cutoffs, learned predictors or calibrated safety margins while keeping a guarantee claim",
+      "Dropping exact refinement and reporting only bounds as if they were slacks",
+      "Redefining success as average slack error or correlation instead of decision equivalence",
+      "Attributing speedup to parallelism or hardware scaling rather than to certification"
+    ]
+  },
+  "penalties": {
+    "combination_drift": {
+      "score": 1,
+      "rationale": "Retain score 1; unchanged causal anchor and diagnostic specialization. No additional nontrivial delta supported, so do not advance or self-clear. Current composition is not promoted as a contribution.",
+      "evidence_refs": [
+        "SRC-H01",
+        "SRC-R22",
+        "SRC-R23",
+        "CLM-044",
+        "CLM-045"
+      ]
+    },
+    "demand_drift": {
+      "score": 0,
+      "rationale": "Same user and full scenario decision objective. Preserve exact WNS, including positive WNS if required by the reference report, rather than silently replacing it with a clipped statistic. Provisional thresholds remain screening targets.",
+      "evidence_refs": [
+        "SRC-P01"
+      ]
+    },
+    "total": 1
+  },
+  "revision_assessment": {
+    "preserves_problem": true,
+    "preserves_engineering_need": true,
+    "preserves_causal_mechanism": true,
+    "changes": [
+      "Retain adjudicated P-RANGE/B1+ null and supply complete transition/cost ledger CLM-047.",
+      "Add bounded primary-method comparison CLM-046 with explicit partial-access limits.",
+      "Instantiate analytical NUM-03 nonfinite classifier prerequisite, CLM-048; no experiment.",
+      "Repair producer/consumer DAG and charge reference/adapter producers before consumers, CLM-049.",
+      "Recommend parking after three substantive nonconvergent rounds; no forced acceptance or unsupported abandonment."
+    ],
+    "reason": "Current explicitly released cycle-2 verifier adjudicates OBJ-001/002 resolved and OBJ-003/004 valid; no new unadjudicated objection is treated as binding."
+  },
+  "anchor_scope_note": "The anchor is preserved verbatim for direction integrity, not endorsed as factual evidence. Its general wording about existing reductions is overbroad; CLM-030 and the prior-art comparison explicitly correct it.",
+  "abandonment": {
+    "decision_id": null,
+    "grounds": [],
+    "rationale": "No supported basis for universal exhaustion or matching abandonment votes. Local composition null warrants parking current specialization. No signature supplied.",
+    "evidence_refs": [],
+    "consents": {
+      "proposer": {
+        "session_id": null,
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      },
+      "challenger": {
+        "session_id": null,
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      }
+    },
+    "successor_topic_id": null,
+    "resurrection_conditions": []
+  },
+  "parking": {
+    "recommended": true,
+    "reason": "Three substantive rounds without supported nontrivial anchored delta or readiness. Owner four-cycle hard-stop batch can finish its final review without experiments.",
+    "resurrection_conditions": [
+      "Supported additional anchored delta and equal-information witness against B1+",
+      "Complete critical prior/winner-method comparison",
+      "Sound enabled-operation and graph/report adapters",
+      "Primary restricted-scope demand and calibrated threshold",
+      "Licensed representative inputs and pinned executable producer locks",
+      "Actual allocation and feasible total cost",
+      "Zero accepted-topic drift and matching same-target task consents plus V checks"
+    ]
+  }
+}

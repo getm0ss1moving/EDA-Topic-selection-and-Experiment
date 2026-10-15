@@ -1,0 +1,6 @@
+source_id,task_formulation,mechanism,data,evaluation,assumptions,limitation,overlap,distinction
+C3-S02,Multicorner reduction,Sample features; dominant corner; estimated non-dominant slacks; object marking,Claim 1 only,No controlled result inspected,Sample-feature transfer,Full method/report safety unverified,Selective path/corner work,PS-02 uses own-table enclosures and exact requested reports
+C3-S03,Parameterized timing,Bound and approximate max within closed bounded function class,Method sections,No results transferred,Efficient extrema and affine closure,Different numeric/report contract,Safe bounds and nonlinear models,Engine operation enclosure unresolved
+C3-S04,Exact worst delay/corner,Incumbent branch and bound; tighter bounds,Official slides,No results transferred,Affine process-delay model,Slides not full engine proof,Bound/prune/refine composition,Full per-scenario OpenSTA outputs differ
+C3-S05,PSTA intra-die variation,Affine delay variation model,First page only,Unavailable,Affine sensitivities,Full method access gap,Parametric timing bounds,Unresolved beyond accessible excerpt
+C3-S09,Commercial-flow timing predictor,Unverified recent-method lead,Metadata only,Unavailable,Unknown,Publisher access failed,Multicorner workflow,No duplication determination

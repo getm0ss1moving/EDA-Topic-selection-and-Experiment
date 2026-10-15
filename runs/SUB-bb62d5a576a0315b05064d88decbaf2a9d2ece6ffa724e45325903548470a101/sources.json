@@ -1,0 +1,146 @@
+[
+  {
+    "id": "C3-S01",
+    "title": "Pinned OpenSTA DmpCeff.cc",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/e01d3f163f483f233db00410b6515a767a6ca03b/dcalc/DmpCeff.cc",
+    "type": "repository",
+    "published": "unknown",
+    "retrieved": "2026-10-15T08:29:46.028352+00:00",
+    "locator": "setCeffAlgorithm and gateModelRd; web lines 1468-1506 and 1551-1568",
+    "access": "full",
+    "limitations": "Local numerical operations, NUM-03; not complete engine proof. Byte hash fetch failed.",
+    "version": "e01d3f163f483f233db00410b6515a767a6ca03b",
+    "license": "Public reading; no full text redistributed",
+    "claims": [
+      "cycle3-comparison"
+    ]
+  },
+  {
+    "id": "C3-S02",
+    "title": "Signoff-safe multi-corner reduction for static timing analysis",
+    "url": "https://patentsgazette.uspto.gov/week27/OG/html/1548-1/US12675622-20260707.html",
+    "type": "official_patent_grant",
+    "published": "2026-07-07",
+    "retrieved": "2026-10-15T08:29:46.028352+00:00",
+    "locator": "Claim 1 and bibliographic header",
+    "access": "full",
+    "limitations": "Full official notice/claim only; full patent not inspected. No deployment/performance or legal inference.",
+    "version": "US12675622B1",
+    "license": "Public reading; no full text redistributed",
+    "claims": [
+      "cycle3-comparison"
+    ]
+  },
+  {
+    "id": "C3-S03",
+    "title": "Parameterized Timing Analysis with General Delay Models and Arbitrary Variation Sources",
+    "url": "https://www.eecg.toronto.edu/~najm/papers/dac08-khaled.pdf",
+    "type": "author_paper",
+    "published": "2008",
+    "retrieved": "2026-10-15T08:29:46.028352+00:00",
+    "locator": "Sections 3, 3.1-3.2 and 4.1; equations 2-12,17",
+    "access": "full",
+    "limitations": "Named method sections checked; no measured performance transferred.",
+    "version": "DAC2008",
+    "license": "Public reading; no full text redistributed",
+    "claims": [
+      "cycle3-comparison"
+    ]
+  },
+  {
+    "id": "C3-S04",
+    "title": "A Unified Multi-Corner Multi-Mode Static Timing Analysis Engine",
+    "url": "https://www.aspdac.com/aspdac2010/Archive_Folder/pdf/8B-2.pdf",
+    "type": "official_author_slides",
+    "published": "2010",
+    "retrieved": "2026-10-15T08:29:46.028352+00:00",
+    "locator": "Slides 15,18,21,23,28,29",
+    "access": "full",
+    "limitations": "Slides not full paper; affine worst-corner objective not precise engine/report equivalence.",
+    "version": "30-slide PDF",
+    "license": "Public reading; no full text redistributed",
+    "claims": [
+      "cycle3-comparison"
+    ]
+  },
+  {
+    "id": "C3-S05",
+    "title": "Handling Intra-Die Variations in PSTA",
+    "url": "https://algos.inesc-id.pt/projects/exachip/ref2.pdf",
+    "type": "author_paper",
+    "published": "2011",
+    "retrieved": "2026-10-15T08:29:46.028352+00:00",
+    "locator": "Indexed first page introduction and section 2.1",
+    "access": "abstract",
+    "limitations": "First-page/indexed excerpt only; PDF open failed. No full-method verification.",
+    "version": "GLSVLSI2011",
+    "license": "Public reading; no full text redistributed",
+    "claims": [
+      "cycle3-comparison"
+    ]
+  },
+  {
+    "id": "C3-S06",
+    "title": "ISPD26 Contest description",
+    "url": "https://www.ispd.cc/contests/26/ISPD26_contest_description.pdf",
+    "type": "official_contest_rules",
+    "published": "unknown",
+    "retrieved": "2026-10-15T08:29:46.028352+00:00",
+    "locator": "Section 2 constraints, PDF page 3; section 3.3.1 metrics",
+    "access": "full",
+    "limitations": "Named scope inspected; no winner implementation or per-asset rights clearance.",
+    "version": "v2.2",
+    "license": "Public reading; no full text redistributed",
+    "claims": [
+      "cycle3-comparison"
+    ]
+  },
+  {
+    "id": "C3-S07",
+    "title": "ISPD26 contest winners",
+    "url": "https://www.ispd.cc/contests/26/index.html",
+    "type": "official_contest_results",
+    "published": "unknown",
+    "retrieved": "2026-10-15T08:29:46.028352+00:00",
+    "locator": "Contest Winners and Resources",
+    "access": "full",
+    "limitations": "Ranks do not establish methods; no performance transfer.",
+    "version": "as accessed",
+    "license": "Public reading; no full text redistributed",
+    "claims": [
+      "cycle3-comparison"
+    ]
+  },
+  {
+    "id": "C3-S08",
+    "title": "ISPD previous contests index",
+    "url": "https://www.ispd.cc/ispd2027/index.php?page=contests",
+    "type": "official_contest_index",
+    "published": "unknown",
+    "retrieved": "2026-10-15T08:29:46.028352+00:00",
+    "locator": "2027 navigation and previous contests list",
+    "access": "metadata",
+    "limitations": "Search-indexed page only; navigation does not establish final 2027 rules.",
+    "version": "as indexed",
+    "license": "Public reading; no full text redistributed",
+    "claims": [
+      "cycle3-comparison"
+    ]
+  },
+  {
+    "id": "C3-S09",
+    "title": "FACT: Fast and Accurate Multi-Corner Predictor for Timing Closure in Commercial EDA Flows",
+    "url": "https://dl.acm.org/doi/10.1145/3768166",
+    "type": "publisher_lead",
+    "published": "2026",
+    "retrieved": "2026-10-15T08:29:46.028352+00:00",
+    "locator": "DOI; DBLP journals/todaes/XuHWGYS26 bibliography",
+    "access": "metadata",
+    "limitations": "Publisher open failed; DBLP metadata observed at https://dblp.org/rec/journals/todaes/XuHWGYS26.html. No scientific claim based on unavailable method.",
+    "version": "TODAES31(4)68",
+    "license": "Public reading; no full text redistributed",
+    "claims": [
+      "cycle3-comparison"
+    ]
+  }
+]

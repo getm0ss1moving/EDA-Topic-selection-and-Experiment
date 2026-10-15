@@ -1,0 +1,133 @@
+{
+  "schema": 1,
+  "manifest_author": "coordinator transport reconstruction from immutable released records",
+  "not_an_actor_authored_original": true,
+  "scientific_content_unchanged": true,
+  "role_release": "SUB-a806c4dc87a5851aa442cab252006b29abb325ead730688f609e5187446cf7da",
+  "input_commit": "a48f03d4bc254c0b0957d0fe0f265e072d6cf49a",
+  "public_input_ref": "refs/tags/codex/gpt-four-rounds-source-20261015",
+  "role_reported_run_record": {
+    "actor_id": "ChatGPT-P05-TIMING",
+    "session_id": "6a1a1207-fcda-4f17-ab1e-c5d41539718b",
+    "input_commit": "a48f03d4bc254c0b0957d0fe0f265e072d6cf49a",
+    "packet_sha256": "bd4911a04b3d7666d4304e869c785e479bbb5b5d9434f6fc18e777a6d9fe0fcb",
+    "retrieved_at_utc": "2026-10-15T07:48:27.351742+00:00",
+    "sources": "sources.json; search-log.md",
+    "output_paths": [
+      "release/contest-audit.md",
+      "release/direction-control.json",
+      "release/experiment-plan.md",
+      "release/forecast.json",
+      "release/industry-gap.md",
+      "release/prior-art.csv",
+      "release/proposal.md",
+      "release/responses.md",
+      "release/search-log.md",
+      "release/sources.json",
+      "release/tasklist.md",
+      "release/workflow.json"
+    ],
+    "checks": [
+      "Trusted verify succeeded for own previous proposer and both explicitly released shared input manifests",
+      "JSON/CSV/cross-reference/anchor checks and trusted freeze validation; see runs/P05-CYCLE2-20261015/manifest.json"
+    ],
+    "full_repository_validation": "Not run: assigned standalone packet lacks full repository. Coordinator runs publication validation; no checkout browsing.",
+    "experiments": "None. Source retrieval, symbolic reasoning and local release structural checks only.",
+    "private_scratch": "Outside checkout; no private originals included in release",
+    "foreign_private_material_read": false,
+    "review_unblinded": true,
+    "requested_model": "gpt-6.1-sol",
+    "requested_effort": "high",
+    "backend_identity": "not independently attested",
+    "fallback_used": false
+  },
+  "job_snapshot": {
+    "actor_id": "ChatGPT-P05-TIMING",
+    "batch_round": 2,
+    "batch_round_limit": 4,
+    "domain": "D05",
+    "input_commit": "a48f03d4bc254c0b0957d0fe0f265e072d6cf49a",
+    "models": {
+      "challenger": {
+        "effort": "low",
+        "model": "gpt-6-astra"
+      },
+      "proposer": {
+        "effort": "high",
+        "model": "gpt-6.1-sol"
+      },
+      "verifier": {
+        "effort": "low",
+        "model": "gpt-6.1-sol"
+      }
+    },
+    "packet_sha256": "bd4911a04b3d7666d4304e869c785e479bbb5b5d9434f6fc18e777a6d9fe0fcb",
+    "phase": "research",
+    "previous_proposal_release": "SUB-798cbd734b7b9b36d5460af3487a6b0400e1c6e6b7aabb6c576d5a6ecdef0974",
+    "readiness": "logical seat registered; actual host model is recorded by the execution backend",
+    "released_inputs": [
+      "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Four-Rounds-20261015/EDA-0002/ChatGPT-P05-TIMING/jobs/a8348e58-bf19-4b50-ac87-d8ebd35d6079/shared/SUB-48d08a36a7ff2ace364227ede380e0feab8f10f0477e3731a1b0379238275671",
+      "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Four-Rounds-20261015/EDA-0002/ChatGPT-P05-TIMING/jobs/a8348e58-bf19-4b50-ac87-d8ebd35d6079/shared/SUB-d4efe5f9b29cc9ce2f4f5db2b7da7c3aa1931b9ccd604d15d77e97ef94bc18f3"
+    ],
+    "role": "proposer",
+    "round": 1,
+    "session_id": "6a1a1207-fcda-4f17-ab1e-c5d41539718b",
+    "topic": "EDA-0002"
+  },
+  "prompt_sha256": "27a5bed0ae0c5f82bc1faa3fca5587268164b7483fd6ea9fb1683adfcc916402",
+  "published_outputs": {
+    "sources.json": {
+      "path": "runs/SUB-a806c4dc87a5851aa442cab252006b29abb325ead730688f609e5187446cf7da/sources.json",
+      "sha256": "4f339d36ab5160f49c230e057a3dadaefd7a2f945840e274e6e4bab7fcf9203e"
+    },
+    "workflow.json": {
+      "path": "runs/SUB-a806c4dc87a5851aa442cab252006b29abb325ead730688f609e5187446cf7da/workflow.json",
+      "sha256": "401ec002be31f36aaaff0e885bf670f1546a0396c952840efa9d00233ffa8018"
+    },
+    "tasklist.md": {
+      "path": "runs/SUB-a806c4dc87a5851aa442cab252006b29abb325ead730688f609e5187446cf7da/tasklist.md",
+      "sha256": "b166cb871081bc3241c6885036263eae45858d3f453d85f73e44279c2cb6e572"
+    },
+    "search-log.md": {
+      "path": "runs/SUB-a806c4dc87a5851aa442cab252006b29abb325ead730688f609e5187446cf7da/search-log.md",
+      "sha256": "4eca73ac9effe4f6e6a23b1aedd5315b91bcb1e708019d8cf5a31f298d18bc13"
+    },
+    "prior-art.csv": {
+      "path": "runs/SUB-a806c4dc87a5851aa442cab252006b29abb325ead730688f609e5187446cf7da/prior-art.csv",
+      "sha256": "9c7a755e7dce10678e1a529a776a880d8f8bcc32e2f87287f3161b1ff258c9a9"
+    },
+    "industry-gap.md": {
+      "path": "runs/SUB-a806c4dc87a5851aa442cab252006b29abb325ead730688f609e5187446cf7da/industry-gap.md",
+      "sha256": "bb0d7eae31021247fe64b354979855f61b0bcf4c4efe8395885b4303198e4207"
+    },
+    "responses.md": {
+      "path": "runs/SUB-a806c4dc87a5851aa442cab252006b29abb325ead730688f609e5187446cf7da/responses.md",
+      "sha256": "e0f091876fce68cd4392d0542bf3aee96499c9f7cc75fb3c5807bfa01effafd8"
+    },
+    "SUBMISSION.json": {
+      "path": "runs/SUB-a806c4dc87a5851aa442cab252006b29abb325ead730688f609e5187446cf7da/SUBMISSION.json",
+      "sha256": "a806c4dc87a5851aa442cab252006b29abb325ead730688f609e5187446cf7da"
+    },
+    "forecast.json": {
+      "path": "runs/SUB-a806c4dc87a5851aa442cab252006b29abb325ead730688f609e5187446cf7da/forecast.json",
+      "sha256": "e2f767916c01ee656894adad5c5a1562e606aae5d9646342f7ad77ed0538dccc"
+    },
+    "proposal.md": {
+      "path": "runs/SUB-a806c4dc87a5851aa442cab252006b29abb325ead730688f609e5187446cf7da/proposal.md",
+      "sha256": "b4d6d61220793d49492da58b5d29c8f22a5ea9118116950672c4eea5150caa34"
+    },
+    "direction-control.json": {
+      "path": "runs/SUB-a806c4dc87a5851aa442cab252006b29abb325ead730688f609e5187446cf7da/direction-control.json",
+      "sha256": "97c44f71f903ea7c947776dfb224e3d65f866346ac2f053851683e2dfc1d9281"
+    },
+    "experiment-plan.md": {
+      "path": "runs/SUB-a806c4dc87a5851aa442cab252006b29abb325ead730688f609e5187446cf7da/experiment-plan.md",
+      "sha256": "7f36b71e634e446f608dc6488de413719454127ae8fcb9cd252e91280d41eba5"
+    },
+    "contest-audit.md": {
+      "path": "runs/SUB-a806c4dc87a5851aa442cab252006b29abb325ead730688f609e5187446cf7da/contest-audit.md",
+      "sha256": "f3c0c6a4be0e545dcd5b7c7a212cd5c1c3e3aec2236d3c9d744a2d6b6cf135f5"
+    }
+  },
+  "check_limit": "Source/output hashes are inspectable; role-reported source access and checks are not independently certified by this transport manifest. No experiment or scientific consent is added."
+}
