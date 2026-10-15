@@ -1,0 +1,20 @@
+{
+  "actor_id": "ChatGPT-C04-PHYSICAL-B03-EDA-0008",
+  "files": {
+    "challenges.md": "33a53a2fe6345f44c0af8f9eb900f770cd6fbcca263b7cad2697d97070b4de63",
+    "compliance.json": "1163f10febad542b7bef5990ec98aa6e2c3752386506f14a15802028121a5e47",
+    "experiment-consent.json": "6bb3a88c997b9cd521636c934dba80173b5316312ee982b88f9a4732818849cb",
+    "independent-estimate.md": "65475fa9d91a79a9dc7c0695a83f643679344f3816a4afc9d605d7cfc62f9039",
+    "prior-art.csv": "dde2a044150874e7b4a1399e420361e1817d77f72293d558479b10096d9baefa",
+    "search-log.md": "e5ef192afa55b42ca0da9cc19d0ec637fc328e8e1f1cbc7fabec311cbafde3ed",
+    "sources.json": "14954a64c725ff975038dd9dc5737d50659b218c0f8902f8bfed2de1f46d3608",
+    "tasklist.md": "96e715816d1163099f2fdde86a3924f6e19eee7ab535dfec6e062df7abaa74fa",
+    "workflow.json": "179d754bd04a55ad5fcbf28d2624cb0d4c885750e8f133da5971fdfa30de07d7"
+  },
+  "input_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+  "packet_sha256": "48d40bb5ac63cd51e5b07f3150ce125e6f8e58660ee28c13c5cb0d811f4c3935",
+  "role": "challenger",
+  "schema": 1,
+  "session_id": "94045552-61ca-4bb4-a950-c6de444a88ed",
+  "topic": "EDA-0008"
+}

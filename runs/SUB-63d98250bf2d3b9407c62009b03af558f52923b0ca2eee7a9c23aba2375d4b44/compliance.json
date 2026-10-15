@@ -1,0 +1,175 @@
+{
+  "schema": 1,
+  "role": "challenger",
+  "actor_id": "ChatGPT-C04-PHYSICAL-B03-EDA-0008",
+  "session_id": "94045552-61ca-4bb4-a950-c6de444a88ed",
+  "input_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+  "packet_sha256": "48d40bb5ac63cd51e5b07f3150ce125e6f8e58660ee28c13c5cb0d811f4c3935",
+  "job_id": "be04d547-6721-465d-9e44-a4b5103b9a4b",
+  "read_releases": [
+    "SUB-871f669003b3f9e0bf3e000e214a1d897e997cb043492f7a9e31a7404d85917c",
+    "SUB-15651a51979be07b769426268a585dc32c570cdabcb357ce6d8f29e9d29e3588",
+    "SUB-34b826d7ab2de0ad0bae65f70fbe2a9aeea2f918b483e43265dbec790ddd0b47"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0,
+    "source_downloads": [
+      "C301",
+      "C304"
+    ],
+    "analytical_runs": 1,
+    "forecast_exposure": "unblinded proposal/response prose; forecast.json not directly opened",
+    "checkout_access_explanation": "none; all executed command workdirs in assigned job"
+  },
+  "rules": {
+    "inputs": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md",
+        "challenges.md",
+        "JOB.json",
+        "runs/activity.json"
+      ],
+      "limits": "Only assigned released scientific files; earlier multi-file output truncated, critical current sections reread. Own prior/predecessor contents not read."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md",
+        "challenges.md",
+        "JOB.json",
+        "runs/activity.json"
+      ],
+      "limits": "Self-report is not adversarial OS confinement or backend-model attestation. Assignment messages contained task metadata/domain clarification, not foreign scientific findings."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md",
+        "challenges.md",
+        "JOB.json",
+        "runs/activity.json"
+      ],
+      "limits": "Only own job scratch/runs/release/submissions/result; no checkout or foreign output edits."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md",
+        "challenges.md",
+        "JOB.json",
+        "runs/activity.json"
+      ],
+      "limits": "Selected-method coverage; C303 full access failed; winner methods not inspected."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md",
+        "challenges.md",
+        "JOB.json",
+        "runs/activity.json"
+      ],
+      "limits": "Own scalar algebra is not chip measurement; no gain/novelty/independent approval claimed."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md",
+        "challenges.md",
+        "JOB.json",
+        "runs/activity.json"
+      ],
+      "limits": "Only own pending exact-target binding, no agree or abandonment."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md",
+        "challenges.md",
+        "JOB.json",
+        "runs/activity.json"
+      ],
+      "limits": "Public reading and tiny Python scalar test only; no builds/EDA/training/remote allocation."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md",
+        "challenges.md",
+        "JOB.json",
+        "runs/activity.json"
+      ],
+      "limits": "Zero drift is scoped to retained current/predecessor released anchor, not scientific merit."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md",
+        "challenges.md",
+        "JOB.json",
+        "runs/activity.json"
+      ],
+      "limits": "Trusted freeze/verify only; full-repository validation and PR transport delegated by contract to coordinator."
+    }
+  },
+  "operations": [
+    {
+      "operation": "read_job_policies_harness",
+      "paths": [
+        "JOB.json",
+        "prompt.txt",
+        "policy/docs/",
+        "policy/harness/CHALLENGER.md",
+        "policy/AGENTS.md"
+      ],
+      "note": "Core/common docs and own harness read before discovery; policy AGENTS opened later repeats supplied contract."
+    },
+    {
+      "operation": "released_file_review",
+      "releases": [
+        "SUB-871f669003b3f9e0bf3e000e214a1d897e997cb043492f7a9e31a7404d85917c",
+        "SUB-15651a51979be07b769426268a585dc32c570cdabcb357ce6d8f29e9d29e3588",
+        "SUB-34b826d7ab2de0ad0bae65f70fbe2a9aeea2f918b483e43265dbec790ddd0b47"
+      ],
+      "note": "Selected source/proposal/task/response/manifest/verification/compliance files. No other private content."
+    },
+    {
+      "operation": "public_source_search_and_fetch",
+      "reference": "search-log.md and sources.json"
+    },
+    {
+      "operation": "tiny_scalar_check",
+      "paths": [
+        "scratch/check.py",
+        "runs/analytic-result.json"
+      ]
+    },
+    {
+      "operation": "write_and_self_freeze",
+      "paths": [
+        "release/",
+        "runs/activity.json",
+        "submissions/",
+        "result.json"
+      ],
+      "note": "Freeze/verify outcome recorded after execution."
+    }
+  ],
+  "incidents": [
+    {
+      "id": "INC-C03-001",
+      "rule": "inputs",
+      "severity": "noncritical",
+      "description": "Assignment continuation reports an earlier platform error/interrupted attempt. No completed or approved prior work is claimed. No earlier partial artifacts were present in release when listed. This execution cannot independently attest the cause or unseen preceding activity.",
+      "action": "Preserve disclosure; complete same benign academic EDA review under original boundaries."
+    }
+  ],
+  "observability": "Self-authored public activity ledger, not a complete tool trace or evidence of absent undisclosed actions."
+}

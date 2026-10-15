@@ -1,0 +1,116 @@
+{
+  "schema": 1,
+  "role": "verifier",
+  "actor_id": "ChatGPT-V04-PHYSICAL-B03-EDA-0008",
+  "session_id": "370f04ea-8378-4c1f-ab83-2fa830453d13",
+  "input_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+  "packet_sha256": "d5dd4815d595e6eca62ed6640e0a91f111ead1203b0ebd491e738f112f851963",
+  "job_id": "29f37c72-2e69-44b5-96a1-caa4200409be",
+  "read_releases": [
+    "SUB-871f669003b3f9e0bf3e000e214a1d897e997cb043492f7a9e31a7404d85917c",
+    "SUB-63d98250bf2d3b9407c62009b03af558f52923b0ca2eee7a9c23aba2375d4b44"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0,
+    "checkout_access_explanation": "Initial supplied user context named checkout and instructions; no checkout filesystem or git access performed. All shell cwd values explicitly use this standalone job."
+  },
+  "rules": {
+    "inputs": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "prompt.txt",
+        "policy/docs",
+        "policy/harness/VERIFIER.md",
+        "shared/SUB-871f669003b3f9e0bf3e000e214a1d897e997cb043492f7a9e31a7404d85917c",
+        "shared/SUB-63d98250bf2d3b9407c62009b03af558f52923b0ca2eee7a9c23aba2375d4b44"
+      ],
+      "limits": "Self-authored observable activity only; not evidence of absent undisclosed actions or OS/backend attestation."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "Assigned JOB allowlist",
+        "verification.json logical_identity_check"
+      ],
+      "limits": "Self-authored observable activity only; not evidence of absent undisclosed actions or OS/backend attestation."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "release/verification.md",
+        "release/verification.json",
+        "release/workflow.json",
+        "release/compliance.json",
+        "scratch/",
+        "submissions/",
+        "result.json"
+      ],
+      "limits": "Self-authored observable activity only; not evidence of absent undisclosed actions or OS/backend attestation."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json source_checks and search_log"
+      ],
+      "limits": "Self-authored observable activity only; not evidence of absent undisclosed actions or OS/backend attestation."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json analytical_check and limitations",
+        "verification.md gate table"
+      ],
+      "limits": "Self-authored observable activity only; not evidence of absent undisclosed actions or OS/backend attestation."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json consent_sessions/tasklist_sha256",
+        "both released experiment-consent.json pending"
+      ],
+      "limits": "Self-authored observable activity only; not evidence of absent undisclosed actions or OS/backend attestation."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json batch brief",
+        "verification.json analytical_check"
+      ],
+      "limits": "Self-authored observable activity only; not evidence of absent undisclosed actions or OS/backend attestation."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json direction_penalties",
+        "shared/SUB-871f669003b3f9e0bf3e000e214a1d897e997cb043492f7a9e31a7404d85917c/direction-control.json"
+      ],
+      "limits": "Self-authored observable activity only; not evidence of absent undisclosed actions or OS/backend attestation."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "prompt self-freeze command",
+        "trusted policy/scripts/role_submission.py freeze; coordinator handles PR"
+      ],
+      "limits": "Self-authored observable activity only; not evidence of absent undisclosed actions or OS/backend attestation."
+    }
+  },
+  "operations": [
+    "Read JOB/prompt, supplied common policies and only verifier harness before discovery. Listed only own job policy/shared files.",
+    "Read current explicitly released proposer/challenger files; prior/audit releases listed in JOB were not opened. Manifest hashes mechanically checked by trusted verify.",
+    "Primary public web/source retrieval and selected PDF/text reading: verification.json V301-V308; direct FlowSynth TLS/web failure followed by successful indexed primary PDF reading.",
+    "Wrote/ran tiny own stdlib check for masks, weighted quadratic/gradients, ReLU witness and finite-set regret; no downloaded code executed.",
+    "Trusted project.py digest computed on exact released proposer directory. Full repository validation deferred per standalone prompt.",
+    "Wrote role-owned release and ledger; trusted self-freeze and post-freeze result.json. No GitHub publication, approval or merge."
+  ],
+  "incidents": [],
+  "observability": "Self-authored public activity ledger, not a complete tool trace or evidence of absent undisclosed actions.",
+  "historical_disclosure_handling": "Released proposal explicitly retains historical common-policy checkout exposure and source access limits. They are not erased, reassigned to this job, or treated as fresh independent verification."
+}

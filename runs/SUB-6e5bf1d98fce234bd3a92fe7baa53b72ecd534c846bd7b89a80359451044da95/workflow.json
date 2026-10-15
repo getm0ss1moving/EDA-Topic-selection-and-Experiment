@@ -1,0 +1,9 @@
+{
+  "role": "verifier",
+  "reviewed_proposer_release": "SUB-871f669003b3f9e0bf3e000e214a1d897e997cb043492f7a9e31a7404d85917c",
+  "adjudicated_challenger_releases": [
+    "SUB-63d98250bf2d3b9407c62009b03af558f52923b0ca2eee7a9c23aba2375d4b44"
+  ],
+  "next_action": "park",
+  "reason": "Third-cycle unresolved novelty/utility/readiness; retain conditional hypothesis and concrete reopening tests; no abandonment or experiment approval."
+}

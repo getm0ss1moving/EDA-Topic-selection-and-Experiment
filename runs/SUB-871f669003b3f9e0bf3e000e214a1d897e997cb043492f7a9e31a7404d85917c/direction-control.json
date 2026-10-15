@@ -1,0 +1,98 @@
+{
+  "state": "continue",
+  "anchor": {
+    "problem": "Select useful order of one width-changing resize and one distinct-cell relocation at legal pre-CTS placement, including per-primitive legalization externalities.",
+    "engineering_user": "Physical implementation engineer deciding the next paired post-placement optimization attempt.",
+    "downstream_need": "Legal equivalent routable post-DR outcome with useful setup/PPA quality per complete iteration cost.",
+    "causal_mechanism": "Predict symmetric joint residual and antisymmetric two-order contrast from current state and frozen intents; communicate to timing/congestion proposal specialists; rank scoped real-tool rollouts and accept only realized checked incumbents.",
+    "mechanism_invariants": [
+      "Exactly two typed edits per pair, single declared PVT and ideal-clock pre-CTS checkpoint",
+      "Action intents frozen at initial state; actual global returned geometry recorded after each legalization",
+      "Only initial deployable features; no untried-order or future-route labels at inference",
+      "Direct same-data nonlinear and conventional adaptive/lookahead baselines; central identical-model equivalence control",
+      "Charge labels training proposals model/tool calls failures restores final suffix; KEEP/FAIL/UNKNOWN explicit",
+      "No claim of multi-agent necessity, new expressivity, exact prediction or global physical optimality"
+    ],
+    "forbidden_pivots": [
+      "Reverting to predecessor hold-repair matching/table admission under this ID",
+      "Generic stage scripting checkpoint reuse transaction support or joint QoR heads as the contribution",
+      "Adding more agents inputs labels compute or a larger model to conceal failed contrast utility",
+      "Switching downstream demand to isolated prediction MSE or HPWL",
+      "Post-CTS hold/multi-corner/IR/signoff guarantee without new evidence and review"
+    ]
+  },
+  "penalties": {
+    "combination_drift": {
+      "score": 0,
+      "rationale": "Same restricted residual/two-order mechanism. Current source comparison and margin/regret diagnostics clarify falsification without adding a bypass head, agent count or replacement mechanism.",
+      "evidence_refs": [
+        "proposal.md: CLM-023/024",
+        "experiment-plan.md: current diagnostic/comparator lock",
+        "responses.md: current ruling response"
+      ]
+    },
+    "demand_drift": {
+      "score": 0,
+      "rationale": "Same pre-CTS physical user and legal/equivalent post-DR/full-cost endpoint; rank statistics and adjacent macro work are explicitly not success endpoints.",
+      "evidence_refs": [
+        "industry-gap.md",
+        "EXP-003",
+        "EXP-007"
+      ]
+    },
+    "total": 0
+  },
+  "revision_assessment": {
+    "preserves_problem": true,
+    "preserves_engineering_need": true,
+    "preserves_causal_mechanism": true,
+    "changes": [
+      "Independently map selected R15 full methods",
+      "Add decision-sensitive finite-table lemma/check and locked diagnostics",
+      "Pin R20 official native script and inspect new R19 adjacent-stage methods",
+      "Retain all previous masks/loss/process/gate repairs and current unresolved prerequisites"
+    ],
+    "reason": "Third additional cycle: source/analytical repair only. No different operator/stage/need or unconditional novelty/performance claim."
+  },
+  "abandonment": {
+    "decision_id": null,
+    "grounds": [],
+    "rationale": null,
+    "evidence_refs": [],
+    "consents": {
+      "proposer": {
+        "session_id": null,
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      },
+      "challenger": {
+        "session_id": null,
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      }
+    },
+    "successor_topic_id": null,
+    "resurrection_conditions": [
+      "Original-method/code overlap audit beyond output archives",
+      "Physical order incidence and rank-prior diagnostics above repeat noise",
+      "Strong direct/generic-low-rank full-cost downstream comparison",
+      "Actual allocated phases, rights/oracles/thresholds and matching consents"
+    ]
+  },
+  "batch_disposition": {
+    "batch_round": 3,
+    "if_no_convergence_after_matching_cycle": "park",
+    "joint_abandonment": false,
+    "successor_requires_new_id": true,
+    "remaining_domain_cycle_count": 1,
+    "unresolved_questions": [
+      "original winner methods/code",
+      "reproducible conventional joint-selection comparison",
+      "physical decision-sensitive order/rank incidence",
+      "post-DR full-cost utility",
+      "actual rights/resources/oracles/thresholds and matching consents"
+    ]
+  }
+}

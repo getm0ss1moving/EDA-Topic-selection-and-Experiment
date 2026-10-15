@@ -1,0 +1,7 @@
+{
+  "session_id": "94045552-61ca-4bb4-a950-c6de444a88ed",
+  "decision": "pending",
+  "signed_revision": "SUB-871f669003b3f9e0bf3e000e214a1d897e997cb043492f7a9e31a7404d85917c",
+  "tasklist_sha256": "a07da308b26933acd33eba1e3bf4804e49327d22371fe17b952cc8b075c4fc8b",
+  "rationale": "Review target binding only, not agreement. Physical dependencies, rights/resources/oracle/threshold phase locks and conventional implementation unresolved. Preserve C-T301 final-state provenance in adapter contract; no execution authorization or abandonment vote."
+}
