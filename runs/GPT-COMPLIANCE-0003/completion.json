@@ -1,0 +1,116 @@
+{
+  "batch": "GPT-COMPLIANCE-0003",
+  "completed_at_utc": "2026-10-15T16:14:57.454380+00:00",
+  "status": "complete_at_four_additional_cycles_per_domain_with_parked_topics_and_unresolved_followups",
+  "source_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+  "additional_complete_cycles": {
+    "D04": 4,
+    "D05": 4
+  },
+  "valid_scientific_outputs": 24,
+  "independent_protocol_audits": 8,
+  "merged_round_prs": [
+    "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/63",
+    "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/60",
+    "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/59",
+    "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/66",
+    "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/62",
+    "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/64",
+    "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/67",
+    "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/65"
+  ],
+  "current_rule_cells": {
+    "scientific_role_rows": 24,
+    "rule_cells": 216,
+    "cell_status_counts": {
+      "no_violation_found_within_scope": 209,
+      "supported_deviation": 7,
+      "unresolved": 0
+    },
+    "aborted_metadata_only": {
+      "role_rows": 2,
+      "rule_cells": 18,
+      "cell_status_counts": {
+        "no_violation_found_within_scope": 1,
+        "supported_deviation": 2,
+        "unresolved": 15
+      },
+      "excluded_from_valid_cycle_counts": true
+    },
+    "overall_unresolved_audits": [
+      "SUB-1d755d147fde917e19455a455a3a1020947212f4a552695d4df0ffbd05fbf9b0"
+    ],
+    "scope": "Counts transcribe independent reviewer cells; a deviation is not necessarily material contamination. N is evidence-bounded and does not certify hidden actions."
+  },
+  "scientific_outcome": {
+    "selected_for_pilot": 0,
+    "joint_abandonments": 0,
+    "new_physical_experiments": 0,
+    "topic_states": {
+      "EDA-0007": {
+        "domain": "D05",
+        "last_scientific_decision": "park",
+        "phase": "verifier",
+        "round": 3,
+        "status": "parked"
+      },
+      "EDA-0008": {
+        "domain": "D04",
+        "last_scientific_decision": "park",
+        "phase": "verifier",
+        "round": 3,
+        "status": "parked"
+      },
+      "EDA-0009": {
+        "domain": "D04",
+        "last_scientific_decision": "park",
+        "phase": "verifier",
+        "round": 1,
+        "status": "stopped_after_round_limit"
+      },
+      "EDA-0010": {
+        "domain": "D05",
+        "last_scientific_decision": "park",
+        "phase": "verifier",
+        "round": 1,
+        "status": "stopped_after_round_limit"
+      }
+    }
+  },
+  "limits": [
+    "A finite completed batch, not a live daemon; no fifth scientific cycle or new role spawned after the cap.",
+    "N cells are evidence-bounded; final audit remains overall unresolved for old metadata-only coverage.",
+    "Two late PR67 source/analytical traceability allegations remain open, unadjudicated and cannot be dismissed by the earlier N cells.",
+    "The coordinator broad-search disclosure is retained without an invented independent clearance.",
+    "No new EDA/build/training/GPU/remote/paid-API experiment allocation, calibrated physical performance forecast, universal novelty proof or hidden-action/backend attestation.",
+    "Thirty-two valid jobs plus recorded invalid/mechanical/backend retries do not equal thirty-two total inference calls or a verified token/cost total."
+  ],
+  "reports": {
+    "owner_chinese": "reports/final/GPT-COMPLIANCE-0003.zh-CN.md",
+    "conduct_english": "reports/final/GPT-COMPLIANCE-0003.conduct.en.md"
+  },
+  "evidence_sha256": {
+    "release-audit.json": "76474e933e64fc5a6ed0382ba4a58c2197735c4d83eef08de95b2b25802317f2",
+    "stop-check.json": "1baa894cb79c2c91aac3f7abc181ecb0d9745fd67b7a056dfb38191c64172762",
+    "publication-audit.json": "212b0196858946b9855b4a2e8ee25d131e6365ec1f8da3c7cd10ed672c5a71e8",
+    "publication-receipts.json": "851af45984ee84ff9b2b3165d96beaef55f198ff7fbd89421b6761bb35e06fca",
+    "public-source-recheck.json": "313f7eb12fde9aa2153c989f73b587c486de66df7d19b5a835507c0de009d2cc",
+    "conduct-counts.json": "5125e643ac093170161e65c35e8601edbbb23cc16fa74f7232e14f2de76d5cef",
+    "role-compliance-index.json": "d47a5f3ec86ef31d57dca0d9a5b78bd30d11f7d2469a3e27e6e46840cc57c174",
+    "topic-index.json": "06fa88810ed31bf0fa84cfb013f629013cf10ad6e7f84088e58cef467a0ec290",
+    "aborted-review-request.json": "3ead05698e24860720127fae661e98859d4a08422d5fd05fc1c0769edfaefc92",
+    "public-review-followups.json": "a1542aa11dafdc8cabb1ae04b4cdd009f0555df918b4d45d81b1e97798be89c4",
+    "validation.json": "2d08d0f5a588fbf7f6cb874c33c05afbfe4e07c65a978f81500f6341daf1e16a",
+    "coordinator-disclosures.json": "d88e1a1c4435b0bd6ef888a243529aaf502c797848ea8c13f8eb477503a6c7a5"
+  },
+  "final_checks": {
+    "project_validate": "passed",
+    "coordinator_unittests": {
+      "passed": 135,
+      "record": "validation.json"
+    },
+    "batch_helpers_py_compile": "passed",
+    "git_diff_check": "passed",
+    "frozen_bytes_public_clone": "passed_with_explicit_open_scientific_followups"
+  }
+}

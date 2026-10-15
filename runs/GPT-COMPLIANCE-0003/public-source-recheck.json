@@ -1,0 +1,12 @@
+{
+  "checked_at_utc": "2026-10-15T16:08:50.850941+00:00",
+  "source_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+  "source_refs": "b1bb69f62b089c3489eaf17dea34daae84af315c\trefs/heads/codex/gpt-compliance-source-20261015\nb1bb69f62b089c3489eaf17dea34daae84af315c\trefs/tags/codex/gpt-compliance-source-20261015",
+  "ordinary_public_clone": true,
+  "shallow": false,
+  "main_head": "b9ec00c59423f3b728c78b8f4fcf20f07d66614a",
+  "source_tree": "b3b86933ece17a77c8bafbc148966f2ded691486",
+  "source_charter_blob": "c5fadc907ab2070bf5a40f4a3d2358d7f8a56af6",
+  "result": "source object reachable without private ref or immutable identity rewrite",
+  "scope": "Public source provenance only, not scientific confirmation."
+}

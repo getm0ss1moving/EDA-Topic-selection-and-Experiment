@@ -1,0 +1,73 @@
+{
+  "scope": "Coordinator infrastructure, not an independent scientific or hidden-action audit",
+  "setup_pr": {
+    "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/55",
+    "state": "MERGED"
+  },
+  "followup_pr": {
+    "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/56",
+    "state": "MERGED",
+    "tests": 128
+  },
+  "findings": [
+    {
+      "thread": "PRRT_kwDOVElOAM6sypZ8",
+      "issue": "ProtocolViolation entered mechanical repair path",
+      "resolution": "Persist frozen attempts and incident, quarantine execution; no same-job resubmission after disclosure deletion",
+      "status": "resolved"
+    },
+    {
+      "thread": "PRRT_kwDOVElOAM6sypaK",
+      "issue": "Blocking audit could redispatch completed review without replacement",
+      "resolution": "Quarantine and remove tainted triple, recover fresh full-cycle identities from clean checkpoint, fresh audit; invalid cycle not counted",
+      "status": "resolved"
+    },
+    {
+      "thread": "PRRT_kwDOVElOAM6sy-zX",
+      "issue": "Terminal accept/abandon guard ran before blocking-audit quarantine",
+      "resolution": "Persist blocking audit and quarantine before terminal decision disposition check",
+      "status": "resolved"
+    },
+    {
+      "thread": "PRRT_kwDOVElOAM6sy-zh",
+      "issue": "Older in-flight review phases lacked clean checkpoints",
+      "resolution": "Reconstruct from verified released history for all review phases; persist fail-closed quarantine even if reconstruction unavailable",
+      "status": "resolved"
+    },
+    {
+      "issue": "Copied consent target omitted from receiving JOB allowlist",
+      "resolution": "Every copied proposer consent target is enumerated; metadata retained for independent audit; fresh full-cycle replacement",
+      "status": "transport_fixed_and_independently_adjudicated_with_explicit_limits",
+      "independent_review": "runs/SUB-573a2812a0f0eb6551328cf55dc2994ad483dbe36cd866830b34f06dd959ff52/verification.json",
+      "residual": "Original shared-input ambiguity and metadata-only unknowns retained; no private exposure established."
+    },
+    {
+      "issue": "Public conduct audit could not reopen exact local JOB descriptor",
+      "resolution": "Publish exact descriptor copies with hash map; backfill first rounds",
+      "status": "resolved"
+    }
+  ],
+  "scientific_input_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+  "scientific_policy_changed": false,
+  "boundary_followup_pr": {
+    "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/57",
+    "state": "MERGED",
+    "tests": 131
+  },
+  "checkpoint_followup_pr": {
+    "mergeCommit": {
+      "oid": "65fa6fe8356043f4de8cf409b273a9dbc728711c"
+    },
+    "state": "MERGED",
+    "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/58",
+    "tests": 133
+  },
+  "reopenable_evidence_pr": {
+    "mergeCommit": {
+      "oid": "cf489fe7e82678e3aae3682328598195a46f040d"
+    },
+    "state": "MERGED",
+    "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/61",
+    "tests": 135
+  }
+}

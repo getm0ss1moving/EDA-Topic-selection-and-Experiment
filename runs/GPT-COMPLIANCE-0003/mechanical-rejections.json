@@ -1,0 +1,35 @@
+[
+  {
+    "attempts": [
+      {
+        "error": "Verifier omitted objection verdicts",
+        "release_id": "SUB-f597ccc56ee643b3126c188c6892aee3ab54470d66586d18f397f52a38151312",
+        "scope": "Mechanical rejection, not an independent misconduct finding",
+        "snapshot": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261015/rejected-attempts/1b43edf9-2877-400a-8144-b3f76d1f4c0f/SUB-f597ccc56ee643b3126c188c6892aee3ab54470d66586d18f397f52a38151312"
+      }
+    ],
+    "job_id": "1b43edf9-2877-400a-8144-b3f76d1f4c0f"
+  },
+  {
+    "attempts": [
+      {
+        "error": "Declare checkout access honestly",
+        "release_id": "SUB-46cfb469c0fe96288b8b4d5cddbc7ec4ab1525a9145d09584ea8167e379e972f",
+        "scope": "Mechanical rejection, not an independent misconduct finding",
+        "snapshot": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261015/rejected-attempts/be04d547-6721-465d-9e44-a4b5103b9a4b/SUB-46cfb469c0fe96288b8b4d5cddbc7ec4ab1525a9145d09584ea8167e379e972f"
+      }
+    ],
+    "job_id": "be04d547-6721-465d-9e44-a4b5103b9a4b"
+  },
+  {
+    "attempts": [
+      {
+        "error": "Declare checkout access honestly",
+        "release_id": "SUB-c8a5acd8deacbb1be7f9decbb9890eb5a3d6fc162bd3fb85df94efa8a1c284d3",
+        "scope": "Mechanical rejection, not an independent misconduct finding",
+        "snapshot": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261015/rejected-attempts/f437b34b-1e93-448d-b55c-1083168a8a25/SUB-c8a5acd8deacbb1be7f9decbb9890eb5a3d6fc162bd3fb85df94efa8a1c284d3"
+      }
+    ],
+    "job_id": "f437b34b-1e93-448d-b55c-1083168a8a25"
+  }
+]

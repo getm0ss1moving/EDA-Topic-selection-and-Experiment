@@ -1,0 +1,243 @@
+{
+  "status": "independently reviewed within metadata-only limits",
+  "input": "runs/GPT-COMPLIANCE-0003/aborted-attempt-metadata.json",
+  "input_sha256": "bf300d0568b00fa2e750b33ee805d32b014782d8a086375a7963eeffa09b8f03",
+  "release_ids": [
+    "SUB-47b431b4e6d39d744a6de744a3528c7571a5d718f6fc5716d5f1795875671a81",
+    "SUB-56f872e4f80bf5014b43024f33adda8011fdcdb0d211168bb549f3309a939ee5"
+  ],
+  "scope": "Both aborted D05 cycle2 role attempts: public metadata-only nine-area review; not scientific truth or hidden traces. Never deliver raw quarantined science to the new proposer.",
+  "delivery_plan": "Before spawning final D05 protocol auditor, put this JSON object inside shared/protocol-incident/coordinator-report.json with an INPUTS.json hash. Enumerate both files in JOB.released_inputs and both IDs in JOB.released_metadata_ids; exporter supports these exact supplemental names. Main review stays bound to current three releases.",
+  "output_contract": "verification.json.aborted_attempts array of two role/release_id/checks(all nine standard rule names and statuses/evidence/reason)/limitations entries, plus short separate Markdown table. Unknown coverage remains unresolved; distinguish old C scope ambiguity and old P metadata scope from current clean actors.",
+  "reason": "Account for invalid partial-cycle actors without counting them among 24 valid outputs or claiming full scientific re-review.",
+  "audit_work": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261015/audits/SUB-af311c9ae6b091db1fdb94a8bd262fe027a34d25a761c2e072c59c2d0497d01d/jobs/d94d8c40-abe8-42dc-9b9f-8106e9cf2606",
+  "job_id": "d94d8c40-abe8-42dc-9b9f-8106e9cf2606",
+  "audit_release": "SUB-1d755d147fde917e19455a455a3a1020947212f4a552695d4df0ffbd05fbf9b0",
+  "public_audit": "runs/SUB-1d755d147fde917e19455a455a3a1020947212f4a552695d4df0ffbd05fbf9b0/verification.json",
+  "aborted_attempts": [
+    {
+      "role": "proposer",
+      "release_id": "SUB-47b431b4e6d39d744a6de744a3528c7571a5d718f6fc5716d5f1795875671a81",
+      "checks": {
+        "inputs": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/protocol-incident/coordinator-report.json#/attempts/0/metadata/JOB.json/text#/released_inputs",
+            "shared/protocol-incident/coordinator-report.json#/attempts/0/metadata/compliance.json/text#/read_releases",
+            "shared/protocol-incident/coordinator-report.json#/attempts/0/own_previous_metadata"
+          ],
+          "reason": "All declared IDs are original JOB-authorized or hash-bound same-author/session own previous release; no unexplained ID."
+        },
+        "isolation": {
+          "status": "unresolved",
+          "evidence": [
+            "shared/protocol-incident/coordinator-report.json#/attempts/0/metadata/compliance.json/text#/activity",
+            "shared/protocol-incident/coordinator-report.json#/attempts/0/metadata/compliance.json/text#/incidents"
+          ],
+          "reason": "No foreign private reads disclosed; metadata cannot establish physical/hidden independence."
+        },
+        "writes": {
+          "status": "unresolved",
+          "evidence": [
+            "shared/protocol-incident/coordinator-report.json#/attempts/0/metadata/compliance.json/text#/rules/writes",
+            "shared/protocol-incident/coordinator-report.json#/attempts/0/metadata/SUBMISSION.json/text#/files"
+          ],
+          "reason": "Only declaration plus file hashes supplied; absent underlying role payload/trace cannot substantiate this rule. No violation or scientific correctness inference from absence."
+        },
+        "evidence": {
+          "status": "unresolved",
+          "evidence": [
+            "shared/protocol-incident/coordinator-report.json#/attempts/0/metadata/compliance.json/text#/rules/evidence",
+            "shared/protocol-incident/coordinator-report.json#/attempts/0/metadata/SUBMISSION.json/text#/files"
+          ],
+          "reason": "Only declaration plus file hashes supplied; absent underlying role payload/trace cannot substantiate this rule. No violation or scientific correctness inference from absence."
+        },
+        "claims": {
+          "status": "unresolved",
+          "evidence": [
+            "shared/protocol-incident/coordinator-report.json#/attempts/0/metadata/compliance.json/text#/rules/claims",
+            "shared/protocol-incident/coordinator-report.json#/attempts/0/metadata/SUBMISSION.json/text#/files"
+          ],
+          "reason": "Only declaration plus file hashes supplied; absent underlying role payload/trace cannot substantiate this rule. No violation or scientific correctness inference from absence."
+        },
+        "consent": {
+          "status": "unresolved",
+          "evidence": [
+            "shared/protocol-incident/coordinator-report.json#/attempts/0/metadata/compliance.json/text#/rules/consent",
+            "shared/protocol-incident/coordinator-report.json#/attempts/0/metadata/SUBMISSION.json/text#/files"
+          ],
+          "reason": "Only declaration plus file hashes supplied; absent underlying role payload/trace cannot substantiate this rule. No violation or scientific correctness inference from absence."
+        },
+        "resources": {
+          "status": "unresolved",
+          "evidence": [
+            "shared/protocol-incident/coordinator-report.json#/attempts/0/metadata/compliance.json/text#/rules/resources",
+            "shared/protocol-incident/coordinator-report.json#/attempts/0/metadata/SUBMISSION.json/text#/files"
+          ],
+          "reason": "Only declaration plus file hashes supplied; absent underlying role payload/trace cannot substantiate this rule. No violation or scientific correctness inference from absence."
+        },
+        "direction": {
+          "status": "unresolved",
+          "evidence": [
+            "shared/protocol-incident/coordinator-report.json#/attempts/0/metadata/compliance.json/text#/rules/direction",
+            "shared/protocol-incident/coordinator-report.json#/attempts/0/metadata/SUBMISSION.json/text#/files"
+          ],
+          "reason": "Only declaration plus file hashes supplied; absent underlying role payload/trace cannot substantiate this rule. No violation or scientific correctness inference from absence."
+        },
+        "publication": {
+          "status": "unresolved",
+          "evidence": [
+            "shared/protocol-incident/coordinator-report.json#/attempts/0/metadata/SUBMISSION.json",
+            "shared/protocol-incident/coordinator-report.json#/attempts/0/metadata/compliance.json/text#/rules/publication"
+          ],
+          "reason": "Embedded manifest and ledger byte bindings verify, but no actual transport/approval trace or full payload supplied; no publication clearance."
+        }
+      },
+      "metadata_validation": {
+        "release_id": "SUB-47b431b4e6d39d744a6de744a3528c7571a5d718f6fc5716d5f1795875671a81",
+        "embedded_sha_checks": {
+          "JOB.json": true,
+          "prompt.txt": true,
+          "compliance.json": true,
+          "SUBMISSION.json": true
+        },
+        "manifest_id_match": true,
+        "ledger_to_manifest": true,
+        "identity_matches": true,
+        "job_matches": true,
+        "own_previous_manifest_hashes": [
+          true
+        ],
+        "read_ids": [
+          "SUB-8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f",
+          "SUB-1d2e343cab1599577d312783ff91916761e548b2d4e1d7749b3071f38416b8ca",
+          "SUB-e3407b956910db0e7d4c3dbf46ac184bccf23d68e66ef738a10e0696ef980338"
+        ],
+        "own_previous_ids": [
+          "SUB-8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f"
+        ],
+        "outside_JOB_and_own_previous": [],
+        "checkout_access_raw": "none"
+      },
+      "limitations": [
+        "Metadata only; no raw historical science or historical paths opened.",
+        "Prior incident review PRIOR-001..004 supports reported transport ambiguity/remediation, but cited old source-codex-loop bytes are not supplied here and were not independently reopened.",
+        "Do not attribute this attempt to current EDA-0010 actors; no science vote or valid-cycle credit.",
+        "Proposer declared synthetic analytical checks/zero allocations; actual outputs and conduct cannot be verified from metadata alone."
+      ]
+    },
+    {
+      "role": "challenger",
+      "release_id": "SUB-56f872e4f80bf5014b43024f33adda8011fdcdb0d211168bb549f3309a939ee5",
+      "checks": {
+        "inputs": {
+          "status": "supported_deviation",
+          "evidence": [
+            "shared/protocol-incident/coordinator-report.json#/attempts/1/metadata/JOB.json/text#/released_inputs",
+            "shared/protocol-incident/coordinator-report.json#/attempts/1/metadata/compliance.json/text#/read_releases",
+            "shared/protocol-incident/coordinator-report.json#/attempts/1/own_previous_metadata"
+          ],
+          "reason": "Historical proposal SUB-8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f is outside original JOB and is not challenger own previous output. Prompt shared-folder wording creates transport ambiguity; candid scope departure is supported, deliberate evasion/private provenance is not."
+        },
+        "isolation": {
+          "status": "supported_deviation",
+          "evidence": [
+            "shared/protocol-incident/coordinator-report.json#/attempts/1/metadata/compliance.json/text#/activity",
+            "shared/protocol-incident/coordinator-report.json#/attempts/1/metadata/compliance.json/text#/incidents"
+          ],
+          "reason": "Extra selected frozen-proposal reads are candidly disclosed. checkout_access contains explanatory prose instead of exact enum; mechanical schema defect, not proof of checkout read. Historical private exposure remains unestablished; preserve prior adjudication."
+        },
+        "writes": {
+          "status": "unresolved",
+          "evidence": [
+            "shared/protocol-incident/coordinator-report.json#/attempts/1/metadata/compliance.json/text#/rules/writes",
+            "shared/protocol-incident/coordinator-report.json#/attempts/1/metadata/SUBMISSION.json/text#/files"
+          ],
+          "reason": "Only declaration plus file hashes supplied; absent underlying role payload/trace cannot substantiate this rule. No violation or scientific correctness inference from absence."
+        },
+        "evidence": {
+          "status": "unresolved",
+          "evidence": [
+            "shared/protocol-incident/coordinator-report.json#/attempts/1/metadata/compliance.json/text#/rules/evidence",
+            "shared/protocol-incident/coordinator-report.json#/attempts/1/metadata/SUBMISSION.json/text#/files"
+          ],
+          "reason": "Only declaration plus file hashes supplied; absent underlying role payload/trace cannot substantiate this rule. No violation or scientific correctness inference from absence."
+        },
+        "claims": {
+          "status": "unresolved",
+          "evidence": [
+            "shared/protocol-incident/coordinator-report.json#/attempts/1/metadata/compliance.json/text#/rules/claims",
+            "shared/protocol-incident/coordinator-report.json#/attempts/1/metadata/SUBMISSION.json/text#/files"
+          ],
+          "reason": "Only declaration plus file hashes supplied; absent underlying role payload/trace cannot substantiate this rule. No violation or scientific correctness inference from absence."
+        },
+        "consent": {
+          "status": "unresolved",
+          "evidence": [
+            "shared/protocol-incident/coordinator-report.json#/attempts/1/metadata/compliance.json/text#/rules/consent",
+            "shared/protocol-incident/coordinator-report.json#/attempts/1/metadata/SUBMISSION.json/text#/files"
+          ],
+          "reason": "Only declaration plus file hashes supplied; absent underlying role payload/trace cannot substantiate this rule. No violation or scientific correctness inference from absence."
+        },
+        "resources": {
+          "status": "unresolved",
+          "evidence": [
+            "shared/protocol-incident/coordinator-report.json#/attempts/1/metadata/compliance.json/text#/rules/resources",
+            "shared/protocol-incident/coordinator-report.json#/attempts/1/metadata/SUBMISSION.json/text#/files"
+          ],
+          "reason": "Only declaration plus file hashes supplied; absent underlying role payload/trace cannot substantiate this rule. No violation or scientific correctness inference from absence."
+        },
+        "direction": {
+          "status": "unresolved",
+          "evidence": [
+            "shared/protocol-incident/coordinator-report.json#/attempts/1/metadata/compliance.json/text#/rules/direction",
+            "shared/protocol-incident/coordinator-report.json#/attempts/1/metadata/SUBMISSION.json/text#/files"
+          ],
+          "reason": "Only declaration plus file hashes supplied; absent underlying role payload/trace cannot substantiate this rule. No violation or scientific correctness inference from absence."
+        },
+        "publication": {
+          "status": "unresolved",
+          "evidence": [
+            "shared/protocol-incident/coordinator-report.json#/attempts/1/metadata/SUBMISSION.json",
+            "shared/protocol-incident/coordinator-report.json#/attempts/1/metadata/compliance.json/text#/rules/publication"
+          ],
+          "reason": "Embedded manifest and ledger byte bindings verify, but no actual transport/approval trace or full payload supplied; no publication clearance."
+        }
+      },
+      "metadata_validation": {
+        "release_id": "SUB-56f872e4f80bf5014b43024f33adda8011fdcdb0d211168bb549f3309a939ee5",
+        "embedded_sha_checks": {
+          "JOB.json": true,
+          "prompt.txt": true,
+          "compliance.json": true,
+          "SUBMISSION.json": true
+        },
+        "manifest_id_match": true,
+        "ledger_to_manifest": true,
+        "identity_matches": true,
+        "job_matches": true,
+        "own_previous_manifest_hashes": [
+          true
+        ],
+        "read_ids": [
+          "SUB-47b431b4e6d39d744a6de744a3528c7571a5d718f6fc5716d5f1795875671a81",
+          "SUB-1d2e343cab1599577d312783ff91916761e548b2d4e1d7749b3071f38416b8ca",
+          "SUB-8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f"
+        ],
+        "own_previous_ids": [
+          "SUB-e3407b956910db0e7d4c3dbf46ac184bccf23d68e66ef738a10e0696ef980338"
+        ],
+        "outside_JOB_and_own_previous": [
+          "SUB-8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f"
+        ],
+        "checkout_access_raw": "none; user-provided checkout path/instructions present in initial context but no filesystem read there"
+      },
+      "limitations": [
+        "Metadata only; no raw historical science or historical paths opened.",
+        "Prior incident review PRIOR-001..004 supports reported transport ambiguity/remediation, but cited old source-codex-loop bytes are not supplied here and were not independently reopened.",
+        "Do not attribute this attempt to current EDA-0010 actors; no science vote or valid-cycle credit.",
+        "Proposer declared synthetic analytical checks/zero allocations; actual outputs and conduct cannot be verified from metadata alone."
+      ]
+    }
+  ]
+}

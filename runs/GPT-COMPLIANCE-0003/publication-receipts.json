@@ -1,0 +1,456 @@
+{
+  "checked_at_utc": "2026-10-15T16:14:12.504901+00:00",
+  "round_prs": [
+    {
+      "headRefOid": "4f020d50e15c5f27366a64f4d71374c29893db48",
+      "mergeCommit": {
+        "oid": "4ae9bc31d0fc193fab82ddd035aa906c23472b94"
+      },
+      "mergedAt": "2026-10-15T14:59:17Z",
+      "number": 63,
+      "state": "MERGED",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-15T14:58:51Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38756220121/job/116495245409",
+          "name": "verifier",
+          "startedAt": "2026-10-15T14:58:45Z",
+          "status": "COMPLETED",
+          "workflowName": "Independent verifier"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-15T14:59:07Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38756220365/job/116495243315",
+          "name": "research-structure",
+          "startedAt": "2026-10-15T14:58:45Z",
+          "status": "COMPLETED",
+          "workflowName": "Research structure"
+        },
+        {
+          "__typename": "StatusContext",
+          "context": "independent-verifier",
+          "startedAt": "2026-10-15T14:58:49Z",
+          "state": "SUCCESS",
+          "targetUrl": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38756220121"
+        }
+      ],
+      "unadjudicated_scientific_followups": [],
+      "unresolved_review_threads": [],
+      "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/63"
+    },
+    {
+      "headRefOid": "648f6cf1106d9b36ce8a19f67d4c8fde890acfc9",
+      "mergeCommit": {
+        "oid": "41c5dcd93a74c73aad316d186d2486fc66d531c0"
+      },
+      "mergedAt": "2026-10-15T14:38:26Z",
+      "number": 60,
+      "state": "MERGED",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-15T14:37:52Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38753089972/job/116484298970",
+          "name": "verifier",
+          "startedAt": "2026-10-15T14:37:45Z",
+          "status": "COMPLETED",
+          "workflowName": "Independent verifier"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-15T14:38:08Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38753093748/job/116484309671",
+          "name": "research-structure",
+          "startedAt": "2026-10-15T14:37:47Z",
+          "status": "COMPLETED",
+          "workflowName": "Research structure"
+        },
+        {
+          "__typename": "StatusContext",
+          "context": "independent-verifier",
+          "startedAt": "2026-10-15T14:37:50Z",
+          "state": "SUCCESS",
+          "targetUrl": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38753089972"
+        }
+      ],
+      "unadjudicated_scientific_followups": [],
+      "unresolved_review_threads": [],
+      "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/60"
+    },
+    {
+      "headRefOid": "930410821318881213e2c359fe6f5b06bb8a0536",
+      "mergeCommit": {
+        "oid": "83bf141a3870da381e41236ce6a05c3faa8b2174"
+      },
+      "mergedAt": "2026-10-15T14:08:40Z",
+      "number": 59,
+      "state": "MERGED",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-15T14:06:33Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38748449054/job/116468175054",
+          "name": "verifier",
+          "startedAt": "2026-10-15T14:06:29Z",
+          "status": "COMPLETED",
+          "workflowName": "Independent verifier"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-15T14:03:38Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38748012042/job/116466671010",
+          "name": "verifier",
+          "startedAt": "2026-10-15T14:03:32Z",
+          "status": "COMPLETED",
+          "workflowName": "Independent verifier"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-15T14:03:51Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38748012692/job/116466673666",
+          "name": "research-structure",
+          "startedAt": "2026-10-15T14:03:32Z",
+          "status": "COMPLETED",
+          "workflowName": "Research structure"
+        },
+        {
+          "__typename": "StatusContext",
+          "context": "independent-verifier",
+          "startedAt": "2026-10-15T14:06:32Z",
+          "state": "SUCCESS",
+          "targetUrl": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38748449054"
+        }
+      ],
+      "unadjudicated_scientific_followups": [],
+      "unresolved_review_threads": [],
+      "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/59"
+    },
+    {
+      "headRefOid": "f7428f81cfb82a507e568115d39629ae247728ed",
+      "mergeCommit": {
+        "oid": "3a145734a8d98a57c433e406929b8fa059250cae"
+      },
+      "mergedAt": "2026-10-15T15:45:59Z",
+      "number": 66,
+      "state": "MERGED",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-15T15:47:00Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38763333014/job/116520030191",
+          "name": "verifier",
+          "startedAt": "2026-10-15T15:46:54Z",
+          "status": "COMPLETED",
+          "workflowName": "Independent verifier"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-15T16:09:26Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38766565378/job/116531195466",
+          "name": "verifier",
+          "startedAt": "2026-10-15T16:09:19Z",
+          "status": "COMPLETED",
+          "workflowName": "Independent verifier"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-15T15:44:02Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38762890724/job/116518517370",
+          "name": "verifier",
+          "startedAt": "2026-10-15T15:43:55Z",
+          "status": "COMPLETED",
+          "workflowName": "Independent verifier"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-15T15:44:16Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38762887708/job/116518503836",
+          "name": "research-structure",
+          "startedAt": "2026-10-15T15:43:54Z",
+          "status": "COMPLETED",
+          "workflowName": "Research structure"
+        },
+        {
+          "__typename": "StatusContext",
+          "context": "independent-verifier",
+          "startedAt": "2026-10-15T16:09:24Z",
+          "state": "SUCCESS",
+          "targetUrl": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38766565378"
+        }
+      ],
+      "unadjudicated_scientific_followups": [],
+      "unresolved_review_threads": [],
+      "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/66"
+    },
+    {
+      "headRefOid": "7c666ee8c0971cda1dfccde76ed70772b0f34c7a",
+      "mergeCommit": {
+        "oid": "d7e21ee1d3845198652c13ed7840386be807294d"
+      },
+      "mergedAt": "2026-10-15T14:45:49Z",
+      "number": 62,
+      "state": "MERGED",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-15T14:44:57Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38754135255/job/116487945728",
+          "name": "verifier",
+          "startedAt": "2026-10-15T14:44:50Z",
+          "status": "COMPLETED",
+          "workflowName": "Independent verifier"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-15T14:45:04Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38754134965/job/116487943671",
+          "name": "research-structure",
+          "startedAt": "2026-10-15T14:44:49Z",
+          "status": "COMPLETED",
+          "workflowName": "Research structure"
+        },
+        {
+          "__typename": "StatusContext",
+          "context": "independent-verifier",
+          "startedAt": "2026-10-15T14:44:54Z",
+          "state": "SUCCESS",
+          "targetUrl": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38754135255"
+        }
+      ],
+      "unadjudicated_scientific_followups": [],
+      "unresolved_review_threads": [],
+      "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/62"
+    },
+    {
+      "headRefOid": "5e97d1fe3df02994c957a8cad6090c9e75aeca35",
+      "mergeCommit": {
+        "oid": "ae40de9139c11b567137bff3c0165bb081c23c70"
+      },
+      "mergedAt": "2026-10-15T15:15:01Z",
+      "number": 64,
+      "state": "MERGED",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-15T15:16:39Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38758867444/job/116504492764",
+          "name": "verifier",
+          "startedAt": "2026-10-15T15:16:33Z",
+          "status": "COMPLETED",
+          "workflowName": "Independent verifier"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-15T16:13:04Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38767084424/job/116533002724",
+          "name": "verifier",
+          "startedAt": "2026-10-15T16:12:58Z",
+          "status": "COMPLETED",
+          "workflowName": "Independent verifier"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-15T15:14:03Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38758483639/job/116503155427",
+          "name": "verifier",
+          "startedAt": "2026-10-15T15:13:58Z",
+          "status": "COMPLETED",
+          "workflowName": "Independent verifier"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-15T15:14:20Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38758484160/job/116503155972",
+          "name": "research-structure",
+          "startedAt": "2026-10-15T15:13:58Z",
+          "status": "COMPLETED",
+          "workflowName": "Research structure"
+        },
+        {
+          "__typename": "StatusContext",
+          "context": "independent-verifier",
+          "startedAt": "2026-10-15T16:13:02Z",
+          "state": "SUCCESS",
+          "targetUrl": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38767084424"
+        }
+      ],
+      "unadjudicated_scientific_followups": [],
+      "unresolved_review_threads": [],
+      "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/64"
+    },
+    {
+      "headRefOid": "f78dd202d2d9a122f3686a7b71f3440720847a5d",
+      "mergeCommit": {
+        "oid": "b9ec00c59423f3b728c78b8f4fcf20f07d66614a"
+      },
+      "mergedAt": "2026-10-15T16:07:11Z",
+      "number": 67,
+      "state": "MERGED",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-15T16:09:48Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38766621307/job/116531390296",
+          "name": "verifier",
+          "startedAt": "2026-10-15T16:09:42Z",
+          "status": "COMPLETED",
+          "workflowName": "Independent verifier"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-15T16:04:20Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38765846056/job/116528703539",
+          "name": "verifier",
+          "startedAt": "2026-10-15T16:04:15Z",
+          "status": "COMPLETED",
+          "workflowName": "Independent verifier"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-15T16:04:41Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38765849819/job/116528711793",
+          "name": "research-structure",
+          "startedAt": "2026-10-15T16:04:17Z",
+          "status": "COMPLETED",
+          "workflowName": "Research structure"
+        },
+        {
+          "__typename": "StatusContext",
+          "context": "independent-verifier",
+          "startedAt": "2026-10-15T16:09:45Z",
+          "state": "SUCCESS",
+          "targetUrl": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38766621307"
+        }
+      ],
+      "unadjudicated_scientific_followups": [
+        {
+          "comments": [
+            {
+              "author": {
+                "login": "chatgpt-codex-connector"
+              },
+              "body": "**<sub><sub>![P2 Badge](https://img.shields.io/badge/P2-yellow?style=flat)</sub></sub>  Correct the raw-code line locator**\n\nThe [pinned raw file](https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/3549d60529517dc82deb7f0ff769345e9a424911/src/rsz/src/policy/MeasuredVtSwapPolicy.cc) has only 288 lines, and its candidate-estimation loop is at one-based lines 254\u2013263; the published locator extends through nonexistent line 301 and labels lines 273\u2013282 as estimation even though they contain post-commit handling and `finishRun`. Since the proposal uses `N10b273-301` to support CLM-1001, readers cannot verify that observation from the stated location; update this record and the claim ledger to the actual lines.\n\nAGENTS.md reference: [AGENTS.md:L11-L11](https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/blob/f78dd202d2d9a122f3686a7b71f3440720847a5d/AGENTS.md#L11-L11)\n\nUseful? React with \ud83d\udc4d\u00a0/ \ud83d\udc4e.",
+              "body_sha256": "417d20e78ffed9201bba9a69acbc8d48a2ea0d6421ec6559422a4557d63869c3",
+              "id": "PRRC_kwDOVElOAM7_bhZI",
+              "line": 158,
+              "path": "runs/SUB-64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c/sources.json",
+              "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/67#discussion_r4285404744"
+            }
+          ],
+          "isResolved": false,
+          "pr": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/67",
+          "status": "unadjudicated_scientific_followup",
+          "thread_id": "PRRT_kwDOVElOAM6s3Es6"
+        },
+        {
+          "comments": [
+            {
+              "author": {
+                "login": "chatgpt-codex-connector"
+              },
+              "body": "**<sub><sub>![P2 Badge](https://img.shields.io/badge/P2-yellow?style=flat)</sub></sub>  Publish the verifier's analytical-check evidence**\n\nThe verifier relies on `runs/analytical-check.json` for the stated 4,096-case result, but that file is absent from this commit and from the verifier release manifest, which contains only the compliance, verification, and workflow files; unlike the proposer and challenger checks, no exact script or stdout is embedded elsewhere. Consequently the independent result supporting CLM-1005 cannot be traced or reproduced from the frozen release, so include the script/output with hashes or remove the unsupported check claim.\n\nAGENTS.md reference: [AGENTS.md:L11-L11](https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/blob/f78dd202d2d9a122f3686a7b71f3440720847a5d/AGENTS.md#L11-L11)\n\nUseful? React with \ud83d\udc4d\u00a0/ \ud83d\udc4e.",
+              "body_sha256": "e041661955e8fb8b4bcba0f1a89864c1729190126678bcbf450f522ee23617b2",
+              "id": "PRRC_kwDOVElOAM7_bhZe",
+              "line": 169,
+              "path": "runs/SUB-af311c9ae6b091db1fdb94a8bd262fe027a34d25a761c2e072c59c2d0497d01d/verification.json",
+              "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/67#discussion_r4285404766"
+            }
+          ],
+          "isResolved": false,
+          "pr": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/67",
+          "status": "unadjudicated_scientific_followup",
+          "thread_id": "PRRT_kwDOVElOAM6s3EtI"
+        }
+      ],
+      "unresolved_review_threads": [
+        "PRRT_kwDOVElOAM6s3Es6",
+        "PRRT_kwDOVElOAM6s3EtI"
+      ],
+      "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/67"
+    },
+    {
+      "headRefOid": "d896e55648130968ae3c68e59507de4e9f4da56e",
+      "mergeCommit": {
+        "oid": "e73bd13e6dae10d71ab169bc2e26732fc3f4bd73"
+      },
+      "mergedAt": "2026-10-15T15:32:02Z",
+      "number": 65,
+      "state": "MERGED",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-15T15:34:00Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38761437209/job/116513433487",
+          "name": "verifier",
+          "startedAt": "2026-10-15T15:33:54Z",
+          "status": "COMPLETED",
+          "workflowName": "Independent verifier"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-15T16:13:07Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38767092283/job/116533025448",
+          "name": "verifier",
+          "startedAt": "2026-10-15T16:13:01Z",
+          "status": "COMPLETED",
+          "workflowName": "Independent verifier"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-15T15:30:45Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38760949108/job/116511752239",
+          "name": "verifier",
+          "startedAt": "2026-10-15T15:30:40Z",
+          "status": "COMPLETED",
+          "workflowName": "Independent verifier"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-15T15:31:05Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38760949627/job/116511750072",
+          "name": "research-structure",
+          "startedAt": "2026-10-15T15:30:39Z",
+          "status": "COMPLETED",
+          "workflowName": "Research structure"
+        },
+        {
+          "__typename": "StatusContext",
+          "context": "independent-verifier",
+          "startedAt": "2026-10-15T16:13:04Z",
+          "state": "SUCCESS",
+          "targetUrl": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38767092283"
+        }
+      ],
+      "unadjudicated_scientific_followups": [],
+      "unresolved_review_threads": [],
+      "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/65"
+    }
+  ],
+  "scope": "Actual merged PR heads, checks and review-thread inventory. Exact retained late scientific followups stay open and unadjudicated; no scientific clearance inferred."
+}

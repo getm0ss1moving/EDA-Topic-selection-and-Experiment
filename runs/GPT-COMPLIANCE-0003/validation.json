@@ -1,0 +1,17 @@
+{
+  "checked_at_utc": "2026-10-15T16:01:56.052913+00:00",
+  "command": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "exit_code": 0,
+  "tests_run": 135,
+  "status": "passed",
+  "log_sha256": "1824e7f61daa60077a59ef9607abd50c1ce8984e20b029bfd08202f875007aa0",
+  "scope": "Coordinator unit/regression suite, not scientific confirmation or hidden-action audit."
+}
