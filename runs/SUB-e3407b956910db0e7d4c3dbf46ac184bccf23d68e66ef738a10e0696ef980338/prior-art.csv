@@ -1,0 +1,6 @@
+source_id,task,mechanism,overlap,distinction,limits
+S01,constrained black-box selection,GP CEI and two-step lookahead,query controller,physical feature construction remains target,not EDA utility evidence
+S02,gate sizing,discrete directional gradients and physical calibration,electrical guidance,strong comparator lacks demonstrated identity to contrast covariance,no replicated performance
+S04,local delay estimation,load-dependent STA slew bias,calibrated mean,remaining epistemic covariance hypothetical,selected functions only
+S05,gate sizing,calibrated incremental timer and peephole optimization,reference guided cheap search,modern residual ranking still open,old results not transferred
+S06,multitask prediction,separable covariance and noise-free block design,conditional transfer limits,different from arbitrary two-axis W,restricted assumptions

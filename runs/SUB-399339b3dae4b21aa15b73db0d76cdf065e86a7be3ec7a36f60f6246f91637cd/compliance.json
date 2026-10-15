@@ -1,0 +1,119 @@
+{
+  "schema": 1,
+  "role": "verifier",
+  "actor_id": "ChatGPT-B03-PROTOCOL-D05-EDA-0007-R1",
+  "session_id": "f92ba423-0831-49cd-b037-804a5d3c50ce",
+  "input_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+  "packet_sha256": "0057b6e4c59628547e221c3dee77fa5a649926434f9568d9112c34d5262d34b9",
+  "job_id": "4e958940-9fd1-4ff7-93a9-821b6c791b64",
+  "read_releases": [
+    "SUB-e3407b956910db0e7d4c3dbf46ac184bccf23d68e66ef738a10e0696ef980338",
+    "SUB-8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f",
+    "SUB-1d2e343cab1599577d312783ff91916761e548b2d4e1d7749b3071f38416b8ca"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0
+  },
+  "rules": {
+    "inputs": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json",
+        "runs/integrity.json"
+      ],
+      "limits": "Only assigned job policy and released outputs/descriptors used; no external sources reopened. Self-report is not a full trace or backend attestation."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json",
+        "runs/integrity.json"
+      ],
+      "limits": "Only assigned job policy and released outputs/descriptors used; no external sources reopened. Self-report is not a full trace or backend attestation."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json",
+        "runs/integrity.json"
+      ],
+      "limits": "Only assigned job policy and released outputs/descriptors used; no external sources reopened. Self-report is not a full trace or backend attestation."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json",
+        "runs/integrity.json"
+      ],
+      "limits": "Only assigned job policy and released outputs/descriptors used; no external sources reopened. Self-report is not a full trace or backend attestation."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json",
+        "runs/integrity.json"
+      ],
+      "limits": "Only assigned job policy and released outputs/descriptors used; no external sources reopened. Self-report is not a full trace or backend attestation."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json",
+        "runs/integrity.json"
+      ],
+      "limits": "Only assigned job policy and released outputs/descriptors used; no external sources reopened. Self-report is not a full trace or backend attestation."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json",
+        "runs/integrity.json"
+      ],
+      "limits": "Only assigned job policy and released outputs/descriptors used; no external sources reopened. Self-report is not a full trace or backend attestation."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json",
+        "runs/integrity.json"
+      ],
+      "limits": "Only assigned job policy and released outputs/descriptors used; no external sources reopened. Self-report is not a full trace or backend attestation."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json",
+        "runs/integrity.json"
+      ],
+      "limits": "Only assigned job policy and released outputs/descriptors used; no external sources reopened. Self-report is not a full trace or backend attestation."
+    }
+  },
+  "operations": [
+    "First filesystem call read only assigned JOB.json/prompt.txt. Read frozen common policy and only VERIFIER harness; policy template path miss corrected within policy.",
+    "Read three explicitly released outputs and public role descriptors; some batched display output truncated, followed by targeted reads. No private run artifacts referenced by their ledgers were opened.",
+    "Checked frozen hashes, public identity/read bindings and proposer task hash with own standard-library script; no scientific code executed.",
+    "Wrote own runs/write_audit.py, runs/integrity.json and release verification/workflow/compliance files. Run supplied review/ledger validators and trusted freeze/verify; write result.json. Full repository validation remains coordinator transport duty."
+  ],
+  "incidents": [
+    {
+      "kind": "nonexposure_tool_error",
+      "detail": "policy/templates/compliance.json not found; actual policy/templates/topic/compliance.json read. No foreign harness or checkout opened."
+    }
+  ],
+  "observability": "Self-authored public activity ledger, not a complete trace or evidence of absent undisclosed actions. Host supplied generic conversation/workspace instructions; no file-based checkout access or private session retrieval."
+}

@@ -1,0 +1,27 @@
+# Independent source/search log — EDA-0007 R1
+
+Date/cutoff 2026-10-15 UTC. Workflow slice: immutable-base replacement measurement selection, electrical contrast residuals, bounded constrained search. Engine: functions web search/open/find/click, plus ordinary urllib public raw/API retrieval. All writes stayed in this job. No source required approval, no login bypass, author messaging or paid API use. Two expansions found closer work; the bounded round ended with residual risk, not an exhaustive negative-search certificate.
+
+| Stage | Exact query or source operation | Inspected result / inclusion and access limit |
+|---|---|---|
+| Baseline | Pinned R01/R02 raw source retrieval | Full consumer and selected estimator definitions read; raw 1-based function lines and SHA256 recorded. No build or transitive call-closure audit. |
+| Initial | `"ISPD2027" "Contest" buffering sizing` | No useful direct discovery from this query; followed independently reopened official symposium link and released lead to R10. Lack of hit is not absence. |
+| Initial | `"ISPD 2026" "IRISLab" winner sizing` | Official ordered winners R12. Identities retained; no algorithm inferred. |
+| Initial | `"gate sizing" "covariance" Bayesian optimization electrical` | Broad unrelated/process-variation leads; no relied-on primary full-system equivalence. Manufacturing/SSTA differs from fixed-engine epistemic error. |
+| Initial | `"two-step" "expected improvement" "lookahead" Bayesian optimization` | Independently found R04/R05 primary PDFs; selected exact model/acquisition sections opened. Generic multi-step policy is prior. |
+| Expansion1 | `"IRISLab" "2026" buffering sizing method presentation` | Search noise; no authenticated method report. Off-topic remote-sensing IRIS excluded. |
+| Expansion1 | `"gate sizing" "Bayesian" sensitivity surrogate 2025 2026` | Synthetic/legacy FREEDERIA page explicitly labels projected/simulated evidence; excluded from claims. No performance or novelty evidence adopted. |
+| Expansion1 | `"Disentangled Differentiable" timing power PDF` | R09 author page and public PDF link opened; selected §§3.3–3.4, evaluation caveats and references read. This closes the prior abstract-only method gap for those sections, not code reproduction. |
+| Expansion2 | `"IRISLab" "sizing" "2026" algorithm` | Official winner identity and unofficial solution fork. Fork not attributed to winner, not adopted as primary winner evidence. |
+| Expansion2 | `"post-placement buffering" "2026" winner method` | Official contest paper/source leads, no current verified winner algorithm report. |
+| Expansion2 | `"MARS" "Multi-Transformation Adaptive Resynthesis"` | Publisher-indexed abstract R14 inspected in search; direct primary-page open later returned HTTP418. Lead on coordinated transformations; no full method or numerical result used. |
+| Citation neighborhood | R09 references; R03 §3.1; R06 §2.3; R04 §§2.3/3.2; R05 §2.2 | Calibration, separable GP caution and two-step loss checked at original locators. Bibliographic neighborhood is not a systematic forward-citation census. Further methods remain EXP-001. |
+| Forward/current | R07 arXiv v2; R08 initially v1, then v2 discovered/reopened (2026-05-03); R13 current vendor capability page; R15 docs | Selected primary sections reopened. R08 was updated to v2 selected sections; no comprehensive current-venue or other-paper version clearance claimed. R13 is advertising, not controlled evidence. |
+| Contest source | Public ABKGroup ISPD27 tree API at pinned commit, selected evaluator/source/config/LICENSE | Source reading only, no source import/execution, benchmark/netlist/platform download or EDA run. All source hashes in sources.json (selected code) and local runs/retrieval.json. |
+| PDF access recovery | Raw R10 PDF web open failed; GitHub blob metadata exposed no text; public raw download succeeded; `pdftotext -layout scratch/contest27-description.pdf scratch/contest27-description.txt` | Actual selected description text pp2–5 read. Figures not rendered/visually inspected; physical page/section locators recorded. Public parser fallback, not access-control bypass. |
+| Winner access | 2026 program URL redirects to 2027 page with 2026 session; linked contest-summary slides fail web retrieval | Another linked closing deck is 2025 and excluded. Neither a failed request nor outdated link proves reports do not exist. |
+| Own analysis | `python3 scratch/analytical.py > runs/analytical.json` | Exact Fraction checks only; complete script/output frozen in experiment-plan.md. No EDA experiment or training. |
+
+Public run provenance: input b1bb69f62b089c3489eaf17dea34daae84af315c; role/session/job exact identifiers in proposal.md/compliance.json/workflow.json. All34 frozen policy-file hashes and all supplied released-input manifest payload hashes matched. Those are transport/provenance checks, not scientific approval. Historical H01/H02/H03 only were read, unblinded. No source access, backend identity or unseen actions are inferred from a green validator.
+
+Search limits: no paywalled content represented as fully read, no full-paper copies released, no current official winner algorithm audit, no exhaustive citation graph, no compatibility/source-call closure proof. Current independent review must assess the revised claims anew. More time/source reading can narrow novelty but cannot manufacture missing empirical demand or allocate experiment resources.
