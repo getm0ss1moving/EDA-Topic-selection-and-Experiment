@@ -5,9 +5,11 @@
     "engineering_user": "TBD",
     "downstream_need": "TBD",
     "causal_mechanism": "TBD",
-    "mechanism_invariants": ["TBD"],
+    "mechanism_invariants": [
+      "TBD"
+    ],
     "forbidden_pivots": [
-      "Replacing the mechanism with a straightforward combination of prior methods",
+      "Replacing the anchored contribution with unsupported straightforward assembly; justified useful combinations are eligible",
       "Optimizing a proxy without a demonstrated engineering need",
       "Changing the user or downstream objective to avoid a valid objection"
     ]

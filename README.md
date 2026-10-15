@@ -4,6 +4,8 @@
 
 A file-mediated research program for Agentic EDA, AI for EDA, and traditional EDA. The goal is falsifiable, useful research questions supported by literature, contest, implementation, and engineering evidence—not a stream of plausible ideas.
 
+Current research preference: [useful combinations and structural innovation](docs/INNOVATION-STRATEGY.md), including cooperating EDA agents, unified prediction and specialist/learned/exact hybrids. Component reuse is eligible; unsupported assembly and engineering-demand drift are penalized.
+
 ## Start here
 
 1. Read [the charter](docs/CHARTER.md), [workflow](docs/WORKFLOW.md), and [isolation policy](docs/ISOLATION.md).

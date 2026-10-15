@@ -55,6 +55,14 @@ class LoopTests(unittest.TestCase):
         return {'status':'complete','release_id':p.name,'reason':'Synthetic fixture'}
     def tick(self):return l.tick(self.c,self.home,executor=self.fake)
     def topic(self):return l.read(self.home/'state.json')['topics']['EDA-0002']
+    def test_each_role_receives_innovation_policy_without_foreign_harnesses(self):
+        for role,seat in self.topic()['seats'].items():
+            packet=Path(seat['packet'])
+            self.assertEqual((packet/'docs/INNOVATION-STRATEGY.md').read_bytes(),
+                             (ROOT/'docs/INNOVATION-STRATEGY.md').read_bytes())
+            self.assertEqual([p.name for p in (packet/'harness').iterdir()],
+                             [role.upper()+'.md'])
+            l.verify_packet(seat)
     def test_three_roles_then_proposer_without_human_wakeup(self):
         self.assertEqual(self.tick()['next_role'],'challenger')
         self.assertEqual(self.tick()['next_role'],'verifier')

@@ -67,6 +67,10 @@ and a mandatory human arbitration step after three unsuccessful rounds.
 First-pass Codex review is explicitly unblinded. Make an independent assessment
 and log forecast exposure; do not claim a blinded experiment.
 
+## Innovation evaluation
+
+All three roles read docs/INNOVATION-STRATEGY.md as common policy. Useful combinations and structural contributions are both eligible; combination_drift scores unsupported degradation, not component reuse. Explore unified prediction, specialist/hybrid analysis and cooperating algorithmic agents against strong fair alternatives. Scientific-role independence remains unchanged. A paper-level hypothesis may be unresolved without being disproved; experiment readiness and demonstrated claims require stronger evidence. This clarification does not reopen the completed four-round batch or alter its frozen outputs.
+
 ## Proposer turn
 
 Read the brief and released historical seed if supplied. A legacy seed belongs to

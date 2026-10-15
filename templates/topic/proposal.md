@@ -30,6 +30,10 @@ Record the fixed problem, engineering user, downstream need, causal mechanism an
 
 ## Structural or nontrivial combination contribution
 
+Apply docs/INNOVATION-STRATEGY.md. State the contribution route (useful combination, structural, or both), closest system-level baseline, exact new interaction/formulation/guarantee/tradeoff/capability, and strongest alternative explanation. Known components are permitted; method labels do not establish or refute novelty.
+
+For prediction, specify separate versus unified versus selective-hybrid alternatives, deployable inputs, engineer decision, downstream endpoint, and approximate/probabilistic/engine-relative-exact claim. For multi-agent methods, specify observations/actions/shared state, coordination/termination, and single-agent repeated-call and non-LLM alternatives. Include only relevant comparisons and justify omissions.
+
 TBD
 
 ## Counter-hypotheses and falsification criteria
