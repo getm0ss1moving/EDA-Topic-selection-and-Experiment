@@ -1,0 +1,157 @@
+[
+  {
+    "id": "C01",
+    "title": "OpenROAD MeasuredVtSwapCandidate.cc",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/3549d60529517dc82deb7f0ff769345e9a424911/src/rsz/src/move/MeasuredVtSwapCandidate.cc",
+    "type": "source code",
+    "published": "2026",
+    "retrieved": "2026-10-15",
+    "locator": "estimate lines 40-61; arrivalDelay 101-109; restoreEstimateJournal 115-123 (web line numbering)",
+    "access": "full",
+    "claims": [
+      "CLM-701"
+    ],
+    "limitations": "Pinned source read. Confirms local score/temporary transaction, not caller workload, global guard completeness or runtime."
+  },
+  {
+    "id": "C02",
+    "title": "Multi-task Gaussian Process Prediction",
+    "url": "https://papers.nips.cc/paper/3189-multi-task-gaussian-process-prediction.pdf",
+    "type": "primary paper",
+    "published": "2007",
+    "retrieved": "2026-10-15",
+    "locator": "Section 2 Eq1-2; Section 2.3 Eq6-9, PDF pp2-4",
+    "access": "full",
+    "claims": [
+      "CLM-703"
+    ],
+    "limitations": "Selected method read; separable noiseless block-design cancellation is not a universal theorem about candidate-dependent W."
+  },
+  {
+    "id": "C03",
+    "title": "Predictive Entropy Search for Bayesian Optimization with Unknown Constraints",
+    "url": "https://proceedings.mlr.press/v37/hernandez-lobatob15.pdf",
+    "type": "primary paper",
+    "published": "2015",
+    "retrieved": "2026-10-15",
+    "locator": "Section 2.1 expected improvement with constraints; Section 3 Eq6-7, PDF p3",
+    "access": "full",
+    "claims": [
+      "OBJ-001"
+    ],
+    "limitations": "Selected method read. Independent objective/constraint assumption does not justify factorization when same-candidate g and m correlate."
+  },
+  {
+    "id": "C04",
+    "title": "The Knowledge-Gradient Policy for Correlated Normal Beliefs",
+    "url": "https://people.orie.cornell.edu/pfrazier/pub/CorrelatedKG.pdf",
+    "type": "primary author manuscript",
+    "published": "2009",
+    "retrieved": "2026-10-15",
+    "locator": "Introduction; formulation and knowledge-gradient policy sections, terminal posterior-mean maximum",
+    "access": "full",
+    "claims": [
+      "OBJ-001"
+    ],
+    "limitations": "Selected definitions read; noisy rewards and posterior-mean terminal selection differ from exact measured-only incumbent. No transfer of optimality theorem."
+  },
+  {
+    "id": "C05",
+    "title": "High-Performance Gate Sizing with a Signoff Timer",
+    "url": "https://vlsicad.ucsd.edu/Publications/Conferences/304/c304.pdf",
+    "type": "primary paper",
+    "published": "2013",
+    "retrieved": "2026-10-15",
+    "locator": "Section 3.1 calibration, PDF p3; Section 3.2 flow, PDF p4",
+    "access": "full",
+    "claims": [
+      "CLM-701",
+      "CLM-703"
+    ],
+    "limitations": "Selected sections read; existing calibration/incremental timing is relevant baseline, not proof of modern equivalence or cost."
+  },
+  {
+    "id": "C06",
+    "title": "OpenROAD DelayEstimator.cc",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/3549d60529517dc82deb7f0ff769345e9a424911/src/rsz/src/DelayEstimator.cc",
+    "type": "source code",
+    "published": "2026",
+    "retrieved": "2026-10-15",
+    "locator": "table model and slewBias/buildContext definitions; interpolateStaSlewBias use web lines 866-868",
+    "access": "full",
+    "claims": [
+      "CLM-703"
+    ],
+    "limitations": "Selected definitions read. Transitive implementation and installed binary unverified."
+  },
+  {
+    "id": "C07",
+    "title": "ISPD26 contest official README",
+    "url": "https://raw.githubusercontent.com/ABKGroup/ISPD26-Contest/f7b29d242fc7d441f3b4eadc556f40099ccca067/README.md",
+    "type": "official contest repository",
+    "published": "2026",
+    "retrieved": "2026-10-15",
+    "locator": "Resources, Timeline, final leaderboard lines 90-117",
+    "access": "full",
+    "claims": [
+      "OBJ-002"
+    ],
+    "limitations": "Rules/resources/results inspected, winner implementation not established by scores."
+  },
+  {
+    "id": "C08",
+    "title": "ISPD2027 Contest: MCMM Post-CTS Buffering and Sizing",
+    "url": "https://github.com/ABKGroup/ISPD27-Contest",
+    "type": "official contest repository",
+    "published": "2026",
+    "retrieved": "2026-10-15",
+    "locator": "README title, Resources, Timeline; current commit faef83cacf70fa7923be07816d804ca9c1cef68e (API committer date 2026-10-02)",
+    "access": "full",
+    "claims": [
+      "OBJ-002"
+    ],
+    "limitations": "Live README checked; advertised registration 2026-10-05. Does not establish final weights or future winner. Description PDF fetch failed unsupported content type."
+  },
+  {
+    "id": "C09",
+    "title": "ISPD27 Evaluation and scoring",
+    "url": "https://raw.githubusercontent.com/ABKGroup/ISPD27-Contest/main/evaluator/README.md",
+    "type": "official evaluator documentation",
+    "published": "2026",
+    "retrieved": "2026-10-15",
+    "locator": "lines 1-7, 66-71,128-167",
+    "access": "full",
+    "claims": [
+      "OBJ-002"
+    ],
+    "limitations": "Current documentation checked; setup/hold BC/TC/WC, dummy weights, legality and separate runtimes. Code not executed or fully audited."
+  },
+  {
+    "id": "C10",
+    "title": "Disentangled Differentiable Timing-Power Co-Optimization with Quad-Gradient Gate Sizing",
+    "url": "https://guozz.cn/publication/phyoptdac-26/",
+    "type": "author publication page",
+    "published": "2026",
+    "retrieved": "2026-10-15",
+    "locator": "Abstract and metadata",
+    "access": "abstract",
+    "claims": [
+      "CLM-702"
+    ],
+    "limitations": "Forward alternative lead only. Full paper/code and winner relationship unresolved."
+  },
+  {
+    "id": "C11",
+    "title": "ISPD website program and winner page",
+    "url": "https://ispd.cc/ispd2027/index.php?page=program",
+    "type": "official program",
+    "published": "2026",
+    "retrieved": "2026-10-15",
+    "locator": "ISPD 2026 program Section 16; https://www.ispd.cc/contests/26/index.html Contest Winners",
+    "access": "full",
+    "claims": [
+      "OBJ-002"
+    ],
+    "limitations": "Mixed 2027 header / 2026 body; linked 16_2 slides are actually 2025 closing remarks and excluded as 2026 winner evidence. 16_1 retrieval failed. No winner-method claim."
+  }
+]

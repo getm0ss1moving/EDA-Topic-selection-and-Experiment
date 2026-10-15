@@ -1,0 +1,22 @@
+{
+  "role": "verifier",
+  "reviewed_proposer_release": "SUB-e0cef865c5877d07c062554b61e073024cb0f6ed28b7ef45f31c19d7a5cb335a",
+  "adjudicated_challenger_releases": [
+    "SUB-373c606bec3ab48f9ff6871096ef98823c923e7a784f7873c19f1ddea7ca1b1c"
+  ],
+  "next_action": "park",
+  "actor_id": "ChatGPT-V05-TIMING-EDA-0007",
+  "session_id": "70cb4f98-b54d-4c6d-add6-4d862ef9f663",
+  "input_commit": "f68c1492c05be3fac5622deac4bb479eabf957de",
+  "packet_sha256": "b0e79f87e9cb3689351f02931cec1e77360523e206044ce2643a225b0cac6ea2",
+  "batch_round": 4,
+  "batch_round_limit": 4,
+  "decision": "park",
+  "tasklist_sha256": "a4c2e28833a336ef92eec93be34fb869b1eb4db58c0f9c40404428e9a4fa8621",
+  "output_paths": [
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0007/ChatGPT-V05-TIMING-EDA-0007/jobs/802c0cf1-c17d-4822-b2a3-0e8e0574116c/release/verification.md",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0007/ChatGPT-V05-TIMING-EDA-0007/jobs/802c0cf1-c17d-4822-b2a3-0e8e0574116c/release/verification.json",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0007/ChatGPT-V05-TIMING-EDA-0007/jobs/802c0cf1-c17d-4822-b2a3-0e8e0574116c/release/workflow.json"
+  ],
+  "validation_scope": "Trusted standalone freeze/verify; full project validation delegated to coordinator under JOB contract; no checkout access."
+}

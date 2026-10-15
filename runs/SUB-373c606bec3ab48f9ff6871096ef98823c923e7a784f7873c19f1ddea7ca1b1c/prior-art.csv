@@ -1,0 +1,9 @@
+source_id,task,mechanism,assumptions,overlap,distinction_or_limit
+C01,VT replacement,temporary measured update/restore,fixed source version,real query consumer,no covariance scheduler or workload proof
+C02,multitask regression,correlated GP,separable cancellation has extra assumptions,posterior conditioning,arbitrary W not covered by cancellation theorem
+C03,constrained BO,EI and entropy acquisition,independent GPs in PESC,candidate selection,joint gain/constraint EI requires joint marginal
+C04,ranking and selection,correlated knowledge gradient,noisy evaluation; posterior-mean terminal reward,query value,not measured-only exact terminal eligibility
+C05,gate sizing,calibrated internal plus signoff timer,older benchmark/engine,cheap versus accurate timing,no modern superiority extrapolation
+C06,local timing estimation,STA slew bias/table models,implementation-specific,strong analytical mean,residual exploitable structure unknown
+C08/C09,MCMM post-CTS contest,baseline/evaluator/constraints,broader than proposed slice,current demand context,not exact single-scenario workload
+C10,timing-power sizing,differentiable gradients,abstract only,strong alternate family,full algorithm comparison unresolved
