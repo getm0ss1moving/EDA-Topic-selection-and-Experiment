@@ -1,0 +1,58 @@
+{
+  "role": "proposer",
+  "actor_id": "ChatGPT-P05-TIMING-B03-EDA-0007",
+  "session_id": "5353d53c-1279-4e6e-8f34-409221f059aa",
+  "job_id": "71796cdb-9158-417c-a464-60098bf7452a",
+  "topic": "EDA-0007",
+  "domain": "D05",
+  "batch": "0003",
+  "batch_round": 1,
+  "batch_round_limit": 4,
+  "input_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+  "packet_sha256": "8d27771f88c17fa1ac3ec3b3a02d3f7cd8f1b4d9e8572341d5ee8cc681d52632",
+  "phase": "research",
+  "assessment": "revise",
+  "scientific_position": "conditional hypothesis; no pilot readiness or demonstrated EDA system delta",
+  "tasklist_sha256": "2c2d7ee1b4e6a731d301942eda9924a571fc48902b5dfe71b979054852f9c1ba",
+  "historical_inputs": [
+    "SUB-e0cef865c5877d07c062554b61e073024cb0f6ed28b7ef45f31c19d7a5cb335a",
+    "SUB-373c606bec3ab48f9ff6871096ef98823c923e7a784f7873c19f1ddea7ca1b1c",
+    "SUB-f1c9f13a026274de52f4988e533f9ccc40d00088efdf163f11c15edfebd76c47"
+  ],
+  "reviewed_adjudication": "SUB-f1c9f13a026274de52f4988e533f9ccc40d00088efdf163f11c15edfebd76c47",
+  "adjudicated_objections_addressed": [
+    "OBJ-001",
+    "OBJ-002"
+  ],
+  "independent_current_verification": false,
+  "experiment_consent": "revision_requested",
+  "new_eda_runs": 0,
+  "training_runs": 0,
+  "new_paid_api_calls": 0,
+  "validation_scope": "Standalone trusted freeze/verify plus packet/input hashes, own arithmetic and supplied ledger validation. Whole-repository project.py validate belongs to coordinator publication; unavailable repository not accessed.",
+  "output_paths": [
+    "release/",
+    "submissions/",
+    "runs/",
+    "result.json"
+  ],
+  "coverage": {
+    "duplicate_prior_art": "unresolved",
+    "mechanism": "conditional",
+    "composition": "unresolved",
+    "demand": "unresolved",
+    "industry_gap": "unresolved",
+    "headroom": "unresolved",
+    "contests": "unresolved",
+    "experiments": "not_ready",
+    "cost": "unmeasured"
+  },
+  "progress": [
+    "One-step measured-only local regret reduced to joint CEI and inappropriate factorization tested.",
+    "D made latent per-index discrepancy; exact observed entries zero variance; same-feature GP exact parity.",
+    "Bounded non-Gaussian two-query information witness supplied separately from Gaussian physical hypothesis.",
+    "2027 public description text recovered and selected evaluator code/current calibration primary method reopened."
+  ],
+  "required_next_review": "New independent challenger and verifier on this frozen revision; protocol audit remains separate.",
+  "created_utc": "2026-10-15T13:44:39.295743+00:00"
+}

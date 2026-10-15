@@ -1,0 +1,7 @@
+{
+  "session_id": "5353d53c-1279-4e6e-8f34-409221f059aa",
+  "decision": "revision_requested",
+  "signed_revision": null,
+  "tasklist_sha256": null,
+  "rationale": "Current revised task list still lacks lawful workload/adapter/owners/resources/thresholds and independent agreement. No experiment consent; future signatures must bind one earlier immutable proposal and exact task-list SHA256."
+}

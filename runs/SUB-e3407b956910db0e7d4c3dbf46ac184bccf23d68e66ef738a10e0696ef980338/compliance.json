@@ -1,0 +1,126 @@
+{
+  "schema": 1,
+  "role": "challenger",
+  "actor_id": "ChatGPT-C05-TIMING-B03-EDA-0007",
+  "session_id": "b789be3f-0354-4526-807b-b75b91d1f374",
+  "input_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+  "packet_sha256": "370dd0d14ce8fee3864991b64280be571a92d7591ca2400a9932e89a86949a65",
+  "job_id": "701e2344-fa63-48b9-a4e7-393c80f45e9d",
+  "read_releases": [
+    "SUB-8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0
+  },
+  "rules": {
+    "inputs": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "search-log.md",
+        "challenges.md",
+        "workflow.json"
+      ],
+      "limits": "Self-authored activity report, not an OS or backend attestation; independent review remains necessary."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "search-log.md",
+        "challenges.md",
+        "workflow.json"
+      ],
+      "limits": "Self-authored activity report, not an OS or backend attestation; independent review remains necessary."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "search-log.md",
+        "challenges.md",
+        "workflow.json"
+      ],
+      "limits": "Self-authored activity report, not an OS or backend attestation; independent review remains necessary."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "search-log.md",
+        "challenges.md",
+        "workflow.json"
+      ],
+      "limits": "Self-authored activity report, not an OS or backend attestation; independent review remains necessary."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "search-log.md",
+        "challenges.md",
+        "workflow.json"
+      ],
+      "limits": "Self-authored activity report, not an OS or backend attestation; independent review remains necessary."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "experiment-consent.json"
+      ],
+      "limits": "Self-authored activity report, not an OS or backend attestation; independent review remains necessary."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "independent-estimate.md",
+        "runs/rank-check.json"
+      ],
+      "limits": "Self-authored activity report, not an OS or backend attestation; independent review remains necessary."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "search-log.md",
+        "challenges.md",
+        "workflow.json"
+      ],
+      "limits": "Self-authored activity report, not an OS or backend attestation; independent review remains necessary."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "search-log.md",
+        "challenges.md",
+        "workflow.json"
+      ],
+      "limits": "Only self-freeze; coordinator must perform full-repository validation and PR transport. No merge or self-approval."
+    }
+  },
+  "operations": [
+    "Read JOB.json and prompt.txt first; read job-local common policies and CHALLENGER harness only.",
+    "Read current released proposal, plan, task list, direction control, sources and null forecast; no predecessor release body read.",
+    "Independent web research documented in search-log.md and S01-S10.",
+    "Own six-row Fraction algebra wrote runs/rank-check.json; no EDA execution.",
+    "Write role-owned release files and own scratch/write_release.py; use trusted freeze/verify and local compliance validation; write result.json."
+  ],
+  "incidents": [
+    {
+      "kind": "nonexposure_tool_error",
+      "detail": "Initial own-harness path guess policy/harnesses/CHALLENGER.md absent; corrected inside policy only. No foreign harness opened."
+    },
+    {
+      "kind": "access_limit",
+      "detail": "Contest summary slide click resolution failed; methods remain uninspected."
+    }
+  ],
+  "observability": "Self-authored public activity ledger, not a complete tool trace or evidence of absent undisclosed actions."
+}

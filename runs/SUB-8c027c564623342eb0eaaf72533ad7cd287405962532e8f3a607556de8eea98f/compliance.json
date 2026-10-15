@@ -1,0 +1,200 @@
+{
+  "schema": 1,
+  "role": "proposer",
+  "actor_id": "ChatGPT-P05-TIMING-B03-EDA-0007",
+  "session_id": "5353d53c-1279-4e6e-8f34-409221f059aa",
+  "input_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+  "packet_sha256": "8d27771f88c17fa1ac3ec3b3a02d3f7cd8f1b4d9e8572341d5ee8cc681d52632",
+  "job_id": "71796cdb-9158-417c-a464-60098bf7452a",
+  "read_releases": [
+    "SUB-e0cef865c5877d07c062554b61e073024cb0f6ed28b7ef45f31c19d7a5cb335a",
+    "SUB-373c606bec3ab48f9ff6871096ef98823c923e7a784f7873c19f1ddea7ca1b1c",
+    "SUB-f1c9f13a026274de52f4988e533f9ccc40d00088efdf163f11c15edfebd76c47"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0
+  },
+  "rules": {
+    "inputs": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "prompt.txt",
+        "policy/PACKET.json",
+        "search-log.md:Public run provenance",
+        "responses.md:Release-bound responses"
+      ],
+      "limits": "Only job policy/own proposer harness, released H01-H03 and independently public sources used. Host preloaded generic workspace/user/tool context, including common repository instructions; no file-based checkout discovery. Logical-session freshness and backend model are not independently attested."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "compliance.json:activity",
+        "sources.json:H01-H03",
+        "policy/docs/ISOLATION.md"
+      ],
+      "limits": "No foreign private file/session/memory/transcript or agent messages accessed by this execution. This is self-report under a shared OS, not proof about unseen actions or adversarial confinement. Released review was unblinded."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "release/",
+        "scratch/",
+        "runs/",
+        "submissions/",
+        "result.json"
+      ],
+      "limits": "All task-created files are relative to the absolute assigned job root; policy and supplied released inputs not modified. Freeze makes new immutable own output; no repository edits. OS/tool internal caching is not independently observed."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "sources.json",
+        "search-log.md",
+        "contest-audit.md:Locator convention"
+      ],
+      "limits": "Primary selected sections and access limits stated; R10 public PDF extraction succeeded after web parser failure. Current winner methods remain unresolved. Search is not exhaustive and full access does not mean every section was read."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "proposal.md:Claim ledger",
+        "experiment-plan.md:EXP-000",
+        "forecast.json"
+      ],
+      "limits": "Exact own algebra is separate from EDA measurements and calibration. Finite transfer law is non-Gaussian, Gaussian identity arbitrary, forecasts numeric null. No novelty/acceptance/signoff or backend attestation claimed."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "experiment-consent.json",
+        "tasklist.md:EXP-CONSENT",
+        "workflow.json:tasklist_sha256"
+      ],
+      "limits": "Only current proposer revision-request status is emitted; no agreement or signature for another role. New task list requires future matching independent signatures on same prior frozen proposal; no consent inherited."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "experiment-plan.md:Current authorization",
+        "compliance.json:activity",
+        "policy/docs/INNOVATION-BATCH-0003.md"
+      ],
+      "limits": "Only source reading, PDF text extraction, own constant-size Fraction arithmetic and metadata checks; no EDA build/flow, fitting/training, GPU/remote or new paid-API execution. Historical resource caps/smoke are not current grants."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "direction-control.json",
+        "responses.md:Direction assessment",
+        "proposal.md:Direction, feasibility and position"
+      ],
+      "limits": "Both drift scores0 are own anchor-consistency assessments, not independent merit. Physical contrast mechanism/user remain, one-step attribution corrected and same-feature equivalence retained. No successor or scope expansion started."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "workflow.json:validation_scope",
+        "search-log.md:Public run provenance",
+        "policy/docs/SELF-SUBMISSION.md"
+      ],
+      "limits": "Trusted self-freeze/verify used; coordinator must publish via transport PR and full repository validation. No PR approval/merge or external message by this role. Mechanical checks do not establish scientific approval."
+    }
+  },
+  "operations": [
+    {
+      "operation": "initial input read",
+      "references": [
+        "JOB.json",
+        "prompt.txt"
+      ],
+      "detail": "First filesystem call read exactly the two job files by absolute paths; later discovery limited to job policy/released inputs/output."
+    },
+    {
+      "operation": "policy and own harness",
+      "references": [
+        "policy/docs/CHARTER.md",
+        "policy/docs/WORKFLOW.md",
+        "policy/docs/EVIDENCE.md",
+        "policy/docs/ISOLATION.md",
+        "policy/docs/CODEX-AUTOMATION.md",
+        "policy/docs/ROLE-COMPLIANCE.md",
+        "policy/docs/SELF-SUBMISSION.md",
+        "policy/docs/INNOVATION-BATCH-0003.md",
+        "policy/docs/INNOVATION-STRATEGY.md",
+        "policy/harness/PROPOSER.md",
+        "policy/AGENTS.md",
+        "policy/domains/D05/brief.json",
+        "policy/config/research-brief.json"
+      ],
+      "detail": "No foreign role harness read. Standalone policy snapshot only; checkout governance not inspected."
+    },
+    {
+      "operation": "released history",
+      "references": [
+        "SUB-e0cef865c5877d07c062554b61e073024cb0f6ed28b7ef45f31c19d7a5cb335a",
+        "SUB-373c606bec3ab48f9ff6871096ef98823c923e7a784f7873c19f1ddea7ca1b1c",
+        "SUB-f1c9f13a026274de52f4988e533f9ccc40d00088efdf163f11c15edfebd76c47",
+        "shared/predecessor.json"
+      ],
+      "detail": "Historical anchor, adjudicated objections and task requests read; current input payload hashes all matched. No signature/approval inherited."
+    },
+    {
+      "operation": "independent external research",
+      "references": [
+        "sources.json:R01-R15",
+        "search-log.md",
+        "contest-audit.md",
+        "runs/retrieval.json"
+      ],
+      "detail": "Searches and public primary reading; selected raw source/data retrieval only. Downloaded code never imported/executed. No benchmark netlist/PDK download or credentials."
+    },
+    {
+      "operation": "own analytical execution",
+      "references": [
+        "experiment-plan.md:Complete reproduction script",
+        "runs/analytical.json"
+      ],
+      "detail": "Standard-library exact Gaussian/finite-law arithmetic; model parity, one-step equality, two-step logical witness and invalid CEI-factorization counterexample. Not EDA experiment/training."
+    },
+    {
+      "operation": "author own release",
+      "references": [
+        "release/proposal.md",
+        "release/responses.md",
+        "release/direction-control.json",
+        "release/tasklist.md",
+        "release/experiment-plan.md",
+        "release/forecast.json",
+        "release/sources.json",
+        "release/search-log.md",
+        "release/prior-art.csv",
+        "release/contest-audit.md",
+        "release/industry-gap.md",
+        "release/compliance.json",
+        "release/workflow.json",
+        "release/experiment-consent.json"
+      ],
+      "detail": "English scientific artifacts, research revise position, no performance/consent fabrication."
+    },
+    {
+      "operation": "integrity and self-submission procedure",
+      "references": [
+        "policy/scripts/role_submission.py",
+        "policy/scripts/role_compliance.py",
+        "runs/local-checks.json",
+        "submissions/",
+        "result.json"
+      ],
+      "detail": "Trusted freeze/verify and supplied ledger validation before final result. Full repository validation delegated to coordinator under job instruction; no checkout access. Actual release and verification status recorded in result.json/local run record."
+    }
+  ],
+  "incidents": [],
+  "observability": "Self-authored public activity ledger, not a complete tool trace or evidence of absent undisclosed actions. Shared-host/backend isolation and model identity are not independently certified. Web parser/retrieval failures are access limitations, not inferred misconduct."
+}

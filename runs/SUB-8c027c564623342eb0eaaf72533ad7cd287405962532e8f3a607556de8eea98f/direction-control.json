@@ -1,0 +1,86 @@
+{
+  "state": "continue",
+  "anchor": {
+    "problem": "Choose which immutable-base legal critical-driver replacement to measure, then return a measured candidate with useful timing-quality/cost tradeoff.",
+    "engineering_user": "Timing-optimization developer using a local arrival-scoring replacement consumer.",
+    "downstream_need": "Reduce fully charged measured-selection time at justified local-regret and global WNS/TNS/ERC tolerances; utility remains unverified.",
+    "causal_mechanism": "Signed candidate-minus-base electrical sensitivities parameterize shared residual contrast covariance; bundled measurements update the table used by a bounded regret-per-cost controller.",
+    "mechanism_invariants": [
+      "Same immutable checkpoint and ordered legal alternatives for every baseline/query.",
+      "Candidate contrasts, not dense full-vector outputs or generic shared exact execution.",
+      "No future labels or unavailable stage information in unmeasured inputs.",
+      "Reference query bundles objective/constraint results and verifies restoration.",
+      "Only measured candidates may be returned; final full guards; no exact best-choice or probabilistic-coverage claim.",
+      "Same-feature joint and latent-factor GP with same controller are mandatory strongest comparisons.",
+      "Global timing/electrical utility and complete cost ledger remain necessary."
+    ],
+    "forbidden_pivots": [
+      "Adding agents, training data or extra EDA trials to hide failure of contrast covariance.",
+      "Replacing the objective by RMSE without downstream demand.",
+      "Claiming exact all-candidate decisions, silicon signoff or expanded MCMM/SI/hold scope.",
+      "Resurrecting EDA-0006 generic mask-execution novelty or changing its full-vector contract under its old ID."
+    ]
+  },
+  "penalties": {
+    "combination_drift": {
+      "score": 0,
+      "rationale": "Preserves physical contrast W, bundled deterministic observations and measured-only decision; repairs one-step attribution and explicitly identical GP representation. No new model/controller novelty substituted.",
+      "evidence_refs": [
+        "proposal.md:Physical feature construction hypothesis",
+        "proposal.md:Repaired controller",
+        "responses.md:OBJ-001"
+      ]
+    },
+    "demand_drift": {
+      "score": 0,
+      "rationale": "Same timing developer/local-selection need and global guards; local proxy relationship remains unresolved rather than silently replacing demand.",
+      "evidence_refs": [
+        "proposal.md:Problem, demand and oracle",
+        "industry-gap.md",
+        "EXP-005",
+        "EXP-006"
+      ]
+    },
+    "total": 0
+  },
+  "revision_assessment": {
+    "preserves_problem": true,
+    "preserves_engineering_need": true,
+    "preserves_causal_mechanism": true,
+    "changes": [
+      "Replace redundant one-step regret fantasies with direct joint CEI.",
+      "Make D latent per-index discrepancy; exact observations have zero posterior variance.",
+      "Specify a bounded two-axis W recipe and equal-cost two-query diagnostic.",
+      "Treat identical W GP as exact parity control, not a superiority target.",
+      "Separate modeled local feasibility from full reference acceptance.",
+      "Update public 2027 source/description and full-text calibration prior."
+    ],
+    "reason": "Anchor-preserving analytical/source repair in owner-authorized additional batch; empirical merit remains unresolved."
+  },
+  "abandonment": {
+    "decision_id": null,
+    "grounds": [],
+    "rationale": null,
+    "evidence_refs": [],
+    "consents": {
+      "proposer": {
+        "session_id": null,
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      },
+      "challenger": {
+        "session_id": null,
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      }
+    },
+    "successor_topic_id": null,
+    "resurrection_conditions": [
+      "New batch authorizes exactly four additional research cycles across successors, not EDA experiments.",
+      "Any future pilot still needs source/data/adapter/owner/resource/threshold readiness, exact-task P/C agreements and independent verification.",
+      "Retain historical park, negative evidence and source/observation limits; three unsuccessful additional cycles trigger park per batch policy."
+    ]
+  }
+}
