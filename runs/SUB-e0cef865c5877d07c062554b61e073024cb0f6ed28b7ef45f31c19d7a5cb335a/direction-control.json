@@ -1,0 +1,73 @@
+{
+  "state": "continue",
+  "anchor": {
+    "problem": "Choose which immutable-base legal critical-driver replacement to measure, then return a measured candidate with useful timing-quality/cost tradeoff.",
+    "engineering_user": "Timing-optimization developer using a local arrival-scoring replacement consumer.",
+    "downstream_need": "Reduce fully charged measured-selection time at justified local-regret and global WNS/TNS/ERC tolerances; utility remains unverified.",
+    "causal_mechanism": "Signed candidate-minus-base electrical sensitivities parameterize shared residual contrast covariance; bundled measurements update the table used by a bounded regret-per-cost controller.",
+    "mechanism_invariants": [
+      "Same immutable checkpoint and ordered legal alternatives for every baseline/query.",
+      "Candidate contrasts, not dense full-vector outputs or generic shared exact execution.",
+      "No future labels or unavailable stage information in unmeasured inputs.",
+      "Reference query bundles objective/constraint results and verifies restoration.",
+      "Only measured candidates may be returned; final full guards; no exact best-choice or probabilistic-coverage claim.",
+      "Same-feature joint and latent-factor GP with same controller are mandatory strongest comparisons.",
+      "Global timing/electrical utility and complete cost ledger remain necessary."
+    ],
+    "forbidden_pivots": [
+      "Adding agents, training data or extra EDA trials to hide failure of contrast covariance.",
+      "Replacing the objective by RMSE without downstream demand.",
+      "Claiming exact all-candidate decisions, silicon signoff or expanded MCMM/SI/hold scope.",
+      "Resurrecting EDA-0006 generic mask-execution novelty or changing its full-vector contract under its old ID."
+    ]
+  },
+  "penalties": {
+    "combination_drift": {
+      "score": 0,
+      "rationale": "Initial new-topic anchor; known components eligible but useful delta unresolved.",
+      "evidence_refs": [
+        "proposal.md: three-lens shortlist and mechanism"
+      ]
+    },
+    "demand_drift": {
+      "score": 0,
+      "rationale": "Initial consumer is explicit; demand is provisional and not equated to demonstrated utility.",
+      "evidence_refs": [
+        "S02: estimate/arrivalDelay",
+        "industry-gap.md"
+      ]
+    },
+    "total": 0
+  },
+  "revision_assessment": {
+    "preserves_problem": true,
+    "preserves_engineering_need": true,
+    "preserves_causal_mechanism": true,
+    "changes": [],
+    "reason": "Initial EDA-0007 successor anchor; not a revision or inherited acceptance of parked EDA-0006."
+  },
+  "abandonment": {
+    "decision_id": null,
+    "grounds": [],
+    "rationale": null,
+    "evidence_refs": [],
+    "consents": {
+      "proposer": {
+        "session_id": null,
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      },
+      "challenger": {
+        "session_id": null,
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      }
+    },
+    "successor_topic_id": null,
+    "resurrection_conditions": [
+      "After cycle-4 independent reviews, no automatic continuation. A separately authorized restart and resolved novelty/utility/data/owner/resource/consent gates are required."
+    ]
+  }
+}

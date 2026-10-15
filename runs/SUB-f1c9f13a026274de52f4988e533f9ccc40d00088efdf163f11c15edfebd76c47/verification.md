@@ -1,0 +1,41 @@
+# Verification
+
+| Input / identity | Value |
+|---|---|
+| Topic / exact pair | EDA-0007; proposer SUB-e0cef865c5877d07c062554b61e073024cb0f6ed28b7ef45f31c19d7a5cb335a; adjudicated challenger SUB-373c606bec3ab48f9ff6871096ef98823c923e7a784f7873c19f1ddea7ca1b1c |
+| Input / digest | f68c1492c05be3fac5622deac4bb479eabf957de; released-proposer directory digest 99059f68c576e915ce36d759f49a1836e50a1bee99f3342bbc99fe9b6cfa3cfc (includes manifest; not canonical promotion digest) |
+| Verifier / packet | ChatGPT-V05-TIMING-EDA-0007; 70cb4f98-b54d-4c6d-add6-4d862ef9f663; b0e79f87e9cb3689351f02931cec1e77360523e206044ce2643a225b0cac6ea2 |
+| Provenance / independence | Current P/C manifest files rehashed successfully; distinct declared logical sessions. Only released stage inputs/external sources used. Unblinded, including forecast. Policy isolation on shared OS; physical model/session isolation not independently attested. |
+| Decision / reversal | **park**, final cycle4/4. Retain a conditional research hypothesis; no pilot, abandonment or fifth cycle. Reopen only with separate authorization, acquisition repair, lawful workload/adapter/cost/calibration evidence, updated prior-art audit, actual owners/resources and matching exact-task consents. |
+
+| Claim / objection | Source + exact locator | Verdict | Blocks advancement? | Reason / required action |
+|---|---|---|---|---|
+| OBJ-001 (all literal current-release occurrences) | Current proposal Controller3; V03 §2.1/§3; V04 §2 Eq2 | valid | yes | For one-step fixed-set measured-only return: R(H)=E[M|H]-b and expected reduction=E[(g_q-b)+1(feasible)|H]. Tower property cancels M. History-fixed cost division preserves constrained-EI ranking. Correlated objective/feasibility must remain joint. Correct attribution and add direct-EI/common-sample equality test; no implication that future posterior transfer is useless. |
+| OBJ-002 (all literal current-release occurrences) | V06 title/Resources/Timeline; V07 lines0-7,128-174; V08 official link | valid | no, documentary correction | 2027 material exists at pinned commit. It covers broader post-CTS MCMM setup/hold and provisional weights; revise newest-material audit without expanding proposal. Description PDF/winner mechanisms remain unchecked, not absent. |
+| CLM-701 actual consumer | V01 estimate40-61, arrival101-109, restore115-122; V02 buildContext1236-1268 | partially_valid | yes for utility/readiness | Temporary replacement local-arrival consumer and path-window estimator exist. Complete state restoration, slew/global guards, enough alternatives and runtime bottleneck not established. Raw source locator numbering differs from normalized web lines; functions identify exact scope. |
+| CLM-702 prior coupled modeling/sizing | V09 method web242; V10 §II.B/introduction; V11 §3.1 | valid | no as bounded observation | Coupled timing prediction, electrical modeling and calibrated sizing are prior. These do not establish complete duplication. Broad novelty claims are appropriately avoided; current winner/full-method audit incomplete. |
+| CLM-703 covariance mechanism / B5 reduction | V05 §2 Eq1-2 / §2.3 Eq6-9; current W model | partially_valid | yes | Wz+epsilon induces exactly kernel W Omega W^T+D with identical mean, latent residuals and observations. Same-feature GP matches posterior/policy; physically useful W construction/calibration may still contribute. Separable noiseless cancellation is not universal. D must not leave exactly queried deterministic labels noisy. EDA residual validity unknown. |
+| CLM-704 witnesses | Proposal EXP-000; independent Fraction assertions | valid | no for arithmetic only | Contrast variances2/20/38, conditional19/10 and affine rank reversal checked. Synthetic electrical analogy is not Liberty/RC realizability, prevalence, calibration or speedup. |
+| CLM-705 downstream benefit | V01 local score; proposal EXP-002–007 | unresolved | yes | Local score need not improve WNS/TNS/ERC; cost savings unknown after probes, labels, fitting, acquisition, restoration, guards and fallback. No numerical gain/industry superiority established. |
+| CLM-706 resources/industry/forecast | Owner batch brief; current task list/forecast; JOB | valid | yes for readiness | No new experiment allocation or calibrated forecast; null forecast appropriate. Vendor internals and commercial gap unknown, not evidence of absence. Historical smoke is not compatible modern adapter/data proof. |
+| CLM-707 predecessor boundary | Explicitly released predecessor verification.json decision/consents; current responses | valid | no | Predecessor record is parked and lacks matching consents; retain negative record. It is documentary history, not independent approval of EDA-0007. Numeric OBJ IDs are release-bound, not merged with predecessor allegations. |
+| Cost/headroom/exactness limits | Current contract/ledger; V01/V02; OBJ-001 derivation | unresolved | yes | No applicable saturation bound, no measured headroom or calibrated guarantee. Selected-candidate guard does not certify missed optimum. Tiny candidate counts/exact incremental cost may erase gain. |
+
+| Gate | Result | Evidence / missing prerequisite |
+|---|---|---|
+| Novelty | unresolved / false | Statistical representation and literal acquisition known/reducible; useful W/integration delta and current full-method/winner overlap unresolved. Known components are eligible; no theorem/super-additivity requirement. |
+| Mechanism | conditional / false | Coherent covariance and transfer hypothesis; one-step attribution needs repair, circuit residual/held-out calibration absent. |
+| Engineering utility | unresolved / false | Concrete consumer; no bottleneck, candidate volume, quality tolerances or downstream benefit evidence. |
+| Contest originality | unresolved / false | Newer pinned rules available; narrower slice not full contest solution; winner methods not verified. |
+| Headroom | unresolved / false | Neither exhausted nor demonstrated; exact-query and calibration costs unknown. |
+| Feasibility | not ready / false | Modern compatible adapter/build/rights, labels, owners, resource allocation and threshold justification missing. Dormant task list is useful planning, not execution authority. |
+| Direction integrity | pass / true; combination0, demand0 | Initial new-topic anchor; no unsupported drift. This is not a merit score. |
+| Experiment consensus | absent / false | Original task-list SHA256 a4c2e28833a336ef92eec93be34fb869b1eb4db58c0f9c40404428e9a4fa8621; no two matching agreements. Challenger amendments C-001–004 are not signatures and must be integrated/re-frozen before future consent. |
+
+| Audit / task-list position | Evidence and limit |
+|---|---|
+| Exact ID coverage | Entire included challenger release scanned; only OBJ-001 and OBJ-002 occur, including tasklist/estimate/workflow/source references; both adjudicated above. Predecessor challenger release is not included as a newly adjudicated release. |
+| Surviving cheapest work | Before any fitting: formalize one-step terminal loss/residual semantics, compare direct joint-EI and fantasy actions with common samples, then test second-step posterior transfer; pin 2027 description/code and winner methods. Future authorized diagnostic must establish lawful candidate volume, signed residuals, restore correctness and full cost. Keep measured-only return and global guards. |
+| Independent finite check | Python3 Fraction enumeration re-executed: same/opposite/independent laws yield prior regrets1/2,1,3/4; each query reduction1/2. Covariance/affine assertions also passed. Constant-size arithmetic only, no EDA/model training or representative result. |
+| Source/search record | Exact reopened URLs, locators, versions, access limits, queries and commands are in verification.json.source_checks/search_log/checks_run. Selected source sections only. Two expansion searches left winner/newer-method risk; search budget ended, no exhaustive novelty clearance. |
+| Submission / validation | Standalone digest and current input hashes checked; trusted freeze/verify used. Whole-repository validate belongs to coordinator per JOB; withheld checkout not accessed. Freeze confirms transport integrity, not scientific acceptance. No matching abandonment vote, universal dead end or theoretical exhaustion inferred. |

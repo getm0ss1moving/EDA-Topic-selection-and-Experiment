@@ -1,0 +1,20 @@
+{
+  "kind": "forecast_not_measurement",
+  "metric": "Fully charged wall time at a frozen feasible local-arrival-regret tolerance and acceptable global WNS/TNS/ERC outcome",
+  "unit": "seconds with regret in ps",
+  "baseline_source": "S01-S03 and B0/B1/B4/B5 conditional audited builds",
+  "direction": "lower time at matched justified decision quality",
+  "pessimistic": null,
+  "base": null,
+  "optimistic": null,
+  "confidence": null,
+  "assumptions": [
+    "Candidate counts and exact-query bottleneck not measured.",
+    "Calibration data and useful intervention-dependent covariance not established.",
+    "Current analytical slew calibration and same-feature GP may erase all useful delta.",
+    "No actual experiment allocation or dual consent."
+  ],
+  "calibration_plan": "Use EXP-002 transaction ledger and EXP-003 held-out contrast calibration; freeze utility tolerance/statistics in EXP-005 before any confirmatory outcome.",
+  "observed_results": "Only standard covariance arithmetic EXP-000; no EDA or fitting measurements.",
+  "screening_threshold_status": "Inherited >=20% runtime screen is provisional; endpoint-error allowance does not establish permitted choice regret."
+}
