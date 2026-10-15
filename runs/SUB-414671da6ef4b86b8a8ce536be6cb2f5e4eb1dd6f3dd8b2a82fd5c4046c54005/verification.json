@@ -1,0 +1,423 @@
+{
+  "verifier_session": "af1bc870-0e06-409c-97d6-94cd099f151a",
+  "actor_id": "ChatGPT-V04-PHYSICAL",
+  "input_commit": "a48f03d4bc254c0b0957d0fe0f265e072d6cf49a",
+  "packet_sha256": "635bbfb54195cb9a9d3d2a6fd7c72aa9b36219fa7a05fae2b67cc88d79a7d9fd",
+  "decision": "park",
+  "batch_round": 3,
+  "reviewed_proposer_release": "SUB-ef21f90bce1ab37f7cc070a9f312bd0474a5b7ff3f9537ccfbf67dc25bb4c05a",
+  "adjudicated_challenger_releases": [
+    "SUB-68d9be41f42f0dd24e0eff25e15b4e967b5d922e06ff3a01b97b12432ef7f328"
+  ],
+  "dossier_digest": "ffc237163bbf331ef40dbbeda2f45f5660cf75428f8f3d0a6b8c4fce8e7626f2",
+  "digest_scope": "project.py digest exact released proposer directory including manifest; not combined canonical dossier",
+  "gates": {
+    "novelty": false,
+    "mechanism": false,
+    "utility": false,
+    "contest_originality": false,
+    "headroom": false,
+    "feasibility": false,
+    "direction_integrity": true,
+    "experiment_consensus": false
+  },
+  "direction_penalty_checked": true,
+  "direction_penalties": {
+    "combination_drift": 0,
+    "demand_drift": 0,
+    "total": 0
+  },
+  "experiment_consensus_checked": true,
+  "abandonment_process_checked": true,
+  "experiment_consensus": {
+    "proposer_session": "1a859cdd-08fa-46af-a2fe-1a6fc872d695",
+    "challenger_session": "f29f2abb-ad12-4c6f-8446-e384bd6ae66d",
+    "tasklist_sha256": "75fd2c100eaeb7e0d2cec899aea75906e04a8910d246fe40bcaa8c8b1fd4e9a9",
+    "signed_revision": null,
+    "matching_consents": false,
+    "reason": "No experiment consent files in current P/C releases. Task list is a concrete dependency plan, not executable physical readiness."
+  },
+  "abandonment_reason": "No signed joint target/digest, no verified exhausted novelty or empirical dead end. Parking is not abandonment; verifier supplies neither consent.",
+  "source_checks": [
+    {
+      "id": "V01",
+      "url": "https://motion.cs.illinois.edu/papers/wafr2012-constraintremoval.pdf",
+      "locator": "printed pp.5\u20136 \u00a73.2; p.9 \u00a74.1",
+      "access_level": "full",
+      "verdict": "valid",
+      "reason": "Vertex/label-union search and subset dominance; supports target selection mapping, not physical reembedding or delay.",
+      "retrieved_utc": "2026-10-15"
+    },
+    {
+      "id": "V02",
+      "url": "https://www.cse.cuhk.edu.hk/~byu/papers/J166-TCAD2026-SATRoute.pdf",
+      "locator": "TCAD45(5), pp.2137\u20132138 \u00a7III A\u2013D, Eqs.4\u20135, Algorithm1",
+      "access_level": "full",
+      "verdict": "valid",
+      "reason": "Browser failed; author PDF independently downloaded and pdftotext read. Retained-net capacity predicates and UNSAT-core assumption relaxation. Overflow predicate differs from target-budget reachability; no cardinality optimum promised.",
+      "retrieved_utc": "2026-10-15"
+    },
+    {
+      "id": "V03",
+      "url": "https://arxiv.org/html/2209.14471",
+      "locator": "\u00a74.1 Eq.8 and following separation discussion",
+      "access_level": "full",
+      "verdict": "valid",
+      "reason": "Invalid contiguous edge-combination cuts are added lazily; generic failure cuts are prior, not proof of full owner-policy equivalence.",
+      "retrieved_utc": "2026-10-15"
+    },
+    {
+      "id": "V04",
+      "url": "https://www.cse.cuhk.edu.hk/~byu/papers/J27-TCAD2018-MCFRoute.pdf",
+      "locator": "TCAD37(1), pp.219\u2013221 \u00a7\u00a7III\u2013IV Eqs.1\u20134; \u00a7V spacing",
+      "access_level": "full",
+      "verdict": "valid",
+      "reason": "Browser failed; author PDF independently downloaded, extracted and inspected. Concurrent flow/capacity reconstruction is prior; whole-design timing utility and exact R3 policy superiority do not follow.",
+      "retrieved_utc": "2026-10-15"
+    },
+    {
+      "id": "V05",
+      "url": "https://chengengjie.github.io/papers/C17-GLSVLSI21-DR.pdf",
+      "locator": "GLSVLSI2022 pp.2\u20133 \u00a72.1, Figs.2\u20134",
+      "access_level": "full",
+      "verdict": "valid",
+      "reason": "Downloaded author PDF inspected. Pseudo pins retain external route connections; rip-up regions are merged/adapted. Header verifies 2022 despite URL filename.",
+      "retrieved_utc": "2026-10-15"
+    },
+    {
+      "id": "V06",
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/src/drt/src/dr/FlexDR_maze.cpp",
+      "locator": "lines1477\u20131541; OR_SEED lines1508\u20131519",
+      "access_level": "full",
+      "verdict": "valid",
+      "reason": "SHA256 7da69da52d434f63c9d535d0b63c7f5c7a11b810168fcbd46a0e93d9fe068b15 rechecked. Seed-bearing net sorter and queue sorter differ. Actual branch/geometry perturbation not executed.",
+      "retrieved_utc": "2026-10-15"
+    },
+    {
+      "id": "V07",
+      "url": "https://www.ispd.cc/contests/18/",
+      "locator": "Abstract/Fig.1; evaluation kit",
+      "access_level": "full",
+      "verdict": "valid",
+      "reason": "Initial-route disruption and detour motivation only; not representative clean-route opportunity incidence.",
+      "retrieved_utc": "2026-10-15"
+    },
+    {
+      "id": "V08",
+      "url": "https://link.springer.com/article/10.1007/s10107-023-01962-4",
+      "locator": "\u00a75.1\u20135.2",
+      "access_level": "full",
+      "verdict": "valid",
+      "reason": "Public full HTML accessed. Incremental routing and existing-wire backup/reservations are relevant competing policies; no quantitative transfer to R3.",
+      "retrieved_utc": "2026-10-15"
+    },
+    {
+      "id": "V09",
+      "url": "https://arxiv.org/html/2511.12203v1",
+      "locator": "\u00a74.1 overlap stage and \u00a74.2 displacement stage",
+      "access_level": "full",
+      "verdict": "valid",
+      "reason": "Selection of path overlaps followed by obstacle motion is prior outside EDA; no full fixed-route equivalence established.",
+      "retrieved_utc": "2026-10-15"
+    },
+    {
+      "id": "V10",
+      "url": "https://www.or.uni-bonn.de/~hougardy/paper/HougardySchurks2023%20Decision-guided%20SAT%20for%20standard%20cell%20routing.pdf",
+      "locator": "PDF p.13 \u00a74.2; p.12\u201313 \u00a74.1",
+      "access_level": "full",
+      "verdict": "valid",
+      "reason": "Whole-net backjumping with partial-removal fallback is an existing control mechanism. Reported BCP overhead is not a transferable R3 bound.",
+      "retrieved_utc": "2026-10-15"
+    },
+    {
+      "id": "V11",
+      "url": "https://arxiv.org/html/2606.13834",
+      "locator": "\u00a74 Graph Elements, MCR example; scoring functions",
+      "access_level": "full",
+      "verdict": "valid",
+      "reason": "Custom removable obstacles retain reachability. Relevant broader search lead, not demonstrated strongest EDA baseline.",
+      "retrieved_utc": "2026-10-15"
+    },
+    {
+      "id": "V12",
+      "url": "https://www.ispd.cc/contests/25/index.html",
+      "locator": "title and Contest Winners",
+      "access_level": "full",
+      "verdict": "valid",
+      "reason": "Official scope/list accessed; winner core policies not audited; contest novelty remains unresolved.",
+      "retrieved_utc": "2026-10-15"
+    },
+    {
+      "id": "V13",
+      "url": "https://arxiv.org/pdf/2610.12609v1",
+      "locator": "v1 \u00a7III A\u2013C, Algorithms1\u20133",
+      "access_level": "full",
+      "verdict": "valid",
+      "reason": "Primary PDF reopened; frontier generation/refinement overlap retained. No verified directed-cost-state adaptation or EDA superiority.",
+      "retrieved_utc": "2026-10-15"
+    },
+    {
+      "id": "V14",
+      "url": "https://arxiv.org/html/2305.06917",
+      "locator": "\u00a75.2",
+      "access_level": "full",
+      "verdict": "valid",
+      "reason": "Primary HTML reopened; GR/DR timing mismatch concerns another flow, not measured R3 gain.",
+      "retrieved_utc": "2026-10-15"
+    },
+    {
+      "id": "V15",
+      "url": "https://www.synopsys.com/implementation-and-signoff/physical-implementation/ic-compiler.html",
+      "locator": "About and key technologies",
+      "access_level": "full",
+      "verdict": "valid",
+      "reason": "Public page accessed; advertised routing/timing closure supports advertisement only, not proprietary absence or comparative performance.",
+      "retrieved_utc": "2026-10-15"
+    }
+  ],
+  "objections": [
+    {
+      "id": "OBJ-001",
+      "verdict": "partially_valid",
+      "blocking": false,
+      "sources": "CT01/B4 and V01,V04",
+      "reason": "Closed missing-comparator specification issue. Strong composition is specified; actual source fidelity and useful distinction remain pending."
+    },
+    {
+      "id": "OBJ-002",
+      "verdict": "partially_valid",
+      "blocking": false,
+      "sources": "CT03/EXP-001",
+      "reason": "Closed disclosure/test omission; independent-tie limitation remains mathematically valid, incidence unknown."
+    },
+    {
+      "id": "OBJ-003",
+      "verdict": "partially_valid",
+      "blocking": false,
+      "sources": "experiment-plan CT04",
+      "reason": "Closed denominator issue: fixed and marginal costs and exclusive leaf accounting are explicit. Executed accounting/allocation still missing."
+    },
+    {
+      "id": "OBJ-004",
+      "verdict": "partially_valid",
+      "blocking": false,
+      "sources": "SC-R3/CT06/CLM-019",
+      "reason": "Closed schedule/coverage ambiguity: B3/M canonical prefix, B4 explicit native/completion merge. First triple ranks 8/255/278/530 at n=3/22/23/32; no triple at n>=23 is disclosed. No universal performance refutation."
+    },
+    {
+      "id": "OBJ-005",
+      "verdict": "partially_valid",
+      "blocking": false,
+      "sources": "CT07/CLM-020\u2013022; V02,V03",
+      "reason": "Closed formulation-source omission. Ordinary flow/full cuts encode target reachability; SATRoute overflow selection differs. Generic lazy-cut novelty withdrawn; no mandatory seventh physical arm."
+    },
+    {
+      "id": "OBJ-006",
+      "verdict": "unsupported",
+      "status": "mentioned_only_not_asserted",
+      "blocking": false,
+      "sources": "current adjudicated challenges.md: \"No OBJ-006 is manufactured.\"",
+      "reason": "Literal inventory placeholder only: challenger explicitly declines to assert this objection. There is no allegation to sustain, no new scientific defect, and no required response. Existing park disposition and closed repairs are unchanged."
+    }
+  ],
+  "positive_claim_checks": {
+    "CLM-001": {
+      "verdict": "valid",
+      "blocking": false,
+      "sources": "V07",
+      "reason": "Detour/disruption motivation supported; no clean-route prevalence or threshold entailment."
+    },
+    "CLM-002": {
+      "verdict": "valid",
+      "blocking": false,
+      "sources": "V14",
+      "reason": "Adjacent GR/DR mismatch only; no downstream R3 effect."
+    },
+    "CLM-003": {
+      "verdict": "unresolved",
+      "blocking": false,
+      "sources": "S03/V primary PDF reopened",
+      "reason": "Queue mechanism detailed locator not re-inspected in this bounded round; prior ruling is not new verification."
+    },
+    "CLM-004": {
+      "verdict": "valid",
+      "blocking": false,
+      "sources": "V08",
+      "reason": "Incremental preservation/backup context; no transferred timing benefit."
+    },
+    "CLM-005": {
+      "verdict": "valid",
+      "blocking": false,
+      "sources": "V05",
+      "reason": "Adaptive regions and retained pseudo-pin boundaries verified; publication is 2022."
+    },
+    "CLM-006": {
+      "verdict": "valid",
+      "blocking": false,
+      "sources": "V06",
+      "reason": "Pinned code/seed functions verified; actual executed branch remains pending."
+    },
+    "CLM-007": {
+      "verdict": "unresolved",
+      "blocking": true,
+      "sources": "S07",
+      "reason": "1999 full method unavailable/unread; cannot certify novelty around it."
+    },
+    "CLM-008": {
+      "verdict": "unresolved",
+      "blocking": false,
+      "sources": "S08",
+      "reason": "Not reopened this round; no adaptive-schedule novelty accepted."
+    },
+    "CLM-009": {
+      "verdict": "partially_valid",
+      "blocking": true,
+      "sources": "V12",
+      "reason": "Official GR title/winner list checked; complete formulation/winner-method coverage unresolved."
+    },
+    "CLM-010": {
+      "verdict": "unresolved",
+      "blocking": true,
+      "sources": "SC-R3/T05/T07",
+      "reason": "Cached-check useful advantage is an unmeasured hypothesis. No accepted novel engineering contribution."
+    },
+    "CLM-011": {
+      "verdict": "valid",
+      "blocking": false,
+      "sources": "V01/CT01",
+      "reason": "Edge subdivision preserves directed path-label unions; target release minimization maps to discrete MCR."
+    },
+    "CLM-012": {
+      "verdict": "valid",
+      "blocking": false,
+      "sources": "policy/config/research-brief.json; JOB/prompt",
+      "reason": "Provisional caps and GCD smoke only; no new experiment allocation."
+    },
+    "CLM-013": {
+      "verdict": "valid",
+      "blocking": false,
+      "sources": "V15",
+      "reason": "Advertisement supports advertised capability only; comparative industry gap unresolved."
+    },
+    "CLM-014": {
+      "verdict": "valid",
+      "blocking": false,
+      "sources": "fixed-H path-exit proof",
+      "reason": "Any reachable target path exits U through a fully enabled frontier label; target necessity only."
+    },
+    "CLM-015": {
+      "verdict": "valid",
+      "blocking": false,
+      "sources": "CT03",
+      "reason": "Unaffected second endpoint caps WNS gain by its slack gap; tie example correct, incidence unknown."
+    },
+    "CLM-016": {
+      "verdict": "valid",
+      "blocking": false,
+      "sources": "CT01 useful-superset fixture",
+      "reason": "Capacity-one A:x/B:y/C:z demonstrates rehoming superset necessity, not physical measurement or novelty."
+    },
+    "CLM-017": {
+      "verdict": "partially_valid",
+      "blocking": false,
+      "sources": "V04,V13",
+      "reason": "MCF concurrent reconstruction independently verified; GFS full directed applicability remains unresolved."
+    },
+    "CLM-018": {
+      "verdict": "valid",
+      "blocking": false,
+      "sources": "V09",
+      "reason": "Overlap selection/displacement stages precede this proposal; cross-domain evidence does not prove full equivalence."
+    },
+    "CLM-019": {
+      "verdict": "valid",
+      "blocking": false,
+      "sources": "SC-R3/CT08",
+      "reason": "Same completed prefix, original checkpoint, domain and deterministic oracle yield same feasible trial set/WNS; different binding resource cap excluded."
+    },
+    "CLM-020": {
+      "verdict": "valid",
+      "blocking": false,
+      "sources": "CT07 direct proof; V04 \u00a7IV",
+      "reason": "Binary enabled-arc unit flow implies a path after cycle removal; path implies flow. All s\u2013t cuts equivalent for fixed finite graph and distinct terminals. No physical-delay theorem."
+    },
+    "CLM-021": {
+      "verdict": "valid",
+      "blocking": false,
+      "sources": "V02",
+      "reason": "Keep-net constraints and assumption relaxation correctly mapped; not maximum-cardinality claim."
+    },
+    "CLM-022": {
+      "verdict": "valid",
+      "blocking": false,
+      "sources": "V03",
+      "reason": "Invalid contiguous path-edge combinations separated lazily; generic mechanism is prior."
+    }
+  },
+  "additional_adjudications": [
+    {
+      "id": "COST-BOUND",
+      "verdict": "valid",
+      "blocking": false,
+      "sources": "current challenger Independent analytic value screen",
+      "reason": "For completed equal-prefix work, T=U+V, actual saving A-K<=U. Thus maximum marginal saving fraction <=U/T; whole-flow <=U/(F+T). No numerical value or applicability to unequal-prefix time-cap runs established."
+    },
+    {
+      "id": "NEW-LEADS",
+      "verdict": "partially_valid",
+      "blocking": false,
+      "sources": "V10,V11; challenger R14 abstract",
+      "reason": "Whole-net backjumping and general removable-graph framework are valid new search leads; FPGA PACT abstract not independently reopened, so any full-method equivalence remains unresolved. No new blocking OBJ fabricated."
+    }
+  ],
+  "tasklist_readiness": {
+    "documentary_plan": true,
+    "executable_physical_plan": false,
+    "missing": [
+      "Nontrivial useful mechanism distinction beyond strong standard composition",
+      "Representative legally usable pinned designs/development split and practitioner demand/threshold/absolute latency rationale",
+      "Actual compute allocation and complete six-arm calibrated budget",
+      "Actual transaction code/commands/config/path limits and source-faithful B2/B4",
+      "Executed effective perturbation evidence and independent oracle coverage",
+      "Matching dual consent to unchanged earlier frozen science and exact tasklist hash"
+    ],
+    "accounting_extension": "Before consent, make avoided reachability work, added cache work and unchanged reconstruction/oracle work explicit subcategories of T04/T05/T07. This is documentary mediation, not new compute or a seventh arm."
+  },
+  "search_log": [
+    {
+      "date": "2026-10-15",
+      "engine": "web search",
+      "query": "\"timing\" \"routing\" \"minimum constraint removal\"",
+      "outcome": "No closer independently inspected primary mechanism from this query; absence is not novelty."
+    },
+    {
+      "date": "2026-10-15",
+      "engine": "web search",
+      "query": "\"post route\" \"cut\" \"blocker\" timing routing",
+      "outcome": "Mostly football and secondary false positives; excluded. Search budget exhausted, no two-clean-expansion or exhaustive novelty certificate."
+    },
+    {
+      "date": "2026-10-15",
+      "engine": "primary direct opens",
+      "query": "SATRoute; lazy PRM; MCR; MCFRoute; decision-guided SAT; DeltaSearch; displacement; source-pinned OpenROAD",
+      "outcome": "Checks itemized in source_checks. Browser failures for CUHK PDFs recovered through legitimate author PDF download and pdftotext; no access bypass."
+    }
+  ],
+  "verification_limits": [
+    "Unblinded; only assigned policy/own verifier harness/current released P-C/own prior verdict used. No checkout, foreign scratch/session/transcript/memory, agent messages or subagents accessed. Logical role sessions checked in manifests, backend physical registration not independently audited.",
+    "No experiment/build/calibration/performance measurement or new expenditure. Analytical rank/proof checking is not a graph benchmark.",
+    "Both current manifests passed trusted verify; own release uses trusted freeze. Full repository project.py validate is unavailable in this intentionally standalone packet and belongs to coordinator publication.",
+    "Primary PDFs downloaded to own temporary scratch outside checkout and not included in release. Unread evidence explicitly unresolved. GFS/WXL neighboring detailed policy checks are bounded; no complete winner audit."
+  ],
+  "reversal_conditions": [
+    "R3 documentary concerns remain closed unless contradictory implementation evidence emerges; do not repeat obsolete revision demands.",
+    "Supply independently checked useful distinction over strong B4/B2 with charged causal mediation; complete missing prior/winner policy audit.",
+    "Resolve T02\u2013T04 data, user demand, costs, actual allocation, executable integration and oracle prerequisites before experiment consent.",
+    "Parking preserves the full negative record. Fourth owner-authorized P/C/V cycle may perform bounded closeout/recheck; it does not automatically unpark or authorize compute. No successor or abandonment is triggered by this verifier release."
+  ],
+  "decision_reason": "Park for unresolved scientific novelty/utility/headroom/readiness after three substantive cycles. No active blocking documentary OBJ remains. This is evidence-backed non-acceptance, not refutation or joint abandonment; fourth bounded cycle remains available for final closeout under owner batch policy.",
+  "mechanical_repair": {
+    "reason": "Collector inventories every literal OBJ ID, including explicitly nonasserted OBJ-006. Added a nonblocking unsupported row without inventing an objection.",
+    "supersedes_release": "SUB-719a3a71e707789e77291ad3df8ba019ececbb83a68f45aa1cb503af87f74ec2"
+  }
+}
