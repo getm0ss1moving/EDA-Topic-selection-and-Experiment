@@ -1,0 +1,283 @@
+[
+  {
+    "id": "S01",
+    "title": "OpenROAD / Parallax Static Timing Analyzer documentation",
+    "url": "https://openroad.readthedocs.io/en/latest/main/src/sta/README.html",
+    "type": "official documentation",
+    "published": "unknown",
+    "retrieved": "2026-10-15",
+    "locator": "Timing Engine, lines 130\u2013138; License section",
+    "access": "full",
+    "claims": [
+      "CLM-701"
+    ],
+    "limitations": "Dynamic page; selected sections read. Documents query-based incremental timing, not this adapter or workload speed. OpenSTA licensing needs actual dependency audit."
+  },
+  {
+    "id": "S02",
+    "title": "OpenROAD MeasuredVtSwapCandidate.cc",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/3549d60529517dc82deb7f0ff769345e9a424911/src/rsz/src/move/MeasuredVtSwapCandidate.cc",
+    "type": "source code",
+    "published": "2026-10-15",
+    "retrieved": "2026-10-15",
+    "locator": "estimate lines 44\u201367; arrivalDelay 109\u2013117; restoreEstimateJournal 119\u2013132",
+    "access": "full",
+    "claims": [
+      "CLM-701"
+    ],
+    "limitations": "Selected full 134-line file read, not transitive correctness/build certification; local arrival score differs from global TNS. BSD-3-Clause header.",
+    "version": "3549d60529517dc82deb7f0ff769345e9a424911",
+    "sha256": "16c99bf48dd4e6c23a5c886ef3608bfb95bd0bfbb688e35676a4bc301427cb08"
+  },
+  {
+    "id": "S03",
+    "title": "OpenROAD DelayEstimator.cc",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/3549d60529517dc82deb7f0ff769345e9a424911/src/rsz/src/DelayEstimator.cc",
+    "type": "source code",
+    "published": "2026-10-15",
+    "retrieved": "2026-10-15",
+    "locator": "gateDelayAndSlewFromTableModel 52\u201366; slewBias 492\u2013495; buildContext 1339\u20131415, especially 1411\u20131413; estimate 1417\u20131440",
+    "access": "full",
+    "claims": [
+      "CLM-701",
+      "CLM-703"
+    ],
+    "limitations": "Whole file downloaded; selected definitions inspected. STA slew bias and path-local windows already exist; complete call/read-set/FP/parasitic closure and installed compatibility unverified. BSD header.",
+    "version": "3549d60529517dc82deb7f0ff769345e9a424911",
+    "sha256": "465a1de5c232f946e5b6b093a37f5ed72e96ed1b41be34f32f60e29fc186732c"
+  },
+  {
+    "id": "S04",
+    "title": "PreRoutGNN for Timing Prediction with Order Preserving Partition: Global Circuit Pre-training, Local Delay Learning and Attentional Cell Modeling",
+    "url": "https://arxiv.org/html/2403.00012v2",
+    "type": "primary paper",
+    "published": "2024-03-12",
+    "retrieved": "2026-10-15",
+    "locator": "Method, attention-based signal propagation paragraph at HTML 242: AT main task and slew/net-delay/cell-delay auxiliary tasks; abstract 39\u201342",
+    "access": "full",
+    "claims": [
+      "CLM-702"
+    ],
+    "limitations": "Selected method and abstract read. Earlier pre-routing stage; no reproduction, replacement-query covariance or contemporary superiority verified. Reported results not borrowed.",
+    "version": "arXiv:2403.00012v2"
+  },
+  {
+    "id": "S05",
+    "title": "Effective Capacitance Modeling Using Graph Neural Networks",
+    "url": "https://arxiv.org/html/2507.03787v1",
+    "type": "primary paper",
+    "published": "2025-07-04",
+    "retrieved": "2026-10-15",
+    "locator": "\u00a7II.B\u2013C NLDM/Ceff; \u00a7III.D model; \u00a7IV.A methodology",
+    "access": "full",
+    "claims": [
+      "CLM-702"
+    ],
+    "limitations": "Selected sections read; learned capacitance/MOR is prior. Training data, hardware and numerical model differ; no claim that authors evaluated the proposed decision policy. No reproduced result.",
+    "version": "arXiv:2507.03787v1"
+  },
+  {
+    "id": "S06",
+    "title": "Disentangled Differentiable Timing-Power Co-Optimization with Quad-Gradient Gate Sizing",
+    "url": "https://guozz.cn/publication/phyoptdac-26/",
+    "type": "author publication page",
+    "published": "2026-07",
+    "retrieved": "2026-10-15",
+    "locator": "Abstract and publication metadata",
+    "access": "abstract",
+    "claims": [
+      "CLM-702",
+      "CLM-703"
+    ],
+    "limitations": "Author reports library-native differentiable guidance and ICCAD25 comparison. Full paper/code/winner relation not inspected; mandatory forward lead, not performance evidence."
+  },
+  {
+    "id": "S07",
+    "title": "Multi-task Gaussian Process Prediction",
+    "url": "https://papers.nips.cc/paper/3189-multi-task-gaussian-process-prediction.pdf",
+    "type": "primary paper",
+    "published": "2007",
+    "retrieved": "2026-10-15",
+    "locator": "\u00a72 Eq1/2; \u00a72.3 Eq6\u20139, printed pp2\u20133",
+    "access": "full",
+    "claims": [
+      "CLM-703"
+    ],
+    "limitations": "Selected model/cancellation derivation read. Correlation and latent-factor modeling are established. No EDA-specific covariance validity follows; noiseless separable block-design cancellation directly challenges cross-output benefit."
+  },
+  {
+    "id": "S08",
+    "title": "Predictive Entropy Search for Bayesian Optimization with Unknown Constraints",
+    "url": "https://proceedings.mlr.press/v37/hernandez-lobatob15.pdf",
+    "type": "primary paper",
+    "published": "2015",
+    "retrieved": "2026-10-15",
+    "locator": "\u00a72.5; \u00a73 Eq6\u20137, printed pp1701\u20131702 / PDF pp2\u20133",
+    "access": "full",
+    "claims": [
+      "CLM-703"
+    ],
+    "limitations": "Selected related-method/acquisition sections read. Information-based constrained selection is prior. The paper uses independent objective/constraint GPs; our bundled deterministic transaction is a different observation contract, not automatic novelty."
+  },
+  {
+    "id": "S09",
+    "title": "High-Performance Gate Sizing with a Signoff Timer",
+    "url": "https://vlsicad.ucsd.edu/Publications/Conferences/304/c304.pdf",
+    "type": "primary paper",
+    "published": "2013-11-18",
+    "retrieved": "2026-10-15",
+    "locator": "\u00a72 interconnect modeling; \u00a73.1 offset-based timing calibration, sensitivity functions and peephole incremental timing, PDF pp2\u20133",
+    "access": "full",
+    "claims": [
+      "CLM-701",
+      "CLM-703"
+    ],
+    "limitations": "Author-hosted mirror successfully opened after Michigan URL 502. Calibration and fast/accurate model tradeoffs are strong prior; older contest assumptions do not establish modern runtime or our comparative benefit."
+  },
+  {
+    "id": "S10",
+    "title": "Divergent Thoughts toward One Goal: LLM-based Multi-Agent Collaboration System for Electronic Design Automation",
+    "url": "https://arxiv.org/abs/2502.10857v1",
+    "type": "primary preprint",
+    "published": "2025-02-15",
+    "retrieved": "2026-10-15",
+    "locator": "Abstract",
+    "access": "abstract",
+    "claims": [
+      "CLM-702"
+    ],
+    "limitations": "Multi-agent automation lead only; full method/code/performance not audited. Not evidence against every scoped coordination contribution.",
+    "version": "arXiv:2502.10857v1"
+  },
+  {
+    "id": "S11",
+    "title": "AgenticPD: A Stage-Aware Agentic Framework for Closed-Loop Physical Design Optimization",
+    "url": "https://arxiv.org/abs/2607.04758v3",
+    "type": "primary preprint",
+    "published": "2026-10-04",
+    "retrieved": "2026-10-15",
+    "locator": "Abstract and version history",
+    "access": "abstract",
+    "claims": [
+      "CLM-702"
+    ],
+    "limitations": "Stage agents/judge/history are already advertised by the authors. Full method/code and quantitative comparison not inspected; no automatic generic novelty clearance.",
+    "version": "arXiv:2607.04758v3"
+  },
+  {
+    "id": "S12",
+    "title": "Invited: Post-Placement Buffering and Sizing Contest",
+    "url": "https://vlsicad.ucsd.edu/Publications/Conferences/421/c421.pdf",
+    "type": "official contest paper",
+    "published": "2026-03-15",
+    "retrieved": "2026-10-15",
+    "locator": "\u00a72.1 formulation/constraints, \u00a72.3 timing context, \u00a75.2\u20135.3 contest development/roadmap",
+    "access": "full",
+    "claims": [
+      "CLM-702"
+    ],
+    "limitations": "Selected formulation and roadmap read. Legitimate restricted setting does not establish useful candidate workload; later roadmap is not final newer rules or winner methods."
+  },
+  {
+    "id": "S13",
+    "title": "PrimeTime: Static Timing Analysis",
+    "url": "https://www.synopsys.com/implementation-and-signoff/signoff/primetime.html",
+    "type": "vendor capability page",
+    "published": "unknown",
+    "retrieved": "2026-10-15",
+    "locator": "Signoff features, lines 108\u2013118, especially 111 and 117",
+    "access": "full",
+    "claims": [
+      "CLM-706"
+    ],
+    "limitations": "Advertising supports listed ECO and ML capabilities only. Internal algorithms, comparable data/cost, licenses and controlled performance are unknown; no industrial absence inference."
+  },
+  {
+    "id": "S14",
+    "title": "ISPD26 Contest official repository README",
+    "url": "https://github.com/ABKGroup/ISPD26-Contest/tree/f7b29d242fc7d441f3b4eadc556f40099ccca067",
+    "type": "official contest/source",
+    "published": "2026-05-03",
+    "retrieved": "2026-10-15",
+    "locator": "README Table of Contents; Timeline; final overall leaderboard; pinned raw README",
+    "access": "full",
+    "claims": [
+      "CLM-702"
+    ],
+    "limitations": "Selected rules/index/leaderboard checked; repository BSD license does not resolve all benchmark/library rights. Winner identities are not mechanisms; no resource allocation.",
+    "version": "f7b29d242fc7d441f3b4eadc556f40099ccca067",
+    "sha256": "29c95e3df2f051f14ebb45ee71be7c3d42d5302c8c12d7f2249a45901dc0ab50"
+  },
+  {
+    "id": "S15",
+    "title": "ISPD26 official contest winners",
+    "url": "https://www.ispd.cc/contests/26/index.html",
+    "type": "official contest page",
+    "published": "2026",
+    "retrieved": "2026-10-15",
+    "locator": "Contest Winners, lines 4\u201312",
+    "access": "full",
+    "claims": [
+      "CLM-702"
+    ],
+    "limitations": "Identities/affiliations only. Algorithmic winner reports not available in inspected page; program-page retrieval failed."
+  },
+  {
+    "id": "S16",
+    "title": "Learning-driven Physically-aware Large-scale Circuit Gate Sizing",
+    "url": "https://arxiv.org/html/2403.08193v1",
+    "type": "primary paper",
+    "published": "2024-03-13",
+    "retrieved": "2026-10-15",
+    "locator": "Introduction lines 48\u201362 and references 2/5\u201312; method overview/conclusion",
+    "access": "full",
+    "claims": [
+      "CLM-702",
+      "CLM-703"
+    ],
+    "limitations": "Selected overview and backward-citation neighborhood read. Physical path coupling/differentiable sizing are prior; no reproduced metrics or exhaustive full-method/code audit.",
+    "version": "arXiv:2403.08193v1"
+  },
+  {
+    "id": "S17",
+    "title": "LEGO-Size: LLM-Enhanced GPU-Optimized Signoff-Accurate Differentiable VLSI Gate Sizing in Advanced Nodes",
+    "url": "https://research.nvidia.com/labs/electronic-design-automation/publication/lu2025ispd/",
+    "type": "author publication page",
+    "published": "2025-03",
+    "retrieved": "2026-10-15",
+    "locator": "Title/venue metadata; indexed author-PDF abstract",
+    "access": "abstract",
+    "claims": [
+      "CLM-702"
+    ],
+    "limitations": "Direct author PDF returned 403 on reopen; only indexed abstract and publication metadata inspected. Learned plus differentiable sizing is a lead; no full-method access or reproduced industrial performance claimed."
+  },
+  {
+    "id": "S18",
+    "title": "ELBAGNN: Topology-Unrolled GNN for Pre-Routing Timing Prediction with Edge- and Level-Biased Attention",
+    "url": "https://doi.org/10.1049/ell2.70618",
+    "type": "publisher abstract",
+    "published": "2026",
+    "retrieved": "2026-10-15",
+    "locator": "Abstract",
+    "access": "abstract",
+    "claims": [
+      "CLM-702"
+    ],
+    "limitations": "Forward search lead on topology schedule and slew/load tables. Full method/code uninspected; not used for an exact equivalence or performance finding."
+  },
+  {
+    "id": "S19",
+    "title": "Efficient Timing Prediction and Optimization Using Derivable Gradient Boosting Machine Model at Placement Stage",
+    "url": "https://doi.org/10.1145/3780100",
+    "type": "publisher abstract/metadata",
+    "published": "2026-06-12",
+    "retrieved": "2026-10-15",
+    "locator": "Abstract/indexed NLDM gate-slew passage; publication history",
+    "access": "abstract",
+    "claims": [
+      "CLM-702"
+    ],
+    "limitations": "Recent predictor/optimization alternative; full method/code not inspected. Online accepted-manuscript date 2025-12-08 differs from later publication; no superiority or complete novelty clearance."
+  }
+]
