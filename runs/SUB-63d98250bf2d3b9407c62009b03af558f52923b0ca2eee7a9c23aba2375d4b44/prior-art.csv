@@ -1,0 +1,6 @@
+source_id,task,mechanism,data_evaluation,assumptions,limitation,overlap,proposed_distinction
+C301,Incremental physical optimization,Discrete repair plus differentiable refinement,Author study not reproduced,Legal initial placement/library grouping,Contest-time code mapping unknown,Sizing relocation surrogates,Fixed typed-pair low-rank order prediction not established in inspected sections
+C302,IR-aware ECO sizing,RL gate/order selection and incremental timing,Author study not reproduced,Later IR-aware setting,No direct baseline transfer,Learned sequencing,Different operators/stage/target
+C303,Post-placement physical synthesis,Joint transform/min-cost-flow and placement costs,Indexed excerpts only,Surrogate and transform-option scope,Full fetch failed; implementation missing,Joint physical interaction costs,Exact equivalence unresolved
+C304,Contest native baseline,Repair/legalize/route retry,Source only,Pinned script environment,No adapter run,B0 capability inventory,Final-state provenance needs explicit oracle
+C306,Macro placement sequencing,Proxy-guided evolved ordering,Abstract only,Macro greedy proxy,No full method/bounds audit,Generic order sensitivity,Not standard-cell pair evidence

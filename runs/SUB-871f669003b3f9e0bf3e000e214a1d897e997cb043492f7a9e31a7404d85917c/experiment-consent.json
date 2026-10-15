@@ -1,0 +1,7 @@
+{
+  "session_id": "b68834d9-8d64-4081-8599-01722d58110e",
+  "decision": "pending",
+  "signed_revision": null,
+  "tasklist_sha256": null,
+  "rationale": "Revision3 changes task/diagnostic/comparator bytes; no matching frozen phase dependencies, actual allocation, rights/oracle/threshold locks or agreement. EXP-000 CLOSED. No acceptance or joint abandonment signature."
+}

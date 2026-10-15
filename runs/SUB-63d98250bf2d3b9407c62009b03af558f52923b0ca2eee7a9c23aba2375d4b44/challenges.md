@@ -1,0 +1,38 @@
+# EDA-0008 revision 3 independent challenge
+
+Reviewed proposal: SUB-871f669003b3f9e0bf3e000e214a1d897e997cb043492f7a9e31a7404d85917c. Job be04d547-6721-465d-9e44-a4b5103b9a4b; challenger ChatGPT-C04-PHYSICAL-B03-EDA-0008; session 94045552-61ca-4bb4-a950-c6de444a88ed; input b1bb69f62b089c3489eaf17dea34daae84af315c; packet 48d40bb5ac63cd51e5b07f3150ce125e6f8e58660ee28c13c5cb0d811f4c3935. Unblinded assigned-file review. No inherited scientific approval or backend-model attestation.
+
+**Assessment: unresolved; retain conditional hypothesis, recommend parking after this completed third cycle.** No new formal OBJ is asserted. This is not an experiment approval or joint-abandonment vote. The present missing evidence is acknowledged by the proposal; repeating it as a new fatal objection would overstate this review. Source access and an actionable oracle-interface refinement advance the review.
+
+## Positive claims and closest mechanisms
+
+| Claim | Independently inspected evidence | Assessment and limit |
+|---|---|---|
+| CLM-005 / useful coupled optimization context | C301, PDF pp.2-3, §§2.2,3.1-3.4 | HyPAS combines discrete repair, sizing/placement refinement and learned timing/power; width grouping is explicit. Generic coordination is prior. Its inspected formulation does not demonstrate the identical fixed-pair low-rank order target. No reproduced gain or contest-time code equivalence. |
+| CLM-006 / learned action order | C302 §3.2 Action and Reward, §3.3 | RL-LR selects gate and up/down size with incremental timing feedback. Related learned sequencing is established; distinct-cell relocation and this low-rank paired-target restriction are not established by these selected sections. Later IR-aware scope prevents direct performance transfer. |
+| CLM-023 / conventional joint alternative | C303 indexed primary abstract/§2 and §8 excerpts | FlowSynth joins transform selection to detailed-placement costs. This corroborates the need for B8-J; direct full-document reopening failed here. The preceding verifier's full-method access is not inherited. Exact current equivalence remains unresolved. |
+| CLM-025 / adjacent ordering | C306 primary proceedings abstract | Macro construction ordering with a proxy is prior; not evidence of pre-CTS standard-cell order-contrast utility. Full paper and bounds not reopened. |
+| CLM-026 / native baseline inventory | C304 raw lines 63-110 | Legalization and a route-failure retry are present. Preserve these capabilities; do not mistake its logging field for a fresh legality oracle (C-T301 below). |
+| CLM-016/024 | Own analytic code in search-log.md; proposal finite-set assumptions | Nine masks and 49 submasks independently enumerated; 1,000 arbitrary scalar tables obey the 2epsilon regret bound. These are algebra checks, not physical prevalence, trained prediction or inference-time guarantees. |
+| CLM-013/018/020 | Current proposal equations and comparator contract | The weighted quadratic includes the necessary cross term; fixed-grid factor products impose rank <=r. An identical parameterized direct implementation must match. This review does not rerun earlier gradient or tensor training checks. The restriction is identifiable and potentially harmful; no proof of EDA-specific benefit. |
+
+The eligible systems hypothesis is a decision-relevant full-cost tradeoff from restricted interaction sharing, beyond equally informed conventional/direct models. It need not prove original low-rank mathematics or super-additivity. Conversely, B3-M equality, better results against only the narrow H=2 arm, or more labels cannot establish that contribution. Revision 3 explicitly recognizes these distinctions. Zero combination_drift and zero demand_drift are appropriate: the typed physical actions, legalization externalities and post-DR/full-cost endpoint remain intact. Zero drift does not certify merit.
+
+## C-T301 — final-state oracle and artifact provenance refinement
+
+This is a **nonblocking implementation requirement**, not a new formal objection to an existing adapter. Target: CLM-026 and EXP-002/002B/004's future B0/oracle integration. C304 raw physical lines 81-83 export baseline DEF/Verilog before the routing retry; lines 95-105 set `placement_legal` to 1, then to 0 on first-route error, and may perform another detailed placement; line 118 prints the variable without a final legality query in this path. Therefore that field records control flow and the saved files can precede later geometric repair. This is a source observation; no actual divergence or OpenROAD defect was measured.
+
+Consequence: copying this field or its earlier export as the authoritative final observation could mislabel success or bind QoR to different geometry. The current proposal has not implemented such copying, so this is not evidence that it already does so. Preserve the native retry but independently query the declared final legality/equivalence oracle, and hash/export the exact final state associated with reported metrics. Retain pre-retry artifacts separately. Confidence: high for the code ordering, unknown for runtime incidence. Reversal: a pinned wrapper already performs these checks and binds final-state bytes, or the adapter never consumes these fields. Cheapest decisive test: source-level adapter trace now; under a separately consented preflight, one retry-taking fixture checks final-state hash/geometry/report association. No added EDA execution is authorized here.
+
+## Coverage and unresolved gates
+
+- Duplicate/equivalent prior art: unresolved. Three distinct nearest approaches mapped, not exhaustive; original ISPD winning algorithms and faithful FlowSynth/current conventional implementation remain unavailable in this review.
+- Mechanism/composition: explicit restriction and equivalence controls supported; useful systems novelty unresolved. The gate/direct fallback may dominate policy outcomes, so retain full-policy and core-only stratification already specified.
+- Demand/industry: public methods/contest establish general coupled-design relevance; narrow effect prevalence, industrial economics and vendor-relative superiority are unresolved. No vendor internals or comparative experiment inspected.
+- Headroom: unknown, with no applicable physical optimality bound or quantitative forecast. Abstract rank counterexamples neither prove a dead end nor real incidence.
+- Contests: C305 verifies winners only; C307 verifies current 2026 topics; C308 archive discovery does not certify any future 2027 mechanism. Neither names nor output archives replace original method audit. C309 independently confirms 2025 Problem C's operators at title level.
+- Experiments/cost: current task list fairly retains all masks, censoring, strong baselines, identity controls, family grouping, final-route endpoints and full costs. Actual resources, rights, adapter/oracle/threshold locks, conventional implementation and matching consents remain absent. This blocks execution readiness, not conditional research.
+
+## Disposition
+
+Accept C-T201's decision-sensitive diagnostic repair as meaningful; no new evidence refutes it. Do not inherit uninspected R09/R18 checks or earlier source/gradient results. Retain every prior negative and access limit. Park with five concrete reopening requirements: original-method coverage; strong conventional implementation; physical order/rank decision value above repeat noise; post-DR economics; exact rights/resource/oracle/phase locks plus matching independent consents. A successor must be a new assigned direction and ID; the challenger does not create or approve it. No abandonment ground is established by this review.

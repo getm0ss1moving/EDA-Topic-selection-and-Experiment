@@ -1,0 +1,116 @@
+{
+  "schema": 1,
+  "role": "verifier",
+  "actor_id": "ChatGPT-B03-PROTOCOL-D04-EDA-0008-R3",
+  "session_id": "2b352162-5dc9-4239-bfc8-8c876de59d4b",
+  "input_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+  "packet_sha256": "aef7b7d704266586fa7f2dc25cafa7b450aa6e76710c398b69d7dcdc9f601b5b",
+  "job_id": "1a716164-bf88-426a-88d8-6ecc1aca87d0",
+  "read_releases": [
+    "SUB-63d98250bf2d3b9407c62009b03af558f52923b0ca2eee7a9c23aba2375d4b44",
+    "SUB-871f669003b3f9e0bf3e000e214a1d897e997cb043492f7a9e31a7404d85917c",
+    "SUB-6e5bf1d98fce234bd3a92fe7baa53b72ecd534c846bd7b89a80359451044da95",
+    "SUB-46cfb469c0fe96288b8b4d5cddbc7ec4ab1525a9145d09584ea8167e379e972f"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0,
+    "checkout_access_explanation": "First command used absolute assigned JOB/prompt paths from inherited cwd; no checkout contents read. All following commands explicitly used assigned job cwd."
+  },
+  "rules": {
+    "inputs": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json#/roles",
+        "runs/activity.json",
+        "JOB.json"
+      ],
+      "limits": "Released files/public descriptors only; self-authored activity is not a complete trace or OS/backend attestation. No scientific vote or external experiment."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json#/roles",
+        "runs/activity.json",
+        "JOB.json"
+      ],
+      "limits": "Released files/public descriptors only; self-authored activity is not a complete trace or OS/backend attestation. No scientific vote or external experiment."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json#/roles",
+        "runs/activity.json",
+        "JOB.json"
+      ],
+      "limits": "Released files/public descriptors only; self-authored activity is not a complete trace or OS/backend attestation. No scientific vote or external experiment."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json#/roles",
+        "runs/activity.json",
+        "JOB.json"
+      ],
+      "limits": "Released files/public descriptors only; self-authored activity is not a complete trace or OS/backend attestation. No scientific vote or external experiment."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json#/roles",
+        "runs/activity.json",
+        "JOB.json"
+      ],
+      "limits": "Released files/public descriptors only; self-authored activity is not a complete trace or OS/backend attestation. No scientific vote or external experiment."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json#/roles",
+        "runs/activity.json",
+        "JOB.json"
+      ],
+      "limits": "Released files/public descriptors only; self-authored activity is not a complete trace or OS/backend attestation. No scientific vote or external experiment."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json#/roles",
+        "runs/activity.json",
+        "JOB.json"
+      ],
+      "limits": "Released files/public descriptors only; self-authored activity is not a complete trace or OS/backend attestation. No scientific vote or external experiment."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json#/roles",
+        "runs/activity.json",
+        "JOB.json"
+      ],
+      "limits": "Released files/public descriptors only; self-authored activity is not a complete trace or OS/backend attestation. No scientific vote or external experiment."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json#/roles",
+        "runs/activity.json",
+        "JOB.json"
+      ],
+      "limits": "Released files/public descriptors only; self-authored activity is not a complete trace or OS/backend attestation. No scientific vote or external experiment."
+    }
+  },
+  "operations": [
+    "Read assigned JOB/prompt then common policy and only VERIFIER harness; later read automation/self-submission/innovation/batch policy.",
+    "Enumerated/read explicitly released shared outputs, descriptors and incident metadata only. Combined output truncation followed by targeted extracts.",
+    "Rehashed all four manifests and supplemental index; compared rejected/corrected bytes; checked identities and tasklist hash. No source download, code execution from research sources or experiment.",
+    "Wrote own release/runs; ran trusted policy audit/ledger validation and freeze/verify; wrote result.json. Whole-repository validation delegated to coordinator."
+  ],
+  "incidents": [],
+  "observability": "Self-authored public activity ledger, not a complete tool trace or evidence of absent undisclosed actions."
+}

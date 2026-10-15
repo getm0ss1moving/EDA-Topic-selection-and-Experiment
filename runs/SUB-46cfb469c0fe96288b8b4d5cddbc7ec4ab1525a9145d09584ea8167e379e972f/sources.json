@@ -1,0 +1,133 @@
+{
+  "sources": [
+    {
+      "id": "C301",
+      "title": "HyPAS: A Hybrid Optimization Framework for Placement and Sizing Co-Optimization",
+      "url": "https://wuqian-tang.github.io/files/papers/2026-dac-hypas.pdf",
+      "source_type": "primary",
+      "publication_date": "2026",
+      "retrieved_utc": "2026-10-15T15:02:30.108960+00:00",
+      "locator": "PDF pp.2-3, sections 2.2 and 3.1-3.4",
+      "access": "full",
+      "supported_claim_ids": [
+        "review-context"
+      ],
+      "limitations": "urllib public PDF retrieved; selected methods inspected via pdftotext; web open failed. No execution, contest-time code audit or performance reproduction.",
+      "sha256": "d843ea04b2746e449c7ded65ab06bb5f5d9d11f969251962c6feec7bdb930ca0"
+    },
+    {
+      "id": "C302",
+      "title": "RL-LR IR-aware ECO gate sizing",
+      "url": "https://arxiv.org/html/2402.07781v1",
+      "source_type": "primary",
+      "publication_date": "2024",
+      "retrieved_utc": "2026-10-15T15:02:30.109203+00:00",
+      "locator": "Sections 3.2 Action/Reward and 3.3; rendered lines 103-138",
+      "access": "full",
+      "supported_claim_ids": [
+        "review-context"
+      ],
+      "limitations": "Selected HTML methods only; no implementation or performance reproduction."
+    },
+    {
+      "id": "C303",
+      "title": "Algorithms for Simultaneous Consideration of Multiple Physical Synthesis Transforms for Timing Closure",
+      "url": "https://websrv.cecs.uci.edu/~papers/iccad08/PDFs/Papers/02A.1.pdf",
+      "source_type": "primary",
+      "publication_date": "2008",
+      "retrieved_utc": "2026-10-15T15:02:30.109205+00:00",
+      "locator": "Indexed primary abstract and sections 2/8 excerpts",
+      "access": "abstract",
+      "supported_claim_ids": [
+        "review-context"
+      ],
+      "limitations": "web full open failed repeatedly; urllib SSL handshake timeout. Selected indexed full-text snippets exceed abstract access in location but not full-method coverage. Author-uploaded ResearchGate search snippet seen as discovery, not independent proof."
+    },
+    {
+      "id": "C304",
+      "title": "ISPD26 organizer evaluation_baseline.tcl",
+      "url": "https://raw.githubusercontent.com/ABKGroup/ISPD26-Contest/f7b29d242fc7d441f3b4eadc556f40099ccca067/scripts/evaluation_baseline.tcl",
+      "source_type": "primary",
+      "publication_date": "unknown",
+      "retrieved_utc": "2026-10-15T15:02:30.109345+00:00",
+      "locator": "Raw physical 1-based lines 63-83,95-110,114-123",
+      "access": "full",
+      "supported_claim_ids": [
+        "C-T301"
+      ],
+      "limitations": "Source only; no Tcl/EDA execution. Statement about final-state risk is conditional on adapter reuse.",
+      "sha256": "434969ec03b7a1637c74b42a24f23c27925ed7b6eb9f9917f96df76634fd920a"
+    },
+    {
+      "id": "C305",
+      "title": "ISPD26 contest results",
+      "url": "https://www.ispd.cc/contests/26/index.html",
+      "source_type": "primary",
+      "publication_date": "2026",
+      "retrieved_utc": "2026-10-15T15:02:30.109347+00:00",
+      "locator": "Contest Winners list and resource links; rendered lines 3-18",
+      "access": "full",
+      "supported_claim_ids": [
+        "review-context"
+      ],
+      "limitations": "Winner identities, not original algorithms."
+    },
+    {
+      "id": "C306",
+      "title": "Order Matters: Unveiling the Hidden Impact of Macro Placement Sequences via Proxy-Guided LLM Evolution",
+      "url": "https://proceedings.mlr.press/v306/mo26d.html",
+      "source_type": "primary",
+      "publication_date": "2026",
+      "retrieved_utc": "2026-10-15T15:02:30.109348+00:00",
+      "locator": "Abstract; rendered lines 13-17",
+      "access": "abstract",
+      "supported_claim_ids": [
+        "review-context"
+      ],
+      "limitations": "Adjacent macro stage only; no proof or performance audited."
+    },
+    {
+      "id": "C307",
+      "title": "2026 CAD Contest problems",
+      "url": "https://www.iccad-contest.org/Problems",
+      "source_type": "primary",
+      "publication_date": "2026",
+      "retrieved_utc": "2026-10-15T15:02:30.109349+00:00",
+      "locator": "Problems A/B/C, rendered lines 34-61",
+      "access": "full",
+      "supported_claim_ids": [
+        "review-context"
+      ],
+      "limitations": "Page titles/resources only; individual problem specifications not inspected."
+    },
+    {
+      "id": "C308",
+      "title": "ISPD2027 contest archive page",
+      "url": "https://ispd.cc/ispd2027/index.php?page=contests",
+      "source_type": "primary",
+      "publication_date": "unknown",
+      "retrieved_utc": "2026-10-15T15:02:30.109350+00:00",
+      "locator": "Contest archive page returned by official-site search/open",
+      "access": "metadata",
+      "supported_claim_ids": [
+        "review-context"
+      ],
+      "limitations": "Archive discovery only; no new 2027 task specification or winner method established."
+    },
+    {
+      "id": "C309",
+      "title": "2025 CAD Contest problems",
+      "url": "https://www.iccad-contest.org/2025/Problems.html",
+      "source_type": "primary",
+      "publication_date": "2025",
+      "retrieved_utc": "2026-10-15T15:02:30.109351+00:00",
+      "locator": "Official Problems page, Problem C title",
+      "access": "metadata",
+      "supported_claim_ids": [
+        "review-context"
+      ],
+      "limitations": "Title-level context only; no winner algorithms/score reproduction."
+    }
+  ],
+  "access_convention": "full denotes original source access with selected locators inspected, never exhaustive review. Raw source lines differ from browser-rendered lines. No copied full papers released."
+}

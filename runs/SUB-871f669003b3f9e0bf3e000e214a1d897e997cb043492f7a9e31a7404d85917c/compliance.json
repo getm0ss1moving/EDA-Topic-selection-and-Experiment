@@ -1,0 +1,167 @@
+{
+  "schema": 1,
+  "role": "proposer",
+  "actor_id": "ChatGPT-P04-PHYSICAL-B03-EDA-0008",
+  "session_id": "b68834d9-8d64-4081-8599-01722d58110e",
+  "input_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+  "packet_sha256": "a33f0dab9f9ecf62d70001cc3343663f307218e16e69f418d8843619cab37db3",
+  "job_id": "76dd2476-5082-4df4-b75c-569165ddc930",
+  "read_releases": [
+    "SUB-15651a51979be07b769426268a585dc32c570cdabcb357ce6d8f29e9d29e3588",
+    "SUB-34b826d7ab2de0ad0bae65f70fbe2a9aeea2f918b483e43265dbec790ddd0b47",
+    "SUB-996a3afdee6abd5c24ebd2d6039e56c4e3baba57456ee34ec8d4c69c5e11ede2"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0,
+    "cwd_path_only_reported": "/Users/duanzeyu/Documents/ChatGPT/EDA-Topic-selection-and-Experiment",
+    "remote_compute_runs": 0,
+    "source_reading_and_tiny_analytical_checks_only": true
+  },
+  "rules": {
+    "inputs": {
+      "status": "deviation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "search-log.md: Inputs, output boundary and candid incident",
+        "responses.md: current ruling binding"
+      ],
+      "limits": "Premature allowed-job filename enumeration disclosed, not erased. Supplied predecessor contents were not read."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md: Inputs",
+        "compliance.json: activity",
+        "policy/docs/ISOLATION.md"
+      ],
+      "limits": "Policy-only separation on shared OS; backend/fresh-session confinement and absent undisclosed actions cannot be proven by self-report."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "release/ role-owned filenames",
+        "runs/activity.json",
+        "result.json",
+        "submissions/ trusted freeze"
+      ],
+      "limits": "External scratch/helper/source copies remain outside checkout and release; no foreign material edited."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "sources.json: R15/R19/R20 current_job_access",
+        "search-log.md: independent source operations"
+      ],
+      "limits": "Selected methods only; failed fetch/screenshots and historical versus current access explicit. No exhaustive code/winner/proof audit."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "proposal.md: CLM-023/024/025/026",
+        "forecast.json",
+        "search-log.md: exact checker output"
+      ],
+      "limits": "Own algebra and source observations are not physical measurements, independent approval or universal novelty. Uncalibrated numerical forecasts null."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "experiment-consent.json",
+        "tasklist.md: EXP-000",
+        "workflow.json: experiment_gate"
+      ],
+      "limits": "Only own pending signature fields; no matching agree or abandonment signature. Task edit invalidates old agreements."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "policy/docs/INNOVATION-BATCH-0003.md",
+        "search-log.md: own check"
+      ],
+      "limits": "No new EDA/build/training/remote/paid allocation or run. Public source reading/tiny numerical tables only; no downloaded code executed."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "direction-control.json: anchor/penalties",
+        "proposal.md: current disposition"
+      ],
+      "limits": "Self-scored drift0+0 is not independent scientific merit; same mechanism/user/post-DR need retained."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "workflow.json",
+        "policy/docs/SELF-SUBMISSION.md",
+        "result.json"
+      ],
+      "limits": "Trusted own freeze/verify only; no PR/approval/merge. Coordinator full repository checks/transport remain separate; ledger cannot certify unseen actions."
+    }
+  },
+  "operations": [
+    {
+      "operation": "read_manifest_and_common_policy",
+      "paths": [
+        "JOB.json",
+        "prompt.txt",
+        "policy/docs/",
+        "policy/harness/PROPOSER.md"
+      ],
+      "note": "Initial pwd reported checkout path without contents; allowed filenames enumerated before completing policy."
+    },
+    {
+      "operation": "read_released_science",
+      "releases": [
+        "SUB-15651a51979be07b769426268a585dc32c570cdabcb357ce6d8f29e9d29e3588",
+        "SUB-34b826d7ab2de0ad0bae65f70fbe2a9aeea2f918b483e43265dbec790ddd0b47",
+        "SUB-996a3afdee6abd5c24ebd2d6039e56c4e3baba57456ee34ec8d4c69c5e11ede2"
+      ],
+      "details": "Own previous scientific bytes, current verification md/json and adjudicated challenge only."
+    },
+    {
+      "operation": "external_reading",
+      "references": [
+        "sources.json R15/R19/R20",
+        "search-log.md queries/access failures"
+      ],
+      "note": "Public ordinary access only; no code execution."
+    },
+    {
+      "operation": "tiny_own_analytical_check",
+      "reference": "search-log.md embedded code/output",
+      "note": "1000 arbitrary grids plus a 2x2 SVD witness; no EDA/training."
+    },
+    {
+      "operation": "write_role_outputs",
+      "paths": [
+        "release/",
+        "runs/activity.json",
+        "result.json"
+      ],
+      "note": "Full English scientific dossier; preserves historical responses and negatives."
+    },
+    {
+      "operation": "trusted_freeze_and_verify",
+      "command": "python3 policy/scripts/role_submission.py freeze; then verify frozen release",
+      "note": "Release path/result recorded after execution; structural only."
+    }
+  ],
+  "incidents": [
+    {
+      "id": "INC-P03-001",
+      "rule": "inputs",
+      "severity": "noncritical",
+      "description": "Before completing common/compliance policy reading, rg --files enumerated policy/own-previous/shared filenames within assigned job. No foreign scientific content opened before common policy; no checkout contents read.",
+      "action": "Disclose permanently in this release; independent protocol auditor assesses significance.",
+      "historical_context": "Own previous search log disclosed INC-P02-001 of the same permitted-filename-order type; neither record erased."
+    }
+  ],
+  "observability": "Self-authored public activity ledger, not a complete tool trace, backend-model attestation, adversarial OS audit or proof of absence of undisclosed actions."
+}

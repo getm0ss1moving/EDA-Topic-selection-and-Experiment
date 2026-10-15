@@ -1,0 +1,26 @@
+{
+  "role": "proposer",
+  "topic": "EDA-0008",
+  "batch_round": 3,
+  "transport_round": 2,
+  "phase": "research",
+  "assessment": "revise",
+  "previous_proposal_release": "SUB-15651a51979be07b769426268a585dc32c570cdabcb357ce6d8f29e9d29e3588",
+  "reviewed_verifier_release": "SUB-34b826d7ab2de0ad0bae65f70fbe2a9aeea2f918b483e43265dbec790ddd0b47",
+  "adjudicated_challenger_releases": [
+    "SUB-996a3afdee6abd5c24ebd2d6039e56c4e3baba57456ee34ec8d4c69c5e11ede2"
+  ],
+  "tasklist_sha256": "a07da308b26933acd33eba1e3bf4804e49327d22371fe17b952cc8b075c4fc8b",
+  "experiment_gate": "closed",
+  "experiment_consent": "pending",
+  "next_action": "independent_challenge_then_verification; park after third completed nonconvergent cycle",
+  "actual_eda_runs": 0,
+  "actual_training_runs": 0,
+  "new_claim_ids": [
+    "CLM-023",
+    "CLM-024",
+    "CLM-025",
+    "CLM-026"
+  ],
+  "no_independent_approval_claimed": true
+}
