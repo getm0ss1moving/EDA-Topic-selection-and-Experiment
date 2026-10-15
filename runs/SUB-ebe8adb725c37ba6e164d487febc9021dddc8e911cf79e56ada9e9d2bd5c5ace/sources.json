@@ -1,0 +1,559 @@
+[
+  {
+    "id": "R01",
+    "title": "OpenROAD MeasuredVtSwapCandidate.cc",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/3549d60529517dc82deb7f0ff769345e9a424911/src/rsz/src/move/MeasuredVtSwapCandidate.cc",
+    "type": "primary source code",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-15T13:29:39.874702+00:00",
+    "locator": "raw 1-based lines44-67 estimate;109-117 arrivalDelay;124-132 restoreEstimateJournal",
+    "access": "full",
+    "claims": [
+      "CLM-701",
+      "CLM-705"
+    ],
+    "limitations": "Full 134-line file inspected; BSD-3-Clause header. Temporary edit/update/restore and local score only; no transitive correctness, workload or global guard implementation certification.",
+    "version": "3549d60529517dc82deb7f0ff769345e9a424911",
+    "sha256": "16c99bf48dd4e6c23a5c886ef3608bfb95bd0bfbb688e35676a4bc301427cb08",
+    "current_job_status": "Inherited bibliography from P1; not independently reopened under this ID. See N-series for this job access; historical retrieval is not a new access claim."
+  },
+  {
+    "id": "R02",
+    "title": "OpenROAD DelayEstimator.cc",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/3549d60529517dc82deb7f0ff769345e9a424911/src/rsz/src/DelayEstimator.cc",
+    "type": "primary source code",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-15T13:29:41.525738+00:00",
+    "locator": "raw lines492-495 slewBias;1339-1415 buildContext;1417-1440 estimate",
+    "access": "full",
+    "claims": [
+      "CLM-701",
+      "CLM-703"
+    ],
+    "limitations": "Full file retrieved; selected definitions inspected. Existing path window and STA slew-bias correction. API/build/caller closure and runtime not tested.",
+    "version": "3549d60529517dc82deb7f0ff769345e9a424911",
+    "sha256": "465a1de5c232f946e5b6b093a37f5ed72e96ed1b41be34f32f60e29fc186732c",
+    "current_job_status": "Inherited bibliography from P1; not independently reopened under this ID. See N-series for this job access; historical retrieval is not a new access claim."
+  },
+  {
+    "id": "R03",
+    "title": "High-Performance Gate Sizing with a Signoff Timer",
+    "url": "https://vlsicad.ucsd.edu/Publications/Conferences/304/c304.pdf",
+    "type": "primary paper",
+    "published": "2013-11-18",
+    "retrieved_utc": "2026-10-15T13:39:55.105187+00:00",
+    "locator": "physical PDF pp2-3, Section2 model selection and Section3.1 Offset-based timing calibration / peephole optimization",
+    "access": "full",
+    "claims": [
+      "CLM-702"
+    ],
+    "limitations": "Selected original sections read. Classical calibration and incremental alternatives; old benchmark results not transferred or reproduced. No full-paper copy published.",
+    "version": "ICCAD2013",
+    "current_job_status": "Inherited bibliography from P1; not independently reopened under this ID. See N-series for this job access; historical retrieval is not a new access claim."
+  },
+  {
+    "id": "R04",
+    "title": "Two-step Lookahead Bayesian Optimization with Inequality Constraints",
+    "url": "https://papers.nips.cc/paper/2021/file/685217557383cd194b4f10ae4b39eebf-Paper.pdf",
+    "type": "primary paper",
+    "published": "2021",
+    "retrieved_utc": "2026-10-15T13:39:55.105187+00:00",
+    "locator": "physical PDF pp3-6, Sections2.3 and3.2; Eq1 and constrained two-step acquisition definition",
+    "access": "full",
+    "claims": [
+      "CLM-703"
+    ],
+    "limitations": "Selected original model/acquisition sections read. Paper factors objective/constraint under independent GPs; our joint CEI does not assume that. No author numerical result adopted.",
+    "version": "NeurIPS2021",
+    "current_job_status": "Inherited bibliography from P1; not independently reopened under this ID. See N-series for this job access; historical retrieval is not a new access claim."
+  },
+  {
+    "id": "R05",
+    "title": "Practical Two-Step Look-Ahead Bayesian Optimization",
+    "url": "https://proceedings.neurips.cc/paper/9174-practical-two-step-lookahead-bayesian-optimization.pdf",
+    "type": "primary paper",
+    "published": "2019",
+    "retrieved_utc": "2026-10-15T13:39:55.105187+00:00",
+    "locator": "physical PDF pp3-4 Section2.2, Eq2-4; Section2.3",
+    "access": "full",
+    "claims": [
+      "CLM-703"
+    ],
+    "limitations": "Selected derivation read. Two-step measured-best selection is prior; not EDA workload or a theorem about heterogeneous transaction cost.",
+    "version": "NeurIPS2019",
+    "current_job_status": "Inherited bibliography from P1; not independently reopened under this ID. See N-series for this job access; historical retrieval is not a new access claim."
+  },
+  {
+    "id": "R06",
+    "title": "Multi-task Gaussian Process Prediction",
+    "url": "https://papers.nips.cc/paper/3189-multi-task-gaussian-process-prediction.pdf",
+    "type": "primary paper",
+    "published": "2007",
+    "retrieved_utc": "2026-10-15T13:39:55.105187+00:00",
+    "locator": "physical PDF pp2-3 Sections2.1-2.3, Eq2 and Eq6-9",
+    "access": "full",
+    "claims": [
+      "CLM-703"
+    ],
+    "limitations": "Selected correlated model/conditioning and noiseless separable block-design cancellation read. Restricted cancellation is not universal arbitrary-W cancellation; D notation in that paper need not share our latent-discrepancy semantics.",
+    "version": "NeurIPS2007",
+    "current_job_status": "Inherited bibliography from P1; not independently reopened under this ID. See N-series for this job access; historical retrieval is not a new access claim."
+  },
+  {
+    "id": "R07",
+    "title": "PreRoutGNN for Timing Prediction with Order Preserving Partition: Global Circuit Pre-training, Local Delay Learning and Attentional Cell Modeling",
+    "url": "https://arxiv.org/html/2403.00012v2",
+    "type": "primary paper",
+    "published": "2024-03-12",
+    "retrieved_utc": "2026-10-15T13:39:55.105187+00:00",
+    "locator": "Method signal propagation paragraph, rendered web line242: AT main and slew/net/cell delay auxiliary tasks",
+    "access": "full",
+    "claims": [
+      "CLM-702"
+    ],
+    "limitations": "Selected original method paragraph read. Different stage/decision; no replacement-selection equivalence or reproduced gain.",
+    "version": "arXiv:2403.00012v2",
+    "current_job_status": "Inherited bibliography from P1; not independently reopened under this ID. See N-series for this job access; historical retrieval is not a new access claim."
+  },
+  {
+    "id": "R08",
+    "title": "Effective Capacitance Modeling Using Graph Neural Networks",
+    "url": "https://arxiv.org/html/2507.03787v2",
+    "type": "primary paper",
+    "published": "2026-05-03",
+    "retrieved_utc": "2026-10-15T13:39:55.105187+00:00",
+    "locator": "SectionsII-B andII-C, rendered web lines81-89; version date in abstract submission history",
+    "access": "full",
+    "claims": [
+      "CLM-702"
+    ],
+    "limitations": "Initially checked v1, then independently discovered/reopened v2 and selected electrical-model sections. No prediction/selection performance reproduced; code and complete method evaluation not audited.",
+    "version": "arXiv:2507.03787v2",
+    "current_job_status": "Inherited bibliography from P1; not independently reopened under this ID. See N-series for this job access; historical retrieval is not a new access claim."
+  },
+  {
+    "id": "R09",
+    "title": "Disentangled Differentiable Timing-Power Co-Optimization with Quad-Gradient Gate Sizing",
+    "url": "https://guozz.cn/publication/phyoptdac-26/phyoptdac-26.pdf",
+    "type": "author-hosted primary paper",
+    "published": "2026-07",
+    "retrieved_utc": "2026-10-15T13:39:55.105187+00:00",
+    "locator": "physical PDF p4 Section3.3 Eq6-11; p5 Section3.4; pp5-6 Section4.2 and Table1 footnote3",
+    "access": "full",
+    "claims": [
+      "CLM-702",
+      "CLM-703"
+    ],
+    "limitations": "Full text accessible; selected method/evaluation/references inspected. Discrete directional electrical guidance and multi-level calibration are strong prior. Authors flag differing runtime hardware/outlier exclusions; no numerical result imported or reproduced. Code and complete winner systems uninspected.",
+    "version": "DOI:10.1145/3770743.3804047",
+    "current_job_status": "Inherited bibliography from P1; not independently reopened under this ID. See N-series for this job access; historical retrieval is not a new access claim."
+  },
+  {
+    "id": "R10",
+    "title": "ISPD2027 official README and contest description",
+    "url": "https://raw.githubusercontent.com/ABKGroup/ISPD27-Contest/faef83cacf70fa7923be07816d804ca9c1cef68e/ISPD27-Contest-Description.pdf",
+    "type": "official contest description",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-15T13:33:16.253832+00:00",
+    "locator": "physical PDF pp2-3 Section2; pp4-5 Section3.1; p5 Section3.3.1; README raw Resources/Timeline",
+    "access": "full",
+    "claims": [
+      "CLM-702"
+    ],
+    "limitations": "Public raw PDF download and selected text extraction succeeded after web-reader internal error; figures not visually audited. Rules/scoring provisional, no EDA execution or benchmark rights inference.",
+    "version": "faef83cacf70fa7923be07816d804ca9c1cef68e",
+    "sha256": "83359d26f06effa60c38c8dbf9ac9ef473968c7223b1e71983d3cd4fd47df2ba",
+    "related_urls": [
+      "https://raw.githubusercontent.com/ABKGroup/ISPD27-Contest/faef83cacf70fa7923be07816d804ca9c1cef68e/README.md",
+      "https://ispd.cc/ispd2027/index.php?page=contests"
+    ],
+    "related_hashes": {
+      "scratch/contest27-readme.md": "c597ba839124d5540c070f902b34d3b471c5c1d65b25d5cc95e5c2df93390bd7"
+    },
+    "current_job_status": "Inherited bibliography from P1; not independently reopened under this ID. See N-series for this job access; historical retrieval is not a new access claim."
+  },
+  {
+    "id": "R11",
+    "title": "ISPD2027 evaluation guide and selected implementation",
+    "url": "https://raw.githubusercontent.com/ABKGroup/ISPD27-Contest/faef83cacf70fa7923be07816d804ca9c1cef68e/evaluator/README.md",
+    "type": "official documentation/source",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-15T13:29:43.663939+00:00",
+    "locator": "raw README3-8,78-104,131-190; evaluation.tcl145-170,245-267; metrics.py81-113 summarize; score.py47-79 validate_config; scoring_config.json status/weights/scenarios",
+    "access": "full",
+    "claims": [
+      "CLM-702"
+    ],
+    "limitations": "Selected code read as data only, never executed. Multi-scenario metrics and provisional scoring exist; transitive evaluator equivalence/correctness and complete legality not certified. Root BSD-3-Clause license read; individual benchmark/PDK rights pending.",
+    "version": "faef83cacf70fa7923be07816d804ca9c1cef68e",
+    "sha256": "03f8ae138bf47ac5f51821f7156211de20ebdf757c728360d64915918958ad2d",
+    "related_urls": [
+      "https://raw.githubusercontent.com/ABKGroup/ISPD27-Contest/faef83cacf70fa7923be07816d804ca9c1cef68e/evaluator/score.py",
+      "https://raw.githubusercontent.com/ABKGroup/ISPD27-Contest/faef83cacf70fa7923be07816d804ca9c1cef68e/evaluator/config/scoring_config.json",
+      "https://raw.githubusercontent.com/ABKGroup/ISPD27-Contest/faef83cacf70fa7923be07816d804ca9c1cef68e/evaluator/internal/evaluation.tcl",
+      "https://raw.githubusercontent.com/ABKGroup/ISPD27-Contest/faef83cacf70fa7923be07816d804ca9c1cef68e/evaluator/internal/metrics.py",
+      "https://raw.githubusercontent.com/ABKGroup/ISPD27-Contest/faef83cacf70fa7923be07816d804ca9c1cef68e/LICENSE"
+    ],
+    "related_hashes": {
+      "scratch/contest27-score.py": "25a6558f6934bc02aa25267567ff51330280e37ed1e13641f3c45320fd2c9d2a",
+      "scratch/contest27-scoring.json": "b06dd4498f35b39c065b5e063d0e26d72262c205f7a2a4abe7d448e1ac35cddf",
+      "scratch/contest27-timing.tcl": "34af229416121834d1f64369e2947e09d05dfd02ccf3b3b3825e7c0860fd9a40",
+      "scratch/contest27-metrics.py": "637d41a7037e478f2eeb5e75abc2859b152f69d6aecca76d08f5393913026deb",
+      "scratch/contest27-license.txt": "19459cb3f0b35d61b40aad99936c03c166a1c7dbf5a692e1239060f1ec801cc5"
+    },
+    "current_job_status": "Inherited bibliography from P1; not independently reopened under this ID. See N-series for this job access; historical retrieval is not a new access claim."
+  },
+  {
+    "id": "R12",
+    "title": "ISPD2026 official winners and pinned repository README",
+    "url": "https://www.ispd.cc/contests/26/index.html",
+    "type": "official contest page",
+    "published": "2026",
+    "retrieved_utc": "2026-10-15T13:39:55.105187+00:00",
+    "locator": "Contest Winners ordered list; pinned README final submission/leaderboard context",
+    "access": "full",
+    "claims": [
+      "CLM-702"
+    ],
+    "limitations": "Winner identities only. 2026 program request redirects; contest-summary slide fetch failed, a different closing link resolved to a 2025 deck and was excluded. Current authenticated winner algorithms unresolved.",
+    "version": "README:f7b29d242fc7d441f3b4eadc556f40099ccca067",
+    "related_urls": [
+      "https://raw.githubusercontent.com/ABKGroup/ISPD26-Contest/f7b29d242fc7d441f3b4eadc556f40099ccca067/README.md",
+      "https://www.ispd.cc/ispd2026/index.php?page=program"
+    ],
+    "current_job_status": "Inherited bibliography from P1; not independently reopened under this ID. See N-series for this job access; historical retrieval is not a new access claim."
+  },
+  {
+    "id": "R13",
+    "title": "PrimeTime Static Timing Analysis",
+    "url": "https://www.synopsys.com/implementation-and-signoff/signoff/primetime.html",
+    "type": "vendor capability page",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-15T13:39:55.105187+00:00",
+    "locator": "Core Static Timing Analysis, rendered web lines111 and117",
+    "access": "full",
+    "claims": [
+      "CLM-706"
+    ],
+    "limitations": "Public advertisement of physically aware ECO and ML power recovery/PBA only. Unknown internal algorithms, matched performance, licensing and industrial absence. Dynamic page.",
+    "current_job_status": "Inherited bibliography from P1; not independently reopened under this ID. See N-series for this job access; historical retrieval is not a new access claim."
+  },
+  {
+    "id": "R14",
+    "title": "MARS: Multi-Transformation Adaptive Resynthesis for Physical Design-Aware Timing Closure",
+    "url": "https://ieeexplore.ieee.org/abstract/document/11545174",
+    "type": "primary publisher abstract",
+    "published": "2026-06-09",
+    "retrieved_utc": "2026-10-15T13:39:55.105187+00:00",
+    "locator": "Publisher-indexed abstract and conference metadata returned by search; direct web open failed HTTP418",
+    "access": "abstract",
+    "claims": [
+      "CLM-702"
+    ],
+    "limitations": "Only publisher-indexed abstract exposed in search; direct page fetch returned418. Coordinated transformations are a discovery lead, not full-method/code audit or complete equivalence. Numerical claims not adopted.",
+    "version": "DOI:10.1109/DCAS69364.2026.11545174",
+    "current_job_status": "Inherited bibliography from P1; not independently reopened under this ID. See N-series for this job access; historical retrieval is not a new access claim."
+  },
+  {
+    "id": "R15",
+    "title": "Parallax Static Timing Analyzer documentation",
+    "url": "https://openroad.readthedocs.io/en/latest/main/src/sta/README.html",
+    "type": "official documentation",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-15T13:39:55.105187+00:00",
+    "locator": "Timing Engine and License sections",
+    "access": "full",
+    "claims": [
+      "CLM-701"
+    ],
+    "limitations": "Incremental timing capability does not certify this adapter or proprietary/foundry signoff. Dynamic documentation, selected sections only; actual tool/license lock still pending.",
+    "current_job_status": "Inherited bibliography from P1; not independently reopened under this ID. See N-series for this job access; historical retrieval is not a new access claim."
+  },
+  {
+    "id": "H01",
+    "title": "Released historical proposer EDA-0007 record",
+    "url": "SUB-e0cef865c5877d07c062554b61e073024cb0f6ed28b7ef45f31c19d7a5cb335a",
+    "type": "explicitly released historical role output",
+    "published": "2026-10-15",
+    "retrieved_utc": "2026-10-15T13:39:55.105187+00:00",
+    "locator": "proposal.md; direction-control.json; tasklist.md; sources.json",
+    "access": "full",
+    "claims": [
+      "CLM-707"
+    ],
+    "limitations": "Unblinded released history only. File manifest verified; no inherited signature, current scientific verification, independence or feasibility.",
+    "current_job_status": "Inherited bibliography from P1; not independently reopened under this ID. See N-series for this job access; historical retrieval is not a new access claim."
+  },
+  {
+    "id": "H02",
+    "title": "Released historical challenger EDA-0007 record",
+    "url": "SUB-373c606bec3ab48f9ff6871096ef98823c923e7a784f7873c19f1ddea7ca1b1c",
+    "type": "explicitly released historical role output",
+    "published": "2026-10-15",
+    "retrieved_utc": "2026-10-15T13:39:55.105187+00:00",
+    "locator": "challenges.md OBJ-001/002; tasklist.md C-001-004",
+    "access": "full",
+    "claims": [
+      "CLM-707"
+    ],
+    "limitations": "Unblinded released history only. File manifest verified; no inherited signature, current scientific verification, independence or feasibility.",
+    "current_job_status": "Inherited bibliography from P1; not independently reopened under this ID. See N-series for this job access; historical retrieval is not a new access claim."
+  },
+  {
+    "id": "H03",
+    "title": "Released historical verifier EDA-0007 record",
+    "url": "SUB-f1c9f13a026274de52f4988e533f9ccc40d00088efdf163f11c15edfebd76c47",
+    "type": "explicitly released historical role output",
+    "published": "2026-10-15",
+    "retrieved_utc": "2026-10-15T13:39:55.105187+00:00",
+    "locator": "verification.md/verification.json matching pair and source_checks",
+    "access": "full",
+    "claims": [
+      "CLM-707"
+    ],
+    "limitations": "Unblinded released history only. File manifest verified; no inherited signature, current scientific verification, independence or feasibility.",
+    "current_job_status": "Inherited bibliography from P1; not independently reopened under this ID. See N-series for this job access; historical retrieval is not a new access claim."
+  },
+  {
+    "id": "A01",
+    "title": "Own constant-size algebraic audit",
+    "url": "experiment-plan.md#complete-reproduction-script",
+    "type": "own exact rational computation",
+    "published": "2026-10-15",
+    "retrieved_utc": "2026-10-15T13:39:55.105187+00:00",
+    "locator": "EXP-000, complete reproduction script and reported output",
+    "access": "full",
+    "claims": [
+      "CLM-703",
+      "CLM-704"
+    ],
+    "version": "925560e2221339bb89ba376f8b2c9448fa52924020220b6ffa0ece3bce46f09e",
+    "limitations": "Non-Gaussian finite law and separate arbitrary Gaussian matrix identity; no EDA/circuit data, training or performance calibration.",
+    "current_job_status": "Inherited bibliography from P1; not independently reopened under this ID. See N-series for this job access; historical retrieval is not a new access claim."
+  },
+  {
+    "id": "N01",
+    "title": "MeasuredVtSwapCandidate.cc",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/3549d60529517dc82deb7f0ff769345e9a424911/src/rsz/src/move/MeasuredVtSwapCandidate.cc",
+    "type": "pinned primary source code",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-15T14:31:52.517249+00:00",
+    "locator": "raw one-based lines44-66 estimate; web-rendered zero-based40-61 differs due formatting",
+    "access": "full",
+    "claims": [
+      "CLM-701",
+      "CLM-710"
+    ],
+    "limitations": "Selected code read only, no compilation/execution/transitive correctness claim.",
+    "version": "3549d60529517dc82deb7f0ff769345e9a424911",
+    "sha256": "16c99bf48dd4e6c23a5c886ef3608bfb95bd0bfbb688e35676a4bc301427cb08"
+  },
+  {
+    "id": "N02",
+    "title": "DelayEstimator.cc",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/3549d60529517dc82deb7f0ff769345e9a424911/src/rsz/src/DelayEstimator.cc",
+    "type": "pinned primary source code",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-15T14:31:53.771870+00:00",
+    "locator": "raw one-based492-521 slewBias/interpolateStaSlewBias; web-rendered zero-based453-480",
+    "access": "full",
+    "claims": [
+      "CLM-701",
+      "CLM-702"
+    ],
+    "limitations": "Selected calibration functions only, no reproduction/build or derivative-covariance equivalence claim.",
+    "version": "3549d60529517dc82deb7f0ff769345e9a424911",
+    "sha256": "465a1de5c232f946e5b6b093a37f5ed72e96ed1b41be34f32f60e29fc186732c"
+  },
+  {
+    "id": "N03",
+    "title": "High-Performance Gate Sizing with a Signoff Timer",
+    "url": "https://vlsicad.ucsd.edu/Publications/Conferences/304/c304.pdf",
+    "type": "primary paper",
+    "published": "2013",
+    "retrieved_utc": "2026-10-15T14:39:10.758410+00:00",
+    "locator": "physical PDF p3 section3.1 offset calibration and dedicated critical-path optimization",
+    "access": "full",
+    "claims": [
+      "CLM-702"
+    ],
+    "limitations": "Selected original sections; historical results not imported or reproduced.",
+    "version": "ICCAD2013"
+  },
+  {
+    "id": "N04",
+    "title": "Two-step Lookahead Bayesian Optimization with Inequality Constraints",
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2021/file/685217557383cd194b4f10ae4b39eebf-Paper.pdf",
+    "type": "primary proceedings paper",
+    "published": "2021",
+    "retrieved_utc": "2026-10-15T14:39:10.758410+00:00",
+    "locator": "physical PDF pp3-5 sections2.3 Eq1 and3.2; proceedings landing title Constrained Two-step Look-Ahead Bayesian Optimization",
+    "access": "full",
+    "claims": [
+      "CLM-702",
+      "CLM-703",
+      "CLM-708"
+    ],
+    "limitations": "Original independent objective/constraint GP factorization cannot be assumed for joint gain/margin law; no EDA or performance replication.",
+    "version": "NeurIPS2021"
+  },
+  {
+    "id": "N05",
+    "title": "Disentangled Differentiable Timing-Power Co-Optimization with Quad-Gradient Gate Sizing",
+    "url": "https://guozz.cn/publication/phyoptdac-26/phyoptdac-26.pdf",
+    "type": "author-hosted primary paper",
+    "published": "2026",
+    "retrieved_utc": "2026-10-15T14:39:10.758410+00:00",
+    "locator": "physical PDF pp4-5 sections3.3 Eqs6-11 and3.4; Algorithm1",
+    "access": "full",
+    "claims": [
+      "CLM-702",
+      "CLM-703"
+    ],
+    "limitations": "Selected original text only; code/winner systems not audited, author runtime/results not adopted.",
+    "version": "DOI:10.1145/3770743.3804047"
+  },
+  {
+    "id": "N06",
+    "title": "Invited: Post-Placement Buffering and Sizing Contest",
+    "url": "https://vlsicad.ucsd.edu/Publications/Conferences/421/c421.pdf",
+    "type": "official contest primary paper",
+    "published": "2026-03",
+    "retrieved_utc": "2026-10-15T14:39:10.758410+00:00",
+    "locator": "physical PDF p1 Introduction; p6 section4 Eq16/section5.1; p7 section5.3 roadmap/references",
+    "access": "full",
+    "claims": [
+      "CLM-705",
+      "CLM-709"
+    ],
+    "limitations": "Rules/engineering context, not winner methodology or source of a project compute grant. Roadmap is prospective.",
+    "version": "DOI:10.1145/3764386.3779616"
+  },
+  {
+    "id": "N07",
+    "title": "ISPD2026 official contest winners",
+    "url": "https://www.ispd.cc/contests/26/index.html",
+    "type": "official contest page",
+    "published": "2026",
+    "retrieved_utc": "2026-10-15T14:39:10.758410+00:00",
+    "locator": "Contest Winners ordered list, rendered zero-based lines3-10",
+    "access": "full",
+    "claims": [
+      "CLM-709"
+    ],
+    "limitations": "IRISLab/PTSD/HLFC identities only; no algorithm verified."
+  },
+  {
+    "id": "N08",
+    "title": "ISPD2027 official README",
+    "url": "https://raw.githubusercontent.com/ABKGroup/ISPD27-Contest/faef83cacf70fa7923be07816d804ca9c1cef68e/README.md",
+    "type": "official pinned contest documentation",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-15T14:31:55.194691+00:00",
+    "locator": "raw one-based1 title;17 Timeline",
+    "access": "full",
+    "claims": [
+      "CLM-709"
+    ],
+    "limitations": "MCMM post-CTS title and schedule only; no current full evaluator audit, completed2027 result, data-rights or execution inference.",
+    "version": "faef83cacf70fa7923be07816d804ca9c1cef68e",
+    "sha256": "c597ba839124d5540c070f902b34d3b471c5c1d65b25d5cc95e5c2df93390bd7"
+  },
+  {
+    "id": "N09",
+    "title": "PrimeTime Static Timing Analysis",
+    "url": "https://www.synopsys.com/implementation-and-signoff/signoff/primetime.html",
+    "type": "vendor capability advertisement",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-15T14:39:10.758410+00:00",
+    "locator": "Core Static Timing Analysis, web-rendered lines111/117",
+    "access": "full",
+    "claims": [
+      "CLM-706"
+    ],
+    "limitations": "Advertised ECO/ML capability only, no internals, absence or controlled superiority inference."
+  },
+  {
+    "id": "N10",
+    "title": "ISPD program page returned under 2027 route",
+    "url": "https://ispd.cc/ispd2027/index.php?page=program",
+    "type": "official website with edition-mixed routing",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-15T14:39:10.758410+00:00",
+    "locator": "heading ISPD2026 Program; contest summary/closing link area",
+    "access": "full",
+    "claims": [],
+    "limitations": "2027 outer heading with2026 program content; link destinations require their own edition audit. No winner-method claim."
+  },
+  {
+    "id": "N11",
+    "title": "Impact of evaluation noise in the context of multi-objective Bayesian optimization with the intrinsic coregionalization model",
+    "url": "https://www.sciencedirect.com/science/article/pii/S0925231226017984",
+    "type": "primary publisher search excerpt",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-15T14:39:10.758410+00:00",
+    "locator": "publisher-indexed Abstract/Scenario2 snippet; direct web open returned Internal Error",
+    "access": "abstract",
+    "claims": [],
+    "limitations": "Discovery lead only. Not full-method inspected; noiseless separable ICM result is not automatically arbitrary-W cancellation. Publication date/version unresolved."
+  },
+  {
+    "id": "P1",
+    "title": "Own previous released proposer R1",
+    "url": "SUB-8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f",
+    "type": "released own output",
+    "published": "2026-10-15",
+    "retrieved_utc": "2026-10-15T14:39:10.758410+00:00",
+    "locator": "proposal,tasklist,experiment-plan,responses,sources,direction-control,forecast",
+    "access": "full",
+    "claims": [
+      "CLM-707"
+    ],
+    "limitations": "Released historical content, no inherited current approval."
+  },
+  {
+    "id": "C1",
+    "title": "Adjudicated cycle1 challenge",
+    "url": "SUB-e3407b956910db0e7d4c3dbf46ac184bccf23d68e66ef738a10e0696ef980338",
+    "type": "released role output",
+    "published": "2026-10-15",
+    "retrieved_utc": "2026-10-15T14:39:10.758410+00:00",
+    "locator": "challenges.md OBJ-001 and tasklist C-001..003",
+    "access": "full",
+    "claims": [
+      "CLM-707",
+      "CLM-708"
+    ],
+    "limitations": "Read only alongside V1 adjudicating this exact release; no private notes."
+  },
+  {
+    "id": "V1",
+    "title": "Cycle1 independent scientific ruling",
+    "url": "SUB-1d2e343cab1599577d312783ff91916761e548b2d4e1d7749b3071f38416b8ca",
+    "type": "released role output",
+    "published": "2026-10-15",
+    "retrieved_utc": "2026-10-15T14:39:10.758410+00:00",
+    "locator": "verification.json objections OBJ-001 and claim_checks",
+    "access": "full",
+    "claims": [
+      "CLM-707",
+      "CLM-708"
+    ],
+    "limitations": "Review of P1, not independent approval of R2; unresolved gates retained."
+  },
+  {
+    "id": "A02",
+    "title": "Own Gaussian/rank analytical check",
+    "url": "experiment-plan.md#r2-complete-reproduction",
+    "type": "own rational arithmetic and deterministic quadrature",
+    "published": "2026-10-15",
+    "retrieved_utc": "2026-10-15T14:39:10.758410+00:00",
+    "locator": "EXP-000R2 script and JSON",
+    "access": "full",
+    "claims": [
+      "CLM-704",
+      "CLM-708"
+    ],
+    "limitations": "Synthetic arbitrary coefficients, not EDA/library residuals, calibrated forecast or new acquisition method."
+  }
+]

@@ -1,0 +1,84 @@
+{
+  "state": "continue",
+  "anchor": {
+    "problem": "Choose which immutable-base legal critical-driver replacement to measure, then return a measured candidate with useful timing-quality/cost tradeoff.",
+    "engineering_user": "Timing-optimization developer using a local arrival-scoring replacement consumer.",
+    "downstream_need": "Reduce fully charged measured-selection time at justified local-regret and global WNS/TNS/ERC tolerances; utility remains unverified.",
+    "causal_mechanism": "Signed candidate-minus-base electrical sensitivities parameterize shared residual contrast covariance; bundled measurements update the table used by a bounded regret-per-cost controller.",
+    "mechanism_invariants": [
+      "Same immutable checkpoint and ordered legal alternatives for every baseline/query.",
+      "Candidate contrasts, not dense full-vector outputs or generic shared exact execution.",
+      "No future labels or unavailable stage information in unmeasured inputs.",
+      "Reference query bundles objective/constraint results and verifies restoration.",
+      "Only measured candidates may be returned; final full guards; no exact best-choice or probabilistic-coverage claim.",
+      "Same-feature joint and latent-factor GP with same controller are mandatory strongest comparisons.",
+      "Global timing/electrical utility and complete cost ledger remain necessary."
+    ],
+    "forbidden_pivots": [
+      "Adding agents, training data or extra EDA trials to hide failure of contrast covariance.",
+      "Replacing the objective by RMSE without downstream demand.",
+      "Claiming exact all-candidate decisions, silicon signoff or expanded MCMM/SI/hold scope.",
+      "Resurrecting EDA-0006 generic mask-execution novelty or changing its full-vector contract under its old ID."
+    ]
+  },
+  "penalties": {
+    "combination_drift": {
+      "score": 0,
+      "rationale": "Same signed electrical-contrast covariance and deterministic bundled measurement mechanism; rank/D falsification and query-flag semantics repair it without replacing the contribution.",
+      "evidence_refs": [
+        "proposal.md:Controller, rank boundary and bounded Gaussian progress",
+        "responses.md:cycle1 OBJ-001",
+        "experiment-plan.md:A11"
+      ]
+    },
+    "demand_drift": {
+      "score": 0,
+      "rationale": "Same measured guarded replacement-selection user and charged global-quality endpoint; synthetic Gaussian value is explicitly not engineering utility.",
+      "evidence_refs": [
+        "proposal.md:Frozen problem",
+        "industry-gap.md",
+        "EXP-005/006"
+      ]
+    },
+    "total": 0
+  },
+  "revision_assessment": {
+    "preserves_problem": true,
+    "preserves_engineering_need": true,
+    "preserves_causal_mechanism": true,
+    "changes": [
+      "Accept all-full-rank zero-D saturation boundary.",
+      "Add mixed-rank Gaussian and persistent-D diagnostic with exact observation semantics.",
+      "Separate mean calibration, W information and policy attribution.",
+      "Separate physical legality from score-based consumer improvement flags.",
+      "Update official contest source context and preserve winner-method limits."
+    ],
+    "reason": "Anchor-preserving R2 repair in additional cycle2; useful physical system delta still unresolved."
+  },
+  "abandonment": {
+    "decision_id": null,
+    "grounds": [],
+    "rationale": null,
+    "evidence_refs": [],
+    "consents": {
+      "proposer": {
+        "session_id": null,
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      },
+      "challenger": {
+        "session_id": null,
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      }
+    },
+    "successor_topic_id": null,
+    "resurrection_conditions": [
+      "New batch authorizes exactly four additional research cycles across successors, not EDA experiments.",
+      "Any future pilot still needs source/data/adapter/owner/resource/threshold readiness, exact-task P/C agreements and independent verification.",
+      "Retain historical park, negative evidence and source/observation limits; three unsuccessful additional cycles trigger park per batch policy."
+    ]
+  }
+}

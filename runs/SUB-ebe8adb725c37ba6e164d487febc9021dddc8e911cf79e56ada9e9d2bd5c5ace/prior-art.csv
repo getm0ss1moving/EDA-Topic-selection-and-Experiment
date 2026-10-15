@@ -1,0 +1,11 @@
+source_id,task_formulation,mechanism,data,evaluation,assumptions,overlap,proposed_distinction
+N01,local replacement measurement,journaled arrival score,source only,none executed,flag includes improvement; complete guard bundle absent,actual consumer,adapter/query semantics unresolved
+N02,cheap timing calibration,load-dependent slew bias,source only,none executed,selected functions,strong mean baseline,W must add useful residual structure
+N03,signoff-assisted gate sizing,offset calibration/incremental/peephole,historical paper,not reproduced,different era/workload,strong conventional search,no calibration novelty
+N04,constrained BO,joint improvement/two-step information,non-EDA paper,not reproduced,original independent objective/constraint GP,same controller principle,finite local application is not new acquisition
+N05,physical timing-power sizing,electrical directions and multi-level calibration,paper method,not reproduced,code/winner equivalence uninspected,same electrical inputs/calibration,conditional residual covariance system tradeoff unestablished
+N06,post-placement buffering/sizing,evaluation rules/physical constraints,official contest paper,not run,rules not winner algorithms,engineering context,narrow candidate-selection distinction unknown
+N08,MCMM post-CTS sizing,official prospective problem,README only,not run,not this single-scenario domain,broader contest coverage,no MCMM pivot
+N09,commercial timing/ECO,advertised physically-aware/ML capability,public page,no matched measurement,internals unknown,public capability,no absence claim
+N11,multioutput BO cancellation/noise,publisher abstract lead,excerpt only,not reproduced,direct fetch failed; separable ICM,cancellation risk lead,no arbitrary-W inference
+A02,bounded Gaussian candidate choice,mixed-rank exact observation witness,stipulated coefficients,own arithmetic only,not physical/calibrated,conditional information effect,same-feature GP identical; not scientific novelty by itself

@@ -1,0 +1,142 @@
+[
+  {
+    "id": "S01",
+    "title": "Two-step Lookahead Bayesian Optimization with Inequality Constraints",
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2021/file/685217557383cd194b4f10ae4b39eebf-Paper.pdf",
+    "type": "primary source",
+    "published": "2021",
+    "retrieved_utc": "2026-10-15T14:47:02.662387+00:00",
+    "locator": "physical PDF pp4-5 sections2.3 Eq1 and3.2; rendered lines163-173,285-300",
+    "access": "full",
+    "claims": [
+      "review coverage"
+    ],
+    "limitations": "Selected acquisition definitions; independent objective/constraint factorization is not arbitrary joint-bundle equivalence."
+  },
+  {
+    "id": "S02",
+    "title": "Disentangled Differentiable Timing-Power Co-Optimization with Quad-Gradient Gate Sizing",
+    "url": "https://guozz.cn/publication/phyoptdac-26/phyoptdac-26.pdf",
+    "type": "primary source",
+    "published": "2026-07",
+    "retrieved_utc": "2026-10-15T14:47:02.662387+00:00",
+    "locator": "physical PDF pp4-5 sections3.3 Eqs6-8 and3.4; rendered341-394,562-568",
+    "access": "full",
+    "claims": [
+      "review coverage"
+    ],
+    "limitations": "Selected directional and calibration text; reported gains not adopted or reproduced, code not audited."
+  },
+  {
+    "id": "S03",
+    "title": "High-Performance Gate Sizing with a Signoff Timer",
+    "url": "https://vlsicad.ucsd.edu/Publications/Conferences/304/c304.pdf",
+    "type": "primary source",
+    "published": "2013",
+    "retrieved_utc": "2026-10-15T14:47:02.662387+00:00",
+    "locator": "physical PDF p3 section3.1, rendered327-336; p4 rendered472-516",
+    "access": "full",
+    "claims": [
+      "review coverage"
+    ],
+    "limitations": "Selected historical calibration/critical-path/peephole sections; no modern performance transfer."
+  },
+  {
+    "id": "S04",
+    "title": "MeasuredVtSwapCandidate.cc",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/3549d60529517dc82deb7f0ff769345e9a424911/src/rsz/src/move/MeasuredVtSwapCandidate.cc",
+    "type": "primary source",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-15T14:47:02.662387+00:00",
+    "locator": "raw 1-based lines44-66, estimate",
+    "access": "full",
+    "claims": [
+      "review coverage"
+    ],
+    "limitations": "Selected function only. No build, transitive state audit or complete constraint bundle."
+  },
+  {
+    "id": "S05",
+    "title": "DelayEstimator.cc",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/3549d60529517dc82deb7f0ff769345e9a424911/src/rsz/src/DelayEstimator.cc",
+    "type": "primary source",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-15T14:47:02.662387+00:00",
+    "locator": "raw 1-based lines492-521, slewBias/interpolateStaSlewBias",
+    "access": "full",
+    "claims": [
+      "review coverage"
+    ],
+    "limitations": "Selected functions only; no new covariance or performance claim."
+  },
+  {
+    "id": "S06",
+    "title": "ISPD2026 contest winners",
+    "url": "https://www.ispd.cc/contests/26/index.html",
+    "type": "primary source",
+    "published": "2026",
+    "retrieved_utc": "2026-10-15T14:47:02.662387+00:00",
+    "locator": "Contest Winners ordered list, rendered lines3-10",
+    "access": "full",
+    "claims": [
+      "review coverage"
+    ],
+    "limitations": "Winner identities only; no winner algorithm report found in checked material."
+  },
+  {
+    "id": "S07",
+    "title": "ISPD2027 official README",
+    "url": "https://raw.githubusercontent.com/ABKGroup/ISPD27-Contest/faef83cacf70fa7923be07816d804ca9c1cef68e/README.md",
+    "type": "primary source",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-15T14:47:02.662387+00:00",
+    "locator": "title and Resources, rendered0-11",
+    "access": "full",
+    "claims": [
+      "review coverage"
+    ],
+    "limitations": "MCMM post-CTS scope only; no completed 2027 outcome or evaluator execution."
+  },
+  {
+    "id": "S08",
+    "title": "Official program and linked closing remarks",
+    "url": "https://ispd.cc/ispd2027/index.php?page=program",
+    "type": "primary source",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-15T14:47:02.662387+00:00",
+    "locator": "Contest Summary/Results rendered294-304; closing link targets https://ispd.cc/slides/2025/protected/16_2_slides.pdf physical p1",
+    "access": "full",
+    "claims": [
+      "review coverage"
+    ],
+    "limitations": "2026-looking program under2027 route links to2025 closing slides. Contest-results link returned Internal Error. No authentication bypass or winner-method inference."
+  },
+  {
+    "id": "S09",
+    "title": "Revisiting Sensitivity-Based Analog Sizing with Derivative-Aware Bayesian Optimization and Error-Suppressed Adjoint Analysis",
+    "url": "https://ieeexplore.ieee.org/abstract/document/11126410",
+    "type": "primary source",
+    "published": "2024-10",
+    "retrieved_utc": "2026-10-15T14:47:02.662387+00:00",
+    "locator": "publisher-indexed abstract and conference/date metadata; DOI10.1145/3676536.3676736",
+    "access": "abstract",
+    "claims": [
+      "review coverage"
+    ],
+    "limitations": "Direct open Internal Error; indexed primary abstract only. Analog sensitivity-aware GP lead, not digital-W equivalence. IEEE addition date2025 is not conference date."
+  },
+  {
+    "id": "A-C01",
+    "title": "Own exact support-function calculation and rank perturbation",
+    "url": "challenges.md#independent-positive-checks",
+    "type": "own analytical derivation",
+    "published": "2026-10-15",
+    "retrieved_utc": "2026-10-15T14:47:02.662387+00:00",
+    "locator": "positive checks, OBJ-001 and embedded reproduction script/output",
+    "access": "full",
+    "claims": [
+      "OBJ-001"
+    ],
+    "limitations": "Synthetic algebra only; exact mathematical premises and no physical realization."
+  }
+]

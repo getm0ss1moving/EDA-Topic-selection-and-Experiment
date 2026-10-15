@@ -1,0 +1,15 @@
+{
+  "actor_id": "ChatGPT-V05-TIMING-B03-EDA-0007-REPLACEMENT-1-506e0f6e",
+  "files": {
+    "compliance.json": "00553a38b102ceec64b36efa12d8a0bdd3205742ff9e55c2126495da476d41cf",
+    "verification.json": "1a783f88be03aa1d9e1b3acc800cbbd8fe65ef81d2b804f12476e09371aa3575",
+    "verification.md": "311153a6e1da866cb136fa2fec83d662bc9dc7ce6fffb056debda529b30f2ead",
+    "workflow.json": "d40409cdb21ac38074b377a00c3a40440ad820500b1599a107d4f2adff94613d"
+  },
+  "input_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+  "packet_sha256": "a628fc9403ccb57a82797cdd71108d68185d66bf2685845847b121742ddb8422",
+  "role": "verifier",
+  "schema": 1,
+  "session_id": "bfed115a-3d9b-43a8-88ed-35eadbc3186f",
+  "topic": "EDA-0007"
+}

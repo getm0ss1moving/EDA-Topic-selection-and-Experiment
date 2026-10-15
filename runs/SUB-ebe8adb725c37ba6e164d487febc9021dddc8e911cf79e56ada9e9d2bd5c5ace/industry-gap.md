@@ -1,0 +1,11 @@
+# Engineering demand and public-capability limits, R2
+
+User/decision: timing-optimization developer choosing which critical-driver replacement to measure from the same checkpoint, then returning a measured guarded candidate or base. Intended endpoint is fully charged selection time at justified local/full regret and global WNS/TNS/ERC tolerances. Representative need, saved runtime fraction and acceptable thresholds remain unresolved (EXP-002/005/006).
+
+N01 estimate raw44-66 supplies a real local transaction consumer, including a score-based improvement flag; it does not supply the proposed full output bundle or demonstrate a costly-enough, large-enough candidate workload. N02's slewBias/interpolateStaSlewBias and N03 section3.1 make ordinary calibrated estimation strong alternatives. The W construction must earn its probe/fit/update overhead against them. N05 sections3.3/3.4 narrows any electrical-information/calibration distinction. These facts establish the comparison obligation, not a verified industrial gap.
+
+N06 Introduction and Eq16 show a public engineering context where physical/electrical effects and complete acceptance matter. That broad context is not evidence that this small replacement-selection consumer is an industrial bottleneck. Local gain/slew can disagree with global WNS/TNS/ERC guards; the proposed policy remains a local heuristic until the downstream relation is measured. Practitioner input and workload variance must justify thresholds before confirmatory tests.
+
+N09 Core Static Timing Analysis publicly advertises physically-aware ECO and ML capabilities. Internal representation, calibration/covariance policy, comparable licensing and controlled performance are unknown. No commercial absence, market uniqueness or industrial superiority is asserted. Open source feature availability is insufficient scientific novelty.
+
+Integration risks: overloaded consumer legality flag, lawful candidate diversity, transitive restoration/parasitic invalidation, compatible API/build lock, min/max path switches, unsupported LUT probes, cold-start labels, fitted hyperparameters, global guard rejection and total acquisition cost. UNKNOWN must retain its cost and reference fallback. Known components are eligible if a useful system tradeoff survives fair comparisons; the current evidence has not shown it.

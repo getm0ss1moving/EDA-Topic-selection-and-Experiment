@@ -1,0 +1,149 @@
+{
+  "schema": 1,
+  "role": "verifier",
+  "actor_id": "ChatGPT-V05-TIMING-B03-EDA-0007-REPLACEMENT-1-506e0f6e",
+  "session_id": "bfed115a-3d9b-43a8-88ed-35eadbc3186f",
+  "input_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+  "packet_sha256": "a628fc9403ccb57a82797cdd71108d68185d66bf2685845847b121742ddb8422",
+  "job_id": "7510431d-0032-4d10-a262-a370849ffde6",
+  "read_releases": [
+    "SUB-ebe8adb725c37ba6e164d487febc9021dddc8e911cf79e56ada9e9d2bd5c5ace",
+    "SUB-00eaf4c6d47db0f8dcb907fbf5d70719e7d1534a10660a8a5caa480ef6662ad9",
+    "SUB-8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f",
+    "SUB-1d2e343cab1599577d312783ff91916761e548b2d4e1d7749b3071f38416b8ca",
+    "SUB-399339b3dae4b21aa15b73db0d76cdf065e86a7be3ec7a36f60f6246f91637cd"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0
+  },
+  "rules": {
+    "inputs": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json/prompt.txt; policy common docs and only harness/VERIFIER.md",
+        "runs/input-integrity.json; actual released reads listed above"
+      ],
+      "limits": "Self-authored public activity ledger, not complete trace or proof of absence of undisclosed actions. Scientific and access limitations remain in verification.json."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "All shell workdir set to own job; released shared/ and own-previous only",
+        "No collaboration tools or foreign sessions/checkout access"
+      ],
+      "limits": "Self-authored public activity ledger, not complete trace or proof of absence of undisclosed actions. Backend model and shared-OS isolation are not independently attested."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "Own scratch/verify_math.py, scratch/write_release.py, raw source text; runs/ integrity/arithmetic/fetch records",
+        "release/verification.md, verification.json, workflow.json, compliance.json; submissions/ and result.json at completion"
+      ],
+      "limits": "Self-authored public activity ledger, not complete trace or proof of absence of undisclosed actions. Scientific and access limitations remain in verification.json."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json source_checks V01-V12 and two search expansions",
+        "Raw pinned code SHA matches and exact raw numbering; selected original PDF methods; direct DarBO failure and local PDF timeout disclosed"
+      ],
+      "limits": "Self-authored public activity ledger, not complete trace or proof of absence of undisclosed actions. Scientific and access limitations remain in verification.json."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json claim_checks/objections; independent analytic values in runs/analytical-check.json",
+        "Physical utility/novelty/readiness unresolved; no chip measurements or calibrated numerical forecasts"
+      ],
+      "limits": "Self-authored public activity ledger, not complete trace or proof of absence of undisclosed actions. Scientific and access limitations remain in verification.json."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "Exact R2 tasklist SHA independently hashed",
+        "P/C revision_requested only; no signature or agreement authored for others"
+      ],
+      "limits": "Self-authored public activity ledger, not complete trace or proof of absence of undisclosed actions. Scientific and access limitations remain in verification.json."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "Own tiny standard-library rational/polar arithmetic only; downloaded source read as text",
+        "No EDA/build/flow/labels/fit/training/remote/GPU/paid API execution"
+      ],
+      "limits": "Self-authored public activity ledger, not complete trace or proof of absence of undisclosed actions. Scientific and access limitations remain in verification.json."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "Compared released P1/R2 and own-previous V1, current W/guarded user anchor retained",
+        "Both drift scores0, physical utility unresolved; no new topic or broadened timing domain"
+      ],
+      "limits": "Self-authored public activity ledger, not complete trace or proof of absence of undisclosed actions. Scientific and access limitations remain in verification.json."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "Trusted supplied freeze creates own immutable submission; verify then result.json",
+        "No GitHub push/merge/approval by scientific role; coordinator handles PR/full validation"
+      ],
+      "limits": "Self-authored public activity ledger, not complete trace or proof of absence of undisclosed actions. Scientific and access limitations remain in verification.json."
+    }
+  },
+  "operations": [
+    {
+      "operation": "Read assignment and common policy before bounded discovery",
+      "paths": [
+        "JOB.json",
+        "prompt.txt",
+        "policy/docs/ROLE-COMPLIANCE.md",
+        "policy/docs/CHARTER.md",
+        "policy/docs/WORKFLOW.md",
+        "policy/docs/EVIDENCE.md",
+        "policy/docs/ISOLATION.md",
+        "policy/docs/CODEX-AUTOMATION.md",
+        "policy/docs/INNOVATION-BATCH-0003.md",
+        "policy/harness/VERIFIER.md"
+      ],
+      "note": "First common-policy concatenation output truncated; required operational/isolation sections reread. Other role harnesses not opened."
+    },
+    {
+      "operation": "Enumerate own supplied shared/own-previous files, read explicitly released current P/C, R1 proposal/response/workflow, previous V1 verification.json and audit workflow metadata",
+      "note": "Predecessor filenames enumerated, but no predecessor semantic content read. Audit metadata not used for scientific conclusion."
+    },
+    {
+      "operation": "Independently browse/retrieve primary research",
+      "references": "verification.json source_checks V01-V12 and search_log; runs/source-fetch.json",
+      "note": "Raw V05/V06 downloaded and read only. Local supplemental PDF fetch timed out; web source text used, no download executed."
+    },
+    {
+      "operation": "Execute own tiny arithmetic and trusted local hash/digest",
+      "commands": [
+        "python3 scratch/verify_math.py",
+        "python3 policy/scripts/project.py digest shared/SUB-ebe8adb725c37ba6e164d487febc9021dddc8e911cf79e56ada9e9d2bd5c5ace"
+      ],
+      "outputs": [
+        "runs/analytical-check.json",
+        "runs/input-integrity.json"
+      ]
+    },
+    {
+      "operation": "Write compact own verification and nine-rule ledger; validate and self-freeze",
+      "outputs": [
+        "release/",
+        "runs/",
+        "submissions/",
+        "result.json"
+      ],
+      "note": "Freeze command/result recorded in runs/submission-result.json after successful execution; no self-approval."
+    }
+  ],
+  "incidents": [],
+  "observability": "Self-authored public activity ledger. Assignment arrived as operational dispatch, not scientific private-role messaging; no collaboration calls made. No disclosed forbidden exposure. Ledger and structural validation do not establish unseen behavior, host model identity, adversarial isolation or independent approval."
+}

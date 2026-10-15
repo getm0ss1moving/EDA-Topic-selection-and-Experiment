@@ -1,0 +1,11 @@
+# Contest scope and winner-method audit, R2
+
+Fresh primary readings: N06, the official ISPD2026 contest paper (DOI10.1145/3764386.3779616), selected Introduction, final score Eq16 and roadmap section5.3; N07 official winner list; N08 pinned ISPD2027 README. N06 describes evaluation/constraints, not winner algorithms. N07 identifies IRISLab, PTSD and HLFC; identities do not authenticate a method or establish equivalence. N08 states MCMM post-CTS scope; this topic stays single-scenario ideal-clock setup. No completed2027 outcome is inferred.
+
+The second independent search expansion followed official program and winner names. N10 returned an ISPD2026 program under a2027 route/outer heading. Edition and actual linked artifact must be checked independently; no slide deck or winner source was newly authenticated. No code was executed or contest resource used. Current winner-method access remains a readiness/novelty gap, not proof of novelty or inability.
+
+Prior R10/R11 description/evaluator observations are preserved as inherited bibliography only; they were not reopened in full here. Prior2024/2025 contest facts do not inherit independent current verification. N06 section5.1 is fresh context, not an audit of each historical contest's strongest implementation. Organizer references include related differentiable sizing and timing work; those leads are logged for further coverage. Implementing organizer suggestions or reproducing a winner is not the contribution.
+
+Locator convention: PDF physical pages are one-based from the PDF cover; sections/equations are the portable locator. Web reader line numbers are rendering-specific and zero-based. Newly downloaded raw UTF-8 source line numbers are one-based, exact file SHA256 recorded in N01/N02/N08. For example estimate appears at raw44 versus rendered40, and slewBias at raw492 versus rendered453. Never combine these systems. Raw files are private job source records; no full copyrighted paper is released.
+
+Required resolution EXP-001: authenticated winner papers/slides/code with version, team provenance, changed algorithm, equivalent information/cost contract and overlap with W construction. A failed search is reported as unresolved. Bound search budget explicitly; do not infer two negative expansions after discovering closer sources. No contest completion/performance claim is made.

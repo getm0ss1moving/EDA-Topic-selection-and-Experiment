@@ -1,0 +1,132 @@
+{
+  "schema": 1,
+  "role": "challenger",
+  "actor_id": "ChatGPT-C05-TIMING-B03-EDA-0007",
+  "session_id": "b789be3f-0354-4526-807b-b75b91d1f374",
+  "input_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+  "packet_sha256": "370dd0d14ce8fee3864991b64280be571a92d7591ca2400a9932e89a86949a65",
+  "job_id": "f9276164-9120-4284-8d47-a9354c7f09ed",
+  "read_releases": [
+    "SUB-47b431b4e6d39d744a6de744a3528c7571a5d718f6fc5716d5f1795875671a81",
+    "SUB-1d2e343cab1599577d312783ff91916761e548b2d4e1d7749b3071f38416b8ca",
+    "SUB-8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f"
+  ],
+  "activity": {
+    "checkout_access": "none; user-provided checkout path/instructions present in initial context but no filesystem read there",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0
+  },
+  "rules": {
+    "inputs": {
+      "status": "deviation_disclosed",
+      "evidence": [
+        "JOB.json released_inputs",
+        "prompt.txt shared-folder statement",
+        "shared/SUB-8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f/SUBMISSION.json",
+        "challenges.md Input disclosure"
+      ],
+      "limits": "Read an extra shared frozen historical proposal not enumerated by JOB. It is released-looking packet content and referenced as prior release by current workflow, not private scratch. Explicit authorization scope ambiguity requires protocol adjudication; no perfect isolation claim."
+    },
+    "isolation": {
+      "status": "deviation_disclosed",
+      "evidence": [
+        "JOB.json released_inputs",
+        "prompt.txt shared-folder statement",
+        "shared/SUB-8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f/SUBMISSION.json",
+        "challenges.md Input disclosure"
+      ],
+      "limits": "Read an extra shared frozen historical proposal not enumerated by JOB. It is released-looking packet content and referenced as prior release by current workflow, not private scratch. Explicit authorization scope ambiguity requires protocol adjudication; no perfect isolation claim."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "search-log.md",
+        "challenges.md",
+        "workflow.json"
+      ],
+      "limits": "Self-authored ledger; not complete tool trace or backend/OS attestation."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "search-log.md",
+        "challenges.md",
+        "workflow.json"
+      ],
+      "limits": "Self-authored ledger; not complete tool trace or backend/OS attestation."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "search-log.md",
+        "challenges.md",
+        "workflow.json"
+      ],
+      "limits": "Self-authored ledger; not complete tool trace or backend/OS attestation."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "search-log.md",
+        "challenges.md",
+        "workflow.json"
+      ],
+      "limits": "Self-authored ledger; not complete tool trace or backend/OS attestation."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "search-log.md",
+        "challenges.md",
+        "workflow.json"
+      ],
+      "limits": "Self-authored ledger; not complete tool trace or backend/OS attestation."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "search-log.md",
+        "challenges.md",
+        "workflow.json"
+      ],
+      "limits": "Self-authored ledger; not complete tool trace or backend/OS attestation."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "search-log.md",
+        "challenges.md",
+        "workflow.json"
+      ],
+      "limits": "Self-authored ledger; not complete tool trace or backend/OS attestation."
+    }
+  },
+  "operations": [
+    "First read JOB.json and prompt.txt only.",
+    "Listed policy/shared and job-root names only; read common policies and only CHALLENGER harness.",
+    "Read current proposal/plan/tasklist/responses/source ledger/workflow, released prior verifier JSON, and extra shared frozen R1 selected files as disclosed.",
+    "Public web searches and primary text reads in search-log.md; raw-source retrieval only to own scratch.",
+    "Own standard-library synthetic arithmetic; current proposal payload SHA256 verification.",
+    "Wrote own English release and runs provenance; trusted freeze follows; no PR approval or merge."
+  ],
+  "incidents": [
+    {
+      "id": "INC-001",
+      "classification": "potential_input_scope_deviation",
+      "description": "Initially read proposal.md, tasklist.md, responses.md, SUBMISSION.json and workflow.json of extra shared SUB-8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f. Not enumerated in JOB.released_inputs; prompt says shared folder holds explicitly released inputs and current proposal identifies it as prior frozen output. Preserved disclosure and restricted subsequent scientific review to current listed revision. No private notes identified.",
+      "action": "Independent protocol reviewer to assess shared-folder release scope; do not certify perfect isolation from this ledger."
+    }
+  ],
+  "observability": "Self-authored public activity ledger, not a complete tool trace or evidence of absent undisclosed actions."
+}

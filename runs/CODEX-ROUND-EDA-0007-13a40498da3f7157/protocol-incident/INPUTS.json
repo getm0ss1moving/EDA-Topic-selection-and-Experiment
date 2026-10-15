@@ -1,0 +1,13 @@
+{
+  "files": {
+    "JOB.json": "61c2f2fa519883770e0878c53655bbc0a90d85a24863bcfdae2102aeb914538c",
+    "SUBMISSION.json": "56f872e4f80bf5014b43024f33adda8011fdcdb0d211168bb549f3309a939ee5",
+    "compliance.json": "c57753edf3e5e7708839b836ca790d55135600774ef606dfb2a57c86d24b4b57",
+    "coordinator-report.json": "b93da6723be6bda6a919ac057945c784d3fee29283e924ad9128b21846d28b6f",
+    "prompt.txt": "3ed06ee570fa3ee9144162934540c2ed5c49a7f9322646e89eda9e0045e66e2b",
+    "source-codex-loop.py": "5440fa20f4c7503bbc79818fb3a265794e783f8bd05edd57501045514742e0de"
+  },
+  "role_release": "SUB-56f872e4f80bf5014b43024f33adda8011fdcdb0d211168bb549f3309a939ee5",
+  "scope": "Explicit governance metadata and common public controller code; no private logs, conversations or quarantined scientific objections.",
+  "source_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c"
+}
