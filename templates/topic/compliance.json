@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "role": null,
+  "actor_id": null,
+  "session_id": null,
+  "input_commit": null,
+  "packet_sha256": null,
+  "job_id": null,
+  "read_releases": [],
+  "activity": {
+    "checkout_access": "unknown",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0
+  },
+  "rules": {
+    "inputs": {"status":"unknown","evidence":[],"limits":"Fill from actual released inputs and actions."},
+    "isolation": {"status":"unknown","evidence":[],"limits":"Self-report is not an OS audit."},
+    "writes": {"status":"unknown","evidence":[],"limits":"Record actual write paths."},
+    "evidence": {"status":"unknown","evidence":[],"limits":"Record access and locator limits."},
+    "claims": {"status":"unknown","evidence":[],"limits":"Separate observation, inference, hypothesis, forecast and measurement."},
+    "consent": {"status":"unknown","evidence":[],"limits":"Only own signatures; pending is not agreement."},
+    "resources": {"status":"unknown","evidence":[],"limits":"No new EDA/training/paid allocation."},
+    "direction": {"status":"unknown","evidence":[],"limits":"Zero drift is not a merit score."},
+    "publication": {"status":"unknown","evidence":[],"limits":"Self-freeze; coordinator transports, no self-approval."}
+  },
+  "operations": [],
+  "incidents": [],
+  "observability": "Self-authored public activity ledger, not a complete tool trace or evidence of absent undisclosed actions."
+}

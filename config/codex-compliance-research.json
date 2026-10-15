@@ -1,0 +1,73 @@
+{
+  "schema": 1,
+  "platform": "OpenAI Codex",
+  "runtime_root": "../EDA-GPT-Compliance-Four-Rounds-20261015",
+  "cli": "codex",
+  "models": {
+    "proposer": {
+      "model": "gpt-6.1-sol",
+      "effort": "high"
+    },
+    "challenger": {
+      "model": "gpt-6-astra",
+      "effort": "low"
+    },
+    "verifier": {
+      "model": "gpt-6.1-sol",
+      "effort": "low"
+    }
+  },
+  "topics": {
+    "EDA-0008": {
+      "domain": "D04",
+      "actors": {
+        "proposer": "ChatGPT-P04-PHYSICAL-B03-EDA-0008",
+        "challenger": "ChatGPT-C04-PHYSICAL-B03-EDA-0008",
+        "verifier": "ChatGPT-V04-PHYSICAL-B03-EDA-0008"
+      },
+      "seed_prefix": null,
+      "handover_prefixes": {},
+      "continuation_batch": "GPT-INNOVATION-0002",
+      "continuation_prior_cycles": 1,
+      "continuation_releases": {
+        "proposer": "runs/SUB-1c2deaff2701f8108c4f9d6fdca3298698c7aa4a8273f9e9036232c12bde533c",
+        "challenger": "runs/SUB-a602a69c8d241294ba08a561d4471f2945f3416673b66de648bb72e6c31b9f97",
+        "verifier": "runs/SUB-177346f5d1b164d8184704393d6b7f5f9b7cd7524a06d2d8e7950d7e7ee7bd4b"
+      }
+    },
+    "EDA-0007": {
+      "domain": "D05",
+      "actors": {
+        "proposer": "ChatGPT-P05-TIMING-B03-EDA-0007",
+        "challenger": "ChatGPT-C05-TIMING-B03-EDA-0007",
+        "verifier": "ChatGPT-V05-TIMING-B03-EDA-0007"
+      },
+      "seed_prefix": null,
+      "handover_prefixes": {},
+      "continuation_batch": "GPT-INNOVATION-0002",
+      "continuation_prior_cycles": 1,
+      "continuation_releases": {
+        "proposer": "runs/SUB-e0cef865c5877d07c062554b61e073024cb0f6ed28b7ef45f31c19d7a5cb335a",
+        "challenger": "runs/SUB-373c606bec3ab48f9ff6871096ef98823c923e7a784f7873c19f1ddea7ca1b1c",
+        "verifier": "runs/SUB-f1c9f13a026274de52f4988e533f9ccc40d00088efdf163f11c15edfebd76c47"
+      }
+    }
+  },
+  "poll_seconds": 30,
+  "turn_timeout_seconds": 1800,
+  "failure_backoff_seconds": 1800,
+  "max_substantive_rounds": 3,
+  "max_topics_per_domain": null,
+  "publication": {
+    "enabled": true,
+    "auto_merge": true,
+    "require_human_final_reports": false
+  },
+  "execution_policy": "Research automation may read accessible external sources, write its own outputs, freeze and send. It may not inspect foreign private content, purchase resources, or exceed the existing experiment allocation.",
+  "backend": "codex_app_agents",
+  "stop_after_rounds": 4,
+  "max_parallel_domains": 2,
+  "batch_brief": "docs/INNOVATION-BATCH-0003.md",
+  "require_compliance": true,
+  "audit_actor_prefix": "ChatGPT-B03-PROTOCOL"
+}
