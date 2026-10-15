@@ -1,0 +1,135 @@
+{
+  "sources": [
+    {
+      "id": "C01",
+      "title": "OpenROAD MoveCommitter.cc",
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/3549d60529517dc82deb7f0ff769345e9a424911/src/rsz/src/MoveCommitter.cc",
+      "source_type": "source-code",
+      "publication_date": "unknown",
+      "retrieved_utc": "2026-10-15T13:51:16.747408+00:00",
+      "locator": "recordAcceptedResult raw lines 374 onward, especially 382-387; unrecordAcceptedResult raw 391 onward; hasMoves raw 668 onward. Rendered web lines 348-373,623-627 respectively.",
+      "access": "full",
+      "supported_claim_ids": [
+        "OBJ-101"
+      ],
+      "limitations": "Selected methods inspected, not compiled; adapter call graph and runtime consequence unverified.",
+      "version": "3549d60529517dc82deb7f0ff769345e9a424911",
+      "sha256": "ee9f09555c317de9e57e73d5edab56f5f710cd7195206229a31bb54be49c1679"
+    },
+    {
+      "id": "C02",
+      "title": "HyPAS: A Hybrid Optimization Framework for Placement and Sizing Co-Optimization",
+      "url": "https://wuqian-tang.github.io/files/papers/2026-dac-hypas.pdf",
+      "source_type": "author-paper",
+      "publication_date": "2026",
+      "retrieved_utc": "2026-10-15T13:51:16.747408+00:00",
+      "locator": "PDF pp.2-3 sections 2.2,3.1-3.4; Figure 2",
+      "access": "full",
+      "supported_claim_ids": [
+        "C-CLM-002"
+      ],
+      "limitations": "Public urllib retrieval and in-memory PyMuPDF text extraction succeeded after web opening failed. Selected methods only; no reproduced performance or original winner inspection.",
+      "sha256": "d843ea04b2746e449c7ded65ab06bb5f5d9d11f969251962c6feec7bdb930ca0"
+    },
+    {
+      "id": "C03",
+      "title": "IR-Aware ECO Timing Optimization Using Reinforcement Learning",
+      "url": "https://arxiv.org/html/2402.07781v1",
+      "source_type": "preprint",
+      "publication_date": "2024-02-12",
+      "retrieved_utc": "2026-10-15T13:51:16.747408+00:00",
+      "locator": "Introduction order/choice paragraph, section 2 and section 3 overview; rendered lines 40-90",
+      "access": "full",
+      "supported_claim_ids": [
+        "C-CLM-003"
+      ],
+      "limitations": "Selected formulation only; late IR-aware sizing is not pre-CTS resize/relocation. No reproduced gains.",
+      "version": "v1"
+    },
+    {
+      "id": "C04",
+      "title": "ISPD26 contest baseline script",
+      "url": "https://raw.githubusercontent.com/ABKGroup/ISPD26-Contest/main/scripts/evaluation_baseline.tcl",
+      "source_type": "source-code",
+      "publication_date": "unknown",
+      "retrieved_utc": "2026-10-15T13:51:16.747408+00:00",
+      "locator": "Sections (1)-(3), ideal clocks, repair_design/repair_timing, conditional detailed placement and global_route retry; rendered lines 34-96",
+      "access": "full",
+      "supported_claim_ids": [
+        "C-CLM-004"
+      ],
+      "limitations": "Moving main, retrieval-time inspection; requires commit/hash lock before use. Not a winning method, not executed."
+    },
+    {
+      "id": "C05",
+      "title": "2025 CAD Contest Problems",
+      "url": "https://www.iccad-contest.org/2025/Problems.html",
+      "source_type": "official-contest",
+      "publication_date": "2025",
+      "retrieved_utc": "2026-10-15T13:51:16.747408+00:00",
+      "locator": "Problem C and Top-3 archive link 38",
+      "access": "full",
+      "supported_claim_ids": [
+        "C-CLM-005"
+      ],
+      "limitations": "Index read; linked original archive preview had no methods. Public download returned 2479-byte HTML rather than ZIP; no login/bypass attempted."
+    },
+    {
+      "id": "C06",
+      "title": "ISPD26 Contest Winners",
+      "url": "https://www.ispd.cc/contests/26/index.html",
+      "source_type": "official-contest",
+      "publication_date": "2026",
+      "retrieved_utc": "2026-10-15T13:51:16.747408+00:00",
+      "locator": "Contest Winners list and Resources",
+      "access": "full",
+      "supported_claim_ids": [
+        "C-CLM-006"
+      ],
+      "limitations": "Names/ranks only; original winner algorithm remains uninspected."
+    },
+    {
+      "id": "C07",
+      "title": "2026 CAD Contest Problems",
+      "url": "https://www.iccad-contest.org/Problems",
+      "source_type": "official-contest",
+      "publication_date": "2026",
+      "retrieved_utc": "2026-10-15T13:51:16.747408+00:00",
+      "locator": "Problem A/B/C, especially FloorSet at rendered lines 50-60",
+      "access": "full",
+      "supported_claim_ids": [
+        "C-CLM-007"
+      ],
+      "limitations": "Current index not a comprehensive contest survey; no claim no newer contest exists."
+    },
+    {
+      "id": "C08",
+      "title": "Learning-Driven Physically Aware Large-Scale Circuit Gate Sizing",
+      "url": "https://www.cse.cuhk.edu.hk/~byu/papers/J126-TCAD2025-LearnSize.pdf",
+      "source_type": "author-paper",
+      "publication_date": "2025",
+      "retrieved_utc": "2026-10-15T13:51:16.747408+00:00",
+      "locator": "Indexed abstract; full PDF opening initially identified 14 pages, subsequent method fetch timed out",
+      "access": "abstract",
+      "supported_claim_ids": [
+        "C-CLM-008"
+      ],
+      "limitations": "Physical-aware gate-sizing lead only. Full method not reviewed; no exclusion of exact overlap."
+    },
+    {
+      "id": "C09",
+      "title": "ICCAD 2024 Preliminary Program",
+      "url": "https://confcats-event-sessions.s3.amazonaws.com/iccad24/uploads/ICCAD_2024_Preliminary-Program2.pdf",
+      "source_type": "official-program",
+      "publication_date": "2024",
+      "retrieved_utc": "2026-10-15T13:51:16.747408+00:00",
+      "locator": "Design Frameworks and Post-place Optimization; paper 796",
+      "access": "metadata",
+      "supported_claim_ids": [
+        "C-CLM-009"
+      ],
+      "limitations": "Indexed official program confirms title/authors and general topic, not the original method; secondary abstract hits were discovery only."
+    }
+  ],
+  "access_convention": "full means accessible selected sections read, not exhaustive reading or experimental reproduction. Raw physical code lines differ from web-rendered lines."
+}

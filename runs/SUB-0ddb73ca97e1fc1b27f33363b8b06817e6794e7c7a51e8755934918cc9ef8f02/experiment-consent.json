@@ -1,0 +1,7 @@
+{
+  "session_id": "94045552-61ca-4bb4-a950-c6de444a88ed",
+  "decision": "revision_requested",
+  "signed_revision": "SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4",
+  "tasklist_sha256": "84a999c899e3fc5dba277d18959a954a7327db1ed3836b415805a6dc0d98474c",
+  "rationale": "Require decision-state restore contract C-T01 and actual frozen phase prerequisites; no execution consent or resource grant."
+}

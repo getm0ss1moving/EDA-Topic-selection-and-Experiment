@@ -1,0 +1,5 @@
+source_id,task,mechanism,data,evaluation,assumptions,limitation,overlap,proposed_distinction
+C02,placement/sizing,discrete plus differentiable refinement,ICCAD2025 designs described,not reproduced,width groups and surrogate models,selected method only,same operators and physical coupling,explicit two-order residual; benefit unresolved
+C03,IR-aware ECO sizing,RL plus LR gate order/choice,paper design set,not reproduced,late IR-aware sizing,different stage and action set,learned order selection,resize/relocation pair and legalizer effect
+C04,contest native baseline,repair/legalization/GR retry,contest scripts,not run,script environment,main not version-locked,fair baseline behavior,prediction-directed order rather than repair alone
+C08,physically aware sizing,learning-based sizing,unknown here,unknown here,abstract only,full method inaccessible in this review,physical constraints and learned decisions,exact overlap unresolved

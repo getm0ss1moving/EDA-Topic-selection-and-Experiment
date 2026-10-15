@@ -1,0 +1,321 @@
+{
+  "purpose": "protocol_audit",
+  "reviewed_releases": {
+    "challenger": "SUB-0ddb73ca97e1fc1b27f33363b8b06817e6794e7c7a51e8755934918cc9ef8f02",
+    "proposer": "SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4",
+    "verifier": "SUB-1423e18cfcffc89303d1daabf192e80dcb00716aa283af514c89f5bb96058f5e"
+  },
+  "disposition": "nonblocking_findings",
+  "input_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+  "packet_sha256": "38be57a49a0263681c06dc4ee2ecd9456c4b878ccb3e591857509e07f1a12c80",
+  "verifier_session": "9d9c4bd7-e1e4-4225-88d8-133ccd93bac0",
+  "roles": {
+    "challenger": {
+      "release_id": "SUB-0ddb73ca97e1fc1b27f33363b8b06817e6794e7c7a51e8755934918cc9ef8f02",
+      "checks": {
+        "inputs": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-0ddb73ca97e1fc1b27f33363b8b06817e6794e7c7a51e8755934918cc9ef8f02/compliance.json#/read_releases",
+            "shared/job-descriptors/challenger/JOB.json#/released_inputs",
+            "shared/SUB-0ddb73ca97e1fc1b27f33363b8b06817e6794e7c7a51e8755934918cc9ef8f02/SUBMISSION.json"
+          ],
+          "reason": "Actual read_releases is a subset of the explicitly supplied inputs; identity/input bindings match descriptor and submission."
+        },
+        "isolation": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-0ddb73ca97e1fc1b27f33363b8b06817e6794e7c7a51e8755934918cc9ef8f02/compliance.json#/activity",
+            "shared/SUB-0ddb73ca97e1fc1b27f33363b8b06817e6794e7c7a51e8755934918cc9ef8f02/compliance.json#/operations",
+            "shared/job-descriptors/challenger/JOB.json#/session_id"
+          ],
+          "reason": "No private-role exposure disclosed or supported by released evidence. Unblinded review is explicit; independent backend isolation remains unobserved."
+        },
+        "writes": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-0ddb73ca97e1fc1b27f33363b8b06817e6794e7c7a51e8755934918cc9ef8f02/SUBMISSION.json#/files",
+            "shared/SUB-0ddb73ca97e1fc1b27f33363b8b06817e6794e7c7a51e8755934918cc9ef8f02/compliance.json#/operations"
+          ],
+          "reason": "Frozen bundle contains role-owned public files; reported writes are confined to own job output/scratch. Hashes match; unobserved writes cannot be excluded."
+        },
+        "evidence": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-0ddb73ca97e1fc1b27f33363b8b06817e6794e7c7a51e8755934918cc9ef8f02/sources.json#/sources",
+            "shared/SUB-0ddb73ca97e1fc1b27f33363b8b06817e6794e7c7a51e8755934918cc9ef8f02/search-log.md"
+          ],
+          "reason": "Traceable source/locator and access-limit records are present. Inaccessible nearest methods/winners remain unresolved rather than represented as read. This is not a new entailment certification."
+        },
+        "claims": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-0ddb73ca97e1fc1b27f33363b8b06817e6794e7c7a51e8755934918cc9ef8f02/independent-estimate.md",
+            "shared/SUB-0ddb73ca97e1fc1b27f33363b8b06817e6794e7c7a51e8755934918cc9ef8f02/challenges.md: Coverage and disposition"
+          ],
+          "reason": "Analytic checks are separated from physical measurements and novelty/value remains conditional. No measured gain or universal novelty certificate is asserted."
+        },
+        "consent": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4/experiment-consent.json",
+            "shared/SUB-0ddb73ca97e1fc1b27f33363b8b06817e6794e7c7a51e8755934918cc9ef8f02/experiment-consent.json",
+            "shared/SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4/tasklist.md",
+            "shared/SUB-1423e18cfcffc89303d1daabf192e80dcb00716aa283af514c89f5bb96058f5e/verification.json#/experiment_consensus_checked"
+          ],
+          "reason": "No consent is manufactured or pilot/abandonment authorized. Pending proposer and revision-requested challenger do not form agreement; exact proposer task hash matches challenger binding."
+        },
+        "resources": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-0ddb73ca97e1fc1b27f33363b8b06817e6794e7c7a51e8755934918cc9ef8f02/compliance.json#/activity",
+            "shared/SUB-0ddb73ca97e1fc1b27f33363b8b06817e6794e7c7a51e8755934918cc9ef8f02/search-log.md"
+          ],
+          "reason": "No EDA/build/training/new-paid allocation or execution is disclosed. Source reading and small own arithmetic checks are within batch scope; future budget requests are labeled as requests."
+        },
+        "direction": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4/direction-control.json#/anchor",
+            "shared/SUB-0ddb73ca97e1fc1b27f33363b8b06817e6794e7c7a51e8755934918cc9ef8f02/challenges.md: Direction-control assessment"
+          ],
+          "reason": "Current output retains pair-order causal mechanism and downstream cost/quality demand, with 0+0 drift treated as anchor assessment rather than merit. Historical continuity not independently rechecked."
+        },
+        "publication": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-0ddb73ca97e1fc1b27f33363b8b06817e6794e7c7a51e8755934918cc9ef8f02/SUBMISSION.json",
+            "shared/SUB-0ddb73ca97e1fc1b27f33363b8b06817e6794e7c7a51e8755934918cc9ef8f02/workflow.json",
+            "shared/SUB-0ddb73ca97e1fc1b27f33363b8b06817e6794e7c7a51e8755934918cc9ef8f02/compliance.json#/rules/publication"
+          ],
+          "reason": "English artifacts, identity-bound self-freeze and unchanged manifest bytes; no scientific self-approval, merge or external publication is evidenced."
+        }
+      }
+    },
+    "proposer": {
+      "release_id": "SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4",
+      "checks": {
+        "inputs": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4/compliance.json#/read_releases",
+            "shared/job-descriptors/proposer/JOB.json#/released_inputs",
+            "shared/SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4/SUBMISSION.json"
+          ],
+          "reason": "Actual read_releases is a subset of the explicitly supplied inputs; identity/input bindings match descriptor and submission."
+        },
+        "isolation": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4/compliance.json#/activity",
+            "shared/SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4/compliance.json#/operations",
+            "shared/job-descriptors/proposer/JOB.json#/session_id"
+          ],
+          "reason": "No private-role exposure disclosed or supported by released evidence. Unblinded review is explicit; independent backend isolation remains unobserved."
+        },
+        "writes": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4/SUBMISSION.json#/files",
+            "shared/SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4/compliance.json#/operations"
+          ],
+          "reason": "Frozen bundle contains role-owned public files; reported writes are confined to own job output/scratch. Hashes match; unobserved writes cannot be excluded."
+        },
+        "evidence": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4/sources.json#/sources",
+            "shared/SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4/search-log.md"
+          ],
+          "reason": "Traceable source/locator and access-limit records are present. Inaccessible nearest methods/winners remain unresolved rather than represented as read. This is not a new entailment certification."
+        },
+        "claims": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4/forecast.json#/kind",
+            "shared/SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4/proposal.md: Claim continuity and current disposition"
+          ],
+          "reason": "Analytic checks are separated from physical measurements and novelty/value remains conditional. No measured gain or universal novelty certificate is asserted."
+        },
+        "consent": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4/experiment-consent.json",
+            "shared/SUB-0ddb73ca97e1fc1b27f33363b8b06817e6794e7c7a51e8755934918cc9ef8f02/experiment-consent.json",
+            "shared/SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4/tasklist.md",
+            "shared/SUB-1423e18cfcffc89303d1daabf192e80dcb00716aa283af514c89f5bb96058f5e/verification.json#/experiment_consensus_checked"
+          ],
+          "reason": "No consent is manufactured or pilot/abandonment authorized. Pending proposer and revision-requested challenger do not form agreement; exact proposer task hash matches challenger binding."
+        },
+        "resources": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4/compliance.json#/activity",
+            "shared/SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4/experiment-plan.md: Data, allocation and limits"
+          ],
+          "reason": "No EDA/build/training/new-paid allocation or execution is disclosed. Source reading and small own arithmetic checks are within batch scope; future budget requests are labeled as requests."
+        },
+        "direction": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4/direction-control.json#/anchor",
+            "shared/SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4/direction-control.json#/penalties"
+          ],
+          "reason": "Current output retains pair-order causal mechanism and downstream cost/quality demand, with 0+0 drift treated as anchor assessment rather than merit. Historical continuity not independently rechecked."
+        },
+        "publication": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4/SUBMISSION.json",
+            "shared/SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4/workflow.json",
+            "shared/SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4/compliance.json#/rules/publication"
+          ],
+          "reason": "English artifacts, identity-bound self-freeze and unchanged manifest bytes; no scientific self-approval, merge or external publication is evidenced."
+        }
+      }
+    },
+    "verifier": {
+      "release_id": "SUB-1423e18cfcffc89303d1daabf192e80dcb00716aa283af514c89f5bb96058f5e",
+      "checks": {
+        "inputs": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-1423e18cfcffc89303d1daabf192e80dcb00716aa283af514c89f5bb96058f5e/compliance.json#/read_releases",
+            "shared/job-descriptors/verifier/JOB.json#/released_inputs",
+            "shared/SUB-1423e18cfcffc89303d1daabf192e80dcb00716aa283af514c89f5bb96058f5e/SUBMISSION.json"
+          ],
+          "reason": "Actual read_releases is a subset of the explicitly supplied inputs; identity/input bindings match descriptor and submission."
+        },
+        "isolation": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-1423e18cfcffc89303d1daabf192e80dcb00716aa283af514c89f5bb96058f5e/compliance.json#/activity",
+            "shared/SUB-1423e18cfcffc89303d1daabf192e80dcb00716aa283af514c89f5bb96058f5e/compliance.json#/operations",
+            "shared/job-descriptors/verifier/JOB.json#/session_id"
+          ],
+          "reason": "No private-role exposure disclosed or supported by released evidence. Unblinded review is explicit; independent backend isolation remains unobserved."
+        },
+        "writes": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-1423e18cfcffc89303d1daabf192e80dcb00716aa283af514c89f5bb96058f5e/SUBMISSION.json#/files",
+            "shared/SUB-1423e18cfcffc89303d1daabf192e80dcb00716aa283af514c89f5bb96058f5e/compliance.json#/operations"
+          ],
+          "reason": "Frozen bundle contains role-owned public files; reported writes are confined to own job output/scratch. Hashes match; unobserved writes cannot be excluded."
+        },
+        "evidence": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-1423e18cfcffc89303d1daabf192e80dcb00716aa283af514c89f5bb96058f5e/verification.json#/sources",
+            "shared/SUB-1423e18cfcffc89303d1daabf192e80dcb00716aa283af514c89f5bb96058f5e/verification.json#/search_log"
+          ],
+          "reason": "Traceable source/locator and access-limit records are present. Inaccessible nearest methods/winners remain unresolved rather than represented as read. This is not a new entailment certification."
+        },
+        "claims": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-1423e18cfcffc89303d1daabf192e80dcb00716aa283af514c89f5bb96058f5e/verification.json#/limitations",
+            "shared/SUB-1423e18cfcffc89303d1daabf192e80dcb00716aa283af514c89f5bb96058f5e/verification.json#/gates"
+          ],
+          "reason": "Analytic checks are separated from physical measurements and novelty/value remains conditional. No measured gain or universal novelty certificate is asserted."
+        },
+        "consent": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4/experiment-consent.json",
+            "shared/SUB-0ddb73ca97e1fc1b27f33363b8b06817e6794e7c7a51e8755934918cc9ef8f02/experiment-consent.json",
+            "shared/SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4/tasklist.md",
+            "shared/SUB-1423e18cfcffc89303d1daabf192e80dcb00716aa283af514c89f5bb96058f5e/verification.json#/experiment_consensus_checked"
+          ],
+          "reason": "No consent is manufactured or pilot/abandonment authorized. Pending proposer and revision-requested challenger do not form agreement; exact proposer task hash matches challenger binding."
+        },
+        "resources": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-1423e18cfcffc89303d1daabf192e80dcb00716aa283af514c89f5bb96058f5e/compliance.json#/activity",
+            "shared/SUB-1423e18cfcffc89303d1daabf192e80dcb00716aa283af514c89f5bb96058f5e/verification.json#/search_log"
+          ],
+          "reason": "No EDA/build/training/new-paid allocation or execution is disclosed. Source reading and small own arithmetic checks are within batch scope; future budget requests are labeled as requests."
+        },
+        "direction": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4/direction-control.json#/anchor",
+            "shared/SUB-1423e18cfcffc89303d1daabf192e80dcb00716aa283af514c89f5bb96058f5e/verification.json#/direction_penalties"
+          ],
+          "reason": "Current output retains pair-order causal mechanism and downstream cost/quality demand, with 0+0 drift treated as anchor assessment rather than merit. Historical continuity not independently rechecked."
+        },
+        "publication": {
+          "status": "supported_deviation",
+          "evidence": [
+            "shared/job-descriptors/verifier/mechanical-attempts.json#/0",
+            "shared/rejected-attempts/SUB-c8a5acd8deacbb1be7f9decbb9890eb5a3d6fc162bd3fb85df94efa8a1c284d3/compliance.json#/activity/checkout_access",
+            "shared/SUB-1423e18cfcffc89303d1daabf192e80dcb00716aa283af514c89f5bb96058f5e/compliance.json#/operations/6"
+          ],
+          "reason": "Noncritical, corrected enum-format deviation: rejected attempt used an explanatory checkout_access string instead of none. New release normalizes the enum and preserves the exact explanation; verification.md, verification.json and workflow.json are byte-identical. This supports a mechanical format finding, not checkout access, concealment or contamination."
+        }
+      }
+    }
+  },
+  "findings": [
+    {
+      "id": "INC-001",
+      "role": "verifier",
+      "rule": "publication",
+      "severity": "noncritical",
+      "classification": "supported_violation",
+      "evidence": [
+        "shared/job-descriptors/verifier/mechanical-attempts.json#/0",
+        "shared/rejected-attempts/SUB-c8a5acd8deacbb1be7f9decbb9890eb5a3d6fc162bd3fb85df94efa8a1c284d3/compliance.json#/activity/checkout_access",
+        "shared/SUB-1423e18cfcffc89303d1daabf192e80dcb00716aa283af514c89f5bb96058f5e/compliance.json#/operations/6"
+      ],
+      "action": "Preserve rejected attempt and correction; corrected release may proceed through coordinator mechanical validation. No replacement scientific review is warranted by this formatting evidence alone.",
+      "needs_scientific_adjudication": false,
+      "reason": "Noncritical, corrected enum-format deviation: rejected attempt used an explanatory checkout_access string instead of none. New release normalizes the enum and preserves the exact explanation; verification.md, verification.json and workflow.json are byte-identical. This supports a mechanical format finding, not checkout access, concealment or contamination."
+    },
+    {
+      "id": "INC-002",
+      "role": "verifier",
+      "rule": "isolation",
+      "severity": "noncritical",
+      "classification": "limitation",
+      "evidence": [
+        "shared/SUB-0ddb73ca97e1fc1b27f33363b8b06817e6794e7c7a51e8755934918cc9ef8f02/compliance.json#/observability",
+        "shared/SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4/compliance.json#/observability",
+        "shared/SUB-1423e18cfcffc89303d1daabf192e80dcb00716aa283af514c89f5bb96058f5e/compliance.json#/observability"
+      ],
+      "action": "Report residual observability across all three roles; do not convert self-ledgers into complete trace evidence or infer misconduct from missing private logs.",
+      "needs_scientific_adjudication": false,
+      "reason": "Backend configuration and undisclosed actions are unobserved. No specific potential isolation violation is supported."
+    },
+    {
+      "id": "INC-003",
+      "role": "proposer",
+      "rule": "evidence",
+      "severity": "noncritical",
+      "classification": "research_defect",
+      "evidence": [
+        "shared/SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4/sources.json#/sources/6/locator",
+        "shared/SUB-1423e18cfcffc89303d1daabf192e80dcb00716aa283af514c89f5bb96058f5e/verification.md: CLM-007 / ISPD relocation restriction"
+      ],
+      "action": "Retain scientific verifier's request to correct the ISPD locator; route any contested source interpretation through scientific adjudication. Auditor has not reopened or adjudicated the original paper.",
+      "needs_scientific_adjudication": true,
+      "reason": "Released scientific verifier reports pp.2-3 versus decisive p.6 locator mismatch. This is an attributed scientific record issue, not an independently sustained conduct violation or evidence of deliberate fabrication."
+    }
+  ],
+  "limitations": [
+    "Released artifacts and public descriptors only; self-authored ledgers are not complete action traces. No claim about absent undisclosed behavior.",
+    "Distinct logical sessions and matching manifests do not independently attest physical thread freshness, backend model/effort, OS confinement or network conduct.",
+    "Predecessor scientific bytes were not supplied to this auditor; reported historical adjudication/exposure and anchor continuity are not independently recertified.",
+    "No new scientific vote, source-entailment ruling, experiment, training, paid call, role message or private-session inspection. Original papers were not reopened because no source-based conduct allegation is sustained.",
+    "Full-repository validation and PR publication belong to coordinator; this standalone job uses frozen-byte and trusted submission checks."
+  ],
+  "mechanical_checks": {
+    "shared/SUB-1423e18cfcffc89303d1daabf192e80dcb00716aa283af514c89f5bb96058f5e/SUBMISSION.json": "all listed SHA256 values match",
+    "shared/SUB-0ddb73ca97e1fc1b27f33363b8b06817e6794e7c7a51e8755934918cc9ef8f02/SUBMISSION.json": "all listed SHA256 values match",
+    "shared/rejected-attempts/SUB-c8a5acd8deacbb1be7f9decbb9890eb5a3d6fc162bd3fb85df94efa8a1c284d3/SUBMISSION.json": "all listed SHA256 values match",
+    "shared/SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4/SUBMISSION.json": "all listed SHA256 values match"
+  },
+  "tasklist_sha256": "84a999c899e3fc5dba277d18959a954a7327db1ed3836b415805a6dc0d98474c",
+  "scientific_vote_created": false
+}

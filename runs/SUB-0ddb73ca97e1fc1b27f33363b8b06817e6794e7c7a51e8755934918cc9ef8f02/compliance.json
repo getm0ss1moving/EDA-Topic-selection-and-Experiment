@@ -1,0 +1,170 @@
+{
+  "schema": 1,
+  "role": "challenger",
+  "actor_id": "ChatGPT-C04-PHYSICAL-B03-EDA-0008",
+  "session_id": "94045552-61ca-4bb4-a950-c6de444a88ed",
+  "input_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+  "packet_sha256": "48d40bb5ac63cd51e5b07f3150ce125e6f8e58660ee28c13c5cb0d811f4c3935",
+  "job_id": "a56a2148-6232-4407-88e1-764c65a62d1d",
+  "read_releases": [
+    "SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0
+  },
+  "rules": {
+    "inputs": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md",
+        "challenges.md",
+        "sources.json",
+        "experiment-consent.json"
+      ],
+      "limits": "Self-authored activity ledger, not proof of absent unseen conduct. No OS confinement or backend-model attestation."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md",
+        "challenges.md",
+        "sources.json",
+        "experiment-consent.json"
+      ],
+      "limits": "No checkout/private-role reads or agent messages; only current released proposal read. Shared host is not adversarial confinement; backend model identity not independently attested."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md",
+        "challenges.md",
+        "sources.json",
+        "experiment-consent.json"
+      ],
+      "limits": "Self-authored activity ledger, not proof of absent unseen conduct. No OS confinement or backend-model attestation."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md",
+        "challenges.md",
+        "sources.json",
+        "experiment-consent.json"
+      ],
+      "limits": "Self-authored activity ledger, not proof of absent unseen conduct. No OS confinement or backend-model attestation."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md",
+        "challenges.md",
+        "sources.json",
+        "experiment-consent.json"
+      ],
+      "limits": "Self-authored activity ledger, not proof of absent unseen conduct. No OS confinement or backend-model attestation."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md",
+        "challenges.md",
+        "sources.json",
+        "experiment-consent.json"
+      ],
+      "limits": "Self-authored activity ledger, not proof of absent unseen conduct. No OS confinement or backend-model attestation."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md",
+        "challenges.md",
+        "sources.json",
+        "experiment-consent.json"
+      ],
+      "limits": "Zero EDA builds/runs, training, GPU/remote experiments or new paid API calls; source retrieval and tiny analytical checks only."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md",
+        "challenges.md",
+        "sources.json",
+        "experiment-consent.json"
+      ],
+      "limits": "Self-authored activity ledger, not proof of absent unseen conduct. No OS confinement or backend-model attestation."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md",
+        "challenges.md",
+        "sources.json",
+        "experiment-consent.json"
+      ],
+      "limits": "Self-freeze only; coordinator handles PR and full repository validation. No self-approval or merge."
+    }
+  },
+  "operations": [
+    {
+      "kind": "read",
+      "references": [
+        "JOB.json",
+        "prompt.txt",
+        "policy/docs/CHARTER.md",
+        "policy/docs/WORKFLOW.md",
+        "policy/docs/EVIDENCE.md",
+        "policy/docs/ISOLATION.md",
+        "policy/docs/CODEX-AUTOMATION.md",
+        "policy/docs/ROLE-COMPLIANCE.md",
+        "policy/docs/INNOVATION-BATCH-0003.md",
+        "policy/docs/INNOVATION-STRATEGY.md",
+        "policy/docs/SELF-SUBMISSION.md",
+        "policy/harness/CHALLENGER.md",
+        "shared/SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4/proposal.md",
+        "shared/SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4/sources.json",
+        "shared/SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4/tasklist.md",
+        "shared/SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4/experiment-plan.md",
+        "shared/SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4/direction-control.json"
+      ]
+    },
+    {
+      "kind": "research",
+      "references": [
+        "search-log.md",
+        "sources.json:C01-C09"
+      ],
+      "description": "Independent web queries and public source retrieval; no original winner payload recovered."
+    },
+    {
+      "kind": "analysis",
+      "references": [
+        "search-log.md"
+      ],
+      "description": "Tiny enumeration and scalar loss identity check only."
+    },
+    {
+      "kind": "write",
+      "references": [
+        "release/",
+        "write_release.py",
+        "result.json"
+      ]
+    },
+    {
+      "kind": "freeze",
+      "references": [
+        "policy/scripts/role_submission.py",
+        "submissions/"
+      ],
+      "description": "Trusted freeze after output completion; final result records actual release."
+    }
+  ],
+  "incidents": [],
+  "observability": "Self-authored public activity ledger, not a complete tool trace or evidence of absent undisclosed actions."
+}

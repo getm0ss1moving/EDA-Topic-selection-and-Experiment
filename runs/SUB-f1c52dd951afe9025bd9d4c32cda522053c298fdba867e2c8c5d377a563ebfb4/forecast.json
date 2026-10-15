@@ -1,0 +1,19 @@
+{
+  "kind": "forecast_not_measurement",
+  "metric": "Complete charged time to an owner-defined post-DR feasible-quality target",
+  "unit": "CPU-seconds and elapsed seconds",
+  "baseline_source": "Future matched B0/B1/B2/B3/B-CD; not yet measured",
+  "direction": "Hypothesized reduction at equal quality; no calibrated magnitude",
+  "pessimistic": null,
+  "base": null,
+  "optimistic": null,
+  "confidence": null,
+  "assumptions": [
+    "Useful real order incidence above repeat noise",
+    "No exact applicable prior duplicate",
+    "Finite-data inductive bias survives symmetry/loss-matched direct controls",
+    "Final-route and complete-cost value survives common fallback",
+    "Actual allocation and matching exact-phase consents exist before execution"
+  ],
+  "calibration_plan": "EXP-002B/003 noise/incidence first; future pilot family effects and full costs under EXP-000; no probability or improvement figure without calibration."
+}

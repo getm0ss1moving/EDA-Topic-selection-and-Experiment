@@ -1,0 +1,326 @@
+{
+  "decision": "revise",
+  "verifier_session": "370f04ea-8378-4c1f-ab83-2fa830453d13",
+  "dossier_digest": "0afd26b3a4d7372ab46efc750e6ef91b3dc360a9517005964556fa4eb6896b80",
+  "reviewed_proposer_release": "SUB-f1c52dd951afe9025bd9d4c32cda522053c298fdba867e2c8c5d377a563ebfb4",
+  "adjudicated_challenger_releases": [
+    "SUB-0ddb73ca97e1fc1b27f33363b8b06817e6794e7c7a51e8755934918cc9ef8f02"
+  ],
+  "input_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+  "packet_sha256": "d5dd4815d595e6eca62ed6640e0a91f111ead1203b0ebd491e738f112f851963",
+  "gates": {
+    "novelty": false,
+    "mechanism": false,
+    "utility": false,
+    "contest_originality": false,
+    "headroom": false,
+    "feasibility": false,
+    "direction_integrity": true,
+    "experiment_consensus": false
+  },
+  "direction_penalty_checked": true,
+  "direction_penalties": {
+    "combination_drift": 0,
+    "demand_drift": 0
+  },
+  "experiment_consensus_checked": true,
+  "abandonment_process_checked": false,
+  "source_checks": [
+    {
+      "claim_id": "OBJ-101",
+      "source_locator": "V04 raw 374-401,668-673; init 61-81",
+      "verdict": "valid",
+      "blocking": true,
+      "action": "Valid missing decision-state specification for a same-process guard-using adapter. Retained committed history is explicit; init clears instance sets, so a source-proven reset path may suffice. Runtime confounding remains conditional, not demonstrated. Incorporate C-T01 into EXP-002/002B; fresh process or complete reset/call-path proof plus allocated differential validation; charge cost."
+    },
+    {
+      "claim_id": "CLM-004",
+      "source_locator": "V04 beginJournal/commitJournal/restoreJournal",
+      "verdict": "partially_valid",
+      "blocking": true,
+      "action": "Nested ECO journaling and timing refresh exist. Complete causal state restoration is not established; database hashes alone insufficient. Resolve OBJ-101 before incidence."
+    },
+    {
+      "claim_id": "CLM-016 / C-CLM-001 masks",
+      "source_locator": "Own enumeration; proposal success table",
+      "verdict": "valid",
+      "blocking": false,
+      "action": "Exactly 9 syntactic masks and 49 observation submasks under AB<=A, BA<=B and observed baseline. Not observed physical reachability."
+    },
+    {
+      "claim_id": "CLM-013/017 / C-CLM-001 loss",
+      "source_locator": "Own 1000-case expansion; proposal transformed-loss section",
+      "verdict": "valid",
+      "blocking": false,
+      "action": "Full masked quadratic is correct, including asymmetric cross term and singleton reconstruction error. Independent max scalar error 5.684341886080802e-14; claimed historical gradient test not independently rerun. Require implemented B3-T identity later."
+    },
+    {
+      "claim_id": "CLM-005 / C-CLM-002",
+      "source_locator": "V01 PDF pp.2-3 sections 2.2,3.1-3.4",
+      "verdict": "valid",
+      "blocking": false,
+      "action": "Discrete repair plus differentiable placement/sizing and width grouping verified. Does not prove exact order-residual duplication or its absence."
+    },
+    {
+      "claim_id": "CLM-006 / C-CLM-003",
+      "source_locator": "V02 Introduction, section 3.2",
+      "verdict": "valid",
+      "blocking": false,
+      "action": "Sequential learned IR-aware sizing is prior in later-stage scope; no transferred gain or direct equivalence asserted."
+    },
+    {
+      "claim_id": "CLM-003",
+      "source_locator": "V03 sections 3.1-3.4 eqs.5-6",
+      "verdict": "valid",
+      "blocking": false,
+      "action": "Retained stage branching/history is prior; generic orchestration is not the candidate contribution."
+    },
+    {
+      "claim_id": "C-CLM-004 / baseline fairness",
+      "source_locator": "V13 sections (1)-(3), rendered 34-96",
+      "verdict": "valid",
+      "blocking": false,
+      "action": "Native repair, conditional legalization and routing retry confirmed. Preserve them and charge all work; no winner identity inferred."
+    },
+    {
+      "claim_id": "CLM-007 / narrow demand",
+      "source_locator": "V06 Problem C; V07 section 2",
+      "verdict": "partially_valid",
+      "blocking": true,
+      "action": "General coupled optimization need supported. Economically meaningful two-edit incidence and final-route improvement unresolved; future capped incidence/utility tests required."
+    },
+    {
+      "claim_id": "CLM-007 / ISPD relocation restriction",
+      "source_locator": "V07 p.6 no-floorplan-perturbation hard constraints",
+      "verdict": "valid",
+      "blocking": false,
+      "action": "Non-resized standard cells must remain fixed. Correct proposition, but proposal sources.json points to pp.2-3 instead of decisive p.6; correct locator, do not call general relocation contest-legal."
+    },
+    {
+      "claim_id": "CLM-014 / C-CLM-005/006/007",
+      "source_locator": "V06 Top-3 preview; V08 winner list; V09 original download; V10 Problems",
+      "verdict": "unresolved",
+      "blocking": true,
+      "action": "Current official tasks checked; original winner and nearest multi-agent full methods unavailable in this review. No duplication proof, absence proof or saturation inference follows."
+    },
+    {
+      "claim_id": "CLM-018 / parameterization",
+      "source_locator": "proposal equations; experiment-plan B3/B3-T/B-CD/B5; C-T02",
+      "verdict": "unresolved",
+      "blocking": true,
+      "action": "Invertible coordinates alone are not novelty. Symmetry structure could still share a function class with direct control; require explicit graphs/tensor/objective mappings and identifiable non-equivalent restriction before training. Useful combination remains a hypothesis, not refuted for known components."
+    },
+    {
+      "claim_id": "CLM-009/010 / utility and headroom",
+      "source_locator": "proposal H1; experiment-plan endpoints and stop rules",
+      "verdict": "unresolved",
+      "blocking": true,
+      "action": "No physical effect prevalence, useful gain, calibrated forecast or applicable optimum bound established. Direct/lookahead domination and full-cost failure are decisive falsifiers, not present findings."
+    },
+    {
+      "claim_id": "CLM-015 / execution gate",
+      "source_locator": "JOB; batch brief; tasklist EXP-000 and all execution dependencies",
+      "verdict": "valid",
+      "blocking": true,
+      "action": "Closed pre-execution gate repairs timing of consent. Actual rights, locks, oracle, thresholds, allocation and dual agreement absent; no execution authorization."
+    },
+    {
+      "claim_id": "CLM-012 / industry",
+      "source_locator": "proposal claim table and R11 record, not independently reopened",
+      "verdict": "unresolved",
+      "blocking": false,
+      "action": "Vendor comparison not relied on. Advertised-capability attribution remains unverified here; no commercial shortfall supports decision."
+    },
+    {
+      "claim_id": "Direction penalties",
+      "source_locator": "released current direction-control anchor and proposal; challenger direction assessment",
+      "verdict": "valid",
+      "blocking": false,
+      "action": "Current revision retains pair mechanism, pre-CTS user and post-DR cost endpoint. Both drift scores 0 within reviewed current material; historical baseline not independently reread and no inherited approval."
+    },
+    {
+      "claim_id": "Experiment consensus",
+      "source_locator": "P/C experiment-consent.json; current tasklist SHA256",
+      "verdict": "valid",
+      "blocking": true,
+      "action": "Proposer pending; challenger revision_requested. Hash recomputed 84a999c899e3fc5dba277d18959a954a7327db1ed3836b415805a6dc0d98474c; no matching agree signatures. Distinct manifest sessions checked, not backend identities."
+    }
+  ],
+  "objections": [
+    {
+      "id": "OBJ-101",
+      "verdict": "valid",
+      "blocking": true,
+      "reason": "Valid missing decision-state specification for a same-process guard-using adapter. Retained committed history is explicit; init clears instance sets, so a source-proven reset path may suffice. Runtime confounding remains conditional, not demonstrated. Incorporate C-T01 into EXP-002/002B; fresh process or complete reset/call-path proof plus allocated differential validation; charge cost.",
+      "source_id": "V04"
+    }
+  ],
+  "limitations": [
+    "Selected-source unblinded review; no EDA execution, training or performance reproduction.",
+    "R09 and original winner methods unread; bounded search not exhaustive.",
+    "Registration manifests establish distinct logical sessions only. Self-ledger does not prove unseen conduct.",
+    "Legacy full-repository validation unavailable in standalone packet; own freeze and file hashes used."
+  ],
+  "tasklist_sha256": "84a999c899e3fc5dba277d18959a954a7327db1ed3836b415805a6dc0d98474c",
+  "required_actions": [
+    "C-T01 decision-state reset contract before incidence",
+    "C-T02 exact comparator parameterization before training",
+    "Resolve original-method novelty coverage or explicitly bound claims",
+    "Actual phase dependencies/resources/thresholds and distinct matching exact consents before any execution"
+  ],
+  "sources": [
+    {
+      "id": "V01",
+      "title": "HyPAS: A Hybrid Optimization Framework for Placement and Sizing Co-Optimization",
+      "url": "https://wuqian-tang.github.io/files/papers/2026-dac-hypas.pdf",
+      "source_type": "author-paper",
+      "publication_date": "2026",
+      "retrieved_utc": "2026-10-15T13:55:42.915446+00:00",
+      "locator": "PDF pp.2-3, sections 2.2, 3.1-3.4; Figure 2",
+      "access": "full",
+      "supported_claim_ids": [],
+      "limitations": "Selected method text inspected, not every result; no code execution or reproduction. Web PDF opening failed; public urllib retrieval succeeded. No assertion of contest-winning lineage from social profiles.",
+      "version": "author PDF as retrieved",
+      "sha256": "d843ea04b2746e449c7ded65ab06bb5f5d9d11f969251962c6feec7bdb930ca0",
+      "rights": "Read accessible author copy; no full copy included in release."
+    },
+    {
+      "id": "V02",
+      "title": "IR-Aware ECO Timing Optimization Using Reinforcement Learning",
+      "url": "https://arxiv.org/html/2402.07781v1",
+      "source_type": "preprint",
+      "publication_date": "2024-02-12",
+      "retrieved_utc": "2026-10-15T13:55:42.915638+00:00",
+      "locator": "Introduction order/choice paragraph; section 3.2 Action/Reward and equation 6",
+      "access": "full",
+      "supported_claim_ids": [],
+      "limitations": "Late IR-aware sizing; not the proposed pre-CTS relocation pair. Selected formulation inspected; no reported performance transferred.",
+      "version": "arXiv v1"
+    },
+    {
+      "id": "V03",
+      "title": "AgenticPD: A Stage-Aware Agentic Framework for Closed-Loop Physical Design Optimization",
+      "url": "https://arxiv.org/html/2607.04758v3",
+      "source_type": "preprint",
+      "publication_date": "unknown",
+      "retrieved_utc": "2026-10-15T13:55:42.915640+00:00",
+      "locator": "Sections 3.1-3.4, especially retained tree equations 5-6 and history navigation",
+      "access": "full",
+      "supported_claim_ids": [],
+      "limitations": "v3 selected methodology inspected; no code audit or run. No exact pair-representation absence claim.",
+      "version": "arXiv v3; latest date not independently reverified"
+    },
+    {
+      "id": "V04",
+      "title": "OpenROAD MoveCommitter.cc",
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/3549d60529517dc82deb7f0ff769345e9a424911/src/rsz/src/MoveCommitter.cc",
+      "source_type": "source-code",
+      "publication_date": "unknown",
+      "retrieved_utc": "2026-10-15T13:55:42.915641+00:00",
+      "locator": "raw 374-401, 668-673, 61-81; web-rendered 348-373,623-627,57-75; journal methods raw 482 onward",
+      "access": "full",
+      "supported_claim_ids": [],
+      "limitations": "Selected raw methods independently reopened and hash matched. Retained history observed; future adapter reachability and full reset unknown.",
+      "version": "3549d60529517dc82deb7f0ff769345e9a424911",
+      "sha256": "ee9f09555c317de9e57e73d5edab56f5f710cd7195206229a31bb54be49c1679"
+    },
+    {
+      "id": "V05",
+      "title": "ResizerAgent README",
+      "url": "https://raw.githubusercontent.com/ASU-VDA-Lab/ResizerAgent/ae402b9bf00b5116b9f2743b3bd8f7c9aed52127/README.md",
+      "source_type": "source-documentation",
+      "publication_date": "unknown",
+      "retrieved_utc": "2026-10-15T13:55:42.915643+00:00",
+      "locator": "Opening specification, Requirements, Run base/repair/backend entries",
+      "access": "full",
+      "supported_claim_ids": [],
+      "limitations": "README only; full planner and original paper unread. Post-CTS and provider requirements differ; no provider subscription acquired or invoked.",
+      "version": "ae402b9bf00b5116b9f2743b3bd8f7c9aed52127"
+    },
+    {
+      "id": "V06",
+      "title": "2025 CAD Contest at ICCAD: official Problems",
+      "url": "https://www.iccad-contest.org/2025/Problems.html",
+      "source_type": "official-contest",
+      "publication_date": "2025",
+      "retrieved_utc": "2026-10-15T13:55:42.915644+00:00",
+      "locator": "Problem C, links 29-38 including original Top-3 ZIP; web rendered lines 58-70",
+      "access": "full",
+      "supported_claim_ids": [],
+      "limitations": "Index and original Top-3 link independently reopened; archive preview exposed sign-in only. Winner methods unknown."
+    },
+    {
+      "id": "V07",
+      "title": "Invited: Post-Placement Buffering and Sizing Contest",
+      "url": "https://vlsicad.ucsd.edu/Publications/Conferences/421/c421.pdf",
+      "source_type": "author-paper",
+      "publication_date": "2026-03-15",
+      "retrieved_utc": "2026-10-15T13:55:42.915646+00:00",
+      "locator": "PDF p.2 section 2.1-2.4; p.6 no-floorplan-perturbation hard constraints",
+      "access": "full",
+      "supported_claim_ids": [],
+      "limitations": "Selected formulation and hard constraints independently inspected; no experiment or winner audit.",
+      "doi": "10.1145/3764386.3779616",
+      "sha256": "da7022e95d0e86678787a7413b798684cd4989497ddec7cba3d1553ff3ac32d6",
+      "rights": "PDF declares CC BY 4.0; release contains metadata/paraphrase only."
+    },
+    {
+      "id": "V08",
+      "title": "ISPD26 contest winners and resources",
+      "url": "https://www.ispd.cc/contests/26/index.html",
+      "source_type": "official-contest",
+      "publication_date": "2026",
+      "retrieved_utc": "2026-10-15T13:55:42.915647+00:00",
+      "locator": "Contest Winners ordered list and Resources",
+      "access": "full",
+      "supported_claim_ids": [],
+      "limitations": "Only names/ranks checked. No original winning algorithm is inferred or recovered."
+    },
+    {
+      "id": "V09",
+      "title": "Improving Timing & Power Trade-off in Post-place Optimization Using Multi-agent Reinforcement Learning",
+      "url": "https://soc.postech.ac.kr/bbs/board.php?bo_table=sub5_1&sca=2024&wr_id=277",
+      "source_type": "author-publication-index",
+      "publication_date": "2024",
+      "retrieved_utc": "2026-10-15T13:55:42.915648+00:00",
+      "locator": "Title, authors, year, paper/slide download links 26/27 and publisher link 28; rendered lines 87-97",
+      "access": "metadata",
+      "supported_claim_ids": [],
+      "limitations": "Author metadata reopened and paper download returned invalid/expired token. Full method unknown; no bypass. Independent search also found author index and official program.",
+      "doi": "10.1145/3676536.3676702",
+      "authors": [
+        "Jaemin Seo",
+        "Sejin Park",
+        "Seokhyeong Kang"
+      ]
+    },
+    {
+      "id": "V10",
+      "title": "2026 CAD Contest official Problems",
+      "url": "https://www.iccad-contest.org/Problems",
+      "source_type": "official-contest",
+      "publication_date": "2026",
+      "retrieved_utc": "2026-10-15T13:55:42.915650+00:00",
+      "locator": "Problem A/B/C list, especially FloorSet Challenge",
+      "access": "full",
+      "supported_claim_ids": [],
+      "limitations": "Current task index only; not a claim about winner methods or all current work."
+    },
+    {
+      "id": "V13",
+      "title": "ISPD26 evaluation baseline",
+      "url": "https://raw.githubusercontent.com/ABKGroup/ISPD26-Contest/main/scripts/evaluation_baseline.tcl",
+      "source_type": "source-code",
+      "publication_date": "unknown",
+      "retrieved_utc": "2026-10-15T13:55:42.915651+00:00",
+      "locator": "rendered lines 34-96, sections (1)-(3)",
+      "access": "full",
+      "version": "moving main as retrieved",
+      "supported_claim_ids": [
+        "C-CLM-004"
+      ],
+      "limitations": "Independent selected source reading only; ideal clock, repair and retry observed; pin commit before execution."
+    }
+  ],
+  "search_log": "# Independent verifier search and analytical record\n2026-10-15 UTC. Scope: frozen pre-CTS resize/relocation order representation, restore causality, direct matched controls. No EDA experiments.\n\n| Operation | Inspected result | Limits |\n|---|---|---|\n| Open pinned MoveCommitter raw through web and urllib | recordAcceptedResult raw 374-388; unrecordAcceptedResult 391-401; hasMoves 668-673; init 61-81; begin/commit/restore journals | Hash ee9f09555c317de9e57e73d5edab56f5f710cd7195206229a31bb54be49c1679; no adapter or execution |\n| Reopen HyPAS | urllib PDF hash d843ea04b2746e449c7ded65ab06bb5f5d9d11f969251962c6feec7bdb930ca0; PyMuPDF pp.2-3 sections 2.2,3.1-3.4 | Web opening failed; full accessible author file, selected methods only; in-memory retrieval |\n| Reopen RL-LR, AgenticPD, ResizerAgent | Selected scopes in sources.json | No performance reproduced; README is not planner audit |\n| Official ICCAD2025 Problem C / Top-3 | Task and archive link checked; archive preview exposes sign-in only | No winning methods recovered |\n| Official ISPD2026 / paper / baseline README | Winner list, paper sections 2 and 4 hard constraints p.6; baseline repair/legalize/retry | Moving baseline requires future pinning; no original winner algorithms |\n| Official ICCAD2026 Problems | A/B/C including FloorSet | Index only |\n| Search web: \"placement sizing\" \"order\" prediction co-optimization 2026 | Mostly irrelevant power-system hits excluded; author Yibo Lin publication index lead not method-inspected | Budget-limited expansion, not evidence of novelty |\n| Search web: \"Improving Timing\" \"Multi-agent\" \"Post-place\" 2024 | POSTECH author index, official ICCAD final/preliminary program, public POSTECH slide lead | Secondary aggregator excluded from evidentiary conclusions; author original download token invalid; methods unresolved |\n| Own standard-library enumeration | 9 masks; 49 metric-observation submasks with baseline observed | Syntactic counts only, no physical reachability |\n| Own seeded 1000-case loss expansion | Max absolute discrepancy <1e-12 | Scalar analytic check; no autograd/model implementation validated |\n| Own manifest SHA verification and project.py digest | Both current released manifests match file bytes | Logical identity only, no backend attestation |\n\nRaw line numbers are 1-based file physical lines; web renderer collapses whitespace. Readable functions anchor both locators. No two exhaustive no-closer-art expansions claimed. Full R09 and winning methods remain open. No full paper copies retained in release. Full repository validation is delegated to coordinator per standalone job; trusted freeze validates these own files.\n"
+}
