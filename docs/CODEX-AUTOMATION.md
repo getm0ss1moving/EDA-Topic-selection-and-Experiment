@@ -17,17 +17,20 @@ A verifier-only diagnostic is not a completed three-role research round.
 
 | Role | Active identity pattern | Requested model | Effort | Responsibility |
 |---|---|---|---|---|
-| Proposer | ChatGPT-P04-PHYSICAL / ChatGPT-P05-TIMING | gpt-6-astra | high | Survey a bounded area; propose and revise a causal mechanism; produce the executable task list |
+| Proposer | ChatGPT-P04-PHYSICAL / ChatGPT-P05-TIMING | gpt-6.1-sol | high | Survey a bounded area; propose and revise a causal mechanism; produce the executable task list |
 | Challenger | ChatGPT-C04-PHYSICAL / ChatGPT-C05-TIMING | gpt-6-astra | low | Independently search papers, implementations and contests; test novelty, usefulness, headroom and feasibility |
-| Verifier | ChatGPT-V04-PHYSICAL / ChatGPT-V05-TIMING | gpt-6-luna | medium | Reopen evidence; adjudicate all objections and critical positive claims; validate consent and outcome |
+| Verifier | ChatGPT-V04-PHYSICAL / ChatGPT-V05-TIMING | gpt-6.1-sol | low | Reopen evidence; adjudicate all objections and critical positive claims; validate consent and outcome |
 
 These are requested configurations, not observed model-availability assertions.
 No unavailable model may silently fall back to another model or provider.
-The existing ChatGPT login is used by native Codex CLI; no Claude/DeepSeek gateway
-or paid API key is needed by this runner. All research artifacts are English.
+The active batch uses fresh Codex app agents because this account's native CLI
+rejected the requested Sol 6.1 model. Native execution below describes the older
+backend; `dispatch` and `collect` drive the active app backend.
+The existing ChatGPT account is used through the selected Codex backend; no
+Claude/DeepSeek gateway or paid API key is needed by this runner. All research artifacts are English.
 
 Separate logical role sessions are registered before the first job. Each job uses
-a fresh ephemeral native Codex execution and receives its own previous released
+a fresh execution with no inherited conversation and receives its own previous released
 output plus explicitly released shared files. A logical seat UUID is not the
 Codex CLI's physical thread ID. Independence comes from restricted input exposure
 and evidence work, not different provider names. Shared-account restrictions are
@@ -51,6 +54,10 @@ policy isolation; they are not adversarial filesystem confinement.
    matching signatures and a verifier check of the evidence.
 7. Retain released negative results, budgets, licenses and correctness controls.
    Research autonomy does not invent compute, paid access or measured results.
+8. The owner's scope clarification is academic chip EDA research. Use public or
+   legitimately accessible papers, contest material, open code and public vendor
+   information. Do not conduct cyber intrusion, acquire trade secrets, seek
+   unpublished proprietary designs, bypass access controls or retrieve credentials.
 
 Removed administrative dependencies: human freezing, per-source permission,
 manual session-ID entry, a separate registry PR before every output, human
@@ -159,8 +166,11 @@ python3 scripts/codex_loop.py prepare --ref FULL_COMMIT_SHA
 python3 scripts/codex_loop.py watch
 ```
 
-`prepare` launches no model. `watch` serially runs native `codex exec`, validates
-its actor-authored frozen release, transmits it and schedules the next role.
+`prepare` launches no model. With the native backend, `watch` serially runs
+`codex exec`. In this app-backed batch, the coordinator uses `dispatch`, starts
+the exact configured model in a fresh app agent, and uses `collect` after that
+agent self-freezes. Both paths validate actor-authored output, transmit it and
+schedule the next role.
 `status` displays durable state. `tick` executes one ready job. Only one coordinator
 may hold the lock. Failed or quota-limited turns preserve their own files and
 retry after the configured backoff. GitHub failures retain a separate publication

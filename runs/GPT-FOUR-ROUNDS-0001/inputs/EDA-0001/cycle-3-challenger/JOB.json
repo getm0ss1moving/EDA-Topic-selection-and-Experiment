@@ -1,0 +1,33 @@
+{
+  "actor_id": "ChatGPT-C04-PHYSICAL",
+  "batch_round": 3,
+  "batch_round_limit": 4,
+  "domain": "D04",
+  "input_commit": "a48f03d4bc254c0b0957d0fe0f265e072d6cf49a",
+  "models": {
+    "challenger": {
+      "effort": "low",
+      "model": "gpt-6-astra"
+    },
+    "proposer": {
+      "effort": "high",
+      "model": "gpt-6.1-sol"
+    },
+    "verifier": {
+      "effort": "low",
+      "model": "gpt-6.1-sol"
+    }
+  },
+  "packet_sha256": "6f386384bd1e2cb160b5f6ccf339e19c23646a70706198b75b39cb86acba183f",
+  "phase": "research",
+  "previous_proposal_release": "SUB-ef21f90bce1ab37f7cc070a9f312bd0474a5b7ff3f9537ccfbf67dc25bb4c05a",
+  "readiness": "logical seat registered; actual host model is recorded by the execution backend",
+  "released_inputs": [
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Four-Rounds-20261015/EDA-0001/ChatGPT-C04-PHYSICAL/jobs/324b9f26-655f-4d9b-af1e-49de94bd16d1/shared/SUB-ef21f90bce1ab37f7cc070a9f312bd0474a5b7ff3f9537ccfbf67dc25bb4c05a",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Four-Rounds-20261015/EDA-0001/ChatGPT-C04-PHYSICAL/jobs/324b9f26-655f-4d9b-af1e-49de94bd16d1/shared/SUB-5d1e1e55455806e40ba8728f8c331e9915b15edc757de58ed3bf27d5cf267e85"
+  ],
+  "role": "challenger",
+  "round": 2,
+  "session_id": "f29f2abb-ad12-4c6f-8446-e384bd6ae66d",
+  "topic": "EDA-0001"
+}

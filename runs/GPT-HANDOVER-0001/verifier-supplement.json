@@ -1,0 +1,9 @@
+{
+  "kind": "owner_released_legacy_verifier_context",
+  "scope": "Historical R0 review only; no current verdict inherited.",
+  "files": {
+    "readiness.json": "fa038aaa3caf6b094e87b1d09b18587ff52bf96d22119c09a554fc90520b9cc4",
+    "first-pass-plan.md": "8f0f647c62380494e2c878fe40c3e1f30ceac2c86a30a8befa20449904cdb9b8",
+    "gap-analysis.md": "dfa3c177cf8641351dd5a74f9b387552d6c348d5de4e56124b5b276ce5539bb5"
+  }
+}
