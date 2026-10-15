@@ -1,0 +1,334 @@
+[
+  {
+    "id": "P01",
+    "title": "The Tao of PAO: Anatomy of a Pin Access Oracle for Detailed Routing",
+    "url": "https://vlsicad.ucsd.edu/Publications/Conferences/377/c377.pdf",
+    "source_type": "author_paper",
+    "publication_date": "2020",
+    "retrieved_utc": "2026-10-15",
+    "locator": "\u00a7II-B; \u00a7III-B Algorithms2\u20133 and final validation paragraph; \u00a7III-C",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-001"
+    ],
+    "limitations": "Local-history assumptions, postvalidation and published framework only; no assertion current OpenROAD unchanged. Public full PDF accessed, cited sections inspected.",
+    "doi": "10.1109/DAC18072.2020.9218532",
+    "authors": [
+      "Andrew B. Kahng",
+      "Lutong Wang",
+      "Bangqi Xu"
+    ],
+    "version": "DAC2020 author PDF"
+  },
+  {
+    "id": "P02",
+    "title": "FastPass: Fast Pin Access Analysis with Incremental SAT Solving",
+    "url": "https://wfz0755.github.io/CV/archive/2023-ISPD-Fastpass.pdf",
+    "source_type": "author_paper",
+    "publication_date": "2023-03-26",
+    "retrieved_utc": "2026-10-15",
+    "locator": "\u00a7\u00a73.2\u20133.4 Eqs.3\u20135; \u00a74.2 Fig.8; Table1; conclusion",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-002",
+      "CLM-007"
+    ],
+    "limitations": "Primary same-stage conflict/SAT comparator; reported runtime is not a local measurement and no speedup transferred. Later journal version P03 full method not inspected.",
+    "doi": "10.1145/3569052.3571879",
+    "authors": [
+      "Fangzhou Wang",
+      "Jinwei Liu",
+      "Evangeline F. Y. Young"
+    ],
+    "version": "ISPD2023 pp9\u201316 author PDF"
+  },
+  {
+    "id": "P03",
+    "title": "FastPass: A Fast Pin Access Analysis Framework for Detailed Routability Enhancement",
+    "url": "https://scholars.hkbu.edu.hk/en/publications/fastpass-a-fast-pin-access-analysis-framework-for-detailed-routab/",
+    "source_type": "institutional_publication_record",
+    "publication_date": "2024-05-01",
+    "retrieved_utc": "2026-10-15",
+    "locator": "Abstract; metadata vol43 issue5 pp1566\u20131579",
+    "access_level": "abstract",
+    "supported_claim_ids": [
+      "CLM-002",
+      "CLM-012"
+    ],
+    "limitations": "Full2024 journal method not read; cannot establish equivalence/absence of quotient or later enhancements.",
+    "doi": "10.1109/TCAD.2023.3346302",
+    "version": "TCAD2024"
+  },
+  {
+    "id": "P04",
+    "title": "Bucket elimination: A unifying framework for reasoning",
+    "url": "https://ics.uci.edu/~csp/r48b.pdf",
+    "source_type": "author_paper",
+    "publication_date": "1999",
+    "retrieved_utc": "2026-10-15",
+    "locator": "\u00a7\u00a72.1\u20132.2; finite-domain optimization discussion \u00a78; summary \u00a710; induced-width bound",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-003"
+    ],
+    "limitations": "Generic constraint-compilation baseline; manuscript pagination differs from journal. No claim that applying this framework yields new theory.",
+    "authors": [
+      "Rina Dechter"
+    ],
+    "doi": "10.1016/S0004-3702(99)00059-4",
+    "version": "author manuscript,51PDF pages"
+  },
+  {
+    "id": "P05",
+    "title": "dr-cu-fastpass public implementation",
+    "url": "https://github.com/cuhk-eda/dr-cu-fastpass/tree/cd66e1091ea31f419161918e56d546a297644f40",
+    "source_type": "source_code",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-15",
+    "locator": "src/pa/PAHelper.cpp Helper::analyzeRouteConflictGraph line1047, solveInstanceSAT lines1205\u20131421, preSelectPinAccessPoint lines1423\u20131442; README support/build sections; LICENSE",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-002",
+      "CLM-004",
+      "CLM-012"
+    ],
+    "limitations": "Read source bytes only; no build/execution or complete submodule/license audit. README supports ISPD2018 rules, not all2019. Raw file URLs use identical commit.",
+    "version": "cd66e1091ea31f419161918e56d546a297644f40",
+    "license": "Top-level BSD-3-Clause; third-party/benchmark licenses separate",
+    "observed_ref": "git ls-remote refs/heads/main returned cd66e1091ea31f419161918e56d546a297644f40",
+    "content_hashes": {
+      "src/pa/PAHelper.cpp": "d3ab4e1130db504a0e8d3226003ce85f4ba2b281935c021fc03bd5a5b6ed2229",
+      "src/pa/PAObjects.cpp": "b84d3ec8b17d737162d3e86a1c90a39f6485f7956b658e4c75a45aa7780ac416",
+      "src/pa/PAHelper.h": "6cac7a36d202c2e03491efe52a6f4adc9647037dc428b48fbf8822d471c1dde1",
+      "README.md": "6cd5ff61df9ed82b3c0a184ec900a784c0ded841bc9c1a58af80090b206fae69",
+      "LICENSE": "e7a99c47f4d9d6b2a659901393fb51345274b2e2ee86f9dc5944241c4199fc61"
+    }
+  },
+  {
+    "id": "P06",
+    "title": "CoRe-ECO: Concurrent Refinement of Detailed Place-and-Route for an Efficient ECO Automation",
+    "url": "https://vlsicad.ucsd.edu/Publications/Conferences/385/c385.pdf",
+    "source_type": "author_paper",
+    "publication_date": "2021",
+    "retrieved_utc": "2026-10-15",
+    "locator": "\u00a7I contributions; \u00a7II-A\u2013F and Eq.6; author publication list https://mgwoo.github.io/ itemc13 for venue",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-012"
+    ],
+    "limitations": "Broader joint placement/routing/cell refinement; does not prove exact duplication of fixed-placement state representation. Published gains not transferred.",
+    "doi": "10.1109/ICCD53106.2021.00065",
+    "version": "ICCD2021 pp366\u2013373; author PDF"
+  },
+  {
+    "id": "P07",
+    "title": "In-Route Pin Access-Driven Placement Refinement for Improved Detailed Routing Convergence",
+    "url": "https://vlsicad.ucsd.edu/Publications/Journals/j135.pdf",
+    "source_type": "author_paper",
+    "publication_date": "2021",
+    "retrieved_utc": "2026-10-15",
+    "locator": "Problem assumptions; \u00a7III-C flow; \u00a7IV displacement study",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-012"
+    ],
+    "limitations": "2021 early-publication identifier; inspected PDF. Placement-moving scope differs; no timing or runtime gain transferred.",
+    "doi": "10.1109/TCAD.2021.3066528",
+    "version": "author journal PDF"
+  },
+  {
+    "id": "P08",
+    "title": "ISPD2018 Initial Detailed Routing Contest official material",
+    "url": "https://www.ispd.cc/contests/18/",
+    "source_type": "official_contest",
+    "publication_date": "2018",
+    "retrieved_utc": "2026-10-15",
+    "locator": "Abstract; Benchmarks; Evaluation Script; Contest Result; FAQ3/5/6/8",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-006",
+      "CLM-012"
+    ],
+    "limitations": "Official rules and winners checked; final binaries/winner complete internals not audited. Official DRC/connectivity requires Innovus; no established license. Dataset acquisition/redistribution rights not verified."
+  },
+  {
+    "id": "P09",
+    "title": "ISPD2019 Initial Detailed Routing Contest official material",
+    "url": "https://www.ispd.cc/contests/19/",
+    "source_type": "official_contest",
+    "publication_date": "2019",
+    "retrieved_utc": "2026-10-15",
+    "locator": "Opening expired-license notice; Abstract; Evaluation Script; Final Contest Result; FAQ5/9/12/17",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-006",
+      "CLM-012"
+    ],
+    "limitations": "Checked selected rules, evaluation dependency and results, not every winning solver. More complex predicates outside declared pairwise-domain guarantee need explicit checking."
+  },
+  {
+    "id": "P10",
+    "title": "Innovus Implementation System Datasheet",
+    "url": "https://www.cadence.com/en_US/home/resources/datasheets/innovus-implementation-system-ds.html",
+    "source_type": "vendor_primary",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-15",
+    "locator": "New Slack-Driven Placement Technique; pin-access instance planning/spacing paragraphs",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-005"
+    ],
+    "limitations": "Public advertised capability only; no controlled comparison, internal representation or absence claim. Dynamic page version not pinned."
+  },
+  {
+    "id": "P11",
+    "title": "IC Compiler II Place and Route Solution",
+    "url": "https://www.synopsys.com/implementation-and-signoff/physical-implementation/ic-compiler.html",
+    "source_type": "vendor_primary",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-15",
+    "locator": "About IC Compiler II; key technologies",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-005"
+    ],
+    "limitations": "Advertised routing-driven placement/convergence only. Account-restricted links not opened; no comparative performance or proprietary internal absence claim."
+  },
+  {
+    "id": "P12",
+    "title": "OpenROAD pinned pin-access entry implementation",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/src/drt/src/pa/FlexPA.cpp",
+    "source_type": "source_code",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-15",
+    "locator": "FlexPA flow around prepPattern; applyPatternsFile; serialization",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-012"
+    ],
+    "limitations": "Only entry source inspected, not full FlexPA implementation. Existing brief tool smoke is not independently reproduced and not candidate evidence.",
+    "version": "b16bda7e82721d10566ff7e2b68f1ff0be9f9e38",
+    "sha256": "7d70a40364e04f4cc91713af8e0915e8224fdbe0aa97694cc8ffcc1372dc292a"
+  },
+  {
+    "id": "P13",
+    "title": "ISPD2025 Performance-Driven Large Scale Global Routing",
+    "url": "https://www.ispd.cc/contests/25/index.html",
+    "source_type": "official_contest",
+    "publication_date": "2025",
+    "retrieved_utc": "2026-10-15",
+    "locator": "Official title/index",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-012"
+    ],
+    "limitations": "Stage/title checked only; winner methods not exhaustively inspected. No full exclusion or latest-SOTA claim."
+  },
+  {
+    "id": "P14",
+    "title": "ISPD official previous-contest archive",
+    "url": "https://www.ispd.cc/ispd2027/index.php?page=contests",
+    "source_type": "official_contest",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-15",
+    "locator": "Previous Contests entries2024/2025/2026",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-012"
+    ],
+    "limitations": "2026 URL redirected to2027 archive. Lists2026 post-placement buffering/sizing; no full2026 formulation or winner-method audit."
+  },
+  {
+    "id": "P15",
+    "title": "Concurrent Pin Access Optimization for Unidirectional Routing",
+    "url": "https://yibolin.com/publications/papers/DFMR_DAC2017_Xu.pdf",
+    "source_type": "author_paper",
+    "publication_date": "2017-06-18",
+    "retrieved_utc": "2026-10-15",
+    "locator": "Abstract; \u00a72.2 Problem1; \u00a73.1 track-based interval generation; \u00a73 solution overview",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-012"
+    ],
+    "limitations": "Primary interval/ILP/Lagrangian approach included; detailed solver equivalence and older bibliography not fully audited. No performance transfer.",
+    "doi": "10.1145/3061639.3062214",
+    "authors": [
+      "Xiaoqing Xu",
+      "Yibo Lin",
+      "Vinicius Livramento",
+      "David Z. Pan"
+    ]
+  },
+  {
+    "id": "P16",
+    "title": "Official ICCAD2025/2026 contest problem indexes",
+    "url": "https://www.iccad-contest.org/2026/",
+    "source_type": "official_contest",
+    "publication_date": "2026",
+    "retrieved_utc": "2026-10-15",
+    "locator": "2026 Contest Problems and schedule; https://www.iccad-contest.org/2025/ Contest Problems",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-012"
+    ],
+    "limitations": "Only stage/title/schedule scope checked; no hidden algorithms or unknown2026 winner inferred. Not a full current-contest-originality audit.",
+    "related_urls": [
+      "https://www.iccad-contest.org/2025/"
+    ]
+  },
+  {
+    "id": "P17",
+    "title": "Pin Accessibility-Driven Detailed Placement Refinement",
+    "url": "https://www.engineering.iastate.edu/~cnchu/pubs/c91.pdf",
+    "source_type": "author_paper_discovery",
+    "publication_date": "2017-03-19",
+    "retrieved_utc": "2026-10-15",
+    "locator": "Indexed abstract and introduction; direct URL returned Request Rejected",
+    "access_level": "abstract",
+    "supported_claim_ids": [],
+    "limitations": "Not read full. Discovery/exclusion lead only; no decision-critical method conclusion based on incomplete access.",
+    "doi": "10.1145/3036669.3036679"
+  },
+  {
+    "id": "P18",
+    "title": "Pin-Accessible Legalization for Mixed-Cell-Height Circuits",
+    "url": "https://research.cuhk.edu.hk/en/publications/pin-accessible-legalization-for-mixed-cell-height-circuits-2/",
+    "source_type": "institutional_publication_record",
+    "publication_date": "2022-01-01",
+    "retrieved_utc": "2026-10-15",
+    "locator": "Abstract and publication metadata",
+    "access_level": "abstract",
+    "supported_claim_ids": [],
+    "limitations": "Abstract-only discovery: do not claim full method equivalence or novelty exclusion.",
+    "doi": "10.1109/TCAD.2021.3053223"
+  },
+  {
+    "id": "P19",
+    "title": "Pin Access-Oriented Concurrent Detailed Routing",
+    "url": "https://dblp.uni-trier.de/rec/conf/ispd/JiangF23.html",
+    "source_type": "bibliographic_record",
+    "publication_date": "2023",
+    "retrieved_utc": "2026-10-15",
+    "locator": "ISPD2023 pp17\u201325; official slides URL attempted",
+    "access_level": "metadata",
+    "supported_claim_ids": [],
+    "limitations": "Metadata available; public official slide browser open failed. Secondary abstract was discovery only; full method not verified.",
+    "doi": "10.1145/3569052.3571875"
+  },
+  {
+    "id": "G01",
+    "title": "Assigned frozen brief and job instructions",
+    "url": "policy/config/research-brief.json",
+    "source_type": "assigned_policy",
+    "publication_date": "2026-10-15",
+    "retrieved_utc": "2026-10-15",
+    "locator": "compute.status; available tools/designs; JOB.json/prompt no-new-allocation clause",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-011",
+      "CLM-012"
+    ],
+    "limitations": "Provisional CPU caps are not new owner allocation; GCD smoke is historical resource metadata, not a representative candidate run.",
+    "version": "input a48f03d4bc254c0b0957d0fe0f265e072d6cf49a"
+  }
+]

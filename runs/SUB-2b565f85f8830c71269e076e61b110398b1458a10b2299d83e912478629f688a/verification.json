@@ -1,0 +1,253 @@
+{
+  "decision": "park",
+  "verifier_session": "6b0cc4fd-22dd-4607-aafe-09d0ec0c8904",
+  "actor_id": "ChatGPT-V04-PHYSICAL-EDA-0003",
+  "input_commit": "a48f03d4bc254c0b0957d0fe0f265e072d6cf49a",
+  "packet_sha256": "cf5ada0f3f1fee33cf623370f4121b4d418d72ada24c7404041a7e2f4adc81af",
+  "reviewed_proposer_release": "SUB-7c6b1c85bbe65f26c8882bf0474a3c913417f740de75096fd57329377c32612e",
+  "adjudicated_challenger_releases": [
+    "SUB-68648e310004de173692e6a14bb0403758c4e74b98931d30f8d7086179db5df4"
+  ],
+  "dossier_digest": "6c53fb715cd5a6c3d8456e98f080d472423b9577fa132fd9f75ea3af1efe1c0d",
+  "gates": {
+    "novelty": false,
+    "mechanism": true,
+    "utility": false,
+    "contest_originality": false,
+    "headroom": false,
+    "feasibility": false,
+    "direction_integrity": true,
+    "experiment_consensus": false
+  },
+  "gate_reasons": {
+    "novelty": "Generic residual compilation overlap; no supported nontrivial EDA distinction; full recent/journal/winner audit incomplete.",
+    "mechanism": "Sufficient-state proof sound within frozen negative pair-conflict model, without maximal compression or physical completeness claim.",
+    "utility": "Candidate-specific query incidence, actual seconds saved and meaningful threshold unvalidated.",
+    "contest_originality": "Official rule/checker scope checked; complete winner/hint comparison unresolved.",
+    "headroom": "Conditional analytic ceiling valid; local numerical fraction and useful gain unknown.",
+    "feasibility": "Implementation/outer policy, representative designs, oracle, resources and graph-test quantifiers unresolved.",
+    "direction_integrity": "New EDA-0003 anchor retains fixed placement, residual mechanism and full-route latency; combination_drift=0, demand_drift=0. Genericity is a novelty issue, not drift.",
+    "experiment_consensus": "Task SHA256 2518399798a8ffc99679d9d731ede8cb98b66a6d9686c3ddffe76b93f45c5f5c recomputed; no proposer or challenger agreement files. Challenger amendment is not consent."
+  },
+  "direction_penalty_checked": true,
+  "direction_penalties": {
+    "combination_drift": 0,
+    "demand_drift": 0
+  },
+  "experiment_consensus_checked": true,
+  "tasklist_sha256": "2518399798a8ffc99679d9d731ede8cb98b66a6d9686c3ddffe76b93f45c5f5c",
+  "abandonment_process_checked": true,
+  "abandonment_status": "No matched consents or verified exhaustion/dead-end grounds. Park is not joint abandonment.",
+  "source_checks": [
+    {
+      "id": "V01",
+      "url": "https://arxiv.org/pdf/1401.3448",
+      "title": "AND/OR Multi-Valued Decision Diagrams (AOMDDs) for Graphical Models",
+      "locator": "Section 5.2, Algorithm 2, Proposition 1; printed pp487-489",
+      "access": "full, selected sections",
+      "finding": "Hash-based isomorphic-subproblem reduction predates this candidate; exact generic compilation is not novel.",
+      "limitation": "No EDA-specific speed comparison; not a proof every possible specialization is exhausted.",
+      "retrieved_utc": "2026-10-15",
+      "verdict": "valid"
+    },
+    {
+      "id": "V02",
+      "url": "https://www.ijcai.org/proceedings/2024/0219.pdf",
+      "title": "A Multi-Valued Decision Diagram-Based Approach to Constrained Optimal Path Problems over Directed Acyclic Graphs",
+      "locator": "Section 3.1, pp1981-1982, equivalent prefixes and residual local constraints",
+      "access": "full, selected sections",
+      "finding": "Equal valid-suffix sets allow merging with best prefix representative; close semantic baseline.",
+      "limitation": "Section 3 describes earlier BCS, not an invention first made in 2024; no pin-access transfer measurement.",
+      "retrieved_utc": "2026-10-15",
+      "verdict": "valid"
+    },
+    {
+      "id": "V03",
+      "url": "https://raw.githubusercontent.com/cuhk-eda/dr-cu-fastpass/cd66e1091ea31f419161918e56d546a297644f40/src/pa/PAHelper.cpp",
+      "title": "FastPass pinned PAHelper.cpp",
+      "locator": "Helper::solveInstanceSAT lines1194-1209,1296-1360",
+      "access": "full, selected function",
+      "finding": "Trivial returns, assumptions, conflict-dependent pin relaxation and selected-model geometry are present.",
+      "limitation": "Source only; no build, execution or runtime fraction verified.",
+      "retrieved_utc": "2026-10-15",
+      "verdict": "valid"
+    },
+    {
+      "id": "V04",
+      "url": "https://wfz0755.github.io/CV/archive/2023-ISPD-Fastpass.pdf",
+      "title": "FastPass: Fast Pin Access Analysis with Incremental SAT Solving",
+      "locator": "Sections3.4.1-3.4.5; section4.2/Fig8",
+      "access": "full, selected sections",
+      "finding": "Existing complete-conflict incremental SAT and decomposition; published small solve workload motivates value check.",
+      "limitation": "Reported machine/workload observations do not establish local total-flow share; journal full revision not reopened.",
+      "retrieved_utc": "2026-10-15",
+      "verdict": "valid"
+    },
+    {
+      "id": "V05",
+      "url": "https://www.ispd.cc/contests/18/",
+      "title": "ISPD2018 Initial Detailed Routing Contest",
+      "locator": "Evaluation Script steps1-4; Evaluation Program; Contest Result",
+      "access": "full official page",
+      "finding": "Official flow calls Innovus for connectivity/DRC; results list TritonRoute first and Dr.CU second.",
+      "limitation": "No license supplied by page; winner algorithm/hint audit incomplete.",
+      "retrieved_utc": "2026-10-15",
+      "verdict": "valid"
+    },
+    {
+      "id": "V06",
+      "url": "https://www.ispd.cc/contests/19/",
+      "title": "ISPD2019 Initial Detailed Routing Contest",
+      "locator": "Evaluation Script steps1-4; Evaluation Program",
+      "access": "full official page",
+      "finding": "Official evaluation likewise uses Innovus reports.",
+      "limitation": "No all-winner method audit; alternative oracle suitability remains unresolved.",
+      "retrieved_utc": "2026-10-15",
+      "verdict": "valid"
+    },
+    {
+      "id": "V07",
+      "url": "https://scholars.hkbu.edu.hk/en/publications/fastpass-a-fast-pin-access-analysis-framework-for-detailed-routab/",
+      "title": "FastPass journal edition metadata",
+      "locator": "Abstract; bibliographic record TCAD43(5),1566-1579, DOI10.1109/TCAD.2023.3346302",
+      "access": "abstract/metadata",
+      "finding": "2024 journal edition exists and uses incremental SAT; not full-method clearance.",
+      "limitation": "Full revised method uninspected.",
+      "retrieved_utc": "2026-10-15",
+      "verdict": "valid"
+    }
+  ],
+  "objections": [
+    {
+      "id": "OBJ-001",
+      "source_locator": "V01 section5.2/Algorithm2; V02 section3.1; proposal mechanism and plan B2",
+      "verdict": "valid",
+      "blocking": true,
+      "reason": "Residual exclusions are a residual CSP; add/specify a faithful reduced-diagram comparator before novelty or experiment consent. Equal signatures are sufficient, not necessary; this is no proof all useful EDA specializations are impossible."
+    },
+    {
+      "id": "OBJ-002",
+      "source_locator": "experiment-plan.md Correctness1; tasklist.md T03; independent combinatorics",
+      "verdict": "valid",
+      "blocking": true,
+      "reason": "135 optional inter-pin edges yield 2^135 labelled graphs at 6 pins x3 routes. Restrict to all assignments per finite graph suite, with exact exhaustive tier counts and pinned random/adversarial tiers. This is a plan inconsistency, not a mathematical refutation."
+    },
+    {
+      "id": "OBJ-003",
+      "source_locator": "V03 lines1194-1209,1296-1360; V04 sections3.4/4.2",
+      "verdict": "valid",
+      "blocking": true,
+      "reason": "Core-dependent relaxation and trivial skips preclude inferred native equivalence from feasibility alone. Specify outer policy, charge capture/canonicalization/fallback, and measure real opportunity only after allocation. Thesis-specific integration details not independently reopened and remain unresolved ancillary evidence."
+    },
+    {
+      "id": "OBJ-004",
+      "source_locator": "V05/V06 Evaluation Script; proposal CLM012; tasklist T02; job no-compute instruction",
+      "verdict": "valid",
+      "blocking": true,
+      "reason": "No locked representative families, validated absolute latency need, complete independent oracle or allocation; no matching consent. Conditional planning is useful but not executable acceptance."
+    }
+  ],
+  "positive_claims": [
+    {
+      "id": "CLM-001",
+      "source_locator": "proposal source P01, not independently reopened",
+      "verdict": "unresolved",
+      "blocking": false,
+      "reason": "PAO-specific scope not verified in this turn; no claim of a current OpenROAD bug or reproduced physical fixture."
+    },
+    {
+      "id": "CLM-002",
+      "source_locator": "V04 sections3.4.1-3.4.5; V07 abstract",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "Complete-conflict SAT selection is established prior work. 2024 full-method coverage remains open."
+    },
+    {
+      "id": "CLM-003",
+      "source_locator": "V01 sections5.2 and width discussion",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "Exact generic compilation and width-related exponential bounds are prior; no universal practical state bound follows."
+    },
+    {
+      "id": "CLM-004",
+      "source_locator": "V03 function and assumptions loop",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "Code supports component/trivial handling and reused solver assumptions, not measured behavior."
+    },
+    {
+      "id": "CLM-005",
+      "source_locator": "P10/P11 vendor descriptions not independently reopened",
+      "verdict": "unresolved",
+      "blocking": false,
+      "reason": "Do not use unchecked advertising to infer commercial internals or an industry absence."
+    },
+    {
+      "id": "CLM-006",
+      "source_locator": "V05/V06 Evaluation Script",
+      "verdict": "valid",
+      "blocking": true,
+      "reason": "Official checker depends on Innovus; legitimate license or validated alternative remains missing."
+    },
+    {
+      "id": "CLM-007",
+      "source_locator": "V04 section4.2/Fig8; CLM009 deduction",
+      "verdict": "partially_valid",
+      "blocking": true,
+      "reason": "Possible small leverage is a reasonable hypothesis; candidate-specific leverage is unmeasured."
+    },
+    {
+      "id": "CLM-008",
+      "source_locator": "proposal residual signature definition/proof; independent factorization check",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "For fixed complete negative pair constraints, equal forbidden-domain tuples imply identical suffix feasibility. Preserve all route-labelled paths through merges; query-specific representative pruning cannot discard mask-enabled alternatives. No signoff or novelty theorem follows."
+    },
+    {
+      "id": "CLM-009",
+      "source_locator": "proposal matched-work equations; independent algebra",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "If common work is identical and replacement costs nonnegative, saving=(S-K-Q)/(G+S+R)<=S/(G+S+R). Numerical share unknown; native geometry/core changes break the premise."
+    },
+    {
+      "id": "CLM-010",
+      "source_locator": "proposal H1; V01/V02 nearest mechanisms",
+      "verdict": "unresolved",
+      "blocking": true,
+      "reason": "No measured useful compression or total-flow improvement, and no established nontrivial distinction."
+    },
+    {
+      "id": "CLM-011",
+      "source_locator": "JOB prompt and batch instruction",
+      "verdict": "valid",
+      "blocking": true,
+      "reason": "Zero newly authorized experiment compute. No solver benchmark or physical experiment executed in this review."
+    },
+    {
+      "id": "CLM-012",
+      "source_locator": "proposal/plan/tasklist dependency records",
+      "verdict": "valid",
+      "blocking": true,
+      "reason": "The explicit unresolved-readiness statement is accurate; missing resources are not an impossibility result."
+    }
+  ],
+  "independence": "Unblinded frozen-file review. Only assigned shared current P/C outputs and policy/own harness read; no predecessor scientific approval inherited. Distinct manifest sessions checked; this is policy isolation, not an adversarial sandbox. Logical registration/model assertions are packet provenance, not an independent backend audit.",
+  "checks": [
+    "29 policy file hashes verified",
+    "Both current release manifest file hashes verified",
+    "Task-list SHA verified",
+    "Trusted project.py digest computed on exact proposer release",
+    "No full-repository validation possible/attempted in standalone job; coordinator publication duty",
+    "No experiment executed"
+  ],
+  "reversal_conditions": [
+    "Supported nontrivial mechanism beyond residual CSP/decision diagrams",
+    "Faithful reduced-diagram comparator and finite graph-suite specification",
+    "Source-pinned native outer-policy contract and allocated measurement of actual opportunity",
+    "Licensed representative independent designs, complete physical oracle and validated latency endpoint",
+    "Matching P/C consents on unchanged frozen task list followed by verifier readiness"
+  ],
+  "round_limit": "Domain fourth and final cycle; EDA-0003 initial review. No fifth cycle authorized."
+}

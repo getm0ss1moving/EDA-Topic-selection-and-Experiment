@@ -1,0 +1,257 @@
+[
+  {
+    "id": "C01",
+    "title": "AND/OR Multi-Valued Decision Diagrams (AOMDDs) for Graphical Models",
+    "url": "https://arxiv.org/pdf/1401.3448",
+    "publication_date": "2008; arXiv posting 2014",
+    "source_type": "author_paper",
+    "locator": "Definitions13,22,23; sections5.1\u20135.2, Algorithm2/Proposition1, printed pp477,484,488\u2013489",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "OBJ-001"
+    ],
+    "limitations": "Equal-subproblem reduction and hash-based compilation; not a measured EDA comparison.",
+    "retrieved_utc": "2026-10-15"
+  },
+  {
+    "id": "C02",
+    "title": "A Multi-Valued Decision Diagram-Based Approach to Constrained Optimal Path Problems over Directed Acyclic Graphs",
+    "url": "https://www.ijcai.org/proceedings/2024/0219.pdf",
+    "publication_date": "2024",
+    "source_type": "conference_paper",
+    "locator": "section3, printed pp1981\u20131982, equivalent prefix/local constraint discussion; section7",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "OBJ-001"
+    ],
+    "limitations": "BCS exposition and MCS extension inspected; EDA-specific performance not established. Earlier Nishino2015 source remains a citation lead.",
+    "retrieved_utc": "2026-10-15"
+  },
+  {
+    "id": "C03",
+    "title": "FastPass: Fast Pin Access Analysis with Incremental SAT Solving",
+    "url": "https://wfz0755.github.io/CV/archive/2023-ISPD-Fastpass.pdf",
+    "publication_date": "2023",
+    "source_type": "author_paper",
+    "locator": "sections2.3,3.4.1\u20133.4.3,4.2/Fig8",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "OBJ-003"
+    ],
+    "limitations": "Published decomposition is workload-specific; no local time fraction inferred.",
+    "retrieved_utc": "2026-10-15"
+  },
+  {
+    "id": "C04",
+    "title": "dr-cu-fastpass PAHelper.cpp",
+    "url": "https://raw.githubusercontent.com/cuhk-eda/dr-cu-fastpass/cd66e1091ea31f419161918e56d546a297644f40/src/pa/PAHelper.cpp",
+    "publication_date": "unknown",
+    "source_type": "source_code",
+    "locator": "Helper::solveInstanceSAT: trivial-return branches; buildAssumption, solver.solve, solver.conflict, fakePinTobeRelaxed, selected model route loop",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "OBJ-003"
+    ],
+    "limitations": "Pinned source inspection only; browser line numbering differs from raw-file numbering. No build/run.",
+    "retrieved_utc": "2026-10-15"
+  },
+  {
+    "id": "C05",
+    "title": "Towards Better Physical Layout Routability and Security",
+    "url": "https://wfz0755.github.io/CV/archive/wfz-thesis.pdf",
+    "publication_date": "2023-08",
+    "source_type": "author_thesis",
+    "locator": "title page; section4.2.5 pp76\u201378; section4.3.5 and p88",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "OBJ-003"
+    ],
+    "limitations": "Downloaded public author PDF after browser failure; pdftotext sections inspected. This thesis is not asserted byte-equivalent to TCAD2024.",
+    "retrieved_utc": "2026-10-15"
+  },
+  {
+    "id": "C06",
+    "title": "ISPD2018 Initial Detailed Routing Contest",
+    "url": "https://www.ispd.cc/contests/18/",
+    "publication_date": "2018",
+    "source_type": "official_contest",
+    "locator": "Evaluation Script; expired-license notice; Contest Result",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "OBJ-004"
+    ],
+    "limitations": "Rules/results checked; no license or all winner implementations verified.",
+    "retrieved_utc": "2026-10-15"
+  },
+  {
+    "id": "C07",
+    "title": "ISPD2019 Initial Detailed Routing Contest",
+    "url": "https://www.ispd.cc/contests/19/",
+    "publication_date": "2019",
+    "source_type": "official_contest",
+    "locator": "Evaluation Script; opening license notice; Final Contest Result",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "OBJ-004"
+    ],
+    "limitations": "Complete winner mechanism audit remains incomplete.",
+    "retrieved_utc": "2026-10-15"
+  },
+  {
+    "id": "C08",
+    "title": "Dr. CU 2.0: A Scalable Detailed Routing Framework with Correct-by-Construction Design Rule Satisfaction",
+    "url": "https://chengengjie.github.io/papers/C12-ICCAD19-DrCU2-slides.pdf",
+    "publication_date": "2019",
+    "source_type": "author_slides",
+    "locator": "slides labelled5/26,11/26\u201314/26,18/26",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "COV-contests"
+    ],
+    "limitations": "Access/via selection and lookup-table policies inspected. Author comparison against2019 winner is not itself a winner report.",
+    "retrieved_utc": "2026-10-15"
+  },
+  {
+    "id": "C09",
+    "title": "ISPD2025 Performance-Driven Large Scale Global Routing",
+    "url": "https://www.ispd.cc/contests/25/index.html",
+    "publication_date": "2025",
+    "source_type": "official_contest",
+    "locator": "title and Contest Winners",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "COV-contests"
+    ],
+    "limitations": "Stage/index only; no full winner policy equivalence judgment.",
+    "retrieved_utc": "2026-10-15"
+  },
+  {
+    "id": "C10",
+    "title": "ISPD2026 program and contest abstract",
+    "url": "https://ispd.cc/ispd2027/index.php?page=program",
+    "publication_date": "2026",
+    "source_type": "official_conference",
+    "locator": "ISPD2026 Program; Contest Summary/Results abstract",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "COV-contests"
+    ],
+    "limitations": "Redirected page has2027 header but2026 program body. Buffering/sizing scope only; no absence conclusion.",
+    "retrieved_utc": "2026-10-15"
+  },
+  {
+    "id": "C11",
+    "title": "2026 CAD Contest at ICCAD",
+    "url": "https://www.iccad-contest.org/2026/",
+    "publication_date": "2026",
+    "source_type": "official_contest",
+    "locator": "Contest Problems A/B/C; schedule Award ceremony November",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "COV-contests"
+    ],
+    "limitations": "Index-only; not a comprehensive problem or winner-method audit.",
+    "retrieved_utc": "2026-10-15"
+  },
+  {
+    "id": "C12",
+    "title": "IC Compiler II Place and Route Solution",
+    "url": "https://www.synopsys.com/implementation-and-signoff/physical-implementation/ic-compiler.html",
+    "publication_date": "unknown",
+    "source_type": "vendor_primary",
+    "locator": "About/key technologies",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "COV-industry"
+    ],
+    "limitations": "Advertised capabilities only; no proprietary algorithm or measured industry-gap inference.",
+    "retrieved_utc": "2026-10-15"
+  },
+  {
+    "id": "C13",
+    "title": "The Tao of PAO: Anatomy of a Pin Access Oracle for Detailed Routing",
+    "url": "https://vlsicad.ucsd.edu/Publications/Conferences/377/c377.pdf",
+    "publication_date": "2020",
+    "source_type": "author_paper",
+    "locator": "sectionIII-B Algorithms2\u20133 and validation discussion",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "COV-mechanism"
+    ],
+    "limitations": "Published local-history algorithm inspected; not a bug finding about current OpenROAD.",
+    "retrieved_utc": "2026-10-15"
+  },
+  {
+    "id": "C14",
+    "title": "Concurrent Pin Access Optimization for Unidirectional Routing",
+    "url": "https://yibolin.com/publications/papers/DFMR_DAC2017_Xu.pdf",
+    "publication_date": "2017",
+    "source_type": "author_paper",
+    "locator": "section2.2 Problem1; section3.1 interval-generation discussion",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "COV-duplicate"
+    ],
+    "limitations": "Selected formulation/interval sections inspected; full solver equivalence not adjudicated.",
+    "retrieved_utc": "2026-10-15"
+  },
+  {
+    "id": "C15",
+    "title": "dr-cu-fastpass public issues and releases",
+    "url": "https://github.com/cuhk-eda/dr-cu-fastpass/issues",
+    "publication_date": "unknown",
+    "source_type": "repository_metadata",
+    "locator": "issues index; https://github.com/cuhk-eda/dr-cu-fastpass/releases",
+    "access_level": "metadata",
+    "supported_claim_ids": [
+      "COV-duplicate"
+    ],
+    "limitations": "No release packages shown. Commit history browser request failed; absence of issue evidence is not proof of correctness.",
+    "retrieved_utc": "2026-10-15"
+  },
+  {
+    "id": "G01",
+    "title": "Assigned EDA-0003 frozen proposal and policy",
+    "url": "shared/SUB-7c6b1c85bbe65f26c8882bf0474a3c913417f740de75096fd57329377c32612e",
+    "publication_date": "2026-10-15",
+    "source_type": "released_packet",
+    "locator": "proposal.md CLM008\u2013012; experiment-plan.md Correctness1; tasklist.md T01\u2013T08; policy/config/research-brief.json compute.status; JOB/prompt",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "OBJ-001",
+      "OBJ-002",
+      "OBJ-003",
+      "OBJ-004"
+    ],
+    "limitations": "All current/prior released file hashes verified; predecessor adjudication belongs to EDA-0001 only.",
+    "retrieved_utc": "2026-10-15"
+  },
+  {
+    "id": "C16",
+    "title": "Microsoft DecisionDiagrams",
+    "url": "https://github.com/microsoft/DecisionDiagrams",
+    "publication_date": "unknown",
+    "source_type": "primary_project_documentation",
+    "locator": "README implementation/unique table description",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "COV-duplicate"
+    ],
+    "limitations": "Dynamic README only; no source pin, build, or benchmark comparison.",
+    "retrieved_utc": "2026-10-15"
+  },
+  {
+    "id": "C17",
+    "title": "cn2mddg compiler",
+    "url": "https://www.cril.univ-artois.fr/kc/mddg.html",
+    "publication_date": "unknown",
+    "source_type": "primary_project_documentation",
+    "locator": "The cn2mddg compiler; Resources; How to use",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "COV-duplicate"
+    ],
+    "limitations": "Primary project description read; Linux64 runtime not downloaded or run; no license/source completeness claim.",
+    "retrieved_utc": "2026-10-15"
+  }
+]

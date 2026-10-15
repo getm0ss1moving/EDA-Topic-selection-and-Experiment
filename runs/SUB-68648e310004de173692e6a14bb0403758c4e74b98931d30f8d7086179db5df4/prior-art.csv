@@ -1,0 +1,7 @@
+source_id,task_formulation,mechanism,data,evaluation,assumptions,limitation,overlap,distinction
+C01,Finite-domain graphical models,Equivalent-subproblem compilation,Paper examples,Not reproduced,Fixed representation structure,No EDA performance evidence,Semantic state merging,No supported new structural property yet
+C02,Constrained DAG paths,Local-constraint decision diagrams,Non-EDA tasks,Not reproduced,Fixed path/constraint model,Transfer needs explicit mapping,Equivalent-prefix suffix relation,Candidate uses forbidden-domain bitset key
+C03/C04,Pin access route conflicts,Incremental SAT and component decomposition,ISPD2018 in publication,Code read only,Declared generated domains and conflicts,Not arbitrary rule signoff,Same finite route-choice problem,Alternative state representation only
+C13,Pin access patterns,History-aware dynamic programming,Publication benchmarks,Not reproduced,Published pattern flow,Does not establish current OpenROAD defect,Earlier bounded state motivation,Exact conflict comparator already required
+C14,Unidirectional pin access,Interval representation/optimization,Publication data,Selected sections only,Track interval model,Full solver mapping unresolved,Concurrent access choice,Different feasible-domain model
+C08,Detailed routing,Access/via lookup policies,Contest-style layouts,Author slides only,Broader routing flow,No complete winner audit,Fixed geometry and rule handling,Not proven equivalent residual compilation

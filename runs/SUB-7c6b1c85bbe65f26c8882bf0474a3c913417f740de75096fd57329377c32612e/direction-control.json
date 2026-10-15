@@ -1,0 +1,81 @@
+{
+  "state": "continue",
+  "topic": "EDA-0003",
+  "scientific_position": "unresolved_new_candidate_recommend_park_unless_independent_review_resolves_gates",
+  "anchor": {
+    "problem": "Fixed-placement pin-access selection repeatedly solves a finite pair-conflict model; complete future feasibility may be expensive to represent, while truncated history is insufficient in general.",
+    "engineering_user": "Detailed-routing developer maintaining a pin-access engine on fixed legal cell placement.",
+    "downstream_need": "Reduce actual complete detailed-route latency at matched correctness and downstream quality, with practitioner-validated absolute value; no proxy-only success.",
+    "causal_mechanism": "Compile exact residual forbidden-domain signatures of route-choice prefixes, merging only continuation-equivalent states and retaining query-labelled transitions before enabling masks.",
+    "mechanism_invariants": [
+      "Fixed netlist, placement, cell masters, tracks, technology, fixed obstacles and route candidate domain.",
+      "Complete declared negative pair-conflict model; no claim beyond that model without independent geometry checking.",
+      "All actual construction, query, canonicalization, failed and fallback work charged.",
+      "Use native incrementalSAT and generic elimination/assignment-frontier comparators, not only obsolete local-historyDP.",
+      "Unchanged base graph and actual query count required for amortization; graph/domain/technology changes invalidate compiled states.",
+      "UNKNOWN on limits, independent downstream DRC/connectivity/extractionSTA before deployment claims."
+    ],
+    "forbidden_pivots": [
+      "Release/reroute otherwise legal blocker nets or claim inherited EDA-0001 timing repair.",
+      "Move/resize/replace cells, add new access routes or advanced rule support to rescue this representation claim.",
+      "Treat genericSAT, variable elimination, decision diagrams, hashing or fallback composition as original without a supported nontrivial distinction.",
+      "Replace whole-flow latency and correctness with state count, solver-only time, HPWL or invented query frequency.",
+      "Weaken native solver reuse, query objectives or data/PDK conditions to manufacture advantage."
+    ]
+  },
+  "penalties": {
+    "combination_drift": {
+      "score": 0,
+      "rationale": "Initial separate-topic anchor; known-CSP equivalence explicitly unresolved, not concealed by adding methods. Zero drift does not imply nontrivial contribution.",
+      "evidence_refs": [
+        "CLM-002",
+        "CLM-003",
+        "CLM-010"
+      ]
+    },
+    "demand_drift": {
+      "score": 0,
+      "rationale": "Initial need is complete routing latency at correctness/quality; unvalidated value is retained as blocking, not replaced with a proxy.",
+      "evidence_refs": [
+        "CLM-007",
+        "CLM-009",
+        "CLM-012"
+      ]
+    },
+    "total": 0
+  },
+  "revision_assessment": {
+    "preserves_problem": true,
+    "preserves_engineering_need": true,
+    "preserves_causal_mechanism": true,
+    "changes": [],
+    "reason": "Initial EDA-0003 anchor, not an anchor-preserving revision of EDA-0001. No inherited signatures or acceptance."
+  },
+  "abandonment": {
+    "decision_id": null,
+    "grounds": [],
+    "rationale": null,
+    "evidence_refs": [],
+    "consents": {
+      "proposer": {
+        "session_id": "09e4ee9c-deae-4312-a35b-1fde28e77ae9",
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      },
+      "challenger": {
+        "session_id": null,
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      }
+    },
+    "successor_topic_id": null,
+    "resurrection_conditions": [
+      "A supported nontrivial distinction from generic residual compilation and currentFastPass.",
+      "Measured actual solver share and validated user latency threshold.",
+      "Representative independent design families, full oracle/resource pins and new allocation.",
+      "Matching unchanged-science/tasklist P/C consents and independent verifier readiness."
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "kind": "forecast_not_measurement",
+  "topic": "EDA-0003",
+  "metric": "total detailed-routing wall time reduction versus stronger native/controlled FastPass baseline at fixed correctness and downstream guardrails",
+  "unit": "fraction",
+  "baseline_source": [
+    "P02",
+    "P05"
+  ],
+  "direction": "decrease_time",
+  "pessimistic": null,
+  "base": null,
+  "optimistic": null,
+  "confidence": null,
+  "numeric_interval_status": "Not estimable without representative baseline solving share, query incidence, signature count and local timings. No measured gains and no fabricated numerical forecast.",
+  "qualitative_scenarios": {
+    "pessimistic": "Compilation/state explosion or canonicalization overhead; fallback preserves correctness but loses latency.",
+    "base": "Little whole-flow benefit because nativeSAT and small components already cheap; generic compilation reduction may defeat novelty.",
+    "optimistic": "Some real components admit strong residual-state merging and enough actual queries to amortize construction, while whole-flow solving share remains material."
+  },
+  "assumptions": [
+    "Complete fixed finite pair-conflict graph and candidate domain.",
+    "Geometry and final witness matched in controlled arms.",
+    "Actual invocation/query count only; no artificial repeated demand.",
+    "Independent rule/connectivity oracle and three independent design families.",
+    "New allocation and P/C matching consent before execution."
+  ],
+  "screening_threshold_not_forecast": {
+    "fraction": 0.05,
+    "status": "Proposer suggestion awaiting T02 practitioner/endpoint validation; not owner requirement."
+  },
+  "analytic_interval": {
+    "metric": "matched full-flow saving fraction",
+    "lower": "May be negative with arbitrary compilation overhead, bounded only by enforced fallback resource cap.",
+    "upper": "S/(G+S+R) under CLM-009 matched-work assumptions",
+    "status": "Symbolic conditional bound, no numerical interval."
+  },
+  "calibration_plan": "T05 records native fraction and seconds saved upper bound before candidate evaluation; T07 reports per-family paired timing, correctness, all censored cases and prediction errors. Deterministic repeats are not independent designs."
+}
