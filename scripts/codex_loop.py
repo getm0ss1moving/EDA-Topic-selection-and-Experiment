@@ -755,6 +755,38 @@ def audit_collect(c,home,domain):
     return {'status':'audit_collected','topic':m['topic'],'disposition':disposition,'release_id':snapshot.name}
 
 
+def export_public_descriptors(record,repo,round_path):
+    """Reopenable audit inputs; no conversations, private logs or scratch."""
+    audit=Path(record['compliance_audit']);audit_work=audit.parent.parent
+    sources={r:Path(path) for r,path in record['releases'].items()}
+    sources['protocol_audit']=audit
+    manifest={'purpose':'Exact public job/packet descriptors used by the conduct review; not private traces',
+              'roles':{},'locator_map':{'shared/job-descriptors/':str(round_path/'job-descriptors')+'/'}}
+    for role,snapshot in sources.items():
+        m,_=rs.verify(snapshot);work=snapshot.parent.parent
+        dest=repo/round_path/'job-descriptors'/role;dest.mkdir(parents=True,exist_ok=True)
+        assignment=read(work/'JOB.json')
+        if any(assignment[k]!=m[k] for k in ('role','topic','actor_id','session_id','input_commit','packet_sha256')):
+            raise ValueError('Public descriptor identity mismatch')
+        if sha(work/'policy/PACKET.json')!=m['packet_sha256']:
+            raise ValueError('Public packet descriptor hash mismatch')
+        paths={'JOB.json':work/'JOB.json','prompt.txt':work/'prompt.txt',
+               'PACKET.json':work/'policy/PACKET.json'}
+        if role in ROLES:
+            supplied=audit_work/'shared/job-descriptors'/role
+            for name in ('JOB.json','prompt.txt'):
+                if rs.regular(supplied/name)!=rs.regular(paths[name]):
+                    raise ValueError('Audited/public descriptor bytes differ')
+            if (supplied/'mechanical-attempts.json').is_file():
+                paths['mechanical-attempts.json']=supplied/'mechanical-attempts.json'
+        for name,source in paths.items():(dest/name).write_bytes(rs.regular(source))
+        manifest['roles'][role]={'release_id':snapshot.name,'root':str(dest.relative_to(repo)),
+                               'files':{name:sha(dest/name) for name in paths}}
+    manifest['locator_map']['auditor JOB.json']=str(round_path/'job-descriptors/protocol_audit/JOB.json')
+    save(repo/round_path/'DESCRIPTORS.json',manifest)
+    return manifest
+
+
 def publish_record(record,c,home,dry_run=False):
     """One idempotent branch/PR per completed three-role round, including registrations."""
     key=record['verification_release'][4:20]
@@ -803,7 +835,10 @@ def publish_record(record,c,home,dry_run=False):
         public['releases']={r:'runs/'+Path(p).name for r,p in record['releases'].items()}
         if record.get('compliance_audit'):public['compliance_audit']='runs/'+Path(record['compliance_audit']).name
         if record.get('mechanical_releases'):public['mechanical_releases']=['runs/'+Path(p).name for p in record['mechanical_releases']]
-        save(repo/'runs'/f'CODEX-ROUND-{record["topic"]}-{key}'/'round.json',public)
+        round_path=Path('runs')/f'CODEX-ROUND-{record["topic"]}-{key}'
+        descriptors=export_public_descriptors(record,repo,round_path) if c.get('require_compliance') else None
+        if descriptors:public['descriptor_manifest']=str(round_path/'DESCRIPTORS.json')
+        save(repo/round_path/'round.json',public)
         # Registry travels atomically with this round; no registration PR has to merge first.
         registry_path=repo/'config/roles.json';registered=read(registry_path)
         by={s['session_id']:s for s in registered['sessions']}
@@ -817,7 +852,8 @@ def publish_record(record,c,home,dry_run=False):
             raise ValueError('Publication validation failed:\n'+validation.stdout+validation.stderr)
         cmd('git','add','runs','config/roles.json',cwd=repo)
         cmd('git','commit','--quiet','-m',f'Publish {record["topic"]} research round: {record["decision"]}',cwd=repo)
-        if dry_run:return {'dry_run':True,'branch':branch,'commit':git('rev-parse','HEAD',cwd=repo)}
+        if dry_run:return {'dry_run':True,'branch':branch,'commit':git('rev-parse','HEAD',cwd=repo),
+                          'descriptor_roles':list(descriptors['roles']) if descriptors else []}
         if cmd('git','ls-remote','--heads','origin',branch,cwd=repo):
             # A network failure after push must not strand the durable publication.
             # Reuse only a branch whose complete patch and bytes match our record.
@@ -826,6 +862,7 @@ def publish_record(record,c,home,dry_run=False):
             remote_files=set(cmd('git','diff','--name-only',remote_base,'FETCH_HEAD',cwd=repo).splitlines())
             expected_files={'config/roles.json',
                 f'runs/CODEX-ROUND-{record["topic"]}-{key}/round.json'}
+            expected_files.update(str(p.relative_to(repo)) for p in (repo/round_path).rglob('*') if p.is_file())
             for sid in published_ids:
                 expected_files.update(str(p.relative_to(repo)) for p in (repo/'runs'/sid).rglob('*') if p.is_file())
             if not remote_files.issubset(expected_files):

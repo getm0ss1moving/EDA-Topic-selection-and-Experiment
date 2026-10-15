@@ -121,7 +121,9 @@ class AuditedLoopTests(unittest.TestCase):
         identity={k:'protocol-test' for k in ('GIT_AUTHOR_NAME','GIT_COMMITTER_NAME')}
         identity.update({k:'protocol-test@example.invalid' for k in ('GIT_AUTHOR_EMAIL','GIT_COMMITTER_EMAIL')})
         with patch.dict(os.environ,identity),patch.object(l.subprocess,'check_output',side_effect=local_only):
-            self.assertTrue(l.publish_record(record,self.c,self.home,dry_run=True)['dry_run'])
+            published=l.publish_record(record,self.c,self.home,dry_run=True)
+            self.assertTrue(published['dry_run'])
+            self.assertEqual(set(published['descriptor_roles']),set(l.ROLES)|{'protocol_audit'})
 
     def test_audit_cannot_omit_scientific_verifier_or_use_stale_inputs(self):
         for _ in range(3):self.science()
