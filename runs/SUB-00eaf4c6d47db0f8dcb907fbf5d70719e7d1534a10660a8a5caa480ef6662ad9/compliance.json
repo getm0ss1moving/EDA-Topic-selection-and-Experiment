@@ -1,0 +1,117 @@
+{
+  "schema": 1,
+  "role": "challenger",
+  "actor_id": "ChatGPT-C05-TIMING-B03-EDA-0007-REPLACEMENT-1-3f76bcf0",
+  "session_id": "a758be30-1627-4434-bc85-379554161f43",
+  "input_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+  "packet_sha256": "7b2557a3e2917296cc9a80fcd6f54010af7f084ce8722fac9eeb382643cbd0de",
+  "job_id": "5e45854a-abda-4878-90f2-fd99030102e3",
+  "read_releases": [
+    "SUB-ebe8adb725c37ba6e164d487febc9021dddc8e911cf79e56ada9e9d2bd5c5ace",
+    "SUB-8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f",
+    "SUB-1d2e343cab1599577d312783ff91916761e548b2d4e1d7749b3071f38416b8ca"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0
+  },
+  "rules": {
+    "inputs": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md",
+        "challenges.md",
+        "JOB.json"
+      ],
+      "limits": "Self-report only; no claim to certify unseen behavior, backend identity or OS confinement."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md",
+        "challenges.md",
+        "JOB.json"
+      ],
+      "limits": "Self-report only; no claim to certify unseen behavior, backend identity or OS confinement."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md",
+        "challenges.md",
+        "JOB.json"
+      ],
+      "limits": "Self-report only; no claim to certify unseen behavior, backend identity or OS confinement."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md",
+        "challenges.md",
+        "JOB.json"
+      ],
+      "limits": "Self-report only; no claim to certify unseen behavior, backend identity or OS confinement."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md",
+        "challenges.md",
+        "JOB.json"
+      ],
+      "limits": "Self-report only; no claim to certify unseen behavior, backend identity or OS confinement."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "experiment-consent.json"
+      ],
+      "limits": "Self-report only; no claim to certify unseen behavior, backend identity or OS confinement."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md",
+        "challenges.md",
+        "JOB.json"
+      ],
+      "limits": "Self-report only; no claim to certify unseen behavior, backend identity or OS confinement."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md",
+        "challenges.md",
+        "JOB.json"
+      ],
+      "limits": "Self-report only; no claim to certify unseen behavior, backend identity or OS confinement."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "workflow.json",
+        "submissions/SUB-<content hash>/SUBMISSION.json after trusted freeze"
+      ],
+      "limits": "Self-report only; no claim to certify unseen behavior, backend identity or OS confinement."
+    }
+  },
+  "operations": [
+    "Read only job/common policy/challenger harness and released P2/P1/V1 scientific context; byte-hash their payloads.",
+    "Independent web searches and selected primary sources S01-S09; access limits logged.",
+    "Own constant-size analytic arithmetic A-C01; no EDA execution or fitting.",
+    "Write scratch/, runs/, release/, submissions/ and result.json inside this job; trusted validation and self-freeze."
+  ],
+  "incidents": [
+    {
+      "id": "INC-001",
+      "classification": "limitation",
+      "description": "User-facing progress commentary was Chinese under supplied user language instruction; all scientific artifacts English. No private scientific exposure. Requested model metadata is not independently attested by this ledger."
+    }
+  ],
+  "observability": "Self-authored public activity ledger, not a complete tool trace or evidence of absent undisclosed actions."
+}

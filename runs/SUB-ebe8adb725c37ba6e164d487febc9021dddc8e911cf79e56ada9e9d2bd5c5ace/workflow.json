@@ -1,0 +1,18 @@
+{
+  "role": "proposer",
+  "phase": "research",
+  "assessment": "revise",
+  "batch_round": 2,
+  "topic": "EDA-0007",
+  "previous_proposal_release": "SUB-8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f",
+  "reviewed_verifier_release": "SUB-1d2e343cab1599577d312783ff91916761e548b2d4e1d7749b3071f38416b8ca",
+  "adjudicated_challenger_releases": [
+    "SUB-e3407b956910db0e7d4c3dbf46ac184bccf23d68e66ef738a10e0696ef980338"
+  ],
+  "tasklist_sha256": "0fb946b23dce8b14b97d3baf43cb04cecabbfc82f872947869668dfe82c5bda8",
+  "experiment_ready": false,
+  "experiment_consent": "revision_requested",
+  "next_action_requested": "independent_challenge",
+  "scientific_position": "Retain conditional anchored W hypothesis; rank/D boundary and mixed-rank Gaussian witness clarified; no physical utility or novelty clearance.",
+  "resources": "Research reading and tiny own arithmetic only; no EDA/build/training/new paid calls."
+}

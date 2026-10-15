@@ -1,0 +1,115 @@
+{
+  "schema": 1,
+  "role": "verifier",
+  "actor_id": "ChatGPT-B03-PROTOCOL-D05-EDA-0007-R2",
+  "session_id": "ff2cde44-63ae-40df-bdc8-a7a755feacff",
+  "input_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+  "packet_sha256": "172a7f68d8b26d0e557db99395d811aeb8cedc44cbe73f1de0b3a8ca27a3e9d2",
+  "job_id": "59ddd9da-46d9-4740-9f8b-1b3d6052cb4d",
+  "read_releases": [
+    "SUB-00eaf4c6d47db0f8dcb907fbf5d70719e7d1534a10660a8a5caa480ef6662ad9",
+    "SUB-ebe8adb725c37ba6e164d487febc9021dddc8e911cf79e56ada9e9d2bd5c5ace",
+    "SUB-13a40498da3f7157d34b903152f0d7531070e03db61f3a487ab5338f52e29a4a",
+    "SUB-56f872e4f80bf5014b43024f33adda8011fdcdb0d211168bb549f3309a939ee5"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0
+  },
+  "rules": {
+    "inputs": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json",
+        "runs/input-integrity.json"
+      ],
+      "limits": "Own candid activity ledger, not complete trace or proof of absent hidden conduct. Only assigned job policy, released scientific files/descriptors and supplemental metadata read. No scientific vote or external publication."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json",
+        "runs/input-integrity.json"
+      ],
+      "limits": "Own candid activity ledger, not complete trace or proof of absent hidden conduct. Only assigned job policy, released scientific files/descriptors and supplemental metadata read. No scientific vote or external publication."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json",
+        "runs/input-integrity.json"
+      ],
+      "limits": "Own candid activity ledger, not complete trace or proof of absent hidden conduct. Only assigned job policy, released scientific files/descriptors and supplemental metadata read. No scientific vote or external publication."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json",
+        "runs/input-integrity.json"
+      ],
+      "limits": "Own candid activity ledger, not complete trace or proof of absent hidden conduct. Only assigned job policy, released scientific files/descriptors and supplemental metadata read. No scientific vote or external publication."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json",
+        "runs/input-integrity.json"
+      ],
+      "limits": "Own candid activity ledger, not complete trace or proof of absent hidden conduct. Only assigned job policy, released scientific files/descriptors and supplemental metadata read. No scientific vote or external publication."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json",
+        "runs/input-integrity.json"
+      ],
+      "limits": "Own candid activity ledger, not complete trace or proof of absent hidden conduct. Only assigned job policy, released scientific files/descriptors and supplemental metadata read. No scientific vote or external publication."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json",
+        "runs/input-integrity.json"
+      ],
+      "limits": "Own candid activity ledger, not complete trace or proof of absent hidden conduct. Only assigned job policy, released scientific files/descriptors and supplemental metadata read. No scientific vote or external publication."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json",
+        "runs/input-integrity.json"
+      ],
+      "limits": "Own candid activity ledger, not complete trace or proof of absent hidden conduct. Only assigned job policy, released scientific files/descriptors and supplemental metadata read. No scientific vote or external publication."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json",
+        "runs/input-integrity.json"
+      ],
+      "limits": "Own candid activity ledger, not complete trace or proof of absent hidden conduct. Only assigned job policy, released scientific files/descriptors and supplemental metadata read. No scientific vote or external publication."
+    }
+  },
+  "operations": [
+    "Read assigned JOB/prompt then common policies and only verifier harness; enumerate own shared files.",
+    "Read supplied three current frozen outputs, public job descriptors and explicitly supplied prior incident metadata/public source code as data; long output truncation targeted with selected rereads.",
+    "Trusted role_submission.verify current releases; hash original supplemental metadata and historical compliance binding; inspect source copying lines without execution.",
+    "Write own release/verification.md/json, workflow.json, compliance.json and runs/input-integrity.json; validate review/ledger and self-freeze, then result.json."
+  ],
+  "incidents": [],
+  "observability": "Self-authored public activity ledger, not a complete tool trace. Assignment arrived as operational task; no outbound agent messaging/delegation, checkout access or other private session inspection. Chinese user-facing progress; English frozen artifacts. No internet source retrieval, EDA experiment, training or paid API call."
+}

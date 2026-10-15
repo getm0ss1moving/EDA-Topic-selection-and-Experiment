@@ -1,0 +1,7 @@
+{
+  "session_id": "5796edbb-fac9-477b-ab72-194c4cbfe34c",
+  "decision": "revision_requested",
+  "signed_revision": "SUB-8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f",
+  "tasklist_sha256": "2c2d7ee1b4e6a731d301942eda9924a571fc48902b5dfe71b979054852f9c1ba",
+  "rationale": "Own current-session revision request for the prior plan, not agreement to R2 execution. R2 task/dependencies changed; source/adapter/workload/threshold/owner/resource readiness and independent exact-task consents remain absent."
+}

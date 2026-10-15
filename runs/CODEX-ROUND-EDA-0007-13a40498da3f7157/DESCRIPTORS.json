@@ -1,0 +1,59 @@
+{
+  "locator_map": {
+    "auditor JOB.json": "runs/CODEX-ROUND-EDA-0007-13a40498da3f7157/job-descriptors/protocol_audit/JOB.json",
+    "shared/job-descriptors/": "runs/CODEX-ROUND-EDA-0007-13a40498da3f7157/job-descriptors/",
+    "shared/protocol-incident/": "runs/CODEX-ROUND-EDA-0007-13a40498da3f7157/protocol-incident/"
+  },
+  "purpose": "Exact public job/packet descriptors used by the conduct review; not private traces",
+  "roles": {
+    "challenger": {
+      "files": {
+        "JOB.json": "054cf93226e417636c6a1939761e8a18fe094f437d8c7a0156ebf3f8551a5551",
+        "PACKET.json": "7b2557a3e2917296cc9a80fcd6f54010af7f084ce8722fac9eeb382643cbd0de",
+        "prompt.txt": "0a6ed352a67aefc2a0f256e6d0e4b45b254a2ac860200b0a49b8d30e44e9e6e7"
+      },
+      "release_id": "SUB-00eaf4c6d47db0f8dcb907fbf5d70719e7d1534a10660a8a5caa480ef6662ad9",
+      "root": "runs/CODEX-ROUND-EDA-0007-13a40498da3f7157/job-descriptors/challenger"
+    },
+    "proposer": {
+      "files": {
+        "JOB.json": "cb729bdf00ef5fd8ddc1133cc3e3f919a28a28b60f2dd5e6cc25090767387322",
+        "PACKET.json": "a33750c8ec5badb03663cf317bd8b6ea96e6e5d9905fe82f0c50861adbbe46d9",
+        "prompt.txt": "51341667ec5619b770aecd44170e1ebcf82e339ed9a7135f85befac4a72dd4fe"
+      },
+      "release_id": "SUB-ebe8adb725c37ba6e164d487febc9021dddc8e911cf79e56ada9e9d2bd5c5ace",
+      "root": "runs/CODEX-ROUND-EDA-0007-13a40498da3f7157/job-descriptors/proposer"
+    },
+    "protocol_audit": {
+      "files": {
+        "JOB.json": "6c6cedcbb5ddbb7b1f957a7cdd8d40e543863c3850c3aada675e915ec847d133",
+        "PACKET.json": "172a7f68d8b26d0e557db99395d811aeb8cedc44cbe73f1de0b3a8ca27a3e9d2",
+        "prompt.txt": "e2e2026e36b9aa68206a998acffb2654dba8d18be8928c84b347b788ece1421d"
+      },
+      "release_id": "SUB-573a2812a0f0eb6551328cf55dc2994ad483dbe36cd866830b34f06dd959ff52",
+      "root": "runs/CODEX-ROUND-EDA-0007-13a40498da3f7157/job-descriptors/protocol_audit"
+    },
+    "verifier": {
+      "files": {
+        "JOB.json": "29fd74bf0e589858b574daafa54737d38e4cc531af4b7e9b332724230b2d2db8",
+        "PACKET.json": "a628fc9403ccb57a82797cdd71108d68185d66bf2685845847b121742ddb8422",
+        "prompt.txt": "d2205187ac76d90871a3be8214f62eff845543b45004f8565d95f4dda0331811"
+      },
+      "release_id": "SUB-13a40498da3f7157d34b903152f0d7531070e03db61f3a487ab5338f52e29a4a",
+      "root": "runs/CODEX-ROUND-EDA-0007-13a40498da3f7157/job-descriptors/verifier"
+    }
+  },
+  "supplemental_inputs": {
+    "files": {
+      "INPUTS.json": "4683ab269763938fe883c8feba67122ab8300a5942bf40273f7c6ebc1f20ad91",
+      "JOB.json": "61c2f2fa519883770e0878c53655bbc0a90d85a24863bcfdae2102aeb914538c",
+      "SUBMISSION.json": "56f872e4f80bf5014b43024f33adda8011fdcdb0d211168bb549f3309a939ee5",
+      "compliance.json": "c57753edf3e5e7708839b836ca790d55135600774ef606dfb2a57c86d24b4b57",
+      "coordinator-report.json": "b93da6723be6bda6a919ac057945c784d3fee29283e924ad9128b21846d28b6f",
+      "prompt.txt": "3ed06ee570fa3ee9144162934540c2ed5c49a7f9322646e89eda9e0045e66e2b",
+      "source-codex-loop.py": "5440fa20f4c7503bbc79818fb3a265794e783f8bd05edd57501045514742e0de"
+    },
+    "root": "runs/CODEX-ROUND-EDA-0007-13a40498da3f7157/protocol-incident",
+    "scope": "Explicit incident metadata/common public code only; no quarantined scientific objections or private traces."
+  }
+}

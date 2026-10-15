@@ -1,0 +1,20 @@
+{
+  "role": "verifier",
+  "phase": "research",
+  "reviewed_proposer_release": "SUB-ebe8adb725c37ba6e164d487febc9021dddc8e911cf79e56ada9e9d2bd5c5ace",
+  "adjudicated_challenger_releases": [
+    "SUB-00eaf4c6d47db0f8dcb907fbf5d70719e7d1534a10660a8a5caa480ef6662ad9"
+  ],
+  "next_action": "revise",
+  "decision": "revise",
+  "batch_round": 2,
+  "topic": "EDA-0007",
+  "experiment_ready": false,
+  "scientific_position": "R2 analytical progress is real; physical hypothesis remains conditional. Continue bounded research revision in cycle3; three unsuccessful cycles trigger park/succession policy, four total hard stop. No current experiment or abandonment authorization.",
+  "direction_penalties": {
+    "combination_drift": 0,
+    "demand_drift": 0
+  },
+  "tasklist_sha256": "0fb946b23dce8b14b97d3baf43cb04cecabbfc82f872947869668dfe82c5bda8",
+  "validation_scope": "Trusted standalone freeze/verify and ledger; no full repository validation claim."
+}

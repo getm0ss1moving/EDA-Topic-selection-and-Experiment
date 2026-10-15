@@ -1,0 +1,19 @@
+{
+  "kind": "forecast_not_measurement",
+  "metric": "fully charged time to return a measured globally guarded replacement at preregistered local/full regret tolerances",
+  "unit": "seconds; regret in declared timing units",
+  "baseline_source": "N01/N02 reference consumer/calibration and future fair reproduction",
+  "direction": "lower time without unjustified downstream quality loss",
+  "pessimistic": null,
+  "base": null,
+  "optimistic": null,
+  "confidence": null,
+  "assumptions": [
+    "Representative legal candidate workloads exist.",
+    "Cheap residuals remain structured after strong calibration.",
+    "Feature and acquisition overhead is smaller than saved reference work.",
+    "Local/global quality tolerances can be justified before candidate evaluation."
+  ],
+  "calibration_plan": "EXP-001/002/003/005, only after actual EDA allocation and exact-task consents where execution is involved. Current finite arithmetic is not forecast calibration.",
+  "measurement_status": "No EDA measurement, model training or calibrated probability. A02 synthetic values are dimensionless mathematical fixture results, not EDA forecasts."
+}

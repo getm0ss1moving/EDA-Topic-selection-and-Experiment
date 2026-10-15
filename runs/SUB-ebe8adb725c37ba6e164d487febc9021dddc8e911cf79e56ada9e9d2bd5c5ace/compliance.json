@@ -1,0 +1,190 @@
+{
+  "schema": 1,
+  "role": "proposer",
+  "actor_id": "ChatGPT-P05-TIMING-B03-EDA-0007-REPLACEMENT-1-8154ee5a",
+  "session_id": "5796edbb-fac9-477b-ab72-194c4cbfe34c",
+  "input_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+  "packet_sha256": "a33750c8ec5badb03663cf317bd8b6ea96e6e5d9905fe82f0c50861adbbe46d9",
+  "job_id": "e49aa3b5-4266-4966-ab60-b7455dfa7a9a",
+  "read_releases": [
+    "SUB-8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f",
+    "SUB-e3407b956910db0e7d4c3dbf46ac184bccf23d68e66ef738a10e0696ef980338",
+    "SUB-1d2e343cab1599577d312783ff91916761e548b2d4e1d7749b3071f38416b8ca"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0
+  },
+  "rules": {
+    "inputs": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "prompt.txt",
+        "policy/harness/PROPOSER.md",
+        "sources.json:P1/C1/V1"
+      ],
+      "limits": "First opened JOB/prompt; only this frozen common policy, own harness and listed released inputs. Inherited prior source metadata are labeled; exact host model is not independently attested."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md:access boundary",
+        "compliance.json:activity",
+        "sources.json:P1/C1/V1"
+      ],
+      "limits": "No checkout/private/session/memory discovery or role messaging was performed in this job. Shared OS offers policy isolation only; this self-report is not an OS audit."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "release/",
+        "scratch/",
+        "runs/",
+        "submissions/",
+        "result.json"
+      ],
+      "limits": "Only assigned job outputs, own scratch/run records and trusted submission/result paths. Frozen policy and shared inputs left unchanged; intended freeze/result operations are validated separately."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "sources.json:N01..N11",
+        "search-log.md",
+        "contest-audit.md:locator convention"
+      ],
+      "limits": "Selected original sections, raw hashes/locators and limited search excerpt are distinguished; failed N11 direct fetch and winner access gaps remain explicit. No exhaustive source audit."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "proposal.md:Stable claims",
+        "experiment-plan.md:R2 proof/results",
+        "forecast.json"
+      ],
+      "limits": "Separate source observations, own mathematical fixtures, physical hypothesis and null forecasts. Analytical correction disclosed. Positive dimensionless Gaussian result is not an EDA measurement or calibrated forecast."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "experiment-consent.json",
+        "workflow.json",
+        "tasklist.md:EXP-CONSENT"
+      ],
+      "limits": "Only own current-session revision_requested block references P1. It is not R2 agreement. No signatures or independent approval inherited or produced for others."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "policy/docs/INNOVATION-BATCH-0003.md:Resources",
+        "experiment-plan.md:Resource boundary"
+      ],
+      "limits": "Public reading, three raw-source downloads, two tiny own standard-library scripts and trusted structural checks only. Zero EDA/build/label-generation/training/GPU/remote/new paid calls."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "direction-control.json:anchor/penalties",
+        "proposal.md:rank boundary",
+        "responses.md"
+      ],
+      "limits": "Both self-assessed drift scores zero with same engineering endpoint and physical W anchor. Scores do not establish scientific merit; Gaussian witness is not substituted as a novel acquisition mechanism."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "workflow.json",
+        "submissions/SUB-<content hash>/SUBMISSION.json",
+        "runs/run.json"
+      ],
+      "limits": "Self-freeze and local integrity only; coordinator owns transport PR and full-repository validation. No self-approval, merge, pilot authorization or independent scientific vote. Freeze success is mechanical, not scientific acceptance."
+    }
+  },
+  "operations": [
+    {
+      "operation": "input_read",
+      "references": [
+        "JOB.json",
+        "prompt.txt",
+        "policy/docs/CHARTER.md",
+        "policy/docs/WORKFLOW.md",
+        "policy/docs/EVIDENCE.md",
+        "policy/docs/ISOLATION.md",
+        "policy/docs/CODEX-AUTOMATION.md",
+        "policy/docs/ROLE-COMPLIANCE.md",
+        "policy/docs/INNOVATION-BATCH-0003.md",
+        "policy/docs/INNOVATION-STRATEGY.md",
+        "policy/docs/SELF-SUBMISSION.md",
+        "policy/harness/PROPOSER.md",
+        "policy/config/research-brief.json",
+        "policy/domains/D05/brief.json"
+      ]
+    },
+    {
+      "operation": "released_input_read",
+      "references": [
+        "SUB-8c027c564623342eb0eaaf72533ad7cd287405962532e8f3a607556de8eea98f",
+        "SUB-e3407b956910db0e7d4c3dbf46ac184bccf23d68e66ef738a10e0696ef980338",
+        "SUB-1d2e343cab1599577d312783ff91916761e548b2d4e1d7749b3071f38416b8ca"
+      ],
+      "detail": "Only named released files/own prior, not predecessor private notes or conversations. Raw current challenge read with matching released verifier ruling."
+    },
+    {
+      "operation": "primary_research",
+      "references": [
+        "search-log.md",
+        "sources.json:N01..N11",
+        "runs/source-lock.json"
+      ],
+      "detail": "Public search/open and three pinned raw downloads; no downloaded external code execution."
+    },
+    {
+      "operation": "tiny_own_analysis",
+      "references": [
+        "scratch/r1_reproduced.py",
+        "scratch/r2_analytical.py",
+        "runs/r1_reproduced.json",
+        "runs/r2_analytical.json",
+        "experiment-plan.md"
+      ],
+      "detail": "R2 first row-norm assertion failed12 vs14, corrected and rerun; prior exact fixtures rerun. No EDA resource use."
+    },
+    {
+      "operation": "role_owned_write",
+      "references": [
+        "release/",
+        "scratch/write_release.py",
+        "runs/run.json"
+      ],
+      "detail": "Complete English scientific artifacts, truthful own ledger and pending/revision status."
+    },
+    {
+      "operation": "structural_check_and_submission",
+      "references": [
+        "policy/scripts/role_submission.py freeze/verify",
+        "policy/scripts/role_compliance.py validate_ledger",
+        "runs/local-checks.json",
+        "result.json"
+      ],
+      "detail": "Trusted structural checks and content-addressed own freeze; full-repository check delegated to coordinator by standalone-job policy."
+    }
+  ],
+  "incidents": [
+    {
+      "id": "NOTE-001",
+      "type": "analytical_correction",
+      "references": [
+        "experiment-plan.md:Resource boundary",
+        "scratch/r2_analytical.py"
+      ],
+      "description": "Initial own analytical assertion used incorrect unobserved row norm sum12. Explicit row sum14 fixed the expected trace; final script passed. No physical data, outside access or allocated-resource execution involved. This note preserves the failure rather than claiming all attempts passed."
+    }
+  ],
+  "observability": "Self-authored public activity ledger, not a complete tool trace, proof of absent unseen actions, adversarial filesystem confinement or independent backend-model attestation. Historical files keep their original access/exposure limits; this job does not erase them or inherit their approval."
+}

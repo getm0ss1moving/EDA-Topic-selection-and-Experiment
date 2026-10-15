@@ -1,0 +1,379 @@
+{
+  "decision": "revise",
+  "verifier_session": "bfed115a-3d9b-43a8-88ed-35eadbc3186f",
+  "actor_id": "ChatGPT-V05-TIMING-B03-EDA-0007-REPLACEMENT-1-506e0f6e",
+  "job_id": "7510431d-0032-4d10-a262-a370849ffde6",
+  "input_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+  "packet_sha256": "a628fc9403ccb57a82797cdd71108d68185d66bf2685845847b121742ddb8422",
+  "reviewed_proposer_release": "SUB-ebe8adb725c37ba6e164d487febc9021dddc8e911cf79e56ada9e9d2bd5c5ace",
+  "adjudicated_challenger_releases": [
+    "SUB-00eaf4c6d47db0f8dcb907fbf5d70719e7d1534a10660a8a5caa480ef6662ad9"
+  ],
+  "dossier_digest": "b9c50ae0bdfba5e3a804d3dcf3bd6a221f9e79463e8b6543edac8fe99af7183c",
+  "digest_scope": "Supplied project.py digest over exact frozen proposer directory including SUBMISSION.json; not integrated canonical dossier.",
+  "gates": {
+    "novelty": false,
+    "mechanism": false,
+    "utility": false,
+    "contest_originality": false,
+    "headroom": false,
+    "feasibility": false,
+    "direction_integrity": true,
+    "experiment_consensus": false
+  },
+  "gate_reasons": {
+    "novelty": "Useful W-system delta and winner equivalence unresolved; known components alone neither establish nor defeat novelty.",
+    "mechanism": "Gaussian algebra and synthetic information possibility valid; physical feature/calibration transfer untested.",
+    "utility": "Meaningful candidate multiplicity, tolerances, local/global link and net total-cost gain unresolved.",
+    "contest_originality": "Official scope/identities checked; current winner algorithms not closed.",
+    "headroom": "Exact full-rank/D0 saturation is conditional; physical residual rank/D and cost headroom unknown.",
+    "feasibility": "Lawful representative workload, complete adapter/build/generator/dependency locks, assigned implementation/reproduction owners and actual EDA allocation absent.",
+    "direction_integrity": "Current explicit anchor retained; combination_drift0,demand_drift0, not a merit/novelty score. Full historical anchor audit not repeated.",
+    "experiment_consensus": "Recomputed R2 tasklist hash; proposer requests revision of earlier P1/hash, challenger requests revision with null target/hash. No matching agreeing signatures."
+  },
+  "direction_penalty_checked": true,
+  "direction_penalties": {
+    "combination_drift": 0,
+    "demand_drift": 0
+  },
+  "experiment_consensus_checked": true,
+  "tasklist_sha256": "0fb946b23dce8b14b97d3baf43cb04cecabbfc82f872947869668dfe82c5bda8",
+  "abandonment_process_checked": false,
+  "abandonment_status": "No matching consent or demonstrated dead end. Revise is not joint abandonment.",
+  "source_checks": [
+    {
+      "id": "V01",
+      "title": "Two-step lookahead Bayesian optimization with inequality constraints",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2021/file/685217557383cd194b4f10ae4b39eebf-Paper.pdf",
+      "publication_date": "2021",
+      "locator": "physical PDF pp3-5 sections2.2,2.3 Eq1 and3.2, rendered lines144-173 and292-419",
+      "access": "full",
+      "result": "Independent priors justify its factorization; two-stage adaptive best-measured objective is established prior. No physical performance imported.",
+      "retrieved_utc": "2026-10-15T14:53:48.437655+00:00",
+      "scope": "Selected source content; full access does not mean exhaustive paper/code audit."
+    },
+    {
+      "id": "V02",
+      "title": "Disentangled Differentiable Timing-Power Co-Optimization with Quad-Gradient Gate Sizing",
+      "url": "https://guozz.cn/publication/phyoptdac-26/phyoptdac-26.pdf",
+      "publication_date": "2026",
+      "locator": "physical pp4-5 sections3.3 Eqs6-11, Algorithm1 and3.4, rendered341-584",
+      "access": "full",
+      "result": "Electrical discrete directions and layerwise slew/load/AT ratio calibration confirmed; useful W residual-system equivalence and winner code not established. Author results not adopted.",
+      "retrieved_utc": "2026-10-15T14:53:48.437655+00:00",
+      "scope": "Selected source content; full access does not mean exhaustive paper/code audit."
+    },
+    {
+      "id": "V03",
+      "title": "High-Performance Gate Sizing with a Signoff Timer",
+      "url": "https://vlsicad.ucsd.edu/Publications/Conferences/304/c304.pdf",
+      "publication_date": "2013",
+      "locator": "physical p3 section3.1 offset-based calibration; p4 incremental/peephole source context, rendered332-336,474-515",
+      "access": "full",
+      "result": "Signoff offsets and incremental/peephole alternatives are prior; no current-node timing/runtime transfer.",
+      "retrieved_utc": "2026-10-15T14:53:48.437655+00:00",
+      "scope": "Selected source content; full access does not mean exhaustive paper/code audit."
+    },
+    {
+      "id": "V04",
+      "title": "Invited: Post-Placement Buffering and Sizing Contest",
+      "url": "https://vlsicad.ucsd.edu/Publications/Conferences/421/c421.pdf",
+      "publication_date": "2026-03",
+      "locator": "physical p6 section4 Eq16, p7 section5.3; rendered490-493,577-585",
+      "access": "full",
+      "result": "Hard constraints enter final scoring; MCMM roadmap prospective. Broad context is not evidence of this consumer bottleneck or a project allocation.",
+      "retrieved_utc": "2026-10-15T14:53:48.437655+00:00",
+      "scope": "Selected source content; full access does not mean exhaustive paper/code audit."
+    },
+    {
+      "id": "V05",
+      "title": "MeasuredVtSwapCandidate.cc",
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/3549d60529517dc82deb7f0ff769345e9a424911/src/rsz/src/move/MeasuredVtSwapCandidate.cc",
+      "publication_date": "unknown",
+      "locator": "raw one-based44-67 estimate;109-117 arrivalDelay;124-132 restoreEstimateJournal",
+      "access": "full",
+      "result": "Raw negative scores retained; legal=score>0 after replacement success. Arrival-only consumer and restoration calls exist; full output bundle/transitive correctness unverified.",
+      "retrieved_utc": "2026-10-15T14:53:48.437655+00:00",
+      "scope": "Selected source content; full access does not mean exhaustive paper/code audit.",
+      "sha256": "16c99bf48dd4e6c23a5c886ef3608bfb95bd0bfbb688e35676a4bc301427cb08",
+      "version": "3549d60529517dc82deb7f0ff769345e9a424911"
+    },
+    {
+      "id": "V06",
+      "title": "DelayEstimator.cc",
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/3549d60529517dc82deb7f0ff769345e9a424911/src/rsz/src/DelayEstimator.cc",
+      "publication_date": "unknown",
+      "locator": "raw one-based492-521 slewBias/interpolateStaSlewBias",
+      "access": "full",
+      "result": "Selected functions implement STA-table slew discrepancy with clamped piecewise load interpolation. No build or W-equivalence inference.",
+      "retrieved_utc": "2026-10-15T14:53:48.437655+00:00",
+      "scope": "Selected source content; full access does not mean exhaustive paper/code audit.",
+      "sha256": "465a1de5c232f946e5b6b093a37f5ed72e96ed1b41be34f32f60e29fc186732c",
+      "version": "3549d60529517dc82deb7f0ff769345e9a424911"
+    },
+    {
+      "id": "V07",
+      "title": "ISPD2026 official winners",
+      "url": "https://www.ispd.cc/contests/26/index.html",
+      "publication_date": "2026",
+      "locator": "Contest Winners ordered list, rendered3-10",
+      "access": "full",
+      "result": "IRISLab/PTSD/HLFC identities only; no winner algorithm in this page.",
+      "retrieved_utc": "2026-10-15T14:53:48.437655+00:00",
+      "scope": "Selected source content; full access does not mean exhaustive paper/code audit."
+    },
+    {
+      "id": "V08",
+      "title": "ISPD2027 official README",
+      "url": "https://raw.githubusercontent.com/ABKGroup/ISPD27-Contest/faef83cacf70fa7923be07816d804ca9c1cef68e/README.md",
+      "publication_date": "unknown",
+      "locator": "title and Timeline; rendered0,13-19",
+      "access": "full",
+      "result": "MCMM post-CTS and future schedule confirmed. No finished 2027 result/evaluator execution or data-rights clearance.",
+      "retrieved_utc": "2026-10-15T14:53:48.437655+00:00",
+      "scope": "Selected source content; full access does not mean exhaustive paper/code audit."
+    },
+    {
+      "id": "V09",
+      "title": "PrimeTime Static Timing Analysis",
+      "url": "https://www.synopsys.com/implementation-and-signoff/signoff/primetime.html",
+      "publication_date": "unknown",
+      "locator": "Core Static Timing Analysis rendered111,117",
+      "access": "full",
+      "result": "Advertised physically aware ECO and ML power recovery/PBA only. Internal methods, comparable performance and industrial absence remain unknown.",
+      "retrieved_utc": "2026-10-15T14:53:48.437655+00:00",
+      "scope": "Selected source content; full access does not mean exhaustive paper/code audit."
+    },
+    {
+      "id": "V10",
+      "title": "Multi-task Gaussian Process Prediction",
+      "url": "https://papers.nips.cc/paper/3189-multi-task-gaussian-process-prediction.pdf",
+      "publication_date": "2007",
+      "locator": "physical pp2-4 sections2.1-2.3 Eq2,6-9; rendered92-120,241-329",
+      "access": "full",
+      "result": "Noiseless separable block-design cancellation has restricted premises; not universal arbitrary-W cancellation. Its D denotes observation noise, unlike current persistent indexed discrepancy.",
+      "retrieved_utc": "2026-10-15T14:53:48.437655+00:00",
+      "scope": "Selected source content; full access does not mean exhaustive paper/code audit."
+    },
+    {
+      "id": "V11",
+      "title": "Revisiting Sensitivity-Based Analog Sizing with Derivative-Aware Bayesian Optimization and Error-Suppressed Adjoint Analysis",
+      "url": "https://ieeexplore.ieee.org/abstract/document/11126410",
+      "publication_date": "2024-10",
+      "locator": "publisher-indexed Abstract and conference metadata; DOI10.1145/3676536.3676736",
+      "access": "abstract",
+      "result": "Direct open Internal Error. Indexed primary abstract links adjoint sensitivities to GP posterior updates; different analog task, no complete digital-W equivalence or imported speed claim.",
+      "retrieved_utc": "2026-10-15T14:53:48.437655+00:00",
+      "scope": "Selected source content; full access does not mean exhaustive paper/code audit."
+    },
+    {
+      "id": "V12",
+      "title": "ISPD program returned under 2027 route and linked closing slides",
+      "url": "https://ispd.cc/ispd2027/index.php?page=program",
+      "publication_date": "unknown",
+      "locator": "program rendered294-304; link91 target2025/protected/16_1_slides.pdf fails reader size cap; link93 target2025/protected/16_2_slides.pdf physical p1 says March2025",
+      "access": "full",
+      "result": "Edition-mixed routing independently confirmed. Contest-summary fetch failed content-length cap122920554 bytes; wrong-edition closing slides excluded as winner-method evidence.",
+      "retrieved_utc": "2026-10-15T14:53:48.437655+00:00",
+      "scope": "Selected source content; full access does not mean exhaustive paper/code audit."
+    }
+  ],
+  "claim_checks": [
+    {
+      "id": "CLM-701",
+      "source": "V05 raw44-67,109-132; V06 raw492-521",
+      "verdict": "partially_valid",
+      "blocking": true,
+      "reason": "Consumer and calibration exist. Complete bundled adapter, candidate multiplicity, compatible dependency/build locks and restoration closure remain unresolved."
+    },
+    {
+      "id": "CLM-702",
+      "source": "V01 sections2.3/3.2; V02 sections3.3/3.4; V03 section3.1; V10 section2.3; V11 abstract",
+      "verdict": "partially_valid",
+      "blocking": true,
+      "reason": "Strong conventional/calibrated, electrical-direction and constrained-lookahead mechanisms checked. No source proves identical complete W system; novelty and winner coverage unresolved. Inherited R07/R08/R14 not reopened."
+    },
+    {
+      "id": "CLM-703: algebra",
+      "source": "V01 Eq1/section3.2; current proposal residual/controller definitions; A-V01",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "Tower property cancels expected posterior table-optimum term; improvement stays joint. Identical mu/K implies same GP law and updates. Exact observations condition indexed D too; observed entries have zero covariance. Singular numerical implementation not certified."
+    },
+    {
+      "id": "CLM-703: physical W",
+      "source": "V02 sections3.3/3.4; V06; EXP-003/006",
+      "verdict": "unresolved",
+      "blocking": true,
+      "reason": "Useful residual contrast/calibration and saved total cost beyond equally informed mean/feature models are hypotheses. No physical W, held-out residuals or deployed system gain checked."
+    },
+    {
+      "id": "CLM-704",
+      "source": "A-V01 independent closed-form/polar/rational checks; P experiment-plan EXP-000R2",
+      "verdict": "partially_valid",
+      "blocking": false,
+      "reason": "R2 Gaussian values, D trace sweep, ranks and independent-Q upper bound confirmed. Historical non-Gaussian and217/1048 individual fixture values not rerun here; no physical measurement follows."
+    },
+    {
+      "id": "CLM-705",
+      "source": "V04 Eq16; V05; tasklist EXP-002/005/006",
+      "verdict": "unresolved",
+      "blocking": true,
+      "reason": "Public physical/electrical context exists; local/full-guard relation, practitioner tolerances, bottleneck prevalence and fully charged savings remain unmeasured."
+    },
+    {
+      "id": "CLM-706",
+      "source": "JOB; batch0003 Resources and validity; forecast.json; V09",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "Research-only resource boundary and null quantitative forecasts appropriate. Vendor evidence supports advertisement only, no industrial absence or internal-method claim. No actual pilot allocation identified."
+    },
+    {
+      "id": "CLM-707",
+      "source": "R2 responses exact P1/C1/V1 table; released P1; own-previous V1 verification.json",
+      "verdict": "partially_valid",
+      "blocking": false,
+      "reason": "R2 integrates V1 full-rank boundary and retains unresolved gates; no current approval inherited. C1 release itself absent from this job and not independently reread, so complete historical transport/response claims remain limited."
+    },
+    {
+      "id": "CLM-708",
+      "source": "A-V01; proposal mixed-rank fixture; V01 section3.2",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "Gaussian mixed-rank possibility valid: Q-first1.174156849850264, myopic0.9275969610127873, gap0.2465598888374766. Full-rank D0 boundary also valid. Stipulated dimensionless analytic law, not a Liberty realization or EDA gain."
+    },
+    {
+      "id": "CLM-709",
+      "source": "V04 Eq16/section5.3; V07; V08; V12",
+      "verdict": "partially_valid",
+      "blocking": true,
+      "reason": "Current official context/winner identities verified. Authenticated winner methods remain unavailable in inspected material; wrong-edition closing slides confer no clearance. No MCMM pivot or2027 completion claimed."
+    },
+    {
+      "id": "CLM-710",
+      "source": "V05 raw44-67",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "Score-based legal differs from physical replacement legality/query success. Distinct status fields and retained negative observations are justified; adapter feasibility remains unresolved."
+    }
+  ],
+  "objections": [
+    {
+      "id": "OBJ-001",
+      "challenger_release": "SUB-00eaf4c6d47db0f8dcb907fbf5d70719e7d1534a10660a8a5caa480ef6662ad9",
+      "source": "A-V01 determinants and exact inverse identity; current challenges OBJ-001; V01 section3.2 objective",
+      "verdict": "valid",
+      "blocking": false,
+      "severity": "minor_nonblocking",
+      "reason": "Minor nonblocking clarification. For every epsilon!=0 block determinants(1,epsilon,-epsilon,epsilon) reveal z under known mu/W,D0,exact bundles. Any first query plus best feasible remaining measurement achieves its own table optimum; optimized lookahead and posterior-updated myopic gap is zero. At epsilon0 mixed ranks retain positive gap. Add explicit epsilon-versus-persistent-D robustness task; near singularity alone is not partial information at infinite precision. Unknown model/incomplete or finite-resolution observations/persistent D invalidate the exact lemma and require separate tests, without artificial query noise.",
+      "required_action": "Add explicit rank-restoring epsilon/persistent-D robustness grid to EXP-004/A11 before any claim of physical information benefit; do not execute EDA/training without actual allocation and exact-task consent."
+    }
+  ],
+  "analytical_checks": {
+    "scope": "independent synthetic mathematical checks only; not timing, silicon or EDA measurements",
+    "closed_form_Q_first": 1.174156849850264,
+    "closed_form_myopic": 0.9275969610127873,
+    "gap": 0.2465598888374766,
+    "angular_16384": [
+      1.1741568570436915,
+      0.9275969666961501
+    ],
+    "CEI_Q_A_B_C": [
+      0.004245351308414833,
+      0.3989422804014327,
+      0.3989422804014327,
+      0.5641895835477563
+    ],
+    "independent_Q_first_upper_bound": 0.5684349348561711,
+    "perturbed_full_identification": [
+      {
+        "epsilon": "1/10",
+        "block_determinants": [
+          "1",
+          "1/10",
+          "-1/10",
+          "1/10"
+        ]
+      },
+      {
+        "epsilon": "1/1000",
+        "block_determinants": [
+          "1",
+          "1/1000",
+          "-1/1000",
+          "1/1000"
+        ]
+      },
+      {
+        "epsilon": "1/1000000",
+        "block_determinants": [
+          "1",
+          "1/1000000",
+          "-1/1000000",
+          "1/1000000"
+        ]
+      }
+    ],
+    "persistent_D_trace": [
+      {
+        "rho": "0",
+        "unobserved_trace": "0",
+        "observed_variance": 0
+      },
+      {
+        "rho": "1/100",
+        "unobserved_trace": "451/2525",
+        "observed_variance": 0
+      },
+      {
+        "rho": "1",
+        "unobserved_trace": "11",
+        "observed_variance": 0
+      },
+      {
+        "rho": "100",
+        "unobserved_trace": "41800/101",
+        "observed_variance": 0
+      }
+    ],
+    "reason": "Any invertible noiseless full query identifies z. One further measured candidate achieves that perturbed table optimum, regardless of its changed feasibility. At epsilon=0 singular exploitation queries leave information unresolved."
+  },
+  "analytical_reproduction": "\"\"\"Independent finite-size verifier calculations; no EDA tools or data.\"\"\"\nfrom math import sqrt,pi,exp,erfc,cos,sin,fsum,hypot\nfrom fractions import Fraction as F\nimport json\nfrom pathlib import Path\n# Gaussian polar decomposition: E support_function(R u)=E[R]*perimeter/(2pi).\ntri=[(1,0),(0,1),(-1,-1)]\nsmall=[(0,0),(1,0),(-1,-1)]\ndef perimeter(poly):\n return sum(hypot(a[0]-b[0],a[1]-b[1]) for a,b in zip(poly,poly[1:]+poly[:1]))\nvalues=[perimeter(p)/(2*sqrt(2*pi)) for p in [tri,small]]\nn=16384\nangular=[]\nfor include_b in [True,False]:\n vals=[]\n for j in range(n):\n  t=2*pi*(j+.5)/n; x,y=cos(t),sin(t)\n  vals.append(max([0,x,-x-y]+([y] if include_b else [])))\n angular.append(sqrt(pi/2)*fsum(vals)/n)\nassert all(abs(a-b)<1e-6 for a,b in zip(angular,values))\ncei=[(exp(-2)/sqrt(2*pi)-erfc(sqrt(2)))/2,1/sqrt(2*pi),1/sqrt(2*pi),1/sqrt(pi)]\nassert max(range(4),key=lambda i:cei[i])==3\n# Rank perturbation directly from proposed modified bundles.\nrank=[]\nfor e in [F(1,10),F(1,1000),F(1,10**6)]:\n blocks=[((1,0),(0,1)),((1,0),(0,e)),((0,1),(e,0)),((-1,-1),(e,0))]\n det=[a*d-b*c for ((a,b),(c,d)) in blocks]; assert all(det)\n # W^-1 W exactly identity for every block, a support identification check.\n for ((a,b),(c,d)),den in zip(blocks,det):\n  winv=((F(d)/den,-F(b)/den),(-F(c)/den,F(a)/den))\n  w=((a,b),(c,d))\n  prod=[[sum(winv[i][k]*w[k][j] for k in range(2)) for j in range(2)] for i in range(2)]\n  assert prod==[[1,0],[0,1]]\n rank.append({'epsilon':str(e),'block_determinants':[str(x) for x in det]})\n# Conditioning identity for identity bundle with persistent indexed D=rho I.\nw=[(1,0),(0,1),(1,1),(1,-1),(2,1),(-1,2)]\ntraces=[]\nfor rho in [F(0),F(1,100),F(1),F(100)]:\n # K_ii - K_iO (K_OO)^-1 K_Oi, K_OO=(1+rho)I.\n var=[F(a*a+b*b)+rho-F(a*a+b*b)/(1+rho) for a,b in w[2:]]\n tr=sum(var);assert tr==14*rho/(1+rho)+4*rho\n traces.append({'rho':str(rho),'unobserved_trace':str(tr),'observed_variance':0})\nout={'scope':'independent synthetic mathematical checks only; not timing, silicon or EDA measurements','closed_form_Q_first':values[0],'closed_form_myopic':values[1],'gap':values[0]-values[1],'angular_16384':angular,'CEI_Q_A_B_C':cei,'independent_Q_first_upper_bound':cei[0]+cei[3],'perturbed_full_identification':rank,'persistent_D_trace':traces,'reason':'Any invertible noiseless full query identifies z. One further measured candidate achieves that perturbed table optimum, regardless of its changed feasibility. At epsilon=0 singular exploitation queries leave information unresolved.'}\nPath('runs/analytical-check.json').write_text(json.dumps(out,indent=2)+'\\n');print(json.dumps(out,indent=2))\n",
+  "search_log": [
+    {
+      "expansion": 1,
+      "engine": "web search",
+      "queries": [
+        "ISPD 2026 IRISLab PTSD HLFC winner buffering sizing algorithm report",
+        "gate sizing correlated residual Gaussian process sensitivity calibration replacement timing Bayesian",
+        "Revisiting Sensitivity-Based Analog Sizing"
+      ],
+      "result": "Primary DarBO abstract and2024 program located. No authenticated2026 winner method. Statistical process-variation, unrelated analog/quantum/civil sources excluded from equivalence evidence."
+    },
+    {
+      "expansion": 2,
+      "engine": "web search plus primary program links/citation neighborhood",
+      "queries": [
+        "IRISLab 2026 sizing",
+        "gate sizing Gaussian calibration residual sensitivity covariance",
+        "ISPD 2026 winner algorithm buffering sizing PTSD HLFC"
+      ],
+      "result": "Mostly irrelevant brand/medical hits; independently reopened official winners,2027 README,2026 contest paper, program links and classical multitask GP source. Wrong-edition closing slide excluded; summary slide reader size failure. Budget exhausted, not exhaustive novelty clearance or two certified negative expansions."
+    }
+  ],
+  "limitations": [
+    "Unblinded released-file review only. Current P/C payloads and policy payloads hashed; logical identity distinct, not backend-model or OS isolation attestation.",
+    "No parent conversations, foreign private notes, sessions, transcripts, memory or checkout were opened; assigned job only. No collaboration calls/messages/subagents.",
+    "Current C2 is the only adjudicated challenger release; OBJ-001 fully covered. Prior V1 and P1 are context, never independent current verification. Audit workflow metadata was read, not used as scientific evidence.",
+    "Full source access means selected original sections read, not complete implementation/transitive correctness or exhaustive novelty audit. Vendor page limited to advertised capability.",
+    "Direct DarBO source unavailable; indexed primary abstract only. Local supplemental PDF fetch timed out before text extraction; web text for selected critical PDF sections subsequently obtained. Screenshot requests returned references without usable image inspection, so no visual-layout audit claimed.",
+    "Exact synthetic arithmetic is not chip, timing, silicon, workload or model-calibration measurement. No EDA/build/training/remote/paid allocation executed.",
+    "Standalone trusted freeze/verify and ledger checks only; full repository validate and final PR diff review are coordinator publication work, not claimed complete here."
+  ],
+  "reversal_conditions": [
+    "Clarify exact epsilon/rank/persistent-D robustness boundary without converting it into physical saturation.",
+    "Establish physical W distinction against mean/directional/identical-feature GP controls and current winner methods or preserve explicitly bounded uncertainty.",
+    "Resolve lawful inputs, safe complete adapter, real owners, allocation and justified thresholds; obtain P/C agreement on same immutable proposal and exact task hash before pilot."
+  ],
+  "task_position": "R2 analytical progress is real; physical hypothesis remains conditional. Continue bounded research revision in cycle3; three unsuccessful cycles trigger park/succession policy, four total hard stop. No current experiment or abandonment authorization."
+}

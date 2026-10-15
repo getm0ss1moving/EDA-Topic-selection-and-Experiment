@@ -1,0 +1,27 @@
+{
+  "role": "challenger",
+  "reviewed_proposer_release": "SUB-ebe8adb725c37ba6e164d487febc9021dddc8e911cf79e56ada9e9d2bd5c5ace",
+  "assessment": "unresolved",
+  "coverage": {
+    "duplicate_prior_art": "unresolved",
+    "mechanism": "supported",
+    "composition": "unresolved",
+    "demand": "unresolved",
+    "industry_gap": "unresolved",
+    "headroom": "unresolved",
+    "contests": "unresolved",
+    "experiments": "unresolved",
+    "cost": "supported"
+  },
+  "direction_penalties": {
+    "combination_drift": 0,
+    "demand_drift": 0
+  },
+  "new_objections": [
+    "OBJ-001"
+  ],
+  "objection_severity": "minor_nonblocking",
+  "experiment_consent": "revision_requested",
+  "analytical_result": "Gaussian witness confirmed; arbitrarily small rank-restoring perturbation eliminates exact-D0 two-query policy gap",
+  "validation_scope": "trusted standalone freeze/verify and self-ledger; coordinator runs full repository validate"
+}

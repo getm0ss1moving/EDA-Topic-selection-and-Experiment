@@ -1,0 +1,5 @@
+source_id,task,mechanism,data_evaluation,assumptions,limitation,overlap,distinction
+S01,constrained BO,two-step feasible incumbent utility,paper; not reproduced,paper independent objective constraint priors,not EDA-specific,lookahead already prior,physical W utility remains open
+S02,discrete digital sizing,electrical directional gradients and multilevel calibration,ICCAD2025 paper cases; not reproduced,library and timing model,full winning-system equivalence unaudited,physical inputs and mean calibration,candidate residual covariance utility unresolved
+S03,gate sizing with reference timer,offset calibration incremental timing peephole,historical paper cases; not reproduced,signoff timer access,not current-node evidence,strong conventional calibration,conditional residual scheduling delta
+S09,analog sizing,derivative-aware GP and search,indexed abstract only,adjoint sensitivity available,full text unavailable,sensitivity-informed BO neighborhood,different analog design parameters and observations
