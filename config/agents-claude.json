@@ -10,10 +10,12 @@
       "call_sign": "CLD-Origin-PHYSICAL",
       "platform": "Claude",
       "role": "proposer",
-      "domain_ids": ["D04"],
+      "domain_ids": [
+        "D04"
+      ],
       "model_requested": "claude-family:strongest-exposed",
       "reasoning_requested": "highest-supported-within-budget",
-      "status": "deferred_cross_platform_assignment",
+      "status": "historical_retired_from_active_roster",
       "active_scope": false,
       "fresh_session_required": false
     },
@@ -22,10 +24,12 @@
       "call_sign": "CLD-Audit-PHYSICAL",
       "platform": "Claude",
       "role": "challenger",
-      "domain_ids": ["D04"],
+      "domain_ids": [
+        "D04"
+      ],
       "model_requested": "claude-family:balanced-exposed",
       "reasoning_requested": "medium-supported",
-      "status": "deferred_cross_platform_assignment",
+      "status": "historical_retired_from_active_roster",
       "active_scope": false,
       "fresh_session_required": false
     },
@@ -34,14 +38,21 @@
       "call_sign": "CLD-Origin-TIMING",
       "platform": "Claude",
       "role": "proposer",
-      "domain_ids": ["D05"],
+      "domain_ids": [
+        "D05"
+      ],
       "model_requested": "claude-opus-5-5",
       "reasoning_requested": "xhigh",
       "model_policy": "claude-family:strongest-affordable-exposed",
       "model_decision": {
         "decided_by": "getm0ss1moving (human owner; resource decision)",
         "date": "2026-10-12",
-        "host_models_exposed": ["claude-fable-5-1", "claude-opus-5-5", "claude-sonnet-5-5", "claude-haiku-5-5"],
+        "host_models_exposed": [
+          "claude-fable-5-1",
+          "claude-opus-5-5",
+          "claude-sonnet-5-5",
+          "claude-haiku-5-5"
+        ],
         "declined": "claude-fable-5-1 is the strongest exposed model but uses about 2.5x the per-token usage of claude-opus-5-5; the subscription-only budget and earlier quota failures favoured Opus 5.5 at xhigh effort.",
         "record": "runs/CLD-P05-LAUNCH-0001/readiness.md"
       },
@@ -52,8 +63,8 @@
       "launch_run": "CLD-P05-LAUNCH-0001",
       "registration_run": "CLD-P05-SESSION-0001",
       "status_note": "status stays ready_for_fresh_session because scripts/project.py validate_launch_release requires that value for every released actor; session_state carries the actual state.",
-      "status": "ready_for_fresh_session",
-      "active_scope": true,
+      "status": "historical_retired_from_active_roster",
+      "active_scope": false,
       "fresh_session_required": true
     },
     {
@@ -61,10 +72,12 @@
       "call_sign": "CLD-Audit-TIMING",
       "platform": "Claude",
       "role": "challenger",
-      "domain_ids": ["D05"],
+      "domain_ids": [
+        "D05"
+      ],
       "model_requested": "claude-family:balanced-exposed",
       "reasoning_requested": "medium-supported",
-      "status": "deferred_cross_platform_assignment",
+      "status": "historical_retired_from_active_roster",
       "active_scope": false,
       "fresh_session_required": false
     },
@@ -73,13 +86,20 @@
       "call_sign": "CLD-Proof-PHYSICAL",
       "platform": "Claude",
       "role": "verifier",
-      "domain_ids": ["D04", "D05"],
+      "domain_ids": [
+        "D04",
+        "D05"
+      ],
       "model_requested": "claude-family:lightweight-exposed",
       "reasoning_requested": "low-or-medium-supported",
-      "status": "ready_for_fresh_session",
-      "active_scope": true,
+      "status": "historical_retired_from_active_roster",
+      "active_scope": false,
       "fresh_session_required": true,
-      "released_queue": ["D04"]
+      "released_queue": [
+        "D04"
+      ]
     }
-  ]
+  ],
+  "active_for_new_work": false,
+  "retirement_reason": "Owner requested ChatGPT/Codex-only proposer, challenger and verifier on 2026-10-15; historical records retained."
 }

@@ -19,13 +19,19 @@
       "field": "reasoning_requested",
       "from": "medium",
       "to": "max",
-      "actors": ["DeepSeek-C04-PHYSICAL", "DeepSeek-C05-TIMING"],
+      "actors": [
+        "DeepSeek-C04-PHYSICAL",
+        "DeepSeek-C05-TIMING"
+      ],
       "reason": "The host exposes no medium effort tier, so the previous value could not be served. docs/TEAM-DEEPSEEK.md assigns challengers max effort. Neither actor has ever run a scientific session, so no executed run is relabelled."
     },
     "api_observation": {
       "observed_utc": "2026-10-13T08:04:31Z",
       "endpoint": "GET https://api.deepseek.com/models",
-      "served_model_ids": ["deepseek-flash", "deepseek-v4-pro"],
+      "served_model_ids": [
+        "deepseek-flash",
+        "deepseek-v4-pro"
+      ],
       "deepseek_flash": "DeepSeek-V4.1-Flash, 1048576-token context window, effort levels low/high/max (default high)",
       "deepseek_v4_pro": "DeepSeek-V4-Pro, 1048576-token context window, effort levels low/high/max (default high)",
       "route_alias_on_host": "deepseek-v4-flash[1m]: the 1M-context variant of the deepseek-flash family used by the operator's Claude Code DeepSeek route (ANTHROPIC_BASE_URL https://api.deepseek.com/anthropic) on 2026-10-13"
@@ -66,7 +72,7 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "onboarded",
+      "status": "historical_retired_from_active_roster",
       "github_review_identity": null,
       "packet": null,
       "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
@@ -95,7 +101,8 @@
         "verdict_state": "onboarding_complete",
         "unlisted_context_exposed": true
       },
-      "activation": "deferred_budget"
+      "activation": "deferred_budget",
+      "active_scope": false
     },
     {
       "actor_id": "DeepSeek-C01-ARCH",
@@ -111,7 +118,7 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "onboarded",
+      "status": "historical_retired_from_active_roster",
       "github_review_identity": null,
       "packet": null,
       "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
@@ -140,7 +147,8 @@
         "verdict_state": "onboarding_complete",
         "unlisted_context_exposed": false
       },
-      "activation": "deferred_budget"
+      "activation": "deferred_budget",
+      "active_scope": false
     },
     {
       "actor_id": "DeepSeek-P02-VERIFY",
@@ -156,7 +164,7 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "onboarded",
+      "status": "historical_retired_from_active_roster",
       "github_review_identity": null,
       "packet": null,
       "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
@@ -190,7 +198,8 @@
           "independence_caveat": "This actor runs in a shared host session with a shared filesystem and shared credentials. Nothing here establishes independence from any other actor."
         }
       },
-      "activation": "deferred_budget"
+      "activation": "deferred_budget",
+      "active_scope": false
     },
     {
       "actor_id": "DeepSeek-C02-VERIFY",
@@ -206,7 +215,7 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "onboarded",
+      "status": "historical_retired_from_active_roster",
       "github_review_identity": null,
       "packet": null,
       "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
@@ -235,7 +244,8 @@
         "verdict_state": "onboarding_complete",
         "unlisted_context_exposed": true
       },
-      "activation": "deferred_budget"
+      "activation": "deferred_budget",
+      "active_scope": false
     },
     {
       "actor_id": "DeepSeek-P03-SYNTH",
@@ -251,7 +261,7 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "onboarded",
+      "status": "historical_retired_from_active_roster",
       "github_review_identity": null,
       "packet": null,
       "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
@@ -280,7 +290,8 @@
         "verdict_state": "onboarding_complete",
         "unlisted_context_exposed": true
       },
-      "activation": "deferred_budget"
+      "activation": "deferred_budget",
+      "active_scope": false
     },
     {
       "actor_id": "DeepSeek-C03-SYNTH",
@@ -296,7 +307,7 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "onboarded",
+      "status": "historical_retired_from_active_roster",
       "github_review_identity": null,
       "packet": null,
       "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
@@ -325,7 +336,8 @@
         "verdict_state": "onboarding_complete",
         "unlisted_context_exposed": true
       },
-      "activation": "deferred_budget"
+      "activation": "deferred_budget",
+      "active_scope": false
     },
     {
       "actor_id": "DeepSeek-P04-PHYSICAL",
@@ -341,7 +353,7 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "paused_governance",
+      "status": "historical_retired_from_active_roster",
       "github_review_identity": null,
       "packet": null,
       "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
@@ -395,7 +407,8 @@
         ],
         "blocked_by": "governance_hardening_and_github_independent_review",
         "current_hold": "Historical packet readiness is preserved, but no scientific role may start until the governance stack is merged and explicitly released."
-      }
+      },
+      "active_scope": false
     },
     {
       "actor_id": "DeepSeek-C04-PHYSICAL",
@@ -411,7 +424,7 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "handed_off_by_succession",
+      "status": "historical_retired_from_active_roster",
       "github_review_identity": null,
       "packet": null,
       "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
@@ -481,7 +494,7 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "paused_governance",
+      "status": "historical_retired_from_active_roster",
       "github_review_identity": null,
       "packet": null,
       "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
@@ -542,7 +555,8 @@
         ],
         "blocked_by": "governance_hardening_and_github_independent_review",
         "current_hold": "Historical packet readiness is preserved, but no scientific role may start until the governance stack is merged and explicitly released."
-      }
+      },
+      "active_scope": false
     },
     {
       "actor_id": "DeepSeek-C05-TIMING",
@@ -558,7 +572,7 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "handed_off_by_succession",
+      "status": "historical_retired_from_active_roster",
       "github_review_identity": null,
       "packet": null,
       "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
@@ -655,7 +669,7 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "onboarded",
+      "status": "historical_retired_from_active_roster",
       "github_review_identity": null,
       "packet": null,
       "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
@@ -684,7 +698,8 @@
         "verdict_state": "onboarding_complete",
         "unlisted_context_exposed": true
       },
-      "activation": "deferred_budget"
+      "activation": "deferred_budget",
+      "active_scope": false
     },
     {
       "actor_id": "DeepSeek-C06-RELIABILITY",
@@ -700,7 +715,7 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "onboarded",
+      "status": "historical_retired_from_active_roster",
       "github_review_identity": null,
       "packet": null,
       "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
@@ -732,7 +747,8 @@
           "detail": "No file outside the packet directory was read. Three things beyond the manifest file list entered this session: (1) the packet's own manifest PACKET.json and ASSIGNMENT.json are physically present but are not listed inside PACKET.json.files; the onboarding harness explicitly requires reading both, so this is expected by design and not a leak of another role's material; (2) a single directory listing of the parent outbox path revealed the names of sibling output directories (other actor outboxes). Only directory names were observable, no sibling file or dossier content was opened or read; (3) ambient session runtime context (harness system reminders describing tool availability and file policy) is present in the session and is common policy, not scientific material. No proposer scratch, no verifier notes, no other role harness, no shared memory, no other session transcript and no agent message was read."
         }
       },
-      "activation": "deferred_budget"
+      "activation": "deferred_budget",
+      "active_scope": false
     },
     {
       "actor_id": "DeepSeek-P07-ANALOG",
@@ -748,7 +764,7 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "onboarded",
+      "status": "historical_retired_from_active_roster",
       "github_review_identity": null,
       "packet": null,
       "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
@@ -785,7 +801,8 @@
           ]
         }
       },
-      "activation": "deferred_budget"
+      "activation": "deferred_budget",
+      "active_scope": false
     },
     {
       "actor_id": "DeepSeek-C07-ANALOG",
@@ -801,7 +818,7 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "onboarded",
+      "status": "historical_retired_from_active_roster",
       "github_review_identity": null,
       "packet": null,
       "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
@@ -849,7 +866,8 @@
           ]
         }
       },
-      "activation": "deferred_budget"
+      "activation": "deferred_budget",
+      "active_scope": false
     },
     {
       "actor_id": "DeepSeek-P08-CHIPLETS",
@@ -865,7 +883,7 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "onboarded",
+      "status": "historical_retired_from_active_roster",
       "github_review_identity": null,
       "packet": null,
       "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
@@ -904,7 +922,8 @@
           "contamination_events": []
         }
       },
-      "activation": "deferred_budget"
+      "activation": "deferred_budget",
+      "active_scope": false
     },
     {
       "actor_id": "DeepSeek-C08-CHIPLETS",
@@ -920,7 +939,7 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "onboarded",
+      "status": "historical_retired_from_active_roster",
       "github_review_identity": null,
       "packet": null,
       "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
@@ -969,7 +988,8 @@
           ]
         }
       },
-      "activation": "deferred_budget"
+      "activation": "deferred_budget",
+      "active_scope": false
     },
     {
       "actor_id": "DeepSeek-P09-AGENTIC",
@@ -985,7 +1005,7 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "onboarded",
+      "status": "historical_retired_from_active_roster",
       "github_review_identity": null,
       "packet": null,
       "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
@@ -1014,7 +1034,8 @@
         "verdict_state": "onboarding_complete",
         "unlisted_context_exposed": true
       },
-      "activation": "deferred_budget"
+      "activation": "deferred_budget",
+      "active_scope": false
     },
     {
       "actor_id": "DeepSeek-C09-AGENTIC",
@@ -1030,7 +1051,7 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "onboarded",
+      "status": "historical_retired_from_active_roster",
       "github_review_identity": null,
       "packet": null,
       "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
@@ -1063,7 +1084,8 @@
           "detail": "No unlisted PACKET content was read. All files I opened belong to the packet and are listed in PACKET.json.files, except ASSIGNMENT.json and PACKET.json themselves (both in the packet root). However, this is an unrestricted desktop session, not a sandboxed one, so the following context was unavoidably visible to me outside the packet surface: (1) the session runtime note naming the parent agent id session-780334ea-950c-481d-8a0a-1f439380c022; (2) a live tool catalog (dev_* plugin injector tools and unrelated skill catalog) that is not part of the scientific task; (3) the current file policy string 'danger-full-access' and the environment description of the dsh-super-injector; (4) repository-level AGENTS.md instructions injected by the runtime; (5) the derived output path .../eda-dsk/outbox, whose sibling directories expose the names of the other 20 actor tasks and the sibling packet directory names. I did not open any other actor's outbox, any other role harness, the shared checkout, the worktree, another session, or any shared memory. Item (5) is the only incidental cross-task information, and it is path-level naming only, not content."
         }
       },
-      "activation": "deferred_budget"
+      "activation": "deferred_budget",
+      "active_scope": false
     },
     {
       "actor_id": "DeepSeek-V01-DIGITAL",
@@ -1081,7 +1103,7 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "onboarded",
+      "status": "historical_retired_from_active_roster",
       "github_review_identity": null,
       "packet": null,
       "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
@@ -1135,7 +1157,8 @@
           "detail": "No context outside the three frozen packets was read. Within each packet, the only files present that are not in the PACKET.json 'files' allowlist are that packet's own framing files ASSIGNMENT.json and PACKET.json, which the onboarding task explicitly directs the actor to read first. No other actor's packet, outbox, harness, session, memory, transcript or repository working tree was inspected. No agent messages were exchanged. The shared checkout and the DeepSeek worktree were not read or written."
         }
       },
-      "activation": "deferred_budget"
+      "activation": "deferred_budget",
+      "active_scope": false
     },
     {
       "actor_id": "DeepSeek-V02-PHYSICAL",
@@ -1152,7 +1175,7 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "ready_for_fresh_session",
+      "status": "historical_retired_from_active_roster",
       "github_review_identity": null,
       "packet": null,
       "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
@@ -1236,7 +1259,7 @@
         "blocked_by": "awaiting_frozen_proposal_and_released_challenge_material",
         "current_hold": "Released for the D04 and D05 queues; the verifier session is created only after the proposal and challenge artifacts are frozen and released, per config/launch-release.json research_sequence."
       },
-      "active_scope": true,
+      "active_scope": false,
       "fresh_session_required": true
     },
     {
@@ -1257,7 +1280,7 @@
       "thread_id": null,
       "client_thread_id": null,
       "host_id": null,
-      "status": "onboarded",
+      "status": "historical_retired_from_active_roster",
       "github_review_identity": null,
       "packet": null,
       "input_commit": "252a5c8a9b9719932a845b2aa5826b26cbdbe93d",
@@ -1311,17 +1334,16 @@
           "detail": "No file content outside the three packet allowlists was read. Specifically: no other actor's harness, no other actor's packet contents, no other actor's outbox contents, no other session or transcript, no shared memory, and no agent messages. Two honest disclosures of non-scientific ambient exposure: (1) an `ls` of the parent `packets/` and `outbox/` directories displayed sibling directory NAMES only (for example DeepSeek-C07-ANALOG__D07, DeepSeek-V01-DIGITAL__D01, an empty DeepSeek-V03-SYSTEMS outbox entry); no file inside any sibling directory was opened. (2) The host runtime injected a session-level system context containing a workspace AGENTS.md contract and tool inventory; its research-policy content is materially identical to the packet's own AGENTS.md, and it was treated as policy, not as another role's private artifact and not as scientific evidence. Neither disclosure affects independence: no unadjudicated scientific claim, forecast, challenge or proposal was seen."
         }
       },
-      "activation": "deferred_budget"
+      "activation": "deferred_budget",
+      "active_scope": false
     }
   ],
   "activation": {
-    "state": "ready_for_role_creation",
+    "state": "paused_governance",
     "decision_utc": "2026-10-11T03:27:55Z",
     "directive": "Release only DeepSeek-C04-PHYSICAL and DeepSeek-C05-TIMING as cross-platform challengers. They use fresh sessions and receive no proposal until the corresponding proposer artifact is frozen.",
     "succession_directive": "Owner decision 2026-10-13 (true UTC; 2026-10-14 local host date): the DeepSeek platform stops serving as challenger and serves as the verification platform for both D04 and D05. The D04 challenger seat is handed to the Codex successor Codex-C04-PHYSICAL-R2; the D05 seat already passed to Codex-C05-TIMING-R2 (PR #20) after the DeepSeek challenger filed and transported its round-1 challenge. Release DeepSeek-V02-PHYSICAL as the D04/D05 verifier. See config/launch-release.json role_handoffs and runs/DSK-ROLE-SUCCESSION-0001.",
-    "released_actors": [
-      "DeepSeek-V02-PHYSICAL"
-    ],
+    "released_actors": [],
     "active_domains": [],
     "active_actors": [],
     "topic_containers": {
@@ -1358,5 +1380,7 @@
     },
     "verifier_note": "DeepSeek-V02-PHYSICAL is the released verifier for D04 and D05 (release updated by runs/DSK-ROLE-SUCCESSION-0001). D06 was removed from its future assignment per the standing platform instruction; the D06 deepseek verifier binding in domains/D06/brief.json moved to DeepSeek-V03-SYSTEMS.",
     "resource_note": "config/research-brief.json records a measured local smoke path and provisional coordinator caps. Representative publication designs, macro-rich cases, additional corners, practitioner-validated thresholds and a qualified signoff oracle remain unresolved."
-  }
+  },
+  "active_for_new_work": false,
+  "retirement_reason": "Owner requested ChatGPT/Codex-only proposer, challenger and verifier on 2026-10-15; historical records retained."
 }

@@ -1,45 +1,77 @@
-# File-mediated workflow
+# File-mediated automatic research workflow
 
-## State and storage
+Current owner policy, 2026-10-15: all new proposer, challenger and verifier work
+uses ChatGPT/Codex. `docs/CODEX-AUTOMATION.md` defines the active runtime.
+Historical Claude/DeepSeek runs remain evidence. They are never resumed by the
+new coordinator and their signatures are not transferred to successor roles.
 
-`draft -> submitted -> revision_requested -> submitted -> verified -> accepted`
+## Research cycle
 
-A candidate may also become `parked` (missing feasible prerequisite), `rejected` (validated fatal flaw), or `abandoned` (evidence-backed joint proposer/challenger decision). Store unaccepted work under `candidates/EDA-NNNN/`; promotion copies the complete reviewed dossier to `topics/EDA-NNNN/` and removes the candidate copy in the same PR. Rejected, parked and abandoned dossiers may move to `archive/`; preserve history and resurrection conditions. `verified` is a candidate state, not permission to push directly to `main`.
+1. The coordinator prepares three distinct logical role seats from a committed
+   source snapshot. Every job receives common rules, its own harness, the bounded
+   brief, its own previous released output and explicitly released shared files.
+2. Proposer surveys papers, contests, open implementations and public industry
+   capabilities. It writes the complete anchored proposal, evidence, forecast,
+   experiment plan and executable task list, then self-freezes.
+3. The coordinator automatically delivers the proposal and starts the challenger.
+   Challenger reads the cited primary material and independently searches newer
+   papers, formulations, contest editions, hints, baselines and winner reports.
+   It records evidence-backed objections or an honest feasible/unresolved outcome,
+   proposes task-list corrections and self-freezes. Codex review is unblinded;
+   do not claim forecast blindness.
+4. The coordinator starts the verifier on the matching frozen proposal/challenge
+   pair. Verifier reopens evidence, adjudicates every objection, checks important
+   positive claims and writes compact tables plus JSON. A challenge alone cannot
+   veto or force a proposal revision.
+5. Verifier self-freezes. Its ruling and exactly the challenges it adjudicated are
+   delivered to the proposer. Each completed three-role round is queued for one
+   automatic GitHub PR with exact releases, registrations and outcome. A GitHub
+   outage leaves a durable retry queue and does not discard the research.
+6. Proposer responds, revises and repeats. Keep the original anchor and two drift
+   penalties. New scientific directions receive new IDs. Preserve negative results
+   and explicitly supersede errors; never erase the original objection.
+7. For a promising topic, proposer and challenger independently sign the same
+   frozen proposal and exact experimental task-list hash. Consent collection is
+   automatic and does not consume a substantive review round. Verifier checks
+   evidence, all readiness criteria, both consents and the eight acceptance gates.
+8. For exhausted novelty, applicable theoretical saturation, a documented dead end
+   or no viable anchor-preserving direction, proposer and challenger independently
+   sign the same abandonment target and digest. Verifier checks the grounds.
+   Archive the complete record and start a successor under a new ID automatically.
+9. After three substantive rounds without convergence, park with exact unresolved
+   questions and start a fresh successor. Human arbitration is optional. Never
+   convert lack of consensus into acceptance or joint abandonment.
 
-## One review cycle
+## Decisions, promotion and experiments
 
-1. Human publishes a bounded research brief. Coordinator creates distinct role sessions and immutable packets at a full Git SHA.
-2. Proposer searches and creates `proposal.md`, `sources.json`, `search-log.md`, `prior-art.csv`, `contest-audit.md`, `industry-gap.md`, `experiment-plan.md`, `forecast.json`, `tasklist.md`, the initial `direction-control.json` anchor and pending `experiment-consensus.json`. Mark dossier `submitted`; open a PR.
-3. The proposer self-freezes and submits its proposal release using `docs/SELF-SUBMISSION.md`; no human freeze confirmation is required. The coordinator transports the immutable release and records its Git commit. Challenger independently searches before reading the author's forecasts; it then receives the full submitted dossier for detailed review. Record both packet SHAs. Write `challenges.md` with claim-level evidence and falsification tests. The challenger self-freezes and submits its own challenge dossier by the same procedure.
-4. Verifier opens the original sources and adjudicates every objection in `verification.md`. Until adjudicated, objections are allegations; the proposer must not treat them as established defects. The verifier self-freezes and submits its verification release by the same procedure.
-5. Coordinator releases the verified challenge packet. Proposer writes `responses.md`, resolving valid objections or disputing them with evidence. Revise the anchored mechanism, hypothesis, plan, task list and forecast together. Update both direction-drift penalties. A new combination or different engineering objective that replaces the anchor must become a new topic rather than a revision.
-6. Proposer and challenger jointly finish `tasklist.md`. The proposer supplies the implementation and causal-test sequence; the challenger supplies falsification tests, fairness controls and missing prerequisites. When both independently judge the exact plan reasonable, they sign the same frozen revision and task-list SHA-256 in `experiment-consensus.json`, each by self-submitting its own `experiment-consent.json`, which the coordinator copies unchanged into that role's consent entry. A change to the task list resets consensus.
-7. Verifier checks revised claims, responses, anchor preservation, penalty records and experiment-task-list consensus, recalculates the content digest and writes `verification.json`. Only valid, unresolved, decision-critical objections block advancement. Unsupported challenges are closed with reasons. The verifier cannot replace either task-list consent.
-8. Repeat up to three rounds by default. If innovation is exhausted, the relevant theoretical headroom is exhausted, the approach is a dead end, or no anchor-preserving direction remains, proposer and challenger may sign a joint-abandonment decision on the same full revision. Move the dossier to `archive/` with status `abandoned`; preserve evidence, penalties and resurrection conditions. A successor uses a fresh ID. Otherwise park with specific unresolved questions or request human arbitration; do not manufacture consensus. Do not delete old objections; append supersession links.
-9. For promotion, verifier confirms the experiment consensus, dossier digest, current PR commit and a decision of `accept_for_pilot`. The distinct registered human reviewer GitHub account submits `CONFIRM <full-head-sha>` as an approving review. The merge controller/human merges only after checks pass.
-10. Execute the preregistered pilot only after promotion. Update measured results by PR; revise, reject, or scale based on frozen thresholds. A forecast never becomes a measured result through acceptance.
+The human owns priorities and actual resource allocations; proposer owns the
+hypothesis, challenger owns objections, verifier owns evidence adjudication, and
+the coordinator owns scheduling and transport. No role signs for another.
 
-## PR transport
+Formal acceptance requires the complete dossier under `topics/EDA-NNNN/` to pass
+`project.py validate`: distinct sessions, evidence-backed gates, zero direction
+drift and matching experiment consents. Runtime `selected_for_pilot` is recorded
+with its evidence; it does not bypass canonical dossier validation or authorize
+unallocated experiments. Parked/rejected/abandoned dossiers live under `archive/`.
+A replacement has a new ID and repeats novelty search.
 
-Scientific communication exists in versioned files, including rebuttals, evidence corrections and decisions. PR bodies link these paths and identify scope; review bodies carry only confirmation metadata. Discussion in chat or GitHub comments is not admissible until copied into a file and independently checked. Do not use direct messages or shared agent memory.
+Bind consent to an earlier immutable `SUB-<sha256>` proposal or a full Git commit.
+A consent file cannot reference the hash of its own containing release. Changes to
+the science, task list or referenced dependencies invalidate consent.
 
-Proposer/challenger/verifier each author their own output commits or self-freeze an output packet into their assigned submission queue for coordinator transport. Human submission or freeze confirmation is not required. Shared PR branches are permissible transport after packet collection, not shared live workspaces. A single coordinator account cannot impersonate independent review. Per-topic session IDs are immutable; session reassignment and contamination require a written event and a fresh session.
+## GitHub and human review
 
-## Update and invalidation
+Every completed round and governance change uses a PR. The coordinator may merge
+its transport PR after all required checks pass, without self-approval. Research
+selection and abandonment do not require a human reminder, separate GitHub
+account or approval. Human review of final topic/experiment reports is optional;
+it can be explicitly re-enabled with the repository variable
+`REQUIRE_HUMAN_FINAL_REPORTS=true`. The independent scientific verifier remains
+mandatory regardless of this administrative setting. No GitHub approval is
+fabricated or treated as scientific verification.
 
-Every content edit invalidates the dossier's previous content digest; every new PR head invalidates its review confirmation. Changes to scientific criteria, check scripts, harnesses or workflows remain governance PRs with automated checks; human approval is not required for these intermediate updates. Editing an accepted topic requires rechecking the affected evidence and experiments. New evidence may revoke acceptance through a PR, retaining the old decision in history.
-
-
-## Human review scope (owner decision, 2026-10-13)
-
-Human confirmation is required only for final topic and experiment reports. Final topic dossiers and their revisions live under `topics/`; standalone final reports live under `reports/final/`. Any addition, modification, deletion or rename touching these paths requires an approving `CONFIRM <full-head-sha>` review by a registered human reviewer distinct from the PR author. README scaffolding is excluded. A draft report outside these paths is not an approved final deliverable.
-
-Proposer/challenger exchanges, evidence, responses, AI verification records, candidate drafts, project JSON, tools, harnesses and governance updates require PRs and passing automated checks, but no human approval. The coordinator may merge these intermediate PRs after checks pass, without self-approving or claiming independent scientific verification. AI verifiers must still adjudicate evidence before objections become established findings. Proposer/challenger agreement on the exact experiment task list and AI verification remain prerequisites for promotion and experimental execution; human final-topic approval completes the promotion gate. Final experiment reports require human approval again.
-
-Branch protection keeps both required status checks but sets its unconditional approving-review count to zero. The `independent-verifier` check classifies changed paths and enforces human approval only for final deliverables. Human resource decisions and unresolved factual questions are not inferred from this exemption.
-
-## Actor-owned freeze
-
-Follow `docs/SELF-SUBMISSION.md`. A content-addressed release is a frozen record, not acceptance or an experiment authorization. New revisions create new releases; old packets stay unchanged. Verifiers use the compact table template plus machine-readable `verification.json`. No narrative report is required.
-
-Within a round, roles exchange releases through local inboxes instead of GitHub; the releasing role transmits after freezing, and the coordinator's publisher pushes each finished round. If the challenger seat is unavailable, the verifier reviews the proposer release directly; promotion and abandonment still need the challenger's consent. See `docs/AUTO-ROUND.md`.
+Scientific communication travels only in released files, never shared memories,
+private conversations or direct scientific role messages. PR descriptions identify
+paths, release IDs and scope; do not substitute chat/comments for evidence files.
+Private logs, credentials, copyrighted full papers and restricted designs stay out
+of public releases. Structural CI checks form and provenance, not scientific truth.

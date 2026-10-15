@@ -27,10 +27,13 @@ FILES = {
                    'abandonment-consent.json'},
     'verifier': {'verification.md', 'verification.json'},
 }
+# Optional coordinator-readable outcome. Legacy releases remain valid.
+for _owned in FILES.values():
+    _owned.add('workflow.json')
 REQUIRED = {
-    'proposer': FILES['proposer'] - {'responses.md', 'experiment-consent.json', 'abandonment-consent.json'},
+    'proposer': FILES['proposer'] - {'responses.md', 'experiment-consent.json', 'abandonment-consent.json', 'workflow.json'},
     'challenger': {'challenges.md', 'sources.json', 'search-log.md'},
-    'verifier': FILES['verifier'],
+    'verifier': FILES['verifier'] - {'workflow.json'},
 }
 # Host artifacts that are never research output (macOS Finder, Claude Code write staging).
 IGNORED = {'.DS_Store', '.claude'}

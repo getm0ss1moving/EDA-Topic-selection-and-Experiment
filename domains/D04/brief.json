@@ -10,17 +10,17 @@
     "AI for EDA",
     "Agentic EDA where justified"
   ],
-  "proposer": "Codex-P04-PHYSICAL",
-  "challenger": "DeepSeek-C04-PHYSICAL",
-  "verifier": "Claude-V02-PHYSICAL",
+  "proposer": "ChatGPT-P04-PHYSICAL",
+  "challenger": "ChatGPT-C04-PHYSICAL",
+  "verifier": "ChatGPT-V04-PHYSICAL",
   "release_binding": {
     "source": "config/launch-release.json",
-    "release_id": "PHYSICAL-ROLE-CREATION-0001",
+    "release_id": "CHATGPT-ONLY-0001",
     "topic": "EDA-0001",
     "note": "The top-level proposer, challenger and verifier fields follow the release. The platform_roles entries below are identity namespaces for each platform's full roster, not active assignments."
   },
-  "stage": "pilot_ready_pending_role_capacity",
-  "research_budget": "Active scope. Use config/research-brief.json and docs/PHYSICAL-PILOT.md. At most one hypothesis per domain in the next round. No GPU budget, and no paid API except the prepaid DeepSeek allowance recorded in config/research-brief.json for the two released DeepSeek challengers. Existing frozen packets remain historical and must be replaced before research.",
+  "stage": "codex_only_automation_prepared",
+  "research_budget": "Use config/research-brief.json. Research reading needs no per-source approval. Only existing ChatGPT/Codex entitlement; no paid provider fallback. Existing experiment resource caps still apply.",
   "first_outputs": [
     "readiness.json",
     "first-pass-plan.md"
@@ -28,9 +28,9 @@
   "not_a_topic": true,
   "platform_roles": {
     "codex": {
-      "proposer": "Codex-P04-PHYSICAL",
-      "challenger": "Codex-C04-PHYSICAL",
-      "verifier": "Codex-V02-PHYSICAL"
+      "proposer": "ChatGPT-P04-PHYSICAL",
+      "challenger": "ChatGPT-C04-PHYSICAL",
+      "verifier": "ChatGPT-V04-PHYSICAL"
     },
     "deepseek": {
       "proposer": "DeepSeek-P04-PHYSICAL",

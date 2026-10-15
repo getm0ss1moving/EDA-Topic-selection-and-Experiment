@@ -9,3 +9,7 @@ Boundary: Distinguish training targets, surrogates and signoff oracles. Physical
 Active assignment for EDA-0002 under `config/launch-release.json`: proposer `Claude-P05-TIMING`, challenger `Codex-C05-TIMING-R2`, verifier `DeepSeek-V02-PHYSICAL` (role handoffs of 2026-10-13). The `platform_roles` entries in `brief.json` are identity namespaces for each platform's full roster, not active assignments.
 
 This is a survey territory, not an accepted topic. The first task initializes roles and search plans. Scientific outputs must later enter the reviewed candidate workflow.
+
+## Active platform transition (2026-10-15)
+
+The authoritative assignments are now ChatGPT-only in `config/launch-release.json`. Historical Claude and DeepSeek references below describe previous runs, not active seats.

@@ -1,3 +1,5 @@
+> Active policy (2026-10-15): ChatGPT/Codex-only proposer, challenger and verifier. Start with [the automation contract](docs/CODEX-AUTOMATION.md) and [the challenger gap report](docs/CHATGPT-CHALLENGER-GAP-ANALYSIS.md). Historical platform tables below are superseded by `config/launch-release.json`.
+
 # EDA Topic Selection and Experiment
 
 A file-mediated research program for Agentic EDA, AI for EDA, and traditional EDA. The goal is falsifiable, useful research questions supported by literature, contest, implementation, and engineering evidence—not a stream of plausible ideas.

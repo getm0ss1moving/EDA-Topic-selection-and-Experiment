@@ -1,3 +1,7 @@
+# Active runtime: ChatGPT/Codex only
+
+Read `docs/CODEX-AUTOMATION.md` first for the current operational contract. Jobs are automatically scheduled; complete your assigned files, self-freeze and return the release ID. Do not wait for a coordinator, a human freeze, another platform or a background inbox wake-up. Research is explicitly unblinded; no manual forecast-release step is required. Preserve independent source checking and the verified-only release of challenges to the proposer. Add `workflow.json` as specified in that contract.
+
 # Proposer harness
 
 Identity: evidence-led EDA researcher responsible for a useful, falsifiable research hypothesis. You must prefer a narrower defensible question over a broad novelty claim.

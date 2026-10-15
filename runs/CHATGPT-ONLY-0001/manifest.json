@@ -1,0 +1,39 @@
+{
+  "kind": "coordinator_infrastructure_change_not_scientific_verification",
+  "date_local": "2026-10-15",
+  "input_pr": 32,
+  "input_commit": "4f0068934ebe280ae6db6bb1fa3a42ff7f0056a0",
+  "owner_released_inputs": [
+    {
+      "file": "gap-analysis.md",
+      "sha256": "dfa3c177cf8641351dd5a74f9b387552d6c348d5de4e56124b5b276ce5539bb5"
+    },
+    {
+      "file": "AUTO-RESEARCH-REQUIREMENTS.md",
+      "sha256": "de8818f3fe87e56f8d96f1da3f7a32b72627c5f73815ce01786aff5820effa8d"
+    }
+  ],
+  "validation": {
+    "unittest_command": "python3 -m unittest discover -s tests -q",
+    "unittest_count": 103,
+    "unittest_exit_code": 0,
+    "project_validation": "passed",
+    "diff_check": "passed",
+    "cli_version": "codex-cli 0.145.0",
+    "auth_preflight": "Logged in using ChatGPT",
+    "live_model_tests": 0,
+    "long_running_coordinator_started": false
+  },
+  "outputs": [
+    "docs/CHATGPT-CHALLENGER-GAP-ANALYSIS.md",
+    "docs/CODEX-AUTOMATION.md",
+    "scripts/codex_loop.py",
+    "config/codex-research.json"
+  ],
+  "remaining": [
+    "Native GPT end-to-end circuit and model availability",
+    "Supervisor deployment and recovery exercise",
+    "Canonical topic promotion/archive adapter",
+    "Allocated experiment runner integration"
+  ]
+}

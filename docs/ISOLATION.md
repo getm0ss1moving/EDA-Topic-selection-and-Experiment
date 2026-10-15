@@ -1,3 +1,7 @@
+# Current runtime policy
+
+For new ChatGPT-only jobs, `docs/CODEX-AUTOMATION.md` supersedes manual forecast-screen release and per-session amendment/wake-up procedures below. Reviews are explicitly unblinded. Each job receives a frozen policy snapshot and role-specific shared files; no running historical packet is silently modified. Cross-role privacy and verified-only challenge release remain in force.
+
 # Isolation and access policy
 
 ## Trust boundary

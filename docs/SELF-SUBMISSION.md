@@ -1,9 +1,13 @@
+# Current ChatGPT-only execution
+
+The role self-freezes, then the native coordinator automatically transports its validated release. Use `docs/CODEX-AUTOMATION.md`; do not wait for a registry merge, human freeze or manual wake-up. The coordinator includes exact logical registrations in each round PR. The standalone legacy publish command below retains its original main-registry precondition.
+
 # Self-submission and frozen role releases
 
 The owner authorizes proposer, challenger and verifier self-submission and self-freeze.
 This replaces earlier instructions to wait for the owner/coordinator to freeze a
 dossier. The verifier submits a compact table and matching machine record.
-Human approval is still required for final topic and experiment reports.
+Human review is optional under the owner's 2026-10-15 automatic-research instruction; independent scientific verification remains required.
 
 ## Actor procedure
 
@@ -94,4 +98,4 @@ claim/objection, and the eight-gate table. Cite source ID plus exact locator,
 verdict, whether blocking, and a short reason/action. No long narrative is
 required. Retain `verification.json` for structural gates and digest binding.
 Unavailable evidence is unresolved; a concise table cannot conceal missing
-verification. Task-list dual consent and final human approval remain unchanged.
+verification. Task-list dual consent and independent evidence checking remain required.
