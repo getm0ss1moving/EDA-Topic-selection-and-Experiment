@@ -1,0 +1,71 @@
+{
+  "state": "continue",
+  "anchor": {
+    "problem": "Repeated scheduling/key/state work when scoring mutually exclusive fixed-topology cell-sizing alternatives from one base checkpoint",
+    "engineering_user": "Timing-optimization developer using a timing engine for candidate selection",
+    "downstream_need": "Obtain identical scoped per-candidate endpoint results and caller decision with lower fully charged iteration cost",
+    "causal_mechanism": "Candidate-membership mask partition refinement across complete deterministic timing operation records, with split on dependency differences and full-output equality coalescence",
+    "mechanism_invariants": [
+      "Same fixed candidate set/base revision and scalar kernels/arithmetic/tie ordering",
+      "Complete observable context including candidate pin-cap/load changes and timing tags; hashes only index full equality",
+      "Disjoint covering candidate masks; no combining alternative edits",
+      "Strong cached incremental/transactional/task-clustered comparison gets the same inputs, memory, batching and reporting",
+      "Unsupported or capped work replays exact original candidate through reference with all costs charged",
+      "Initial exactness is conditional and scoped; real adapter and demand must be established"
+    ],
+    "forbidden_pivots": [
+      "Replace the anchor with generic predict-then-check, agent count, extra trials or model training",
+      "Claim kernel-count superiority over complete-key memoization from the toy",
+      "Count work already skipped by scalar incremental propagation as saved",
+      "Change to a proxy without demonstrated caller decision benefit",
+      "Expand to MCMM/hold/SI/production signoff without explicit proof and coverage audit"
+    ]
+  },
+  "penalties": {
+    "combination_drift": {
+      "score": 0,
+      "rationale": "New topic initial anchor; known components allowed but useful delta unresolved, not independently cleared",
+      "evidence_refs": [
+        "CLM-603",
+        "CLM-604"
+      ]
+    },
+    "demand_drift": {
+      "score": 0,
+      "rationale": "Initial candidate-scoring user/decision fixed; scoped demand remains an unresolved gate",
+      "evidence_refs": [
+        "CLM-601"
+      ]
+    },
+    "total": 0
+  },
+  "revision_assessment": {
+    "preserves_problem": true,
+    "preserves_engineering_need": true,
+    "preserves_causal_mechanism": true,
+    "changes": [],
+    "reason": "Initial EDA-0006 anchor after required three-lens comparison; predecessor is historical only"
+  },
+  "abandonment": {
+    "decision_id": null,
+    "grounds": [],
+    "rationale": null,
+    "evidence_refs": [],
+    "consents": {
+      "proposer": {
+        "session_id": null,
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      },
+      "challenger": {
+        "session_id": null,
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      }
+    },
+    "successor_topic_id": null,
+    "resurrection_conditions": []
+  }
+}

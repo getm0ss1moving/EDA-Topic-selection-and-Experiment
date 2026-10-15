@@ -1,0 +1,18 @@
+{
+  "kind": "forecast_not_measurement",
+  "metric": "Total time to obtain identical per-candidate endpoint results and caller decision",
+  "unit": "seconds",
+  "baseline_source": "S01/S02/S03 plus strengthened B+ defined in proposal; no reproduced baseline",
+  "direction": "decrease",
+  "pessimistic": null,
+  "base": null,
+  "optimistic": null,
+  "confidence": null,
+  "assumptions": [
+    "A useful novelty delta survives canonical-caching and consolidated-flow comparison",
+    "Repeated complete contexts occur inside genuinely recomputed incremental cones",
+    "Full read-set/FP/tie adapter is sound and final-hash validated",
+    "Actual allocation, caller demand, three-family manifest and dual consent exist before EDA experiments"
+  ],
+  "calibration_plan": "EXP-005 baseline-only variance/demand/exposure procedure; numerical intervals remain null until measured baseline cost fractions exist"
+}

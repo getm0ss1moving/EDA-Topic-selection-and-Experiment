@@ -1,0 +1,279 @@
+{
+  "topic": "EDA-0006",
+  "role": "verifier",
+  "actor_id": "ChatGPT-V05-TIMING-EDA-0006",
+  "session_id": "a51b3d2a-268d-4e21-b896-97ab1dd7e2c4",
+  "input_commit": "f68c1492c05be3fac5622deac4bb479eabf957de",
+  "packet_sha256": "c3fda03df5f6ce9463078ab94f969d3d516729e9c87bd44a999a32ffdedb73b0",
+  "reviewed_proposer_release": "SUB-169c721aec094e48787e49a1cb3da4fd5840b5c2aeb1dcddbd7ba51101ee78dc",
+  "adjudicated_challenger_releases": [
+    "SUB-29c37dc5d77c7f982c6e5983e65e4653a71d75c8278dd50a3b7f17c2f1a0cd10"
+  ],
+  "dossier_digest": "519a84e221d072c181487d13d8b76be7f48445c2d9146fe2d52f2d5d68ccd9ce",
+  "decision": "revise",
+  "next_action": "revise",
+  "research_position": "Research-worthy conditional hypothesis; not experiment-ready; no demonstrated gain.",
+  "gates": {
+    "novelty": false,
+    "mechanism": false,
+    "utility": false,
+    "contest_originality": false,
+    "headroom": false,
+    "feasibility": false,
+    "direction_integrity": true,
+    "experiment_consensus": false
+  },
+  "direction_penalties": {
+    "combination_drift": 0,
+    "demand_drift": 0,
+    "total": 0
+  },
+  "objections": [
+    {
+      "id": "OBJ-001",
+      "verdict": "valid",
+      "blocking": true,
+      "sources": [
+        "V01",
+        "V02",
+        "V03"
+      ],
+      "rationale": "Constructive lifted-context reduction supported; useful EDA distinction unresolved, not impossibility.",
+      "action": "Add side-by-side reduction and cost/capability ledger."
+    },
+    {
+      "id": "OBJ-002",
+      "verdict": "valid",
+      "blocking": true,
+      "sources": [
+        "V04",
+        "V05"
+      ],
+      "rationale": "Cited modern functions do not establish stipulated candidate/output contract; historical demand remains supported.",
+      "action": "Audit pinned caller generation, consumption and guard trace."
+    }
+  ],
+  "positive_claims": [
+    {
+      "id": "CLM-601",
+      "verdict": "partially_valid"
+    },
+    {
+      "id": "CLM-602",
+      "verdict": "valid"
+    },
+    {
+      "id": "CLM-603",
+      "verdict": "partially_valid"
+    },
+    {
+      "id": "CLM-604",
+      "verdict": "valid"
+    },
+    {
+      "id": "CLM-605",
+      "verdict": "partially_valid"
+    },
+    {
+      "id": "CLM-606",
+      "verdict": "valid"
+    },
+    {
+      "id": "CLM-607",
+      "verdict": "unresolved"
+    },
+    {
+      "id": "CLM-608",
+      "verdict": "unresolved"
+    }
+  ],
+  "source_checks": [
+    {
+      "id": "V01",
+      "title": "Faster Variational Execution with Transparent Bytecode Transformation",
+      "url": "https://www.cs.cmu.edu/~ckaestne/pdf/oopsla18.pdf",
+      "publication_date": "2018-11",
+      "version": "DOI 10.1145/3276487",
+      "locator": "\u00a72.1, Fig.1; conditional values and execution contexts",
+      "access_level": "full",
+      "limitations": "Selected sections; no Java reproduction",
+      "retrieved_at_utc": "2026-10-15T11:14:58.128616+00:00"
+    },
+    {
+      "id": "V02",
+      "title": "VarexC VImpl.java",
+      "url": "https://raw.githubusercontent.com/chupanw/vbc/1221ef110e2b46951ab01319e97fa5d7dd84a724/src/main/java/edu/cmu/cs/varex/VImpl.java",
+      "publication_date": "unknown",
+      "version": "1221ef110e2b46951ab01319e97fa5d7dd84a724",
+      "locator": "map/flatMap lines107\u2013157; addVToMap/put160\u2013177; checkInvariant61\u201370",
+      "access_level": "full",
+      "limitations": "Selected source; Java equality/restriction/exception policy not an exact STA adapter",
+      "retrieved_at_utc": "2026-10-15T11:14:58.128838+00:00"
+    },
+    {
+      "id": "V03",
+      "title": "Reducing runtime and memory requirements of static timing analysis",
+      "url": "https://patents.google.com/patent/US8839167B1/en",
+      "publication_date": "2014-09-16",
+      "version": "US8839167B1",
+      "locator": "Fig.7 steps705\u2013750; full comparisons, cached solutions and global reuse",
+      "access_level": "full",
+      "limitations": "Optional tolerances do not establish byte-exact whole-engine semantics; no legal or deployment finding",
+      "retrieved_at_utc": "2026-10-15T11:14:58.128840+00:00"
+    },
+    {
+      "id": "V04",
+      "title": "OpenROAD Resizer source",
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/8da6ac250b0349c346d1abed7c2c43107f4ff6f7/src/rsz/src/Resizer.cc",
+      "publication_date": "unknown",
+      "version": "8da6ac250b0349c346d1abed7c2c43107f4ff6f7",
+      "locator": "findResizeSlacks; findResizeSlacks1 raw lines3318\u20133344; stable net ranking3346 onward",
+      "access_level": "full",
+      "limitations": "Selected functions, not all caller sites; web and raw line numbers differ",
+      "retrieved_at_utc": "2026-10-15T11:14:58.128841+00:00"
+    },
+    {
+      "id": "V05",
+      "title": "Speeding Up Physical Synthesis with Transactional Timing Analysis",
+      "url": "https://web.eecs.umich.edu/~imarkov/pubs/jour/dt10-sta.pdf",
+      "publication_date": "2010-09",
+      "version": "DOI 10.1109/MDT.2010.76",
+      "locator": "printed pp.18\u201319 candidate selection and incorporation of transactions",
+      "access_level": "full",
+      "limitations": "Web tool failed; independent urllib public download + pymupdf memory extraction succeeded; historical scope only",
+      "retrieved_at_utc": "2026-10-15T11:14:58.128842+00:00"
+    },
+    {
+      "id": "V06",
+      "title": "Simultaneous multi-corner static timing analysis using samples-based static timing infrastructure",
+      "url": "https://patents.google.com/patent/US8615727B2/en",
+      "publication_date": "2013-12-24",
+      "version": "US8615727B2",
+      "locator": "Figs.2A\u20133B consolidated control flow/payload",
+      "access_level": "full",
+      "limitations": "Not proof of exact candidate-equivalence scheduler",
+      "retrieved_at_utc": "2026-10-15T11:14:58.128843+00:00"
+    },
+    {
+      "id": "V07",
+      "title": "iTAP: An Incremental Task Graph Partitioner for Task-parallel Static Timing Analysis",
+      "url": "https://guozz.cn/publication/itapaspdac-25/itapaspdac-25.pdf",
+      "publication_date": "2025",
+      "version": "ASPDAC 2025",
+      "locator": "\u00a72.1 and \u00a73 incremental cycle-free clustering",
+      "access_level": "full",
+      "limitations": "Web fetch failed; urllib + pymupdf memory extraction succeeded; selected sections, no benchmark reproduction",
+      "retrieved_at_utc": "2026-10-15T11:14:58.128844+00:00"
+    },
+    {
+      "id": "V08",
+      "title": "OpenSTA Search.cc",
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/49b86c95b31c53ba9096b91ef384ae5406b3107c/search/Search.cc",
+      "publication_date": "unknown",
+      "version": "49b86c95b31c53ba9096b91ef384ae5406b3107c",
+      "locator": "arrivalInvalid, findArrivals",
+      "access_level": "full",
+      "limitations": "Selected incremental operations, not complete read-set or compatible-build proof",
+      "retrieved_at_utc": "2026-10-15T11:14:58.128845+00:00"
+    },
+    {
+      "id": "V09",
+      "title": "Divergent Thoughts toward One Goal",
+      "url": "https://arxiv.org/html/2502.10857v1",
+      "publication_date": "2025-02-15",
+      "version": "v1",
+      "locator": "\u00a73 framework",
+      "access_level": "full",
+      "limitations": "General coordination precedent only",
+      "retrieved_at_utc": "2026-10-15T11:14:58.128846+00:00"
+    },
+    {
+      "id": "V10",
+      "title": "PreRoutGNN for Timing Prediction with Order Preserving Partition",
+      "url": "https://arxiv.org/html/2403.00012v2",
+      "publication_date": "2024-03-12",
+      "version": "v2",
+      "locator": "Methodology; local delay learning and cell modeling",
+      "access_level": "full",
+      "limitations": "Pre-routing prediction differs from exact fixed-parasitic scoring",
+      "retrieved_at_utc": "2026-10-15T11:14:58.128846+00:00"
+    },
+    {
+      "id": "V11",
+      "title": "ISPD26 official contest results",
+      "url": "https://www.ispd.cc/contests/26/index.html",
+      "publication_date": "unknown",
+      "version": "retrieved 2026-10-15",
+      "locator": "Contest Winners",
+      "access_level": "full",
+      "limitations": "Identities verified, algorithms not verified",
+      "retrieved_at_utc": "2026-10-15T11:14:58.128847+00:00"
+    },
+    {
+      "id": "V12",
+      "title": "ISPD27 evaluator README",
+      "url": "https://raw.githubusercontent.com/ABKGroup/ISPD27-Contest/faef83cacf70fa7923be07816d804ca9c1cef68e/evaluator/README.md",
+      "publication_date": "unknown",
+      "version": "faef83cacf70fa7923be07816d804ca9c1cef68e",
+      "locator": "raw intro lines1\u20137, MCMM_CONFIG72, outputs136\u2013137",
+      "access_level": "full",
+      "limitations": "Primary raw fetch independently confirms BC/TC/WC setup/hold; cached web rendering omitted MCMM token; no evaluator run",
+      "retrieved_at_utc": "2026-10-15T11:14:58.128848+00:00"
+    },
+    {
+      "id": "V13",
+      "title": "2026 CAD Contest at ICCAD",
+      "url": "https://www.iccad-contest.org/2026/index.html",
+      "publication_date": "unknown",
+      "version": "retrieved 2026-10-15",
+      "locator": "Contest Problems list",
+      "access_level": "full",
+      "limitations": "Inventory only, not complete contest or winner-method audit",
+      "retrieved_at_utc": "2026-10-15T11:14:58.128849+00:00"
+    }
+  ],
+  "consensus": {
+    "tasklist_sha256": "f9fc38cf9c0cef8c6bfc289808904e8fa7c367e1f029cb4c8774605564ea7d35",
+    "challenger_decision": "revision_requested",
+    "proposer_agreement_present": false,
+    "matching_dual_consent": false
+  },
+  "provenance": {
+    "released_file_hashes_verified": true,
+    "distinct_declared_sessions": true,
+    "unblinded": true,
+    "independence_limit": "Logical policy isolation on shared host; no OS confinement or native model identity verification claimed. No foreign private material accessed."
+  },
+  "checks_run": [
+    "Rehash all P/C manifest files",
+    "project.py digest exact proposer release",
+    "SHA-256 tasklist",
+    "In-memory execution of released Python toy; expected counts/assertions passed",
+    "Trusted self-freeze validator; full-repository validation delegated to coordinator"
+  ],
+  "search_log": [
+    {
+      "date": "2026-10-15",
+      "engine": "web search",
+      "query": "\"compressed\" \"timing\" \"variational execution\" ECO timing candidates",
+      "result": "No closer decision-grade primary result inspected from query; unrelated WCET/jobs/secondary results excluded; bounded search, no exhaustion claimed."
+    },
+    {
+      "date": "2026-10-15",
+      "engine": "web search",
+      "query": "\"static timing analysis\" \"candidate\" \"equivalence\" caching",
+      "result": "No closer decision-grade primary result inspected from query; unrelated WCET/jobs/secondary results excluded; bounded search, no exhaustion claimed."
+    }
+  ],
+  "limitations": [
+    "No new EDA/full-flow/training/GPU/remote/paid-API experiments.",
+    "Winner methods, commercial internals and full contemporary HeteroSTA audit remain unresolved.",
+    "No numerical performance forecast or physical measurement verified."
+  ],
+  "required_next_tasks": [
+    "C-EXP-000 exact lifted-context/cache reduction and remaining useful system delta",
+    "C-EXP-001 real candidate caller/query/commit guard trace",
+    "Correctness cases for base inheritance, reconvergence, equal-base outputs and partial fallback",
+    "Build/read-set/data/owner/allocation and matching exact-task consents before pilot"
+  ]
+}

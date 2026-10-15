@@ -1,0 +1,7 @@
+source_id,task,mechanism,evaluation,overlap,distinction,limitation
+C01/C02,Multiple concrete configurations,Conditional values and context execution,Paper/code inspected; not reproduced,Class refinement and coalescing,EDA adapter and useful cost delta remain possible,Language/runtime differs; exact baseline requires byte-record equality
+C03,Timing computation reuse,Input cache and shared canonical results,Patent read,Strong cache baseline,Mask scheduling not fully established by patent alone,Optional tolerance and incomplete engine state
+C04/C05,Timing optimization and undo,Repair/slack interface and transactional candidate selection,Source and historical paper,Engineering need and incremental baseline,Exact present batch caller pending,No measured present demand
+C11,Multi-voltage static noise,Scenario expansion and worst-case merge,Patent read,Scenario sharing neighborhood,Different output semantics,Not an exact duplicate
+C09,EDA script collaboration,Agent roles and selector,Method read,Agent lens,No selected exact mechanism equivalence,No reproduced outcome
+C10,Pre-route timing prediction,Coupled delay representation,Method read,Unified lens,Different model and decision,No fixed-parasitic exact guarantee

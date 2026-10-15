@@ -1,0 +1,13 @@
+{
+  "input_commit": "f68c1492c05be3fac5622deac4bb479eabf957de",
+  "tree": "4276445853c9bbb9fb4d05b90358e4cee221ab12",
+  "public_tag": "refs/tags/codex/gpt-innovation-source-20261015",
+  "public_repository": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment",
+  "reproduction": [
+    "git fetch origin tag codex/gpt-innovation-source-20261015",
+    "git cat-file -t f68c1492c05be3fac5622deac4bb479eabf957de",
+    "git show f68c1492c05be3fac5622deac4bb479eabf957de:docs/INNOVATION-BATCH-0002.md"
+  ],
+  "verification": "Fresh depth-1 PR-branch clone explicitly fetched the public tag, resolved the exact commit and reopened policy/runner objects. Branch-only or shallow review environments may need this explicit fetch.",
+  "scope": "Coordinator source availability receipt only; frozen scientific releases remain byte-identical."
+}

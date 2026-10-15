@@ -1,0 +1,34 @@
+{
+  "role": "challenger",
+  "reviewed_proposer_release": "SUB-169c721aec094e48787e49a1cb3da4fd5840b5c2aeb1dcddbd7ba51101ee78dc",
+  "assessment": "revise",
+  "coverage": {
+    "duplicate_prior_art": "unresolved",
+    "mechanism": "supported",
+    "composition": "unresolved",
+    "demand": "unresolved",
+    "industry_gap": "unresolved",
+    "headroom": "unresolved",
+    "contests": "unresolved",
+    "experiments": "unresolved",
+    "cost": "supported"
+  },
+  "actor_id": "ChatGPT-C05-TIMING-EDA-0006",
+  "session_id": "d8a34cff-2715-4f58-943d-cf69b6833887",
+  "input_commit": "f68c1492c05be3fac5622deac4bb479eabf957de",
+  "packet_sha256": "fed7c25eec720fe45a8a31c2ee2d61148ebac3df8ae14489baacfbec72439b09",
+  "batch_round": 1,
+  "coverage_reasons": "See challenges.md Coverage reasons table.",
+  "forecast_exposure": "Unblinded proposal/plan/workflow exposure; forecast.json not opened.",
+  "resource_status": "Source reading and document checks only; no EDA, training, paid API, or new allocation.",
+  "validation": "Trusted standalone role freeze; full project.py validate belongs to coordinator publication.",
+  "outputs": [
+    "challenges.md",
+    "sources.json",
+    "search-log.md",
+    "prior-art.csv",
+    "tasklist.md",
+    "workflow.json",
+    "experiment-consent.json"
+  ]
+}
