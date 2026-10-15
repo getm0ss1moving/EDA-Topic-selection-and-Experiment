@@ -1,0 +1,276 @@
+[
+  {
+    "id": "C01",
+    "title": "The Minimum Constraint Removal Problem with Three Robotics Applications",
+    "url": "https://motion.cs.illinois.edu/papers/wafr2012-constraintremoval.pdf",
+    "publication_date": "2012",
+    "source_type": "primary_author_paper",
+    "access_level": "full",
+    "locator": "pp.4\u20136: Discrete MCR definition, Section 3.2 subset-state exact search",
+    "supported_claim_ids": [
+      "OBJ-001"
+    ],
+    "limitations": "WAFR manuscript; no routing experiment or physical bound; selected sections inspected",
+    "retrieved_utc": "2026-10-15",
+    "retrieval_time_precision": "UTC date",
+    "version": null
+  },
+  {
+    "id": "C02",
+    "title": "Computational Tradeoffs of Search Methods for Minimum Constraint Removal Paths",
+    "url": "https://cdn.aaai.org/ojs/18380/18380-77-21896-1-2-20210717.pdf",
+    "publication_date": "2015",
+    "source_type": "primary_proceedings_paper",
+    "access_level": "full",
+    "locator": "pp.182\u2013183; Figure 3; Search for MCR Paths; Algorithm 1",
+    "supported_claim_ids": [
+      "OBJ-001"
+    ],
+    "limitations": "Proceedings year 2015, file upload 2021 is not publication date; no implementation reproduced",
+    "retrieved_utc": "2026-10-15",
+    "retrieval_time_precision": "UTC date",
+    "version": null
+  },
+  {
+    "id": "C03",
+    "title": "Graph-Based Heuristics for Minimum Constraint Removal in Cluttered Robot Motion Planning",
+    "url": "https://arxiv.org/pdf/2610.12609",
+    "publication_date": "2026-10-08",
+    "source_type": "primary_preprint",
+    "access_level": "full",
+    "locator": "Sections II\u2013III, equations (5)\u2013(6), GFS-1 and reduced-graph refinement",
+    "supported_claim_ids": [
+      "OBJ-001"
+    ],
+    "limitations": "Inspected PDF explicitly v1. HTML v2 request failed; do not inherit secondary version claims. Heuristic applicability to directed budget states unresolved",
+    "retrieved_utc": "2026-10-15",
+    "retrieval_time_precision": "UTC date",
+    "version": "2610.12609v1"
+  },
+  {
+    "id": "C04",
+    "title": "A Multicommodity Flow-Based Detailed Router With Efficient Acceleration Techniques",
+    "url": "https://www.cse.cuhk.edu.hk/~byu/papers/J27-TCAD2018-MCFRoute.pdf",
+    "publication_date": "2018-01",
+    "source_type": "primary_author_paper",
+    "access_level": "full",
+    "locator": "Sections III\u2013VI; Eq.(5); Algorithm 2; pp.219\u2013225",
+    "supported_claim_ids": [
+      "OBJ-001"
+    ],
+    "limitations": "Selected formulation/acceleration inspected; full solver and all experiments not reproduced; physical endpoint differs",
+    "retrieved_utc": "2026-10-15",
+    "retrieval_time_precision": "UTC date",
+    "version": null
+  },
+  {
+    "id": "C05",
+    "title": "ISPD 2018 Initial Detailed Routing Contest",
+    "url": "https://www.ispd.cc/contests/18/",
+    "publication_date": "2018",
+    "source_type": "official_contest",
+    "access_level": "full",
+    "locator": "Abstract, Figure 1 and evaluation kit",
+    "supported_claim_ids": [
+      "demand"
+    ],
+    "limitations": "Organizer motivation does not establish candidate opportunity frequency; no evaluator run",
+    "retrieved_utc": "2026-10-15",
+    "retrieval_time_precision": "UTC date",
+    "version": null
+  },
+  {
+    "id": "C06",
+    "title": "TritonRoute-WXL: The Open Source Router with Integrated DRC Engine",
+    "url": "https://vlsicad.ucsd.edu/Publications/Journals/j136.pdf",
+    "publication_date": "2021",
+    "source_type": "primary_author_paper",
+    "access_level": "full",
+    "locator": "Section VI, Figure 14 and Algorithms 11\u201312",
+    "supported_claim_ids": [
+      "mechanism"
+    ],
+    "limitations": "Aggressor/victim and queue methods checked; no pinned implementation trace",
+    "retrieved_utc": "2026-10-15",
+    "retrieval_time_precision": "UTC date",
+    "version": null
+  },
+  {
+    "id": "C07",
+    "title": "Effective and Efficient Detailed Routing with Adaptive Rip-up Scheme and Pin Access Refinement",
+    "url": "https://chengengjie.github.io/papers/C17-GLSVLSI21-DR.pdf",
+    "publication_date": "2022-06-06",
+    "source_type": "primary_author_paper",
+    "access_level": "full",
+    "locator": "Section 2.1, Figures 2\u20134",
+    "supported_claim_ids": [
+      "mechanism"
+    ],
+    "limitations": "Paper header is 2022 despite filename; region method checked; no reproduction",
+    "retrieved_utc": "2026-10-15",
+    "retrieval_time_precision": "UTC date",
+    "version": null
+  },
+  {
+    "id": "C08",
+    "title": "Faster goal-oriented shortest path search for bulk and incremental detailed routing",
+    "url": "https://link.springer.com/article/10.1007/s10107-023-01962-4",
+    "publication_date": "2023-05-24",
+    "source_type": "primary_paper",
+    "access_level": "full",
+    "locator": "Sections 5.1\u20135.2: backup search and incremental routing",
+    "supported_claim_ids": [
+      "mechanism"
+    ],
+    "limitations": "Full accessible article, selected sections read; private BonnRoute code not available to this review",
+    "retrieved_utc": "2026-10-15",
+    "retrieval_time_precision": "UTC date",
+    "version": null
+  },
+  {
+    "id": "C09",
+    "title": "Pinned OpenROAD detailed routing implementation",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/src/drt/src/dr/FlexDR_maze.cpp",
+    "publication_date": "2024-06-03",
+    "source_type": "primary_code",
+    "access_level": "full",
+    "locator": "Lines1477\u20131541: mazeIterInit_sortRerouteNets and mazeIterInit_sortRerouteQueue",
+    "supported_claim_ids": [
+      "experiments"
+    ],
+    "limitations": "Pinned source function definitions checked using direct HTTPS; no compile/run or branch coverage; commit date inherited from proposal, not independently timestamp-checked",
+    "retrieved_utc": "2026-10-15",
+    "retrieval_time_precision": "UTC date",
+    "version": "b16bda7e82721d10566ff7e2b68f1ff0be9f9e38"
+  },
+  {
+    "id": "C10",
+    "title": "ISPD25 Contest: Performance-Driven Large Scale Global Routing",
+    "url": "https://github.com/liangrj2014/ISPD25_contest/blob/main/index.md",
+    "publication_date": "2025",
+    "source_type": "official_contest_repository",
+    "access_level": "full",
+    "locator": "Contest introduction, evaluation and Final Submissions",
+    "supported_claim_ids": [
+      "contests"
+    ],
+    "limitations": "Moving page; rules/results inspected; winner algorithm/code not recovered; no score reproduction",
+    "retrieved_utc": "2026-10-15",
+    "retrieval_time_precision": "UTC date",
+    "version": null
+  },
+  {
+    "id": "C11",
+    "title": "ISPD26 Contest organizer repository",
+    "url": "https://raw.githubusercontent.com/ABKGroup/ISPD26-Contest/f7b29d242fc7d441f3b4eadc556f40099ccca067/README.md",
+    "publication_date": "2026",
+    "source_type": "official_contest_repository",
+    "access_level": "full",
+    "locator": "Title, table of contents, timeline, final leaderboard and baseline links",
+    "supported_claim_ids": [
+      "contests"
+    ],
+    "limitations": "Pinned README; scripts and winner methods not executed or completely reviewed",
+    "retrieved_utc": "2026-10-15",
+    "retrieval_time_precision": "UTC date",
+    "version": null
+  },
+  {
+    "id": "C12",
+    "title": "GPU-Accelerated Global Routing with Balanced Timing and Congestion Optimization",
+    "url": "https://www.aspdac.com/aspdac2026/archive/program/program-abstract.html",
+    "publication_date": "2026-01-22",
+    "source_type": "primary_conference_abstract",
+    "access_level": "abstract",
+    "locator": "Session 8E-5, authors Jinghui Zhou et al., program abstract",
+    "supported_claim_ids": [
+      "contests"
+    ],
+    "limitations": "Abstract only; GR-stage method; full paper implementation/benchmark claims unverified",
+    "retrieved_utc": "2026-10-15",
+    "retrieval_time_precision": "UTC date",
+    "version": null
+  },
+  {
+    "id": "C13",
+    "title": "Invited: Post-Placement Buffering and Sizing Contest",
+    "url": "https://vlsicad.ucsd.edu/Publications/Conferences/421/c421.pdf",
+    "publication_date": "2026-03-15",
+    "source_type": "primary_organizer_paper",
+    "access_level": "full",
+    "locator": "Section 1 Real-World Motivation and Contest Scope; Section 2 formulation",
+    "supported_claim_ids": [
+      "demand"
+    ],
+    "limitations": "Selected sections checked from full PDF; editable cells/netlist outside this anchor; no task-specific prevalence or gain inference",
+    "retrieved_utc": "2026-10-15",
+    "retrieval_time_precision": "UTC date",
+    "version": null
+  },
+  {
+    "id": "C14",
+    "title": "IC Compiler II: Place and Route Solution",
+    "url": "https://www.synopsys.com/implementation-and-signoff/physical-implementation/ic-compiler.html",
+    "publication_date": "unknown",
+    "source_type": "official_vendor",
+    "access_level": "full",
+    "locator": "About IC Compiler II and technologies",
+    "supported_claim_ids": [
+      "industry_gap"
+    ],
+    "limitations": "Advertised capability only; proprietary internals and controlled performance unknown",
+    "retrieved_utc": "2026-10-15",
+    "retrieval_time_precision": "UTC date",
+    "version": null
+  },
+  {
+    "id": "C15",
+    "title": "Incremental Capacitance Extraction and its Application to Iterative Timing-Driven Detailed Routing",
+    "url": "https://www.cecs.uci.edu/~papers/compendium94-03/papers/1999/ispd99/htmfiles/dec_hp/ispdabs.htm",
+    "publication_date": "1999",
+    "source_type": "primary_proceedings_abstract",
+    "access_level": "abstract",
+    "locator": "Session 1.4 entry p.42, authors Y. Yuan and P. Banerjee",
+    "supported_claim_ids": [
+      "mechanism"
+    ],
+    "limitations": "Abstract accessed; full-method equivalence unresolved",
+    "retrieved_utc": "2026-10-15",
+    "retrieval_time_precision": "UTC date",
+    "version": null
+  },
+  {
+    "id": "P01",
+    "title": "Frozen EDA-0001 proposer R1 release",
+    "url": "packet:shared/SUB-4d1d28908e8092c441ca120da3acc52d46c0181575fb6cafc2b2230126c763dc",
+    "publication_date": "2026-10-15",
+    "source_type": "released_role_artifact",
+    "access_level": "full",
+    "locator": "proposal.md mechanism steps1\u20137; experiment-plan.md EXP-001/002; tasklist.md T01\u2013T08",
+    "supported_claim_ids": [
+      "OBJ-001",
+      "OBJ-002",
+      "OBJ-003"
+    ],
+    "limitations": "Released proposal is target of review, not independent confirmation",
+    "retrieved_utc": "2026-10-15",
+    "retrieval_time_precision": "UTC date",
+    "version": null
+  },
+  {
+    "id": "P02",
+    "title": "Assigned research brief",
+    "url": "packet:policy/config/research-brief.json",
+    "publication_date": "2026-10-15",
+    "source_type": "owner_policy_packet",
+    "access_level": "full",
+    "locator": "compute, available_designs, minimum_meaningful_effect and feasibility_status",
+    "supported_claim_ids": [
+      "OBJ-003"
+    ],
+    "limitations": "Supplied infrastructure assertions not rerun; caps are provisional and prompt grants no new compute",
+    "retrieved_utc": "2026-10-15",
+    "retrieval_time_precision": "UTC date",
+    "version": null
+  }
+]
