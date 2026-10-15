@@ -1,0 +1,28 @@
+{
+  "completed_cycles": {
+    "D04": 0,
+    "D05": 0
+  },
+  "domains": {
+    "D04": [
+      {
+        "cycles": 0,
+        "last_scientific_decision": null,
+        "phase": "proposer",
+        "status": "researching",
+        "topic": "EDA-0005"
+      }
+    ],
+    "D05": [
+      {
+        "cycles": 0,
+        "last_scientific_decision": null,
+        "phase": "proposer",
+        "status": "researching",
+        "topic": "EDA-0006"
+      }
+    ]
+  },
+  "merged": [],
+  "published": {}
+}

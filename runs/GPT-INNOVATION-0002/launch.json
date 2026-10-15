@@ -1,0 +1,39 @@
+{
+  "backend": "fresh Codex app agents, no parent conversation",
+  "config": "config/codex-innovation-research.json",
+  "historical_inputs": {
+    "EDA-0005": "final EDA-0003 P/C/V public releases, challenge adjudication verified",
+    "EDA-0006": "final EDA-0004 P/C/V public releases, challenge adjudication verified"
+  },
+  "initial_topics": {
+    "EDA-0005": "D04",
+    "EDA-0006": "D05"
+  },
+  "input_commit": "f68c1492c05be3fac5622deac4bb479eabf957de",
+  "isolation": "Logical file-mediated seats, policy isolation on shared OS; not physical backend attestation.",
+  "local_checks": [
+    "114 unit tests passed",
+    "project structural validation passed",
+    "Python compilation passed",
+    "git diff --check passed"
+  ],
+  "models": {
+    "challenger": {
+      "effort": "low",
+      "model": "gpt-6-astra"
+    },
+    "proposer": {
+      "effort": "high",
+      "model": "gpt-6.1-sol"
+    },
+    "verifier": {
+      "effort": "low",
+      "model": "gpt-6.1-sol"
+    }
+  },
+  "new_experiment_resources": false,
+  "run_id": "GPT-INNOVATION-0002",
+  "runtime_root": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015",
+  "source_tag": "refs/tags/codex/gpt-innovation-source-20261015",
+  "target_cycles_per_domain": 4
+}

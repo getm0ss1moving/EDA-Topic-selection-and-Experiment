@@ -76,6 +76,11 @@ def add_topic(state,c,home,topic,entry,seed=True):
         names=['AGENTS.md',f'harness/{role.upper()}.md','config/research-brief.json',
                f'domains/{entry["domain"]}/brief.json','scripts/role_submission.py','scripts/project.py']
         names += [f'docs/{x}.md' for x in COMMON]
+        if c.get('batch_brief'):
+            brief=Path(c['batch_brief'])
+            if brief.is_absolute() or not brief.parts or '..' in brief.parts or brief.parts[0]!='docs':
+                raise ValueError('Batch brief must be a repository-relative docs path')
+            names.append(str(brief))
         names += [str(p.relative_to(ROOT)) for p in (ROOT/'templates/topic').iterdir() if p.is_file()]
         for name in names:
             p=packet/name;p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(frozen(state['source_commit'],name))
@@ -214,6 +219,7 @@ def job_for(state,t,c):
                 'released_inputs':paths,'previous_proposal_release':Path(t['latest']['proposer']).name if t['latest'].get('proposer') else None,
                 'batch_round':sum(x['round'] for x in state['topics'].values() if x['domain']==t['domain'])+1,
                 'batch_round_limit':c.get('stop_after_rounds'),
+                'batch_brief':c.get('batch_brief'),
                 'models':c['models'],
                 'readiness': 'logical seat registered; actual host model is recorded by the execution backend'}
     save(work/'JOB.json',assignment)
@@ -237,14 +243,16 @@ def job_for(state,t,c):
         'python3 policy/scripts/role_submission.py freeze --source release --queue submissions '
         f'--role {role} --actor {seat["actor_id"]} --session {seat["session_id"]} --topic {t["topic"]} '
         f'--ref {state["source_commit"]} --packet {seat["packet_sha256"]}\n')
+    if c.get('batch_brief'):
+        prompt += f'Read the owner batch brief at policy/{c["batch_brief"]} before research. Its scope applies to this and successor topics.\n'
     prompt += ('This owner-authorized batch has exactly four completed P/C/V cycles per domain. '
                'D04 and D05 run independently in parallel. Use this round to make concrete scientific progress; '
                'do not spend it merely asking for infrastructure permission. On rounds 1-3, refine or '
                'collect matching consents as appropriate; on round 4 give your final evidence-backed '
                'feasibility/novelty and task-list position, including any unresolved limits. '
-               'No new experiment compute is granted by this batch. Inherited R1b includes earlier '
-               'unadjudicated first-pass material and is explicitly unblinded; do not inherit independence '
-               'or treat historical verifier findings as verification of the new revision. '
+               'No new experiment compute is granted by this batch. Historical records, when supplied, '
+               'retain their documented exposure and access limits; review is explicitly unblinded. '
+               'Do not inherit independence or treat historical verifier findings as verification of a new revision. '
                'Use released-handover for your own predecessor\'s shared files, never its transcript or scratch. '
                'Write final protocol JSON to result.json in the job root after self-freezing, with status, release_id, reason. '
                'The status must be exactly "complete" or "blocked" per result.schema.json; a successfully frozen '

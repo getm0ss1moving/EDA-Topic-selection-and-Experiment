@@ -1,0 +1,54 @@
+{
+  "completed_cycles": {
+    "D04": 0,
+    "D05": 0
+  },
+  "completed_rounds": 0,
+  "coordinator_script_sha256_at_audit": "1439ff6bfc5183cd1a3651f8e2fde2f34f96d0fd09648df4320dacc26315bf22",
+  "input_commit": "f68c1492c05be3fac5622deac4bb479eabf957de",
+  "jobs": [],
+  "logical_seats": [
+    {
+      "packet_sha256": "717048304f1307e6837452c82113fc2816738fefd2c9d209b656c1279b27571e",
+      "role": "challenger",
+      "session_id": "c62e4d94-9488-43f2-906b-26539500b642",
+      "topic": "EDA-0005"
+    },
+    {
+      "packet_sha256": "b9b3d8bc704ac6b8b70e549417c704d5f4a0f3d966bdfe6c33bc9af9790bdef6",
+      "role": "proposer",
+      "session_id": "07ec73dc-1bf7-4f5c-999f-b589460c1e5e",
+      "topic": "EDA-0005"
+    },
+    {
+      "packet_sha256": "bc3345e6370fc26e78906f23270f1a60d2f597e32fe78553f4cdacac0dde3ad7",
+      "role": "verifier",
+      "session_id": "a194d866-d694-43ac-8b46-6600f0371930",
+      "topic": "EDA-0005"
+    },
+    {
+      "packet_sha256": "fed7c25eec720fe45a8a31c2ee2d61148ebac3df8ae14489baacfbec72439b09",
+      "role": "challenger",
+      "session_id": "d8a34cff-2715-4f58-943d-cf69b6833887",
+      "topic": "EDA-0006"
+    },
+    {
+      "packet_sha256": "0a344dc225723839dc6a224d16376f44459179b3b83746986b2c1253a8dd1466",
+      "role": "proposer",
+      "session_id": "53d6f5d7-1d68-4d5a-a081-2a7df44a34b0",
+      "topic": "EDA-0006"
+    },
+    {
+      "packet_sha256": "c3fda03df5f6ce9463078ab94f969d3d516729e9c87bd44a999a32ffdedb73b0",
+      "role": "verifier",
+      "session_id": "a51b3d2a-268d-4e21-b896-97ab1dd7e2c4",
+      "topic": "EDA-0006"
+    }
+  ],
+  "merged": [],
+  "published": {},
+  "scope": "Released bytes and coordinator metadata; not scientific truth or OS confinement.",
+  "snapshot_note": "Hashes reflect this audit; requested models are not independently attested.",
+  "status": "in_progress",
+  "verified_releases": []
+}
