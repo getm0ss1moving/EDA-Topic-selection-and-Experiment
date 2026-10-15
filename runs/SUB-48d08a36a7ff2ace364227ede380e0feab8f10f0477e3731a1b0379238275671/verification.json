@@ -1,0 +1,219 @@
+{
+  "decision": "revise",
+  "verifier_session": "c411c94b-521d-48a9-b109-4489482b9cc6",
+  "actor_id": "ChatGPT-V05-TIMING",
+  "input_commit": "a48f03d4bc254c0b0957d0fe0f265e072d6cf49a",
+  "packet_sha256": "c185aa8014f1936a775c86d3e418766e774100191d7c3658608e9790e9f5d7d2",
+  "reviewed_proposer_release": "SUB-798cbd734b7b9b36d5460af3487a6b0400e1c6e6b7aabb6c576d5a6ecdef0974",
+  "adjudicated_challenger_releases": [
+    "SUB-d4efe5f9b29cc9ce2f4f5db2b7da7c3aa1931b9ccd604d15d77e97ef94bc18f3"
+  ],
+  "dossier_digest": "a5a7f5f57b5a776db53d476412e8dc7e40901265182022a872edb1dd6424d563",
+  "dossier_digest_scope": "Exact supplied proposer release directory including its SUBMISSION.json; not a canonical integrated dossier digest. Recompute on integration.",
+  "gates": {
+    "novelty": false,
+    "mechanism": false,
+    "utility": false,
+    "contest_originality": false,
+    "headroom": false,
+    "feasibility": false,
+    "direction_integrity": false,
+    "experiment_consensus": false
+  },
+  "direction_penalty_checked": true,
+  "direction_penalties": {
+    "combination_drift": 1,
+    "demand_drift": 0,
+    "total": 1
+  },
+  "experiment_consensus_checked": true,
+  "abandonment_process_checked": true,
+  "source_checks": [
+    {
+      "source_id": "V-S01",
+      "url": "https://www.eecg.utoronto.ca/~najm/papers/iccad08-khaled.pdf",
+      "title": "Efficient Block-based Parameterized Timing Analysis Covering All Potentially Critical Paths",
+      "published": "2008",
+      "access": "full",
+      "locator": "Sections 4.1-4.2, PDF page 5; exact pruning and sufficient pruning",
+      "verdict": "valid",
+      "entailment": "Affine hyperplane pruning is established. It does not by itself implement discrete-engine all-scenario reports.",
+      "checked_at": "2026-10-15",
+      "limitations": "Only the named sections/functions were adjudicated; full source availability is not full-method verification.",
+      "source_type": "primary_source"
+    },
+    {
+      "source_id": "V-S02",
+      "url": "https://www.aspdac.com/aspdac2010/Archive_Folder/pdf/8B-2.pdf",
+      "title": "Unified MCMM STA engine presentation",
+      "published": "2010",
+      "access": "full",
+      "locator": "Slides 18-23 and 28, especially slide 21 incumbent Dcurrent pruning",
+      "verdict": "valid",
+      "entailment": "Path/parameter branch-and-bound and an incumbent are explicit. No identity with current proposal established.",
+      "checked_at": "2026-10-15",
+      "limitations": "Only the named sections/functions were adjudicated; full source availability is not full-method verification.",
+      "source_type": "primary_source"
+    },
+    {
+      "source_id": "V-S03",
+      "url": "https://www.eecg.utoronto.ca/~najm/papers/dac08-khaled.pdf",
+      "title": "Parameterized Timing Analysis with General Delay Models and Arbitrary Variation Sources",
+      "published": "2008",
+      "access": "full",
+      "locator": "Section 3 properties 1-3, PDF page 2",
+      "verdict": "valid",
+      "entailment": "Nonlinear function-class bounds exist under closure, boundedness and efficient extrema assumptions; nonlinear terminology is insufficient novelty.",
+      "checked_at": "2026-10-15",
+      "limitations": "Only the named sections/functions were adjudicated; full source availability is not full-method verification.",
+      "source_type": "primary_source"
+    },
+    {
+      "source_id": "V-S04",
+      "url": "https://vlsicad.ucsd.edu/Publications/Conferences/421/c421.pdf",
+      "title": "Invited: Post-Placement Buffering and Sizing Contest",
+      "published": "2026",
+      "access": "full",
+      "locator": "Section 2.3 PDF page 2; Section 5.3 PDF page 7",
+      "verdict": "valid",
+      "entailment": "2026 uses single-PVT setup and ideal clocks; MCMM, post-CTS and hold are future enhancements under consideration. Dataset lead is not ready evidence for this contract.",
+      "checked_at": "2026-10-15",
+      "limitations": "Only the named sections/functions were adjudicated; full source availability is not full-method verification.",
+      "source_type": "primary_source"
+    },
+    {
+      "source_id": "V-S05",
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/e01d3f163f483f233db00410b6515a767a6ca03b/dcalc/DmpCeff.cc",
+      "title": "OpenSTA pinned DmpCeff.cc",
+      "published": "unknown",
+      "access": "full",
+      "locator": "DmpCeffDelayCalc::setCeffAlgorithm; gateModelRd; DmpCap::gateDelaySlew/loadDelaySlew",
+      "verdict": "valid",
+      "entailment": "Branch selection uses gateModelRd and input slew; source corroborates need for interval-wide classification, not a completed proof.",
+      "checked_at": "2026-10-15",
+      "limitations": "Only the named sections/functions were adjudicated; full source availability is not full-method verification.",
+      "source_type": "primary_source"
+    },
+    {
+      "source_id": "V-S06",
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/e01d3f163f483f233db00410b6515a767a6ca03b/liberty/TableModel.cc",
+      "title": "OpenSTA pinned TableModel.cc",
+      "published": "unknown",
+      "access": "full",
+      "locator": "Table2::findValue, bilinear expression and double intermediates",
+      "verdict": "valid",
+      "entailment": "Actual arithmetic differs from an abstract float32-only allowance. Full scaling/cast/search enclosure remains unverified.",
+      "checked_at": "2026-10-15",
+      "limitations": "Only the named sections/functions were adjudicated; full source availability is not full-method verification.",
+      "source_type": "primary_source"
+    },
+    {
+      "source_id": "V-S07",
+      "url": "https://algos.inesc-id.pt/projects/rav/Silva10.pdf",
+      "title": "Effective Corner-Based Techniques for Variation-Aware IC Timing Verification",
+      "published": "2010",
+      "access": "abstract",
+      "locator": "DOI 10.1109/TCAD.2009.2034343; indexed author-PDF abstract",
+      "verdict": "unresolved",
+      "entailment": "Direct PDF reopened twice: fetch timeout. Indexed abstract claims exact worst-delay/slack; no full-method comparison or novelty clearance.",
+      "checked_at": "2026-10-15",
+      "limitations": "Only the named sections/functions were adjudicated; full source availability is not full-method verification.",
+      "source_type": "primary_source"
+    },
+    {
+      "source_id": "V-S08",
+      "url": "https://api.crossref.org/works/10.1145/3816045",
+      "title": "Interpretable Cross-Corner Timing Prediction Based on XGBoost-SHAP Solution",
+      "published": "2026",
+      "access": "metadata",
+      "locator": "DOI lead; direct Crossref access failed",
+      "verdict": "unresolved",
+      "entailment": "Search located metadata/secondary abstract only; no primary full-method entailment adopted.",
+      "checked_at": "2026-10-15",
+      "limitations": "Only the named sections/functions were adjudicated; full source availability is not full-method verification.",
+      "source_type": "primary_source"
+    }
+  ],
+  "objections": [
+    {
+      "id": "OBJ-001",
+      "claim_id": "CLM-030/043; TASK-01/06",
+      "verdict": "valid",
+      "blocking": true,
+      "resolution": "open",
+      "source_ids": [
+        "V-S01",
+        "V-S02",
+        "V-S03"
+      ],
+      "rationale": "Plan line 13 names B1 but lacks a paired operation-level P/B1 specification. Valid prerequisite to interpreting H2, not proof of duplication or a prohibition on read-only research.",
+      "action": "Freeze interval domain, arithmetic, information/cache access, classification, fallback closure and WNS scheduling for both algorithms; identify one named delta and hand-trace an admissible graph before coding."
+    },
+    {
+      "id": "OBJ-002",
+      "claim_id": "CLM-035; TASK-01/03",
+      "verdict": "valid",
+      "blocking": false,
+      "resolution": "open",
+      "source_ids": [
+        "V-S04"
+      ],
+      "rationale": "ISPD2026 paper supplies a related dataset lead omitted by this audit and explicitly separates present assumptions from future roadmap. No current proposal misrepresentation or certificate duplication is established.",
+      "action": "Add scoped ISPD audit; inspect final rules/results and licenses. Exclude present fixture from propagated-clock multicorner setup/hold readiness unless separately generated and pinned. Winner overlap remains unresolved."
+    }
+  ],
+  "tasklist_sha256": "c082e16aa927e8fc7bb6c1ebcbb750004ed0ccbe4b71dd0f105cf58a75c789e1",
+  "consensus": {
+    "matching_consents": false,
+    "reason": "Neither current role signed consent; tasklist is expressly not ready. No abandonment consents."
+  },
+  "independence": {
+    "review_unblinded": true,
+    "own_predecessor_handover_read": true,
+    "legacy_verdict_applies_to": "R0 only; no inherited R1b/GPT verification",
+    "foreign_private_material_read": false,
+    "sessions_distinct": true,
+    "logical_registration": "JOB and manifests bind distinct seats; no separate registry available in standalone packet; physical model identity not independently attested"
+  },
+  "run_record": {
+    "output_paths": [
+      "release/verification.md",
+      "release/verification.json",
+      "release/workflow.json"
+    ],
+    "checks": [
+      "Trusted verifier release-manifest verification passed for both inputs",
+      "project.py digest on supplied proposer release",
+      "JSON parse and trusted freeze validation"
+    ],
+    "full_repository_validate": "Not run: standalone packet lacks full repository; coordinator performs publication validation. No checkout accessed.",
+    "experiments": "None; no compute allocated",
+    "searches": [
+      {
+        "query": "exact multi-corner timing 2025 pruning certificate",
+        "engine": "web search",
+        "date": "2026-10-15",
+        "result": "ASP-DAC2025 predictor and patent lead; not adjudicated as equivalent or novel"
+      },
+      {
+        "query": "10.1109/TCAD.2009.2034343 worst slack",
+        "engine": "web search",
+        "date": "2026-10-15",
+        "result": "Original author-PDF indexed abstract found; direct fetch timed out"
+      },
+      {
+        "query": "10.1145/3816045 timing",
+        "engine": "web search",
+        "date": "2026-10-15",
+        "result": "Recent predictor metadata lead; primary full method unresolved"
+      }
+    ],
+    "search_stop": "Bounded review, not exhaustive novelty search; two expansions did not establish closure."
+  },
+  "reversal_conditions": [
+    "Resolve paired mechanism delta and closest full-method overlaps",
+    "Discharge engine arithmetic/classification/search semantics for every enabled certificate",
+    "Establish useful unique-work headroom, representative licensed data and actual allocation",
+    "Restore zero accepted-topic drift and collect matching same-revision task-hash consents"
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "role": "proposer",
+  "actor_id": "ChatGPT-P05-TIMING-EDA-0004",
+  "session_id": "890f3b5f-a234-45ac-9b26-a39cc34133e7",
+  "topic": "EDA-0004",
+  "domain": "D05",
+  "batch_round": 4,
+  "batch_round_limit": 4,
+  "initial_successor_revision": "P4-01",
+  "input_commit": "a48f03d4bc254c0b0957d0fe0f265e072d6cf49a",
+  "packet_sha256": "cd7f289283c0ef176125fcd266cd4fda9aba02467917228ec9fbc1ab20a30b0a",
+  "assessment": "unresolved",
+  "recommended_action": "independent_review_then_end_authorized_batch; no_experiment",
+  "requested_model": {
+    "effort": "high",
+    "model": "gpt-6.1-sol"
+  },
+  "model_attestation": "Not separately observed by role; JOB assignment recorded.",
+  "predecessor_topic": "EDA-0002",
+  "predecessor_manifest_checks": "All three passed trusted role_submission.py verify.",
+  "inherited_signatures_or_approval": false,
+  "unblinded": true,
+  "independence_boundary": "Only common policy, own proposer harness and explicitly released predecessor output; no foreign private inputs, checkout, sessions, memories, messages or subagents.",
+  "coverage": {
+    "duplicate_prior_art": "unresolved",
+    "mechanism": "unresolved",
+    "composition": "unresolved",
+    "demand": "unresolved",
+    "industry_gap": "unresolved",
+    "headroom": "unresolved",
+    "contests": "unresolved",
+    "experiments": "unresolved",
+    "cost": "unresolved"
+  },
+  "scientific_findings": [
+    "New-ID paired continuation representation specified; no renamed parked CAP/corner certificate.",
+    "Exact scalar suffix comparator has at least as strong endpoint elimination; net-work witness absent.",
+    "W1 is analytic coarse-bound separation only.",
+    "Novelty/readiness not claimed; no consent or actual allocation."
+  ],
+  "tasklist_sha256": "f24d2bfb1611ba6b87705fd1c4d70f1dec38ba08c2d06c250d36a06ba7215c58",
+  "experiments_run": false,
+  "new_expenditure": false,
+  "new_compute_allocated": false,
+  "numerical_forecasts": null,
+  "run_record": "runs/proposer-run.json",
+  "sources_record": "sources.json",
+  "output_paths": [
+    "release/contest-audit.md",
+    "release/direction-control.json",
+    "release/experiment-plan.md",
+    "release/forecast.json",
+    "release/industry-gap.md",
+    "release/prior-art.csv",
+    "release/proposal.md",
+    "release/responses.md",
+    "release/search-log.md",
+    "release/sources.json",
+    "release/tasklist.md",
+    "release/workflow.json"
+  ],
+  "validation": {
+    "standalone_trusted_freeze": "Trusted role_submission.py freeze/verify is the final check; content-addressed SUBMISSION.json records successful completion.",
+    "repository_project_validate": "Not run: standalone prompt delegates full repository validation to publication coordinator; checkout access prohibited.",
+    "scope": "Mechanical checks never constitute scientific approval.",
+    "local_checks": [
+      "All 12 allowed role files present and nonempty.",
+      "All own JSON parsed; source IDs unique and cited Sxx IDs resolved.",
+      "No unresolved placeholder tokens; unknown scientific claims explicitly identified.",
+      "Task execution caps sum to 8.00 proposed CPU-hours; actual allocation absent.",
+      "Task producer/consumer order audited as acyclic in tasklist.md.",
+      "All three predecessor manifests verified."
+    ]
+  }
+}

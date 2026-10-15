@@ -1,0 +1,11 @@
+# Independent headroom assessment
+
+Unblinded, conditional assessment; no numeric performance forecast is supportable. Proposal prose exposed a 20% screening target and historical failures before this assessment. No historical verification is inherited.
+
+Let F be measured full-analysis cost that the candidate cannot avoid (common input/report work, exact clocks and compulsory exact contexts), R be removable exact work, and H be additional bounds/classification/WNS/scheduling overhead. If B0=F+R and an unrealistically perfect candidate removes all R, its maximum saving is (R-H)/(F+R). A necessary condition for 20% saving is R >= 0.20 B0 + H. This is elementary cost accounting under additive, matched-resource measurements, not an EDA complexity theorem. Caching, overlap and parallel phases require a measured critical-path model instead of naive summation.
+
+Independent structural counterexample (inference, not measured fixture): many certified endpoints share almost every expensive upstream operation with one uncertified endpoint. Full dependency closure can then require nearly all exact work even as certified endpoint fraction approaches one. Similarly, an all-positive report can force incumbent refinement when loose bounds fail to identify exact minimum slack. The proposal already anticipates both; require explicit fixtures rather than restating them as fresh disproof.
+
+Plausible observed saving range is unknown; slowdowns are possible and no positive lower bound follows from eligibility. Perfect classification is not free: CPC is already a cheap table/Elmore branch, while classification and outward arithmetic have real overhead (C-S06/07). No measured overhead or CPC prevalence exists here. C-S02 section 5 supplies a historical example of cleanup consuming filtering gains under a different model; it motivates the test but supplies no transferable percentage.
+
+Falsification priorities: (1) B1/P algorithm identity; (2) complete numerical and tag soundness; (3) unique avoidable work including exact WNS; (4) actual characterized data and allocated cost; (5) incremental edit-loop benefit. No claimed theoretical saturation, universal novelty or publication probability.

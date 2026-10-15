@@ -1,0 +1,7 @@
+source_id,task_formulation,mechanism,data,evaluation,assumptions,limitation,overlap,proposed_distinction
+C-S01,PVT slack estimation,clock-only plus anchor,industrial circuits,published accuracy/runtime,restricted margins and model,not current exact output contract,clock pass,engine-relative sound bounds pending
+C-S02,parameterized potential critical paths,sufficient and exact pruning,ISCAS85,paper Table1,affine timing,not arbitrary Liberty oracle,bound/filter/refine,explicit B1 delta needed
+C-S03,general model timing,nonlinear guaranteed max bounds,paper examples,published tests,function-class closure and efficient extrema,not arbitrary engine arithmetic,nonlinear bounds,characterized calculator enclosure pending
+C-S04,exact worst corner delay,hybrid path/parameter BNB,slide circuit examples,slides only; no reproduction,linear parameter model,worst result not full triple report,incumbent pruning,same oracle/output mapping unresolved
+C-S05,multi-corner path elimination,variable cutoffs,patent description,no independent test,estimated pass threshold,not demonstrated sound certificate,threshold filtering,soundness might distinguish; unproved
+C-S09,post-placement sizing and buffering,contest evaluation,ASAP7 public/hidden suite,organizer paper,single-corner setup ideal clock,2027 roadmap not current feature,engineering context and possible fixture,extra corner and clock provenance needed
