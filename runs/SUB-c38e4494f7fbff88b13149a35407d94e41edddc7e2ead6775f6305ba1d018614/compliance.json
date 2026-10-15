@@ -1,0 +1,131 @@
+{
+  "schema": 1,
+  "role": "verifier",
+  "actor_id": "ChatGPT-B03-PROTOCOL-D05-EDA-0007-R3",
+  "session_id": "8053cef5-afcf-4dc5-aa8e-cc71a73118d1",
+  "input_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+  "packet_sha256": "e87f8ffba3b852169da7a5d5b8d76ab37bba8dd8d1f9ad1c21a6aa55c49be646",
+  "job_id": "24de5a49-3941-45e9-b8ef-44c83f7b756f",
+  "read_releases": [
+    "SUB-261aace737adca3c4e2a7d350c74b3613e49885585048bace6c03f3272213ab7",
+    "SUB-43ec8c256a5116bee2790bbbb147ed089d72731f6051d10a6bbe479ffb2578b9",
+    "SUB-f1d0c0c2682c4c400b66300ff48a498948f9fbc95d19db10151fa7cd92f8f4fa",
+    "SUB-f597ccc56ee643b3126c188c6892aee3ab54470d66586d18f397f52a38151312"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0,
+    "checkout_access_explanation": "No checkout file opened. First absolute assigned JOB read had inherited checkout cwd only; all subsequent reads/writes used assigned job or own /tmp script. User-injected context is not a filesystem read."
+  },
+  "rules": {
+    "inputs": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json#/roles",
+        "verification.json#/structural_checks",
+        "operations"
+      ],
+      "limits": "Own bounded public ledger, not an independent complete tool trace. No external sources or private role material accessed."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json#/roles",
+        "verification.json#/structural_checks",
+        "operations"
+      ],
+      "limits": "Own bounded public ledger, not an independent complete tool trace. No external sources or private role material accessed."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json#/roles",
+        "verification.json#/structural_checks",
+        "operations"
+      ],
+      "limits": "Own bounded public ledger, not an independent complete tool trace. No external sources or private role material accessed."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json#/roles",
+        "verification.json#/structural_checks",
+        "operations"
+      ],
+      "limits": "Own bounded public ledger, not an independent complete tool trace. No external sources or private role material accessed."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json#/roles",
+        "verification.json#/structural_checks",
+        "operations"
+      ],
+      "limits": "Own bounded public ledger, not an independent complete tool trace. No external sources or private role material accessed."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json#/roles",
+        "verification.json#/structural_checks",
+        "operations"
+      ],
+      "limits": "Own bounded public ledger, not an independent complete tool trace. No external sources or private role material accessed."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json#/roles",
+        "verification.json#/structural_checks",
+        "operations"
+      ],
+      "limits": "Own bounded public ledger, not an independent complete tool trace. No external sources or private role material accessed."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json#/roles",
+        "verification.json#/structural_checks",
+        "operations"
+      ],
+      "limits": "Own bounded public ledger, not an independent complete tool trace. No external sources or private role material accessed."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json#/roles",
+        "verification.json#/structural_checks",
+        "operations"
+      ],
+      "limits": "Own bounded public ledger, not an independent complete tool trace. No external sources or private role material accessed."
+    }
+  },
+  "operations": [
+    "Read assigned JOB/prompt, common policies and own verifier harness only before shared discovery; initial job directory inventory included names, not shared science.",
+    "Read explicitly released P/C/V files, descriptors, original rejected V and platform-event metadata. Large batched outputs partially truncated; decisive fields/diff reread.",
+    "Own standard-library JSON/hash/allowlist/diff/consent checks; trusted role_submission verify passed on all four releases; no supplied research code executed.",
+    "Write own English verification.md/json, workflow.json, compliance.json and own /tmp/eda_audit_d05_r3.py.",
+    "Validate own audit/ledger; execute assigned trusted self-freeze; write result.json after success. Full repository validation reserved for coordinator."
+  ],
+  "incidents": [
+    {
+      "id": "OBS-001",
+      "description": "Some combined text reads truncated, recorded as bounded access. Initial tool invocation preceded commentary. No private exposure, cross-role messages, checkout access or new experiment."
+    }
+  ],
+  "observability": "Self-authored public activity ledger, not a complete tool trace or evidence of absent undisclosed actions."
+}

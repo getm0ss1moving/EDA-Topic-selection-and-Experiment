@@ -1,0 +1,7 @@
+{
+  "session_id": "5796edbb-fac9-477b-ab72-194c4cbfe34c",
+  "decision": "revision_requested",
+  "signed_revision": "SUB-ebe8adb725c37ba6e164d487febc9021dddc8e911cf79e56ada9e9d2bd5c5ace",
+  "tasklist_sha256": "0fb946b23dce8b14b97d3baf43cb04cecabbfc82f872947869668dfe82c5bda8",
+  "rationale": "Own revision request for the earlier immutable P2 plan only. R3 tasks/dependencies changed; actual allocation, owners, lawful workload, safe complete adapter, thresholds and independent matching exact-task consents are absent. No R3 execution agreement."
+}

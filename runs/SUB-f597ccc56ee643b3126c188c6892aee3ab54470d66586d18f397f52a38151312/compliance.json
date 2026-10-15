@@ -1,0 +1,156 @@
+{
+  "schema": 1,
+  "role": "verifier",
+  "actor_id": "ChatGPT-V05-TIMING-B03-EDA-0007-REPLACEMENT-1-506e0f6e",
+  "session_id": "bfed115a-3d9b-43a8-88ed-35eadbc3186f",
+  "input_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+  "packet_sha256": "a628fc9403ccb57a82797cdd71108d68185d66bf2685845847b121742ddb8422",
+  "job_id": "1b43edf9-2877-400a-8144-b3f76d1f4c0f",
+  "read_releases": [
+    "SUB-43ec8c256a5116bee2790bbbb147ed089d72731f6051d10a6bbe479ffb2578b9",
+    "SUB-261aace737adca3c4e2a7d350c74b3613e49885585048bace6c03f3272213ab7",
+    "SUB-ebe8adb725c37ba6e164d487febc9021dddc8e911cf79e56ada9e9d2bd5c5ace",
+    "SUB-399339b3dae4b21aa15b73db0d76cdf065e86a7be3ec7a36f60f6246f91637cd",
+    "SUB-573a2812a0f0eb6551328cf55dc2994ad483dbe36cd866830b34f06dd959ff52"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0,
+    "checkout_access_explanation": "No checkout files opened. All shell operations after first absolute JOB read used the assigned job as workdir. User-supplied conversation instructions are not filesystem checkout access."
+  },
+  "rules": {
+    "inputs": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json#/released_inputs",
+        "compliance.json#/read_releases",
+        "policy common docs and own verifier harness"
+      ],
+      "limits": "Self-authored bounded ledger, not proof of unseen behavior or independent backend attestation."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json",
+        "verification.md",
+        "JOB.json",
+        "operations below"
+      ],
+      "limits": "Self-authored bounded ledger, not proof of unseen behavior or independent backend attestation."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json",
+        "verification.md",
+        "JOB.json",
+        "operations below"
+      ],
+      "limits": "Self-authored bounded ledger, not proof of unseen behavior or independent backend attestation."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json",
+        "verification.md",
+        "JOB.json",
+        "operations below"
+      ],
+      "limits": "Self-authored bounded ledger, not proof of unseen behavior or independent backend attestation."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json",
+        "verification.md",
+        "JOB.json",
+        "operations below"
+      ],
+      "limits": "Self-authored bounded ledger, not proof of unseen behavior or independent backend attestation."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json",
+        "verification.md",
+        "JOB.json",
+        "operations below"
+      ],
+      "limits": "Self-authored bounded ledger, not proof of unseen behavior or independent backend attestation."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json",
+        "verification.md",
+        "JOB.json",
+        "operations below"
+      ],
+      "limits": "Self-authored bounded ledger, not proof of unseen behavior or independent backend attestation."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json",
+        "verification.md",
+        "JOB.json",
+        "operations below"
+      ],
+      "limits": "Self-authored bounded ledger, not proof of unseen behavior or independent backend attestation."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json",
+        "verification.md",
+        "JOB.json",
+        "operations below"
+      ],
+      "limits": "Self-authored bounded ledger, not proof of unseen behavior or independent backend attestation."
+    }
+  },
+  "operations": [
+    {
+      "action": "intake",
+      "detail": "Read assigned JOB/prompt, common policies and only verifier harness; policy filename inventory before all common text rereads, no foreign harness."
+    },
+    {
+      "action": "released_reads",
+      "detail": "Current P/C proposal, sources, tasklists, responses, direction and consents; selected previous P2 proposal and released protocol audit JSON; long batches partially truncated. No withheld inputs."
+    },
+    {
+      "action": "external_sources",
+      "detail": "Independent web open/find/search plus urllib raw T01..T05 to own scratch; read as data only. URLs, locators and search terms in verification.json."
+    },
+    {
+      "action": "analytical",
+      "detail": "Own Fraction ratio/support/observed-zero/cost checks saved scratch/analysis.json; no proposer or downloaded code execution."
+    },
+    {
+      "action": "validation",
+      "detail": "Trusted role_submission verify for current P/C succeeded; project.py digest current P yielded recorded digest. Full repository validation not run under standalone override."
+    },
+    {
+      "action": "output",
+      "detail": "Own scratch and release verification.json, verification.md, workflow.json, compliance.json; trusted freeze to own submissions and result.json. No PR approval/merge or external messaging."
+    }
+  ],
+  "incidents": [
+    {
+      "id": "ATTEMPT-INTERRUPTION",
+      "classification": "reported_interrupted_attempt",
+      "detail": "Coordinator explicitly reports an interrupted prior attempt. No prior completion/approval is claimed. No own partial release existed at inspection; no private prior traces accessed. Preserve report rather than erase it."
+    },
+    {
+      "id": "COMMUNICATION-001",
+      "classification": "non_scientific_workflow_note",
+      "detail": "Initial tool read preceded progress commentary; subsequent Chinese user-facing updates follow user language instruction. All scientific artifacts English. Parent delivered assignment and benign-scope reminder only; no scientific role messages sent or requested."
+    }
+  ],
+  "observability": "Self-authored public activity ledger; cannot certify absence of undisclosed actions, shared-OS isolation or actual backend model. No subagents, agent messages, EDA/build/training/remote/paid runs performed."
+}

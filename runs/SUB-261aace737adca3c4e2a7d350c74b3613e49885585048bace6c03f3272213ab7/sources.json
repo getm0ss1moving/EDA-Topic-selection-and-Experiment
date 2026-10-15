@@ -1,0 +1,137 @@
+[
+  {
+    "id": "S01",
+    "title": "Constrained Two-step Look-Ahead Bayesian Optimization",
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2021/file/685217557383cd194b4f10ae4b39eebf-Paper.pdf",
+    "type": "primary external source",
+    "published": "2021",
+    "retrieved_utc": "2026-10-15T15:17:55.627027+00:00",
+    "access": "full",
+    "locator": "physical PDF pp3-5 sections2.3 and3.2, Eq1",
+    "claims": [
+      "CLM-703",
+      "CLM-712"
+    ],
+    "limitations": "Selected acquisition sections inspected; independent priors; no numerical performance adopted."
+  },
+  {
+    "id": "S02",
+    "title": "High-Performance Gate Sizing with a Signoff Timer",
+    "url": "https://vlsicad.ucsd.edu/Publications/Conferences/304/c304.pdf",
+    "type": "primary external source",
+    "published": "2013",
+    "retrieved_utc": "2026-10-15T15:17:55.627167+00:00",
+    "access": "full",
+    "locator": "physical PDF p3 section3.1 Offset-based timing calibration",
+    "claims": [
+      "CLM-703",
+      "CLM-712"
+    ],
+    "limitations": "Selected text only; no implementation reproduction."
+  },
+  {
+    "id": "S03",
+    "title": "Disentangled Differentiable Timing-Power Co-Optimization with Quad-Gradient Gate Sizing",
+    "url": "https://guozz.cn/publication/phyoptdac-26/phyoptdac-26.pdf",
+    "type": "primary external source",
+    "published": "2026",
+    "retrieved_utc": "2026-10-15T15:17:55.627168+00:00",
+    "access": "full",
+    "locator": "physical PDF pp4-5 sections3.3/3.4, Eqs6-11 and section4.2",
+    "claims": [
+      "CLM-703",
+      "CLM-712"
+    ],
+    "limitations": "Selected method inspected; reported hardware differs; no gains adopted."
+  },
+  {
+    "id": "S04",
+    "title": "MeasuredVtSwapGenerator.cc",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/3549d60529517dc82deb7f0ff769345e9a424911/src/rsz/src/move/MeasuredVtSwapGenerator.cc",
+    "type": "primary external source",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-15T15:17:55.627170+00:00",
+    "access": "full",
+    "locator": "raw one-based105-129 selectCandidateCells",
+    "claims": [
+      "CLM-703",
+      "CLM-712"
+    ],
+    "limitations": "Source read as data; no build or runtime; web rendered line numbers differ."
+  },
+  {
+    "id": "S05",
+    "title": "MeasuredVtSwapPolicy.cc",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/3549d60529517dc82deb7f0ff769345e9a424911/src/rsz/src/policy/MeasuredVtSwapPolicy.cc",
+    "type": "primary external source",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-15T15:17:55.627171+00:00",
+    "access": "full",
+    "locator": "raw one-based260-288 estimateAndCommitBestCandidate",
+    "claims": [
+      "CLM-703",
+      "CLM-712"
+    ],
+    "limitations": "Selected caller read; no complete transaction/oracle verification."
+  },
+  {
+    "id": "S06",
+    "title": "ISPD2026 official contest winners",
+    "url": "https://www.ispd.cc/contests/26/index.html",
+    "type": "primary external source",
+    "published": "2026",
+    "retrieved_utc": "2026-10-15T15:17:55.627173+00:00",
+    "access": "full",
+    "locator": "Contest Winners ordered list",
+    "claims": [
+      "CLM-702",
+      "CLM-709"
+    ],
+    "limitations": "Identity only; algorithm unavailable in inspected page."
+  },
+  {
+    "id": "S07",
+    "title": "Constrained Bayesian Experimental Design via Online Planning",
+    "url": "https://arxiv.org/abs/2605.26990",
+    "type": "primary external source",
+    "published": "2026",
+    "retrieved_utc": "2026-10-15T15:17:55.627174+00:00",
+    "access": "abstract",
+    "locator": "Abstract, arXiv2605.26990",
+    "claims": [
+      "CLM-702",
+      "CLM-709"
+    ],
+    "limitations": "Adjacent planning lead; no full-method equivalence inference."
+  },
+  {
+    "id": "S08",
+    "title": "2025 CAD Contest problems",
+    "url": "https://www.iccad-contest.org/2025/Problems.html",
+    "type": "primary external source",
+    "published": "2025",
+    "retrieved_utc": "2026-10-15T15:17:55.627175+00:00",
+    "access": "metadata",
+    "locator": "Problem C title and result/slide links in indexed official page",
+    "claims": [
+      "CLM-702",
+      "CLM-709"
+    ],
+    "limitations": "Search-index source text only; linked methods not inspected."
+  },
+  {
+    "id": "S09",
+    "title": "Prof. Yu Bei team won 2025 CAD Contest",
+    "url": "https://www.cse.cuhk.edu.hk/news/achievements/iccad2025/",
+    "type": "primary external source",
+    "published": "2025-12-01",
+    "retrieved_utc": "2026-10-15T15:17:55.627176+00:00",
+    "access": "metadata",
+    "locator": "institutional announcement paragraph describing hybrid discrete sign-off and gradients",
+    "claims": [
+      "CLM-702",
+      "CLM-709"
+    ],
+    "limitations": "Primary institutional report via indexed text; not a technical winner report."
+  }
+]

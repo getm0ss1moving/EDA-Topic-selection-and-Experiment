@@ -668,6 +668,62 @@
       "session_id": "2b352162-5dc9-4239-bfc8-8c876de59d4b",
       "session_kind": "independent governance protocol audit; not scientific acceptance",
       "topic": "EDA-0008"
+    },
+    {
+      "actor_id": "ChatGPT-C04-PHYSICAL-B03-EDA-0009",
+      "github_login": "getm0ss1moving (transport account only; not an independent reviewer)",
+      "independence_attestation": "Separate role inputs and own files only; shared OS account, policy isolation.",
+      "input_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+      "model": "gpt-6-astra",
+      "operator": "getm0ss1moving",
+      "packet_sha256": "3d8eeb0deccb9ae624fc670d437c2b40da26cd425da309de94e71e569e11b9be",
+      "platform": "OpenAI Codex",
+      "role": "challenger",
+      "session_id": "2f77fe2e-7fc6-48e3-ae9f-8e58df92c79d",
+      "session_kind": "logical file-mediated seat; fresh isolated-input execution per job",
+      "topic": "EDA-0009"
+    },
+    {
+      "actor_id": "ChatGPT-P04-PHYSICAL-B03-EDA-0009",
+      "github_login": "getm0ss1moving (transport account only; not an independent reviewer)",
+      "independence_attestation": "Separate role inputs and own files only; shared OS account, policy isolation.",
+      "input_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+      "model": "gpt-6.1-sol",
+      "operator": "getm0ss1moving",
+      "packet_sha256": "025ffe86fbd9a4fa31105c4bf0487d2b68d9515524613109f60e8d196d6acb49",
+      "platform": "OpenAI Codex",
+      "role": "proposer",
+      "session_id": "a6cdf350-7e86-4988-92ca-660db08d6d53",
+      "session_kind": "logical file-mediated seat; fresh isolated-input execution per job",
+      "topic": "EDA-0009"
+    },
+    {
+      "actor_id": "ChatGPT-V04-PHYSICAL-B03-EDA-0009",
+      "github_login": "getm0ss1moving (transport account only; not an independent reviewer)",
+      "independence_attestation": "Separate role inputs and own files only; shared OS account, policy isolation.",
+      "input_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+      "model": "gpt-6.1-sol",
+      "operator": "getm0ss1moving",
+      "packet_sha256": "efe09fccc2d75536f767b96d8a3abfca2ee6c2092a5cabcd1ae6d316a6e72d18",
+      "platform": "OpenAI Codex",
+      "role": "verifier",
+      "session_id": "7a28c23e-2907-49c3-858b-ae7d875697eb",
+      "session_kind": "logical file-mediated seat; fresh isolated-input execution per job",
+      "topic": "EDA-0009"
+    },
+    {
+      "actor_id": "ChatGPT-B03-PROTOCOL-D05-EDA-0007-R3",
+      "github_login": "getm0ss1moving (transport only)",
+      "independence_attestation": "Fresh input-only execution distinct from all three scientific authors; policy isolation.",
+      "input_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+      "model": "gpt-6.1-sol",
+      "operator": "getm0ss1moving",
+      "packet_sha256": "e87f8ffba3b852169da7a5d5b8d76ab37bba8dd8d1f9ad1c21a6aa55c49be646",
+      "platform": "OpenAI Codex",
+      "role": "verifier",
+      "session_id": "8053cef5-afcf-4dc5-aa8e-cc71a73118d1",
+      "session_kind": "independent governance protocol audit; not scientific acceptance",
+      "topic": "EDA-0007"
     }
   ],
   "verifier_identity_corrections": [

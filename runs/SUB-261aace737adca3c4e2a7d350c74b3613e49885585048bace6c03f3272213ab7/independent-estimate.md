@@ -1,0 +1,3 @@
+# Independent estimate
+
+Physical speedup, useful residual rank, candidate-count distribution and probability of downstream gain: unknown; calibrated numeric estimates null. This review is explicitly unblinded and inspected synthetic numbers in proposal.md. It did not inspect forecast.json. Synthetic dimensionless posterior identities are not physical forecasts. Equal-cost necessary savings condition H<(n-k)t is valid but workload amounts are unknown. The exact full-rank D0 local two-query model has zero policy headroom; transferring that saturation conclusion to actual circuits is unsupported.

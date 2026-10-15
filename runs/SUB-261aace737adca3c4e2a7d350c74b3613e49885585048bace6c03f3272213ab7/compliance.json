@@ -1,0 +1,126 @@
+{
+  "schema": 1,
+  "role": "challenger",
+  "actor_id": "ChatGPT-C05-TIMING-B03-EDA-0007-REPLACEMENT-1-3f76bcf0",
+  "session_id": "a758be30-1627-4434-bc85-379554161f43",
+  "input_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+  "packet_sha256": "7b2557a3e2917296cc9a80fcd6f54010af7f084ce8722fac9eeb382643cbd0de",
+  "job_id": "bf3ad0dc-1cbd-4d20-b4ef-b9a735bececd",
+  "read_releases": [
+    "SUB-43ec8c256a5116bee2790bbbb147ed089d72731f6051d10a6bbe479ffb2578b9",
+    "SUB-13a40498da3f7157d34b903152f0d7531070e03db61f3a487ab5338f52e29a4a"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0,
+    "checkout_access_explanation": "Commands used only assigned job/policy/shared paths; initial injected environment names checkout but it was not opened."
+  },
+  "rules": {
+    "inputs": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md",
+        "challenges.md",
+        "JOB.json"
+      ],
+      "limits": "Self-report only; no independent OS/backend audit. Source coverage and physical readiness remain limited."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md",
+        "challenges.md",
+        "JOB.json"
+      ],
+      "limits": "Fresh assigned task context included two coordinator task messages (assignment and clarification), not scientific role private notes. No parent transcript inspection or messaging. No independence proof from self-report."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md",
+        "challenges.md",
+        "JOB.json"
+      ],
+      "limits": "Self-report only; no independent OS/backend audit. Source coverage and physical readiness remain limited."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md",
+        "challenges.md",
+        "JOB.json"
+      ],
+      "limits": "Self-report only; no independent OS/backend audit. Source coverage and physical readiness remain limited."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md",
+        "challenges.md",
+        "JOB.json"
+      ],
+      "limits": "Self-report only; no independent OS/backend audit. Source coverage and physical readiness remain limited."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md",
+        "challenges.md",
+        "JOB.json"
+      ],
+      "limits": "Self-report only; no independent OS/backend audit. Source coverage and physical readiness remain limited."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md",
+        "challenges.md",
+        "JOB.json"
+      ],
+      "limits": "Self-report only; no independent OS/backend audit. Source coverage and physical readiness remain limited."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md",
+        "challenges.md",
+        "JOB.json"
+      ],
+      "limits": "Self-report only; no independent OS/backend audit. Source coverage and physical readiness remain limited."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md",
+        "challenges.md",
+        "JOB.json"
+      ],
+      "limits": "Self-report only; no independent OS/backend audit. Source coverage and physical readiness remain limited."
+    }
+  },
+  "operations": [
+    "Read JOB/prompt then supplied common policies, challenger harness and D05 brief.",
+    "Read current released P3 files and V2 verification.md; details in search-log.",
+    "Public search/open/find and raw public source reads as data.",
+    "Own Fraction arithmetic and role-owned artifact writes in this job.",
+    "Trusted self-freeze/verify planned; result.json will report actual outcome. Full repository validation deferred to coordinator per standalone prompt."
+  ],
+  "incidents": [
+    {
+      "id": "INC-001",
+      "description": "Coordinator clarification reports a platform interruption of an earlier attempt. This execution does not inspect private earlier transcripts, cannot attest what that attempt did, and claims no prior completion or approval. Current release directory was empty when inspected. Disclosure preserved.",
+      "classification": "reported_interruption_unverified_scope"
+    },
+    {
+      "id": "INC-002",
+      "description": "Initial policy batch output was truncated; isolation, compliance and innovation policy reread. Combined P3 read also truncated; proposal/tasklist reread fully; sources/responses partial exposure recorded. No source-access claims rely on unseen text.",
+      "classification": "output_truncation_disclosed"
+    }
+  ],
+  "observability": "Self-authored public activity ledger, not a complete tool trace or evidence of absent undisclosed actions."
+}

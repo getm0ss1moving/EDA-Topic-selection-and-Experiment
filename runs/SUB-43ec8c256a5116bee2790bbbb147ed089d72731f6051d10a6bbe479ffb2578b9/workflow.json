@@ -1,0 +1,41 @@
+{
+  "role": "proposer",
+  "phase": "research",
+  "assessment": "unresolved",
+  "requested_action": "independent_review_no_pilot",
+  "revision": "R3",
+  "batch_round": 3,
+  "batch_round_limit": 4,
+  "reviewed_proposer_release": "SUB-ebe8adb725c37ba6e164d487febc9021dddc8e911cf79e56ada9e9d2bd5c5ace",
+  "adjudicated_challenger_releases": [
+    "SUB-00eaf4c6d47db0f8dcb907fbf5d70719e7d1534a10660a8a5caa480ef6662ad9"
+  ],
+  "received_verifier_release": "SUB-13a40498da3f7157d34b903152f0d7531070e03db61f3a487ab5338f52e29a4a",
+  "tasklist_sha256": "8aae46e335acbba2f465a0d8a263ab651a0de4a5c4eb03f606b5a23790eec749",
+  "scientific_position": "Conditional anchored physical-W hypothesis; analytical robustness/source caller progress,novelty/utility/readiness unresolved. Park after this third cycle if independent C/V still do not converge; no joint abandonment or allocation.",
+  "direction_penalties": {
+    "combination_drift": 0,
+    "demand_drift": 0
+  },
+  "coverage": {
+    "duplicate_prior_art": "unresolved",
+    "mechanism": "unresolved",
+    "composition": "unresolved",
+    "demand": "unresolved",
+    "industry_gap": "unresolved",
+    "headroom": "unresolved",
+    "contests": "unresolved",
+    "experiments": "unresolved",
+    "cost": "supported"
+  },
+  "local_validation_scope": "Own exact analytical assertions,JSON/CSV/identity/hash checks, trusted ledger and freeze/verify only; complete repository project.py validate deferred to coordinator publication.",
+  "resource_usage": {
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0
+  },
+  "consent": "revision_requested on earlier P2/task hash only; no execution agreement",
+  "protocol_incidents": [
+    "INC-001: initial assigned-folder filename inventory before complete policy read; no private/scientific content read then"
+  ]
+}

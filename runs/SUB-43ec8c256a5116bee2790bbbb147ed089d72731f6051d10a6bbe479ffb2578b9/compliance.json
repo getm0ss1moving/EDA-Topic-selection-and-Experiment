@@ -1,0 +1,222 @@
+{
+  "schema": 1,
+  "role": "proposer",
+  "actor_id": "ChatGPT-P05-TIMING-B03-EDA-0007-REPLACEMENT-1-8154ee5a",
+  "session_id": "5796edbb-fac9-477b-ab72-194c4cbfe34c",
+  "input_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+  "packet_sha256": "a33750c8ec5badb03663cf317bd8b6ea96e6e5d9905fe82f0c50861adbbe46d9",
+  "job_id": "2d6a2a36-2080-4a78-ba1b-fad40c12219d",
+  "read_releases": [
+    "SUB-ebe8adb725c37ba6e164d487febc9021dddc8e911cf79e56ada9e9d2bd5c5ace",
+    "SUB-13a40498da3f7157d34b903152f0d7531070e03db61f3a487ab5338f52e29a4a",
+    "SUB-00eaf4c6d47db0f8dcb907fbf5d70719e7d1534a10660a8a5caa480ef6662ad9"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0
+  },
+  "rules": {
+    "inputs": {
+      "status": "deviation_disclosed",
+      "evidence": [
+        "JOB.json; prompt.txt; policy/PACKET.json",
+        "search-log.md:Released inputs",
+        "INC-001 below; initial job-local rg --files listing",
+        "runs/input-integrity.json"
+      ],
+      "limits": "Initial job-local filename listing of own-previous/shared occurred after JOB/prompt and before all common policies were loaded. No scientific contents were opened then. Conservative procedural-order deviation disclosed; it is not a claim of private contamination. Listing another supplied release is not semantic reading. Read_releases lists actually read scientific outputs only."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "V2 verification.json reviewed_proposer_release/adjudicated_challenger_releases; responses.md exact pair",
+        "search-log.md:Released inputs; activity counters"
+      ],
+      "limits": "Own task assignment received through authorized scheduling; no outgoing scientific messages or agent calls. Shared OS is unrestricted and this self-report is not an isolation attestation or unseen-action audit. Initial filename-only listing is disclosed in INC-001."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "release/ proposer allowlisted files",
+        "scratch/ own scripts and public-source records; runs/ own analytical/integrity/run manifests",
+        "submissions/ trusted freeze target; job result.json"
+      ],
+      "limits": "All filesystem writes in this assigned job only. Downloaded public source code is scratch data, not executed or published paper/design copies."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "sources.json:T01..T15/A03/P2/C2/V2; inherited statuses",
+        "search-log.md:queries/access/locator conventions",
+        "experiment-plan.md:script/output SHA256"
+      ],
+      "limits": "Selected full accessible source text does not mean full-method/transitive audit. T10 abstract-only; direct IEEE/DOI fail. T14 wrong-year oversized slide not read. Inherited source metadata is not a current reopen or independent verification."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "proposal.md:Stable claim map and retained negatives",
+        "forecast.json null numeric fields",
+        "experiment-plan.md:EXP-000R3 and limitations"
+      ],
+      "limits": "96 exact synthetic covariance cases and rho0 closed forms are not circuit/timing/silicon,calibration,positive-D policy-value or deployment measurements. Prior values are historical unless A03 explicitly recalculates. New R3 scientific merit needs independent C/V."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "experiment-consent.json own revision_requested bound to P2/task hash",
+        "tasklist.md:EXP-CONSENT"
+      ],
+      "limits": "Only own revision request, not agreement to R3 or resource authorization. No other role vote fabricated. Task/dependency changes require fresh independent consents to the same earlier immutable target."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json and policy/docs/INNOVATION-BATCH-0003.md:Resources",
+        "activity counters; runs/r3_robustness.json scope",
+        "search-log.md:Actual analysis"
+      ],
+      "limits": "Only public reading,own tiny Python rational analysis and supplied trusted validation. No EDA build/flow,label generation,training/fitting,GPU,remote or new paid resource run. Old provisional caps are not actual grants."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "direction-control.json anchor/penalties",
+        "proposal.md physical W/guarded user and cost endpoint",
+        "responses.md:R3 response"
+      ],
+      "limits": "Combination0/demand0 are proposer anchor-integrity scores, not proof of novelty or utility. Epsilon/D/cost diagnostics do not replace the physical-W research mechanism. Final parking follows released C/V outcome and finite batch policy."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "self_freeze operation with exact command below",
+        "policy/docs/SELF-SUBMISSION.md; job result.json protocol",
+        "workflow.json local_validation_scope"
+      ],
+      "limits": "Only self-freeze in assigned queue. Actual success appears in result.json after the command. No GitHub operation,self-approval,merge,pilot selection or full-checkout validation is claimed; coordinator publishes with full checks."
+    }
+  },
+  "operations": [
+    {
+      "sequence": 1,
+      "action": "assignment_read",
+      "references": [
+        "JOB.json",
+        "prompt.txt"
+      ],
+      "scope": "assigned job only"
+    },
+    {
+      "sequence": 2,
+      "action": "job_local_filename_inventory",
+      "references": [
+        "policy/",
+        "release/",
+        "own-previous/",
+        "shared/"
+      ],
+      "incident": "INC-001; filename-only before all common policy reads"
+    },
+    {
+      "sequence": 3,
+      "action": "common_policy_and_own_harness_read",
+      "references": [
+        "policy/AGENTS.md",
+        "policy/docs/CHARTER.md",
+        "policy/docs/WORKFLOW.md",
+        "policy/docs/EVIDENCE.md",
+        "policy/docs/ISOLATION.md",
+        "policy/docs/ROLE-COMPLIANCE.md",
+        "policy/docs/INNOVATION-BATCH-0003.md",
+        "policy/docs/CODEX-AUTOMATION.md",
+        "policy/docs/INNOVATION-STRATEGY.md",
+        "policy/docs/SELF-SUBMISSION.md",
+        "policy/harness/PROPOSER.md",
+        "policy/config/research-brief.json",
+        "policy/domains/D05/brief.json"
+      ]
+    },
+    {
+      "sequence": 4,
+      "action": "released_scientific_read",
+      "references": [
+        "SUB-ebe8adb725c37ba6e164d487febc9021dddc8e911cf79e56ada9e9d2bd5c5ace",
+        "SUB-13a40498da3f7157d34b903152f0d7531070e03db61f3a487ab5338f52e29a4a",
+        "SUB-00eaf4c6d47db0f8dcb907fbf5d70719e7d1534a10660a8a5caa480ef6662ad9",
+        "shared/predecessor.json descriptor"
+      ],
+      "limits": "C2 content read after V2 confirms exact adjudication. Other listed released folders not semantically opened; byte hashes for P2/C2/V2 checked."
+    },
+    {
+      "sequence": 5,
+      "action": "external_primary_read_and_independent_search",
+      "references": [
+        "search-log.md expansions1..3",
+        "sources.json:T01..T15",
+        "scratch/source-fetch.json",
+        "scratch/delay-fetch.json"
+      ],
+      "limits": "No external code execution,access-control bypass or hidden research files."
+    },
+    {
+      "sequence": 6,
+      "action": "own_tiny_analysis",
+      "command": "python3 scratch/r3_robustness.py > runs/r3_robustness.json",
+      "references": [
+        "experiment-plan.md:EXP-000R3",
+        "runs/r3_robustness.json"
+      ],
+      "outcome": "96 combinations and exact assertions passed; no EDA data or fitting"
+    },
+    {
+      "sequence": 7,
+      "action": "own_output_writes",
+      "references": [
+        "scratch/write_release.py",
+        "scratch/write_plan.py",
+        "scratch/write_evidence.py",
+        "scratch/write_ledger.py",
+        "release/",
+        "runs/"
+      ]
+    },
+    {
+      "sequence": 8,
+      "action": "trusted_local_structural_check",
+      "references": [
+        "policy/scripts/role_compliance.py:validate_ledger",
+        "policy/scripts/role_submission.py:freeze/verify",
+        "runs/local-checks.json"
+      ],
+      "limits": "Exact results recorded by checks; form and identity only,not science or unseen conduct."
+    },
+    {
+      "sequence": 9,
+      "action": "self_freeze",
+      "command": "python3 policy/scripts/role_submission.py freeze --source release --queue submissions --role proposer --actor ChatGPT-P05-TIMING-B03-EDA-0007-REPLACEMENT-1-8154ee5a --session 5796edbb-fac9-477b-ab72-194c4cbfe34c --topic EDA-0007 --ref b1bb69f62b089c3489eaf17dea34daae84af315c --packet a33750c8ec5badb03663cf317bd8b6ea96e6e5d9905fe82f0c50861adbbe46d9",
+      "status": "prepared after finalizing this ledger; execute next; actual final outcome written to job result.json",
+      "limits": "No approval/merge/scientific-acceptance claim."
+    }
+  ],
+  "incidents": [
+    {
+      "id": "INC-001",
+      "rule": "inputs",
+      "severity": "noncritical",
+      "description": "After reading JOB/prompt, initial rg --files included names under assigned own-previous/shared before all common policy/harness reading. It listed only supplied local release filenames; no scientific contents were opened until policies and proposer harness were loaded. No checkout or foreign private path was accessed.",
+      "action": "Preserve this procedural ordering disclosure in final frozen output for independent protocol review. No private-material exposure or independence clearance is inferred.",
+      "evidence": [
+        "search-log.md:Released inputs",
+        "operations sequence2"
+      ],
+      "limits": "Self-authored disclosure; classification/severity is provisional until independent conduct review."
+    }
+  ],
+  "observability": "Self-authored public activity ledger, not a complete tool trace,OS/network confinement attestation or proof that undisclosed actions did not occur. Logical seat/model metadata is not independently attested. Historical release incidents/access claims are not erased or transferred to this job."
+}
