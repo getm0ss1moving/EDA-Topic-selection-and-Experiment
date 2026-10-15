@@ -1,0 +1,81 @@
+{
+  "state": "revise_same_problem",
+  "anchor": {
+    "problem": "Post-CTS datapath placement moves can induce hold repairs competing for legal physical resources.",
+    "engineering_user": "Implementation engineer deciding bounded datapath cell relocations after CTS and initial global route.",
+    "downstream_need": "Improve final extracted setup slack without new hold, physical or functional failures while charging total iteration cost.",
+    "causal_mechanism": "Represent action-conditioned concrete hold-repair alternatives with shared coverage and conflicting occupancy/connection footprints; select and validate placement plus compensating repair jointly before retention.",
+    "mechanism_invariants": [
+      "Fixed initial clock cells/connectivity, die, constraints and technology; no retiming or functional logic change.",
+      "Primary intervention remains bounded datapath cell relocation; repairs are declared buffer chains and bounded legalization.",
+      "Repair options are keyed to the full candidate placement/checkpoint and invalidated after changes.",
+      "Joint occupancy and net-split constraints include shared-buffer coverage; scalar counts are insufficient.",
+      "Whole-design min/max and final physical validation remain mandatory; table exactness is not signoff.",
+      "Charge generation, all failed checks, rollback, rerouting and fallback under matched budgets."
+    ],
+    "forbidden_pivots": [
+      "Claiming generic agents, whitespace reservation, rollback, MILP or hold-aware contest extensions as the contribution.",
+      "Replacing the anchored interface with script automation, a generic timing predictor, pin-access residual compilation or unrelated clock/logic optimization.",
+      "Optimizing HPWL/GR proxy alone or weakening hold/DRC/functional safety to claim success."
+    ]
+  },
+  "penalties": {
+    "combination_drift": {
+      "score": 0,
+      "rationale": "Anchor and downstream need unchanged; source audit and parking concede missing useful treatment instead of adding components.",
+      "evidence_refs": [
+        "S06",
+        "S13",
+        "S14",
+        "S22"
+      ]
+    },
+    "demand_drift": {
+      "score": 0,
+      "rationale": "Anchor and downstream need unchanged; source audit and parking concede missing useful treatment instead of adding components.",
+      "evidence_refs": [
+        "S12",
+        "S15",
+        "S20"
+      ]
+    },
+    "total": 0
+  },
+  "revision_assessment": {
+    "preserves_problem": true,
+    "preserves_engineering_need": true,
+    "preserves_causal_mechanism": true,
+    "changes": [
+      "Accept adjudicated OBJ-002 and recommend parking current formulation.",
+      "Recover full HyPAS author paper and map realization contract from pinned implementation.",
+      "Preserve equivalent-treatment negative result, exact anchor, guardrails and null forecast."
+    ],
+    "reason": "No evidenced useful delta found; source/implementation clarification without scientific pivot."
+  },
+  "abandonment": {
+    "decision_id": null,
+    "grounds": [],
+    "rationale": "Parking recommendation only; no matching abandonment consents or universal exhaustion finding.",
+    "evidence_refs": [],
+    "consents": {
+      "proposer": {
+        "session_id": null,
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      },
+      "challenger": {
+        "session_id": null,
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      }
+    },
+    "successor_topic_id": null,
+    "resurrection_conditions": [
+      "Evidence of a concrete useful interaction or integration/cost capability beyond faithful matched ordinary composition.",
+      "Realistic demand/oracles/rights/resources and dual consent before physical execution."
+    ]
+  },
+  "current_recommendation": "park_pending_independent_cycle3_review"
+}

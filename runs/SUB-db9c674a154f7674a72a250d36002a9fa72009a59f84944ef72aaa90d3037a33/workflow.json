@@ -1,0 +1,38 @@
+{
+  "role": "verifier",
+  "reviewed_proposer_release": "SUB-0560b970e5efe91097368175b0f509b124d01d846ca8ced996b75c2739f69e33",
+  "adjudicated_challenger_releases": [
+    "SUB-a2e3f91bd8e03f63cd17d7b3fb585c6d436d33908305d5ee7d7f618bbd6f9d12"
+  ],
+  "next_action": "park",
+  "actor_id": "ChatGPT-V04-PHYSICAL-EDA-0005",
+  "session_id": "a194d866-d694-43ac-8b46-6600f0371930",
+  "input_commit": "f68c1492c05be3fac5622deac4bb479eabf957de",
+  "packet_sha256": "bc3345e6370fc26e78906f23270f1a60d2f597e32fe78553f4cdacac0dde3ad7",
+  "batch_round": 3,
+  "round": 2,
+  "decision": "park",
+  "output_paths": [
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0005/ChatGPT-V04-PHYSICAL-EDA-0005/jobs/a39f80a7-ff72-425f-8470-6d84952c9ed6/release/verification.md",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0005/ChatGPT-V04-PHYSICAL-EDA-0005/jobs/a39f80a7-ff72-425f-8470-6d84952c9ed6/release/verification.json",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0005/ChatGPT-V04-PHYSICAL-EDA-0005/jobs/a39f80a7-ff72-425f-8470-6d84952c9ed6/release/workflow.json"
+  ],
+  "tasklist_sha256": "fe6e5a7a70005f6673fdc460fff266fde250534fe93875f4f75a82871bf9872d",
+  "direction_penalties": {
+    "combination_drift": 0,
+    "demand_drift": 0,
+    "total": 0
+  },
+  "execution": {
+    "new_physical_runs": 0,
+    "training_runs": 0,
+    "gpu_runs": 0,
+    "remote_compute_runs": 0,
+    "paid_api_calls": 0
+  },
+  "objection_inventory": {
+    "OBJ-001": "historical_addressed_valid_nonblocking",
+    "OBJ-002": "partially_valid_narrow_current_blocker"
+  },
+  "validation": "Trusted input-manifest verification, submitted-release digest, tasklist SHA256 and own freeze; canonical repository validation delegated."
+}

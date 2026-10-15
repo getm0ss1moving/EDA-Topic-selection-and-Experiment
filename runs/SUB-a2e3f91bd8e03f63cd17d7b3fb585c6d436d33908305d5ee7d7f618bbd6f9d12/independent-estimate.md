@@ -1,0 +1,5 @@
+# Independent estimate
+
+No numerical gain or success probability is justified. General repair cost exists, but avoidable movement-induced site-conflict work R is unmeasured. Under equal outcomes and all other work, candidate cost G+K+V beats baseline G+R only if K+V<R. If outcomes differ, compare final extracted setup WNS and complete hold/physical guards jointly with total cost; the formula no longer predicts value. Matched C/B3 has no specified scientific difference, but that is not an empirical speed equality or proof of exhausted novelty.
+
+Priority: source-grounded useful capability; representative demand; returned geometry/topology; whole-design min/max and final-route validation; all failed work. Unified predictors and agent variants have no established advantage here and cannot silently replace the anchor. No new experiment, synthetic rerun or forecast-blindness claim. Recommend parking the present formulation, preserve negative records, and use the final authorized cycle to resolve a substantive source-backed distinction or finalize unresolved status.

@@ -1,0 +1,6 @@
+source_id,task_formulation,mechanism,data_evaluation,assumptions,overlap,remaining_distinction
+C3-S01,incremental placement/sizing,discrete and differentiable stages,contest suite; not reproduced,contest PPA objectives,coupled physical optimization,full hold-site admission not established
+C3-S02;C3-S03,buffer insertion realization,core clamp and position adjustment,source only,pinned implementation,required placement validity,adapter correctness not itself novelty
+C3-S04,global interconnect optimization,resource-priced buffered trees,paper experiment not reproduced,bin usage/max-path model,shared resource allocation,no same-assumption min-delay relocation equivalence
+C3-S05,timing-driven detailed placement,LCB reallocation/relative placement,abstract only,clock resource can change,setup/hold placement,fixed clock in proposal; full method unavailable
+C3-S07;C3-S08,post-placement contest,combined physical edit task,official resources,roadmap extensions remain future,task context,winner methods and final-DR contract unresolved
