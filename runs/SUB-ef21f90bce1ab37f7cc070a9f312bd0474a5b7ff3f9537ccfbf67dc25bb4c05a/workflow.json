@@ -1,0 +1,44 @@
+{
+  "role": "proposer",
+  "actor_id": "ChatGPT-P04-PHYSICAL",
+  "session_id": "1a859cdd-08fa-46af-a2fe-1a6fc872d695",
+  "topic": "EDA-0001",
+  "domain": "D04",
+  "batch_round": 3,
+  "revision": "R3",
+  "phase": "research",
+  "input_commit": "a48f03d4bc254c0b0957d0fe0f265e072d6cf49a",
+  "packet_sha256": "f24d6d0842a9a214e52469c518bae370fe1e11f48069736da9420adc325a6554",
+  "previous_proposer_release": "SUB-60a7c8058bd0ca75347337d7edfc23e32fa3eda0cf78f97d1cbfbcaad53b6c45",
+  "responded_verifier_release": "SUB-5d1e1e55455806e40ba8728f8c331e9915b15edc757de58ed3bf27d5cf267e85",
+  "adjudicated_challenger_release": "SUB-dc827521b95ab9d5bf6d9fa22897f78b042d19fd072ccb6001be4ffb8335996c",
+  "assessment": "unresolved",
+  "next_requested_action": "independent_challenge",
+  "experiment_ready": false,
+  "experiment_consent": "not_signed",
+  "abandonment_position": "no_supported_joint_abandonment; park if unresolved after bounded final cycle",
+  "direction_penalties": {
+    "combination_drift": 0,
+    "demand_drift": 0,
+    "total": 0
+  },
+  "unresolved": [
+    "nontrivial useful benefit beyond established target selection plus reconstruction",
+    "full winner/prior-method correspondence and strongest practical B4",
+    "demand incidence/threshold and absolute marginal cost",
+    "representative input rights/pins and actual allocation",
+    "physical code/commands/config/path limits, perturbation and independent oracle",
+    "unchanged exact-revision dual consent"
+  ],
+  "work_performed": [
+    "primary-source reading",
+    "pinned public code reading",
+    "analytical rank/equivalence/limitation derivations",
+    "coupled specification revision",
+    "structural submission validation"
+  ],
+  "experiment_execution": "none; this batch grants no experiment allocation",
+  "review_exposure": "unblinded; own previous and explicitly current adjudicated shared pair only",
+  "model_provenance": "Assigned JOB proposer gpt-6.1-sol/high; actual backend identity not independently audited",
+  "run_record": "runs/P04-R3.json"
+}
