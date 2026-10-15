@@ -1,0 +1,7 @@
+{
+  "session_id": "2f77fe2e-7fc6-48e3-ae9f-8e58df92c79d",
+  "decision": "revision_requested",
+  "signed_revision": "SUB-aeaba01af9a5b6128eec0673cea74b71dc559d2ba9bf7da096ebfaff8bdce21a",
+  "tasklist_sha256": "3bebf6e0df640b3755ede2c770a9c8d8e782b7d989a311e5e73ef984e96a6744",
+  "rationale": "No execution agreement. Retain CLOSED resource/oracle gates and add residual-sharing and exact-policy identity tests; current scientific feasibility remains unresolved."
+}

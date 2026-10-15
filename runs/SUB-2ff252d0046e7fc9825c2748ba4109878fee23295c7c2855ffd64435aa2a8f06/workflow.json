@@ -1,0 +1,13 @@
+{
+  "role": "verifier",
+  "reviewed_proposer_release": "SUB-aeaba01af9a5b6128eec0673cea74b71dc559d2ba9bf7da096ebfaff8bdce21a",
+  "adjudicated_challenger_releases": [
+    "SUB-9354b850df73175a5f4764f21dc5b5e8d9204f7741e9c50dce06953c34e9f984"
+  ],
+  "next_action": "park",
+  "decision": "park",
+  "batch_round": 4,
+  "batch_round_limit": 4,
+  "finite_batch_stop": true,
+  "reason": "Conditional hypothesis remains; two valid scoped gaps, missing complete adapter/resources/consent, final cycle exhausted. No automatic abandonment or fifth cycle."
+}

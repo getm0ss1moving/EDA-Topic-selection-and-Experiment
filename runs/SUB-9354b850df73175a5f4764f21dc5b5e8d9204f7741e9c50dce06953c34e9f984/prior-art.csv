@@ -1,0 +1,8 @@
+source_id,task_formulation,mechanism,evaluation_access,overlap,distinction_or_limit
+C-S01,Detailed route closure,Incremental net checking and queue,Methods read; no execution,Feedback-dependent checking,Does not establish sibling shared-check selection
+C-S02,Hierarchical DRC,Invariant result reuse and spatial pruning,Methods read,Reuse under context conditions,Physical branch contexts require separate audit
+C-S03,Transistor-layout repair,Bounded actions; verification; memory,Selected full methods,Closed-loop repair selection,Different deployment; no exact policy equivalence
+C-S05,Detailed routing,Spatial nonconflict scheduler,Two pinned source files,Geometry-aware work ordering,Not sibling obligation reuse
+C-S06,Fixed submodular utility under submodular cost,SCSK,Problem statement read,Toy fixed-set reduction,Not physical adapter or adaptive empirical gain
+C-S08,Commercial physical verification,Region checks; reusable HDB,Official advertising only,Incremental/reuse engineering need,Internals and comparative gains unknown
+C-S09,Incremental layout analysis,Hash differences; halos; selected rules,Selected published description,Cache/halo infrastructure,Not verified budgeted candidate policy

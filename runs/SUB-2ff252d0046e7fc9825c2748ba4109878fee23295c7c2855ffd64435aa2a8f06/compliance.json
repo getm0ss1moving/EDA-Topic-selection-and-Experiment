@@ -1,0 +1,159 @@
+{
+  "schema": 1,
+  "role": "verifier",
+  "actor_id": "ChatGPT-V04-PHYSICAL-B03-EDA-0009",
+  "session_id": "7a28c23e-2907-49c3-858b-ae7d875697eb",
+  "input_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+  "packet_sha256": "efe09fccc2d75536f767b96d8a3abfca2ee6c2092a5cabcd1ae6d316a6e72d18",
+  "job_id": "337539d1-56ac-499c-a6df-08d7c7bc6c76",
+  "read_releases": [
+    "SUB-aeaba01af9a5b6128eec0673cea74b71dc559d2ba9bf7da096ebfaff8bdce21a",
+    "SUB-9354b850df73175a5f4764f21dc5b5e8d9204f7741e9c50dce06953c34e9f984"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0,
+    "checkout_access_explanation": "Initial environment cwd points at checkout, but all filesystem calls read/write only explicit assigned job; no checkout file read. Supplied user policy text was visible in initial context, not retrieved checkout content. No parent science or private role transcript was supplied/read."
+  },
+  "rules": {
+    "inputs": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md",
+        "operations"
+      ],
+      "limits": "Self-authored evidence only; not a complete tool trace, OS audit or proof of absent unseen actions. No backend attestation."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md",
+        "operations"
+      ],
+      "limits": "Self-authored evidence only; not a complete tool trace, OS audit or proof of absent unseen actions. No backend attestation."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md",
+        "operations"
+      ],
+      "limits": "Self-authored evidence only; not a complete tool trace, OS audit or proof of absent unseen actions. No backend attestation."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md",
+        "operations"
+      ],
+      "limits": "Self-authored evidence only; not a complete tool trace, OS audit or proof of absent unseen actions. No backend attestation."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md",
+        "operations"
+      ],
+      "limits": "Self-authored evidence only; not a complete tool trace, OS audit or proof of absent unseen actions. No backend attestation."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md",
+        "operations"
+      ],
+      "limits": "Self-authored evidence only; not a complete tool trace, OS audit or proof of absent unseen actions. No backend attestation."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md",
+        "operations"
+      ],
+      "limits": "Self-authored evidence only; not a complete tool trace, OS audit or proof of absent unseen actions. No backend attestation."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md",
+        "operations"
+      ],
+      "limits": "Self-authored evidence only; not a complete tool trace, OS audit or proof of absent unseen actions. No backend attestation."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md",
+        "operations"
+      ],
+      "limits": "Self-authored evidence only; not a complete tool trace, OS audit or proof of absent unseen actions. No backend attestation."
+    }
+  },
+  "operations": [
+    {
+      "kind": "policy_and_released_reads",
+      "references": [
+        "JOB.json",
+        "prompt.txt",
+        "policy/docs common policy",
+        "policy/harness/VERIFIER.md",
+        "shared/SUB-aeaba01af9a5b6128eec0673cea74b71dc559d2ba9bf7da096ebfaff8bdce21a",
+        "shared/SUB-9354b850df73175a5f4764f21dc5b5e8d9204f7741e9c50dce06953c34e9f984"
+      ],
+      "detail": "Before discovery common policies and only verifier harness; initial combined output truncation repaired with focused policy reads. Predecessor paths listed but their files not opened. Current released forecast exposed, explicitly unblinded."
+    },
+    {
+      "kind": "external_research",
+      "references": [
+        "verification.json/source_ledger",
+        "verification.json/search_log"
+      ],
+      "detail": "Public source search/open/find; failures preserved. Source code read only; no downloaded-code execution."
+    },
+    {
+      "kind": "own_analysis",
+      "references": [
+        "verifier_analysis.py",
+        "analysis-output.json",
+        "verification.json/analytical_checks"
+      ],
+      "detail": "Own stdlib weighted sets and toy; 500 cases plus analytic pair calculation. Zero EDA/build/training/remote/paid runs."
+    },
+    {
+      "kind": "write_validation_freeze",
+      "references": [
+        "assemble_verification.py",
+        "release/",
+        "submissions/",
+        "result.json"
+      ],
+      "detail": "Own job only. Input trusted manifests verified, task hash recomputed and exact release-directory digest computed. Own assembly files and final result; trusted freeze/verify invoked after writing this ledger. Success only evidenced by actual manifest/result; no PR or approval."
+    }
+  ],
+  "incidents": [],
+  "observability": "Self-authored public activity ledger, not a complete trace or proof of absent undisclosed actions. Scientific verification is separate from required fresh independent protocol audit; no private session/memory tools or messages used.",
+  "forecast_exposure": "Unblinded current released proposal and forecast.json read; no inherited independent approval."
+}

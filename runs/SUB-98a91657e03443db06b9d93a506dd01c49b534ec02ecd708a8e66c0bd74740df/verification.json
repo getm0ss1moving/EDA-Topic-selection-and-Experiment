@@ -1,0 +1,317 @@
+{
+  "purpose": "protocol_audit",
+  "reviewed_releases": {
+    "challenger": "SUB-9354b850df73175a5f4764f21dc5b5e8d9204f7741e9c50dce06953c34e9f984",
+    "proposer": "SUB-aeaba01af9a5b6128eec0673cea74b71dc559d2ba9bf7da096ebfaff8bdce21a",
+    "verifier": "SUB-2ff252d0046e7fc9825c2748ba4109878fee23295c7c2855ffd64435aa2a8f06"
+  },
+  "disposition": "nonblocking_findings",
+  "roles": {
+    "challenger": {
+      "release_id": "SUB-9354b850df73175a5f4764f21dc5b5e8d9204f7741e9c50dce06953c34e9f984",
+      "checks": {
+        "inputs": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-9354b850df73175a5f4764f21dc5b5e8d9204f7741e9c50dce06953c34e9f984/compliance.json#/read_releases",
+            "shared/job-descriptors/challenger/JOB.json",
+            "shared/SUB-9354b850df73175a5f4764f21dc5b5e8d9204f7741e9c50dce06953c34e9f984/compliance.json#/rules/inputs"
+          ],
+          "reason": "Declared actual inputs are within the public JOB allowlist; identity, job, commit and packet agree with descriptor/manifest. Predecessor originals are not supplied for re-audit."
+        },
+        "isolation": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-9354b850df73175a5f4764f21dc5b5e8d9204f7741e9c50dce06953c34e9f984/compliance.json#/activity",
+            "shared/job-descriptors/challenger/JOB.json",
+            "shared/SUB-9354b850df73175a5f4764f21dc5b5e8d9204f7741e9c50dce06953c34e9f984/compliance.json#/rules/isolation"
+          ],
+          "reason": "All disclose checkout_access=none, no foreign private reads/messages/subagents. Unblinded exposure and backend/OS limits remain explicit. No contradictory released evidence; self-report is not complete trace."
+        },
+        "writes": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-9354b850df73175a5f4764f21dc5b5e8d9204f7741e9c50dce06953c34e9f984/compliance.json#/operations",
+            "shared/job-descriptors/challenger/JOB.json",
+            "shared/SUB-9354b850df73175a5f4764f21dc5b5e8d9204f7741e9c50dce06953c34e9f984/compliance.json#/rules/writes"
+          ],
+          "reason": "Own role release and job-local scratch writes disclosed. Hashes of every manifest-listed released file independently recomputed; no cross-role edit observed."
+        },
+        "evidence": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-9354b850df73175a5f4764f21dc5b5e8d9204f7741e9c50dce06953c34e9f984/compliance.json#/rules/evidence",
+            "shared/job-descriptors/challenger/JOB.json",
+            "shared/SUB-9354b850df73175a5f4764f21dc5b5e8d9204f7741e9c50dce06953c34e9f984/compliance.json#/rules/evidence"
+          ],
+          "reason": "Sources/access limits and locators are explicit. Selected-full means selected passages rather than implementation audit. Failed patent/Magic/winner access remains limited, not represented as verified novelty evidence."
+        },
+        "claims": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-9354b850df73175a5f4764f21dc5b5e8d9204f7741e9c50dce06953c34e9f984/compliance.json#/rules/claims",
+            "shared/job-descriptors/challenger/JOB.json",
+            "shared/SUB-9354b850df73175a5f4764f21dc5b5e8d9204f7741e9c50dce06953c34e9f984/compliance.json#/rules/claims"
+          ],
+          "reason": "Synthetic set/geometry checks and conditional algebra remain separate from physical EDA measurements; forecasts are null, no demonstrated speedup or universal novelty asserted."
+        },
+        "consent": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-9354b850df73175a5f4764f21dc5b5e8d9204f7741e9c50dce06953c34e9f984/compliance.json#/rules/consent",
+            "shared/job-descriptors/challenger/JOB.json",
+            "shared/SUB-9354b850df73175a5f4764f21dc5b5e8d9204f7741e9c50dce06953c34e9f984/compliance.json#/rules/consent"
+          ],
+          "reason": "P pending with null target/hash; C revision_requested binds exact current P and recomputed task hash. These are not matching agreement. V explicitly keeps consensus false; challenger addenda are proposed changes, not current agreed tasks."
+        },
+        "resources": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-9354b850df73175a5f4764f21dc5b5e8d9204f7741e9c50dce06953c34e9f984/compliance.json#/activity",
+            "shared/job-descriptors/challenger/JOB.json",
+            "shared/SUB-9354b850df73175a5f4764f21dc5b5e8d9204f7741e9c50dce06953c34e9f984/compliance.json#/rules/resources"
+          ],
+          "reason": "Zero new EDA/training/paid runs disclosed; own tiny stdlib analytical work is allowed by batch policy. No new allocation or downloaded-code execution asserted."
+        },
+        "direction": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-9354b850df73175a5f4764f21dc5b5e8d9204f7741e9c50dce06953c34e9f984/workflow.json",
+            "shared/job-descriptors/challenger/JOB.json",
+            "shared/SUB-9354b850df73175a5f4764f21dc5b5e8d9204f7741e9c50dce06953c34e9f984/compliance.json#/rules/direction"
+          ],
+          "reason": "Fresh EDA-0009 preserves predecessor parking/negative evidence without inherited signatures. 0+0 drift is provenance, not merit. Unresolved mechanism/demand remains a scientific matter."
+        },
+        "publication": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-9354b850df73175a5f4764f21dc5b5e8d9204f7741e9c50dce06953c34e9f984/SUBMISSION.json",
+            "shared/job-descriptors/challenger/JOB.json",
+            "shared/SUB-9354b850df73175a5f4764f21dc5b5e8d9204f7741e9c50dce06953c34e9f984/compliance.json#/rules/publication"
+          ],
+          "reason": "Role self-freeze only, English released research prose, no private/copyrighted payload or claimed PR approval. Scientific V parks at fourth-cycle close; no fifth cycle/pilot/abandonment created."
+        }
+      }
+    },
+    "proposer": {
+      "release_id": "SUB-aeaba01af9a5b6128eec0673cea74b71dc559d2ba9bf7da096ebfaff8bdce21a",
+      "checks": {
+        "inputs": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-aeaba01af9a5b6128eec0673cea74b71dc559d2ba9bf7da096ebfaff8bdce21a/compliance.json#/read_releases",
+            "shared/job-descriptors/proposer/JOB.json",
+            "shared/SUB-aeaba01af9a5b6128eec0673cea74b71dc559d2ba9bf7da096ebfaff8bdce21a/compliance.json#/rules/inputs"
+          ],
+          "reason": "Declared actual inputs are within the public JOB allowlist; identity, job, commit and packet agree with descriptor/manifest. Predecessor originals are not supplied for re-audit."
+        },
+        "isolation": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-aeaba01af9a5b6128eec0673cea74b71dc559d2ba9bf7da096ebfaff8bdce21a/compliance.json#/activity",
+            "shared/job-descriptors/proposer/JOB.json",
+            "shared/SUB-aeaba01af9a5b6128eec0673cea74b71dc559d2ba9bf7da096ebfaff8bdce21a/compliance.json#/rules/isolation"
+          ],
+          "reason": "All disclose checkout_access=none, no foreign private reads/messages/subagents. Unblinded exposure and backend/OS limits remain explicit. No contradictory released evidence; self-report is not complete trace."
+        },
+        "writes": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-aeaba01af9a5b6128eec0673cea74b71dc559d2ba9bf7da096ebfaff8bdce21a/compliance.json#/operations",
+            "shared/job-descriptors/proposer/JOB.json",
+            "shared/SUB-aeaba01af9a5b6128eec0673cea74b71dc559d2ba9bf7da096ebfaff8bdce21a/compliance.json#/rules/writes"
+          ],
+          "reason": "Own role release and job-local scratch writes disclosed. Hashes of every manifest-listed released file independently recomputed; no cross-role edit observed."
+        },
+        "evidence": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-aeaba01af9a5b6128eec0673cea74b71dc559d2ba9bf7da096ebfaff8bdce21a/compliance.json#/rules/evidence",
+            "shared/job-descriptors/proposer/JOB.json",
+            "shared/SUB-aeaba01af9a5b6128eec0673cea74b71dc559d2ba9bf7da096ebfaff8bdce21a/compliance.json#/rules/evidence"
+          ],
+          "reason": "Sources/access limits and locators are explicit. Selected-full means selected passages rather than implementation audit. Failed patent/Magic/winner access remains limited, not represented as verified novelty evidence."
+        },
+        "claims": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-aeaba01af9a5b6128eec0673cea74b71dc559d2ba9bf7da096ebfaff8bdce21a/compliance.json#/rules/claims",
+            "shared/job-descriptors/proposer/JOB.json",
+            "shared/SUB-aeaba01af9a5b6128eec0673cea74b71dc559d2ba9bf7da096ebfaff8bdce21a/compliance.json#/rules/claims"
+          ],
+          "reason": "Synthetic set/geometry checks and conditional algebra remain separate from physical EDA measurements; forecasts are null, no demonstrated speedup or universal novelty asserted."
+        },
+        "consent": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-aeaba01af9a5b6128eec0673cea74b71dc559d2ba9bf7da096ebfaff8bdce21a/compliance.json#/rules/consent",
+            "shared/job-descriptors/proposer/JOB.json",
+            "shared/SUB-aeaba01af9a5b6128eec0673cea74b71dc559d2ba9bf7da096ebfaff8bdce21a/compliance.json#/rules/consent"
+          ],
+          "reason": "P pending with null target/hash; C revision_requested binds exact current P and recomputed task hash. These are not matching agreement. V explicitly keeps consensus false; challenger addenda are proposed changes, not current agreed tasks."
+        },
+        "resources": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-aeaba01af9a5b6128eec0673cea74b71dc559d2ba9bf7da096ebfaff8bdce21a/compliance.json#/activity",
+            "shared/job-descriptors/proposer/JOB.json",
+            "shared/SUB-aeaba01af9a5b6128eec0673cea74b71dc559d2ba9bf7da096ebfaff8bdce21a/compliance.json#/rules/resources"
+          ],
+          "reason": "Zero new EDA/training/paid runs disclosed; own tiny stdlib analytical work is allowed by batch policy. No new allocation or downloaded-code execution asserted."
+        },
+        "direction": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-aeaba01af9a5b6128eec0673cea74b71dc559d2ba9bf7da096ebfaff8bdce21a/workflow.json",
+            "shared/job-descriptors/proposer/JOB.json",
+            "shared/SUB-aeaba01af9a5b6128eec0673cea74b71dc559d2ba9bf7da096ebfaff8bdce21a/compliance.json#/rules/direction"
+          ],
+          "reason": "Fresh EDA-0009 preserves predecessor parking/negative evidence without inherited signatures. 0+0 drift is provenance, not merit. Unresolved mechanism/demand remains a scientific matter."
+        },
+        "publication": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-aeaba01af9a5b6128eec0673cea74b71dc559d2ba9bf7da096ebfaff8bdce21a/SUBMISSION.json",
+            "shared/job-descriptors/proposer/JOB.json",
+            "shared/SUB-aeaba01af9a5b6128eec0673cea74b71dc559d2ba9bf7da096ebfaff8bdce21a/compliance.json#/rules/publication"
+          ],
+          "reason": "Role self-freeze only, English released research prose, no private/copyrighted payload or claimed PR approval. Scientific V parks at fourth-cycle close; no fifth cycle/pilot/abandonment created."
+        }
+      }
+    },
+    "verifier": {
+      "release_id": "SUB-2ff252d0046e7fc9825c2748ba4109878fee23295c7c2855ffd64435aa2a8f06",
+      "checks": {
+        "inputs": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-2ff252d0046e7fc9825c2748ba4109878fee23295c7c2855ffd64435aa2a8f06/compliance.json#/read_releases",
+            "shared/job-descriptors/verifier/JOB.json",
+            "shared/SUB-2ff252d0046e7fc9825c2748ba4109878fee23295c7c2855ffd64435aa2a8f06/compliance.json#/rules/inputs"
+          ],
+          "reason": "Declared actual inputs are within the public JOB allowlist; identity, job, commit and packet agree with descriptor/manifest. Predecessor originals are not supplied for re-audit."
+        },
+        "isolation": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-2ff252d0046e7fc9825c2748ba4109878fee23295c7c2855ffd64435aa2a8f06/compliance.json#/activity",
+            "shared/job-descriptors/verifier/JOB.json",
+            "shared/SUB-2ff252d0046e7fc9825c2748ba4109878fee23295c7c2855ffd64435aa2a8f06/compliance.json#/rules/isolation"
+          ],
+          "reason": "All disclose checkout_access=none, no foreign private reads/messages/subagents. Unblinded exposure and backend/OS limits remain explicit. No contradictory released evidence; self-report is not complete trace."
+        },
+        "writes": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-2ff252d0046e7fc9825c2748ba4109878fee23295c7c2855ffd64435aa2a8f06/compliance.json#/operations",
+            "shared/job-descriptors/verifier/JOB.json",
+            "shared/SUB-2ff252d0046e7fc9825c2748ba4109878fee23295c7c2855ffd64435aa2a8f06/compliance.json#/rules/writes"
+          ],
+          "reason": "Own role release and job-local scratch writes disclosed. Hashes of every manifest-listed released file independently recomputed; no cross-role edit observed."
+        },
+        "evidence": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-2ff252d0046e7fc9825c2748ba4109878fee23295c7c2855ffd64435aa2a8f06/compliance.json#/rules/evidence",
+            "shared/job-descriptors/verifier/JOB.json",
+            "shared/SUB-2ff252d0046e7fc9825c2748ba4109878fee23295c7c2855ffd64435aa2a8f06/compliance.json#/rules/evidence"
+          ],
+          "reason": "Sources/access limits and locators are explicit. Selected-full means selected passages rather than implementation audit. Failed patent/Magic/winner access remains limited, not represented as verified novelty evidence."
+        },
+        "claims": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-2ff252d0046e7fc9825c2748ba4109878fee23295c7c2855ffd64435aa2a8f06/compliance.json#/rules/claims",
+            "shared/job-descriptors/verifier/JOB.json",
+            "shared/SUB-2ff252d0046e7fc9825c2748ba4109878fee23295c7c2855ffd64435aa2a8f06/compliance.json#/rules/claims"
+          ],
+          "reason": "Synthetic set/geometry checks and conditional algebra remain separate from physical EDA measurements; forecasts are null, no demonstrated speedup or universal novelty asserted."
+        },
+        "consent": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-2ff252d0046e7fc9825c2748ba4109878fee23295c7c2855ffd64435aa2a8f06/compliance.json#/rules/consent",
+            "shared/job-descriptors/verifier/JOB.json",
+            "shared/SUB-2ff252d0046e7fc9825c2748ba4109878fee23295c7c2855ffd64435aa2a8f06/compliance.json#/rules/consent"
+          ],
+          "reason": "P pending with null target/hash; C revision_requested binds exact current P and recomputed task hash. These are not matching agreement. V explicitly keeps consensus false; challenger addenda are proposed changes, not current agreed tasks."
+        },
+        "resources": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-2ff252d0046e7fc9825c2748ba4109878fee23295c7c2855ffd64435aa2a8f06/compliance.json#/activity",
+            "shared/job-descriptors/verifier/JOB.json",
+            "shared/SUB-2ff252d0046e7fc9825c2748ba4109878fee23295c7c2855ffd64435aa2a8f06/compliance.json#/rules/resources"
+          ],
+          "reason": "Zero new EDA/training/paid runs disclosed; own tiny stdlib analytical work is allowed by batch policy. No new allocation or downloaded-code execution asserted."
+        },
+        "direction": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-2ff252d0046e7fc9825c2748ba4109878fee23295c7c2855ffd64435aa2a8f06/workflow.json",
+            "shared/job-descriptors/verifier/JOB.json",
+            "shared/SUB-2ff252d0046e7fc9825c2748ba4109878fee23295c7c2855ffd64435aa2a8f06/compliance.json#/rules/direction"
+          ],
+          "reason": "Fresh EDA-0009 preserves predecessor parking/negative evidence without inherited signatures. 0+0 drift is provenance, not merit. Unresolved mechanism/demand remains a scientific matter."
+        },
+        "publication": {
+          "status": "no_violation_found_within_scope",
+          "evidence": [
+            "shared/SUB-2ff252d0046e7fc9825c2748ba4109878fee23295c7c2855ffd64435aa2a8f06/SUBMISSION.json",
+            "shared/job-descriptors/verifier/JOB.json",
+            "shared/SUB-2ff252d0046e7fc9825c2748ba4109878fee23295c7c2855ffd64435aa2a8f06/compliance.json#/rules/publication"
+          ],
+          "reason": "Role self-freeze only, English released research prose, no private/copyrighted payload or claimed PR approval. Scientific V parks at fourth-cycle close; no fifth cycle/pilot/abandonment created."
+        }
+      }
+    }
+  },
+  "findings": [
+    {
+      "id": "INC-001",
+      "role": "verifier",
+      "rule": "evidence",
+      "severity": "noncritical",
+      "classification": "limitation",
+      "evidence": [
+        "shared/SUB-2ff252d0046e7fc9825c2748ba4109878fee23295c7c2855ffd64435aa2a8f06/verification.json#/source_checks",
+        "shared/SUB-2ff252d0046e7fc9825c2748ba4109878fee23295c7c2855ffd64435aa2a8f06/verification.json#/source_ledger"
+      ],
+      "action": "Retain limited-access/source-coverage and unmeasured physical-utility disclosures in final reporting; future scientific readiness requires renewed independent adjudication, not a conduct inference.",
+      "needs_scientific_adjudication": false
+    }
+  ],
+  "limitations": [
+    "Released bytes, public descriptors and self-authored ledgers only; no OS/network/tool-trace or backend-model attestation. No proof of absent undisclosed actions.",
+    "Historical predecessor disclosures retained as reported in current outputs; their original releases are outside this audit packet, and are not independently reverified.",
+    "Scientific weakness, unresolved novelty, unavailable primary text and honestly missing physical measurements are not conduct violations. This audit creates no scientific acceptance, rejection, abandonment, resource allocation or pilot authorization.",
+    "Three primary-source spot checks do not establish exhaustive source entailment or search coverage. No experiments, downloaded-code execution, private notes/transcripts/memory, checkout or role messaging used."
+  ],
+  "mechanical_checks": {
+    "manifest_file_hashes": "all match",
+    "descriptor_identity_bindings": "all match; three distinct scientific sessions and distinct audit session",
+    "proposer_tasklist_sha256": "3bebf6e0df640b3755ede2c770a9c8d8e782b7d989a311e5e73ef984e96a6744",
+    "challenger_addendum_tasklist_sha256": "94df28e55536d53e17576612657df1e014348b6ab068095635627491dcbc7975",
+    "consent_result": "No dual agree; addendum differs honestly and does not substitute for bound proposer tasks"
+  },
+  "source_spot_checks": [
+    {
+      "url": "https://ispd.cc/contests/19/",
+      "locator": "Final Contest Result and Final Solution Files, browser lines 154-159 and 33",
+      "access": "public HTML selected passages",
+      "observation": "Dr. CU winner supported; no contest binary equivalence inferred."
+    },
+    {
+      "url": "https://zyh0911.github.io/assets/pdf/OpenDRC.pdf",
+      "locator": "PDF page 3 section IV-C, extracted lines 218-274",
+      "access": "public PDF selected full-text passages",
+      "observation": "Reuse conditional on invariants/relative context, consistent with released limits."
+    },
+    {
+      "url": "https://blogs.sw.siemens.com/calibre/2024/07/26/shift-left-for-more-efficient-block-design-and-chip-integration/",
+      "locator": "DRC error debugging and Optimize configuration, lines 38-52",
+      "access": "public official vendor HTML",
+      "observation": "Region checking/reusable HDB publicly advertised. No advertised savings adopted as measured research performance."
+    }
+  ]
+}

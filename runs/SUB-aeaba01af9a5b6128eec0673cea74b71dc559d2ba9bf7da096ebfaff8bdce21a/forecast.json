@@ -1,0 +1,18 @@
+{
+  "kind": "forecast_not_measurement",
+  "metric": "End-to-end wall time to identical connected full-rule-clean route at fixed post-route timing guardrails",
+  "unit": "seconds",
+  "baseline_source": "B3/B8 strongest conventional composition; unmeasured",
+  "direction": "decrease conditional on identical quality",
+  "pessimistic": null,
+  "base": null,
+  "optimistic": null,
+  "confidence": null,
+  "assumptions": [
+    "Non-negligible cross-candidate context-complete reusable work",
+    "Enumeration/fallback/model overhead smaller than savings",
+    "Budgeted subset choice rather than all-complete unlimited-cache regime",
+    "Actual physical cases and fair baseline available after allocation"
+  ],
+  "calibration_plan": "EXP-005 baseline-only variance/engineer threshold lock; EXP-006/007 held-out paired costs. No numeric gain or success probability is calibrated."
+}

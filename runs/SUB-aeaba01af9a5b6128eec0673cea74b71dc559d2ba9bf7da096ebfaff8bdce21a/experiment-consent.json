@@ -1,0 +1,7 @@
+{
+  "session_id": "a6cdf350-7e86-4988-92ca-660db08d6d53",
+  "decision": "pending",
+  "signed_revision": null,
+  "tasklist_sha256": null,
+  "rationale": "Initial new-topic hypothesis; no earlier immutable EDA-0009 target and no resolved physical rights/resource/oracle/threshold dependencies. No agreement or execution authorization."
+}

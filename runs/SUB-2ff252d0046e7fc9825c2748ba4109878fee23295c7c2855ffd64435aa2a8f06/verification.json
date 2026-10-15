@@ -1,0 +1,582 @@
+{
+  "topic": "EDA-0009",
+  "batch_round": 4,
+  "batch_round_limit": 4,
+  "decision": "park",
+  "verifier_session": "7a28c23e-2907-49c3-858b-ae7d875697eb",
+  "actor_id": "ChatGPT-V04-PHYSICAL-B03-EDA-0009",
+  "input_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+  "packet_sha256": "efe09fccc2d75536f767b96d8a3abfca2ee6c2092a5cabcd1ae6d316a6e72d18",
+  "reviewed_proposer_release": "SUB-aeaba01af9a5b6128eec0673cea74b71dc559d2ba9bf7da096ebfaff8bdce21a",
+  "adjudicated_challenger_releases": [
+    "SUB-9354b850df73175a5f4764f21dc5b5e8d9204f7741e9c50dce06953c34e9f984"
+  ],
+  "dossier_digest": "22b2118204a9af8eddef6b4f6a35ba74e18f954909d05e79e0f8d7b3ebcce13e",
+  "digest_scope": "Exact supplied proposer release directory including its SUBMISSION.json and metadata, trusted project.py digest framing; not a canonical assembled topic dossier digest.",
+  "gates": {
+    "novelty": false,
+    "mechanism": false,
+    "utility": false,
+    "contest_originality": false,
+    "headroom": false,
+    "feasibility": false,
+    "direction_integrity": true,
+    "experiment_consensus": false
+  },
+  "gate_reasons": {
+    "novelty": "Strong conventional composition and newer/primary source gaps remain.",
+    "mechanism": "Conditional algebra coherent; physical residual sharing and baseline-distinct estimator unresolved.",
+    "utility": "Broad closure need supported; no residual economics or downstream closure gain.",
+    "contest_originality": "Winner/source bridge partial; no complete contest-method overlap audit.",
+    "headroom": "Known no-gain regime and toy witness are not physical headroom.",
+    "feasibility": "Complete oracle adapter, legal cases, thresholds and actual allocations missing.",
+    "direction_integrity": "Fresh EDA-0009 anchor preserved; 0 combination + 0 demand drift. Zero is not merit.",
+    "experiment_consensus": "P pending; C revision_requested; no dual agree on frozen tasks."
+  },
+  "direction_penalty_checked": true,
+  "direction_penalties": {
+    "combination_drift": 0,
+    "demand_drift": 0,
+    "total": 0
+  },
+  "experiment_consensus_checked": true,
+  "experiment_consensus": {
+    "tasklist_sha256": "3bebf6e0df640b3755ede2c770a9c8d8e782b7d989a311e5e73ef984e96a6744",
+    "proposer_session": "a6cdf350-7e86-4988-92ca-660db08d6d53",
+    "challenger_session": "2f77fe2e-7fc6-48e3-ae9f-8e58df92c79d",
+    "proposer_decision": "pending",
+    "challenger_decision": "revision_requested",
+    "matching_agreement": false,
+    "current_tasklist_position": "Conditional future checklist only; retain EXP-000 CLOSED. Challenger addenda C-T901 through C-T904 justified, but do not silently edit current signed-target bytes. New future revision and signatures required."
+  },
+  "abandonment_process_checked": true,
+  "abandonment": {
+    "matching_consents": false,
+    "grounds_established": false,
+    "disposition": "park is neither rejection nor joint abandonment"
+  },
+  "source_checks": [
+    {
+      "claim_ids": [
+        "CLM-001"
+      ],
+      "source_ids": [
+        "S01"
+      ],
+      "locator": "S01 PDF p9 V-E and VI-B, extracted 838-907",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "Modified-net checking and queue feedback are prior; no sibling-sharing measurement or reproduced speedup."
+    },
+    {
+      "claim_ids": [
+        "CLM-002"
+      ],
+      "source_ids": [
+        "S02"
+      ],
+      "locator": "S02 PDF p3 IV-C, extracted 218-264",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "Reuse is conditional on preserved geometry and relative context, not merely IDs."
+    },
+    {
+      "claim_ids": [
+        "CLM-003"
+      ],
+      "source_ids": [
+        "S03",
+        "S07"
+      ],
+      "locator": "S03 PDF p6 V-C/D, extracted 400-448; S07 failed direct reopen",
+      "verdict": "partially_valid",
+      "blocking": false,
+      "reason": "Heterogeneous scheduling prior independently checked in S03; S07 specific dynamic-selection passage not freshly verified."
+    },
+    {
+      "claim_ids": [
+        "CLM-004"
+      ],
+      "source_ids": [
+        "S04"
+      ],
+      "locator": "S04 sections 3.1-3.4, Algorithm 1",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "Bounded edits and verification/state memory exist in transistor-layout repair. No digital policy equivalence or performance transfer."
+    },
+    {
+      "claim_ids": [
+        "CLM-005"
+      ],
+      "source_ids": [
+        "S05"
+      ],
+      "locator": "S05 Description Detecting Differences, Halos, Selection of Analysis Criteria",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "Incremental hashes/halos are prior descriptions; neither legal novelty opinion nor performance evidence."
+    },
+    {
+      "claim_ids": [
+        "CLM-006"
+      ],
+      "source_ids": [
+        "S06"
+      ],
+      "locator": "S06 p1 abstract/introduction and section 2.2/2.3",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "Dependency graphs and memoization are established; physical applicability/cost still needs an adapter."
+    },
+    {
+      "claim_ids": [
+        "CLM-007"
+      ],
+      "source_ids": [
+        "S01",
+        "S03",
+        "S08a"
+      ],
+      "locator": "S01 V-E; S03 introduction; S08a DRC error debugging",
+      "verdict": "partially_valid",
+      "blocking": true,
+      "reason": "Broad repeated-check need supported. Novel residual sibling reuse and its economic frequency are unmeasured; vendor capability is advertisement only."
+    },
+    {
+      "claim_ids": [
+        "CLM-008"
+      ],
+      "source_ids": [],
+      "locator": "Proposer search-log.md Own analytical checks fenced script/stdout",
+      "verdict": "partially_valid",
+      "blocking": false,
+      "reason": "Source-visible toy uses distance<3 and accounts for inserted objects. The stated 300-run count is released author evidence, not independently rerun here; no physical enumerator validation."
+    },
+    {
+      "claim_ids": [
+        "CLM-009"
+      ],
+      "source_ids": [],
+      "locator": "Proposal formal contract and own verifier_analysis.py / analysis-output.json",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "Union cost order invariance and stipulated .5775 best-pair construction hold. Neither establishes physical savings, selector novelty or independent real success events."
+    },
+    {
+      "claim_ids": [
+        "CLM-010"
+      ],
+      "source_ids": [],
+      "locator": "Proposal Mechanism; experiment-plan.md B3-B6; current challenger challenge second objection",
+      "verdict": "unresolved",
+      "blocking": true,
+      "reason": "No frozen information/estimation delta from equal pair-enumerating baseline and no full-cost physical result. Valid hypothesis remains possible."
+    },
+    {
+      "claim_ids": [
+        "CLM-011"
+      ],
+      "source_ids": [],
+      "locator": "forecast.json all calibrated numeric fields",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "Forecast magnitudes/confidence null; no measured gain claimed."
+    },
+    {
+      "claim_ids": [
+        "CLM-012"
+      ],
+      "source_ids": [
+        "S11",
+        "S12",
+        "S13"
+      ],
+      "locator": "S11 official Final Contest Result/Final Solution Files; S12/S13 titles; C-S05 Scheduler::schedule",
+      "verdict": "partially_valid",
+      "blocking": true,
+      "reason": "2019 winner and distinct 2025/26 stages verified. Public Dr. CU scheduling exists; exact contest-binary correspondence and exhaustive closest-contest claim unresolved."
+    },
+    {
+      "claim_ids": [
+        "CLM-013"
+      ],
+      "source_ids": [
+        "S15"
+      ],
+      "locator": "S15 primary https://patents.google.com/patent/CN122839978A/en failed",
+      "verdict": "unresolved",
+      "blocking": true,
+      "reason": "Primary inaccessible; secondary indexed text is discovery only and cannot refute novelty."
+    },
+    {
+      "claim_ids": [
+        "CLM-014"
+      ],
+      "source_ids": [],
+      "locator": "JOB.json; policy INNOVATION-BATCH-0003 Resources; both experiment-consent.json",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "No new experiment allocation; proposer pending, challenger revision_requested, not matching agreement. Gate stays CLOSED."
+    },
+    {
+      "claim_ids": [
+        "CLM-015"
+      ],
+      "source_ids": [
+        "S17",
+        "S18",
+        "S19"
+      ],
+      "locator": "S17/S18/S19 abstract pages opened",
+      "verdict": "partially_valid",
+      "blocking": false,
+      "reason": "Generic stage-agent/collaboration/execution-guided script context reopened at abstract level only; no full method or detailed-route equivalence audit."
+    },
+    {
+      "claim_ids": [
+        "ADAPTER-01"
+      ],
+      "source_ids": [
+        "S09"
+      ],
+      "locator": "S09 pinned README Useful Developer Commands, physical lines 173-182",
+      "verdict": "unresolved",
+      "blocking": true,
+      "reason": "check_drc is documented but obligation enumeration, clean certificates, complete selective dispatch and marker union are not established by this README. Mandatory full fallback may consume the entire purported saving."
+    }
+  ],
+  "source_ledger": [
+    {
+      "id": "S01",
+      "title": "TritonRoute-WXL: The Open-Source Router With Integrated DRC Engine",
+      "url": "https://vlsicad.ucsd.edu/Publications/Journals/j136.pdf",
+      "version": "TCAD 41(4), DOI 10.1109/TCAD.2021.3079268; un-hashed author PDF",
+      "publication_date": "2022",
+      "retrieved_utc": "2026-10-15",
+      "access_level": "selected_full_text",
+      "locator": "PDF page 9, section V-E Incremental DRC Checking Capability, and pages 9\u201310 section VI-B queue-based ripup-and-reroute; browser raw lines 838\u2013925",
+      "limits": "Selected passages only; browser extracted lines are renderer-relative, section/page/function anchors take precedence. No full implementation audit."
+    },
+    {
+      "id": "S02",
+      "title": "OpenDRC: An Efficient Open-Source Design Rule Checking Engine with Hierarchical GPU Acceleration",
+      "url": "https://zyh0911.github.io/assets/pdf/OpenDRC.pdf",
+      "version": "DAC2023 DOI 10.1109/DAC56929.2023.10247734; metadata crosscheck https://research.cuhk.edu.hk/en/publications/opendrc-an-efficient-open-source-design-rule-checking-engine-with-2/",
+      "publication_date": "2023",
+      "retrieved_utc": "2026-10-15",
+      "access_level": "selected_full_text",
+      "locator": "PDF page 3, section IV-C Task Pruning from Hierarchy Tree, raw lines 218\u2013286; sections IV-D/E",
+      "limits": "Selected passages only; browser extracted lines are renderer-relative, section/page/function anchors take precedence. No full implementation audit."
+    },
+    {
+      "id": "S03",
+      "title": "Invited Paper: Heterogeneous Acceleration for Design Rule Checking",
+      "url": "https://www.cse.cuhk.edu.hk/~byu/papers/C188-ICCAD2023-HeteroDRC.pdf",
+      "version": "ICCAD2023 author PDF",
+      "publication_date": "2023",
+      "retrieved_utc": "2026-10-15",
+      "access_level": "selected_full_text",
+      "locator": "PDF pages 1\u20133 background, page 6 section V-C/V-D, raw lines 400\u2013448; references [28]/[35]/[36]",
+      "limits": "Selected passages only; browser extracted lines are renderer-relative, section/page/function anchors take precedence. No full implementation audit."
+    },
+    {
+      "id": "S04",
+      "title": "DRC-Aid: Design-Rule Correction via Agentic Framework utilizing Inference-Time Large Language Models",
+      "url": "https://arxiv.org/html/2607.22761v1",
+      "version": "arXiv:2607.22761v1; abs metadata separately opened",
+      "publication_date": "2026-07-23",
+      "retrieved_utc": "2026-10-15",
+      "access_level": "selected_full_text",
+      "locator": "Sections 3.1 controller, 3.2 Rule/Connectivity Engine, 3.3 verification, 3.4 Global Memory; rendered raw lines 103\u2013196",
+      "limits": "Selected passages only; browser extracted lines are renderer-relative, section/page/function anchors take precedence. No full implementation audit."
+    },
+    {
+      "id": "S05",
+      "title": "Incremental Layout Analysis",
+      "url": "https://patents.google.com/patent/US20120047479A1/en",
+      "version": "US20120047479A1; priority 2007-03-09 as listed, not legal conclusion",
+      "publication_date": "2012-02-23",
+      "retrieved_utc": "2026-10-15",
+      "access_level": "selected_full_text",
+      "locator": "Description: Detecting Differences/hashed geometry raw lines 525\u2013539; Halos 553\u2013562; Selection of Analysis Criteria 569\u2013573; publication metadata 34\u201335",
+      "limits": "Selected passages only; browser extracted lines are renderer-relative, section/page/function anchors take precedence. No full implementation audit."
+    },
+    {
+      "id": "S06",
+      "title": "An Experimental Analysis of Self-Adjusting Computation",
+      "url": "https://www.cs.cmu.edu/~guyb/papers/ABBT06.pdf",
+      "version": "PLDI2006; DOI 10.1145/1133255.1133993",
+      "publication_date": "2006",
+      "retrieved_utc": "2026-10-15",
+      "access_level": "selected_full_text",
+      "locator": "PDF page 1 abstract and introduction; dependence graphs and memoization; selected primary full text",
+      "limits": "Selected passages only; browser extracted lines are renderer-relative, section/page/function anchors take precedence. No full implementation audit."
+    },
+    {
+      "id": "S07",
+      "title": "X-Check: GPU-Accelerated Design Rule Checking via Parallel Sweepline Algorithms",
+      "url": "https://www.cse.cuhk.edu.hk/~byu/papers/C149-ICCAD2022-GPU-DRC.pdf",
+      "version": "ICCAD2022 DOI 10.1145/3508352.3549383",
+      "publication_date": "2022-10-30",
+      "retrieved_utc": "2026-10-15",
+      "access_level": "unavailable",
+      "locator": "Section 5.1 Dynamic Algorithm Selection; 5.2 sorting and 5.3 granularity; selected primary indexed method excerpt plus PDF opening",
+      "limits": "Selected passages only; no execution or reproduced gains. Original primary failed this job; source remains unresolved."
+    },
+    {
+      "id": "S08a",
+      "title": "Shift left for more efficient block design and chip integration",
+      "url": "https://blogs.sw.siemens.com/calibre/2024/07/26/shift-left-for-more-efficient-block-design-and-chip-integration/",
+      "version": "retrieved 2026-10-15",
+      "publication_date": "2024-07-26",
+      "retrieved_utc": "2026-10-15",
+      "access_level": "selected_full_text",
+      "locator": "Section DRC error debugging integrated in the design layout environment; Figure 4 discussion",
+      "limits": "Selected passages only; browser extracted lines are renderer-relative, section/page/function anchors take precedence. No full implementation audit."
+    },
+    {
+      "id": "S09",
+      "title": "OpenROAD detailed routing documentation at pinned commit",
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/src/drt/README.md",
+      "version": "commit b16bda7e82721d10566ff7e2b68f1ff0be9f9e38; current unpinned page also checked https://openroad.readthedocs.io/en/latest/main/src/drt/README.html",
+      "publication_date": "unknown",
+      "retrieved_utc": "2026-10-15",
+      "access_level": "selected_full_text",
+      "locator": "Raw physical lines 0\u201314 components; 31\u201357 command; 173\u2013182 developer commands; 226\u2013228 license",
+      "limits": "Selected passages only; browser extracted lines are renderer-relative, section/page/function anchors take precedence. No full implementation audit."
+    },
+    {
+      "id": "S11",
+      "title": "ISPD2019 Initial Detailed Routing Contest",
+      "url": "https://www.ispd.cc/contests/19/",
+      "version": "retrieved 2026-10-15",
+      "publication_date": "2019",
+      "retrieved_utc": "2026-10-15",
+      "access_level": "selected_full_text",
+      "locator": "Final Contest Result raw lines 154\u2013175; Final Solution Files lines 177\u2013201",
+      "limits": "Selected passages only; browser extracted lines are renderer-relative, section/page/function anchors take precedence. No full implementation audit."
+    },
+    {
+      "id": "S12",
+      "title": "ISPD2025 Performance-Driven Large Scale Global Routing",
+      "url": "https://www.ispd.cc/contests/25/index.html",
+      "version": "retrieved 2026-10-15",
+      "publication_date": "2025",
+      "retrieved_utc": "2026-10-15",
+      "access_level": "selected_full_text",
+      "locator": "Contest title and Contest Winners list",
+      "limits": "Selected passages only; browser extracted lines are renderer-relative, section/page/function anchors take precedence. No full implementation audit."
+    },
+    {
+      "id": "S13",
+      "title": "ISPD2026 Post-Placement Buffering and Sizing",
+      "url": "https://www.ispd.cc/contests/26/index.html",
+      "version": "retrieved 2026-10-15",
+      "publication_date": "2026",
+      "retrieved_utc": "2026-10-15",
+      "access_level": "selected_full_text",
+      "locator": "Title, Contest Winners and Resources, raw lines 0\u201318",
+      "limits": "Selected passages only; browser extracted lines are renderer-relative, section/page/function anchors take precedence. No full implementation audit."
+    },
+    {
+      "id": "S15",
+      "title": "An incremental design rule checking method, computer device and computer readable storage medium \u2014 CN122839978A lead",
+      "url": "https://eureka.patsnap.com/patent/CN122839978A",
+      "version": "retrieved 2026-10-15",
+      "publication_date": "unknown",
+      "retrieved_utc": "2026-10-15",
+      "access_level": "unavailable",
+      "locator": "Indexed excerpt naming rule dependency graphs, active rule filtering and boundary effects",
+      "limits": "Selected passages only; no execution or reproduced gains. Original primary failed this job; source remains unresolved."
+    },
+    {
+      "id": "S17",
+      "title": "AgenticPD: A Stage-Aware Agentic Framework for Closed-Loop Physical Design Optimization",
+      "url": "https://arxiv.org/abs/2607.04758v3",
+      "version": "arXiv:2607.04758v3",
+      "publication_date": "2026-10-04",
+      "retrieved_utc": "2026-10-15",
+      "access_level": "abstract",
+      "locator": "Abstract browser lines 16\u201318; v3 history lines 28\u201330",
+      "limits": "Selected passages only; browser extracted lines are renderer-relative, section/page/function anchors take precedence. No full implementation audit."
+    },
+    {
+      "id": "S18",
+      "title": "Divergent Thoughts toward One Goal: LLM-based Multi-Agent Collaboration System for Electronic Design Automation",
+      "url": "https://arxiv.org/abs/2502.10857v1",
+      "version": "arXiv:2502.10857v1",
+      "publication_date": "2025-02-15",
+      "retrieved_utc": "2026-10-15",
+      "access_level": "abstract",
+      "locator": "Abstract lines 16\u201318",
+      "limits": "Selected passages only; browser extracted lines are renderer-relative, section/page/function anchors take precedence. No full implementation audit."
+    },
+    {
+      "id": "S19",
+      "title": "Rule2DRC: Benchmarking LLM Agents for DRC Script Synthesis with Execution-Guided Test Generation",
+      "url": "https://arxiv.org/abs/2605.15669",
+      "version": "arXiv:2605.15669v1",
+      "publication_date": "2026-05-15",
+      "retrieved_utc": "2026-10-15",
+      "access_level": "abstract",
+      "locator": "Abstract lines 16\u201318",
+      "limits": "Selected passages only; browser extracted lines are renderer-relative, section/page/function anchors take precedence. No full implementation audit."
+    },
+    {
+      "id": "V-SCSK",
+      "title": "Submodular Optimization with Submodular Cover and Submodular Knapsack Constraints",
+      "url": "https://papers.nips.cc/paper/2013/file/a1d50185e7426cbb0acad1e6ca74b9aa-Paper.pdf",
+      "publication_date": "2013",
+      "retrieved_utc": "2026-10-15",
+      "access_level": "selected_full_text",
+      "locator": "section 1 Problem 2, PDF p1 lines 28-47",
+      "limits": "Formulation only; no guarantee transferred."
+    },
+    {
+      "id": "V-DRCU",
+      "title": "Dr. CU Scheduler.cpp",
+      "url": "https://raw.githubusercontent.com/cuhk-eda/dr-cu/3d81988d741da36d2612f3443165970e0125bccc/src/multi_net/Scheduler.cpp",
+      "version": "3d81988d741da36d2612f3443165970e0125bccc",
+      "retrieved_utc": "2026-10-15",
+      "access_level": "selected_full_text",
+      "locator": "Scheduler::schedule physical lines 17-20,32-59; spatial conflict implementation 76-100",
+      "limits": "Read-only source; not exact original contest binary or certificate API verification."
+    }
+  ],
+  "objections": [
+    {
+      "id": "OBJ-901",
+      "topic": "EDA-0009",
+      "challenger_release": "SUB-9354b850df73175a5f4764f21dc5b5e8d9204f7741e9c50dce06953c34e9f984",
+      "scope": "Current initial EDA-0009 proposal SUB-aeaba01af9a5b6128eec0673cea74b71dc559d2ba9bf7da096ebfaff8bdce21a",
+      "verdict": "valid",
+      "blocking": true,
+      "claim_ids": [
+        "CLM-007",
+        "CLM-010"
+      ],
+      "evidence": [
+        "C-S01 V-E",
+        "C-S02 IV-C",
+        "own weighted residual identity: 500 seeded set cases, analysis-output.json"
+      ],
+      "reason": "Separate costs from identical K0 minus shared costs equal weighted residual intersection. Initial cache construction/extraction is not specified sufficiently; raw overlap need not save new work. Existing same-cache policy is acknowledged, so this is a precision gap rather than an observed unfair experiment or no-reuse theorem.",
+      "required_action": "On any authorized restart bind cold/warm K0 and charge extraction, then report residual-common and unique work plus complete fallback overhead."
+    },
+    {
+      "id": "OBJ-902",
+      "topic": "EDA-0009",
+      "challenger_release": "SUB-9354b850df73175a5f4764f21dc5b5e8d9204f7741e9c50dce06953c34e9f984",
+      "scope": "Current initial EDA-0009 proposal SUB-aeaba01af9a5b6128eec0673cea74b71dc559d2ba9bf7da096ebfaff8bdce21a",
+      "verdict": "valid",
+      "blocking": true,
+      "claim_ids": [
+        "CLM-009",
+        "CLM-010"
+      ],
+      "evidence": [
+        "C-S06 section 1 Problem 2 PDF p1",
+        "experiment-plan.md B3/B5/B6",
+        "own marginal derivation in verification.json analytical_checks"
+      ],
+      "reason": "Weighted fixed-set coverage cost and independent-success toy utility are monotone submodular. Identical pair score arrays, feasible subsets, updates and ties imply identical actions. This does not prove physical problem equivalence, transfer approximation guarantees, or rule out an explicit useful representation/estimator interaction.",
+      "required_action": "Merge identical arms or freeze a concrete equal-information estimator/interaction delta; identity-check deterministic policy before any physical comparison. Do not use isolated-greedy toy as novelty evidence."
+    }
+  ],
+  "objection_reference_scopes": [
+    {
+      "id": "OBJ-901",
+      "topic": "EDA-0009",
+      "challenger_release": "SUB-9354b850df73175a5f4764f21dc5b5e8d9204f7741e9c50dce06953c34e9f984",
+      "role": "current adjudication",
+      "original_read": true
+    },
+    {
+      "id": "OBJ-902",
+      "topic": "EDA-0009",
+      "challenger_release": "SUB-9354b850df73175a5f4764f21dc5b5e8d9204f7741e9c50dce06953c34e9f984",
+      "role": "current adjudication",
+      "original_read": true
+    }
+  ],
+  "historical_scope": {
+    "predecessor_release_directories_read": false,
+    "current_proposal_references": "Historical EDA-0008 park and C-T301 lesson visible only through released current responses/plan. No historical original was reopened or re-adjudicated; no inherited independent verification.",
+    "literal_OBJ_ids_in_current_input_material": [
+      "OBJ-901",
+      "OBJ-902"
+    ],
+    "all_literal_OBJ_references_in_this_JSON": "The two IDs are scoped above to current EDA-0009 challenger release; no unscoped historical objection ID is asserted."
+  },
+  "analytical_checks": {
+    "own_script": "verifier_analysis.py",
+    "sha256": "b2d8bf0f3af415b2132431b12c828f55eca3fd09a2a62a2279d05204f3d9209a",
+    "observed_output": {
+      "weighted_residual_identity_cases": 500,
+      "toy_best_pair": [
+        [
+          1,
+          2
+        ],
+        5,
+        0.5774999999999999
+      ],
+      "all_complete_work": 8,
+      "scope": "Own set algebra only; no physical checker, trained model or source code executed."
+    },
+    "derivation": "Marginal cost of adding i to T is sum of weights in R_i outside union R_j for j in T, decreasing with T. Marginal independent-success value is p_i times product(1-p_j), also decreasing. Thus fixed toy fits SCSK; no analogous physical assumption established. A deterministic selector is a function of arrays/state/ties: identical inputs and function imply identical output.",
+    "limits": "No physical EDA run or learned-controller implementation tested; proposer 300 transitions inspected as released script/count only."
+  },
+  "search_log": {
+    "engine": "web.run open/find/search_query",
+    "date_utc": "2026-10-15",
+    "queries": [
+      "detailed routing candidate design rule checking cache reuse shared submodular validation scheduling",
+      "incremental design rule checking candidate reuse memoization layout checker"
+    ],
+    "expansions": [
+      "Classical incremental/memoization: OpenDRC, WXL, Acar and patent primary reopened.",
+      "Budgeted shared cost: Iyer/Bilmes primary formulation reopened; recent learned-DRC/route-convergence leads inspected at index/metadata only."
+    ],
+    "stop": "Bounded final-cycle source time budget; two expansions did find close material. Search not exhaustive; no absence-based novelty conclusion.",
+    "new_leads": [
+      {
+        "url": "https://doi.org/10.1145/3769306",
+        "title": "AiDRC",
+        "access": "Primary publisher search-index abstract/section excerpt; direct reopen failed.",
+        "implication": "Future learned-DRC comparator lead; no numeric result adopted or equivalence ruling."
+      },
+      {
+        "url": "https://doi.org/10.23919/DATE69613.2026.11539594",
+        "title": "Accelerating Detailed Routing Convergence through Offline Reinforcement Learning",
+        "access": "Publisher index excerpt and nearly empty direct page.",
+        "implication": "Future cost-weight scheduling comparator lead, no full method or overlap verdict."
+      }
+    ],
+    "failures": [
+      "S07 GPU-DRC PDF direct reopen internal error",
+      "S15 primary CN patent direct reopen internal error",
+      "AiDRC DOI direct reopen internal error"
+    ],
+    "excluded": "Off-topic search hits, Wikipedia, secondary summaries not relied on for verdict."
+  },
+  "limitations": [
+    "Unblinded released proposal/forecast/challenge review; numeric forecasts null.",
+    "No backend/model attestation, adversarial OS isolation, unseen-action certification or independent protocol audit by this scientific reviewer.",
+    "No representative chip measurement, conformance implementation, complete winner audit or primary modern patent access.",
+    "Structural freeze and manifest hashes establish bytes/provenance, not scientific truth."
+  ],
+  "next_action": "park",
+  "reversal_conditions": [
+    "Future owner-authorized research outside this finite batch; refresh primary novelty/equivalence audit.",
+    "Specify baseline-distinct interaction and demonstrate non-negligible residual sharing after charged K0.",
+    "Complete selective oracle/marker/connectivity contract, legal representative cases and baseline-only thresholds.",
+    "Actual resource allocation and matching independent P/C exact-task consent before physical work."
+  ],
+  "validation": {
+    "input_manifests": "Trusted verify succeeded for both current releases; distinct sessions and same input commit. Role packet hashes intentionally differ.",
+    "local_checks": "JSON/hash checks, own tiny stdlib algebra, trusted project.py release-directory digest; trusted freeze follows.",
+    "full_repository_validate": "Not run: standalone packet lacks full checkout and other harnesses; coordinator publication responsibility per prompt."
+  }
+}
