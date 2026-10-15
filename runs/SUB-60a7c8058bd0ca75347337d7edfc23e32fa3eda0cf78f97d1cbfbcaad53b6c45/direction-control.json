@@ -1,0 +1,84 @@
+{
+  "state": "continue",
+  "anchor": {
+    "problem": "DRC-clean signal routes can leave a setup-critical connection on a detour when retained neighboring routes block better local embeddings.",
+    "engineering_user": "Physical-design timing-closure engineer working on an unchanged post-route netlist and placement.",
+    "downstream_need": "Improve whole-design extracted worst setup slack without new hold, DRC or connectivity failures at fixed technology/corner and bounded cost.",
+    "causal_mechanism": "Use reachability-cut witnesses in a budget-expanded owner-labelled local routing graph to select bounded sets of otherwise legal blocker nets for atomic joint reembedding.",
+    "mechanism_invariants": [
+      "Fixed netlist, cell placement/types, clocks, SDC, technology, corner and external boundary stubs.",
+      "Selection uses explicit cut and all disabling owners; merely adding criticality weights or enlarging boxes is insufficient.",
+      "Cut is only a surrogate-graph witness; physical acceptance requires full-design extraction, STA, DRC and connectivity.",
+      "Charge all search, rejected candidates and oracle calls; preserve exact rollback."
+    ],
+    "forbidden_pivots": [
+      "Generic learned routing priority or criticality sorting in place of cut-guided owner selection.",
+      "Placement, sizing, buffering, clock editing or timing-model research under this topic ID.",
+      "HPWL, surrogate cost or DRC convergence substituted for post-route whole-design timing utility.",
+      "Claiming novelty from implementing an organizer hint or an available baseline."
+    ]
+  },
+  "penalties": {
+    "combination_drift": {
+      "score": 0,
+      "rationale": "R2 retains necessary owner-cut selection plus atomic joint reembedding; adds strong MCR composition comparator, clarifies sound pruning and helpful supersets. Generic selection+reconstruction is explicitly not claimed new.",
+      "evidence_refs": [
+        "CLM-010",
+        "CLM-011",
+        "CLM-014",
+        "CLM-016",
+        "CLM-017",
+        "CLM-018",
+        "OBJ-001"
+      ]
+    },
+    "demand_drift": {
+      "score": 0,
+      "rationale": "Fixed-design whole-design extracted WNS endpoint unchanged. Strict plateau limitation retained and all-case denominator required; no unsupported user exclusion, TNS substitution or multi-clip pivot.",
+      "evidence_refs": [
+        "CLM-001",
+        "CLM-012",
+        "CLM-015",
+        "OBJ-002",
+        "OBJ-003"
+      ]
+    },
+    "total": 0
+  },
+  "revision_assessment": {
+    "preserves_problem": true,
+    "preserves_engineering_need": true,
+    "preserves_causal_mechanism": true,
+    "changes": [
+      "Exact MCR reduction and policy table; B4 standard-composition control.",
+      "Necessary-only cut clauses and common physical-superset completion.",
+      "Strict tied/near-tie limitation and unconditional opportunity counts.",
+      "Fixed amortized runtime denominator plus marginal cost and 90-record budget."
+    ],
+    "reason": "All adjudicated objections accepted; documentation repaired without changing anchor. Novelty, demand and physical executability remain unresolved; zero drift is not scientific approval."
+  },
+  "abandonment": {
+    "decision_id": null,
+    "grounds": [],
+    "rationale": null,
+    "evidence_refs": [],
+    "consents": {
+      "proposer": {
+        "session_id": "1a859cdd-08fa-46af-a2fe-1a6fc872d695",
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      },
+      "challenger": {
+        "session_id": null,
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      }
+    },
+    "successor_topic_id": null,
+    "resurrection_conditions": [
+      "An equivalent mechanism finding may require a new topic ID for a different contribution."
+    ]
+  }
+}

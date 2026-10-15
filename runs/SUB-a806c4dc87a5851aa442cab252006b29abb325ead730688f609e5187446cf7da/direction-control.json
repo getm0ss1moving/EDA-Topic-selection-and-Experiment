@@ -1,0 +1,81 @@
+{
+  "state": "revise_same_problem",
+  "anchor": {
+    "problem": "Multi-corner (MCMM) static timing analysis cost grows with the number of declared scenarios, and existing reductions save runtime only by skipping scenarios on estimated, empirical, learned or experience-based criteria that cannot guarantee zero missed violations.",
+    "engineering_user": "Timing-closure and signoff engineers (and closure-flow owners) who must obtain timing decisions at every scenario of a declared scenario set during closure iterations and before signoff.",
+    "downstream_need": "The complete decision set of full MCMM analysis of the declared scenario set: every violating (endpoint, scenario, check) triple, exact slacks below a reporting margin M, and WNS/TNS per scenario. It must come with zero missed violations relative to full analysis and with lower end-to-end turnaround.",
+    "causal_mechanism": "Per scenario, an exact clock-network pass plus a cheap data-network bound pass. The bound pass uses only that scenario's own characterized tables and parasitics, and its bounds are sound with respect to the reference engine's delay-calculation semantics. Together they certify (endpoint, scenario, check) triples whose slack lower bound clears M. Exact analysis is then restricted to the fan-in cones of uncertified triples. Decisions equal full analysis by construction; runtime falls because most triples in non-dominant scenarios have margins larger than the bound band.",
+    "mechanism_invariants": [
+      "Zero missed violations relative to full reference analysis of the declared scenario set, by construction under audited soundness properties; never by estimation, calibration or learning",
+      "Exact slack values for every reported triple below the margin M, plus exact WNS/TNS when negative",
+      "No parametric, monotone-in-PVT or learned cross-scenario model; each scenario is bounded from its own characterized data",
+      "Evaluation against the strongest full-MCMM baseline (all scenarios in one pinned OpenSTA run) under equal resources",
+      "One pinned reference engine and delay calculator define soundness; any new calculator needs its own audit"
+    ],
+    "forbidden_pivots": [
+      "Replacing the mechanism with a straightforward combination of prior methods",
+      "Optimizing a proxy without a demonstrated engineering need",
+      "Changing the user or downstream objective to avoid a valid objection",
+      "Replacing sound certificates with estimated cutoffs, learned predictors or calibrated safety margins while keeping a guarantee claim",
+      "Dropping exact refinement and reporting only bounds as if they were slacks",
+      "Redefining success as average slack error or correlation instead of decision equivalence",
+      "Attributing speedup to parallelism or hardware scaling rather than to certification"
+    ]
+  },
+  "penalties": {
+    "combination_drift": {
+      "score": 1,
+      "rationale": "Retain inherited CPC restriction score 1. PS-02 diagnoses, rather than promotes, straightforward composition. User, clock/bound/certify/refine causal chain and forbidden pivots are unchanged. No self-clearing of verifier-checked penalty; any composition-only contribution would need rescore and block advancement.",
+      "evidence_refs": [
+        "SRC-H01",
+        "SRC-R22",
+        "SRC-R23",
+        "CLM-044",
+        "CLM-045"
+      ]
+    },
+    "demand_drift": {
+      "score": 0,
+      "rationale": "Same user and full scenario decision objective. Preserve exact WNS, including positive WNS if required by the reference report, rather than silently replacing it with a clipped statistic. Provisional thresholds remain screening targets.",
+      "evidence_refs": [
+        "SRC-P01"
+      ]
+    },
+    "total": 1
+  },
+  "revision_assessment": {
+    "preserves_problem": true,
+    "preserves_engineering_need": true,
+    "preserves_causal_mechanism": true,
+    "changes": [
+      "PS-02 fixes equal-information P/B1/B1+ procedures and exact-WNS schedule.",
+      "TR-02 finds conditional equivalence against table-aware B1+; no nontrivial contribution asserted.",
+      "Current ISPD2026 rules/results and scoped license audited; unsuitable current fixture excluded from readiness.",
+      "TASK-01D precedes any implementation or consent; all experiment gates remain open."
+    ],
+    "reason": "Respond to OBJ-001 and OBJ-002, both valid in released SUB-48d08a36a7ff2ace364227ede380e0feab8f10f0477e3731a1b0379238275671; no foreign private material."
+  },
+  "anchor_scope_note": "The anchor is preserved verbatim for direction integrity, not endorsed as factual evidence. Its general wording about existing reductions is overbroad; CLM-030 and the prior-art comparison explicitly correct it.",
+  "abandonment": {
+    "decision_id": null,
+    "grounds": [],
+    "rationale": "Local equivalence of submitted table-range specialization to B1+ is documented. It does not establish exhaustion of every anchor-preserving mechanism, an applicable saturation theorem or a global dead end. No matching abandonment target or vote; remain revise.",
+    "evidence_refs": [],
+    "consents": {
+      "proposer": {
+        "session_id": null,
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      },
+      "challenger": {
+        "session_id": null,
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      }
+    },
+    "successor_topic_id": null,
+    "resurrection_conditions": []
+  }
+}

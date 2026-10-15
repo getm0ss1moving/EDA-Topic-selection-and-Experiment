@@ -1,0 +1,27 @@
+{
+  "kind": "forecast_not_measurement",
+  "metric": "1 - end_to_end_candidate_wall_time / strongest_full_reference_wall_time",
+  "unit": "fraction",
+  "baseline_source": "OpenSTA e01d3f163f483f233db00410b6515a767a6ca03b; reproduction pending TASK-04",
+  "direction": "larger is better",
+  "pessimistic": null,
+  "base": null,
+  "optimistic": null,
+  "confidence": null,
+  "assumptions": [
+    "No measured baseline, CPC/union eligibility or overhead exists for this revision.",
+    "Twenty percent is a provisional screening threshold, not an expected gain.",
+    "Conditional correctness proposition is not an operational soundness measurement.",
+    "Inherited synthetic counterexamples concern rejected broad bounds and do not forecast runtime.",
+    "PS-02 makes P-RANGE and strengthened B1+ certificate-equivalent under common primitives; no incremental mechanism advantage is established.",
+    "Representative three-design/three-characterized-scenario inputs, demand calibration, executable budget and engine proof remain unresolved."
+  ],
+  "calibration_plan": "Populate an ex ante interval only after allocated TASK-05 headroom data and before candidate timing; disclose prior data exposure. If no defensible basis exists, leave null.",
+  "measurement_status": "No STA, build, property, data-generation or benchmark experiment executed in batch cycle 2; TR-02 is an analytical derivation, not measurement.",
+  "mechanism_forecast": {
+    "comparison": "P-RANGE versus B1+ under PS-02 common-primitive assumptions",
+    "status": "conditional_algorithmic_equivalence",
+    "runtime_gain": null,
+    "limitation": "No measured code/runtime equality or global impossibility theorem; H2 novelty attribution not supported."
+  }
+}
