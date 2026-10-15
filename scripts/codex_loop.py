@@ -529,8 +529,12 @@ def clean_checkpoint(state,t,job,record=None):
     history=list(t['history'])
     if len(history)<consumed:return None
     clean=history[:-consumed] if consumed else history
-    expected_round=t['round']-(1 if record else 0)
-    if len(clean)!=expected_round*3:return None
+    # Consent-only triples need not increment the substantive round counter.
+    # Earlier complete records bind both their released triples and that counter.
+    prior=[r for r in state['publication_queue'] if r['topic']==t['topic'] and r is not record]
+    if clean!=[r['releases'][role] for r in prior for role in ROLES]:return None
+    expected_round=prior[-1]['round'] if prior else 0
+    if not record and t['round']!=expected_round:return None
     try:
         for index,name in enumerate(history):
             m,_=rs.verify(name)

@@ -222,6 +222,20 @@ class AuditedLoopTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'quarantine preserved'):l.recover(self.c,self.home,'D05')
         self.assertEqual(l.read(self.home/'state.json')['incidents'][0]['status'],'quarantined')
 
+    def test_migrated_consent_cycle_keeps_prior_substantive_round_and_closure(self):
+        self.c.pop('stop_after_rounds');self.action='consent_experiment'
+        for _ in range(3):self.science()
+        self.audit();l.audit_collect(self.c,self.home,'D05')
+        for _ in range(3):self.science()
+        state=l.read(self.home/'state.json');t=state['topics']['EDA-0002']
+        self.assertEqual(t['round'],1);self.assertEqual(len(t['history']),6)
+        t.pop('cycle_checkpoint');l.save(self.home/'state.json',state)
+        self.audit('blocking_violation');l.audit_collect(self.c,self.home,'D05')
+        l.recover(self.c,self.home,'D05')
+        t=l.read(self.home/'state.json')['topics']['EDA-0002']
+        self.assertEqual(t['round'],1);self.assertEqual(len(t['history']),3)
+        self.assertEqual(t['closure'],'experiment')
+
     def test_identity_and_unreleased_input_are_checked(self):
         a=l.read(Path(l.dispatch(self.c,self.home,'D05')['work'])/'JOB.json')
         ledger=self.ledger(a);manifest={k:a[k] for k in ('role','actor_id','session_id','input_commit','packet_sha256')}
