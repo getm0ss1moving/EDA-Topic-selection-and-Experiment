@@ -2,6 +2,7 @@
 import copy
 import json
 import os
+import shutil
 from pathlib import Path
 import tempfile
 import unittest
@@ -120,7 +121,9 @@ class AuditedLoopTests(unittest.TestCase):
         identity={k:'protocol-test' for k in ('GIT_AUTHOR_NAME','GIT_COMMITTER_NAME')}
         identity.update({k:'protocol-test@example.invalid' for k in ('GIT_AUTHOR_EMAIL','GIT_COMMITTER_EMAIL')})
         with patch.dict(os.environ,identity),patch.object(l.subprocess,'check_output',side_effect=local_only):
-            self.assertTrue(l.publish_record(record,self.c,self.home,dry_run=True)['dry_run'])
+            published=l.publish_record(record,self.c,self.home,dry_run=True)
+            self.assertTrue(published['dry_run'])
+            self.assertEqual(set(published['descriptor_roles']),set(l.ROLES)|{'protocol_audit'})
 
     def test_audit_cannot_omit_scientific_verifier_or_use_stale_inputs(self):
         for _ in range(3):self.science()
@@ -245,6 +248,11 @@ class AuditedLoopTests(unittest.TestCase):
         l.save(work/'release/compliance.json',v);bad=self.freeze(work)
         with self.assertRaisesRegex(ValueError,'checkout access'):l.collect(self.c,self.home,'D05')
         self.assertEqual(l.read(work/'mechanical-attempts.json')[0]['release_id'],bad['release_id'])
+        # A retry cannot erase the auditor's evidence by deleting its own mirror/snapshot.
+        (work/'mechanical-attempts.json').unlink()
+        old=work/'submissions'/bad['release_id'];old.chmod(0o700)
+        for item in old.iterdir():item.chmod(0o600)
+        shutil.rmtree(old)
         l.save(work/'release/compliance.json',self.ledger(a));good=self.freeze(work)
         l.collect(self.c,self.home,'D05');audit=Path(l.audit_dispatch(self.c,self.home,'D05')['work'])
         assignment=l.read(audit/'JOB.json')
@@ -252,6 +260,30 @@ class AuditedLoopTests(unittest.TestCase):
         self.assertEqual(len(assignment['released_inputs']),4)
         self.assertTrue((audit/'shared/rejected-attempts'/bad['release_id']/'compliance.json').is_file())
         self.assertEqual(Path(l.read(self.home/'state.json')['publication_queue'][0]['mechanical_releases'][0]).name,bad['release_id'])
+
+    def test_copied_consent_target_is_explicit_in_receiving_job_allowlist(self):
+        for _ in range(3):self.science()
+        self.audit();l.audit_collect(self.c,self.home,'D05')
+        self.c['stop_after_rounds']=4
+        state=l.read(self.home/'state.json');t=state['topics']['EDA-0002'];t['status']='researching'
+        target=Path(t['history'][0]).name
+        l.save(self.home/'state.json',state);l.save(self.home/'settings.json',self.c)
+        job=l.dispatch(self.c,self.home,'D05');work=Path(job['work']);fixtures.LoopTests.fake(self,self.c,job)
+        a=l.read(work/'JOB.json');l.save(work/'release/compliance.json',self.ledger(a))
+        l.save(work/'release/experiment-consent.json',{'session_id':a['session_id'],'decision':'revision_requested',
+            'signed_revision':target,'tasklist_sha256':'a'*64,'rationale':'Synthetic target transport, not consent'})
+        self.freeze(work);l.collect(self.c,self.home,'D05')
+        receiver=Path(l.dispatch(self.c,self.home,'D05')['work']);assignment=l.read(receiver/'JOB.json')
+        self.assertTrue((receiver/'shared'/target).is_dir())
+        self.assertIn(str(receiver/'shared'/target),assignment['released_inputs'])
+
+    def test_auditor_may_read_explicit_metadata_only_incident_release_id(self):
+        for _ in range(3):self.science()
+        work=self.audit();a=l.read(work/'JOB.json');sid='SUB-'+'e'*64
+        a['released_metadata_ids']=[sid];l.save(work/'JOB.json',a)
+        ledger=self.ledger(a);ledger['read_releases']=[sid]
+        l.save(work/'release/compliance.json',ledger);self.freeze(work)
+        self.assertEqual(l.audit_collect(self.c,self.home,'D05')['status'],'audit_collected')
 
     def test_identity_and_unreleased_input_are_checked(self):
         a=l.read(Path(l.dispatch(self.c,self.home,'D05')['work'])/'JOB.json')

@@ -245,7 +245,10 @@ def job_for(state,t,c):
             sid=json.loads(payload[name]).get('signed_revision')
             for old in t['history']:
                 if Path(old).name==sid and not (shared/sid).exists():
+                    if rs.verify(old)[0]['role']!='proposer':
+                        raise ValueError('Consent target must be a proposer release')
                     copy_release(old,shared/sid)
+                    paths.append(str(shared/sid))
     (work/'release').mkdir();(work/'submissions').mkdir()
     save(work/'result.schema.json',FINAL)
     assignment={'role':role,'topic':t['topic'],'domain':t['domain'],'round':t['round'],
@@ -522,6 +525,30 @@ def cycle_checkpoint(t):
     return {k:copy.deepcopy(t[k]) for k in fields if k in t}
 
 
+def remember_rejection(state,t,job,result,error,home):
+    """Coordinator policy storage, outside the retried actor's writable job."""
+    work=Path(job['work']);store=home/'rejected-attempts'/work.name
+    store.mkdir(parents=True,exist_ok=True);store.chmod(0o700)
+    index=store/'index.json';entries=read(index) if index.exists() else []
+    row={'release_id':result.get('release_id'),'error':str(error),
+         'scope':'Mechanical rejection, not an independent misconduct finding','snapshot':None}
+    sid=row['release_id'];seat=t['seats'][job['role']]
+    if isinstance(sid,str) and rt.SUB.fullmatch(sid):
+        try:
+            source=work/'submissions'/sid;m,_=rs.verify(source)
+            expected={'role':job['role'],'topic':t['topic'],'actor_id':seat['actor_id'],
+                      'session_id':seat['session_id'],'input_commit':state['source_commit'],
+                      'packet_sha256':seat['packet_sha256']}
+            if all(m[k]==v for k,v in expected.items()):
+                dest=store/sid
+                if not dest.exists():copy_release(source,dest)
+                rs.verify(dest);row['snapshot']=str(dest)
+        except (ValueError,OSError):pass  # Keep metadata; never export unverified/foreign bytes.
+    if row not in entries:entries.append(row)
+    save(index,entries)
+    save(work/'mechanical-attempts.json',entries)  # Author-facing mirror, not audit authority.
+
+
 def clean_checkpoint(state,t,job,record=None):
     """Migrate older audited in-flight phases using released history only."""
     if t.get('cycle_checkpoint'):return t['cycle_checkpoint']
@@ -563,6 +590,18 @@ def quarantine_cycle(state,t,job,reason,home,record=None):
               'clean_checkpoint':copy.deepcopy(checkpoint),
               'old_seats':copy.deepcopy(t['seats']),'status':'quarantined',
               'note':'Preserve disclosure; no private transcript or exposed content is copied. Fresh full-cycle replacement required.'}
+    retained=[]
+    bound=state['audits'][record['verification_release']]['seat'] if record else t['seats'][job['role']]
+    for source in list(releases.values())+snapshots:
+        try:
+            m,_=rs.verify(source)
+            if source in snapshots and (m['role']!=job['role'] or
+                    m['actor_id']!=bound['actor_id'] or m['session_id']!=bound['session_id']):continue
+            dest=home/'incidents'/ident/'releases'/Path(source).name
+            if not dest.exists():copy_release(source,dest)
+            retained.append(str(dest))
+        except (ValueError,OSError):continue
+    incident['retained_snapshots']=retained
     if record:
         incident['round']=copy.deepcopy(record)
         state['publication_queue'].remove(record)
@@ -641,16 +680,17 @@ def audit_dispatch(c, home, domain):
     save(work/'result.schema.json',FINAL)
     attempt_paths=[];attempt_sources=[]
     for role,name in record['releases'].items():
-        source=Path(name).parent.parent/'mechanical-attempts.json'
+        source=home/'rejected-attempts'/Path(name).parent.parent.name/'index.json'
         if not source.is_file():continue
         descriptor=work/'shared'/'job-descriptors'/role
-        shutil.copyfile(source,descriptor/source.name)
-        assignment=read(source.parent/'JOB.json')
+        shutil.copyfile(source,descriptor/'mechanical-attempts.json')
+        latest_manifest,_=rs.verify(name)
         for attempt in read(source):
-            candidate=source.parent/'submissions'/attempt.get('release_id','invalid')
+            if not attempt.get('snapshot'):continue
+            candidate=Path(attempt['snapshot'])
             try:
                 am,_=rs.verify(candidate)
-                if any(am[k]!=assignment[k] for k in ('role','topic','actor_id','session_id','input_commit','packet_sha256')):continue
+                if any(am[k]!=latest_manifest[k] for k in ('role','topic','actor_id','session_id','input_commit','packet_sha256')):continue
             except (ValueError,OSError,KeyError):continue
             dest=work/'shared'/'rejected-attempts'/candidate.name
             if not dest.exists():copy_release(candidate,dest)
@@ -706,7 +746,8 @@ def audit_collect(c,home,domain):
     expected=assignment['reviewed_releases']
     try:
         compliance.validate_ledger(json.loads(p.get('compliance.json',b'{}')),m,assignment,
-                                   [Path(x).name for x in assignment['released_inputs']])
+                                   [Path(x).name for x in assignment['released_inputs']]+
+                                   assignment.get('released_metadata_ids',[]))
     except compliance.ProtocolViolation as exc:
         quarantine_cycle(state,state['topics'][record['topic']],job,str(exc),home,record)
         save(home/'state.json',state);raise
@@ -728,6 +769,49 @@ def audit_collect(c,home,domain):
     record['registrations']['sessions'].append(registration)
     save(home/'state.json',state)
     return {'status':'audit_collected','topic':m['topic'],'disposition':disposition,'release_id':snapshot.name}
+
+
+def export_public_descriptors(record,repo,round_path):
+    """Reopenable audit inputs; no conversations, private logs or scratch."""
+    audit=Path(record['compliance_audit']);audit_work=audit.parent.parent
+    sources={r:Path(path) for r,path in record['releases'].items()}
+    sources['protocol_audit']=audit
+    manifest={'purpose':'Exact public job/packet descriptors used by the conduct review; not private traces',
+              'roles':{},'locator_map':{'shared/job-descriptors/':str(round_path/'job-descriptors')+'/'}}
+    for role,snapshot in sources.items():
+        m,_=rs.verify(snapshot);work=snapshot.parent.parent
+        dest=repo/round_path/'job-descriptors'/role;dest.mkdir(parents=True,exist_ok=True)
+        assignment=read(work/'JOB.json')
+        if any(assignment[k]!=m[k] for k in ('role','topic','actor_id','session_id','input_commit','packet_sha256')):
+            raise ValueError('Public descriptor identity mismatch')
+        if sha(work/'policy/PACKET.json')!=m['packet_sha256']:
+            raise ValueError('Public packet descriptor hash mismatch')
+        paths={'JOB.json':work/'JOB.json','prompt.txt':work/'prompt.txt',
+               'PACKET.json':work/'policy/PACKET.json'}
+        if role in ROLES:
+            supplied=audit_work/'shared/job-descriptors'/role
+            for name in ('JOB.json','prompt.txt'):
+                if rs.regular(supplied/name)!=rs.regular(paths[name]):
+                    raise ValueError('Audited/public descriptor bytes differ')
+            if (supplied/'mechanical-attempts.json').is_file():
+                paths['mechanical-attempts.json']=supplied/'mechanical-attempts.json'
+        for name,source in paths.items():(dest/name).write_bytes(rs.regular(source))
+        manifest['roles'][role]={'release_id':snapshot.name,'root':str(dest.relative_to(repo)),
+                               'files':{name:sha(dest/name) for name in paths}}
+    manifest['locator_map']['auditor JOB.json']=str(round_path/'job-descriptors/protocol_audit/JOB.json')
+    supplement=audit_work/'shared/protocol-incident'
+    if supplement.is_dir():
+        files={}
+        for name in ('coordinator-report.json','JOB.json','prompt.txt','compliance.json',
+                     'SUBMISSION.json','source-codex-loop.py','INPUTS.json'):
+            if (supplement/name).is_file():
+                dest=repo/round_path/'protocol-incident'/name;dest.parent.mkdir(parents=True,exist_ok=True)
+                dest.write_bytes(rs.regular(supplement/name));files[name]=sha(dest)
+        manifest['supplemental_inputs']={'root':str(round_path/'protocol-incident'),'files':files,
+            'scope':'Explicit incident metadata/common public code only; no quarantined scientific objections or private traces.'}
+        manifest['locator_map']['shared/protocol-incident/']=str(round_path/'protocol-incident')+'/'
+    save(repo/round_path/'DESCRIPTORS.json',manifest)
+    return manifest
 
 
 def publish_record(record,c,home,dry_run=False):
@@ -778,7 +862,10 @@ def publish_record(record,c,home,dry_run=False):
         public['releases']={r:'runs/'+Path(p).name for r,p in record['releases'].items()}
         if record.get('compliance_audit'):public['compliance_audit']='runs/'+Path(record['compliance_audit']).name
         if record.get('mechanical_releases'):public['mechanical_releases']=['runs/'+Path(p).name for p in record['mechanical_releases']]
-        save(repo/'runs'/f'CODEX-ROUND-{record["topic"]}-{key}'/'round.json',public)
+        round_path=Path('runs')/f'CODEX-ROUND-{record["topic"]}-{key}'
+        descriptors=export_public_descriptors(record,repo,round_path) if c.get('require_compliance') else None
+        if descriptors:public['descriptor_manifest']=str(round_path/'DESCRIPTORS.json')
+        save(repo/round_path/'round.json',public)
         # Registry travels atomically with this round; no registration PR has to merge first.
         registry_path=repo/'config/roles.json';registered=read(registry_path)
         by={s['session_id']:s for s in registered['sessions']}
@@ -792,7 +879,8 @@ def publish_record(record,c,home,dry_run=False):
             raise ValueError('Publication validation failed:\n'+validation.stdout+validation.stderr)
         cmd('git','add','runs','config/roles.json',cwd=repo)
         cmd('git','commit','--quiet','-m',f'Publish {record["topic"]} research round: {record["decision"]}',cwd=repo)
-        if dry_run:return {'dry_run':True,'branch':branch,'commit':git('rev-parse','HEAD',cwd=repo)}
+        if dry_run:return {'dry_run':True,'branch':branch,'commit':git('rev-parse','HEAD',cwd=repo),
+                          'descriptor_roles':list(descriptors['roles']) if descriptors else []}
         if cmd('git','ls-remote','--heads','origin',branch,cwd=repo):
             # A network failure after push must not strand the durable publication.
             # Reuse only a branch whose complete patch and bytes match our record.
@@ -801,6 +889,7 @@ def publish_record(record,c,home,dry_run=False):
             remote_files=set(cmd('git','diff','--name-only',remote_base,'FETCH_HEAD',cwd=repo).splitlines())
             expected_files={'config/roles.json',
                 f'runs/CODEX-ROUND-{record["topic"]}-{key}/round.json'}
+            expected_files.update(str(p.relative_to(repo)) for p in (repo/round_path).rglob('*') if p.is_file())
             for sid in published_ids:
                 expected_files.update(str(p.relative_to(repo)) for p in (repo/'runs'/sid).rglob('*') if p.is_file())
             if not remote_files.issubset(expected_files):
@@ -875,11 +964,7 @@ def collect(c,home,domain):
         quarantine_cycle(state,t,job,str(e),home)
         save(home/'state.json',state);raise
     except (ValueError,OSError) as e:
-        attempts=Path(job['work'])/'mechanical-attempts.json'
-        entries=read(attempts) if attempts.exists() else []
-        entry={'release_id':result.get('release_id'),'error':str(e),'scope':'Mechanical rejection, not an independent misconduct finding'}
-        if entry not in entries:entries.append(entry)
-        save(attempts,entries)
+        remember_rejection(state,t,job,result,e,home)
         save(Path(job['work'])/'retry-note.json',{'mechanical_error':str(e),
               'instruction':'Repair your own output; do not invent scientific agreement.'})
         raise

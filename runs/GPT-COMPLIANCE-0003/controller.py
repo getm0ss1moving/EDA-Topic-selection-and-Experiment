@@ -55,6 +55,12 @@ def main():
     seen={'D04':0,'D05':0}
     for rec in state['publication_queue']:
         t=state['topics'][rec['topic']];entry={**t,'latest':rec['releases']}
+        entry['seats']={}
+        for role,name in rec['releases'].items():
+            manifest,_=loop.rs.verify(name)
+            entry['seats'][role]=next(row for row in rec['registrations']['sessions']
+                                     if row['session_id']==manifest['session_id'] and row['role']==role
+                                     and row['topic']==rec['topic'])
         for role,name in rec['releases'].items():
             work=Path(name).parent.parent
             loop.validate_result(state,entry,{'role':role,'work':str(work)},loop.read(work/'result.json'))
@@ -96,6 +102,9 @@ def main():
         assert {r['work'] for r in dispatches} >= set(jobs)
     loop.save(RUN/'topic-index.json',index);loop.save(RUN/'role-compliance-index.json',compliance)
     loop.save(RUN/'quarantine-incidents.json',state.get('incidents',[]))
+    loop.save(RUN/'mechanical-rejections.json',[
+        {'job_id':path.parent.name,'attempts':loop.read(path)}
+        for path in sorted((home/'rejected-attempts').glob('*/index.json'))])
     loop.save(RUN/'progress.json',{'completed_cycles':counts,'topics':{
         k:{f:v.get(f) for f in ('domain','round','status','phase','last_scientific_decision')}
         for k,v in state['topics'].items()},'published':state['published'],'merged':state.get('merged',[])})
