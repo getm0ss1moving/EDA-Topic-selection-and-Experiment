@@ -130,11 +130,48 @@ class AuditedLoopTests(unittest.TestCase):
 
     def test_blocking_audit_never_releases_publication_or_next_job(self):
         for _ in range(3):self.science()
-        self.audit('blocking_violation');l.audit_collect(self.c,self.home,'D05')
-        self.assertEqual(l.dispatch(self.c,self.home,'D05')['status'],'awaiting_compliance_audit')
         record=l.read(self.home/'state.json')['publication_queue'][0]
+        self.audit('blocking_violation');l.audit_collect(self.c,self.home,'D05')
+        self.assertEqual(l.dispatch(self.c,self.home,'D05')['status'],'quarantined')
         with self.assertRaisesRegex(ValueError,'publication waits'):
             l.publish_record(record,self.c,self.home,dry_run=True)
+
+    def test_disclosed_exposure_cannot_be_retried_by_deleting_the_ledger_entry(self):
+        job=l.dispatch(self.c,self.home,'D05');work=Path(job['work'])
+        fixtures.LoopTests.fake(self,self.c,job);a=l.read(work/'JOB.json');ledger=self.ledger(a)
+        ledger['activity']['foreign_private_reads']=['withheld-artifact-id']
+        l.save(work/'release/compliance.json',ledger);bad=self.freeze(work)
+        old=l.read(self.home/'state.json')['topics']['EDA-0002']['seats']
+        with self.assertRaises(l.compliance.ProtocolViolation):l.collect(self.c,self.home,'D05')
+        self.assertFalse((work/'retry-note.json').exists())
+        l.save(work/'release/compliance.json',self.ledger(a));self.freeze(work)
+        with self.assertRaisesRegex(ValueError,'Exactly one'):l.collect(self.c,self.home,'D05')
+        self.assertEqual(l.dispatch(self.c,self.home,'D05')['status'],'quarantined')
+        l.recover(self.c,self.home,'D05')
+        state=l.read(self.home/'state.json');t=state['topics']['EDA-0002']
+        self.assertEqual(t['history'],[]);self.assertEqual(t['round'],0)
+        self.assertTrue(all(t['seats'][r]['session_id']!=old[r]['session_id'] for r in l.ROLES))
+        self.assertIn(str(work/'submissions'/bad['release_id']),state['incidents'][0]['frozen_attempts'])
+        self.assertEqual(l.read(work/'submissions'/bad['release_id']/'compliance.json'),ledger)
+        new=Path(l.dispatch(self.c,self.home,'D05')['work'])
+        self.assertFalse(list((new/'shared').glob('SUB-*')))
+
+    def test_blocked_round_replaced_from_checkpoint_without_counting_tainted_cycle(self):
+        for _ in range(3):self.science()
+        old=l.read(self.home/'state.json')['topics']['EDA-0002']['seats']
+        audit=self.audit('blocking_violation');out=l.audit_collect(self.c,self.home,'D05')
+        self.assertEqual(out['status'],'quarantined')
+        self.assertEqual(l.audit_dispatch(self.c,self.home,'D05')['status'],'no_pending_audit')
+        l.recover(self.c,self.home,'D05')
+        state=l.read(self.home/'state.json');t=state['topics']['EDA-0002']
+        self.assertEqual(t['round'],0);self.assertEqual(state['publication_queue'],[])
+        self.assertTrue(all(t['seats'][r]['session_id']!=old[r]['session_id'] for r in l.ROLES))
+        self.assertEqual(state['incidents'][0]['round']['compliance_gate'],'blocking_violation')
+        for _ in range(3):self.science()
+        fresh=self.audit();self.assertNotEqual(audit,fresh)
+        l.audit_collect(self.c,self.home,'D05')
+        self.assertEqual(l.dispatch(self.c,self.home,'D05')['status'],'finished')
+        self.assertEqual(len(l.read(self.home/'state.json')['publication_queue']),1)
 
     def test_identity_and_unreleased_input_are_checked(self):
         a=l.read(Path(l.dispatch(self.c,self.home,'D05')['work'])/'JOB.json')
