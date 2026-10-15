@@ -1,0 +1,9 @@
+source_id,task_formulation,mechanism,data,evaluation,assumptions,limitation,overlap,distinction
+C2-S03,MCMM worst delay,path/parameter BNB and incumbent,paper examples,not transferred,linear delay,different report contract,bound/refine,engine numerical contract not established
+C2-S04,all potentially critical paths,affine sufficient/exact pruning,paper circuits,not transferred,parameterized affine model,not exact per-corner engine,safe elimination,IEEE and reports not established
+C2-S05,parameterized timing,function-class max bounds,paper examples,not transferred,closure and extrema properties,not general engine proof,nonlinear bounds,explicit engine adapters still needed
+C2-S09,MCMM physical optimization,local violating/worst/propagated views,descriptive graphs,no measurement adopted,timing characterized first,no proof of pre-data own-table certificate,local view selection,oracle information cost differs
+C2-S10,design adaptive timing optimization,algorithm modification using LLM/OpenROAD,contest benchmarks,rankings only,contest flow,winner method unknown,nearby integration,not an established exact reporting competitor
+C2-S11,library characterization,interpolation and active learning,abstract only,not adopted,SPICE/corner characterization,not full method review,multi-corner cost,different workflow stage
+C2-S12,timing debugging,relation graph agent,abstract only,not adopted,existing timing data,not full method review,MCMM workflow,different decision/output
+C2-S13,latch STA / delay padding,heterogeneous compute / dual decomposition,program abstracts,not adopted,latch / optimization problems,full method unchecked,timing acceleration,no certificate equivalence established

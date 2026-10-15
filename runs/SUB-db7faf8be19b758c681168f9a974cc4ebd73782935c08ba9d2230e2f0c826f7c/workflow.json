@@ -1,0 +1,10 @@
+{
+  "role": "verifier",
+  "reviewed_proposer_release": "SUB-a806c4dc87a5851aa442cab252006b29abb325ead730688f609e5187446cf7da",
+  "adjudicated_challenger_releases": [
+    "SUB-74e2057df298eb5622da2f9b9ac90aab34b6bc351ab27f9e0c717e80ef60d6c6"
+  ],
+  "next_action": "revise",
+  "assessment": "revise",
+  "reason": "Paired-specification and ISPD repairs verified; local composition null is valid, executable DAG needs repair, remaining scientific/readiness gates unresolved."
+}
