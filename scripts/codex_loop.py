@@ -624,11 +624,16 @@ def publish_record(record,c,home,dry_run=False):
     with tempfile.TemporaryDirectory(prefix='eda-codex-publish-') as tmp:
         repo=Path(tmp).resolve()/'repo'
         cmd('git','clone','--quiet','--no-hardlinks',str(ROOT),str(repo))
-        remote=git('remote','get-url','origin')
-        if remote!='https://github.com/'+slug+'.git':raise ValueError('Unexpected remote')
-        cmd('git','remote','set-url','origin',remote,cwd=repo)
-        cmd('git','fetch','--quiet','origin','main',cwd=repo)
-        cmd('git','checkout','--quiet','-b',branch,'origin/main',cwd=repo)
+        if dry_run:
+            # A local transport rehearsal must not depend on network or CI's
+            # spelling of origin. Live publication still validates/fetches main.
+            cmd('git','checkout','--quiet','-b',branch,'HEAD',cwd=repo)
+        else:
+            remote=git('remote','get-url','origin')
+            if remote!='https://github.com/'+slug+'.git':raise ValueError('Unexpected remote')
+            cmd('git','remote','set-url','origin',remote,cwd=repo)
+            cmd('git','fetch','--quiet','origin','main',cwd=repo)
+            cmd('git','checkout','--quiet','-b',branch,'origin/main',cwd=repo)
         release_paths=list(record['releases'].values())
         if record.get('compliance_audit'):release_paths.append(record['compliance_audit'])
         for path in release_paths:

@@ -1,6 +1,7 @@
 """Synthetic protocol checks; no live-model or scientific-compliance claims."""
 import copy
 import json
+import os
 from pathlib import Path
 import tempfile
 import unittest
@@ -111,7 +112,15 @@ class AuditedLoopTests(unittest.TestCase):
         record=l.read(self.home/'state.json')['publication_queue'][0]
         self.assertIn('compliance_audit',record)
         # Real offline transport includes the fourth frozen output and its registration.
-        self.assertTrue(l.publish_record(record,self.c,self.home,dry_run=True)['dry_run'])
+        real=l.subprocess.check_output
+        def local_only(args, **kwargs):
+            self.assertNotEqual(args[0],'gh')
+            self.assertNotEqual(args[:2],['git','fetch'])
+            return real(args,**kwargs)
+        identity={k:'protocol-test' for k in ('GIT_AUTHOR_NAME','GIT_COMMITTER_NAME')}
+        identity.update({k:'protocol-test@example.invalid' for k in ('GIT_AUTHOR_EMAIL','GIT_COMMITTER_EMAIL')})
+        with patch.dict(os.environ,identity),patch.object(l.subprocess,'check_output',side_effect=local_only):
+            self.assertTrue(l.publish_record(record,self.c,self.home,dry_run=True)['dry_run'])
 
     def test_audit_cannot_omit_scientific_verifier_or_use_stale_inputs(self):
         for _ in range(3):self.science()
