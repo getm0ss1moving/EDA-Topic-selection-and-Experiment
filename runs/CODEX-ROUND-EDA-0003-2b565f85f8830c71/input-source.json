@@ -1,0 +1,10 @@
+{
+  "record_author": "coordinator transport metadata; no scientific content changed",
+  "input_commit": "a48f03d4bc254c0b0957d0fe0f265e072d6cf49a",
+  "public_ref": "refs/tags/codex/gpt-four-rounds-source-20261015",
+  "fetch_command": "git fetch origin tag codex/gpt-four-rounds-source-20261015",
+  "verified_tree": "a795625a469cd0a16259c16aa6a9216a445cbfff",
+  "equivalent_main_commit": "b946ec3de2ee0c9144e233316621d7e052a682b2",
+  "equivalence_check": "git rev-parse of both commit^{tree} values returned exactly the same tree hash. Equivalence concerns file bytes, not parent history or role model execution.",
+  "tag_verification": "Public git ls-remote resolves the tag to the exact input SHA; a separate clone fetched it and git cat-file -t returned commit. A branch-only checkout may need the explicit fetch above."
+}
