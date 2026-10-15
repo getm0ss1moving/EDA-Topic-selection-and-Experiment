@@ -261,6 +261,22 @@ class AuditedLoopTests(unittest.TestCase):
         self.assertTrue((audit/'shared/rejected-attempts'/bad['release_id']/'compliance.json').is_file())
         self.assertEqual(Path(l.read(self.home/'state.json')['publication_queue'][0]['mechanical_releases'][0]).name,bad['release_id'])
 
+    def test_copied_consent_target_is_explicit_in_receiving_job_allowlist(self):
+        for _ in range(3):self.science()
+        self.audit();l.audit_collect(self.c,self.home,'D05')
+        self.c['stop_after_rounds']=4
+        state=l.read(self.home/'state.json');t=state['topics']['EDA-0002'];t['status']='researching'
+        target=Path(t['history'][0]).name
+        l.save(self.home/'state.json',state);l.save(self.home/'settings.json',self.c)
+        job=l.dispatch(self.c,self.home,'D05');work=Path(job['work']);fixtures.LoopTests.fake(self,self.c,job)
+        a=l.read(work/'JOB.json');l.save(work/'release/compliance.json',self.ledger(a))
+        l.save(work/'release/experiment-consent.json',{'session_id':a['session_id'],'decision':'revision_requested',
+            'signed_revision':target,'tasklist_sha256':'a'*64,'rationale':'Synthetic target transport, not consent'})
+        self.freeze(work);l.collect(self.c,self.home,'D05')
+        receiver=Path(l.dispatch(self.c,self.home,'D05')['work']);assignment=l.read(receiver/'JOB.json')
+        self.assertTrue((receiver/'shared'/target).is_dir())
+        self.assertIn(str(receiver/'shared'/target),assignment['released_inputs'])
+
     def test_identity_and_unreleased_input_are_checked(self):
         a=l.read(Path(l.dispatch(self.c,self.home,'D05')['work'])/'JOB.json')
         ledger=self.ledger(a);manifest={k:a[k] for k in ('role','actor_id','session_id','input_commit','packet_sha256')}

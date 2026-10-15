@@ -55,6 +55,12 @@ def main():
     seen={'D04':0,'D05':0}
     for rec in state['publication_queue']:
         t=state['topics'][rec['topic']];entry={**t,'latest':rec['releases']}
+        entry['seats']={}
+        for role,name in rec['releases'].items():
+            manifest,_=loop.rs.verify(name)
+            entry['seats'][role]=next(row for row in rec['registrations']['sessions']
+                                     if row['session_id']==manifest['session_id'] and row['role']==role
+                                     and row['topic']==rec['topic'])
         for role,name in rec['releases'].items():
             work=Path(name).parent.parent
             loop.validate_result(state,entry,{'role':role,'work':str(work)},loop.read(work/'result.json'))

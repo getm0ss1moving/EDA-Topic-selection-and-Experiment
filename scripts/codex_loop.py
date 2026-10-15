@@ -245,7 +245,10 @@ def job_for(state,t,c):
             sid=json.loads(payload[name]).get('signed_revision')
             for old in t['history']:
                 if Path(old).name==sid and not (shared/sid).exists():
+                    if rs.verify(old)[0]['role']!='proposer':
+                        raise ValueError('Consent target must be a proposer release')
                     copy_release(old,shared/sid)
+                    paths.append(str(shared/sid))
     (work/'release').mkdir();(work/'submissions').mkdir()
     save(work/'result.schema.json',FINAL)
     assignment={'role':role,'topic':t['topic'],'domain':t['domain'],'round':t['round'],
@@ -587,6 +590,18 @@ def quarantine_cycle(state,t,job,reason,home,record=None):
               'clean_checkpoint':copy.deepcopy(checkpoint),
               'old_seats':copy.deepcopy(t['seats']),'status':'quarantined',
               'note':'Preserve disclosure; no private transcript or exposed content is copied. Fresh full-cycle replacement required.'}
+    retained=[]
+    bound=state['audits'][record['verification_release']]['seat'] if record else t['seats'][job['role']]
+    for source in list(releases.values())+snapshots:
+        try:
+            m,_=rs.verify(source)
+            if source in snapshots and (m['role']!=job['role'] or
+                    m['actor_id']!=bound['actor_id'] or m['session_id']!=bound['session_id']):continue
+            dest=home/'incidents'/ident/'releases'/Path(source).name
+            if not dest.exists():copy_release(source,dest)
+            retained.append(str(dest))
+        except (ValueError,OSError):continue
+    incident['retained_snapshots']=retained
     if record:
         incident['round']=copy.deepcopy(record)
         state['publication_queue'].remove(record)
