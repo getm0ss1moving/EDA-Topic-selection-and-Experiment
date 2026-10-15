@@ -1,0 +1,20 @@
+{
+  "role": "challenger",
+  "reviewed_proposer_release": "SUB-64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c",
+  "assessment": "revise",
+  "coverage": {
+    "duplicate_prior_art": "unresolved",
+    "mechanism": "supported",
+    "composition": "unresolved",
+    "demand": "unresolved",
+    "industry_gap": "unresolved",
+    "headroom": "supported",
+    "contests": "unresolved",
+    "experiments": "unresolved",
+    "cost": "supported"
+  },
+  "recommendation_at_batch_limit": "park",
+  "combination_drift": 0,
+  "demand_drift": 0,
+  "note": "Supported headroom/mechanism/cost entries are conditional reasoning/accounting, not measured EDA performance."
+}

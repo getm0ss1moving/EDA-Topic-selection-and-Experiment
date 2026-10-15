@@ -1,0 +1,12 @@
+{
+  "role": "verifier",
+  "reviewed_proposer_release": "SUB-64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c",
+  "adjudicated_challenger_releases": [
+    "SUB-45b1311973778bf0f7a2a7a2466ef3c20389362d8faf02846afdf22bc4ffce3d"
+  ],
+  "next_action": "park",
+  "tasklist_position": "revision_requested",
+  "batch_round": 4,
+  "batch_round_limit": 4,
+  "local_validation_scope": "Trusted current-release verify, dossier digest, own analytical checks and own freeze; no checkout/full-repository validation."
+}

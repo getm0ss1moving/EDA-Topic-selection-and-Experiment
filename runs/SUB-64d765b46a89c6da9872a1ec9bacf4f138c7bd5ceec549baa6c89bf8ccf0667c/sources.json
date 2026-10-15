@@ -1,0 +1,455 @@
+[
+  {
+    "id": "N01",
+    "title": "OpenTimer v2: A Parallel Incremental Timing Analysis Engine",
+    "url": "https://tsung-wei-huang.github.io/papers/dat21-ot2.pdf",
+    "type": "primary paper",
+    "published": "2021-01-05",
+    "retrieved_utc": "2026-10-15",
+    "locator": "physical PDF pp1-4: introduction, Big idea2/3; pp6-7 references; rendered lines173-252 for lazy lineage/frontier task graph.",
+    "access": "full",
+    "claims": [
+      "CLM-1002",
+      "CLM-1006"
+    ],
+    "limitations": "Selected original sections read; no implementation execution or author-performance reproduction. Full access means retrievable source, not exhaustive method audit.",
+    "version": "DOI10.1109/MDAT.2021.3049177"
+  },
+  {
+    "id": "N02",
+    "title": "Method for bounded transactional timing analysis",
+    "url": "https://patents.google.com/patent/US8141017B2/en",
+    "type": "primary patent text",
+    "published": "2012-03-20",
+    "retrieved_utc": "2026-10-15",
+    "locator": "Description FIGS11/12/14 and claims1-5; rendered lines424-440 and480-509.",
+    "access": "full",
+    "claims": [
+      "CLM-1002"
+    ],
+    "limitations": "Primary patent document via public patent index; selected text, no deployed implementation or legal-status claim. Prior transactions/rollback are not new. Dissertation and journal primary-paper routes timed out.",
+    "version": "US8141017B2; application publication2010-03-25"
+  },
+  {
+    "id": "N03",
+    "title": "View data sharing for efficient multi-mode multi-corner timing analysis",
+    "url": "https://uspto.report/patent/grant/9,384,310",
+    "type": "primary patent text via mirror",
+    "published": "2016-07-05",
+    "retrieved_utc": "2026-10-15",
+    "locator": "Detailed description FIG2(A/B), block205, shared classifications and blocks211-215; rendered lines119-134.",
+    "access": "full",
+    "claims": [
+      "CLM-1002"
+    ],
+    "limitations": "Primary patent content read through a public mirror. Google Patents direct opens failed twice; mirror not independently authenticated against official grant PDF. Establishes a strong prior lead, not deployed-performance/complete equivalence proof.",
+    "version": "US9384310B2",
+    "related_urls": [
+      "https://patents.google.com/patent/US9384310B2/en"
+    ]
+  },
+  {
+    "id": "N04",
+    "title": "Adapton: Composable, Demand-Driven Incremental Computation",
+    "url": "https://www.cs.tufts.edu/~jfoster/papers/pldi14.pdf",
+    "type": "primary paper",
+    "published": "2014-06",
+    "retrieved_utc": "2026-10-15",
+    "locator": "physical PDF pp1-3 sharing/swapping/switching; p6 section4.2 Theorem4.3; rendered lines784-812.",
+    "access": "full",
+    "claims": [
+      "CLM-1002",
+      "CLM-1003",
+      "CLM-1004"
+    ],
+    "limitations": "Selected original sections read; no implementation execution or author-performance reproduction. Full access means retrievable source, not exhaustive method audit. Generic incremental consistency and reuse are prior; no STA plug-in or comparison reproduced.",
+    "version": "PLDI2014 DOI10.1145/2594291.2594324",
+    "related_urls": [
+      "https://matthewhammer.org/adapton/"
+    ]
+  },
+  {
+    "id": "N05",
+    "title": "Speeding up timing analysis by reusing delays computed for isomorphic subcircuits",
+    "url": "https://patents.google.com/patent/US7451412B2/en",
+    "type": "primary patent text",
+    "published": "2008-11-11",
+    "retrieved_utc": "2026-10-15",
+    "locator": "Detailed Description Timing Analysis Process FIG3 steps302-314/FIG4 steps404-412; rendered lines198-214; claims1/parameter discussion.",
+    "access": "full",
+    "claims": [
+      "CLM-1002"
+    ],
+    "limitations": "Selected primary text, no legal opinion, current implementation or accuracy/performance reproduction. Context-parameter partitions and result reuse are an especially close known mechanism.",
+    "version": "US7451412B2; application publication2007-02-08"
+  },
+  {
+    "id": "N06",
+    "title": "Systems and methods for reuse of delay calculation in static timing analysis",
+    "url": "https://patents.google.com/patent/US10289774B1/en",
+    "type": "primary patent text",
+    "published": "2019-05-14",
+    "retrieved_utc": "2026-10-15",
+    "locator": "Description FIG4 operations414/422/424; rendered lines538-543; stage invalidation and slew-stabilization at508-510; claims1-5.",
+    "access": "full",
+    "claims": [
+      "CLM-1002",
+      "CLM-1003"
+    ],
+    "limitations": "Selected patent text only. Reuse after modification and slew stabilization is prior; no new reuse claim or deployed engine parity follows.",
+    "version": "US10289774B1"
+  },
+  {
+    "id": "N07",
+    "title": "Look-ahead timing prediction for multi-instance module (MIM) engineering change order (ECO)",
+    "url": "https://patents.google.com/patent/US10339258B2/en",
+    "type": "primary patent text",
+    "published": "2019-07-02",
+    "retrieved_utc": "2026-10-15",
+    "locator": "Description FIG4A/B and FIG1D; rendered lines174-208 and306-322; claims1-4.",
+    "access": "full",
+    "claims": [
+      "CLM-1002",
+      "CLM-1003"
+    ],
+    "limitations": "Selected primary text; multiple instances are distinct from mutually exclusive edit worlds but merged timing vectors/propagation are prior. Context dependence must not be ignored; no equivalence or industrial benefit assumed.",
+    "version": "US10339258B2"
+  },
+  {
+    "id": "N08",
+    "title": "iTAP: An Incremental Task Graph Partitioner for Task-parallel Static Timing Analysis",
+    "url": "https://tsung-wei-huang.github.io/papers/2025-ASPDAC-iTAP.pdf",
+    "type": "primary paper",
+    "published": "2025-01",
+    "retrieved_utc": "2026-10-15",
+    "locator": "physical PDF pp2-4 sections2.1/3/3.1/3.2, Algorithm1; rendered lines326-425.",
+    "access": "full",
+    "claims": [
+      "CLM-1002",
+      "CLM-1006"
+    ],
+    "limitations": "Selected original sections read; no implementation execution or author-performance reproduction. Full access means retrievable source, not exhaustive method audit. It partitions task graphs; world value-equivalence is a different object, not a proven useful distinction.",
+    "version": "ASPDAC2025"
+  },
+  {
+    "id": "N09",
+    "title": "MeasuredVtSwapCandidate.cc",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/3549d60529517dc82deb7f0ff769345e9a424911/src/rsz/src/move/MeasuredVtSwapCandidate.cc",
+    "type": "pinned primary source code",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-15",
+    "locator": "raw one-based44-67 estimate;109-132 arrival/restore",
+    "access": "full",
+    "claims": [
+      "CLM-1001"
+    ],
+    "limitations": "Full source file fetched as data; selected lines semantically inspected. No build/runtime/transitive dependency validation. Original licenses apply; no licensed design/PDK provided.",
+    "version": "3549d60529517dc82deb7f0ff769345e9a424911",
+    "sha256": "16c99bf48dd4e6c23a5c886ef3608bfb95bd0bfbb688e35676a4bc301427cb08",
+    "retrieval_actual_utc": "2026-10-15T15:34:24.149602+00:00"
+  },
+  {
+    "id": "N10b",
+    "title": "MeasuredVtSwapPolicy.cc",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/3549d60529517dc82deb7f0ff769345e9a424911/src/rsz/src/policy/MeasuredVtSwapPolicy.cc",
+    "type": "pinned primary source code",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-15",
+    "locator": "raw one-based260-301 estimate-and-commit;273-282 estimates before filtering",
+    "access": "full",
+    "claims": [
+      "CLM-1001"
+    ],
+    "limitations": "Full source file fetched as data; selected lines semantically inspected. No build/runtime/transitive dependency validation. Original licenses apply; no licensed design/PDK provided.",
+    "version": "3549d60529517dc82deb7f0ff769345e9a424911",
+    "sha256": "f81f24e419536210a344cd6fd32f9e2b43bdb2144a76bbc818de437dadf2d162",
+    "retrieval_actual_utc": "2026-10-15T15:34:45.166299+00:00"
+  },
+  {
+    "id": "N11",
+    "title": "OpenSTA README",
+    "url": "https://raw.githubusercontent.com/parallaxsw/OpenSTA/1ba9872aa04e60b7bef68f5b0e97cea49f9b4872/README.md",
+    "type": "pinned primary source code",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-15",
+    "locator": "raw one-based46-50 query-based incremental description;63-77 dual licensing;310-326 license",
+    "access": "full",
+    "claims": [
+      "CLM-1002"
+    ],
+    "limitations": "Full source file fetched as data; selected lines semantically inspected. No build/runtime/transitive dependency validation. Original licenses apply; no licensed design/PDK provided.",
+    "version": "1ba9872aa04e60b7bef68f5b0e97cea49f9b4872",
+    "sha256": "78e22e3499b256421c7bf7a97d9c321f27c71a4d2e8948941e619e939dac791e",
+    "retrieval_actual_utc": "2026-10-15T15:34:26.462893+00:00"
+  },
+  {
+    "id": "N12",
+    "title": "MeasuredVtSwapGenerator.cc",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/3549d60529517dc82deb7f0ff769345e9a424911/src/rsz/src/move/MeasuredVtSwapGenerator.cc",
+    "type": "pinned primary source code",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-15",
+    "locator": "raw one-based105-129 deterministic equivalent enumeration/cap",
+    "access": "full",
+    "claims": [
+      "CLM-1001"
+    ],
+    "limitations": "Full source file fetched as data; selected lines semantically inspected. No build/runtime/transitive dependency validation. Original licenses apply; no licensed design/PDK provided.",
+    "version": "3549d60529517dc82deb7f0ff769345e9a424911",
+    "sha256": "e6e60ffe4b0e16a6f706a3326b11e26e58004a81d6a2c7716f43dde76c319a8d",
+    "retrieval_actual_utc": "2026-10-15T15:34:47.524361+00:00"
+  },
+  {
+    "id": "N13",
+    "title": "IncreGPUSTA: GPU-Accelerated Incremental Static Timing Analysis for Iterative Design Flows",
+    "url": "https://yibolin.com/publications/papers/TIMING_ICCAD2025_Liu.pdf",
+    "type": "primary paper",
+    "published": "2025",
+    "retrieved_utc": "2026-10-15",
+    "locator": "physical PDF pp1-3 TableI and sectionsII/III; p9 references; rendered lines123-176,225-235.",
+    "access": "full",
+    "claims": [
+      "CLM-1002"
+    ],
+    "limitations": "Selected original sections read; no implementation execution or author-performance reproduction. Full access means retrievable source, not exhaustive method audit. GPU comparisons are not runnable within this job allocation; scope/hardware transfer must be justified.",
+    "version": "ICCAD2025 author PDF"
+  },
+  {
+    "id": "N14",
+    "title": "Learning Relaxed Belady for Content Distribution Network Caching",
+    "url": "https://www.usenix.org/conference/nsdi20/presentation/song",
+    "type": "primary paper",
+    "published": "2020-02",
+    "retrieved_utc": "2026-10-15",
+    "locator": "official page Abstract and bibliographic entry; no full method inspection.",
+    "access": "abstract",
+    "claims": [
+      "CLM-1002",
+      "CLM-1006"
+    ],
+    "limitations": "Abstract-only method access. Learned admission/retention is an established adjacent idea; application to STA has not been tested.",
+    "version": "NSDI2020 pp529-544"
+  },
+  {
+    "id": "N15",
+    "title": "PrimeTime: Static Timing Analysis",
+    "url": "https://www.synopsys.com/implementation-and-signoff/signoff/primetime.html",
+    "type": "vendor capability advertisement",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-15",
+    "locator": "Core Static Timing Analysis and lead suite description; rendered lines107ff.",
+    "access": "full",
+    "claims": [
+      "CLM-1008"
+    ],
+    "limitations": "Vendor public advertisement only; no controlled measurement, private implementation access, absence inference or license.",
+    "version": "dynamic page retrieved2026-10-15"
+  },
+  {
+    "id": "N16",
+    "title": "PrimeTime Mode Merging: Reducing Analysis Cost for Multimode Designs",
+    "url": "https://www.synopsys.com/content/dam/synopsys/implementation&signoff/white-papers/mode-merging-wp.pdf",
+    "type": "vendor white paper",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-15",
+    "locator": "physical PDF pp1-2 intro and modes; p5 mode-merging setup and constraint consistency.",
+    "access": "full",
+    "claims": [
+      "CLM-1008"
+    ],
+    "limitations": "Vendor white paper supports publicly advertised mode merging; no author gain adopted, implementation or matched superiority claim.",
+    "version": "undated public PDF retrieved2026-10-15"
+  },
+  {
+    "id": "N17",
+    "title": "TAU2015 Contest official material",
+    "url": "https://www.tauworkshop.com/2015/slides/Hu_TAU15_PPT.pdf",
+    "type": "official contest statement",
+    "published": "2015",
+    "retrieved_utc": "2026-10-15",
+    "locator": "physical PDF p11 Contest Scope/Evaluation; official contest home and Resources links.",
+    "access": "full",
+    "claims": [
+      "CLM-1008"
+    ],
+    "limitations": "Scope/context only. No authenticated winner implementation, full input/evaluator/rights audit or benchmark execution.",
+    "version": "TAU2015 organizer slides",
+    "related_urls": [
+      "https://sites.google.com/site/taucontest2015/",
+      "https://sites.google.com/site/taucontest2015/resources"
+    ]
+  },
+  {
+    "id": "N18",
+    "title": "2025 CAD Contest at ICCAD Problems",
+    "url": "https://www.iccad-contest.org/2025/Problems.html",
+    "type": "official contest page",
+    "published": "2025",
+    "retrieved_utc": "2026-10-15",
+    "locator": "ProblemC text and top3 link38; rendered lines58-70.",
+    "access": "full",
+    "claims": [
+      "CLM-1008"
+    ],
+    "limitations": "Top3 ZIP actual URL opened to a one-line Drive shell, not archive content. Winner algorithm access unresolved; lowercase path failed and was corrected.",
+    "version": "dynamic page retrieved2026-10-15",
+    "related_urls": [
+      "https://drive.google.com/file/d/1yZstdjFc30xt9RYz583ecb8_jnDE1F9O/view?usp=sharing"
+    ]
+  },
+  {
+    "id": "N19",
+    "title": "2026 CAD Contest at ICCAD",
+    "url": "https://www.iccad-contest.org/2026/",
+    "type": "official contest page",
+    "published": "2026",
+    "retrieved_utc": "2026-10-15",
+    "locator": "Contest Problems A/B/C and Tentative Schedule; rendered lines37-53.",
+    "access": "full",
+    "claims": [
+      "CLM-1008"
+    ],
+    "limitations": "Current displayed titles/schedule only. No2026 winner identity/method inferred; direct relevance to this narrowly bounded mechanism is limited.",
+    "version": "dynamic page retrieved2026-10-15"
+  },
+  {
+    "id": "N20",
+    "title": "ISPD26 Post-Placement Buffering and Sizing contest winners",
+    "url": "https://www.ispd.cc/contests/26/index.html",
+    "type": "official contest page",
+    "published": "2026",
+    "retrieved_utc": "2026-10-15",
+    "locator": "Contest Winners ordered list and resources; rendered lines0-17.",
+    "access": "full",
+    "claims": [
+      "CLM-1008"
+    ],
+    "limitations": "Identities and resource link text only. No complete winner algorithms/code or licenses authenticated.",
+    "version": "dynamic page retrieved2026-10-15"
+  },
+  {
+    "id": "N21",
+    "title": "Invited: Post-Placement Buffering and Sizing Contest",
+    "url": "https://vlsicad.ucsd.edu/Publications/Conferences/421/c421.pdf",
+    "type": "primary contest paper",
+    "published": "2026-03-15",
+    "retrieved_utc": "2026-10-15",
+    "locator": "physical PDF pp1-2 intro/scope; Fig1 evaluation overview; selected evaluation context.",
+    "access": "full",
+    "claims": [
+      "CLM-1008"
+    ],
+    "limitations": "Original organizer source selected text only; no winner method, complete evaluator/data rights or API candidate-count inference.",
+    "version": "ISPD2026 DOI10.1145/3764386.3779616"
+  },
+  {
+    "id": "N22",
+    "title": "Divergent Thoughts toward One Goal: LLM-based Multi-Agent Collaboration System for Electronic Design Automation",
+    "url": "https://arxiv.org/abs/2502.10857v1",
+    "type": "primary paper",
+    "published": "2025-02-15",
+    "retrieved_utc": "2026-10-15",
+    "locator": "v1 author abstract on multi-agent collaboration.",
+    "access": "abstract",
+    "claims": [
+      "CLM-1002"
+    ],
+    "limitations": "Abstract only; generic multi-agent coordination is prior; no matching internal timing-world partition or performance claim.",
+    "version": "arXiv2502.10857v1"
+  },
+  {
+    "id": "N23",
+    "title": "AgenticPD: A Stage-Aware Agentic Framework for Closed-Loop Physical Design Optimization",
+    "url": "https://arxiv.org/abs/2607.04758v3",
+    "type": "primary paper",
+    "published": "2026-10-04",
+    "retrieved_utc": "2026-10-15",
+    "locator": "v3 abstract on stage-aware orchestration and structured execution history.",
+    "access": "abstract",
+    "claims": [
+      "CLM-1002"
+    ],
+    "limitations": "Abstract only; stage workers/history not claimed new; detailed implementation/equivalence unresolved.",
+    "version": "arXiv2607.04758v3"
+  },
+  {
+    "id": "N24",
+    "title": "Incremental Critical Path Generation for Dynamic Graphs",
+    "url": "https://tsung-wei-huang.github.io/papers/2024-ISVLSI-Ink.pdf",
+    "type": "primary paper",
+    "published": "2024",
+    "retrieved_utc": "2026-10-15",
+    "locator": "physical PDF pp1-2 introduction and incremental path-reuse overview.",
+    "access": "full",
+    "claims": [
+      "CLM-1002"
+    ],
+    "limitations": "Selected text only; adjacent critical-path output problem, not a full endpoint/electrical-world evaluation audit.",
+    "version": "ISVLSI2024"
+  },
+  {
+    "id": "H-P",
+    "title": "Released EDA-0007 R3 proposer",
+    "url": "SUB-43ec8c256a5116bee2790bbbb147ed089d72731f6051d10a6bbe479ffb2578b9",
+    "type": "released historical role output",
+    "published": "2026-10-15",
+    "retrieved_utc": "2026-10-15",
+    "locator": "proposal.md; direction-control.json; selected sources.json; compliance.json",
+    "access": "full",
+    "claims": [
+      "CLM-1007"
+    ],
+    "limitations": "Explicitly supplied unblinded predecessor output; hash verified. Not independent evidence for the new mechanism, no inherited consent or actual backend attestation. Historical sources/checks not rerun except expressly listed reopens.",
+    "version": "SUB-43ec8c256a5116bee2790bbbb147ed089d72731f6051d10a6bbe479ffb2578b9"
+  },
+  {
+    "id": "H-C",
+    "title": "Released EDA-0007 R3 challenger",
+    "url": "SUB-261aace737adca3c4e2a7d350c74b3613e49885585048bace6c03f3272213ab7",
+    "type": "released historical role output",
+    "published": "2026-10-15",
+    "retrieved_utc": "2026-10-15",
+    "locator": "challenges.md",
+    "access": "full",
+    "claims": [
+      "CLM-1007"
+    ],
+    "limitations": "Explicitly supplied unblinded predecessor output; hash verified. Not independent evidence for the new mechanism, no inherited consent or actual backend attestation. Historical sources/checks not rerun except expressly listed reopens.",
+    "version": "SUB-261aace737adca3c4e2a7d350c74b3613e49885585048bace6c03f3272213ab7"
+  },
+  {
+    "id": "H-V",
+    "title": "Released EDA-0007 R3 verifier",
+    "url": "SUB-f1d0c0c2682c4c400b66300ff48a498948f9fbc95d19db10151fa7cd92f8f4fa",
+    "type": "released historical role output",
+    "published": "2026-10-15",
+    "retrieved_utc": "2026-10-15",
+    "locator": "verification.md; matching reviewed release identities",
+    "access": "full",
+    "claims": [
+      "CLM-1007"
+    ],
+    "limitations": "Explicitly supplied unblinded predecessor output; hash verified. Not independent evidence for the new mechanism, no inherited consent or actual backend attestation. Historical sources/checks not rerun except expressly listed reopens.",
+    "version": "SUB-f1d0c0c2682c4c400b66300ff48a498948f9fbc95d19db10151fa7cd92f8f4fa"
+  },
+  {
+    "id": "A01",
+    "title": "Own abstract world-partition/keyed-cache analytical check",
+    "url": "experiment-plan.md#exp-000--a01-completed-analytical-check",
+    "type": "own tiny analytical check",
+    "published": "2026-10-15",
+    "retrieved_utc": "2026-10-15",
+    "locator": "full script/stdout; proposal.md induction/parity/cost assumptions",
+    "access": "full",
+    "claims": [
+      "CLM-1003",
+      "CLM-1004",
+      "CLM-1005",
+      "CLM-1006"
+    ],
+    "limitations": "Own integer/Fraction arithmetic only;512 tiny cases plus six summaries. Not EDA execution or timing/runtime/signoff/physical calibration evidence.",
+    "version": "current EDA-0010 proposer",
+    "script_sha256": "387d2fd1496f71f25135c40a81262ce8671849d816adff49270441868fa9d4c0",
+    "result_sha256": "bc1c77e525fd4295e4970ea2e324d4a8b981bcefcb80d580b2e335f56c96585e"
+  }
+]

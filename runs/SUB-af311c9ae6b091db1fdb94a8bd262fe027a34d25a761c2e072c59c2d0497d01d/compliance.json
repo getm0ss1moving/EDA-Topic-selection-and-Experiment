@@ -1,0 +1,186 @@
+{
+  "schema": 1,
+  "role": "verifier",
+  "actor_id": "ChatGPT-V05-TIMING-B03-EDA-0010",
+  "session_id": "ff710454-5090-49e3-b425-6d9b97c0250c",
+  "input_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+  "packet_sha256": "0c752fb1af96613e21b0f0f0fbc63ea9827efcc26bf544e1315da254b98dd095",
+  "job_id": "8f1a6239-9864-47b2-9508-56dae32cc0b6",
+  "read_releases": [
+    "SUB-64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c",
+    "SUB-45b1311973778bf0f7a2a7a2466ef3c20389362d8faf02846afdf22bc4ffce3d",
+    "SUB-f1d0c0c2682c4c400b66300ff48a498948f9fbc95d19db10151fa7cd92f8f4fa"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0
+  },
+  "rules": {
+    "inputs": {
+      "status": "deviation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "workflow.json",
+        "operations",
+        "INC-001"
+      ],
+      "limits": "Public self-report only, not complete trace or proof of absent unseen actions; no model attestation. Source/access and scientific limits retained."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "workflow.json",
+        "operations"
+      ],
+      "limits": "Public self-report only, not complete trace or proof of absent unseen actions; no model attestation. Source/access and scientific limits retained."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "workflow.json",
+        "operations"
+      ],
+      "limits": "Public self-report only, not complete trace or proof of absent unseen actions; no model attestation. Source/access and scientific limits retained."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "workflow.json",
+        "operations"
+      ],
+      "limits": "Public self-report only, not complete trace or proof of absent unseen actions; no model attestation. Source/access and scientific limits retained."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "workflow.json",
+        "operations"
+      ],
+      "limits": "Public self-report only, not complete trace or proof of absent unseen actions; no model attestation. Source/access and scientific limits retained."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "workflow.json",
+        "operations"
+      ],
+      "limits": "Public self-report only, not complete trace or proof of absent unseen actions; no model attestation. Source/access and scientific limits retained."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "workflow.json",
+        "operations"
+      ],
+      "limits": "Public self-report only, not complete trace or proof of absent unseen actions; no model attestation. Source/access and scientific limits retained."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "workflow.json",
+        "operations"
+      ],
+      "limits": "Public self-report only, not complete trace or proof of absent unseen actions; no model attestation. Source/access and scientific limits retained."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "workflow.json",
+        "operations"
+      ],
+      "limits": "Public self-report only, not complete trace or proof of absent unseen actions; no model attestation. Source/access and scientific limits retained."
+    }
+  },
+  "operations": [
+    {
+      "action": "assignment_read",
+      "references": [
+        "failed prompt.md guess",
+        "job-root listing",
+        "JOB.json/prompt.txt",
+        "policy common docs and only VERIFIER harness"
+      ],
+      "limits": "Own job listing before full policy disclosed."
+    },
+    {
+      "action": "released_reads",
+      "references": [
+        "SUB-64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c",
+        "SUB-45b1311973778bf0f7a2a7a2466ef3c20389362d8faf02846afdf22bc4ffce3d",
+        "SUB-f1d0c0c2682c4c400b66300ff48a498948f9fbc95d19db10151fa7cd92f8f4fa"
+      ],
+      "limits": "Current substantive proposal/plan/task/challenges and consent/evidence ledgers read; H verifier JSON only, partially then targeted. Hash verification also reads released bytes without claiming semantic source audit."
+    },
+    {
+      "action": "external_research",
+      "references": [
+        "verification.json source_checks V01..V07",
+        "web search: static timing analysis alternative cell candidates variational execution timing sharing equivalence",
+        "web search: incremental timing analysis multi view sharing partition context2026"
+      ],
+      "limits": "Two broad queries mostly off-topic, excluded secondary/unrelated hits; bounded budget exhaustion. No downloaded code execution."
+    },
+    {
+      "action": "own_tiny_analysis",
+      "references": [
+        "scratch/write_verification.py",
+        "runs/analytical-check.json"
+      ],
+      "limits": "4096 bounded integer/set cases only."
+    },
+    {
+      "action": "trusted_validation",
+      "references": [
+        "role_submission.py verify current P/C",
+        "project.py digest current P",
+        "own freeze next"
+      ],
+      "limits": "No full checkout validate per standalone instruction."
+    },
+    {
+      "action": "write",
+      "references": [
+        "scratch/",
+        "runs/",
+        "release/",
+        "submissions/",
+        "result.json"
+      ],
+      "limits": "Only own job files; coordinator publishes, no self approval/merge."
+    }
+  ],
+  "incidents": [
+    {
+      "id": "INC-001",
+      "rule": "inputs",
+      "severity": "noncritical",
+      "description": "Initial nonexistent prompt.md read then ls -la of own job root preceded successful JOB/prompt/common-policy reading. Only assigned job filenames exposed; no checkout or private scientific contents.",
+      "action": "Preserve disclosure for independent protocol review; self-report does not adjudicate hidden behavior."
+    }
+  ],
+  "observability": "Self-authored public activity ledger, not a complete tool trace or evidence of absent undisclosed actions.",
+  "checkout_access_explanation": "No checkout file read. All shell reads within assigned job except supplied cwd context; external research through web. Initial guessed prompt.md failed then own job root names listed before common policy.",
+  "historical_disclosures": "Current proposer INC-001 job-root listing-order deviation and released historical reports/access limits preserved; no evidence is erased or inherited as clearance."
+}

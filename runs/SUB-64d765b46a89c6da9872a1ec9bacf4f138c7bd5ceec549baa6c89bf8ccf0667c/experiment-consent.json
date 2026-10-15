@@ -1,0 +1,7 @@
+{
+  "session_id": "32ff7459-1199-4a05-aceb-ae30c925a366",
+  "decision": "pending",
+  "signed_revision": null,
+  "tasklist_sha256": "868febca25e7ca9e5ba405590df6eac8d3e41819a3119c221ece13c6fc50fe18",
+  "rationale": "Initial new successor has no earlier frozen target to sign; specific novelty, owners, dependency/oracle locks, representative economics and actual allocation remain unresolved. Pending is no agreement. No inherited predecessor consent."
+}

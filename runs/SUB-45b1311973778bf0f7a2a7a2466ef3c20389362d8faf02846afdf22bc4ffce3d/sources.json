@@ -1,0 +1,276 @@
+[
+  {
+    "id": "C01",
+    "title": "On Essential Configuration Complexity: Measuring Interactions in Highly-Configurable Systems",
+    "url": "https://www.cs.cmu.edu/~ckaestne/pdf/ase16.pdf",
+    "type": "primary source",
+    "published": "2016-09",
+    "retrieved_utc": "2026-10-15",
+    "locator": "ASE2016 section3.1 physical pp3-4; rendered lines298-369,410-418",
+    "access": "full",
+    "claims": [
+      "OBJ-001"
+    ],
+    "limitations": "Selected method passages inspected; no Java execution or EDA performance transfer. First fetch timed out, retry succeeded. DOI10.1145/2970276.2970322.",
+    "version": "author-hosted ASE2016 PDF,12 pages"
+  },
+  {
+    "id": "C02",
+    "title": "Speeding up timing analysis by reusing delays computed for isomorphic subcircuits",
+    "url": "https://patents.google.com/patent/US7451412B2/en",
+    "type": "primary source",
+    "published": "2008-11-11",
+    "retrieved_utc": "2026-10-15",
+    "locator": "Detailed Description Timing Analysis Process FIG3 steps302-314/FIG4 steps404-412; rendered198-214",
+    "access": "full",
+    "claims": [
+      "CLM-1002"
+    ],
+    "limitations": "Technical disclosure only; no legal interpretation or measured implementation. Subcircuit classes are not identical to candidate-world classes.",
+    "version": "US7451412B2"
+  },
+  {
+    "id": "C03",
+    "title": "iTAP: An Incremental Task Graph Partitioner for Task-parallel Static Timing Analysis",
+    "url": "https://tsung-wei-huang.github.io/papers/2025-ASPDAC-iTAP.pdf",
+    "type": "primary source",
+    "published": "2025-01",
+    "retrieved_utc": "2026-10-15",
+    "locator": "physical pp1-4; Introduction; section3 Algorithm1 and section3.1; rendered114-132,319-348",
+    "access": "full",
+    "claims": [
+      "CLM-1002",
+      "CLM-1006"
+    ],
+    "limitations": "Selected full-text sections; no results reproduced. Partitions tasks rather than value-equivalent worlds.",
+    "version": "ASPDAC2025 author PDF,9 pages"
+  },
+  {
+    "id": "C04",
+    "title": "MeasuredVtSwapCandidate.cc",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/3549d60529517dc82deb7f0ff769345e9a424911/src/rsz/src/move/MeasuredVtSwapCandidate.cc",
+    "type": "primary source",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-15",
+    "locator": "web-rendered zero-based40-61 estimate;101-122 arrival/restore",
+    "access": "full",
+    "claims": [
+      "CLM-1001"
+    ],
+    "limitations": "Web-rendered line numbers differ from raw one-based locators in proposer ledger. Pinned source read, not built; transitive engine behavior unknown.",
+    "version": "3549d60529517dc82deb7f0ff769345e9a424911"
+  },
+  {
+    "id": "C05",
+    "title": "MeasuredVtSwapPolicy.cc",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/3549d60529517dc82deb7f0ff769345e9a424911/src/rsz/src/policy/MeasuredVtSwapPolicy.cc",
+    "type": "primary source",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-15",
+    "locator": "web-rendered zero-based31-38 experimental flag;241-280 estimateAndCommitBestCandidate",
+    "access": "full",
+    "claims": [
+      "CLM-1001"
+    ],
+    "limitations": "Selected source method inspected; no demand/multiplicity measurement. Return score/legality is not complete endpoint vector.",
+    "version": "3549d60529517dc82deb7f0ff769345e9a424911"
+  },
+  {
+    "id": "C06",
+    "title": "Adapton: Composable, Demand-Driven Incremental Computation",
+    "url": "https://www.cs.tufts.edu/~jfoster/papers/pldi14.pdf",
+    "type": "primary source",
+    "published": "2014-06",
+    "retrieved_utc": "2026-10-15",
+    "locator": "physical pp1-2 Introduction sharing/swapping/switching and inner/outer separation; rendered71-132",
+    "access": "full",
+    "claims": [
+      "CLM-1002"
+    ],
+    "limitations": "Selected introductory mechanism text, not full formal proof or code audit. General incremental computation, not STA adapter.",
+    "version": "PLDI2014 DOI10.1145/2594291.2594324"
+  },
+  {
+    "id": "C07",
+    "title": "Faster Variational Execution with Transparent Bytecode Transformation",
+    "url": "https://www.cs.cmu.edu/~ckaestne/pdf/oopsla18.pdf",
+    "type": "primary source",
+    "published": "2018-10-24",
+    "retrieved_utc": "2026-10-15",
+    "locator": "published article117,physical pp4-5 section2.1;pp9-10 section3.2 environment barrier; rendered260-303,472-508",
+    "access": "full",
+    "claims": [
+      "OBJ-001"
+    ],
+    "limitations": "Selected mechanism and environment passages; not full implementation audit. Earlier37-page author extended PDF has placeholder January2018 metadata; official DOI metadata confirms October24 publication, journal issue November2018. No speedup numbers transferred to EDA.",
+    "version": "PACMPL2 OOPSLA117 DOI10.1145/3276487;30-page final author PDF"
+  },
+  {
+    "id": "C08",
+    "title": "Incremental Task Graph Partitioning with Constrained Parallelism",
+    "url": "https://papers.ssrn.com/sol3/Delivery.cfm/753e400f-d897-41e7-a93c-03402a7c884b-MECA.pdf?abstractid=7168317&mirid=1",
+    "type": "primary source",
+    "published": "2026-07-23",
+    "retrieved_utc": "2026-10-15",
+    "locator": "author abstract and Posted date in SSRN search result; direct abstract URL failed",
+    "access": "abstract",
+    "claims": [
+      "CLM-1002"
+    ],
+    "limitations": "Only author abstract available through indexed primary page. No complete method or author speedup verification. Newer scheduling lead, not duplicate evidence.",
+    "version": "SSRN7168317"
+  },
+  {
+    "id": "C09",
+    "title": "HeteroSTA: A CPU-GPU Heterogeneous Static Timing Analysis Engine with Holistic Industrial Design Support",
+    "url": "https://arxiv.org/abs/2511.11660",
+    "type": "primary source",
+    "published": "2025-11",
+    "retrieved_utc": "2026-10-15",
+    "locator": "author abstract",
+    "access": "abstract",
+    "claims": [
+      "CLM-1002"
+    ],
+    "limitations": "Only broad engine-scope lead; no full method or code audit and no comparability claim.",
+    "version": "arXiv2511.11660"
+  },
+  {
+    "id": "C10",
+    "title": "ISPD26 Contest: Post-Placement Buffering and Sizing",
+    "url": "https://www.ispd.cc/contests/26/index.html",
+    "type": "primary source",
+    "published": "2026",
+    "retrieved_utc": "2026-10-15",
+    "locator": "official Contest Winners list rendered3-10 and official linked ABKGroup/ISPD26-Contest README",
+    "access": "full",
+    "claims": [
+      "CLM-1008"
+    ],
+    "limitations": "Winner identities authenticated, methods not. Official repository read as metadata/README only; no data downloaded or code executed.",
+    "version": "dynamic official page"
+  },
+  {
+    "id": "C11",
+    "title": "PrimeTime: Static Timing Analysis",
+    "url": "https://www.synopsys.com/implementation-and-signoff/signoff/primetime.html",
+    "type": "vendor advertisement",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-15",
+    "locator": "Core Static Timing Analysis capability description",
+    "access": "full",
+    "claims": [
+      "CLM-1008"
+    ],
+    "limitations": "Advertisement only; no commercial internals or comparable measurements.",
+    "version": "dynamic official page"
+  },
+  {
+    "id": "C12",
+    "title": "Own conditional-subset versus world-group analytical check",
+    "url": "challenges.md#c12-reproducible-own-analytical-test",
+    "type": "own analytical check",
+    "published": "2026-10-15",
+    "retrieved_utc": "2026-10-15",
+    "locator": "embedded exact source and stdout; scratch/conditional_check.py; runs/conditional-check.json",
+    "access": "full",
+    "claims": [
+      "OBJ-001",
+      "CLM-1004"
+    ],
+    "limitations": "1,024 tiny synthetic integer/mask cases, no EDA execution or performance measurement.",
+    "version": "script sha256 cf9649f8e0421f387017344e7cac2805fe05844bbe4257c1f717cd7570a75f11"
+  },
+  {
+    "id": "C13",
+    "title": "Frozen EDA-0010 proposal and task plan",
+    "url": "SUB-64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c",
+    "type": "released role output",
+    "published": "2026-10-15",
+    "retrieved_utc": "2026-10-15",
+    "locator": "proposal.md Mechanism/claim ledger; tasklist.md EXP-001/003/005/EXP-CONSENT; experiment-plan.md Baselines and attribution",
+    "access": "full",
+    "claims": [
+      "OBJ-001",
+      "OBJ-002",
+      "CLM-1009"
+    ],
+    "limitations": "Released review input, not independent source for scientific benefit. Current proposal read; predecessor bodies not read.",
+    "version": "SUB-64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c"
+  },
+  {
+    "id": "C14",
+    "title": "2025 CAD Contest at ICCAD Problems",
+    "url": "https://www.iccad-contest.org/2025/Problems.html",
+    "type": "primary source",
+    "published": "2025",
+    "retrieved_utc": "2026-10-15",
+    "locator": "Problem C and top-three report link",
+    "access": "full",
+    "claims": [
+      "CLM-1008"
+    ],
+    "limitations": "Problem page only; linked archive not inspected. No winner-equivalence conclusion.",
+    "version": "dynamic official page"
+  },
+  {
+    "id": "C15",
+    "title": "2026 CAD Contest at ICCAD",
+    "url": "https://www.iccad-contest.org/2026/",
+    "type": "primary source",
+    "published": "2026",
+    "retrieved_utc": "2026-10-15",
+    "locator": "Contest Problems A/B/C and tentative schedule; rendered37-53",
+    "access": "full",
+    "claims": [
+      "CLM-1008"
+    ],
+    "limitations": "Titles/schedule only. No winner method inferred.",
+    "version": "dynamic official page"
+  },
+  {
+    "id": "C16",
+    "title": "ISPD2027 site contest archive and program",
+    "url": "https://ispd.cc/ispd2027/index.php?page=contests",
+    "type": "primary source",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-15",
+    "locator": "Previous Contests list; linked/current program still labeled ISPD2026",
+    "access": "full",
+    "claims": [
+      "CLM-1008"
+    ],
+    "limitations": "Mixed2027 site chrome and2026 program contents; not proof a2027 task/winner method exists or does not exist.",
+    "version": "dynamic page inspected2026-10-15"
+  },
+  {
+    "id": "C17",
+    "title": "VarexC repository",
+    "url": "https://github.com/chupanw/vbc",
+    "type": "primary source",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-15",
+    "locator": "README Variational Byte Code; repository listing",
+    "access": "full",
+    "claims": [
+      "OBJ-001"
+    ],
+    "limitations": "Public repository existence/README only. No source commit pinned, build or code behavior verified. Not used as implementation-equivalence proof.",
+    "version": "dynamic master metadata"
+  },
+  {
+    "id": "C18",
+    "title": "Systems and methods for reuse of delay calculation in static timing analysis",
+    "url": "https://patents.google.com/patent/US10289774B1/en",
+    "type": "primary source",
+    "published": "2019-05-14",
+    "retrieved_utc": "2026-10-15",
+    "locator": "page fetched; search for stabil returned no match",
+    "access": "full",
+    "claims": [
+      "CLM-1002"
+    ],
+    "limitations": "Retrievable text but specific method passages not independently audited in this bounded round. No new substantive claim based on this source.",
+    "version": "US10289774B1"
+  }
+]

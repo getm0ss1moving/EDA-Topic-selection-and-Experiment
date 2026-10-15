@@ -1,0 +1,15 @@
+{
+  "actor_id": "ChatGPT-B03-PROTOCOL-D05-EDA-0010-R1",
+  "files": {
+    "compliance.json": "fe0773748e5f4354406cd98af6912e80f07a5fa55e08dcae41d3c77402a3b878",
+    "verification.json": "f366182e3573afd04a5d7add6755268c638190d144690e537b5c0da70411e3bf",
+    "verification.md": "904b7a5fa63b18635f0e845399cf3131401ab1b4423b06d0cb5202d2f18c24ef",
+    "workflow.json": "a51af3cf7b15cd820b932400938ba9a384a1f3621005384ce6fa3123d9ceadae"
+  },
+  "input_commit": "b1bb69f62b089c3489eaf17dea34daae84af315c",
+  "packet_sha256": "6afa6c5e5181a17850cb21c677868b651b13403abd770639868f2d02ba83be68",
+  "role": "verifier",
+  "schema": 1,
+  "session_id": "4b61aaa0-9cb1-4f78-8f53-7eb21e5d22bc",
+  "topic": "EDA-0010"
+}

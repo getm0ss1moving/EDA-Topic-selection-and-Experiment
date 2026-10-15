@@ -1,0 +1,7 @@
+source_id,task_formulation,mechanism,data,evaluation,assumptions,limitation,overlap,proposed_distinction
+C01/C07,all finite configurations,conditional values;compatible operation lifting;equal-result merging,concrete configurable-program states,author software evaluation;not reproduced,finite alternatives;environment handling,no STA adapter or matched performance,very close to world partitions,must show specific EDA administration benefit
+C02,timing subcircuits,equivalence classes;context parameters;delay reuse,circuit blocks,patent disclosure,isomorphic/context matching,not candidate-world implementation,class-based timing reuse,operation-specific world scheduling unverified
+C03,incremental STA task graph,incremental cycle-free clustering,STA task graphs,author evaluation;not reproduced,TDG updates,different partition object,administration-overhead baseline,world-value classes vs task groups
+C06,incremental program outputs,memoized thunks;cross-context reuse,general programs,not reproduced,inner/outer separation,no engine adapter,sharing across contexts,full-demand scoped world representation
+C08,resource-constrained task graph,incremental queues/dependencies,timing workload per abstract,abstract only,parallelism cap,full method inaccessible,bounded dispatch lead,unknown
+C04/C05,experimental VT candidate ranking,journaled edit/update/restore,selected target candidates,source read only,transitive state correctness,no representative census,actual consumer loop,complete endpoint oracle is added contract
