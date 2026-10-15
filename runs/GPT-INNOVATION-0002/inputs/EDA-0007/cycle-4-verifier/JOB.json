@@ -1,0 +1,38 @@
+{
+  "actor_id": "ChatGPT-V05-TIMING-EDA-0007",
+  "batch_brief": "docs/INNOVATION-BATCH-0002.md",
+  "batch_round": 4,
+  "batch_round_limit": 4,
+  "domain": "D05",
+  "input_commit": "f68c1492c05be3fac5622deac4bb479eabf957de",
+  "models": {
+    "challenger": {
+      "effort": "low",
+      "model": "gpt-6-astra"
+    },
+    "proposer": {
+      "effort": "high",
+      "model": "gpt-6.1-sol"
+    },
+    "verifier": {
+      "effort": "low",
+      "model": "gpt-6.1-sol"
+    }
+  },
+  "packet_sha256": "b0e79f87e9cb3689351f02931cec1e77360523e206044ce2643a225b0cac6ea2",
+  "phase": "research",
+  "previous_proposal_release": "SUB-e0cef865c5877d07c062554b61e073024cb0f6ed28b7ef45f31c19d7a5cb335a",
+  "readiness": "logical seat registered; actual host model is recorded by the execution backend",
+  "released_inputs": [
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0007/ChatGPT-V05-TIMING-EDA-0007/jobs/802c0cf1-c17d-4822-b2a3-0e8e0574116c/shared/predecessor/SUB-d429cded9cc5d08dd46bf714e509bafc839b7ebbbeded9ba13c9e3e58263149c",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0007/ChatGPT-V05-TIMING-EDA-0007/jobs/802c0cf1-c17d-4822-b2a3-0e8e0574116c/shared/predecessor/SUB-c00a87f1c49c2d945b61ffeb51538575f5c672bf677495595ef34be539daf613",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0007/ChatGPT-V05-TIMING-EDA-0007/jobs/802c0cf1-c17d-4822-b2a3-0e8e0574116c/shared/predecessor/SUB-0c53ae6e96e1b411248d73dae700fc0028ed69b1d674e0bc1c0cf52d507ba371",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0007/ChatGPT-V05-TIMING-EDA-0007/jobs/802c0cf1-c17d-4822-b2a3-0e8e0574116c/shared/predecessor.json",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0007/ChatGPT-V05-TIMING-EDA-0007/jobs/802c0cf1-c17d-4822-b2a3-0e8e0574116c/shared/SUB-e0cef865c5877d07c062554b61e073024cb0f6ed28b7ef45f31c19d7a5cb335a",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Innovation-Four-Rounds-20261015/EDA-0007/ChatGPT-V05-TIMING-EDA-0007/jobs/802c0cf1-c17d-4822-b2a3-0e8e0574116c/shared/SUB-373c606bec3ab48f9ff6871096ef98823c923e7a784f7873c19f1ddea7ca1b1c"
+  ],
+  "role": "verifier",
+  "round": 0,
+  "session_id": "70cb4f98-b54d-4c6d-add6-4d862ef9f663",
+  "topic": "EDA-0007"
+}
