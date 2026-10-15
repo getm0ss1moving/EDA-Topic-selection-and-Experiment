@@ -1,0 +1,142 @@
+[
+  {
+    "id": "CP-001",
+    "title": "Global Interconnect Optimization",
+    "url": "https://doi.org/10.1145/3587044",
+    "type": "primary_paper",
+    "published": "2023-09-09",
+    "retrieved": "2026-10-15",
+    "locator": "Sections 2, 3.4, 4.3 and 4.6; publisher text returned in search index",
+    "access": "full",
+    "claims": [
+      "REVIEW-CP-001"
+    ],
+    "limitations": "Detailed selected sections available via search-index rendering; direct DOI and author PDF opens failed. No implementation run or industrial result transferred."
+  },
+  {
+    "id": "CP-002",
+    "title": "Semiconductor hold time fixing",
+    "url": "https://patents.google.com/patent/US20140165019A1/en",
+    "type": "public_patent_disclosure",
+    "published": "2014-06-12",
+    "retrieved": "2026-10-15",
+    "locator": "Figure 2 description; claims 4-6 and 11; web lines 426-429 and 512-523",
+    "access": "full",
+    "claims": [
+      "REVIEW-CP-002"
+    ],
+    "limitations": "Technical disclosure only; no legal-status or implementation/performance conclusion."
+  },
+  {
+    "id": "CP-003",
+    "title": "OpenROAD RepairHold source",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/8da6ac250b0349c346d1abed7c2c43107f4ff6f7/src/rsz/src/RepairHold.cc",
+    "type": "primary_code",
+    "published": "unknown",
+    "retrieved": "2026-10-15",
+    "locator": "Pinned revision 8da6ac250b0349c346d1abed7c2c43107f4ff6f7; load gathering/setup guard/journal, web lines 535-627",
+    "access": "full",
+    "claims": [
+      "REVIEW-CP-003"
+    ],
+    "limitations": "Selected source read only; not built or executed. Web zero-based line labels may differ by one from editor."
+  },
+  {
+    "id": "CP-004",
+    "title": "AgenticPD",
+    "url": "https://arxiv.org/html/2607.04758v3",
+    "type": "primary_paper",
+    "published": "2026-10-04",
+    "retrieved": "2026-10-15",
+    "locator": "Sections 2.1 and 3.1-3.2",
+    "access": "full",
+    "claims": [
+      "REVIEW-CP-004"
+    ],
+    "limitations": "Selected methods; no result reproduction or independent audit of authors numerical claims."
+  },
+  {
+    "id": "CP-005",
+    "title": "CoEvoP&R",
+    "url": "https://arxiv.org/html/2607.17398v1",
+    "type": "primary_paper",
+    "published": "2026-07-19",
+    "retrieved": "2026-10-15",
+    "locator": "Sections 2 and 4.1-4.2, equations 6-8",
+    "access": "full",
+    "claims": [
+      "REVIEW-CP-005"
+    ],
+    "limitations": "New independent expansion. Restricted objective evolution differs from post-CTS joint repair. No reported gains transferred."
+  },
+  {
+    "id": "CP-006",
+    "title": "RoutePlacer: An End-to-End Routability-Aware Placer with Graph Neural Network",
+    "url": "https://arxiv.org/html/2406.02651v1",
+    "type": "primary_paper",
+    "published": "2024-06-04",
+    "retrieved": "2026-10-15",
+    "locator": "Abstract; Section 4 first paragraphs and 4.1 metric definitions; author code README",
+    "access": "full",
+    "claims": [
+      "REVIEW-CP-006"
+    ],
+    "limitations": "Selected method/evaluation sections only. Routability is not hold feasibility. Code README inspected, mutable branch not executable pin; no run."
+  },
+  {
+    "id": "CP-007",
+    "title": "2026 CAD Contest official problems",
+    "url": "https://www.iccad-contest.org/2026/Problems.html",
+    "type": "official_contest",
+    "published": "2026",
+    "retrieved": "2026-10-15",
+    "locator": "Problems A/B/C, web lines 34-60",
+    "access": "full",
+    "claims": [
+      "REVIEW-CP-007"
+    ],
+    "limitations": "Titles and resource index inspected; not full linked specifications or winning methods. Listed C is FloorSet floorplanning, A netlist transformation, B regression bucketing."
+  },
+  {
+    "id": "CP-008",
+    "title": "ISPD26 official contest winners",
+    "url": "https://www.ispd.cc/contests/26/index.html",
+    "type": "official_contest",
+    "published": "2026",
+    "retrieved": "2026-10-15",
+    "locator": "Contest Winners and Contest Resources",
+    "access": "full",
+    "claims": [
+      "REVIEW-CP-008"
+    ],
+    "limitations": "Winner names do not reveal algorithms. Wider winner-method search did not resolve overlap."
+  },
+  {
+    "id": "CP-009",
+    "title": "Novel Multi-Corner Delay Padding using Path Relationship Analysis and Dual Decomposition",
+    "url": "https://www.aspdac.com/aspdac2026/archive/pdf/3E-2.pdf",
+    "type": "primary_presentation",
+    "published": "2026-01",
+    "retrieved": "2026-10-15",
+    "locator": "Title and search-index snippets only",
+    "access": "metadata",
+    "claims": [
+      "REVIEW-CP-009"
+    ],
+    "limitations": "Direct PDF timed out. Search found author-associated markdown lead but it was not used as full-method proof. Remains close lead."
+  },
+  {
+    "id": "CP-010",
+    "title": "2025 ICCAD CAD Contest Problem C: Incremental Placement Optimization Beyond",
+    "url": "https://research.nvidia.com/labs/electronic-design-automation/papers/yichen_iccad25_contest.pdf",
+    "type": "official_contest_paper",
+    "published": "2025",
+    "retrieved": "2026-10-15",
+    "locator": "Search title only",
+    "access": "metadata",
+    "claims": [
+      "REVIEW-CP-010"
+    ],
+    "limitations": "Direct open failed to parse. No full content claim."
+  }
+]
