@@ -1,0 +1,86 @@
+[
+  {
+    "id": "C201",
+    "title": "VarexC conditional value implementation",
+    "url": "https://raw.githubusercontent.com/chupanw/vbc/1221ef110e2b46951ab01319e97fa5d7dd84a724/src/main/java/edu/cmu/cs/varex/VImpl.java",
+    "publication_date": "unknown",
+    "retrieved_at_utc": "2026-10-15T11:30:54.243161+00:00",
+    "locator": "map/flatMap/addVToMap/put, web lines106\u2013177; restrictInteractionDegree50\u201357",
+    "source_type": "source_code",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "R2-review"
+    ],
+    "limitations": "Selected functions; no Java execution; exact timing requires stronger state/exception contract."
+  },
+  {
+    "id": "C202",
+    "title": "OpenROAD measured VT swap candidate",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/8da6ac250b0349c346d1abed7c2c43107f4ff6f7/src/rsz/src/move/MeasuredVtSwapCandidate.cc",
+    "publication_date": "2026",
+    "retrieved_at_utc": "2026-10-15T11:30:54.243161+00:00",
+    "locator": "estimate40\u201362; arrivalDelay101\u2013109; restore115\u2013123 (web line numbering)",
+    "source_type": "source_code",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "R2-review"
+    ],
+    "limitations": "Source trace only; no runtime restoration or workload measurement."
+  },
+  {
+    "id": "C203",
+    "title": "OpenROAD size-up candidate",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/8da6ac250b0349c346d1abed7c2c43107f4ff6f7/src/rsz/src/move/SizeUpMtCandidate.cc",
+    "publication_date": "2026",
+    "retrieved_at_utc": "2026-10-15T11:30:54.243161+00:00",
+    "locator": "estimate33\u201340; apply41\u201362 (web line numbering)",
+    "source_type": "source_code",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "R2-review"
+    ],
+    "limitations": "Prepared local scoring; no full-vector consumer or runtime established."
+  },
+  {
+    "id": "C204",
+    "title": "Invited: Post-Placement Buffering and Sizing Contest",
+    "url": "https://vlsicad.ucsd.edu/Publications/Conferences/421/c421.pdf",
+    "publication_date": "2026-03",
+    "retrieved_at_utc": "2026-10-15T11:30:54.243161+00:00",
+    "locator": "\u00a75.2 p6 ideal-clock data paths; \u00a75.3 p7 roadmap; Table3",
+    "source_type": "organizer_paper",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "R2-review"
+    ],
+    "limitations": "Selected sections; no winner algorithm audit; roadmap not final future rules."
+  },
+  {
+    "id": "C205",
+    "title": "ElmoreCeff: A GPU-Friendly Elmore-Like Delay Calculator with a Closed-Form Effective Capacitance Model",
+    "url": "https://yibolin.com/publications/papers/TIMING_ISEDA2026_Liu.pdf",
+    "publication_date": "2026",
+    "retrieved_at_utc": "2026-10-15T11:30:54.243161+00:00",
+    "locator": "\u00a7III.A\u2013B equations7\u201311 and Algorithms1\u20132",
+    "source_type": "author_hosted_paper",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "R2-review"
+    ],
+    "limitations": "Selected methods read; reported performance not reproduced; changed approximate model not byte-exact comparator."
+  },
+  {
+    "id": "C206",
+    "title": "2026 CAD Contest at ICCAD official index",
+    "url": "https://www.iccad-contest.org/2026/index.html",
+    "publication_date": "unknown",
+    "retrieved_at_utc": "2026-10-15T11:30:54.243161+00:00",
+    "locator": "Contest Problems and schedule",
+    "source_type": "official_contest",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "R2-review"
+    ],
+    "limitations": "Index only; no winner method or originality clearance."
+  }
+]

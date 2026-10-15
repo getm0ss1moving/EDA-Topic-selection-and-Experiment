@@ -1,0 +1,7 @@
+{
+  "session_id": "d8a34cff-2715-4f58-943d-cf69b6833887",
+  "decision": "pending",
+  "signed_revision": "SUB-a18df7c82355639157174a8f957f294a4dabd4f66f741c76001694948aed326c",
+  "tasklist_sha256": "3554c78f5556722ef757226aa171595bfa772f3f2037f3a61df5459975eeee84",
+  "rationale": "No ready pilot or consent requested; support source-only witness gates and prototype hold."
+}

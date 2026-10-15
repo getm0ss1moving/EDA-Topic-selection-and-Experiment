@@ -1,0 +1,18 @@
+{
+  "kind": "forecast_not_measurement",
+  "metric": "Total time to obtain identical per-candidate endpoint results and caller decision",
+  "unit": "seconds",
+  "baseline_source": "B++ finite lifted-context executor plus transactional incremental timing, exact complete-key caching/output interning, sparse overlays and matched recovery; no reproduced EDA baseline",
+  "direction": "decrease",
+  "pessimistic": null,
+  "base": null,
+  "optimistic": null,
+  "confidence": null,
+  "assumptions": [
+    "A specific useful engine-adapter delta survives the constructive B++ reduction; generic scheduler advantage has been withdrawn",
+    "A legitimate anchored full-vector consumer exists and repeated complete contexts occur inside recomputed cones",
+    "Full read-set/FP/tie adapter is sound and final-hash validated",
+    "Actual allocation, caller demand, three-family manifest and dual consent exist before EDA experiments"
+  ],
+  "calibration_plan": "EXP-000R/001R witness gates before prototype, then EXP-005 baseline-only f/r/h, variance, demand and exposure; intervals remain null"
+}

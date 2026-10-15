@@ -1,0 +1,638 @@
+[
+  {
+    "id": "S01",
+    "title": "Speeding Up Physical Synthesis with Transactional Timing Analysis",
+    "url": "https://web.eecs.umich.edu/~imarkov/pubs/jour/dt10-sta.pdf",
+    "source_type": "author_hosted_paper",
+    "publication_date": "2010-09",
+    "retrieved_at_utc": "2026-10-15T11:00:59.837918+00:00",
+    "locator": "Printed pp.14\u201315 introduction/previous work; pp.18\u201319 Case 2 Candidate Selection, Case 3 Compound Transforms and Incorporation of Transactions; pp.20\u201321 bounded windows",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-601",
+      "CLM-603"
+    ],
+    "limitations": "Selected decision-critical passages inspected through pdftotext; no experiments or current industry bottleneck magnitude reproduced. Bounded-window assumptions do not transfer automatically.",
+    "version": "IEEE Design & Test 27(5), DOI 10.1109/MDT.2010.76",
+    "related_urls": [],
+    "local_retrieval_sha256": {
+      "dt10.pdf": "fc65681fb41f2670b7dbbe963354d8a6819df68dbad8846a1855e435477efc6d"
+    },
+    "rights": "Publicly accessible source; bibliography and bounded paraphrase only are released. No full source/paper copy is published."
+  },
+  {
+    "id": "S02",
+    "title": "OpenSTA source and README",
+    "url": "https://github.com/The-OpenROAD-Project/OpenSTA/tree/49b86c95b31c53ba9096b91ef384ae5406b3107c",
+    "source_type": "source_code",
+    "publication_date": "2026-10-15",
+    "retrieved_at_utc": "2026-10-15T11:00:59.837918+00:00",
+    "locator": "README Timing Engine and License; search/Search.cc Search::arrivalInvalid lines825\u2013836, findArrivals lines1046\u20131081, findRequireds lines3288ff; liberty/TableModel.cc GateTableModel::gateDelay input/output calculations lines121\u2013125",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-601",
+      "CLM-603",
+      "CLM-605"
+    ],
+    "limitations": "Read selected functions, not complete engine audit; no executable build or full-state dependency proof. GPL v3/commercial dual-license terms apply to derived code.",
+    "version": "49b86c95b31c53ba9096b91ef384ae5406b3107c",
+    "related_urls": [
+      "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/49b86c95b31c53ba9096b91ef384ae5406b3107c/search/Search.cc",
+      "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/49b86c95b31c53ba9096b91ef384ae5406b3107c/liberty/TableModel.cc"
+    ],
+    "local_retrieval_sha256": {
+      "README.md": "78e22e3499b256421c7bf7a97d9c321f27c71a4d2e8948941e619e939dac791e",
+      "Search.cc": "75d5185fed3bcf5db99c284e9319ab3685274e0f283e6707cf87de98682a09ab",
+      "TableModel.cc": "6f7f7b43e84850326ab42611586e401cc360ddaf4db987b992ade1dd6067dea5"
+    },
+    "rights": "Publicly accessible source; bibliography and bounded paraphrase only are released. No full source/paper copy is published."
+  },
+  {
+    "id": "S03",
+    "title": "OpenROAD Resizer source",
+    "url": "https://github.com/The-OpenROAD-Project/OpenROAD/blob/8da6ac250b0349c346d1abed7c2c43107f4ff6f7/src/rsz/src/Resizer.cc",
+    "source_type": "source_code",
+    "publication_date": "2026-10-15",
+    "retrieved_at_utc": "2026-10-15T11:00:59.837918+00:00",
+    "locator": "Resizer::findResizeSlacks lines3232\u20133316; Resizer::journalRestore lines5689\u20135716",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-601",
+      "CLM-603"
+    ],
+    "limitations": "Current source is not the historical container. No build performed or complete cache absence claim. Direct RepairSetup.cc URL failed 404; no method inferred from it. R2: findResizeSlacks does not establish frozen candidate/output workload; new dependency trace does not prove complete read sets or all-context guard.",
+    "version": "8da6ac250b0349c346d1abed7c2c43107f4ff6f7",
+    "related_urls": [],
+    "local_retrieval_sha256": {
+      "Resizer.cc": "ff3adf14a5f8f9059a293b7fbfbf39ce4138f008294c43fd86d6cc46c6024b85"
+    },
+    "rights": "Publicly accessible source; bibliography and bounded paraphrase only are released. No full source/paper copy is published.",
+    "r2_retrieved_at_utc": "2026-10-15T11:25:38.036163+00:00",
+    "r2_locator": "getSwappableCells2198 onward; getVTEquivCells2313\u20132390; updateParasiticsAndTiming5627\u20135636; journalRestore5689\u20135716; replacementPreservesMaxCap7420\u20137464",
+    "r2_sha256": "ff3adf14a5f8f9059a293b7fbfbf39ce4138f008294c43fd86d6cc46c6024b85"
+  },
+  {
+    "id": "S04",
+    "title": "Simultaneous multi-corner static timing analysis using samples-based static timing infrastructure",
+    "url": "https://patents.google.com/patent/US8615727B2/en",
+    "source_type": "patent",
+    "publication_date": "2013-12-24",
+    "retrieved_at_utc": "2026-10-15T11:00:59.837918+00:00",
+    "locator": "Detailed description Figs.2A\u20133B, consolidated control flow/payload and samples; browser lines283\u2013305",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-603"
+    ],
+    "limitations": "Patent description is mechanism evidence, not demonstrated speed, legal opinion, or proof of shipped commercial coverage. Model includes approximate corner estimation; does not establish bitwise ECO-candidate equivalence.",
+    "version": "US8615727B2",
+    "related_urls": [],
+    "local_retrieval_sha256": {},
+    "rights": "Publicly accessible source; bibliography and bounded paraphrase only are released. No full source/paper copy is published."
+  },
+  {
+    "id": "S05",
+    "title": "Reducing runtime and memory requirements of static timing analysis",
+    "url": "https://patents.google.com/patent/US8839167B1/en",
+    "source_type": "patent",
+    "publication_date": "2014-09-16",
+    "retrieved_at_utc": "2026-10-15T11:25:38.036163+00:00",
+    "locator": "Fig.7 steps705\u2013750; full-input compare and global reuse paragraphs, browser lines554\u2013579",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-603",
+      "CLM-609"
+    ],
+    "limitations": "R2 corrects erroneous B2 identifier and metadata-only R1 access. Full B1 text reopened; optional tolerances are NOT byte-exact whole-engine proof. No commercial deployment, performance or legal conclusion.",
+    "version": "US8839167B1",
+    "related_urls": [
+      "https://patents.google.com/patent/US8839167B2/en"
+    ],
+    "local_retrieval_sha256": {},
+    "rights": "Publicly accessible source; bibliography and bounded paraphrase only are released. No full source/paper copy is published.",
+    "supersedes": "R1 S05 B2 URL/access description, retained in immutable earlier release"
+  },
+  {
+    "id": "S06",
+    "title": "PreRoutGNN for Timing Prediction with Order Preserving Partition: Global Circuit Pre-training, Local Delay Learning and Attentional Cell Modeling",
+    "url": "https://arxiv.org/html/2403.00012v2",
+    "source_type": "paper",
+    "publication_date": "2024-02-27",
+    "retrieved_at_utc": "2026-10-15T11:00:59.837918+00:00",
+    "locator": "Preliminaries and Related Works; Methodology: Global Circuit Pre-training, Residual Local Learning of Signal Delay, attention-based cell modeling, Eq.3; Table1",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-602"
+    ],
+    "limitations": "Methodology HTML inspected; code, training data rights and reported accuracy not reproduced. Pre-routing prediction differs from fixed-parasitic exact ECO scoring.",
+    "version": "arXiv:2403.00012v2",
+    "related_urls": [
+      "https://ojs.aaai.org/index.php/AAAI/article/download/29653/31111"
+    ],
+    "local_retrieval_sha256": {},
+    "rights": "Publicly accessible source; bibliography and bounded paraphrase only are released. No full source/paper copy is published."
+  },
+  {
+    "id": "S07",
+    "title": "Divergent Thoughts toward One Goal: LLM-based Multi-Agent Collaboration System for Electronic Design Automation",
+    "url": "https://arxiv.org/html/2502.10857v1",
+    "source_type": "paper",
+    "publication_date": "2025-02-15",
+    "retrieved_at_utc": "2026-10-15T11:00:59.837918+00:00",
+    "locator": "Sections3.1\u20133.3: roles, messages, divergent demonstrations, decision selector; Sections4.1/4.3 benchmark and implementation details",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-602"
+    ],
+    "limitations": "Inspected method, not executable models or benchmark reproduction; script-generation success is not timing-scoring fidelity.",
+    "version": "arXiv:2502.10857v1",
+    "related_urls": [],
+    "local_retrieval_sha256": {},
+    "rights": "Publicly accessible source; bibliography and bounded paraphrase only are released. No full source/paper copy is published."
+  },
+  {
+    "id": "S08",
+    "title": "ChatEDA: A Large Language Model Powered Autonomous Agent for EDA",
+    "url": "https://arxiv.org/abs/2308.10204v4",
+    "source_type": "paper",
+    "publication_date": "2024-09-21",
+    "retrieved_at_utc": "2026-10-15T11:00:59.837918+00:00",
+    "locator": "Abstract and version history",
+    "access_level": "abstract",
+    "supported_claim_ids": [
+      "CLM-602"
+    ],
+    "limitations": "Only abstract/metadata reopened. Broad task decomposition/tool scripting is prior; no full-method comparison or gains adopted.",
+    "version": "arXiv:2308.10204v4",
+    "related_urls": [],
+    "local_retrieval_sha256": {},
+    "rights": "Publicly accessible source; bibliography and bounded paraphrase only are released. No full source/paper copy is published."
+  },
+  {
+    "id": "S09",
+    "title": "AgenticPD: A Stage-Aware Agentic Framework for Closed-Loop Physical Design Optimization",
+    "url": "https://arxiv.org/abs/2607.04758v3",
+    "source_type": "preprint",
+    "publication_date": "2026-10-04",
+    "retrieved_at_utc": "2026-10-15T11:00:59.837918+00:00",
+    "locator": "Abstract and version history",
+    "access_level": "abstract",
+    "supported_claim_ids": [
+      "CLM-602"
+    ],
+    "limitations": "Only abstract/metadata reopened; stage-aware orchestration/history is a close agentic lead, not audited code or measured performance.",
+    "version": "arXiv:2607.04758v3",
+    "related_urls": [],
+    "local_retrieval_sha256": {},
+    "rights": "Publicly accessible source; bibliography and bounded paraphrase only are released. No full source/paper copy is published."
+  },
+  {
+    "id": "S10",
+    "title": "A Machine Learning Approach to Improving Timing Consistency between Global Route and Detailed Route",
+    "url": "https://arxiv.org/abs/2305.06917",
+    "source_type": "paper",
+    "publication_date": "2023-05-11",
+    "retrieved_at_utc": "2026-10-15T11:00:59.837918+00:00",
+    "locator": "Abstract: post-CTS/legalized-placement GR-to-DR timing-related prediction scope",
+    "access_level": "abstract",
+    "supported_claim_ids": [
+      "CLM-602"
+    ],
+    "limitations": "Abstract only in this job. No full-method/feature leakage audit or reproduced accuracy.",
+    "version": "arXiv:2305.06917v1",
+    "related_urls": [],
+    "local_retrieval_sha256": {},
+    "rights": "Publicly accessible source; bibliography and bounded paraphrase only are released. No full source/paper copy is published."
+  },
+  {
+    "id": "S11",
+    "title": "iTAP: An Incremental Task Graph Partitioner for Task-parallel Static Timing Analysis",
+    "url": "https://guozz.cn/publication/itapaspdac-25/itapaspdac-25.pdf",
+    "source_type": "author_hosted_paper",
+    "publication_date": "2025-01",
+    "retrieved_at_utc": "2026-10-15T11:00:59.837918+00:00",
+    "locator": "Section2.1 TDG partitioning pp.407\u2013408; Section3 incremental cycle-free clustering and algorithms4\u20137; proof Section3.3",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-603",
+      "CLM-607"
+    ],
+    "limitations": "Primary PDF inspected; no source/build reproduction or transfer of reported runtime gain to ECO equivalence compression.",
+    "version": "ASPDAC 2025",
+    "related_urls": [
+      "https://guozz.cn/publication/itapaspdac-25/"
+    ],
+    "local_retrieval_sha256": {},
+    "rights": "Publicly accessible source; bibliography and bounded paraphrase only are released. No full source/paper copy is published."
+  },
+  {
+    "id": "S12",
+    "title": "Invited: Post-Placement Buffering and Sizing Contest",
+    "url": "https://vlsicad.ucsd.edu/Publications/Conferences/421/c421.pdf",
+    "source_type": "organizer_paper",
+    "publication_date": "2026-03-15",
+    "retrieved_at_utc": "2026-10-15T11:00:59.837918+00:00",
+    "locator": "Sections1,2.2,5.3; printed first two pages include cell-sizing/input-cap coupling; two-year roadmap",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-601",
+      "CLM-608"
+    ],
+    "limitations": "Selected sections extracted/read; organizer claims not independently benchmarked; roadmap superseded as current-rule source by S14.",
+    "version": "DOI 10.1145/3764386.3779616",
+    "related_urls": [],
+    "local_retrieval_sha256": {
+      "contest26.pdf": "da7022e95d0e86678787a7413b798684cd4989497ddec7cba3d1553ff3ac32d6"
+    },
+    "rights": "Publicly accessible source; bibliography and bounded paraphrase only are released. No full source/paper copy is published."
+  },
+  {
+    "id": "S13",
+    "title": "ISPD 2026 official contest resources and results",
+    "url": "https://github.com/ABKGroup/ISPD26-Contest/blob/f7b29d242fc7d441f3b4eadc556f40099ccca067/README.md",
+    "source_type": "official_contest",
+    "publication_date": "unknown",
+    "retrieved_at_utc": "2026-10-15T11:00:59.837918+00:00",
+    "locator": "README Table of Contents, timeline, final leaderboard and OpenROAD RSZ reference; official ispd.cc page Contest Winners",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-608"
+    ],
+    "limitations": "Winner identities/results inspected; winner algorithms/code not audited. Benchmark/PDK rights require separate component checks. Attempted guessed RSZ raw filename was 404.",
+    "version": "f7b29d242fc7d441f3b4eadc556f40099ccca067",
+    "related_urls": [
+      "https://www.ispd.cc/contests/26/index.html"
+    ],
+    "local_retrieval_sha256": {
+      "contest-readme.md": "29c95e3df2f051f14ebb45ee71be7c3d42d5302c8c12d7f2249a45901dc0ab50",
+      "contest26.html": "8df85a7f040776fa438dd030e4c50e0b2eb3be72d74b56541a2a5c734ab9afb1"
+    },
+    "rights": "Publicly accessible source; bibliography and bounded paraphrase only are released. No full source/paper copy is published."
+  },
+  {
+    "id": "S14",
+    "title": "ISPD2027 MCMM Post-CTS Buffering and Sizing official packet",
+    "url": "https://github.com/ABKGroup/ISPD27-Contest/tree/faef83cacf70fa7923be07816d804ca9c1cef68e",
+    "source_type": "official_contest",
+    "publication_date": "unknown",
+    "retrieved_at_utc": "2026-10-15T11:00:59.837918+00:00",
+    "locator": "README timeline; ISPD27-Contest-Description.pdf pp.1\u20134; evaluator/README.md Evaluation and scoring, Evaluation Results, Legality checks",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-601",
+      "CLM-608"
+    ],
+    "limitations": "Rules are current as retrieved and may change; no evaluator run. Scoring weights described as dummy. No future winner claimed. No license transfer from top-level BSD notice to every benchmark/library.",
+    "version": "faef83cacf70fa7923be07816d804ca9c1cef68e",
+    "related_urls": [
+      "https://github.com/ABKGroup/ISPD27-Contest/blob/faef83cacf70fa7923be07816d804ca9c1cef68e/evaluator/README.md"
+    ],
+    "local_retrieval_sha256": {
+      "ISPD27-Contest-README.md": "c597ba839124d5540c070f902b34d3b471c5c1d65b25d5cc95e5c2df93390bd7",
+      "ISPD27-Contest-ISPD27-Contest-Description.pdf": "83359d26f06effa60c38c8dbf9ac9ef473968c7223b1e71983d3cd4fd47df2ba",
+      "ISPD27-Contest-evaluator-README.md": "03f8ae138bf47ac5f51821f7156211de20ebdf757c728360d64915918958ad2d"
+    },
+    "rights": "Publicly accessible source; bibliography and bounded paraphrase only are released. No full source/paper copy is published."
+  },
+  {
+    "id": "S15",
+    "title": "ICCAD 2025 Problem C organizer paper and winner institution report",
+    "url": "https://ieeexplore.ieee.org/abstract/document/11240847",
+    "source_type": "organizer_paper",
+    "publication_date": "2025-10-26",
+    "retrieved_at_utc": "2026-10-15T11:00:59.837918+00:00",
+    "locator": "Organizer abstract: multi-operator search, GPU batching and differentiable guidance; CUHK achievement report 2025-12-01",
+    "access_level": "abstract",
+    "supported_claim_ids": [
+      "CLM-608"
+    ],
+    "limitations": "Organizer abstract and institution winner account only; complete winner method/slides/code unresolved. Reported ranking is not proof of a timing-acceleration mechanism.",
+    "version": "DOI 10.1109/ICCAD66269.2025.11240847",
+    "related_urls": [
+      "https://www.cse.cuhk.edu.hk/news/achievements/iccad2025/"
+    ],
+    "local_retrieval_sha256": {},
+    "rights": "Publicly accessible source; bibliography and bounded paraphrase only are released. No full source/paper copy is published."
+  },
+  {
+    "id": "S16",
+    "title": "2026 CAD Contest at ICCAD official index",
+    "url": "https://www.iccad-contest.org/2026/index.html",
+    "source_type": "official_contest",
+    "publication_date": "unknown",
+    "retrieved_at_utc": "2026-10-15T11:00:59.837918+00:00",
+    "locator": "Contest Problems and Tentative Schedule; browser lines37\u201353",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-608"
+    ],
+    "limitations": "Index only; no general absence inference. Guessed /problems.html inaccessible; actual index sufficient for topic inventory.",
+    "version": "retrieved 2026-10-15",
+    "related_urls": [],
+    "local_retrieval_sha256": {},
+    "rights": "Publicly accessible source; bibliography and bounded paraphrase only are released. No full source/paper copy is published."
+  },
+  {
+    "id": "S17",
+    "title": "PrimeTime mode-merging public white-paper lead",
+    "url": "https://www.synopsys.com/implementation-and-signoff/resources/whitepapers/mode-merging.html",
+    "source_type": "vendor_publication",
+    "publication_date": "unknown",
+    "retrieved_at_utc": "2026-10-15T11:00:59.837918+00:00",
+    "locator": "Search-indexed mode-merging/STA/ECO flow extract; primary landing page fetch failed",
+    "access_level": "metadata",
+    "supported_claim_ids": [
+      "CLM-608"
+    ],
+    "limitations": "Landing page 404; official PDF 403. Public advertisement lead only, no full white-paper audit, reproduced metric or commercial internals established.",
+    "version": "unknown",
+    "related_urls": [
+      "https://www.synopsys.com/content/dam/synopsys/implementation%26signoff/white-papers/mode-merging-wp.pdf"
+    ],
+    "local_retrieval_sha256": {},
+    "rights": "Publicly accessible source; bibliography and bounded paraphrase only are released. No full source/paper copy is published."
+  },
+  {
+    "id": "S18",
+    "title": "HeteroSTA: A CPU-GPU Heterogeneous Static Timing Analysis Engine with Holistic Industrial Design Support",
+    "url": "https://ieeexplore.ieee.org/abstract/document/11420338",
+    "source_type": "paper",
+    "publication_date": "2026-01-19",
+    "retrieved_at_utc": "2026-10-15T11:00:59.837918+00:00",
+    "locator": "Publisher abstract: delay-model choices, formats/constraints and GBA/PBA heterogeneous engine",
+    "access_level": "abstract",
+    "supported_claim_ids": [
+      "CLM-603",
+      "CLM-608"
+    ],
+    "limitations": "Search-returned publisher abstract/metadata inspected; direct open failed. Complete implementation/method unavailable in this round. Must not compare only to obsolete CPU full runs.",
+    "version": "DOI 10.1109/ASP-DAC66049.2026.11420338",
+    "related_urls": [],
+    "local_retrieval_sha256": {},
+    "rights": "Publicly accessible source; bibliography and bounded paraphrase only are released. No full source/paper copy is published."
+  },
+  {
+    "id": "S19",
+    "title": "Heterogeneous Static Timing Analysis with Advanced Delay Calculator",
+    "url": "https://tsung-wei-huang.github.io/papers/date-24.pdf",
+    "source_type": "author_hosted_paper",
+    "publication_date": "2024",
+    "retrieved_at_utc": "2026-10-15T11:00:59.837918+00:00",
+    "locator": "SectionIII.A Batched Arnoldi ROM Calculation, MNA Eq.1 and Fig.4",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-603"
+    ],
+    "limitations": "Selected numerical-kernel section inspected; no GPU run or complete reproduction. Batched interconnect kernels are prior, distinct from candidate-mask equivalence.",
+    "version": "DATE 2024",
+    "related_urls": [],
+    "local_retrieval_sha256": {},
+    "rights": "Publicly accessible source; bibliography and bounded paraphrase only are released. No full source/paper copy is published."
+  },
+  {
+    "id": "H-P",
+    "title": "Released EDA-0004 predecessor proposer",
+    "url": "shared/predecessor/SUB-a9dc2b2421eae654e0f60201c11f172e38bc87864f420a7230cb7cc88b716306/proposal.md",
+    "source_type": "released_project_evidence",
+    "publication_date": "2026-10-15",
+    "retrieved_at_utc": "2026-10-15T11:00:59.837918+00:00",
+    "locator": "Historical frozen proposal / compact verification table",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-608"
+    ],
+    "limitations": "Historical unblinded lineage only; does not independently verify EDA-0006 or transfer approval. Read only explicitly released output.",
+    "version": "unknown",
+    "related_urls": [],
+    "local_retrieval_sha256": {},
+    "rights": "Publicly accessible source; bibliography and bounded paraphrase only are released. No full source/paper copy is published."
+  },
+  {
+    "id": "H-V",
+    "title": "Released EDA-0004 predecessor verifier",
+    "url": "shared/predecessor/SUB-4641912acb091a09c8c7f788fbdcd68a89743b3632ae19c31606000ecd6a9cb8/verification.md",
+    "source_type": "released_project_evidence",
+    "publication_date": "2026-10-15",
+    "retrieved_at_utc": "2026-10-15T11:00:59.837918+00:00",
+    "locator": "Historical frozen proposal / compact verification table",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-608"
+    ],
+    "limitations": "Historical unblinded lineage only; does not independently verify EDA-0006 or transfer approval. Read only explicitly released output.",
+    "version": "unknown",
+    "related_urls": [],
+    "local_retrieval_sha256": {},
+    "rights": "Publicly accessible source; bibliography and bounded paraphrase only are released. No full source/paper copy is published."
+  },
+  {
+    "id": "P-BRIEF",
+    "title": "Frozen owner batch and resource policy",
+    "url": "policy/docs/INNOVATION-BATCH-0002.md",
+    "source_type": "assigned_policy",
+    "publication_date": "2026-10-15",
+    "retrieved_at_utc": "2026-10-15T11:00:59.837918+00:00",
+    "locator": "Execution and boundaries; D05 focus; policy/config/research-brief.json compute/metrics; JOB.json",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-607",
+      "CLM-608"
+    ],
+    "limitations": "Provisional research thresholds/caps are not measured demand or a new allocation.",
+    "version": "input commit f68c1492c05be3fac5622deac4bb479eabf957de",
+    "related_urls": [],
+    "local_retrieval_sha256": {},
+    "rights": "Publicly accessible source; bibliography and bounded paraphrase only are released. No full source/paper copy is published."
+  },
+  {
+    "id": "S20",
+    "title": "Faster Variational Execution with Transparent Bytecode Transformation",
+    "url": "https://www.cs.cmu.edu/~ckaestne/pdf/oopsla18.pdf",
+    "source_type": "author_hosted_paper",
+    "publication_date": "2018-11",
+    "version": "DOI 10.1145/3276487",
+    "retrieved_at_utc": "2026-10-15T11:25:38.036163+00:00",
+    "locator": "\u00a72.1 conditional values, \u00a73.1\u20133.3 lifting and state, \u00a73.2 side-effect-free environment barrier; printed pp117:5\u2013117:10",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-603",
+      "CLM-609"
+    ],
+    "limitations": "Selected primary method sections independently reopened; no reported gains reproduced. Finite timing-executor reduction is own derivation, not an EDA implementation.",
+    "rights": "Publicly accessible primary source read; only metadata, bounded paraphrase and self-authored derivations released. No full source/paper copy or restricted data published.",
+    "local_retrieval_sha256": {
+      "oopsla18.pdf": "40526280e8bca539cabceb7e051cf151cc34990092ee3eb313921e1fb22b65c0"
+    }
+  },
+  {
+    "id": "S21",
+    "title": "VarexC VImpl.java",
+    "url": "https://raw.githubusercontent.com/chupanw/vbc/1221ef110e2b46951ab01319e97fa5d7dd84a724/src/main/java/edu/cmu/cs/varex/VImpl.java",
+    "source_type": "source_code",
+    "publication_date": "unknown",
+    "version": "1221ef110e2b46951ab01319e97fa5d7dd84a724",
+    "retrieved_at_utc": "2026-10-15T11:25:38.036163+00:00",
+    "locator": "map/flatMap/addVToMap/put; raw lines117\u2013192 (locators counted on independently downloaded raw file)",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-603",
+      "CLM-609"
+    ],
+    "limitations": "Selected functions read; interaction restriction, exception policy and object equality cannot be inherited into exact timing. Not built or run.",
+    "rights": "Publicly accessible primary source read; only metadata, bounded paraphrase and self-authored derivations released. No full source/paper copy or restricted data published.",
+    "local_retrieval_sha256": {
+      "VImpl.java": "09adbcae7253f7b40e046edf798ecb9969187068a89c9397408b8edf3678ccd6"
+    }
+  },
+  {
+    "id": "S22",
+    "title": "OpenROAD SizeUpMtGenerator",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/8da6ac250b0349c346d1abed7c2c43107f4ff6f7/src/rsz/src/move/SizeUpMtGenerator.cc",
+    "source_type": "source_code",
+    "publication_date": "unknown",
+    "version": "8da6ac250b0349c346d1abed7c2c43107f4ff6f7",
+    "retrieved_at_utc": "2026-10-15T11:25:38.036163+00:00",
+    "locator": "isApplicable29\u201335; generate37\u201363; findSizeUpOptions66\u2013123",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-601",
+      "CLM-610"
+    ],
+    "limitations": "Public candidate generation/screening source only; no runtime batch sizes, fixed-footprint/full-vector consumer or timing precision established.",
+    "rights": "Publicly accessible primary source read; only metadata, bounded paraphrase and self-authored derivations released. No full source/paper copy or restricted data published.",
+    "local_retrieval_sha256": {
+      "SizeUpMtGenerator.cc": "c53a54d8ac407114ceaedd3b87af36103831b239a9169f677596610b19bec023"
+    }
+  },
+  {
+    "id": "S23",
+    "title": "OpenROAD SizeUpMtCandidate",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/8da6ac250b0349c346d1abed7c2c43107f4ff6f7/src/rsz/src/move/SizeUpMtCandidate.cc",
+    "source_type": "source_code",
+    "publication_date": "unknown",
+    "version": "8da6ac250b0349c346d1abed7c2c43107f4ff6f7",
+    "retrieved_at_utc": "2026-10-15T11:25:38.036163+00:00",
+    "locator": "estimate40\u201348; apply50\u2013112",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-601",
+      "CLM-610"
+    ],
+    "limitations": "Local DelayEstimator arrival_impr score, not downstream exact endpoint oracle. Apply rechecks max-cap; no full all-context guard inferred.",
+    "rights": "Publicly accessible primary source read; only metadata, bounded paraphrase and self-authored derivations released. No full source/paper copy or restricted data published.",
+    "local_retrieval_sha256": {
+      "SizeUpMtCandidate.cc": "f522cf44d8fc8d5867e43b390fab5261b9a6517bf6f3990493fb2fbc8471be8f"
+    }
+  },
+  {
+    "id": "S24",
+    "title": "OpenROAD measured VT alternative generator and candidate",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/8da6ac250b0349c346d1abed7c2c43107f4ff6f7/src/rsz/src/move/MeasuredVtSwapCandidate.cc",
+    "source_type": "source_code",
+    "publication_date": "unknown",
+    "version": "8da6ac250b0349c346d1abed7c2c43107f4ff6f7",
+    "retrieved_at_utc": "2026-10-15T11:25:38.036163+00:00",
+    "locator": "MeasuredVtSwapCandidate estimate46\u201370; arrivalDelay114\u2013124; begin/restore journal126\u2013143; MeasuredVtSwapGenerator generate37\u201366, resolve69\u2013102, select104\u2013133",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-601",
+      "CLM-610"
+    ],
+    "limitations": "Both files independently read. VT is a near-neighbor, not relabeled frozen sizing demand. Source trace not execution; no byte-exact restoration, fixed topology/clock or per-candidate endpoint-vector query established.",
+    "rights": "Publicly accessible primary source read; only metadata, bounded paraphrase and self-authored derivations released. No full source/paper copy or restricted data published.",
+    "local_retrieval_sha256": {
+      "MeasuredVtSwapCandidate.cc": "16c99bf48dd4e6c23a5c886ef3608bfb95bd0bfbb688e35676a4bc301427cb08",
+      "MeasuredVtSwapGenerator.cc": "e6e60ffe4b0e16a6f706a3326b11e26e58004a81d6a2c7716f43dde76c319a8d"
+    },
+    "related_urls": [
+      "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/8da6ac250b0349c346d1abed7c2c43107f4ff6f7/src/rsz/src/move/MeasuredVtSwapGenerator.cc"
+    ]
+  },
+  {
+    "id": "S25",
+    "title": "OpenROAD MeasuredVtSwapPolicy",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/8da6ac250b0349c346d1abed7c2c43107f4ff6f7/src/rsz/src/policy/MeasuredVtSwapPolicy.cc",
+    "source_type": "source_code",
+    "publication_date": "unknown",
+    "version": "8da6ac250b0349c346d1abed7c2c43107f4ff6f7",
+    "retrieved_at_utc": "2026-10-15T11:25:38.036163+00:00",
+    "locator": "run69\u2013140; estimateAndCommitBestCandidate260\u2013301",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-601",
+      "CLM-610"
+    ],
+    "limitations": "Strict best-positive score and update/accept trace inspected; no complete per-candidate full-context/hold guard or full-vector demand inferred.",
+    "rights": "Publicly accessible primary source read; only metadata, bounded paraphrase and self-authored derivations released. No full source/paper copy or restricted data published.",
+    "local_retrieval_sha256": {
+      "MeasuredVtSwapPolicy.cc": "f81f24e419536210a344cd6fd32f9e2b43bdb2144a76bbc818de437dadf2d162"
+    }
+  },
+  {
+    "id": "S26",
+    "title": "IncreGPUSTA: GPU-Accelerated Incremental Static Timing Analysis for Iterative Design Flows",
+    "url": "https://guozz.cn/publication/incregpustaiccad-25/incregpustaiccad-25.pdf",
+    "source_type": "author_hosted_paper",
+    "publication_date": "2025",
+    "version": "DOI 10.1109/ICCAD66269.2025.11240636",
+    "retrieved_at_utc": "2026-10-15T11:25:38.036163+00:00",
+    "locator": "\u00a7II.B\u2013D and \u00a7III.A, pp2\u20134: affected updates, greedy insertion, dual CSR and incremental levelization; web lines138\u2013174,216\u2013238,286 onward",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-603",
+      "CLM-608"
+    ],
+    "limitations": "Primary PDF opened by browser tool; direct urllib download timed out. Selected methods only, no code/GPU/benchmark run or transferred speedups. Actual committed buffer changes differ from independent exact alternatives.",
+    "rights": "Publicly accessible primary source read; only metadata, bounded paraphrase and self-authored derivations released. No full source/paper copy or restricted data published."
+  },
+  {
+    "id": "S18-P",
+    "title": "HeteroSTA accessible author preprint",
+    "url": "https://arxiv.org/html/2511.11660v1",
+    "source_type": "preprint",
+    "publication_date": "2025-11-11",
+    "version": "arXiv:2511.11660v1",
+    "retrieved_at_utc": "2026-10-15T11:25:38.036163+00:00",
+    "locator": "\u00a7II and \u00a7III, flattened CSR database/parasitic inputs and report options, HTML lines53\u201381",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-603",
+      "CLM-608"
+    ],
+    "limitations": "R2 repairs method access using preprint, not publisher/binary/source audit. Distinguishes output options and models; no byte-equivalence or reproduced performance. Current published edition/version differences remain unverified.",
+    "rights": "Publicly accessible primary source read; only metadata, bounded paraphrase and self-authored derivations released. No full source/paper copy or restricted data published."
+  },
+  {
+    "id": "V-R1",
+    "title": "Released independent R1 verification",
+    "url": "shared/SUB-8001e5f9df9ea0a26943e0c9d3710bfcacc170bcf01623dd198adeb57f63478f/verification.md",
+    "source_type": "released_project_evidence",
+    "publication_date": "2026-10-15",
+    "version": "SUB-8001e5f9df9ea0a26943e0c9d3710bfcacc170bcf01623dd198adeb57f63478f",
+    "retrieved_at_utc": "2026-10-15T11:25:38.036163+00:00",
+    "locator": "OBJ-001/002 rows and required-next-work decision",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-609",
+      "CLM-610"
+    ],
+    "limitations": "Adjudicates R1 only; no verification or consent transfers to R2.",
+    "rights": "Publicly accessible primary source read; only metadata, bounded paraphrase and self-authored derivations released. No full source/paper copy or restricted data published."
+  },
+  {
+    "id": "C-R1",
+    "title": "Released adjudicated R1 challenge",
+    "url": "shared/SUB-29c37dc5d77c7f982c6e5983e65e4653a71d75c8278dd50a3b7f17c2f1a0cd10/challenges.md",
+    "source_type": "released_project_evidence",
+    "publication_date": "2026-10-15",
+    "version": "SUB-29c37dc5d77c7f982c6e5983e65e4653a71d75c8278dd50a3b7f17c2f1a0cd10",
+    "retrieved_at_utc": "2026-10-15T11:25:38.036163+00:00",
+    "locator": "OBJ-001/002, cost bound and C-EXP amendments",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-609",
+      "CLM-610"
+    ],
+    "limitations": "Explicitly released together with matched verifier adjudication; technical repair is independently rechecked here, not private exchange.",
+    "rights": "Publicly accessible primary source read; only metadata, bounded paraphrase and self-authored derivations released. No full source/paper copy or restricted data published."
+  }
+]

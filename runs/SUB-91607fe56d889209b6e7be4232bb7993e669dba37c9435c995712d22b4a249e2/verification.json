@@ -1,0 +1,271 @@
+{
+  "decision": "revise",
+  "verifier_session": "a51b3d2a-268d-4e21-b896-97ab1dd7e2c4",
+  "input_commit": "f68c1492c05be3fac5622deac4bb479eabf957de",
+  "packet_sha256": "c3fda03df5f6ce9463078ab94f969d3d516729e9c87bd44a999a32ffdedb73b0",
+  "dossier_digest": "a0fe7e2b3b544ebdd0f958c9ee05ef087f0ac983a30fa03352e520f3fea27cb9",
+  "reviewed_proposer_release": "SUB-a18df7c82355639157174a8f957f294a4dabd4f66f741c76001694948aed326c",
+  "adjudicated_challenger_releases": [
+    "SUB-de19f2a38b3e2fcbf5d5b7871f119e8bf7b869b7568889c777cc45228e942c91"
+  ],
+  "gates": {
+    "novelty": false,
+    "mechanism": false,
+    "utility": false,
+    "contest_originality": false,
+    "headroom": false,
+    "feasibility": false,
+    "direction_integrity": true,
+    "experiment_consensus": false
+  },
+  "direction_penalty_checked": true,
+  "direction_penalties": {
+    "combination_drift": 0,
+    "demand_drift": 0,
+    "total": 0
+  },
+  "experiment_consensus_checked": true,
+  "abandonment_process_checked": true,
+  "source_checks": [
+    {
+      "id": "S03",
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/8da6ac250b0349c346d1abed7c2c43107f4ff6f7/src/rsz/src/Resizer.cc",
+      "sha256": "ff3adf14a5f8f9059a293b7fbfbf39ce4138f008294c43fd86d6cc46c6024b85",
+      "locator": "Resizer::findResizeSlacks lines3232\u20133316; Resizer::journalRestore lines5689\u20135716",
+      "access": "full"
+    },
+    {
+      "id": "S21",
+      "url": "https://raw.githubusercontent.com/chupanw/vbc/1221ef110e2b46951ab01319e97fa5d7dd84a724/src/main/java/edu/cmu/cs/varex/VImpl.java",
+      "sha256": "09adbcae7253f7b40e046edf798ecb9969187068a89c9397408b8edf3678ccd6",
+      "locator": "map/flatMap/addVToMap/put; raw lines117\u2013192 (locators counted on independently downloaded raw file)",
+      "access": "full"
+    },
+    {
+      "id": "S22",
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/8da6ac250b0349c346d1abed7c2c43107f4ff6f7/src/rsz/src/move/SizeUpMtGenerator.cc",
+      "sha256": "c53a54d8ac407114ceaedd3b87af36103831b239a9169f677596610b19bec023",
+      "locator": "isApplicable29\u201335; generate37\u201363; findSizeUpOptions66\u2013123",
+      "access": "full"
+    },
+    {
+      "id": "S23",
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/8da6ac250b0349c346d1abed7c2c43107f4ff6f7/src/rsz/src/move/SizeUpMtCandidate.cc",
+      "sha256": "f522cf44d8fc8d5867e43b390fab5261b9a6517bf6f3990493fb2fbc8471be8f",
+      "locator": "estimate40\u201348; apply50\u2013112",
+      "access": "full"
+    },
+    {
+      "id": "S24",
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/8da6ac250b0349c346d1abed7c2c43107f4ff6f7/src/rsz/src/move/MeasuredVtSwapCandidate.cc",
+      "sha256": "16c99bf48dd4e6c23a5c886ef3608bfb95bd0bfbb688e35676a4bc301427cb08",
+      "locator": "MeasuredVtSwapCandidate estimate46\u201370; arrivalDelay114\u2013124; begin/restore journal126\u2013143; MeasuredVtSwapGenerator generate37\u201366, resolve69\u2013102, select104\u2013133",
+      "access": "full"
+    },
+    {
+      "id": "S25",
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/8da6ac250b0349c346d1abed7c2c43107f4ff6f7/src/rsz/src/policy/MeasuredVtSwapPolicy.cc",
+      "sha256": "f81f24e419536210a344cd6fd32f9e2b43bdb2144a76bbc818de437dadf2d162",
+      "locator": "run69\u2013140; estimateAndCommitBestCandidate260\u2013301",
+      "access": "full"
+    },
+    {
+      "id": "S20",
+      "url": "https://www.cs.cmu.edu/~ckaestne/pdf/oopsla18.pdf",
+      "locator": "\u00a72.1, \u00a73.1\u20133.2, pp117:5\u201310",
+      "access": "full selected sections",
+      "limitations": "No execution or transferred performance"
+    },
+    {
+      "id": "S05",
+      "url": "https://patents.google.com/patent/US8839167B1/en",
+      "locator": "Fig7 steps705\u2013750, paragraphs at web lines554\u2013579",
+      "access": "full selected text",
+      "limitations": "Full comparison optional in source; exact comparator must require it; no deployed product claim"
+    },
+    {
+      "id": "C204",
+      "url": "https://vlsicad.ucsd.edu/Publications/Conferences/421/c421.pdf",
+      "locator": "\u00a72.3 and \u00a75.2 pp2,6",
+      "access": "full selected sections",
+      "limitations": "Winner implementations not audited"
+    },
+    {
+      "id": "C205",
+      "url": "https://yibolin.com/publications/papers/TIMING_ISEDA2026_Liu.pdf",
+      "locator": "\u00a7III Eq9\u201311, Algorithms1\u20132",
+      "access": "full selected sections",
+      "limitations": "No reproduced speedup; changed approximation"
+    }
+  ],
+  "objections": [
+    {
+      "id": "OBJ-001",
+      "verdict": "valid",
+      "blocking": true,
+      "evidence": "S20 \u00a72.1, \u00a73.1; S21 raw117\u2013192; S05 Fig.7 steps705\u2013750",
+      "reason": "Original generic executor novelty concern remains valid and is addressed by explicit withdrawal. Conditional-value representation, context intersection and equality union are actual prior primitives; finite candidate masks specialize their context algebra. Matched cache/base/replay choices yield the stated abstract correspondence. This supported bridge is narrower than prior publication of an exact EDA adapter; useful system value is unresolved, not disproved."
+    },
+    {
+      "id": "OBJ-002",
+      "verdict": "valid",
+      "blocking": true,
+      "evidence": "S22 generate37\u201363; S23 estimate37\u201344; S24 estimate44\u201366, arrivalDelay110\u2013116, restore119\u2013131; S25 260\u2013301",
+      "reason": "Incorrect caller inference is repaired. Real local sizing estimates and driver-arrival VT measurement do not establish the anchored full-vector consumer. A justified prospective use is allowed; demonstrate why sufficient smaller queries fail. No assertion that such demand cannot exist."
+    }
+  ],
+  "claim_checks": [
+    {
+      "id": "CLM-609",
+      "verdict": "valid",
+      "blocking": false,
+      "evidence": "S20 \u00a72.1 pp117:5; \u00a73.1 p117:9; S21 map/flatMap/addVToMap/put; S05 Fig.7",
+      "reason": "Conditional abstract reduction is supported, including identical task/storage choices. Full byte equality, complete context, disabled interaction restriction and sound exceptions are adaptations/premises. Does not prove identical implementation constants or all useful combinations routine."
+    },
+    {
+      "id": "CLM-610",
+      "verdict": "valid",
+      "blocking": false,
+      "evidence": "S22\u2013S25 pinned OpenROAD 8da6ac; S03 updateParasiticsAndTiming5627\u20135636",
+      "reason": "Independently fetched source hashes match proposer. Generation, estimation, temporary edit/undo and strict first-best ranking are supported; paraphrase remains source observation, not run evidence. Actual sizing/VT outputs are smaller than anchor. Parasitics may be regenerated."
+    },
+    {
+      "id": "CLM-604/605",
+      "verdict": "partially_valid",
+      "blocking": true,
+      "evidence": "proposal mechanism/invariants and conditional induction; S21 117\u2013192",
+      "reason": "Partition induction is coherent under deterministic complete-record assumptions. Real scalar read-set, FP/context purity, fallback cleanup and compatible binary remain unproved. Java object equality is insufficient; no foundry signoff claim follows."
+    },
+    {
+      "id": "EXP-006A",
+      "verdict": "valid",
+      "blocking": false,
+      "evidence": "experiment-plan.md R2 embedded Python; independent in-memory rerun",
+      "reason": "Rerun matches 16/6/6/6/6 primary events, orthogonal eight each and two original-input replays. Finite synthetic check only; no EDA correctness/performance or actual cap enforcement evidence."
+    },
+    {
+      "id": "CLM-601 demand / utility",
+      "verdict": "unresolved",
+      "blocking": true,
+      "evidence": "S22\u2013S25; C204 \u00a72.3 p2 and \u00a75.2 p6",
+      "reason": "Nearby real candidate scoring and ideal-clock data-path use are supported. Neither establishes the exact full-vector consumer, batch distribution, cost bottleneck or useful adapter delta."
+    },
+    {
+      "id": "C204 favorable scope correction",
+      "verdict": "valid",
+      "blocking": false,
+      "evidence": "organizer c421.pdf \u00a72.3 and \u00a75.2",
+      "reason": "Ideal clocks alone do not make scope artificial. Contest physical constraints and optimization output do not establish this internal candidate query contract; winner algorithms remain unchecked."
+    },
+    {
+      "id": "C205 adjacent-kernel claim",
+      "verdict": "valid",
+      "blocking": false,
+      "evidence": "ElmoreCeff \u00a7III.A\u2013B Eq9\u201311, Algorithms1\u20132",
+      "reason": "Closed-form effective-capacitance traversal changes numerical model; not byte-preserving same-kernel execution. No reported gains reproduced or transferred to exact-model headroom."
+    },
+    {
+      "id": "CLM-606 headroom / forecast",
+      "verdict": "partially_valid",
+      "blocking": true,
+      "evidence": "forecast.json; tasklist EXP-005; algebra 1-f*r+h",
+      "reason": "Accounting identity is valid for the defined partition, not a speed forecast. Null numerical forecasts appropriate. Equivalent abstract B++ ledger supplies no positive removable-work fraction; real reuse/overhead unmeasured."
+    },
+    {
+      "id": "CLM-602/603/608 broad search and contest clearance",
+      "verdict": "unresolved",
+      "blocking": true,
+      "evidence": "proposal shortlist; contest-audit; current source expansion",
+      "reason": "Selected reduction sources reopened; broad shortlist methods, winner algorithms, latest editions and industry internals not fully audited this turn. No commercial absence, exhaustive novelty or theoretical saturation is established."
+    },
+    {
+      "id": "CLM-607 resources and consensus",
+      "verdict": "valid",
+      "blocking": true,
+      "evidence": "owner batch boundaries; tasklist EXP-000R/001R through009; C experiment-consent",
+      "reason": "Source-witness work is permitted. Implementation/reproducer owners, compatible build, data rights and actual allocation are pending. Challenger decision pending with correct hash; proposer agreement absent. No pilot consent or abandonment signatures exist."
+    },
+    {
+      "id": "Direction integrity",
+      "verdict": "valid",
+      "blocking": false,
+      "evidence": "direction-control.json anchor/penalties; R2 proposal",
+      "reason": "Both drift scores zero: admits adverse reduction and demand limits while preserving original mechanism/output. Withdrawal is progress, not an unsupported pivot. Different output-only or numerical-kernel direction needs new review/ID."
+    }
+  ],
+  "consensus": {
+    "tasklist_sha256": "3554c78f5556722ef757226aa171595bfa772f3f2037f3a61df5459975eeee84",
+    "challenger_decision": "pending",
+    "proposer_agreement_present": false,
+    "matching_dual_consent": false
+  },
+  "synthetic_check": {
+    "script_sha256": "89f8a95efcc42d8a974a2d9b0d994b96759b35142f0dbd4f5e1162891b766f98",
+    "output": {
+      "scope": "synthetic byte-record accounting, not EDA benchmark",
+      "primary_ledger": {
+        "intersections": 16,
+        "nonempty": 6,
+        "lookups": 6,
+        "kernels": 6,
+        "unions": 6
+      },
+      "orthogonal_ledger": {
+        "intersections": 8,
+        "nonempty": 8,
+        "lookups": 8,
+        "kernels": 8,
+        "unions": 8
+      },
+      "fallback_original_replays": 2,
+      "checks": [
+        "partition_cover",
+        "inherited_vs_dirty_equal_base",
+        "dirty_output_equal_base",
+        "tags",
+        "signed_zero",
+        "reconvergent_join",
+        "partial_fallback_reset"
+      ],
+      "outputs_match": true,
+      "same_abstract_ledger": true
+    }
+  },
+  "provenance": {
+    "both_manifest_hashes_verified": true,
+    "distinct_declared_sessions": true,
+    "unblinded": true,
+    "independence_limit": "Only assigned packet, released shared outputs, own previous release and public primary sources inspected. Logical isolation, not OS sandbox or observed backend/model attestation. Challenger discloses common-policy-only initial checkout read; no evidence of withheld science exposure, so not treated as scientific contamination."
+  },
+  "search_log": [
+    {
+      "query": "static timing candidate variational execution memoization ECO alternatives",
+      "engine": "web search",
+      "result": "No closer decision-grade primary source inspected; irrelevant software timing/security hits excluded."
+    },
+    {
+      "query": "ISPD 2026 gate sizing ideal clocks ElmoreCeff 2026",
+      "engine": "web search plus direct primary URLs",
+      "result": "Organizer ideal-clock scope and newer numerical model reopened; winner methods remain unresolved."
+    }
+  ],
+  "retrieved_at_utc": "2026-10-15T11:34:10.849834+00:00",
+  "checks_run": [
+    "Rehashed all current P/C manifest files",
+    "project.py digest exact proposer release",
+    "Independent raw primary source retrieval and SHA256 matching",
+    "Inspected and reran embedded R2 stdlib synthetic fixture in memory",
+    "Trusted freeze validator; full repository validation reserved for coordinator"
+  ],
+  "required_next_tasks": [
+    "EXP-000R: one bounded source-backed adapter capability/cost/lifetime delta against faithful adapted B++",
+    "EXP-001R: actual or justified prospective anchored consumer; compare sufficient smaller statistic",
+    "If either witness absent after next bounded substantive revision, park with both resurrection conditions; no unilateral abandonment",
+    "Only surviving witnesses justify later readiness/resource/consent work"
+  ],
+  "limitations": [
+    "Research merit unresolved; executable pilot not ready; no measured EDA result",
+    "No new full-flow/training/GPU/remote/paid API experiments",
+    "No universal novelty exhaustion or impossibility conclusion"
+  ]
+}

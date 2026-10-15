@@ -1,0 +1,80 @@
+{
+  "state": "continue",
+  "anchor": {
+    "problem": "Repeated scheduling/key/state work when scoring mutually exclusive fixed-topology cell-sizing alternatives from one base checkpoint",
+    "engineering_user": "Timing-optimization developer using a timing engine for candidate selection",
+    "downstream_need": "Obtain identical scoped per-candidate endpoint results and caller decision with lower fully charged iteration cost",
+    "causal_mechanism": "Candidate-membership mask partition refinement across complete deterministic timing operation records, with split on dependency differences and full-output equality coalescence",
+    "mechanism_invariants": [
+      "Same fixed candidate set/base revision and scalar kernels/arithmetic/tie ordering",
+      "Complete observable context including candidate pin-cap/load changes and timing tags; hashes only index full equality",
+      "Disjoint covering candidate masks; no combining alternative edits",
+      "Strong cached incremental/transactional/task-clustered comparison gets the same inputs, memory, batching and reporting",
+      "Unsupported or capped work replays exact original candidate through reference with all costs charged",
+      "Initial exactness is conditional and scoped; real adapter and demand must be established"
+    ],
+    "forbidden_pivots": [
+      "Replace the anchor with generic predict-then-check, agent count, extra trials or model training",
+      "Claim kernel-count superiority over complete-key memoization from the toy",
+      "Count work already skipped by scalar incremental propagation as saved",
+      "Change to a proxy without demonstrated caller decision benefit",
+      "Expand to MCMM/hold/SI/production signoff without explicit proof and coverage audit"
+    ]
+  },
+  "penalties": {
+    "combination_drift": {
+      "score": 0,
+      "rationale": "Same anchored mask mechanism retained with its closest reduction acknowledged; no unsupported substitute combination is used to rescue novelty. Useful delta remains unestablished, a separate failed/unresolved gate.",
+      "evidence_refs": [
+        "CLM-609",
+        "OBJ-001"
+      ]
+    },
+    "demand_drift": {
+      "score": 0,
+      "rationale": "Full endpoint-vector sizing decision retained explicitly; smaller real queries are negative applicability evidence, not a silent replacement. Prototype advancement withheld pending genuine demand.",
+      "evidence_refs": [
+        "CLM-610",
+        "OBJ-002"
+      ]
+    },
+    "total": 0
+  },
+  "revision_assessment": {
+    "preserves_problem": true,
+    "preserves_engineering_need": true,
+    "preserves_causal_mechanism": true,
+    "changes": [
+      "Accept verified OBJ-001; withdraw generic scheduler distinction after constructive B++ reduction",
+      "Accept verified OBJ-002; add pinned sizing/VT generation-scoring-undo-commit audit without changing full-vector demand",
+      "Hold prototype work behind concrete source witness gates; add tiny synthetic correctness/reduction checks"
+    ],
+    "reason": "Honest negative refinement preserves frozen scientific question; no new agent/predictor/output proxy is inserted"
+  },
+  "abandonment": {
+    "decision_id": null,
+    "grounds": [],
+    "rationale": null,
+    "evidence_refs": [],
+    "consents": {
+      "proposer": {
+        "session_id": null,
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      },
+      "challenger": {
+        "session_id": null,
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      }
+    },
+    "successor_topic_id": null,
+    "resurrection_conditions": [
+      "Source-backed caller-required capability or cost/reliability delta beyond faithful adapted B++",
+      "Actual or justified prospective sizing consumer for unchanged output contract",
+      "Complete-state/FP/read-set, compatible build, rights, actual allocation and matching consents before experiments"
+    ]
+  }
+}
