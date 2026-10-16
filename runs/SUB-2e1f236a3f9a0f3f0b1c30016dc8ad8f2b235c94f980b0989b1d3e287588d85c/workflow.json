@@ -1,0 +1,12 @@
+{
+  "role": "proposer",
+  "assessment": "revise",
+  "batch_round": 1,
+  "research_stage": "source_and_analytical_witness",
+  "anchor_preserved": true,
+  "experiment_gate": "closed",
+  "requested_next_action": "independent_challenge",
+  "scientific_acceptance": false,
+  "tasklist_sha256": "ba693ce303fe5d897d23c1f16c2e14d2eab68e6c8a509088c955fc71fe53ba5d",
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301"
+}

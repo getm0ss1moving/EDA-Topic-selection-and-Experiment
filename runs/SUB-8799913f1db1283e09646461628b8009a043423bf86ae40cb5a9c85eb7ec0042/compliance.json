@@ -1,0 +1,155 @@
+{
+  "schema": 1,
+  "role": "challenger",
+  "actor_id": "ChatGPT-C04-PHYSICAL-B04-EDA-0009",
+  "session_id": "ee82dfaa-9410-4c12-9e7b-cc1dde065bf4",
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "packet_sha256": "0b3aeb2371a0f6f71666f79006f2941bb10035391bcffef4cc2f7a5906975005",
+  "job_id": "ff954ccd-dbf6-4fe4-b310-ccd97e1bd619",
+  "read_releases": [
+    "SUB-2e1f236a3f9a0f3f0b1c30016dc8ad8f2b235c94f980b0989b1d3e287588d85c",
+    "SUB-2ff252d0046e7fc9825c2748ba4109878fee23295c7c2855ffd64435aa2a8f06"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0
+  },
+  "rules": {
+    "inputs": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "search-log.md",
+        "challenges.md"
+      ],
+      "limits": "Self-report only, not proof of absent unseen actions. Source and scientific uncertainty are retained; no independent conduct clearance claimed."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "search-log.md",
+        "challenges.md"
+      ],
+      "limits": "Self-report only, not proof of absent unseen actions. Source and scientific uncertainty are retained; no independent conduct clearance claimed."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "release/",
+        "experiment-consent.json",
+        "workflow.json"
+      ],
+      "limits": "Self-report only, not proof of absent unseen actions. Source and scientific uncertainty are retained; no independent conduct clearance claimed."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "search-log.md",
+        "challenges.md"
+      ],
+      "limits": "Self-report only, not proof of absent unseen actions. Source and scientific uncertainty are retained; no independent conduct clearance claimed."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "search-log.md",
+        "challenges.md"
+      ],
+      "limits": "Self-report only, not proof of absent unseen actions. Source and scientific uncertainty are retained; no independent conduct clearance claimed."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "release/",
+        "experiment-consent.json",
+        "workflow.json"
+      ],
+      "limits": "Self-report only, not proof of absent unseen actions. Source and scientific uncertainty are retained; no independent conduct clearance claimed."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "search-log.md",
+        "challenges.md"
+      ],
+      "limits": "Self-report only, not proof of absent unseen actions. Source and scientific uncertainty are retained; no independent conduct clearance claimed."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "search-log.md",
+        "challenges.md"
+      ],
+      "limits": "Self-report only, not proof of absent unseen actions. Source and scientific uncertainty are retained; no independent conduct clearance claimed."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "release/",
+        "experiment-consent.json",
+        "workflow.json"
+      ],
+      "limits": "Self-report only, not proof of absent unseen actions. Source and scientific uncertainty are retained; no independent conduct clearance claimed."
+    }
+  },
+  "operations": [
+    {
+      "action": "read",
+      "references": [
+        "JOB.json",
+        "prompt.txt",
+        "policy/docs/CHARTER.md",
+        "policy/docs/WORKFLOW.md",
+        "policy/docs/EVIDENCE.md",
+        "policy/docs/ISOLATION.md",
+        "policy/docs/CODEX-AUTOMATION.md",
+        "policy/docs/ROLE-COMPLIANCE.md",
+        "policy/docs/INNOVATION-BATCH-0004.md",
+        "policy/docs/INNOVATION-STRATEGY.md",
+        "policy/harness/CHALLENGER.md",
+        "policy/docs/SELF-SUBMISSION.md"
+      ]
+    },
+    {
+      "action": "released_input_read",
+      "references": [
+        "SUB-2e1f236a3f9a0f3f0b1c30016dc8ad8f2b235c94f980b0989b1d3e287588d85c: proposal/tasklist/sources/experiment-plan/direction-control/responses/experiment-consent",
+        "SUB-2ff252d0046e7fc9825c2748ba4109878fee23295c7c2855ffd64435aa2a8f06: verification.md"
+      ]
+    },
+    {
+      "action": "public_source_search_read",
+      "references": [
+        "search-log.md",
+        "sources.json"
+      ]
+    },
+    {
+      "action": "own_tiny_analytical_execution",
+      "references": [
+        "search-log.md:C-A01 exact code stdout hashes"
+      ]
+    },
+    {
+      "action": "write_and_freeze",
+      "references": [
+        "release/",
+        "submissions/",
+        "result.json",
+        "trusted policy/scripts/role_submission.py"
+      ]
+    }
+  ],
+  "incidents": [],
+  "observability": "Self-authored public activity ledger, not a complete tool trace or evidence of absent undisclosed actions."
+}

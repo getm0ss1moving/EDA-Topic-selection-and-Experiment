@@ -1,0 +1,114 @@
+{
+  "schema": 1,
+  "role": "verifier",
+  "actor_id": "ChatGPT-B04-PROTOCOL-D04-EDA-0009-R1",
+  "session_id": "7bf97a0f-9513-44b5-b772-d0d06bd62af2",
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "packet_sha256": "9ce0ad69fc7d7bc2bc18135f58876b1dda3c87496004fae95c9876169767c3c1",
+  "job_id": "544a6208-da54-4a4c-9aae-d224426126d4",
+  "read_releases": [
+    "SUB-8799913f1db1283e09646461628b8009a043423bf86ae40cb5a9c85eb7ec0042",
+    "SUB-2e1f236a3f9a0f3f0b1c30016dc8ad8f2b235c94f980b0989b1d3e287588d85c",
+    "SUB-f70b504c01235e69199f322b0bbd1ddec249af0289ea0e1883b1132758ddb6bf"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0
+  },
+  "rules": {
+    "inputs": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json#/roles",
+        "release/workflow.json"
+      ],
+      "limits": "Own public self-report, not complete tool trace or independent attestation of unseen conduct. Only assigned job paths used."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json#/roles",
+        "release/workflow.json"
+      ],
+      "limits": "Own public self-report, not complete tool trace or independent attestation of unseen conduct. Only assigned job paths used."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json#/roles",
+        "release/workflow.json"
+      ],
+      "limits": "Own public self-report, not complete tool trace or independent attestation of unseen conduct. Only assigned job paths used."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json#/roles",
+        "release/workflow.json"
+      ],
+      "limits": "Own public self-report, not complete tool trace or independent attestation of unseen conduct. Only assigned job paths used."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json#/limitations",
+        "release/workflow.json"
+      ],
+      "limits": "Own public self-report, not complete tool trace or independent attestation of unseen conduct. Only assigned job paths used."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json#/roles",
+        "release/workflow.json"
+      ],
+      "limits": "Own public self-report, not complete tool trace or independent attestation of unseen conduct. Only assigned job paths used."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json#/roles",
+        "release/workflow.json"
+      ],
+      "limits": "Own public self-report, not complete tool trace or independent attestation of unseen conduct. Only assigned job paths used."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json#/roles",
+        "release/workflow.json"
+      ],
+      "limits": "Own public self-report, not complete tool trace or independent attestation of unseen conduct. Only assigned job paths used."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json#/limitations",
+        "release/workflow.json"
+      ],
+      "limits": "Own public self-report, not complete tool trace or independent attestation of unseen conduct. Only assigned job paths used."
+    }
+  },
+  "operations": [
+    "First read exact JOB.json/prompt.txt in explicit assigned workdir; common policy and only VERIFIER harness read. Long combined outputs were truncated; relevant policy/ledger/source/search sections reopened or programmatically inspected.",
+    "Enumerated only assigned shared files/policy templates; read exact three releases and their public job descriptors. No checkout/home/session/conversation/memory or withheld historical inputs inspected; no agent messaging/subagents called.",
+    "Trusted role_submission.py verify for each supplied release; own metadata-only Python checks compared identities, declared read allowlists and task-list hash. No author analytical code executed; no external source access.",
+    "Wrote own audit_build.py and release/verification.md, verification.json, workflow.json, compliance.json; trusted self-freeze/verify and root result.json are submission operations."
+  ],
+  "incidents": [],
+  "observability": "Self-authored public activity ledger, not a complete tool trace or evidence of absent undisclosed actions."
+}
