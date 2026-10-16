@@ -1,0 +1,8 @@
+{
+  "role": "verifier",
+  "reviewed_proposer_release": "SUB-2e1f236a3f9a0f3f0b1c30016dc8ad8f2b235c94f980b0989b1d3e287588d85c",
+  "adjudicated_challenger_releases": [
+    "SUB-8799913f1db1283e09646461628b8009a043423bf86ae40cb5a9c85eb7ec0042"
+  ],
+  "next_action": "revise"
+}

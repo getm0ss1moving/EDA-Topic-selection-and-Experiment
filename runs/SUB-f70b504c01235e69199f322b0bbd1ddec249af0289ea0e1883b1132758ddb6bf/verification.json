@@ -1,0 +1,342 @@
+{
+  "topic": "EDA-0009",
+  "batch_round": 1,
+  "decision": "revise",
+  "verifier_session": "528a3cf1-ef60-44dd-8bc2-a6c1c6d4d5ba",
+  "actor_id": "ChatGPT-V04-PHYSICAL-B04-EDA-0009",
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "packet_sha256": "7470c82b696d066e5875843a07235c477dae9fa93ac903e9ed83bd7a14644986",
+  "reviewed_proposer_release": "SUB-2e1f236a3f9a0f3f0b1c30016dc8ad8f2b235c94f980b0989b1d3e287588d85c",
+  "adjudicated_challenger_releases": [
+    "SUB-8799913f1db1283e09646461628b8009a043423bf86ae40cb5a9c85eb7ec0042"
+  ],
+  "dossier_digest": "f079b1cf11922a2d2b1054805cee2d09225ba2aa763ec1ea224460b607267997",
+  "digest_scope": "Trusted project.py digest of exact supplied proposer release directory, including metadata/SUBMISSION.json; not assembled canonical dossier.",
+  "gates": {
+    "novelty": false,
+    "mechanism": false,
+    "utility": false,
+    "contest_originality": false,
+    "headroom": false,
+    "feasibility": false,
+    "direction_integrity": true,
+    "experiment_consensus": false
+  },
+  "gate_reasons": {
+    "novelty": "Task-specific AiDRC mapping and conventional acquisition equivalence unresolved.",
+    "mechanism": "Conditional interaction defined, but useful delta over C unproved; complementary-information control missing.",
+    "utility": "Broad need supported; actual residual economics and useful closure threshold unknown.",
+    "contest_originality": "Relevant coarse/exact prior identified; full winner method/source bridge incomplete.",
+    "headroom": "Zero-sharing regime is conditional; positive work bound is not measured net physical headroom.",
+    "feasibility": "No allocation, legal representative pool, validated selective adapter or frozen learned/planning specification.",
+    "direction_integrity": "Same fixed siblings, context sharing, discovery cost, exact acceptance and closure user; combination0+demand0.",
+    "experiment_consensus": "Distinct P/C sessions but pending/revision_requested, not dual agreement; task DAG repair required."
+  },
+  "direction_penalty_checked": true,
+  "direction_penalties": {
+    "combination_drift": 0,
+    "demand_drift": 0,
+    "total": 0
+  },
+  "experiment_consensus_checked": true,
+  "abandonment_process_checked": true,
+  "source_checks": [
+    {
+      "id": "CLM-B4-001",
+      "source_ids": [],
+      "locator": "Proposal conditional proof paragraphs",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "By definition, a record outside complete influence support is unchanged and belongs to complete Q0=K0; hence a residual shared record must be in both supports. Bound requires one record per slot and valid nonnegative upper costs. It is elementary and not a wall-time theorem.",
+      "required_action": "Require complete negative-query/derived/global dependencies; cold/unknown coverage disables pruning."
+    },
+    {
+      "id": "CLM-B4-002",
+      "source_ids": [],
+      "locator": "Proposer search-log public fixture, reported counts",
+      "verdict": "unresolved",
+      "blocking": false,
+      "reason": "Public model code/counts are supplied but were not independently executed or fully audited in this job. No physical evidence or independent attestation of 1500/28/500 counts.",
+      "required_action": "Treat as author model observations; allocated physical adapter still required. No external code executed."
+    },
+    {
+      "id": "CLM-B4-003",
+      "source_ids": [],
+      "locator": "Proposal shared deterministic selector contract",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "Equal arrays, feasible actions, update rules and ties imply equal deterministic choices. This logical identity does not need or attest the reported numerical replay.",
+      "required_action": "No novelty credit for identical pair policies; no submodular guarantee transferred to correlated physical outcomes."
+    },
+    {
+      "id": "CLM-B4-004/005",
+      "source_ids": [
+        "V-GC"
+      ],
+      "locator": "Pinned FlexGC_main.cpp raw849-875,1516-1525,4021-4062; FlexGC.h45-81; TritonRoute.cpp1089-1110",
+      "verdict": "valid",
+      "blocking": true,
+      "reason": "Selected source confirms range query before predicates, min-area guard and multi-rule dispatch. Inspected header is insufficient to establish arbitrary clean-obligation replay. No whole-engine min-area omission established.",
+      "required_action": "Complete per-entrypoint coverage, output/dependency and selective-replay audit before EXP-102b; preserve full fallback and connectivity/timing."
+    },
+    {
+      "id": "CLM-B4-006/011",
+      "source_ids": [],
+      "locator": "JOB/prompt batch resources; current forecast.json and consent files",
+      "verdict": "valid",
+      "blocking": true,
+      "reason": "No new allocation; physical forecasts null; P pending and C revision_requested. Freeze is not approval.",
+      "required_action": "Keep EXP-100 CLOSED until actual resources/rights and exact-task dual agreement."
+    },
+    {
+      "id": "CLM-B4-007",
+      "source_ids": [
+        "V-WXL",
+        "V-VENDOR"
+      ],
+      "locator": "WXL PDFp9 V-E/VI-B; vendor DRC error debugging section",
+      "verdict": "partially_valid",
+      "blocking": true,
+      "reason": "Repeated/local validation is supported; narrow sibling residual incidence, economic benefit, practitioner threshold and commercial comparison are not measured.",
+      "required_action": "Census after complete adapter; separate calibration/user threshold before outcomes. Charge baseline enumeration, queries, equality, memory, fallback, final reference, extraction/timing and training."
+    },
+    {
+      "id": "CLM-B4-008",
+      "source_ids": [
+        "V-VOI"
+      ],
+      "locator": "Proposal slot-conditioned acquisition; experiment plan arms B-F",
+      "verdict": "unresolved",
+      "blocking": true,
+      "reason": "Concrete conditional interaction preserves anchor but conventional factorized/VOI controller may subsume it. No estimator/configuration, physical result or useful novelty established.",
+      "required_action": "Lock slot/action/planning/ensemble caps; compare C and adapted AiDRC D/E on equal deployable inputs; negative result if C matches F."
+    },
+    {
+      "id": "CLM-B4-009",
+      "source_ids": [
+        "V-WXL",
+        "V-OPENDRC",
+        "V-DRCU",
+        "V-VOI"
+      ],
+      "locator": "WXL V-E/VI-B; OpenDRC IV-C; DrCU PDFp4 III-C.2/p5 continuation; VOI \u00a7\u00a71-2",
+      "verdict": "partially_valid",
+      "blocking": true,
+      "reason": "Incremental checking, invariant reuse/pruning, coarse/exact via queries and priced observation are established. DrCU subsection is III-C.2, correcting proposer IV-C.2. Other cited modern methods/patent not independently audited here; search is not exhaustive.",
+      "required_action": "Complete source-only nearest-method map including AiDRC and conventional acquisition; retain unresolved leads rather than novelty by absence."
+    },
+    {
+      "id": "CLM-B4-010",
+      "source_ids": [
+        "V-CONTEST"
+      ],
+      "locator": "ISPD2019 Evaluation/Final Contest Result; 2025/26 official page titles",
+      "verdict": "partially_valid",
+      "blocking": true,
+      "reason": "2019 initial detailed route and vendor-backed evaluation, 2025 global routing and 2026 buffering/sizing differ. Postcontest DrCU2 is useful prior but not proof of exact winner-binary semantics.",
+      "required_action": "Finish relevant winner-method/source correspondence and rights audit before promotion; no contest or vendor tools executed."
+    }
+  ],
+  "objections": [
+    {
+      "id": "OBJ-1001",
+      "source_ids": [
+        "V-AIDRC"
+      ],
+      "locator": "Publisher-indexed primary \u00a7\u00a72.3,5.5 Table4; DOI10.1145/3769306",
+      "verdict": "valid",
+      "blocking": true,
+      "reason": "Task-specific iterative DRV prediction is relevant. Generic D/E do not instantiate it. Indexed methods do not establish sibling incidence acquisition or duplication; final exact acceptance is a proposed fair adaptation, not attributed to AiDRC.",
+      "required_action": "Map deployable same-checkpoint features, outputs, labels and costs to D/E; retain common exact oracle. Full-method/code comparison remains unresolved."
+    },
+    {
+      "id": "OBJ-1002",
+      "source_ids": [
+        "V-VOI",
+        "V-A01"
+      ],
+      "locator": "IJCAI2005 \u00a71; proposal mechanism step4; own replay below",
+      "verdict": "valid",
+      "blocking": true,
+      "reason": "One-slot myopic terminal-value stopping can miss complementary observations. Exact four-state replay verifies the conditional witness, not physical incidence or failure frequency.",
+      "required_action": "Specify continuation/bundled actions or keep heuristic with explicit complementary and independent controls; equal action/planning budgets for C/F. Blocks complete experimental plan, not the hypothesis or exactness."
+    },
+    {
+      "id": "OBJ-1003",
+      "source_ids": [],
+      "locator": "Proposer tasklist dependency graph, EXP-105 and EXP-106",
+      "verdict": "valid",
+      "blocking": true,
+      "reason": "Graph allows pilot before threshold lock although prose requires freeze before arm evaluation. No execution is alleged.",
+      "required_action": "Add EXP-106 -> EXP-105 or explicitly separate exploratory and confirmatory endpoints; census economics criterion must precede census outcomes."
+    },
+    {
+      "id": "OBJ-901",
+      "source_ids": [],
+      "locator": "Historical challenger SUB-9354.../matching verifier SUB-2ff252...; current proposal K0 definition",
+      "verdict": "partially_valid",
+      "blocking": false,
+      "reason": "Historical objection remains valid for its original revision. Current cold/partial/complete K0 specification repairs the accounting omission; physical economics remain unknown. This is historical response assessment, not a new objection or re-review of historical challenger.",
+      "required_action": "Keep paid K0 construction and residual-common accounting in census."
+    },
+    {
+      "id": "OBJ-902",
+      "source_ids": [],
+      "locator": "Historical matching verifier; current shared pair kernel and arm identity controls",
+      "verdict": "partially_valid",
+      "blocking": false,
+      "reason": "Historical equal-input policy identity is acknowledged and merged. Current distinction is a conditional acquisition representation, not a new optimizer. Actual separation from C remains unresolved.",
+      "required_action": "Merge coincident implementations and compare equal graph/observations/actions/budget."
+    }
+  ],
+  "sources": [
+    {
+      "id": "V-AIDRC",
+      "title": "AiDRC",
+      "url": "https://doi.org/10.1145/3769306",
+      "locator": "Publisher-indexed \u00a7\u00a72.3,5.5 Table4 and publication history",
+      "access_level": "indexed_primary_selected",
+      "retrieved_utc": "2026-10-16",
+      "publication_date": "unknown",
+      "version": null,
+      "limits": "Direct DOI returned403; author PDF open internal error. Search index supplies selected publisher method and table text, not full-method/code access. Online AM2025-09-25; published2026-06-12."
+    },
+    {
+      "id": "V-VOI",
+      "title": "Optimal Nonmyopic Value of Information in Graphical Models",
+      "url": "https://www.ijcai.org/Proceedings/05/Papers/1154.pdf",
+      "locator": "PDFp1 \u00a71, pp1-2 \u00a72; rendered34-49,116-127",
+      "access_level": "selected_full_text",
+      "retrieved_utc": "2026-10-16",
+      "publication_date": "unknown",
+      "version": "IJCAI2005",
+      "limits": "Selected sections only; no implementation execution or reproduced performance."
+    },
+    {
+      "id": "V-WXL",
+      "title": "TritonRoute-WXL",
+      "url": "https://vlsicad.ucsd.edu/Publications/Journals/j136.pdf",
+      "locator": "PDFp9 V-E/VI-B; rendered838-907",
+      "access_level": "selected_full_text",
+      "retrieved_utc": "2026-10-16",
+      "publication_date": "unknown",
+      "version": "DOI10.1109/TCAD.2021.3079268 accepted manuscript",
+      "limits": "Selected sections only; no implementation execution or reproduced performance."
+    },
+    {
+      "id": "V-OPENDRC",
+      "title": "OpenDRC",
+      "url": "https://zyh0911.github.io/assets/pdf/OpenDRC.pdf",
+      "locator": "PDFp3 IV-C; rendered218-286",
+      "access_level": "selected_full_text",
+      "retrieved_utc": "2026-10-16",
+      "publication_date": "unknown",
+      "version": "DAC2023 author PDF",
+      "limits": "Selected sections only; no implementation execution or reproduced performance."
+    },
+    {
+      "id": "V-DRCU",
+      "title": "Dr. CU2.0",
+      "url": "https://chengengjie.github.io/papers/C12-ICCAD19-DrCU2.pdf",
+      "locator": "PDFp4 III-C.2 via pessimistic query, p5 continuation; rendered323 onward",
+      "access_level": "selected_full_text",
+      "retrieved_utc": "2026-10-16",
+      "publication_date": "unknown",
+      "version": "ICCAD2019 author PDF; not exact winner executable",
+      "limits": "Selected sections only; no implementation execution or reproduced performance."
+    },
+    {
+      "id": "V-VENDOR",
+      "title": "Shift left for more efficient block design and chip integration",
+      "url": "https://blogs.sw.siemens.com/calibre/2024/07/26/shift-left-for-more-efficient-block-design-and-chip-integration/",
+      "locator": "DRC error debugging integrated in the design layout environment",
+      "access_level": "selected_full_text",
+      "retrieved_utc": "2026-10-16",
+      "publication_date": "unknown",
+      "version": null,
+      "limits": "Advertised capability only; no controlled comparison, proprietary internals or transferred savings."
+    },
+    {
+      "id": "V-CONTEST",
+      "title": "Official ISPD contest pages",
+      "url": "https://ispd.cc/contests/19/",
+      "locator": "2019 Evaluation/Final Contest Result; https://www.ispd.cc/contests/25/index.html title; https://www.ispd.cc/contests/26/index.html title",
+      "access_level": "selected_full_text",
+      "retrieved_utc": "2026-10-16",
+      "publication_date": "unknown",
+      "version": null,
+      "limits": "HTML stage/evaluation evidence; no exhaustive winner-method or binary audit; no rights/allocation inferred."
+    },
+    {
+      "id": "V-GC",
+      "title": "Pinned OpenROAD source",
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/src/drt/src/gc/FlexGC_main.cpp",
+      "locator": "Raw one-based lines849-875,1516-1525,4021-4062; same prefix gc/FlexGC.h45-81; TritonRoute.cpp1089-1110",
+      "access_level": "selected_full_text",
+      "retrieved_utc": "2026-10-16",
+      "publication_date": "unknown",
+      "version": "b16bda7e82721d10566ff7e2b68f1ff0be9f9e38",
+      "limits": "Selected sections only; no implementation execution or reproduced performance.",
+      "sha256": {
+        "FlexGC_main.cpp": "4770ffdc8f1ac0fd13e69dac1a0b75c5dbb795bf7c043be5ed2b8294cb43a517",
+        "FlexGC.h": "293e895cf573ccba346d5bf35184dac066f00509e327a53e370256078a945e64",
+        "TritonRoute.cpp": "1bb6bef08a426c311d6e1b8fae12db89bfb69be89ff7340f381a95b6ab37f335"
+      }
+    }
+  ],
+  "experiment_consensus": {
+    "tasklist_sha256": "ba693ce303fe5d897d23c1f16c2e14d2eab68e6c8a509088c955fc71fe53ba5d",
+    "proposer_session": "24989b4f-9381-471f-a32f-a8d8f7f685a1",
+    "challenger_session": "ee82dfaa-9410-4c12-9e7b-cc1dde065bf4",
+    "proposer_decision": "pending",
+    "challenger_decision": "revision_requested",
+    "matching_agreement": false,
+    "readiness": "EXP-100 CLOSED; source-only repairs allowed; all implementation/census/training/full-flow tasks conditional."
+  },
+  "abandonment": {
+    "matching_consents": false,
+    "grounds_established": false
+  },
+  "historical_scope": "OBJ-901/902 are literal historical references in current challenger, assessed for specification response only using current proposal and released predecessor verifier. Predecessor challenger directory enumerated, not opened; no new adjudication or inherited approval. Other predecessor claims remain historical context. EDA-0008 originals not read.",
+  "analytical_checks": {
+    "id": "V-A01",
+    "code": "from itertools import product\nfrom fractions import Fraction as F\nstates=list(product((0,1),repeat=2))\ndef terminal(obs):\n    groups={}\n    for s in states:\n        groups.setdefault(tuple(s[i] for i in obs),[]).append(s[0]^s[1])\n    return sum((F(max(sum(v),len(v)-sum(v)),4) for v in groups.values()),F(0))\nfor obs in [(),(0,),(1,),(0,1)]:\n    v=terminal(obs)\n    print(str(obs)+\": terminal=\"+str(v)+\", net=\"+str(v-F(len(obs),10)))\nassert terminal(())==terminal((0,))==terminal((1,))==F(1,2)\nassert terminal((0,1))-F(2,10)==F(4,5)\nprint(\"myopic_stops=True; bundle_improvement=3/10\")\n",
+    "stdout": "(): terminal=1/2, net=1/2\n(0,): terminal=1/2, net=2/5\n(1,): terminal=1/2, net=2/5\n(0, 1): terminal=1, net=4/5\nmyopic_stops=True; bundle_improvement=3/10\n",
+    "code_sha256": "01dc4726af4172156a822c5f6294dc2c297aab31d4ac990ffdef7bf795ae0ea8",
+    "stdout_sha256": "577785c599cbbf6ff072753d4f4cdedc8e975218f3cf208ff7b040a27f132431",
+    "scope": "Exact own four-state model; no physical geometry, measured incidence, trained predictor or DRC correctness test."
+  },
+  "search_log": {
+    "date_utc": "2026-10-16",
+    "queries": [
+      "\"AiDRC\" \"2.3\"",
+      "\"AiDRC\" previous iteration recall 3769306"
+    ],
+    "expansions": [
+      "Task-specific learned checking: publisher indexed AiDRC and author PDF follow-up.",
+      "Classical conditional observation, geometric reuse and contest-stage primary reopening."
+    ],
+    "stop": "Bounded review; not exhausted search or proof of absence. No full citation-neighborhood/winner-code audit.",
+    "failed_access": [
+      "AiDRC DOI403",
+      "AiDRC author PDF internal error"
+    ]
+  },
+  "limitations": [
+    "Unblinded released evidence review including forecast.json; no blindness claim.",
+    "Logical distinct-session/manifests checked, not backend model attestation or OS isolation proof.",
+    "Proposer own numerical counts not independently replayed. Only own V-A01 executed.",
+    "No representative physical result, complete dependency audit, empirical cost, exhaustive novelty search or independent protocol clearance."
+  ],
+  "next_action": "revise",
+  "reversal_conditions": [
+    "Add fair AiDRC mapping and complementary-acquisition controls; fix endpoint/census order and resource caps.",
+    "Complete selective oracle/output/dependency specification, legal representative data and net economics before learning.",
+    "Actual resource allocation, frozen procedures and independently matching P/C exact-task consent required for pilot."
+  ],
+  "validation": {
+    "input_manifests": "Both current releases passed trusted role_submission verify; same input commit, distinct P/C/V logical sessions; role packet hashes differ as intended.",
+    "full_repository_validate": "Not run: standalone packet lacks complete repository; coordinator publication responsibility per exact prompt.",
+    "local_checks": "Trusted manifests/digest, task SHA, JSON parse, own V-A01 and trusted freeze."
+  }
+}

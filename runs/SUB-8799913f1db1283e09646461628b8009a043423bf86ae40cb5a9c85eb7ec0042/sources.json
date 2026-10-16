@@ -1,0 +1,156 @@
+[
+  {
+    "id": "C-S01",
+    "title": "TritonRoute-WXL: The Open Source Router with Integrated DRC Engine",
+    "url": "https://vlsicad.ucsd.edu/Publications/Journals/j136.pdf",
+    "publication_date": "2022",
+    "source_type": "author_paper",
+    "access_level": "full",
+    "locator": "PDF p9 V-E and VI-B; rendered838-893",
+    "limitations": "Modified-net checking and queue feedback; no sibling economics or reproduced performance.",
+    "retrieved_utc": "2026-10-16T04:18:05.624419+00:00",
+    "supported_claim_ids": [
+      "COV-C-S01"
+    ]
+  },
+  {
+    "id": "C-S02",
+    "title": "OpenDRC: An Efficient Open-Source Design Rule Checking Engine with Hierarchical GPU Acceleration",
+    "url": "https://zyh0911.github.io/assets/pdf/OpenDRC.pdf",
+    "publication_date": "2023",
+    "source_type": "author_paper",
+    "access_level": "full",
+    "locator": "PDF p3 IV-C, rendered218-286",
+    "limitations": "Geometric reuse/pruning under invariants; no complete dynamic sibling cache audit.",
+    "retrieved_utc": "2026-10-16T04:18:05.624419+00:00",
+    "supported_claim_ids": [
+      "COV-C-S02"
+    ]
+  },
+  {
+    "id": "C-S03",
+    "title": "Dr. CU 2.0",
+    "url": "https://chengengjie.github.io/papers/C12-ICCAD19-DrCU2.pdf",
+    "publication_date": "2019",
+    "source_type": "author_paper",
+    "access_level": "full",
+    "locator": "PDF p4 III-C.2 and p5 continuation, rendered323-380",
+    "limitations": "Pessimistic merged LUT then exact conflict verification; not exact contest binary. Proposer called section IV-C.2; retrieved PDF labels this III-C.2.",
+    "retrieved_utc": "2026-10-16T04:18:05.624419+00:00",
+    "supported_claim_ids": [
+      "COV-C-S03"
+    ]
+  },
+  {
+    "id": "C-S04",
+    "title": "OpenROAD pinned FlexGC and checkDRC",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/src/drt/src/gc/FlexGC_main.cpp",
+    "publication_date": "unknown",
+    "source_type": "pinned_source_code",
+    "access_level": "full",
+    "locator": "Raw849-875,1516-1525,4021-4062; companion FlexGC.h45-81 and TritonRoute.cpp1089-1110",
+    "limitations": "Selected function audit only; companion paths/hashes in search-log; no execution or all-rule proof.",
+    "retrieved_utc": "2026-10-16T04:18:05.624419+00:00",
+    "supported_claim_ids": [
+      "COV-C-S04"
+    ]
+  },
+  {
+    "id": "C-S05",
+    "title": "AiDRC: Accelerating Detailed Routing by AI-Driven Design Rule Violation Prediction and Checking",
+    "url": "https://doi.org/10.1145/3769306",
+    "publication_date": "2025-09-25 online AM;2026-06-12 published",
+    "source_type": "publisher_paper",
+    "access_level": "partial",
+    "locator": "Publisher-indexed \u00a7\u00a72.3,5.5 Table4 and publication history",
+    "limitations": "Primary indexed method passages available; direct DOI/full-page and author PDF opening failed. No full-method/code inspection; no speedups transferred.",
+    "retrieved_utc": "2026-10-16T04:18:05.624419+00:00",
+    "supported_claim_ids": [
+      "OBJ-1001"
+    ]
+  },
+  {
+    "id": "C-S06",
+    "title": "Optimal Nonmyopic Value of Information in Graphical Models: Efficient Algorithms and Theoretical Limits",
+    "url": "https://www.ijcai.org/Proceedings/05/Papers/1154.pdf",
+    "publication_date": "2005",
+    "source_type": "conference_paper",
+    "access_level": "full",
+    "locator": "PDF p1 \u00a71 rendered34-49; p6 \u00a78",
+    "limitations": "Myopic/nonmyopic distinction only; no graphical-model complexity/guarantee transferred to physical DRC.",
+    "retrieved_utc": "2026-10-16T04:18:05.624419+00:00",
+    "supported_claim_ids": [
+      "OBJ-1002"
+    ]
+  },
+  {
+    "id": "C-S07",
+    "title": "Pandora\u2019s AI Model Routing Box: Efficient Allocation with Costly Value Estimation",
+    "url": "https://arxiv.org/html/2608.20316v1",
+    "publication_date": "2026-08-20",
+    "source_type": "author_preprint",
+    "access_level": "full",
+    "locator": "Section3 Gaussian signal model and correlated-values extension rendered173-177",
+    "limitations": "Selected methods inspected; probabilistic model routing not exact physical checking; no code/performance reproduction.",
+    "retrieved_utc": "2026-10-16T04:18:05.624419+00:00",
+    "supported_claim_ids": [
+      "COV-C-S07"
+    ]
+  },
+  {
+    "id": "C-S08",
+    "title": "ISPD2019 Initial Detailed Routing Contest",
+    "url": "https://ispd.cc/contests/19/",
+    "publication_date": "2019",
+    "source_type": "official_contest",
+    "access_level": "full",
+    "locator": "Abstract rendered53-62; Evaluation100-110; FAQ12 rendered299-311",
+    "limitations": "Initial-routing scope and Innovus evaluation; no right to execute vendor tools assumed. Result PDF unavailable.",
+    "retrieved_utc": "2026-10-16T04:18:05.624419+00:00",
+    "supported_claim_ids": [
+      "COV-C-S08"
+    ]
+  },
+  {
+    "id": "C-S09",
+    "title": "ISPD current contest archive and2025/26 pages",
+    "url": "https://ispd.cc/ispd2027/index.php?page=contests",
+    "publication_date": "2026 retrieval; publication unknown",
+    "source_type": "official_contest",
+    "access_level": "full",
+    "locator": "Previous contests list; https://www.ispd.cc/contests/25/index.html title/winners; https://www.ispd.cc/contests/26/index.html title/winners",
+    "limitations": "Stage/title audit only; no exhaustive winner method or2027 nonexistence claim.",
+    "retrieved_utc": "2026-10-16T04:18:05.624419+00:00",
+    "supported_claim_ids": [
+      "COV-C-S09"
+    ]
+  },
+  {
+    "id": "C-S10",
+    "title": "Shift left for more efficient block design and chip integration",
+    "url": "https://blogs.sw.siemens.com/calibre/2024/07/26/shift-left-for-more-efficient-block-design-and-chip-integration/",
+    "publication_date": "2024-07-26",
+    "source_type": "official_vendor_description",
+    "access_level": "full",
+    "locator": "DRC error debugging integrated in the design layout environment",
+    "limitations": "Advertised regional checks support broad demand only; closed implementation and comparative measured economics unknown.",
+    "retrieved_utc": "2026-10-16T04:18:05.624419+00:00",
+    "supported_claim_ids": [
+      "COV-C-S10"
+    ]
+  },
+  {
+    "id": "C-S11",
+    "title": "Dr.CU-FastPass public README",
+    "url": "https://github.com/cuhk-eda/dr-cu-fastpass",
+    "publication_date": "unknown",
+    "source_type": "repository_documentation",
+    "access_level": "full",
+    "locator": "README introduction rendered204-215; dependencies228-236",
+    "limitations": "Dynamic README, unpinned; stated2018 rule support and linked2023/24 papers; no executable/source audit or transferred benchmark result.",
+    "retrieved_utc": "2026-10-16T04:18:05.624419+00:00",
+    "supported_claim_ids": [
+      "COV-C-S11"
+    ]
+  }
+]

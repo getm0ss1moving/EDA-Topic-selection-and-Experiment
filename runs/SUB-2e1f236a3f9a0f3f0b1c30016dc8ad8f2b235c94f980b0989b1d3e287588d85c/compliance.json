@@ -1,0 +1,163 @@
+{
+  "schema": 1,
+  "role": "proposer",
+  "actor_id": "ChatGPT-P04-PHYSICAL-B04-EDA-0009",
+  "session_id": "24989b4f-9381-471f-a32f-a8d8f7f685a1",
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "packet_sha256": "d1325387dd19dfe8d7766889b646835828c2ba6e6003bc803cb1c06d036f27de",
+  "job_id": "b665751a-26ed-454d-aa29-9c830d0646db",
+  "read_releases": [
+    "SUB-aeaba01af9a5b6128eec0673cea74b71dc559d2ba9bf7da096ebfaff8bdce21a",
+    "SUB-9354b850df73175a5f4764f21dc5b5e8d9204f7741e9c50dce06953c34e9f984",
+    "SUB-2ff252d0046e7fc9825c2748ba4109878fee23295c7c2855ffd64435aa2a8f06"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0,
+    "checkout_access_explanation": "Initial supplied environment cwd names the project checkout, but every filesystem command used the explicit assigned job directory. Supplied user instruction text was visible; no checkout file/Git state was read. This is a self-report, not backend/OS attestation."
+  },
+  "rules": {
+    "inputs": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "prompt.txt",
+        "search-log.md Exact job/run record"
+      ],
+      "limits": "Only listed released predecessor science was read; long combined output of predecessor tasklist was truncated and is not claimed fully audited. This ledger does not verify the source snapshot or unseen inputs."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md Exact job/run record",
+        "responses.md released-input bindings"
+      ],
+      "limits": "Shared OS is not adversarial confinement. No private material or role messaging is disclosed; self-report cannot prove absent undisclosed actions or attest backend model identity."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md Exact job/run record",
+        "SUBMISSION.json file manifest produced by trusted freeze"
+      ],
+      "limits": "Own scratch and allowlisted release files only, then trusted submissions and protocol result paths. Manifest integrity is not scientific verification."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "sources.json",
+        "search-log.md Scope and searches / Access and source operations"
+      ],
+      "limits": "Selected methods/source functions, not exhaustive audits. Primary patent/MDPI access failed; secondary metadata is not primary proof. Search budget exhausted; no saturation claim."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "proposal.md Claim and gate ledger",
+        "forecast.json",
+        "search-log.md Public analytical replay"
+      ],
+      "limits": "Own 1D fixtures and elementary identities are model-relative observations. No physical speedup, all-rule engine coverage, universal novelty, user threshold or independent approval is claimed."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "experiment-consent.json",
+        "tasklist.md EXP-100"
+      ],
+      "limits": "Only this proposer pending block is authored. No inherited signature, self-containing agreement, challenger vote or abandonment consent is fabricated."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md Exact job/run record",
+        "tasklist.md EXP-100/101",
+        "policy/docs/INNOVATION-BATCH-0004.md Resources"
+      ],
+      "limits": "No EDA/build/full-flow/training/remote/paid execution. Own tiny Python analysis and source retrieval only. Future allocations null and physical phases CLOSED."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "direction-control.json",
+        "responses.md",
+        "proposal.md Preserved problem and demand"
+      ],
+      "limits": "Same frozen anchor is copied from predecessor; specifying charged incidence acquisition is self-assessed zero drift, not independent merit confirmation."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "workflow.json",
+        "search-log.md Validation and freeze procedure",
+        "result.json after successful freeze"
+      ],
+      "limits": "Role self-freezes only. Coordinator owns transport/PR/repository checks; no PR creation, merge or approval performed here."
+    }
+  },
+  "operations": [
+    {
+      "stage": "intake",
+      "files": [
+        "JOB.json",
+        "prompt.txt"
+      ],
+      "detail": "Exact first filesystem reads, explicit job cwd."
+    },
+    {
+      "stage": "policy",
+      "files": [
+        "policy/docs/CODEX-AUTOMATION.md",
+        "policy/docs/ROLE-COMPLIANCE.md",
+        "policy/docs/INNOVATION-BATCH-0004.md",
+        "policy/docs/CHARTER.md",
+        "policy/docs/WORKFLOW.md",
+        "policy/docs/EVIDENCE.md",
+        "policy/docs/ISOLATION.md",
+        "policy/docs/INNOVATION-STRATEGY.md",
+        "policy/harness/PROPOSER.md",
+        "policy/docs/SELF-SUBMISSION.md"
+      ],
+      "detail": "Common frozen policy and only assigned role harness; no checkout/foreign harness discovery."
+    },
+    {
+      "stage": "released_inputs",
+      "release_ids": [
+        "SUB-aeaba01af9a5b6128eec0673cea74b71dc559d2ba9bf7da096ebfaff8bdce21a",
+        "SUB-9354b850df73175a5f4764f21dc5b5e8d9204f7741e9c50dce06953c34e9f984",
+        "SUB-2ff252d0046e7fc9825c2748ba4109878fee23295c7c2855ffd64435aa2a8f06"
+      ],
+      "detail": "Actual read filenames listed in search-log.md, plus shared/predecessor.json; all current challenge bytes supplied with matching adjudication."
+    },
+    {
+      "stage": "research",
+      "reference": "search-log.md Q01-Q19; sources.json B4-S01 through B4-S19 including B4-S07a",
+      "detail": "Public search/direct source reads; pinned source hashes and honest failed opens retained."
+    },
+    {
+      "stage": "analytical",
+      "reference": "search-log.md REPLAY-CODE-BEGIN / exact stdout; tasklist.md EXP-101",
+      "detail": "Own stdlib 1D model, 1500 pair checks and 500 common-kernel identities. No physical EDA run."
+    },
+    {
+      "stage": "write",
+      "paths": [
+        "release/",
+        "scratch/"
+      ],
+      "detail": "Own text/metadata and tiny replay; downloaded source stays in own scratch, absent public release."
+    },
+    {
+      "stage": "validation_submission",
+      "reference": "search-log.md Validation and freeze procedure; protocol result.json",
+      "detail": "Parse files, replay exact public code/stdout, validate nine-rule ledger, use trusted role_submission.py freeze and verify; full repository validation reserved for coordinator."
+    }
+  ],
+  "incidents": [],
+  "observability": "Self-authored public activity ledger, not a complete tool trace, OS/backend attestation, independent protocol audit, or evidence of absent undisclosed actions. Released predecessor ledgers are historical self-reports and do not confer approval on this revision."
+}

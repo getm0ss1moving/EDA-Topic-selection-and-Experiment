@@ -1,0 +1,116 @@
+{
+  "schema": 1,
+  "role": "verifier",
+  "actor_id": "ChatGPT-V04-PHYSICAL-B04-EDA-0009",
+  "session_id": "528a3cf1-ef60-44dd-8bc2-a6c1c6d4d5ba",
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "packet_sha256": "7470c82b696d066e5875843a07235c477dae9fa93ac903e9ed83bd7a14644986",
+  "job_id": "32fa1fec-2628-4de0-abbb-0084fbdd6a99",
+  "read_releases": [
+    "SUB-2e1f236a3f9a0f3f0b1c30016dc8ad8f2b235c94f980b0989b1d3e287588d85c",
+    "SUB-8799913f1db1283e09646461628b8009a043423bf86ae40cb5a9c85eb7ec0042",
+    "SUB-2ff252d0046e7fc9825c2748ba4109878fee23295c7c2855ffd64435aa2a8f06",
+    "SUB-aeaba01af9a5b6128eec0673cea74b71dc559d2ba9bf7da096ebfaff8bdce21a"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0
+  },
+  "rules": {
+    "inputs": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json and prompt.txt first read; assigned common policy and only VERIFIER harness",
+        "verification.json: source_checks, sources, objections, search_log, validation",
+        "release/verification.md; release/verification.json; workflow.json; own V-A01"
+      ],
+      "limits": "Self-authored ledger, not proof of absent unseen actions; exact role sessions are logical identities. No new allocation or fabricated consent. No scientific approval from structural freeze."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json and prompt.txt first read; assigned common policy and only VERIFIER harness",
+        "verification.json: source_checks, sources, objections, search_log, validation",
+        "release/verification.md; release/verification.json; workflow.json; own V-A01"
+      ],
+      "limits": "Self-authored ledger, not proof of absent unseen actions; exact role sessions are logical identities. No new allocation or fabricated consent. No scientific approval from structural freeze."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json and prompt.txt first read; assigned common policy and only VERIFIER harness",
+        "verification.json: source_checks, sources, objections, search_log, validation",
+        "release/verification.md; release/verification.json; workflow.json; own V-A01"
+      ],
+      "limits": "Self-authored ledger, not proof of absent unseen actions; exact role sessions are logical identities. No new allocation or fabricated consent. No scientific approval from structural freeze."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json and prompt.txt first read; assigned common policy and only VERIFIER harness",
+        "verification.json: source_checks, sources, objections, search_log, validation",
+        "release/verification.md; release/verification.json; workflow.json; own V-A01"
+      ],
+      "limits": "Self-authored ledger, not proof of absent unseen actions; exact role sessions are logical identities. No new allocation or fabricated consent. No scientific approval from structural freeze."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json and prompt.txt first read; assigned common policy and only VERIFIER harness",
+        "verification.json: source_checks, sources, objections, search_log, validation",
+        "release/verification.md; release/verification.json; workflow.json; own V-A01"
+      ],
+      "limits": "Self-authored ledger, not proof of absent unseen actions; exact role sessions are logical identities. No new allocation or fabricated consent. No scientific approval from structural freeze."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json and prompt.txt first read; assigned common policy and only VERIFIER harness",
+        "verification.json: source_checks, sources, objections, search_log, validation",
+        "release/verification.md; release/verification.json; workflow.json; own V-A01"
+      ],
+      "limits": "Self-authored ledger, not proof of absent unseen actions; exact role sessions are logical identities. No new allocation or fabricated consent. No scientific approval from structural freeze."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json and prompt.txt first read; assigned common policy and only VERIFIER harness",
+        "verification.json: source_checks, sources, objections, search_log, validation",
+        "release/verification.md; release/verification.json; workflow.json; own V-A01"
+      ],
+      "limits": "Self-authored ledger, not proof of absent unseen actions; exact role sessions are logical identities. No new allocation or fabricated consent. No scientific approval from structural freeze."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json and prompt.txt first read; assigned common policy and only VERIFIER harness",
+        "verification.json: source_checks, sources, objections, search_log, validation",
+        "release/verification.md; release/verification.json; workflow.json; own V-A01"
+      ],
+      "limits": "Self-authored ledger, not proof of absent unseen actions; exact role sessions are logical identities. No new allocation or fabricated consent. No scientific approval from structural freeze."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json and prompt.txt first read; assigned common policy and only VERIFIER harness",
+        "verification.json: source_checks, sources, objections, search_log, validation",
+        "release/verification.md; release/verification.json; workflow.json; own V-A01"
+      ],
+      "limits": "Self-authored ledger, not proof of absent unseen actions; exact role sessions are logical identities. No new allocation or fabricated consent. No scientific approval from structural freeze."
+    }
+  },
+  "operations": [
+    "Read exact JOB/prompt first, then policy-only enumeration and required common policy/own harness. Initial combined policy output truncated; automation/compliance/isolation and harness reopened.",
+    "Read current released proposal/challenge and specified predecessor verifier/context; predecessor challenger only filename enumeration, no original content read. No checkout/home/private/session/memory access or agent-tool call.",
+    "Independent web primary retrieval/search and read-only urllib raw-source inspection; no downloaded source executed. Access failures preserved in verification.json.",
+    "Trusted verify on two current manifests, trusted project.py digest, task-list hash; own tiny V-A01 executed through python3 -c.",
+    "Write make_release.py as own job-local assembly helper; release contains only role-owned allowlisted files. Trusted self-freeze and root result.json follow."
+  ],
+  "incidents": [],
+  "observability": "Self-authored public activity ledger, not a complete tool trace or evidence of absent undisclosed actions."
+}
