@@ -1,0 +1,3 @@
+# Independent estimate
+
+Unblinded source assessment; proposal and null-valued forecast.json read. No model fitting, numerical analytical test, EDA build, routing, training or benchmark execution in this job. The proposer four-bit results are not independently reproduced here. Physical headroom, success probability and confidence interval remain unknown. Candidate benefit can be negative after complete-context discovery, cancellation granularity and final validation costs. Conditional repeat-work support bounds do not imply positive wall-time headroom. Reversal requires representative locked-family census and same-information controlled downstream evidence, under actual allocation and matching consent.

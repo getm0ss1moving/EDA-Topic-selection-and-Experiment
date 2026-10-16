@@ -1,0 +1,10 @@
+{
+  "role": "verifier",
+  "reviewed_proposer_release": "SUB-2966cec6a631f48b998ddb78b67aba187e072ad1d9b4d3498aeebdb879a9f0cc",
+  "adjudicated_challenger_releases": [
+    "SUB-83d9a23ab90f7ca974796e8ed39617078e1ee76f0abcab0f0746f6bab6c2278f"
+  ],
+  "next_action": "park",
+  "decision": "park",
+  "batch_round": 3
+}

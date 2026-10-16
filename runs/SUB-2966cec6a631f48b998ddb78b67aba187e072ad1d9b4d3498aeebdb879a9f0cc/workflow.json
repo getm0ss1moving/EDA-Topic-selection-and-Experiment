@@ -1,0 +1,21 @@
+{
+  "role": "proposer",
+  "topic": "EDA-0009",
+  "batch_round": 3,
+  "revision": "B4-R3",
+  "assessment": "revise",
+  "proposed_next_action": "park_if_unconverged_after_current_cycle",
+  "responds_to_verifier_release": "SUB-b69a8b5d5ff701c8a70bb5122fcfe70e9cf376634d0f50de420109f7e3b8d8a0",
+  "responds_to_adjudicated_challenger_release": "SUB-3090026e572d0cecae72323cca434d6748d78424acd61699d6ecfb2e8aad0f6b",
+  "previous_proposer_release": "SUB-988d5b734de75037f4ca472fe6c9799a673f9538cd7b4053da26a004347406f8",
+  "tasklist_sha256": "fdf7b942d287db89fcf5ca528942d64cc41b5f715abbd278466b33c44874ed5c",
+  "experiment_readiness": "not_ready",
+  "actual_resources": null,
+  "consent_position": "pending; no agreement or joint abandonment",
+  "new_physical_measurements": false,
+  "observed_analytical_checks": [
+    "R3-A01",
+    "R3-SOURCE"
+  ],
+  "interruption_scope": "Coordinator reported a screening error on the prior turn of the same job; exact unseen activity/exposure is unknown; no private log inspected."
+}

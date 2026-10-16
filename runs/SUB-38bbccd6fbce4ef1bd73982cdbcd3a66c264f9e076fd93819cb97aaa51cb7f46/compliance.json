@@ -1,0 +1,170 @@
+{
+  "schema": 1,
+  "role": "verifier",
+  "actor_id": "ChatGPT-B04-PROTOCOL-D04-EDA-0009-R3",
+  "session_id": "54292b41-24b9-4994-b9e9-d603ca9c5ae2",
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "packet_sha256": "85919b4e3685966fb36bd01471c8a6063471be016ea5b1118ee8c05510a2b12a",
+  "job_id": "10bdf9de-98b1-4210-ac89-f0d868ebb17f",
+  "read_releases": [
+    "SUB-83d9a23ab90f7ca974796e8ed39617078e1ee76f0abcab0f0746f6bab6c2278f",
+    "SUB-2966cec6a631f48b998ddb78b67aba187e072ad1d9b4d3498aeebdb879a9f0cc",
+    "SUB-047b42329a35771ca6788e18cc97583dedaf36526c13f12defa839e36c8b1ed0"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0
+  },
+  "rules": {
+    "inputs": {
+      "status": "unknown",
+      "evidence": [
+        "verification.md",
+        "verification.json",
+        "JOB.json"
+      ],
+      "limits": "Observed continuation only; preceding platform interruption scope unknown. Self-ledger is not a complete tool trace."
+    },
+    "isolation": {
+      "status": "unknown",
+      "evidence": [
+        "verification.md",
+        "verification.json",
+        "JOB.json"
+      ],
+      "limits": "Observed continuation only; preceding platform interruption scope unknown. Self-ledger is not a complete tool trace."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.md",
+        "verification.json",
+        "JOB.json"
+      ],
+      "limits": "Observed continuation only; preceding platform interruption scope unknown. Self-ledger is not a complete tool trace."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.md",
+        "verification.json",
+        "JOB.json"
+      ],
+      "limits": "Observed continuation only; preceding platform interruption scope unknown. Self-ledger is not a complete tool trace."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.md",
+        "verification.json",
+        "JOB.json"
+      ],
+      "limits": "Observed continuation only; preceding platform interruption scope unknown. Self-ledger is not a complete tool trace."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.md",
+        "verification.json",
+        "JOB.json"
+      ],
+      "limits": "Observed continuation only; preceding platform interruption scope unknown. Self-ledger is not a complete tool trace."
+    },
+    "resources": {
+      "status": "unknown",
+      "evidence": [
+        "verification.md",
+        "verification.json",
+        "JOB.json"
+      ],
+      "limits": "Observed continuation only; preceding platform interruption scope unknown. Self-ledger is not a complete tool trace."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.md",
+        "verification.json",
+        "JOB.json"
+      ],
+      "limits": "Observed continuation only; preceding platform interruption scope unknown. Self-ledger is not a complete tool trace."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.md",
+        "verification.json",
+        "JOB.json"
+      ],
+      "limits": "Observed continuation only; preceding platform interruption scope unknown. Self-ledger is not a complete tool trace."
+    }
+  },
+  "operations": [
+    {
+      "action": "initial_read",
+      "references": [
+        "JOB.json",
+        "prompt.txt"
+      ]
+    },
+    {
+      "action": "policy_read",
+      "references": [
+        "policy/docs/CHARTER.md",
+        "policy/docs/WORKFLOW.md",
+        "policy/docs/EVIDENCE.md",
+        "policy/docs/ISOLATION.md",
+        "policy/docs/CODEX-AUTOMATION.md",
+        "policy/docs/ROLE-COMPLIANCE.md",
+        "policy/docs/SELF-SUBMISSION.md",
+        "policy/docs/INNOVATION-BATCH-0004.md",
+        "policy/docs/INNOVATION-STRATEGY.md",
+        "policy/harness/VERIFIER.md",
+        "policy/templates/topic/compliance.json",
+        "policy/scripts/role_submission.py"
+      ]
+    },
+    {
+      "action": "released_read",
+      "references": [
+        "SUB-83d9a23ab90f7ca974796e8ed39617078e1ee76f0abcab0f0746f6bab6c2278f",
+        "SUB-2966cec6a631f48b998ddb78b67aba187e072ad1d9b4d3498aeebdb879a9f0cc",
+        "SUB-047b42329a35771ca6788e18cc97583dedaf36526c13f12defa839e36c8b1ed0",
+        "shared/job-descriptors/"
+      ]
+    },
+    {
+      "action": "own_metadata_check",
+      "references": [
+        "verification.md#Exact own reproducible metadata check",
+        "audit_check.py",
+        "audit_check.stdout"
+      ]
+    },
+    {
+      "action": "author_write_and_freeze_verify",
+      "references": [
+        "write_audit.py",
+        "release/",
+        "submissions/",
+        "result.json"
+      ]
+    }
+  ],
+  "incidents": [
+    {
+      "id": "OBS-AUDITOR-RETRY",
+      "classification": "unknown_interruption_scope",
+      "evidence": [
+        "Coordinator retry assignment",
+        "verification.md#Limits"
+      ],
+      "description": "Coordinator reports previous same-job turn ended in platform screening error. This observed continuation began with exact JOB/prompt. No private logs or transcript inspected; prior activity scope unknown. No earlier disclosure deleted. Counts refer to observed continuation only."
+    }
+  ],
+  "observability": "Self-authored public activity ledger, not a complete tool trace or evidence of absent undisclosed actions."
+}

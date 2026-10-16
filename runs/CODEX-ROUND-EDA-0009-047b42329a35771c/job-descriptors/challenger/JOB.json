@@ -1,0 +1,40 @@
+{
+  "actor_id": "ChatGPT-C04-PHYSICAL-B04-EDA-0009-REPLACEMENT-1-ee3d1e1c",
+  "batch_brief": "docs/INNOVATION-BATCH-0004.md",
+  "batch_round": 3,
+  "batch_round_limit": 4,
+  "compliance_required": true,
+  "domain": "D04",
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "job_id": "54b0968a-4368-49c4-8730-51f21adda15a",
+  "models": {
+    "challenger": {
+      "effort": "low",
+      "model": "gpt-6-astra"
+    },
+    "proposer": {
+      "effort": "high",
+      "model": "gpt-6.1-sol"
+    },
+    "verifier": {
+      "effort": "low",
+      "model": "gpt-6.1-sol"
+    }
+  },
+  "packet_sha256": "7388ffba922f42c14f138e2e23ff1969b83be0f5a238f1f423abf1004bc6ebb4",
+  "phase": "research",
+  "previous_proposal_release": "SUB-2966cec6a631f48b998ddb78b67aba187e072ad1d9b4d3498aeebdb879a9f0cc",
+  "readiness": "logical seat registered; actual host model is recorded by the execution backend",
+  "released_inputs": [
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-C04-PHYSICAL-B04-EDA-0009-REPLACEMENT-1-ee3d1e1c/jobs/54b0968a-4368-49c4-8730-51f21adda15a/shared/predecessor/SUB-aeaba01af9a5b6128eec0673cea74b71dc559d2ba9bf7da096ebfaff8bdce21a",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-C04-PHYSICAL-B04-EDA-0009-REPLACEMENT-1-ee3d1e1c/jobs/54b0968a-4368-49c4-8730-51f21adda15a/shared/predecessor/SUB-2ff252d0046e7fc9825c2748ba4109878fee23295c7c2855ffd64435aa2a8f06",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-C04-PHYSICAL-B04-EDA-0009-REPLACEMENT-1-ee3d1e1c/jobs/54b0968a-4368-49c4-8730-51f21adda15a/shared/predecessor.json",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-C04-PHYSICAL-B04-EDA-0009-REPLACEMENT-1-ee3d1e1c/jobs/54b0968a-4368-49c4-8730-51f21adda15a/shared/SUB-2966cec6a631f48b998ddb78b67aba187e072ad1d9b4d3498aeebdb879a9f0cc",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-C04-PHYSICAL-B04-EDA-0009-REPLACEMENT-1-ee3d1e1c/jobs/54b0968a-4368-49c4-8730-51f21adda15a/shared/SUB-b69a8b5d5ff701c8a70bb5122fcfe70e9cf376634d0f50de420109f7e3b8d8a0",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-C04-PHYSICAL-B04-EDA-0009-REPLACEMENT-1-ee3d1e1c/jobs/54b0968a-4368-49c4-8730-51f21adda15a/shared/SUB-988d5b734de75037f4ca472fe6c9799a673f9538cd7b4053da26a004347406f8"
+  ],
+  "role": "challenger",
+  "round": 2,
+  "session_id": "1f323593-6e87-4aef-b624-b0c134c28632",
+  "topic": "EDA-0009"
+}

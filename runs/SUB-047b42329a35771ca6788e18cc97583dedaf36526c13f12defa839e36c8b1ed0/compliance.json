@@ -1,0 +1,117 @@
+{
+  "schema": 1,
+  "role": "verifier",
+  "actor_id": "ChatGPT-V04-PHYSICAL-B04-EDA-0009-REPLACEMENT-1-9833ceb3",
+  "session_id": "802c4f6c-18f4-4dc0-adf8-9deb15979b2c",
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "packet_sha256": "6b2ccb7eb7eb5483b6bbbea003e63bd977fdc0f37ba07f5d306a0516990323df",
+  "job_id": "b5b572dd-d079-4499-a8e8-231959a6c602",
+  "read_releases": [
+    "SUB-2966cec6a631f48b998ddb78b67aba187e072ad1d9b4d3498aeebdb879a9f0cc",
+    "SUB-83d9a23ab90f7ca974796e8ed39617078e1ee76f0abcab0f0746f6bab6c2278f",
+    "SUB-988d5b734de75037f4ca472fe6c9799a673f9538cd7b4053da26a004347406f8",
+    "SUB-7e97f68607ffccc8e48853bfd2247e683998c8b4353be4e36eca19d4f14fd154",
+    "SUB-55cc0847368e9b869318025e7199ab71f69c0a03de9933db4418a279696fd97c"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0
+  },
+  "rules": {
+    "inputs": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.md",
+        "verification.json"
+      ],
+      "limits": "Self-authored observable activity only; not proof of absent unseen actions."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.md",
+        "verification.json"
+      ],
+      "limits": "Self-authored observable activity only; not proof of absent unseen actions."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.md",
+        "verification.json"
+      ],
+      "limits": "Self-authored observable activity only; not proof of absent unseen actions."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.md",
+        "verification.json"
+      ],
+      "limits": "Self-authored observable activity only; not proof of absent unseen actions."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.md",
+        "verification.json"
+      ],
+      "limits": "Self-authored observable activity only; not proof of absent unseen actions."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.md",
+        "verification.json"
+      ],
+      "limits": "Self-authored observable activity only; not proof of absent unseen actions."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.md",
+        "verification.json"
+      ],
+      "limits": "Self-authored observable activity only; not proof of absent unseen actions."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.md",
+        "verification.json"
+      ],
+      "limits": "Self-authored observable activity only; not proof of absent unseen actions."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.md",
+        "verification.json"
+      ],
+      "limits": "Self-authored observable activity only; not proof of absent unseen actions."
+    }
+  },
+  "operations": [
+    "First read exact JOB.json/prompt.txt; then common policy and only VERIFIER harness; policy-scoped filename listing to locate harness.",
+    "Listed only released shared directories; read exact current pair, authorized prior proposer and two released protocol audits. No predecessor directory content read.",
+    "Independent public source retrieval/selected inspection and two search expansions recorded in verification sources; no upstream code execution.",
+    "Own tasklist SHA metadata calculation; trusted dossier digest and limited validate (missing roles.json).",
+    "Write own release verification files/compliance/workflow; self-freeze and trusted verify; result.json in assigned job root."
+  ],
+  "incidents": [],
+  "observability": "Self-authored public activity ledger, not a complete tool trace or evidence of absent undisclosed actions."
+}

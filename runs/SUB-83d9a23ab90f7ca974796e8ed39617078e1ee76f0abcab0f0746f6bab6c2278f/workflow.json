@@ -1,0 +1,18 @@
+{
+  "role": "challenger",
+  "reviewed_proposer_release": "SUB-2966cec6a631f48b998ddb78b67aba187e072ad1d9b4d3498aeebdb879a9f0cc",
+  "assessment": "unresolved",
+  "coverage": {
+    "duplicate_prior_art": "unresolved",
+    "mechanism": "unresolved",
+    "composition": "unresolved",
+    "demand": "unresolved",
+    "industry_gap": "unresolved",
+    "headroom": "unresolved",
+    "contests": "unresolved",
+    "experiments": "unresolved",
+    "cost": "unresolved"
+  },
+  "recommended_next_action": "park",
+  "new_objections": []
+}
