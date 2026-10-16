@@ -1,0 +1,12 @@
+{
+  "checked_at_utc": "2026-10-16T05:56:56.695464+00:00",
+  "repository_variable": "REQUIRE_HUMAN_FINAL_REPORTS",
+  "variable_state": "absent",
+  "observed_cli_message": "variable REQUIRE_HUMAN_FINAL_REPORTS was not found",
+  "workflow_path": ".github/workflows/independent-verifier.yml",
+  "workflow_git_blob_sha": "f04e33d72ef5f715ab78833e909d743c26c68ee1",
+  "workflow_sha256": "046ee43cee46a172303eb61a9c14aec458c4f89b810646097e0b0c1850c8f2ae",
+  "effective_human_final_report_gate": false,
+  "source": "Current public-main workflow and direct repository-variable query; empty default is opt-in false.",
+  "scope": "Administrative final-report gate only; no human approval or scientific verification is fabricated."
+}

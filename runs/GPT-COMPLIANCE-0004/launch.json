@@ -1,0 +1,10 @@
+{
+  "prepared_at_utc": "2026-10-16T03:57:59.133503+00:00",
+  "source_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "source_ref": "codex/gpt-compliance-source-20261016",
+  "setup_pr": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/69",
+  "setup_state": "MERGED",
+  "runtime_root": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016",
+  "status": "two first proposer jobs dispatched with requested gpt-6.1-sol/high in fresh app agents",
+  "scope": "New four additional cycles per domain, not resetting historical batch counts; no new experiment allocation."
+}

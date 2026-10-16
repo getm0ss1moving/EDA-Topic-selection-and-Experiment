@@ -1,0 +1,42 @@
+{
+  "actor_id": "ChatGPT-P04-PHYSICAL-B04-EDA-0009-REPLACEMENT-1-5b0f12cd",
+  "batch_brief": "docs/INNOVATION-BATCH-0004.md",
+  "batch_round": 3,
+  "batch_round_limit": 4,
+  "compliance_required": true,
+  "domain": "D04",
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "job_id": "ac5806f2-7cdf-4224-a4ab-fe157314716c",
+  "models": {
+    "challenger": {
+      "effort": "low",
+      "model": "gpt-6-astra"
+    },
+    "proposer": {
+      "effort": "high",
+      "model": "gpt-6.1-sol"
+    },
+    "verifier": {
+      "effort": "low",
+      "model": "gpt-6.1-sol"
+    }
+  },
+  "packet_sha256": "3d29add2098d5982cd75816f9f6db2f417fa0e03703c69708f9ad91afe7c12b9",
+  "phase": "research",
+  "previous_proposal_release": "SUB-988d5b734de75037f4ca472fe6c9799a673f9538cd7b4053da26a004347406f8",
+  "readiness": "logical seat registered; actual host model is recorded by the execution backend",
+  "released_inputs": [
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-P04-PHYSICAL-B04-EDA-0009-REPLACEMENT-1-5b0f12cd/jobs/ac5806f2-7cdf-4224-a4ab-fe157314716c/shared/predecessor/SUB-aeaba01af9a5b6128eec0673cea74b71dc559d2ba9bf7da096ebfaff8bdce21a",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-P04-PHYSICAL-B04-EDA-0009-REPLACEMENT-1-5b0f12cd/jobs/ac5806f2-7cdf-4224-a4ab-fe157314716c/shared/predecessor/SUB-2ff252d0046e7fc9825c2748ba4109878fee23295c7c2855ffd64435aa2a8f06",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-P04-PHYSICAL-B04-EDA-0009-REPLACEMENT-1-5b0f12cd/jobs/ac5806f2-7cdf-4224-a4ab-fe157314716c/shared/predecessor/SUB-9354b850df73175a5f4764f21dc5b5e8d9204f7741e9c50dce06953c34e9f984",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-P04-PHYSICAL-B04-EDA-0009-REPLACEMENT-1-5b0f12cd/jobs/ac5806f2-7cdf-4224-a4ab-fe157314716c/shared/predecessor.json",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-P04-PHYSICAL-B04-EDA-0009-REPLACEMENT-1-5b0f12cd/jobs/ac5806f2-7cdf-4224-a4ab-fe157314716c/shared/SUB-b69a8b5d5ff701c8a70bb5122fcfe70e9cf376634d0f50de420109f7e3b8d8a0",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-P04-PHYSICAL-B04-EDA-0009-REPLACEMENT-1-5b0f12cd/jobs/ac5806f2-7cdf-4224-a4ab-fe157314716c/shared/SUB-3090026e572d0cecae72323cca434d6748d78424acd61699d6ecfb2e8aad0f6b",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-P04-PHYSICAL-B04-EDA-0009-REPLACEMENT-1-5b0f12cd/jobs/ac5806f2-7cdf-4224-a4ab-fe157314716c/shared/SUB-2e1f236a3f9a0f3f0b1c30016dc8ad8f2b235c94f980b0989b1d3e287588d85c",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-P04-PHYSICAL-B04-EDA-0009-REPLACEMENT-1-5b0f12cd/jobs/ac5806f2-7cdf-4224-a4ab-fe157314716c/shared/SUB-988d5b734de75037f4ca472fe6c9799a673f9538cd7b4053da26a004347406f8"
+  ],
+  "role": "proposer",
+  "round": 2,
+  "session_id": "8492d4d4-8b51-4d76-9309-7af2622f4674",
+  "topic": "EDA-0009"
+}

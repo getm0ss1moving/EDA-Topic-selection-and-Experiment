@@ -1,9 +1,14 @@
 {
-  "status": "regression_passed_pending_pr_checks",
+  "status": "merged_after_required_checks_without_self_approval",
   "addresses_pr": 80,
   "addresses_thread": "PRRT_kwDOVElOAM6tFZ1P",
   "scope": "Reject missing, unassigned, null or hash-mismatched verifier public-evidence metadata/file pairs before publishing descriptors. Existing frozen research and policy input source are unchanged.",
   "frozen_scientific_outputs_changed": false,
   "tests_run": 139,
-  "log_sha256": "6a34692485757f896ee9539b244b8dd4af99ae3878900b02bc8be16a3fc4f312"
+  "log_sha256": "6a34692485757f896ee9539b244b8dd4af99ae3878900b02bc8be16a3fc4f312",
+  "pr": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/81",
+  "head": "81c373ebb5fe84e0515ac31744b20558abe06a6c",
+  "transport_note": "Initial merge inspection hit GitHub GraphQL TLS handshake timeout; same PR rechecked, no bypass or duplicate PR.",
+  "merge_commit": "2b214aaeff4bc664258059f81493ad7b0402fa8f",
+  "merged_at_utc": "2026-10-16T06:32:25Z"
 }

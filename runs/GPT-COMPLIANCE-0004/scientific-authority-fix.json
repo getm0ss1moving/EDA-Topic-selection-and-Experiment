@@ -1,0 +1,12 @@
+{
+  "pr": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/80",
+  "head": "6544a22add519911c0ca7cf1392946f5e8843137",
+  "addresses_thread": "PRRT_kwDOVElOAM6tE9bb",
+  "status": "merged_after_required_checks_without_self_approval",
+  "tests_run": 139,
+  "frozen_scientific_outputs_changed": false,
+  "current_policy_input_commit_unchanged": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "scope": "Implement existing scientific/protocol authority separation; typed future audit registrations, backward-compatible legacy scientific identities and exact verifier-only evidence transport.",
+  "merge_commit": "e4287188e5b022f47a28c8ec4344443868e773db",
+  "merged_at_utc": "2026-10-16T06:11:02Z"
+}

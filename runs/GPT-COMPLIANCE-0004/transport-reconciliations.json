@@ -1,0 +1,18 @@
+[
+  {
+    "at_utc": "2026-10-16T04:28:41.245687+00:00",
+    "pr": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/72",
+    "before_head": "059e8369a6df8c0d15e9da4d35178894b43ac6dd",
+    "merged_main": "b5e69f7c90b6f3aa23d1399d83dbaa1bd8be8f99",
+    "after_head": "b8aeae9243e84a4339c55b1c79598377d2d442c9",
+    "conflicted_files": [
+      "config/roles.json"
+    ],
+    "resolution": "Exact session_id union; identical shared rows and equal non-session fields verified. All four round payloads were byte-compared to runtime before commit.",
+    "round_scientific_and_audit_bytes_identical_to_runtime": true,
+    "project_validate": "passed",
+    "registry_diff_check": "passed",
+    "retained_byte_note": "Whole staged merge whitespace check noticed inherited frozen CSV CRLF rows from main. No normalization performed; edited registry checked separately.",
+    "scope": "Transport-registration reconciliation, not science change or self-approval."
+  }
+]

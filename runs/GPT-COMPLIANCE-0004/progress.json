@@ -1,0 +1,56 @@
+{
+  "completed_cycles": {
+    "D04": 4,
+    "D05": 4
+  },
+  "merged": [
+    "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/71",
+    "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/72",
+    "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/73",
+    "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/76",
+    "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/77",
+    "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/78",
+    "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/79",
+    "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/82"
+  ],
+  "published": {
+    "SUB-047b42329a35771ca6788e18cc97583dedaf36526c13f12defa839e36c8b1ed0": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/79",
+    "SUB-6a2f437f43fd9ee63a3de84bc3fe096a5da49e6da3e6f7074f95b7c3140c386f": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/78",
+    "SUB-77d7bb685bc812bcb6e3e2a5a357478f7f2a743ad0dcba6a249962e0b163af95": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/76",
+    "SUB-82b8167ca9b955b4087f667585378f4e53893e95a14fffdff461b7b0937b1659": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/82",
+    "SUB-a8da4b6a1a7928ee94f15ee0ec17693629258c346fc2b559b406e2dca9fd3327": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/73",
+    "SUB-b69a8b5d5ff701c8a70bb5122fcfe70e9cf376634d0f50de420109f7e3b8d8a0": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/77",
+    "SUB-c4ea36b9e62a68730c225ac73645a9b5d399bbd2142507a0212c0ef12fb9dd0c": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/71",
+    "SUB-f70b504c01235e69199f322b0bbd1ddec249af0289ea0e1883b1132758ddb6bf": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/72"
+  },
+  "topics": {
+    "EDA-0009": {
+      "domain": "D04",
+      "last_scientific_decision": "park",
+      "phase": "verifier",
+      "round": 3,
+      "status": "parked"
+    },
+    "EDA-0010": {
+      "domain": "D05",
+      "last_scientific_decision": "park",
+      "phase": "verifier",
+      "round": 3,
+      "status": "parked"
+    },
+    "EDA-0011": {
+      "domain": "D05",
+      "last_scientific_decision": "park",
+      "phase": "verifier",
+      "round": 1,
+      "status": "stopped_after_round_limit"
+    },
+    "EDA-0012": {
+      "domain": "D04",
+      "last_scientific_decision": "park",
+      "phase": "verifier",
+      "round": 1,
+      "status": "stopped_after_round_limit"
+    }
+  }
+}

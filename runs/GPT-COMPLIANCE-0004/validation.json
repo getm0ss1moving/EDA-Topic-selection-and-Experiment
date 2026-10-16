@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-16T06:09:53.682505+00:00",
+  "checked_at_utc": "2026-10-16T06:29:16.230259+00:00",
   "command": [
     "python3",
     "-m",
@@ -12,6 +12,6 @@
   "exit_code": 0,
   "tests_run": 139,
   "status": "passed",
-  "log_sha256": "68e47f99139d7df106ac7a1331eb0ba0d73cd1f3683a2db4e3bcbe893064a081",
-  "scope": "Coordinator regression suite including protocol-auditor rejection for acceptance/abandonment and hash-bound scientific followup transport. No scientific approval or hidden-action certification."
+  "log_sha256": "6a34692485757f896ee9539b244b8dd4af99ae3878900b02bc8be16a3fc4f312",
+  "scope": "Full coordinator suite; includes missing/unassigned/null/tampered verifier evidence refusal with positive export control. Not scientific approval or hidden-action certification."
 }

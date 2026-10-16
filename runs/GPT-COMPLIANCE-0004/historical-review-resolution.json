@@ -1,0 +1,30 @@
+{
+  "recorded_at_utc": "2026-10-16T04:34:03.878095+00:00",
+  "status": "new_independent_scientific_adjudication_not_a_historical_rewrite",
+  "scientific_ruling": "runs/SUB-c4ea36b9e62a68730c225ac73645a9b5d399bbd2142507a0212c0ef12fb9dd0c/verification.json",
+  "scientific_session": "df362a1f-1d66-4a02-86a9-92e52de6fad7",
+  "public_round_pr": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/71",
+  "historical_rulings": [
+    {
+      "id": "HIST-LOCATOR",
+      "verdict": "refuted",
+      "blocking": false,
+      "source_locator": "V2 raw260-301; predecessor P sources.json N10b; handover followup1",
+      "reason": "Pinned source has 309 raw lines and SHA256 f81f24e419536210a344cd6fd32f9e2b43bdb2144a76bbc818de437dadf2d162, identical to old ledger. Estimate loop is273-282;260-301 is valid estimate/commit handling. Alleged288-line source and254-263 loop do not describe these bytes. Current R04 locator also matches. Reverse only with authenticated differing immutable bytes or demonstrated counting/encoding discrepancy."
+    },
+    {
+      "id": "HIST-REPLAY",
+      "verdict": "valid",
+      "blocking": false,
+      "source_locator": "predecessor V SUBMISSION.json files; verification.json claim_checks CLM-1004/1005 and analytical_checks; verification.md",
+      "reason": "Historical4096-case assertion lacks exact public code/stdout: manifest contains only compliance, verification.md/json and workflow; neither verification file embeds replay. Withdraw that empirical support pending an explicitly released authentic old artifact or separately labelled new replay. Missing traceability is not proof no check happened or deliberate fabrication. Current P A02/C C-A01 include public code/output, but do not retroactively repair old V evidence."
+    }
+  ],
+  "protocol_review": "runs/SUB-7f1fa5d72cb3dbe99558c18a4edc83e596e157506a358070f449d2777b8ebc3b/verification.json",
+  "bounds": [
+    "Protocol review checks the current triple and does not independently reopen omitted historical files.",
+    "Original batch 0003 frozen claims and metadata-only unknowns remain preserved.",
+    "A new public replay cannot authenticate or retroactively supply the old missing empirical artifact.",
+    "This coordinator record copies the assigned scientific ruling; it adds no vote or readiness approval."
+  ]
+}

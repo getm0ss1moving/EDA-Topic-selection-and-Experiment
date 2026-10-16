@@ -1,0 +1,18 @@
+{
+  "recorded_at_utc": "2026-10-16T06:35:30.430021+00:00",
+  "pr": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/82",
+  "head": "68da69a93764224c6020dada0f4588e9f6a11cd4",
+  "branch": "codex/round-eda-0012-82b8167ca9b955b4",
+  "original_cli_error": "Command '('gh', 'pr', 'create', '--repo', 'getm0ss1moving/EDA-Topic-selection-and-Experiment', '--head', 'codex/round-eda-0012-82b8167ca9b955b4', '--base', 'main', '--title', 'EDA-0012: park (82b8167ca9b955b4)', '--body-file', '/var/folders/1l/87sz0xm96mld4zz640w33nlh0000gn/T/eda-codex-publish-z1f13ofs/body.md')' returned non-zero exit status 1.",
+  "lookup": "Exact branch REST lookup returned no existing PR after CLI failure",
+  "recovery": "GitHub connector created same already validated/pushed round branch; attached PR and registered actual URL in durable queue. No duplicate PR, science edits, approval or check bypass.",
+  "status": "merged_after_exact_head_checks_without_self_approval",
+  "merge_commit": "a66794ad6ca85aebec84365f7ea90bb5c429d8ba",
+  "merge_method": "GitHub connector squash with expected head SHA; no protection bypass",
+  "checked_head": "68da69a93764224c6020dada0f4588e9f6a11cd4",
+  "checks": {
+    "research-structure": "success, workflow run 38862055209",
+    "independent-verifier": "success, status target workflow run 38862055315"
+  },
+  "recorded_merge_utc": "2026-10-16T06:37:28.815201+00:00"
+}

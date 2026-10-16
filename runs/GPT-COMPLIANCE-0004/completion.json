@@ -1,0 +1,155 @@
+{
+  "batch": "GPT-COMPLIANCE-0004",
+  "completed_at_utc": "2026-10-16T06:43:40.647671+00:00",
+  "status": "complete_at_four_additional_cycles_per_domain_with_parked_topics_and_evidence_bounded_unresolved_conduct",
+  "source_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "additional_complete_cycles": {
+    "D04": 4,
+    "D05": 4
+  },
+  "valid_scientific_outputs": 24,
+  "independent_protocol_audits": 8,
+  "merged_round_prs": [
+    "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/71",
+    "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/72",
+    "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/73",
+    "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/76",
+    "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/77",
+    "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/78",
+    "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/79",
+    "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/82"
+  ],
+  "current_rule_cells": {
+    "scientific_role_rows": 24,
+    "rule_cells": 216,
+    "cell_status_counts": {
+      "no_violation_found_within_scope": 208,
+      "supported_deviation": 3,
+      "unresolved": 5
+    },
+    "overall_audit_statuses": {
+      "clear_within_scope": 1,
+      "nonblocking_findings": 5,
+      "unresolved": 2
+    },
+    "scope": "Evidence-bounded independent reviewer cells; not a hidden-action compliance rate or a new scientific vote.",
+    "quarantined_attempt": {
+      "role_rows": 3,
+      "rule_cells": 27,
+      "cell_status_counts": {
+        "no_violation_found_within_scope": 24,
+        "supported_deviation": 1,
+        "unresolved": 2
+      },
+      "audit_release": "SUB-573df9c23c1928e04ad3ba0801e204c7a5e9136c546774e8db25a922e11348c0",
+      "disposition": "unresolved",
+      "excluded_from_valid_cycle_counts": true
+    }
+  },
+  "scientific_outcome": {
+    "selected_for_pilot": 0,
+    "joint_abandonments": 0,
+    "recorded_or_admitted_new_physical_results": 0,
+    "physical_result_scope": "No new physical experiment is allocated or admitted as evidence. This is not an independent attestation of unobserved interrupted activity.",
+    "topic_states": {
+      "EDA-0009": {
+        "domain": "D04",
+        "round": 3,
+        "status": "parked",
+        "phase": "verifier",
+        "last_scientific_decision": "park"
+      },
+      "EDA-0010": {
+        "domain": "D05",
+        "round": 3,
+        "status": "parked",
+        "phase": "verifier",
+        "last_scientific_decision": "park"
+      },
+      "EDA-0011": {
+        "domain": "D05",
+        "round": 1,
+        "status": "stopped_after_round_limit",
+        "phase": "verifier",
+        "last_scientific_decision": "park"
+      },
+      "EDA-0012": {
+        "domain": "D04",
+        "round": 1,
+        "status": "stopped_after_round_limit",
+        "phase": "verifier",
+        "last_scientific_decision": "park"
+      }
+    }
+  },
+  "reports": {
+    "owner_chinese": "reports/final/GPT-COMPLIANCE-0004.zh-CN.md",
+    "conduct_english": "reports/final/GPT-COMPLIANCE-0004.conduct.en.md"
+  },
+  "requested_models": {
+    "proposer": {
+      "model": "gpt-6.1-sol",
+      "effort": "high"
+    },
+    "challenger": {
+      "model": "gpt-6-astra",
+      "effort": "low"
+    },
+    "verifier": {
+      "model": "gpt-6.1-sol",
+      "effort": "low"
+    }
+  },
+  "public_reopen_check": {
+    "release_count": 36,
+    "valid_job_descriptors": 32,
+    "quarantined_descriptor_count": 4,
+    "record": "publication-audit.json"
+  },
+  "backend_screening_events": 4,
+  "limits": [
+    "Finite app-agent batch; actual dispatch hard-stop checked, no fifth science cycle or new seat. Not a persistent daemon.",
+    "All original topics, negative outcomes, quarantined outputs and fresh incident audit remain preserved; new topic IDs do not delete or inherit approval.",
+    "24 valid science outputs plus 8 protocol audits do not equal total backend inference calls, tokens or verified spending; interrupted/replaced attempts remain separate.",
+    "208 N / 3 D / 5 U cells transcribe independent bounded reviews, not proof of hidden conduct, strong OS isolation or actual backend model routing.",
+    "Quarantined-attempt review retains 2 unresolved cells; batch 0003 historical metadata-only 15 unresolved cells are not cleared.",
+    "Historical locator allegations were independently refuted within narrow source scope; old replay-evidence deficiency remains valid. No coordinator scientific clearance.",
+    "No EDA/build/training/remote/GPU/paid experiment allocation, calibrated physical gain forecast or universal novelty/theoretical-saturation proof.",
+    "Pre-final-publication receipts retain the exact open PR79 scientific UI thread with its independent historical ruling and PR75 governance thread with its prepared manifest/helper repair. No thread is silently dismissed.",
+    "Local GitHub API TLS failures required live connector receipts. Workflow tool exposes first page only; exact required Research structure workflow and independent-verifier commit status passed at each recorded head. Returned review inventory is not proof of unexposed metadata."
+  ],
+  "evidence_sha256": {
+    "release-audit.json": "38ba4ca73e376b5858db812450a634ef07b76c39202911ab9516688f0627ea78",
+    "stop-check.json": "96ced2761fb9fb44117b8dcea07f76f9a274ef9c876a286c56fa7da006833d96",
+    "publication-audit.json": "0b87ab6d978f23bc0832ff4b0f26c9832a573d2f2a8a1843264ed1d4f06c96dc",
+    "publication-receipts.json": "44fefda76128cb38719fff864b32f1710d254b83698bc8e61e59a235a44d70b1",
+    "connector-github-receipts.json": "b5d2f9589e9866814eb2459a5f6869170bfc6ebcadce0a37f7bc66a6ff903f8a",
+    "conduct-counts.json": "7f07e9b332569a911dd2735914a2cfdf7aff90a584d066d4c9e392e9693314af",
+    "role-compliance-index.json": "30ab43ae6cd144660106ce8658257c26405b83a5327e44c5a81de6e6480eb3fa",
+    "topic-index.json": "9f79ee87fddbb3784a17fca8dd08001c49c8322d5ca718781411a63619ec02fa",
+    "incident-review.json": "3af6f4d5e5e1c4e248d6a3436c7cf147042440a8a946662d8dc0eef28ccca533",
+    "incident-publication.json": "c1b0fddcf0b307cebd014e87a0dbf9ce6bdeb421a5379673cbcd9dcf6ed2d081",
+    "incident-descriptor-fix.json": "ef1f5714330b830ee901127520e5a572e4f255be8c90b2d4a0731e2e789a9222",
+    "historical-review-resolution.json": "97bf83b56b85e869fd5d592e9b741f94b18b93484ffcf018dccff3c410b61691",
+    "public-review-followups.json": "9dabace38b8d8226118e1f9994141c04c5533f73a7fd0164b2b37f08e3bb6c46",
+    "backend-failures.json": "b570d8fb4ff0968710a7a2f258b1d42447008e5cc4ae0de513a7d4f642015f75",
+    "validation.json": "0e9bb0469a2a7475cd332908191376b15f8fa592c706a1ca68323628983941e6",
+    "scientific-authority-fix.json": "42473d0c78670375c37daa5faafe19a98ba2918b22b51542b672893f4fe618e9",
+    "public-evidence-presence-fix.json": "e4458d4c5caa32746d32f86aaa2ba3d62112e25235becc7f5a13c2fe6c2eda96",
+    "github-transport-retry.json": "a2d411ea4c0ff8f138e7b013ac3f8561347f3114d2fe71d02ba1993dc33eb11a",
+    "human-review-policy.json": "4b90931990269bd33ed2201760944468b41a2a614d5010818380ab31d49b49ad",
+    "final-validation.json": "74a0977359a436745f0485951452b9575513f3e13b37008e339d3bf0b5bf1e51"
+  },
+  "final_checks": {
+    "coordinator_unittests": {
+      "passed": 139,
+      "record": "validation.json"
+    },
+    "project_validate": "passed",
+    "batch_helpers_py_compile": "passed",
+    "git_diff_check": "passed",
+    "public_frozen_bytes_and_descriptors": "passed with exact retained pre-publication followups",
+    "hard_stop": "passed; state bytes/jobs/seats unchanged",
+    "fresh_public_clone_report_links": "passed"
+  }
+}
