@@ -1,0 +1,116 @@
+{
+  "role": "verifier",
+  "actor_id": "ChatGPT-B04-PROTOCOL-D04-EDA-0009-R2",
+  "session_id": "4d949ecf-ec0e-421a-b0de-42a5e6a3572b",
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "packet_sha256": "d035415655571592e441d9b6044f5fb3ae2ce251edfc3d6df8cea820db65c9e0",
+  "job_id": "747156e5-6c9f-42cc-8b3a-da02cc027b73",
+  "schema": 1,
+  "read_releases": [
+    "SUB-3090026e572d0cecae72323cca434d6748d78424acd61699d6ecfb2e8aad0f6b",
+    "SUB-988d5b734de75037f4ca472fe6c9799a673f9538cd7b4053da26a004347406f8",
+    "SUB-b69a8b5d5ff701c8a70bb5122fcfe70e9cf376634d0f50de420109f7e3b8d8a0"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0
+  },
+  "rules": {
+    "inputs": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json#/roles",
+        "verification.md#Own bounded mechanical check",
+        "JOB.json"
+      ],
+      "limits": "Own public activity ledger, not a complete host trace; scope and validation limitations in verification.json#/limitations."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json#/roles",
+        "verification.md#Own bounded mechanical check",
+        "JOB.json"
+      ],
+      "limits": "Own public activity ledger, not a complete host trace; scope and validation limitations in verification.json#/limitations."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json#/roles",
+        "verification.md#Own bounded mechanical check",
+        "JOB.json"
+      ],
+      "limits": "Own public activity ledger, not a complete host trace; scope and validation limitations in verification.json#/limitations."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json#/roles",
+        "verification.md#Own bounded mechanical check",
+        "JOB.json"
+      ],
+      "limits": "Own public activity ledger, not a complete host trace; scope and validation limitations in verification.json#/limitations."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json#/roles",
+        "verification.md#Own bounded mechanical check",
+        "JOB.json"
+      ],
+      "limits": "Own public activity ledger, not a complete host trace; scope and validation limitations in verification.json#/limitations."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json#/roles",
+        "verification.md#Own bounded mechanical check",
+        "JOB.json"
+      ],
+      "limits": "Own public activity ledger, not a complete host trace; scope and validation limitations in verification.json#/limitations."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json#/roles",
+        "verification.md#Own bounded mechanical check",
+        "JOB.json"
+      ],
+      "limits": "Own public activity ledger, not a complete host trace; scope and validation limitations in verification.json#/limitations."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json#/roles",
+        "verification.md#Own bounded mechanical check",
+        "JOB.json"
+      ],
+      "limits": "Own public activity ledger, not a complete host trace; scope and validation limitations in verification.json#/limitations."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json#/roles",
+        "verification.md#Own bounded mechanical check",
+        "JOB.json"
+      ],
+      "limits": "Own public activity ledger, not a complete host trace; scope and validation limitations in verification.json#/limitations."
+    }
+  },
+  "operations": [
+    "First operation read exact JOB.json and prompt.txt only. Then assigned common policy and only verifier harness; missing guessed compliance template path disclosed by tool error.",
+    "Enumerated only assigned shared public released files and descriptors; read exact frozen P/C/V record. No historical release opened, private notes/logs/conversations/memory, checkout, role messaging or subagent use.",
+    "Some combined reads truncated; targeted critical logs/verification/consents/tasklists reopened; no exhaustive bibliography claim.",
+    "Inspected trusted policy scripts; attempted policy project validate, failed missing policy/config/roles.json; no checkout discovery to repair it.",
+    "Wrote own audit_check.py in job root; ran own hash/identity/read-allowlist/consent metadata checks, exact code/stdout published in verification.md. No external research originals reopened and no foreign code executed.",
+    "Wrote own release verification.md/json workflow/compliance, then trusted self-freeze and verify; final root result.json records completion."
+  ],
+  "incidents": [],
+  "observability": "Self-authored public disclosure, not complete trace or proof of undisclosed absence. Parent task instruction was assignment context, not scientific role communication; no agent messaging tools invoked."
+}

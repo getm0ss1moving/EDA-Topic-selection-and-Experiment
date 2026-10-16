@@ -1,0 +1,12 @@
+{
+  "role": "proposer",
+  "assessment": "revise",
+  "batch_round": 2,
+  "position": "conditional systems hypothesis; not ready; no inherited votes",
+  "previous_proposal_release": "SUB-2e1f236a3f9a0f3f0b1c30016dc8ad8f2b235c94f980b0989b1d3e287588d85c",
+  "responded_to_adjudication": "SUB-f70b504c01235e69199f322b0bbd1ddec249af0289ea0e1883b1132758ddb6bf",
+  "tasklist_sha256": "f5116283fa0b920812461e51dd4ac8ff20280f3284c61fb65beef400050fb29b",
+  "experiment_gate": "CLOSED",
+  "actual_allocation": null,
+  "next_action": "independent challenge and verification of source corrections/plan repair"
+}

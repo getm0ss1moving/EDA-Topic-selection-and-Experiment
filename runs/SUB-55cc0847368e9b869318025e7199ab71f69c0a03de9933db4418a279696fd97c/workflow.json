@@ -1,0 +1,10 @@
+{
+  "role": "verifier",
+  "purpose": "protocol_audit",
+  "reviewed_releases": {
+    "challenger": "SUB-3090026e572d0cecae72323cca434d6748d78424acd61699d6ecfb2e8aad0f6b",
+    "proposer": "SUB-988d5b734de75037f4ca472fe6c9799a673f9538cd7b4053da26a004347406f8",
+    "verifier": "SUB-b69a8b5d5ff701c8a70bb5122fcfe70e9cf376634d0f50de420109f7e3b8d8a0"
+  },
+  "disposition": "clear_within_scope"
+}

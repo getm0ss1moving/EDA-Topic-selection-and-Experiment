@@ -1,0 +1,108 @@
+{
+  "schema": 1,
+  "role": "challenger",
+  "actor_id": "ChatGPT-C04-PHYSICAL-B04-EDA-0009-REPLACEMENT-1-ee3d1e1c",
+  "session_id": "1f323593-6e87-4aef-b624-b0c134c28632",
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "packet_sha256": "7388ffba922f42c14f138e2e23ff1969b83be0f5a238f1f423abf1004bc6ebb4",
+  "job_id": "fb6fdd4f-5f49-4bb7-b2f5-e5477a7fb264",
+  "read_releases": [
+    "SUB-988d5b734de75037f4ca472fe6c9799a673f9538cd7b4053da26a004347406f8",
+    "SUB-2e1f236a3f9a0f3f0b1c30016dc8ad8f2b235c94f980b0989b1d3e287588d85c",
+    "SUB-f70b504c01235e69199f322b0bbd1ddec249af0289ea0e1883b1132758ddb6bf"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0
+  },
+  "rules": {
+    "inputs": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "prompt.txt",
+        "search-log.md first paragraph"
+      ],
+      "limits": "Self-authored activity evidence only; no OS/tool-trace completeness or absence of unseen actions certified. Scientific limitations are explicit in challenges and sources."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md",
+        "read_releases"
+      ],
+      "limits": "Self-authored activity evidence only; no OS/tool-trace completeness or absence of unseen actions certified. Scientific limitations are explicit in challenges and sources."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "release/",
+        "research-cache/",
+        "submissions/",
+        "result.json"
+      ],
+      "limits": "Self-authored activity evidence only; no OS/tool-trace completeness or absence of unseen actions certified. Scientific limitations are explicit in challenges and sources."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "sources.json",
+        "search-log.md"
+      ],
+      "limits": "Self-authored activity evidence only; no OS/tool-trace completeness or absence of unseen actions certified. Scientific limitations are explicit in challenges and sources."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "challenges.md OBJ-1101",
+        "independent-estimate.md",
+        "search-log.md C2-A01"
+      ],
+      "limits": "Self-authored activity evidence only; no OS/tool-trace completeness or absence of unseen actions certified. Scientific limitations are explicit in challenges and sources."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "experiment-consent.json"
+      ],
+      "limits": "Self-authored activity evidence only; no OS/tool-trace completeness or absence of unseen actions certified. Scientific limitations are explicit in challenges and sources."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "policy/docs/INNOVATION-BATCH-0004.md",
+        "search-log.md C2-A01"
+      ],
+      "limits": "Self-authored activity evidence only; no OS/tool-trace completeness or absence of unseen actions certified. Scientific limitations are explicit in challenges and sources."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "challenges.md direction assessment"
+      ],
+      "limits": "Self-authored activity evidence only; no OS/tool-trace completeness or absence of unseen actions certified. Scientific limitations are explicit in challenges and sources."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "policy/docs/SELF-SUBMISSION.md",
+        "workflow.json"
+      ],
+      "limits": "Self-authored activity evidence only; no OS/tool-trace completeness or absence of unseen actions certified. Scientific limitations are explicit in challenges and sources."
+    }
+  },
+  "operations": [
+    "Read JOB/prompt first, then assigned policy/common documents and only challenger harness.",
+    "Listed only policy and three explicitly allowed release directories; read actual sources/proposals/tasklists/response/forecast and released verifier as logged.",
+    "Independent public web searches and selected paper/code reads; direct source retrieval with hashes/pdftotext; downloaded source not executed.",
+    "Wrote/executed own tiny Boolean fixture; exact public code/stdout/hashes in search-log.md.",
+    "Wrote own English release files; mechanical JSON/identity/allowlist checks and trusted self-freeze/verify; result.json after successful freeze."
+  ],
+  "incidents": [],
+  "observability": "Self-authored public activity ledger, not a complete tool trace or evidence of absent undisclosed actions."
+}
