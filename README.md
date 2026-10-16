@@ -1,58 +1,40 @@
-> Active policy (2026-10-15): ChatGPT/Codex-only proposer, challenger and verifier. Start with [the automation contract](docs/CODEX-AUTOMATION.md) and [the challenger gap report](docs/CHATGPT-CHALLENGER-GAP-ANALYSIS.md). Historical platform tables below are superseded by `config/launch-release.json`.
+# EDA Literature and Human-Led Topic Review
 
-# EDA Topic Selection and Experiment
+The human owner proposes research ideas. Three AI roles support that work:
 
-A file-mediated research program for Agentic EDA, AI for EDA, and traditional EDA. The goal is falsifiable, useful research questions supported by literature, contest, implementation, and engineering evidence—not a stream of plausible ideas.
+| Role | Responsibility | Instructions |
+|---|---|---|
+| Searcher | Find, classify and summarize papers, contests and useful open projects from floorplanning to signoff; provide Chinese reading aids | [Searcher](harness/SEARCHER.md) |
+| Challenger | Independently search prior art, challenge novelty and need, forecast experiments and propose decisive falsification tests | [Challenger](harness/CHALLENGER.md) |
+| Verifier | Independently check evidence and adjudicate objections in compact tables | [Verifier](harness/VERIFIER.md) |
 
-Current research preference: [useful combinations and structural innovation](docs/INNOVATION-STRATEGY.md), including cooperating EDA agents, unified prediction and specialist/learned/exact hybrids. Component reuse is eligible; unsupported assembly and engineering-demand drift are penalized.
+There is no AI proposer or automatic AI replacement-topic generator.
 
 ## Start here
 
-1. Read [the charter](docs/CHARTER.md), [workflow](docs/WORKFLOW.md), and [isolation policy](docs/ISOLATION.md).
-2. The human owner fills [the research brief](config/research-brief.json), including domain, compute, tools, datasets, and publication constraints. Unknown constraints remain explicitly unknown.
-3. Follow [the active automation contract](docs/CODEX-AUTOMATION.md) for separate logical seats, fresh role jobs and released-file transport. A completed finite batch is not authorization for another batch; use a new bounded owner brief rather than resetting its counters.
-4. Create a draft: `python3 scripts/project.py init EDA-0001`.
-5. Produce and contest evidence through PRs. Only confirmed dossiers enter `topics/`.
-6. Validate with `python3 scripts/project.py validate` and `python3 -m unittest discover -s tests -v`.
+1. Read the [workflow](docs/WORKFLOW.md), [charter](docs/CHARTER.md), [evidence](docs/EVIDENCE.md) and [isolation](docs/ISOLATION.md) rules.
+2. Browse the [literature index](literature/README.md) and [first ten reading cards](literature/batches/001.zh-CN.md). The target is 100 distinct papers; contests and repositories are tracked separately.
+3. Submit your idea using [the human idea template](templates/human-idea.md). The coordinator commits and freezes it before independent review; an incomplete idea can receive exploratory feedback without being called experiment-ready.
+4. Challenger submits evidence-backed criticism to verifier. Verifier returns adjudicated findings to you. You decide and author the next revision.
+5. A promising plan needs an explicit human/challenger task-list agreement, independent verification and allocated resources before experiments. [Retirement rules](docs/TOPIC-RETIREMENT.md) stop weak topics without erasing their history.
 
-Before confirming a topic or starting experiments, proposer and challenger must jointly finalize `tasklist.md` and separately bind its digest in `experiment-consensus.json`. Compute the digest with `python3 scripts/project.py tasklist-digest candidates/EDA-NNNN`.
+Active settings: [research-workflow.json](config/research-workflow.json).
+Role jobs are configured, not claimed running; the historical automated P/C/V loop is disabled.
 
-## Project map
+Research and review prose is English. Chinese titles, paraphrased summaries and reading notes are explicitly allowed for the requested literature translations; original English titles and precise sources remain attached. User-facing explanations are Chinese.
 
-| Path | Purpose |
-|---|---|
-| `harness/` | Role-specific executable work instructions |
-| `docs/` | Governance, evidence standards, EDA scope, experimental policy |
-| `config/` | Human constraints and session registration |
-| `templates/topic/` | Complete dossier template |
-| `candidates/` | Submitted proposals, challenges, responses, verification; no acceptance implied |
-| `topics/` | Independently confirmed research topics; experimental claims remain labeled |
-| `archive/` | Rejected/parked ideas and resurrection criteria |
-| `runs/` | Public run manifests and packet provenance; never private reasoning |
-| `scripts/` | Dossier creation, checks, hashing, role packet export |
+## Files and validation
 
-All research artifacts, role interactions, and technical reviews use English. Human-facing setup explanations may follow the human's language preference. Agents communicate through committed files only; reviews carry machine confirmation, not scientific arguments.
+`literature/` holds the catalog and reading aids; `harness/` holds only the active role instructions plus a retired-role notice. `candidates/`, `topics/`, `archive/` and `runs/` preserve research and audit evidence. [Historical configurations](legacy/README.md) are inactive. Existing proposer-labelled provenance fields remain for old records and human-authored dossier compatibility; they do not authorize an AI proposer.
 
-## Current status
+```sh
+python3 scripts/project.py validate
+python3 scripts/literature.py validate
+python3 -m unittest discover -s tests -v
+```
 
-Batch `GPT-COMPLIANCE-0004` completed four additional full P/C/V cycles per domain: eight merged research-round PRs, 24 valid scientific outputs and eight fresh independent three-role protocol audits. A quarantined attempt and its separate independent review remain public and excluded from valid-cycle counts. All predecessor topics and negative evidence are retained. Read the [Chinese topic report](reports/final/GPT-COMPLIANCE-0004.zh-CN.md), [English per-role conduct matrix](reports/final/GPT-COMPLIANCE-0004.conduct.en.md), [completion record](runs/GPT-COMPLIANCE-0004/completion.json) and [public byte/descriptor audit](runs/GPT-COMPLIANCE-0004/publication-audit.json). The [hard-stop check](runs/GPT-COMPLIANCE-0004/stop-check.json) records unchanged state/jobs/seats after both domains returned finished at four cycles; no live daemon or hidden-action certification is claimed. The preceding [batch 0003 report](reports/final/GPT-COMPLIANCE-0003.zh-CN.md) and its frozen findings remain historical evidence, including unresolved observations.
+## Historical research
 
-### Earlier batches
-
-The earlier innovation batch `GPT-INNOVATION-0002` completed four full proposer/challenger/verifier cycles per domain for D04 and D05: eight merged round PRs and 24 hash-verified role releases. EDA-0005 and EDA-0006 were parked after three cycles; the final cycle independently reviewed successor EDA-0008 (physical action-order prediction) and EDA-0007 (electrical-contrast modeling for selective timing evaluation). Both successors were also parked with concrete revision and reopening conditions. No topic passed experimental admission, no joint-abandonment signatures were fabricated, and no new EDA experiment or fifth cycle was launched.
-
-Read the earlier [Chinese topic report](reports/final/GPT-INNOVATION-0002.zh-CN.md), [round/release index](runs/GPT-INNOVATION-0002/topic-index.json), [public-byte audit](runs/GPT-INNOVATION-0002/publication-audit.json) and [actual stop check](runs/GPT-INNOVATION-0002/stop-check.json). Scientific originals remain English. Requested models are proposer gpt-6.1-sol/high, challenger gpt-6-astra/low, verifier gpt-6.1-sol/low. Each job used a fresh app agent; no running unattended service or independently attested backend identity is claimed.
-
-The earlier batch `GPT-FOUR-ROUNDS-0001` and its [Chinese report](reports/final/GPT-FOUR-ROUNDS-20261015.zh-CN.md) remain historical. The new innovation strategy does not rewrite its frozen scores, decisions or signatures.
-
-The scope is academic chip EDA using public or legitimately accessible research material. Public vendor information does not establish the absence of proprietary capabilities. The earlier [runtime-event record](runs/GPT-INNOVATION-0002/runtime-incidents.json) preserves a platform classification interruption and a same-verifier inventory repair; neither was counted as a completed round before valid collection.
+The completed four-round D04/D05 batches remain frozen. See the [latest Chinese report](reports/final/GPT-COMPLIANCE-0004.zh-CN.md), [conduct matrix](reports/final/GPT-COMPLIANCE-0004.conduct.en.md) and [stop record](runs/GPT-COMPLIANCE-0004/stop-check.json). No old topic was deleted, rescored or experimentally accepted by this workflow change.
 
 Repository: https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment
-
-## Historical platform allocation
-
-The older [team allocation](docs/TEAM.md), [Codex](docs/platforms/CODEX-PHYSICAL.md), [DeepSeek](docs/platforms/DEEPSEEK-PHYSICAL.md), and [Claude](docs/platforms/CLAUDE-PHYSICAL.md) documents preserve the earlier cross-platform setup. They are superseded for new work by the ChatGPT-only automation contract and current config. Released historical handovers remain evidence; their approvals and private context do not transfer to new roles.
-
-Historical resource checks: [Physical pilot](docs/PHYSICAL-PILOT.md). Proposed ceilings are not a new experiment allocation.
-
-Historical lead handoffs: [DeepSeek](docs/handoffs/DEEPSEEK-LEAD.md), [Claude](docs/handoffs/CLAUDE-LEAD.md), and [shared coordinator contract](docs/handoffs/PLATFORM-LEAD-CONTRACT.md). These do not launch or message external agents.

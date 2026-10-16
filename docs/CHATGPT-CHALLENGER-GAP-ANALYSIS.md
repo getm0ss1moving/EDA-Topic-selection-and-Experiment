@@ -1,3 +1,5 @@
+> Historical operational reference. Current human-led workflow: [WORKFLOW.md](WORKFLOW.md). AI proposer launch and automatic AI succession instructions below are inactive.
+
 # Challenger automation gap analysis and ChatGPT-only migration
 
 Written 2026-10-15 by the coordinator from released artifacts and repository code.

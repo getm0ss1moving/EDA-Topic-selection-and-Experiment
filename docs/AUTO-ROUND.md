@@ -1,3 +1,5 @@
+> Historical operational reference. Current human-led workflow: [WORKFLOW.md](WORKFLOW.md). AI proposer launch and automatic AI succession instructions below are inactive.
+
 # Active ChatGPT-only scheduler
 
 Use `scripts/codex_loop.py` and `docs/CODEX-AUTOMATION.md` for new work. The coordinator invokes finite native GPT jobs; role background-wait wake-up is no longer required. Every substantive round requires proposer, challenger and verifier. Runtime registrations travel in the same round PR, so the legacy main-registry prerequisite does not block new jobs. The transport protocol below remains available for historical releases.

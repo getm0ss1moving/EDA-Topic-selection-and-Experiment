@@ -1,0 +1,23 @@
+# Sharper challenger review and automatic portfolio retirement
+
+The owner requested stronger criticism of topic rationale/innovation and a greater willingness to stop weak topics. The challenger now leads with consequential attacks, compares exact prior/conventional mechanisms, tests real engineer decisions, searches for minimal counterexamples, audits complete costs and offers falsifiers plus anchor-preserving repairs. It does not manufacture objection counts or reject useful combinations by category.
+
+The independent scientific verifier grades seven bound axes. Novelty, utility and mechanism receive weight 2, as does anchor viability; headroom, contest originality and experiments receive weight 1. Grades clear/unresolved/major/fatal contribute 0/1/2/3. One valid, source-checked, anchor-unrepairable fatal axis retires immediately. Score >=6 on two consecutive distinct scientific revisions with at least two shared nonclear axes also retires, as a portfolio decision rather than a refutation of unresolved premises. These concrete defaults are implementation choices under the owner instruction.
+
+The new runtime decision is retired_by_policy, separate from signed joint abandonment. No proposer consent or scientific approval is fabricated. Exact frozen outputs, checked policy, original scientific action, scorecard and resurrection conditions remain in the affected round PR, including retirement.json. Successors receive fresh IDs/seats and released negative evidence after the required audit; existing finite domain limits still stop work. Old frozen runs are never rescored.
+
+Score history is reconstructed from immutable scientific releases, and policy bytes must match their state/packet binding. Refuted/unsupported/nonblocking attacks cannot drive retirement; one claim cannot inflate multiple axes. Headroom-fatal requires a bound below a locked numeric meaningful-effect threshold. Temporary access or budget gaps are not fatal evidence.
+
+Validation: 158 local coordinator tests pass, including 19 new retirement tests; structural validation and diff checks pass. Offline publication was exercised with synthetic complete P/C/V/audit outputs and the exact retirement certificate. The completed batch 0004 runtime hash still matches its stop proof. No live research roles or physical experiments were started. This record is a governance/test artifact, not an independent scientific verdict.
+
+The first CI run exposed a test-fixture portability error: the new offline Git commit test lacked an explicit synthetic author identity. The test now sets its own example.invalid author/committer environment; no global configuration or scientific/GitHub identity is fabricated. The initial failure is retained in ci-regression.json. All 158 local tests passed again after the fix; the same PR receives the corrected head for required CI.
+
+Owner authorship update: the later human-led cleanup supersedes AI proposer
+launch and automatic AI successor behavior. See runs/HUMAN-LED-0001/cleanup.json.
+The original 158-test/hash record above describes the earlier implementation,
+not the current runtime. Review compatibility fixes add canonical source_id
+support (legacy id accepted; conflicting aliases rejected), require every still
+blocking adjudicated concern to appear in the scorecard, and require full
+verified source locators for confirmed major/fatal grades. The final cleanup
+suite passes 168 tests, including 21 retirement and eight human-led/catalog tests.
+The historical loop is exercised only as an offline regression fixture.

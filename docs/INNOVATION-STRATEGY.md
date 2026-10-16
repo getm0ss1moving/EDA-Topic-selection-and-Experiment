@@ -103,6 +103,14 @@ representative held-out full-flow evaluation after dependencies and matching
 task-list consents are satisfied. An unsuccessful cheap test is useful evidence.
 No universal numerical target or success probability is supplied by this policy.
 
+For jobs with the separately bound TOPIC-RETIREMENT.md policy, continued
+investment has explicit fatal/persistent-risk thresholds. An unresolved but
+legitimate hypothesis may be retired from this portfolio after its repair
+opportunity; that is not proof the idea is false or all combinations exhausted.
+The challenger should actively seek decisive disconfirmation rather than keep
+an idea alive through cosmetic revisions. Useful systems combinations remain
+eligible, with scientific grades independently adjudicated.
+
 The challenger must identify the exact allegedly routine reduction, missing
 capability or unfair comparison. "Uses known methods" is not sufficient evidence
 against a useful system contribution. The verifier checks the claimed system

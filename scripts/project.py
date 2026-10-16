@@ -281,6 +281,10 @@ def validate(root=ROOT):
     errors = []
     errors.extend(validate_registry(root))
     errors.extend(validate_launch_release(root))
+    if (root/'literature/catalog.json').is_file():
+        spec = importlib.util.spec_from_file_location('literature_check', root/'scripts/literature.py')
+        module = importlib.util.module_from_spec(spec); spec.loader.exec_module(module)
+        errors.extend(module.validate_catalog(read_json(root/'literature/catalog.json')))
     roles = read_json(root/'config/roles.json')
     sessions = {}
     for s in roles['sessions']:
@@ -310,6 +314,8 @@ def validate_launch_release(root=ROOT):
     errors = []
     try:
         release = read_json(path)
+        if release.get('schema_version') == 3:
+            return validate_human_release(root, release)
         if release.get('schema_version') == 2:
             return validate_codex_release(root, release)
         registries = [read_json(root/name) for name in
@@ -410,6 +416,43 @@ def validate_launch_release(root=ROOT):
             errors.append('config/launch-release.json: Claude host-bound readiness policy is incomplete')
     except (ValueError, KeyError, TypeError, AttributeError) as exc:
         errors.append(f'config/launch-release.json: malformed data: {exc}')
+    return errors
+
+def validate_human_release(root, release):
+    """Validate the human-led surface without mutating historical registries."""
+    errors = []
+    def check(ok, why):
+        if not ok: errors.append('human-led workflow: '+why)
+    workflow = read_json(root/'config/research-workflow.json')
+    roles = ['searcher', 'challenger', 'verifier']
+    check(workflow.get('mode') == 'human_led' and workflow.get('ai_proposer_enabled') is False,
+          'AI proposer must stay disabled')
+    check(workflow.get('ai_roles') == roles and release.get('ai_roles') == roles,
+          'exactly searcher/challenger/verifier are active')
+    check(set(workflow.get('roles', {})) == set(roles), 'unexpected role configuration')
+    expected = {r:workflow.get('roles', {}).get(r, {}).get('actor_id') for r in roles}
+    check(all(expected.values()) and len(set(expected.values())) == 3, 'distinct actor IDs required')
+    check(release.get('assignments') == expected, 'release and workflow disagree')
+    check(bool(workflow.get('human_author')) and release.get('human_author') == workflow.get('human_author'),
+          'human author binding required')
+    check(release.get('active_platforms') == ['codex'], 'Codex only')
+    check(release.get('state') == 'configured_not_running', 'configuration is not a launch attestation')
+    check(release.get('fresh_sessions_required') is True and release.get('old_sessions_are_inputs') is False,
+          'historical sessions must remain isolated')
+    check(release.get('experiment_authorization') is False and workflow.get('experiment_authorization') is False,
+          'configuration cannot allocate experiments')
+    review = workflow.get('review', {})
+    check(review.get('independent_verifier_required') is True and review.get('raw_challenge_delivery') == 'verifier_first',
+          'independent verifier-first review required')
+    check(review.get('automatic_successor_proposal') is False and workflow.get('legacy_runtime_enabled') is False,
+          'automatic AI proposal generation prohibited')
+    for role in roles:
+        check(workflow.get('roles', {}).get(role, {}).get('harness') == f'harness/{role.upper()}.md',
+              f'invalid {role} harness')
+        check((root/f'harness/{role.upper()}.md').is_file(), f'missing {role} harness')
+    for name in ['codex-research.json', 'codex-compliance-research.json',
+                 'codex-compliance-research-0004.json', 'codex-innovation-research.json']:
+        check(read_json(root/'config'/name).get('enabled') is False, f'{name} must stay inactive')
     return errors
 
 def validate_codex_release(root, release):

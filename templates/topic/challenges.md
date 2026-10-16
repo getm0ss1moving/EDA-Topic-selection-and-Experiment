@@ -1,5 +1,15 @@
 # Challenges
 
+## Ranked consequential attacks and continuation recommendation
+
+For retirement-policy jobs apply docs/TOPIC-RETIREMENT.md. Rank the top three
+scientific attacks, or explicitly report fewer supported ones. Include the
+seven-axis pressure table, strongest conventional alternative, engineer decision,
+smallest counterexample, source applicability and cheapest decisive test. Give
+an anchor-preserving repair or supported no-repair position. State
+continue/revise/retire; add elimination_screen to workflow.json. Never invent
+objections for a quota or count one issue repeatedly across axes.
+
 ## Independent estimate before forecast exposure
 
 TBD

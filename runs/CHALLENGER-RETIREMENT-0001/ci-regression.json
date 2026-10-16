@@ -1,0 +1,9 @@
+{
+  "failed_head": "87c45341243deebac1f8f22a2b58e45b554a61ce",
+  "workflow_run": 38874706128,
+  "workflow_url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38874706128",
+  "result": "158 tests, one error in synthetic offline retirement-certificate publication",
+  "cause": "CI has no global Git author identity; the test accidentally inherited local author configuration.",
+  "repair": "Set explicit synthetic GIT_AUTHOR/COMMITTER name and example.invalid email only inside the offline test; no global config, runtime scientific identity or GitHub approval changed.",
+  "scope": "Test-fixture portability; evidence/score/retirement behavior unchanged. No failed check is bypassed."
+}

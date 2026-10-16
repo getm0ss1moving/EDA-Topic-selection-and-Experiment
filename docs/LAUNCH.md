@@ -1,3 +1,5 @@
+> Historical operational reference. Current human-led workflow: [WORKFLOW.md](WORKFLOW.md). AI proposer launch and automatic AI succession instructions below are inactive.
+
 # Launching independent agents
 
 Use a new empty session per role, with memory disabled and only its exported packet mounted. Do not paste previous conversations. Replace the placeholders below with actual packet paths and IDs. The coordinator records those values in a public run manifest. No role is assigned merely by documenting it here.
