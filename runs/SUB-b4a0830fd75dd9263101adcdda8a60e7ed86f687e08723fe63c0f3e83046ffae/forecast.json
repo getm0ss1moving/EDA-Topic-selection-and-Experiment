@@ -1,0 +1,17 @@
+{
+  "assumptions": [
+    "Actual full-output demand and natural batch multiplicity not established",
+    "Synthetic operation counts do not calibrate time or bytes",
+    "New resources and exact-target P/C consents absent"
+  ],
+  "base": null,
+  "baseline_source": "Future D3 baseline census; no timing measurement here",
+  "calibration_plan": "D3 baseline-only variance and reporting floor; D4 freezes practical threshold and confirmatory sample design before proposal outcomes. All nulls intentional.",
+  "confidence": null,
+  "direction": "higher_is_better",
+  "kind": "forecast_not_measurement",
+  "metric": "end-to-end elapsed time reduction versus strongest equalized conditional-value/memo baseline",
+  "optimistic": null,
+  "pessimistic": null,
+  "unit": "fraction"
+}

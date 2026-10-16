@@ -1,0 +1,40 @@
+{
+  "actor_id": "ChatGPT-P05-TIMING-B04-EDA-0010",
+  "assessment": "revise",
+  "batch_round": 1,
+  "completed_analytical_check": "A02, exact code/stdout embedded in experiment-plan.md",
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "job_id": "5c732c7b-9886-4c5b-a7fc-3d0fe0430d59",
+  "next_step": "independent_challenger_and_verifier_review",
+  "output_paths": [
+    "compliance.json",
+    "contest-audit.md",
+    "direction-control.json",
+    "experiment-consent.json",
+    "experiment-plan.md",
+    "forecast.json",
+    "industry-gap.md",
+    "prior-art.csv",
+    "proposal.md",
+    "responses.md",
+    "search-log.md",
+    "sources.json",
+    "tasklist.md",
+    "workflow.json"
+  ],
+  "packet_sha256": "9b5b108fa82b7ce61156daf3d3223acd7d3fccaefaa90b40e805e10aa325067f",
+  "requested_experiment": false,
+  "role": "proposer",
+  "session_id": "94d6bb60-04c2-4b62-a5f8-682feba5fc5c",
+  "source_records": "sources.json R01-R17 and A02",
+  "tasklist_sha256": "ce02d2f6fc0608adc49fac7027bb5a72ca638ba615c462289a02a646b2508875",
+  "topic": "EDA-0010",
+  "unresolved": [
+    "full-output demand",
+    "equally optimized conditional-value system distinction",
+    "complete actual-engine dependency extraction",
+    "representative net cost and memory frontier",
+    "phase allocations/owners/rights and dual exact-target consent"
+  ],
+  "validation_scope": "trusted standalone freeze plus own public replay and ledger validation; full repository validation belongs to coordinator publication"
+}
