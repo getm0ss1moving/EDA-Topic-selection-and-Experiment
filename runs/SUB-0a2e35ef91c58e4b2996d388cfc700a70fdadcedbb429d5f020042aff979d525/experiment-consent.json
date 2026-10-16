@@ -1,0 +1,7 @@
+{
+  "session_id": "ee82dfaa-9410-4c12-9e7b-cc1dde065bf4",
+  "decision": "revision_requested",
+  "signed_revision": "SUB-1995793c1627da4adba27cf9a355047e58ef3c0d8627137a33ff6fc81e76f89f",
+  "tasklist_sha256": "e780e31a8face38718726abf0cdad94e0bb0fe36e6b507127bd2da23a8228d10",
+  "rationale": "No execution consent: observation update contract, faithful comparator/configuration, adapter, rights, actual allocation and hashed dependency locks remain unresolved. Repaired depth2 and preregistration ordering are acknowledged."
+}

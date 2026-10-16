@@ -1,0 +1,119 @@
+{
+  "schema": 1,
+  "role": "verifier",
+  "actor_id": "ChatGPT-B04-PROTOCOL-D04-QUARANTINED-R2",
+  "session_id": "488f31cf-7b0c-40a6-a3c7-787ad698af67",
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "packet_sha256": "f4e51c994dc01539746602e44993c41ec6361a6b1677f5e127a76398028e79f3",
+  "job_id": "0cc55c88-ab3a-49a4-bfb0-37bd865e1d16",
+  "read_releases": [
+    "SUB-0a2e35ef91c58e4b2996d388cfc700a70fdadcedbb429d5f020042aff979d525",
+    "SUB-1995793c1627da4adba27cf9a355047e58ef3c0d8627137a33ff6fc81e76f89f",
+    "SUB-8b5c3aae66c746da57dc5c31dc641ac85467ea5d2c20bff681b2b2c68773deb6"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0
+  },
+  "rules": {
+    "inputs": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "workflow.json"
+      ],
+      "limits": "This job only; authorized descriptors and exact three frozen outputs. No unseen-action certification or scientific acceptance."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "workflow.json"
+      ],
+      "limits": "This job only; authorized descriptors and exact three frozen outputs. No unseen-action certification or scientific acceptance."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "workflow.json"
+      ],
+      "limits": "This job only; authorized descriptors and exact three frozen outputs. No unseen-action certification or scientific acceptance."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "workflow.json"
+      ],
+      "limits": "This job only; authorized descriptors and exact three frozen outputs. No unseen-action certification or scientific acceptance."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "workflow.json"
+      ],
+      "limits": "This job only; authorized descriptors and exact three frozen outputs. No unseen-action certification or scientific acceptance."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "workflow.json"
+      ],
+      "limits": "This job only; authorized descriptors and exact three frozen outputs. No unseen-action certification or scientific acceptance."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "workflow.json"
+      ],
+      "limits": "This job only; authorized descriptors and exact three frozen outputs. No unseen-action certification or scientific acceptance."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "workflow.json"
+      ],
+      "limits": "This job only; authorized descriptors and exact three frozen outputs. No unseen-action certification or scientific acceptance."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "workflow.json"
+      ],
+      "limits": "This job only; authorized descriptors and exact three frozen outputs. No unseen-action certification or scientific acceptance."
+    }
+  },
+  "operations": [
+    "Read exact assigned JOB/prompt first; supplied common policy, batch and only verifier harness; failed plural-harness/common-policy probes then policy-local discovery.",
+    "Read exact three released outputs, public role descriptors and incident metadata only; bulk tool output truncation followed by focused ledger/schema reads. No foreign scratch/session/memory reads or subagents/messages.",
+    "Compared literal paths, normalized IDs, identities, file SHA256 and tasklist hash using own record-analysis code; no scientific/EDA experiment.",
+    "Wrote own build_audit.py, release files and result.json; trusted review/ledger checks, freeze and verify. Full repository validation remains coordinator transport scope."
+  ],
+  "incidents": [
+    {
+      "classification": "operational_note",
+      "detail": "Nonexistent policy paths returned errors; policy-only discovery corrected them. No foreign harness accessed."
+    }
+  ],
+  "observability": "Self-authored public activity ledger, not a complete tool trace or evidence of absent undisclosed actions."
+}

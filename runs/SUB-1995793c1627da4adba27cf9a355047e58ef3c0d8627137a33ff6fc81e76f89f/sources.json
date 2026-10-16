@@ -1,0 +1,202 @@
+[
+  {
+    "id": "R2-S01",
+    "title": "AiDRC: Accelerating Detailed Routing by AI-Driven Design Rule Violation Prediction and Checking",
+    "url": "https://ieda.oscc.cc/res/papers/25-TODAES-AiDRC.pdf",
+    "source_type": "author_manuscript",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T04:33:47.240550+00:00",
+    "locator": "PDFp9 \u00a72.3; pp10\u201312 \u00a73; p13 \u00a74.1/Fig11; pp25\u201326 \u00a75.5",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-R2-001"
+    ],
+    "limitations": "Accessible author manuscript with placeholder2024 header; publisher2026 version equivalence not audited. Selected method pages read, no code run. Channel manifest unresolved. No published gain transferred.",
+    "version": "SHA256 ac23635ae04e506a0e83637397b52d1fb65d90759d116b1f20159d9e4674f690"
+  },
+  {
+    "id": "R2-S01m",
+    "title": "AiDRC publisher bibliographic record",
+    "url": "https://doi.org/10.1145/3769306",
+    "source_type": "publisher_indexed_metadata",
+    "publication_date": "2026-06-12",
+    "retrieved_utc": "2026-10-16T04:33:47.240550+00:00",
+    "locator": "Title, publication history and DOI; indexed \u00a7\u00a72.3/3/4.1/5.5",
+    "access_level": "metadata",
+    "supported_claim_ids": [
+      "CLM-R2-001"
+    ],
+    "limitations": "Direct DOI/full opens failed; indexed text useful for discovery. Method claims above use successfully retrieved author original.",
+    "version": "DOI10.1145/3769306"
+  },
+  {
+    "id": "R2-S02",
+    "title": "Dr. CU2.0: A Scalable Detailed Routing Framework with Correct-by-Construction Design Rule Satisfaction",
+    "url": "https://chengengjie.github.io/papers/C12-ICCAD19-DrCU2.pdf",
+    "source_type": "author_paper",
+    "publication_date": "2019",
+    "retrieved_utc": "2026-10-16T04:33:47.240550+00:00",
+    "locator": "PDFpp4\u20135 \u00a7III-C.2; rendered323\u2013367",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-R2-001",
+      "CLM-B4-009"
+    ],
+    "limitations": "Selected pessimistic merged-LUT method only; no executable reproduction or transferred speedup.",
+    "version": "ICCAD2019 author PDF"
+  },
+  {
+    "id": "R2-S03",
+    "title": "TritonRoute-WXL: The Open Source Router with Integrated DRC Engine",
+    "url": "https://vlsicad.ucsd.edu/Publications/Journals/j136.pdf",
+    "source_type": "author_paper",
+    "publication_date": "2021",
+    "retrieved_utc": "2026-10-16T04:33:47.240550+00:00",
+    "locator": "PDFp9 \u00a7V-E/VI-B and p10 Algorithm11; rendered838\u2013948",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-B4-007",
+      "CLM-B4-009"
+    ],
+    "limitations": "Modified-net/queue need supports broad demand, not sibling residual-incidence economics.",
+    "version": "DOI10.1109/TCAD.2021.3079268 author accepted PDF"
+  },
+  {
+    "id": "R2-S04",
+    "title": "Pinned OpenROAD checker worker and report entrypoints",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/src/drt/src/gc/FlexGC_main.cpp",
+    "source_type": "source_code",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T04:33:47.240550+00:00",
+    "locator": "Raw1-based FlexGC_main.cpp851\u2013875,1516\u20131525,4021\u20134058; FlexGC.h45\u201381; TritonRoute.cpp1089\u20131108",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-B4-004",
+      "CLM-B4-005"
+    ],
+    "limitations": "Selected paths; no exhaustive rule coverage or functioning selective adapter established. Display-only out-of-range request disclosed in search-log. Source read, never compiled/executed.",
+    "version": "OpenROAD b16bda7e82721d10566ff7e2b68f1ff0be9f9e38",
+    "additional_urls": [
+      "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/src/drt/src/gc/FlexGC.h",
+      "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/src/drt/src/TritonRoute.cpp"
+    ]
+  },
+  {
+    "id": "R2-S05",
+    "title": "OpenDRC: An Efficient Open-Source Design Rule Checking Engine with Hierarchical GPU Acceleration",
+    "url": "https://zyh0911.github.io/assets/pdf/OpenDRC.pdf",
+    "source_type": "author_paper",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T04:33:47.240550+00:00",
+    "locator": "PDFp3 \u00a7IV-C",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-B4-009"
+    ],
+    "limitations": "Selected geometric pruning/reuse context; not kernel-level reproduction or same-machine comparison.",
+    "version": "Author PDF retrieved2026-10-16"
+  },
+  {
+    "id": "R2-S06",
+    "title": "Optimal Nonmyopic Value of Information in Graphical Models: Efficient Algorithms and Theoretical Limits",
+    "url": "https://www.ijcai.org/Proceedings/05/Papers/1154.pdf",
+    "source_type": "conference_primary",
+    "publication_date": "2005",
+    "retrieved_utc": "2026-10-16T04:33:47.240550+00:00",
+    "locator": "PDFp1 \u00a71; \u00a7\u00a72,5,8; rendered21\u201375,578\u2013607",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-R2-002"
+    ],
+    "limitations": "General conditional observation prior. Its graph assumptions/rewards/hardness do not become guarantees or saturation of this physical problem.",
+    "version": "IJCAI2005 proceedings"
+  },
+  {
+    "id": "R2-S07",
+    "title": "Initial Detailed Routing Contest at ISPD2019",
+    "url": "https://ispd.cc/contests/19/",
+    "source_type": "official_contest",
+    "publication_date": "2019",
+    "retrieved_utc": "2026-10-16T04:33:47.240550+00:00",
+    "locator": "Evaluation Program; Final Contest Result; Final Solution Files; rendered119\u2013140,154\u2013202",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-B4-010"
+    ],
+    "limitations": "Winner and final file descriptions inspected; no executable identity, data rights or local commercial license established.",
+    "version": "Current official archive retrieved2026-10-16"
+  },
+  {
+    "id": "R2-S08",
+    "title": "Shift left for more efficient block design and chip integration",
+    "url": "https://blogs.sw.siemens.com/calibre/2024/07/26/shift-left-for-more-efficient-block-design-and-chip-integration/",
+    "source_type": "vendor_primary",
+    "publication_date": "2024-07-26",
+    "retrieved_utc": "2026-10-16T04:33:47.240550+00:00",
+    "locator": "DRC error debugging integrated...; Optimize configuration...; rendered38\u201352",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-B4-007"
+    ],
+    "limitations": "Advertised regional checking and reusable HDB only; no independent measurements or inference of proprietary sibling-cache internals.",
+    "version": "Vendor article2024-07-26"
+  },
+  {
+    "id": "R2-S09",
+    "title": "ISPD26 Contest: Post-Placement Buffering and Sizing",
+    "url": "https://www.ispd.cc/contests/26/index.html",
+    "source_type": "official_contest",
+    "publication_date": "2026",
+    "retrieved_utc": "2026-10-16T04:33:47.240550+00:00",
+    "locator": "Page title and Resources, rendered1\u201319",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-B4-010"
+    ],
+    "limitations": "Stage/title only; no detailed-route winner audit implied.",
+    "version": "Official current page"
+  },
+  {
+    "id": "R2-S10",
+    "title": "Dr. CU pinned README",
+    "url": "https://raw.githubusercontent.com/cuhk-eda/dr-cu/3d81988d741da36d2612f3443165970e0125bccc/README.md",
+    "source_type": "source_documentation",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T04:33:47.240550+00:00",
+    "locator": "Raw1-based lines16\u201321 paper/support statement; 37\u201342 optional Innovus",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-B4-010"
+    ],
+    "limitations": "Maintainer claims consistency with ICCAD paper; not cryptographic correspondence with contest executable.",
+    "version": "3d81988d741da36d2612f3443165970e0125bccc"
+  },
+  {
+    "id": "R2-S11",
+    "title": "DRC-Aid: Design-Rule Correction via Agentic Framework utilizing Inference-Time Large Language Models",
+    "url": "https://arxiv.org/html/2607.22761v1",
+    "source_type": "author_preprint",
+    "publication_date": "2026-07",
+    "retrieved_utc": "2026-10-16T04:33:47.240550+00:00",
+    "locator": "\u00a7\u00a73.1\u20133.4 selected framework",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-B4-009"
+    ],
+    "limitations": "Agent/controller/verification is prior context; no code/runtime comparison. No agent or LLM allocation used here.",
+    "version": "arXiv2607.22761v1"
+  },
+  {
+    "id": "R2-S12",
+    "title": "AiEDA public repository README",
+    "url": "https://github.com/OSCC-Project/AiEDA",
+    "source_type": "source_documentation",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T04:33:47.240550+00:00",
+    "locator": "Rendered217\u2013238,280\u2013298,301\u2013324",
+    "access_level": "full",
+    "supported_claim_ids": [],
+    "limitations": "Readme only, mutable master not pinned; not proof of available faithful AiDRC model/channel config. Full iDATA release described as being prepared. No clone/build/data download.",
+    "version": "Retrieved2026-10-16; version unresolved"
+  }
+]

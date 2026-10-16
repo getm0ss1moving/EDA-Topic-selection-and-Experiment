@@ -1,0 +1,9 @@
+{
+  "role": "proposer",
+  "topic": "EDA-0009",
+  "batch_round": 2,
+  "assessment": "revise",
+  "execution_gate": "closed",
+  "requested_next_action": "independent_review",
+  "previous_proposal_release": "SUB-2e1f236a3f9a0f3f0b1c30016dc8ad8f2b235c94f980b0989b1d3e287588d85c"
+}

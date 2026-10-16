@@ -1,0 +1,113 @@
+{
+  "schema": 1,
+  "role": "verifier",
+  "actor_id": "ChatGPT-V04-PHYSICAL-B04-EDA-0009",
+  "session_id": "528a3cf1-ef60-44dd-8bc2-a6c1c6d4d5ba",
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "packet_sha256": "7470c82b696d066e5875843a07235c477dae9fa93ac903e9ed83bd7a14644986",
+  "job_id": "8d16e5c3-3088-40a5-8d77-4f35c3277577",
+  "read_releases": [
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-V04-PHYSICAL-B04-EDA-0009/jobs/8d16e5c3-3088-40a5-8d77-4f35c3277577/shared/predecessor/SUB-aeaba01af9a5b6128eec0673cea74b71dc559d2ba9bf7da096ebfaff8bdce21a",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-V04-PHYSICAL-B04-EDA-0009/jobs/8d16e5c3-3088-40a5-8d77-4f35c3277577/shared/predecessor/SUB-9354b850df73175a5f4764f21dc5b5e8d9204f7741e9c50dce06953c34e9f984",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-V04-PHYSICAL-B04-EDA-0009/jobs/8d16e5c3-3088-40a5-8d77-4f35c3277577/shared/predecessor/SUB-2ff252d0046e7fc9825c2748ba4109878fee23295c7c2855ffd64435aa2a8f06",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-V04-PHYSICAL-B04-EDA-0009/jobs/8d16e5c3-3088-40a5-8d77-4f35c3277577/shared/SUB-1995793c1627da4adba27cf9a355047e58ef3c0d8627137a33ff6fc81e76f89f",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-V04-PHYSICAL-B04-EDA-0009/jobs/8d16e5c3-3088-40a5-8d77-4f35c3277577/shared/SUB-0a2e35ef91c58e4b2996d388cfc700a70fdadcedbb429d5f020042aff979d525",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-V04-PHYSICAL-B04-EDA-0009/jobs/8d16e5c3-3088-40a5-8d77-4f35c3277577/shared/SUB-7e97f68607ffccc8e48853bfd2247e683998c8b4353be4e36eca19d4f14fd154"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0
+  },
+  "rules": {
+    "inputs": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "prompt.txt",
+        "policy/docs/ROLE-COMPLIANCE.md",
+        "policy/harness/VERIFIER.md"
+      ],
+      "limits": "Self-report only; not an OS/backend or unseen-action audit."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.md",
+        "verification.json"
+      ],
+      "limits": "Self-report only; not an OS/backend or unseen-action audit."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.md",
+        "verification.json"
+      ],
+      "limits": "Self-report only; not an OS/backend or unseen-action audit."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.md",
+        "verification.json"
+      ],
+      "limits": "Self-report only; not an OS/backend or unseen-action audit."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.md",
+        "verification.json"
+      ],
+      "limits": "Self-report only; not an OS/backend or unseen-action audit."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.md",
+        "verification.json"
+      ],
+      "limits": "Self-report only; not an OS/backend or unseen-action audit."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.md",
+        "verification.json"
+      ],
+      "limits": "Self-report only; not an OS/backend or unseen-action audit."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.md",
+        "verification.json"
+      ],
+      "limits": "Self-report only; not an OS/backend or unseen-action audit."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.md",
+        "verification.json"
+      ],
+      "limits": "Self-report only; not an OS/backend or unseen-action audit."
+    }
+  },
+  "operations": [
+    "First read exact JOB.json and prompt.txt before job-local policy listing/reads. No initial checkout/home discovery.",
+    "Read common policy and only verifier harness. Attempted policy/harnesses listing (nonexistent plural path); corrected to assigned policy/harness/VERIFIER.md. No foreign harness read.",
+    "Read current released pair, supplied predecessor proposal/challenge/verifier and released B4-R1 protocol audit; only selected files, not private logs. Current forecast explicitly exposed.",
+    "Public web source/search ledger in verification.json; temporary author PDF/text in ephemeral public-source directory removed on exit. urllib/pdftotext and selected raw-source reading; no external code execution.",
+    "Own bounded Fraction/accounting/DAG code and exact stdout publicly embedded in both verification files.",
+    "Own build_verification.py and release files written in assigned job; no checkout writes.",
+    "Trusted current input verify, proposer digest and task hash; trusted own freeze/verify then result.json. No PR/self-approval or role messaging."
+  ],
+  "incidents": [],
+  "observability": "Self-authored public activity ledger, not a complete tool trace or proof of absent undisclosed actions. Shared OS not adversarial isolation; historical disclosures remain in their released records."
+}

@@ -1,0 +1,176 @@
+{
+  "schema": 1,
+  "role": "proposer",
+  "actor_id": "ChatGPT-P04-PHYSICAL-B04-EDA-0009",
+  "session_id": "24989b4f-9381-471f-a32f-a8d8f7f685a1",
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "packet_sha256": "d1325387dd19dfe8d7766889b646835828c2ba6e6003bc803cb1c06d036f27de",
+  "job_id": "160d8ea6-72cf-42c6-8a4f-f503a8e08f88",
+  "read_releases": [
+    "SUB-2e1f236a3f9a0f3f0b1c30016dc8ad8f2b235c94f980b0989b1d3e287588d85c",
+    "SUB-8799913f1db1283e09646461628b8009a043423bf86ae40cb5a9c85eb7ec0042",
+    "SUB-f70b504c01235e69199f322b0bbd1ddec249af0289ea0e1883b1132758ddb6bf"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0
+  },
+  "rules": {
+    "inputs": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "prompt.txt",
+        "search-log.md identity/read order",
+        "policy/harness/PROPOSER.md"
+      ],
+      "limits": "Exact JOB/prompt read first, then supplied policy and own harness before external research. Released-only paths used; self-report cannot reveal unseen actions."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "read_releases",
+        "search-log.md",
+        "activity"
+      ],
+      "limits": "No messages/subagents/private/session/memory/checkout discovery used. Logical isolation is policy, not an adversarial OS boundary. Parent assignment descriptor is task transport, not scientific private content."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "release/ own allowlist",
+        "search-log.md analytical block",
+        "result.json"
+      ],
+      "limits": "Own release/job outputs and temporary authored script/source-reading scratch only. Frozen previous outputs unmodified."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "sources.json",
+        "search-log.md"
+      ],
+      "limits": "Actual web failures, successful urllib author access, source ranges/hashes, mutable README and manuscript/version/channel limits disclosed. Selected pages do not mean exhaustive method/code audit."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "proposal.md claim ledger",
+        "forecast.json",
+        "search-log.md code/stdout hashes"
+      ],
+      "limits": "Self-authored finite model only, no EDA measurement. C/F equality deliberately uses common routine, no independent implementation claim. Historical counts not reverified."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "experiment-consent.json",
+        "tasklist.md"
+      ],
+      "limits": "Own pending status only; no dual agreement/acceptance/abandonment inherited or invented."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "activity",
+        "search-log.md",
+        "tasklist.md EXP-100"
+      ],
+      "limits": "No new build/EDA/training/remote/paid allocation invoked. Read-only network source retrieval and tiny authored Fraction analysis only; prospective caps are specifications, not authorization."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "direction-control.json",
+        "responses.md"
+      ],
+      "limits": "Same fixed sibling/context/cost/closure anchor. Drift0/0 is author assessment awaiting independent verifier, not confirmed merit."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "trusted policy/scripts/role_submission.py freeze/verify",
+        "workflow.json",
+        "result.json"
+      ],
+      "limits": "Own self-freeze and result, no self-approval/merge. Full-repository validation/PR transport delegated by assignment to coordinator; local freeze validates form, not truth."
+    }
+  },
+  "operations": [
+    {
+      "kind": "read",
+      "references": [
+        "JOB.json",
+        "prompt.txt",
+        "policy/docs/CHARTER.md",
+        "WORKFLOW.md",
+        "EVIDENCE.md",
+        "ISOLATION.md",
+        "CODEX-AUTOMATION.md",
+        "ROLE-COMPLIANCE.md",
+        "INNOVATION-BATCH-0004.md",
+        "INNOVATION-STRATEGY.md",
+        "policy/harness/PROPOSER.md",
+        "policy/config/research-brief.json",
+        "policy/domains/D04/brief.json",
+        "policy/docs/SELF-SUBMISSION.md"
+      ],
+      "detail": "First exact assigned descriptors; policy-only discovery found harness after a nonexistent policy/harnesses path; no checkout/home scan."
+    },
+    {
+      "kind": "read_released",
+      "references": [
+        "SUB-2e1f236a3f9a0f3f0b1c30016dc8ad8f2b235c94f980b0989b1d3e287588d85c",
+        "SUB-8799913f1db1283e09646461628b8009a043423bf86ae40cb5a9c85eb7ec0042",
+        "SUB-f70b504c01235e69199f322b0bbd1ddec249af0289ea0e1883b1132758ddb6bf"
+      ],
+      "detail": "Own previous proposal/direction/plan/tasklist/sources/forecast; current released verification and exactly its adjudicated challenge. Predecessor directories were filename-listed within released shared area, not opened for additional evidence."
+    },
+    {
+      "kind": "external_read",
+      "references": [
+        "search-log.md",
+        "sources.json"
+      ],
+      "detail": "Fresh queries, public primary methods/official pages/pinned raw source. Author PDF/source bytes in own external temp directories; full copies excluded from release. No downloaded source execution."
+    },
+    {
+      "kind": "own_analysis",
+      "references": [
+        "search-log.md REPLAY-CODE-BEGIN",
+        "analysis.stdout.txt"
+      ],
+      "detail": "Executed exact authored96-case finite model, accounting and DAG assertions; code/stdout/hashes public. No physical/training/build."
+    },
+    {
+      "kind": "write",
+      "references": [
+        "release/ all role-owned files",
+        "/tmp/eda0009_b4r2_build.py",
+        "result.json"
+      ],
+      "detail": "Own generation script and release writes; no foreign files edited."
+    },
+    {
+      "kind": "validate_and_freeze",
+      "references": [
+        "search-log.md replay command",
+        "policy/scripts/role_submission.py",
+        "policy/scripts/role_compliance.py"
+      ],
+      "detail": "Reproduce released exact block, mechanically check own ledger and content, trusted freeze and verify. Full-repository validator not available in standalone job and checkout not accessed."
+    }
+  ],
+  "incidents": [
+    {
+      "classification": "operational_note",
+      "detail": "Read-only source excerpt loop requested raw line4064 of4062-line file and caught IndexError after printing existing bytes/lines. Source hashes retained; no claim about nonexistent lines. This is not foreign exposure or an executed EDA experiment."
+    }
+  ],
+  "observability": "Self-authored public activity ledger, not a complete tool trace or evidence of absent undisclosed actions."
+}

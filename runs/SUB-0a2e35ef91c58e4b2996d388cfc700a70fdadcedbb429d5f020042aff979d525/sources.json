@@ -1,0 +1,208 @@
+[
+  {
+    "id": "C2-S01",
+    "title": "AiDRC author manuscript",
+    "url": "https://ieda.oscc.cc/res/papers/25-TODAES-AiDRC.pdf",
+    "source_type": "author_manuscript",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T04:41:38.290386+00:00",
+    "locator": "PDF page13 Fig11 and adjacent checking-model paragraph; PDF26 final-check paragraph",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "OBJ-1001 response"
+    ],
+    "limitations": "Author manuscript has placeholder publication date; final DOI correspondence unresolved. Browser fetch timed out; urllib and pdftotext succeeded; only selected pages read. SHA256 ac23635ae04e506a0e83637397b52d1fb65d90759d116b1f20159d9e4674f690."
+  },
+  {
+    "id": "C2-S02",
+    "title": "Optimal Nonmyopic Value of Information in Graphical Models: Efficient Algorithms and Theoretical Limits",
+    "url": "https://www.ijcai.org/Proceedings/05/Papers/1154.pdf",
+    "source_type": "conference_paper",
+    "publication_date": "2005",
+    "retrieved_utc": "2026-10-16T04:41:38.290386+00:00",
+    "locator": "Section2 PDF1-2, rendered63-131: conditional rewards and separate cost penalties/budgets",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "OBJ-1101"
+    ],
+    "limitations": "Selected definition passages only; chain-model guarantees not transferred. The off-support witness is own reasoning, not attributed to the paper."
+  },
+  {
+    "id": "C2-S03",
+    "title": "OpenROAD FlexGC_main.cpp",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/src/drt/src/gc/FlexGC_main.cpp",
+    "source_type": "source_code",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T04:41:38.290386+00:00",
+    "locator": "Raw one-based851-875 checkMetalSpacing;1516-1525 checkMetalShape_minArea;4021-4062 main",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "interface assessment"
+    ],
+    "limitations": "Pinned b16bda7e82721d10566ff7e2b68f1ff0be9f9e38; SHA2564770ffdc8f1ac0fd13e69dac1a0b75c5dbb795bf7c043be5ed2b8294cb43a517. Selected raw source only, not built or executed; no whole-engine coverage assertion."
+  },
+  {
+    "id": "C2-S04",
+    "title": "Dr. CU2.0: A Scalable Detailed Routing Framework with Correct-by-Construction Design Rule Satisfaction",
+    "url": "https://chengengjie.github.io/papers/C12-ICCAD19-DrCU2.pdf",
+    "source_type": "author_paper",
+    "publication_date": "2019",
+    "retrieved_utc": "2026-10-16T04:41:38.290386+00:00",
+    "locator": "PDF4 SectionIII-C.2, rendered323-353 (continuation on PDF5)",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "contest and nearest-method assessment"
+    ],
+    "limitations": "Selected pessimistic lookup method; no reproduced performance or exact winner-binary equivalence. Related pinned README below."
+  },
+  {
+    "id": "C2-S04a",
+    "title": "DrCU pinned README",
+    "url": "https://raw.githubusercontent.com/cuhk-eda/dr-cu/3d81988d741da36d2612f3443165970e0125bccc/README.md",
+    "source_type": "source_documentation",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T04:41:38.290386+00:00",
+    "locator": "Raw16-21 ICCAD2019 correspondence;37-42 dependencies",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "contest provenance"
+    ],
+    "limitations": "Repository asserts paper correspondence; independent executable identity not established. No build."
+  },
+  {
+    "id": "C2-S04b",
+    "title": "DrCU PoorViaMap.cpp",
+    "url": "https://raw.githubusercontent.com/cuhk-eda/dr-cu/3d81988d741da36d2612f3443165970e0125bccc/src/db/PoorViaMap.cpp",
+    "source_type": "source_code",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T04:41:38.290386+00:00",
+    "locator": "Raw1-44 createViaData/addViaData",
+    "access_level": "full",
+    "supported_claim_ids": [],
+    "limitations": "SHA256e2bc2059cc28c17c930d52988dd5af9e8e2e0998b4de7678b39c035b4ace94a5. Selected map construction; no pessimistic-query routine found in this file. No execution or claim of complete audit."
+  },
+  {
+    "id": "C2-S05",
+    "title": "EvoDRC: A Self-Evolving Agentic Framework for Automated DRC Violation Repair",
+    "url": "https://arxiv.org/html/2607.20019v1",
+    "source_type": "preprint",
+    "publication_date": "2026-07-22",
+    "retrieved_utc": "2026-10-16T04:41:38.290386+00:00",
+    "locator": "Section3.2 Table2, rendered127-138;3.3 rendered139-143;3.4.2 rendered150-152",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "demand and nearest-method assessment"
+    ],
+    "limitations": "Selected method HTML. Different adaptive/KLayout workflow; no reported performance reproduced or transferred; no fixed-sibling reuse equivalence established."
+  },
+  {
+    "id": "C2-S05a",
+    "title": "EvoDRC public README",
+    "url": "https://github.com/ASU-VDA-Lab/EvoDRC",
+    "source_type": "source_documentation",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T04:41:38.290386+00:00",
+    "locator": "README Table of content and Running EvoDRC; rendered209-216 and associated running section",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "access/dependency lead"
+    ],
+    "limitations": "Dynamic main, not pinned; documentation only. No agent histories, benchmark data, credentials, build or provider invocation accessed. No implementation-equivalence claim."
+  },
+  {
+    "id": "C2-S06",
+    "title": "Rule2DRC: Benchmarking LLM Agents for DRC Script Synthesis with Execution-Guided Test Generation",
+    "url": "https://arxiv.org/html/2605.15669v1",
+    "source_type": "preprint",
+    "publication_date": "2026-05-15",
+    "retrieved_utc": "2026-10-16T04:41:38.290386+00:00",
+    "locator": "Abstract rendered77-80",
+    "access_level": "abstract",
+    "supported_claim_ids": [
+      "adjacent formulation exclusion"
+    ],
+    "limitations": "Script discrimination/task statement only. No full-method or source-code equivalence judgment."
+  },
+  {
+    "id": "C2-S07",
+    "title": "Initial Detailed Routing Contest at ISPD2019",
+    "url": "https://ispd.cc/contests/19/",
+    "source_type": "official_contest",
+    "publication_date": "2019",
+    "retrieved_utc": "2026-10-16T04:41:38.290386+00:00",
+    "locator": "Evaluation Script rendered113-117; Final Contest Result154-159; Final Solution Files177-191",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "contest assessment"
+    ],
+    "limitations": "Winner identity and published solution/report categories; no archive download, executable inspection or Innovus rights assumed."
+  },
+  {
+    "id": "C2-S08",
+    "title": "ISPD25 Performance-Driven Large Scale Global Routing",
+    "url": "https://www.ispd.cc/contests/25/index.html",
+    "source_type": "official_contest",
+    "publication_date": "2025",
+    "retrieved_utc": "2026-10-16T04:41:38.290386+00:00",
+    "locator": "Page title and Contest Winners list",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "contest scope"
+    ],
+    "limitations": "Official search-return page content; stage and winner listing only, not winner methodology."
+  },
+  {
+    "id": "C2-S09",
+    "title": "ISPD26 Post-Placement Buffering and Sizing",
+    "url": "https://www.ispd.cc/contests/26/index.html",
+    "source_type": "official_contest",
+    "publication_date": "2026",
+    "retrieved_utc": "2026-10-16T04:41:38.290386+00:00",
+    "locator": "Title and Resources; rendered1-19",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "contest scope"
+    ],
+    "limitations": "Page inspected; task differs. No newest-contest absence claim or winner implementation audit."
+  },
+  {
+    "id": "C2-S10",
+    "title": "DRC-Aid: Design-Rule Correction via Agentic Framework utilizing Inference-Time Large Language Models",
+    "url": "https://arxiv.org/html/2607.22761v1",
+    "source_type": "preprint",
+    "publication_date": "2026-07-23",
+    "retrieved_utc": "2026-10-16T04:41:38.290386+00:00",
+    "locator": "Sections3.3.1-3.4 rendered189-196;4.3 table note273-274",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "nearest-method and fairness assessment"
+    ],
+    "limitations": "Selected verified-search/state memory passages. Costs are success-conditional in source; no unconditional efficiency comparison adopted; no binary execution."
+  },
+  {
+    "id": "C2-S11",
+    "title": "Shift left for more efficient block design and chip integration",
+    "url": "https://blogs.sw.siemens.com/calibre/2024/07/26/shift-left-for-more-efficient-block-design-and-chip-integration/",
+    "source_type": "vendor_description",
+    "publication_date": "2024-07-26",
+    "retrieved_utc": "2026-10-16T04:41:38.290386+00:00",
+    "locator": "DRC error debugging integrated in the design layout environment; Optimize configuration sections rendered38-52",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "industry and demand assessment"
+    ],
+    "limitations": "Advertised capabilities only, not measured superiority or unknown commercial internal semantics."
+  },
+  {
+    "id": "C2-L01",
+    "title": "Adaptive and incremental circuit design implementation",
+    "url": "https://patents.google.com/patent/US20250232106A1/en",
+    "source_type": "unavailable_primary_lead",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T04:41:38.290386+00:00",
+    "locator": "Primary access failed; secondary Justia search result only",
+    "access_level": "metadata",
+    "supported_claim_ids": [],
+    "limitations": "Discovery lead from2026 incremental/cache query. No primary patent claim or novelty exclusion used."
+  }
+]

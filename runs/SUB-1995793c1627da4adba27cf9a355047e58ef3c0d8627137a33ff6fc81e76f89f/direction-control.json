@@ -1,0 +1,77 @@
+{
+  "state": "continue",
+  "anchor": {
+    "problem": "Choose which fixed local detailed-route repair alternatives to exactly validate before a deadline while retaining complete rule/connectivity outcomes.",
+    "engineering_user": "Digital physical-design route-closure engineer",
+    "downstream_need": "Reduce time to complete connected engine-DRC-clean route while preserving post-route timing at fixed design/technology conditions.",
+    "causal_mechanism": "Feed context-complete cross-candidate exact-obligation sharing and its discovery cost into bounded subset selection, rather than independently scoring immediate repair value and isolated checking cost.",
+    "mechanism_invariants": [
+      "Same canonical routed checkpoint and <=16 fixed same-net wire/via repair candidates",
+      "Complete predicate-context and negative-range dependencies; unsupported rules full fallback or UNKNOWN",
+      "Exact acceptance owned by pinned checker and connectivity oracle; predictor schedules only",
+      "Equal information/candidate/cache/fallback and full costs against strong conventional selection",
+      "Primary gain must survive full downstream closure/timing checks; cache hits alone insufficient"
+    ],
+    "forbidden_pivots": [
+      "Replacing subset-selection contribution with generic caching or a hash log",
+      "Claiming agent count or unified-model labels as novelty",
+      "Moving to placement/sizing or pure hotspot prediction under this ID",
+      "Replacing physical closure need with toy reward/cache-hit optimization"
+    ]
+  },
+  "penalties": {
+    "combination_drift": {
+      "score": 0,
+      "rationale": "Incidence/cost-informed fixed-subset decision retained. Lookahead is conventional repair available to all; no contribution substituted with its name.",
+      "evidence_refs": [
+        "proposal.md",
+        "responses.md"
+      ]
+    },
+    "demand_drift": {
+      "score": 0,
+      "rationale": "Same complete checked route/timing endpoint; analytic utility/counts never promoted to physical benefit.",
+      "evidence_refs": [
+        "proposal.md",
+        "industry-gap.md"
+      ]
+    },
+    "total": 0
+  },
+  "revision_assessment": {
+    "preserves_problem": true,
+    "preserves_engineering_need": true,
+    "preserves_causal_mechanism": true,
+    "changes": [
+      "Map AiDRC author method and final DRC as prior; preserve fixed candidates",
+      "Repair myopic stopping with equally available bounded conditional planning",
+      "Expose exact C/F null and paid materialization/admin boundary",
+      "Lock threshold/economics before census and arm results"
+    ],
+    "reason": "Anchor-preserving responses to adjudicated OBJ-1001/1002/1003; new claims require fresh checking; no accepted experiment."
+  },
+  "abandonment": {
+    "decision_id": null,
+    "grounds": [],
+    "rationale": null,
+    "evidence_refs": [],
+    "consents": {
+      "proposer": {
+        "session_id": null,
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      },
+      "challenger": {
+        "session_id": null,
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      }
+    },
+    "successor_topic_id": null,
+    "resurrection_conditions": [
+      "Independent source equivalence resolution and narrow demand/physical-work evidence under future allocation"
+    ]
+  }
+}

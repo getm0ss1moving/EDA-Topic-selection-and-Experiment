@@ -1,0 +1,80 @@
+[
+  {
+    "clean_checkpoint": {
+      "closure": null,
+      "history": [
+        "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-P04-PHYSICAL-B04-EDA-0009/jobs/b665751a-26ed-454d-aa29-9c830d0646db/submissions/SUB-2e1f236a3f9a0f3f0b1c30016dc8ad8f2b235c94f980b0989b1d3e287588d85c",
+        "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-C04-PHYSICAL-B04-EDA-0009/jobs/ff954ccd-dbf6-4fe4-b310-ccd97e1bd619/submissions/SUB-8799913f1db1283e09646461628b8009a043423bf86ae40cb5a9c85eb7ec0042",
+        "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-V04-PHYSICAL-B04-EDA-0009/jobs/32fa1fec-2628-4de0-abbb-0084fbdd6a99/submissions/SUB-f70b504c01235e69199f322b0bbd1ddec249af0289ea0e1883b1132758ddb6bf"
+      ],
+      "last_scientific_decision": "revise",
+      "latest": {
+        "challenger": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-C04-PHYSICAL-B04-EDA-0009/jobs/ff954ccd-dbf6-4fe4-b310-ccd97e1bd619/submissions/SUB-8799913f1db1283e09646461628b8009a043423bf86ae40cb5a9c85eb7ec0042",
+        "proposer": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-P04-PHYSICAL-B04-EDA-0009/jobs/b665751a-26ed-454d-aa29-9c830d0646db/submissions/SUB-2e1f236a3f9a0f3f0b1c30016dc8ad8f2b235c94f980b0989b1d3e287588d85c",
+        "verifier": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-V04-PHYSICAL-B04-EDA-0009/jobs/32fa1fec-2628-4de0-abbb-0084fbdd6a99/submissions/SUB-f70b504c01235e69199f322b0bbd1ddec249af0289ea0e1883b1132758ddb6bf"
+      },
+      "phase": "proposer",
+      "round": 1,
+      "status": "researching"
+    },
+    "domain": "D04",
+    "frozen_attempts": [
+      "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-V04-PHYSICAL-B04-EDA-0009/jobs/8d16e5c3-3088-40a5-8d77-4f35c3277577/submissions/SUB-8b5c3aae66c746da57dc5c31dc641ac85467ea5d2c20bff681b2b2c68773deb6"
+    ],
+    "id": "INCIDENT-014adc84-cd88-42e3-8cc5-b4fd6294d7ef",
+    "job": {
+      "attempt": 0,
+      "role": "verifier",
+      "work": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-V04-PHYSICAL-B04-EDA-0009/jobs/8d16e5c3-3088-40a5-8d77-4f35c3277577"
+    },
+    "note": "Preserve disclosure; no private transcript or exposed content is copied. Fresh full-cycle replacement required.",
+    "old_seats": {
+      "challenger": {
+        "actor_id": "ChatGPT-C04-PHYSICAL-B04-EDA-0009",
+        "base": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-C04-PHYSICAL-B04-EDA-0009",
+        "inbox": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-C04-PHYSICAL-B04-EDA-0009/inbox",
+        "packet": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-C04-PHYSICAL-B04-EDA-0009/packet",
+        "packet_sha256": "0b3aeb2371a0f6f71666f79006f2941bb10035391bcffef4cc2f7a5906975005",
+        "platform": "OpenAI Codex",
+        "session_id": "ee82dfaa-9410-4c12-9e7b-cc1dde065bf4"
+      },
+      "proposer": {
+        "actor_id": "ChatGPT-P04-PHYSICAL-B04-EDA-0009",
+        "base": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-P04-PHYSICAL-B04-EDA-0009",
+        "inbox": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-P04-PHYSICAL-B04-EDA-0009/inbox",
+        "packet": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-P04-PHYSICAL-B04-EDA-0009/packet",
+        "packet_sha256": "d1325387dd19dfe8d7766889b646835828c2ba6e6003bc803cb1c06d036f27de",
+        "platform": "OpenAI Codex",
+        "session_id": "24989b4f-9381-471f-a32f-a8d8f7f685a1"
+      },
+      "verifier": {
+        "actor_id": "ChatGPT-V04-PHYSICAL-B04-EDA-0009",
+        "base": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-V04-PHYSICAL-B04-EDA-0009",
+        "inbox": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-V04-PHYSICAL-B04-EDA-0009/inbox",
+        "packet": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-V04-PHYSICAL-B04-EDA-0009/packet",
+        "packet_sha256": "7470c82b696d066e5875843a07235c477dae9fa93ac903e9ed83bd7a14644986",
+        "platform": "OpenAI Codex",
+        "session_id": "528a3cf1-ef60-44dd-8bc2-a6c1c6d4d5ba"
+      }
+    },
+    "reason": "Unreleased input disclosed; stop and preserve evidence, do not erase disclosure",
+    "releases": {
+      "challenger": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-C04-PHYSICAL-B04-EDA-0009/jobs/eb035039-7765-426a-9ccd-159a19e57851/submissions/SUB-0a2e35ef91c58e4b2996d388cfc700a70fdadcedbb429d5f020042aff979d525",
+      "proposer": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-P04-PHYSICAL-B04-EDA-0009/jobs/160d8ea6-72cf-42c6-8a4f-f503a8e08f88/submissions/SUB-1995793c1627da4adba27cf9a355047e58ef3c0d8627137a33ff6fc81e76f89f",
+      "verifier": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-V04-PHYSICAL-B04-EDA-0009/jobs/32fa1fec-2628-4de0-abbb-0084fbdd6a99/submissions/SUB-f70b504c01235e69199f322b0bbd1ddec249af0289ea0e1883b1132758ddb6bf"
+    },
+    "replacement_sessions": {
+      "challenger": "1f323593-6e87-4aef-b624-b0c134c28632",
+      "proposer": "8492d4d4-8b51-4d76-9309-7af2622f4674",
+      "verifier": "802c4f6c-18f4-4dc0-adf8-9deb15979b2c"
+    },
+    "retained_snapshots": [
+      "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/incidents/INCIDENT-014adc84-cd88-42e3-8cc5-b4fd6294d7ef/releases/SUB-0a2e35ef91c58e4b2996d388cfc700a70fdadcedbb429d5f020042aff979d525",
+      "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/incidents/INCIDENT-014adc84-cd88-42e3-8cc5-b4fd6294d7ef/releases/SUB-1995793c1627da4adba27cf9a355047e58ef3c0d8627137a33ff6fc81e76f89f",
+      "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/incidents/INCIDENT-014adc84-cd88-42e3-8cc5-b4fd6294d7ef/releases/SUB-f70b504c01235e69199f322b0bbd1ddec249af0289ea0e1883b1132758ddb6bf",
+      "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/incidents/INCIDENT-014adc84-cd88-42e3-8cc5-b4fd6294d7ef/releases/SUB-8b5c3aae66c746da57dc5c31dc641ac85467ea5d2c20bff681b2b2c68773deb6"
+    ],
+    "status": "replacement_prepared",
+    "topic": "EDA-0009"
+  }
+]

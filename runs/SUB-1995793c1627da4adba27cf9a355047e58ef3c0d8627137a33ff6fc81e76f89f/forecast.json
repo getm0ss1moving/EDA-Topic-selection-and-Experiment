@@ -1,0 +1,19 @@
+{
+  "kind": "forecast_not_measurement",
+  "metric": "time to complete named-engine-report-clean connected repair with extracted timing guards",
+  "unit": "seconds",
+  "baseline_source": "No measured physical baseline; arms specified in experiment-plan.md",
+  "direction": "lower elapsed time with preserved complete-result quality",
+  "pessimistic": null,
+  "base": null,
+  "optimistic": null,
+  "confidence": null,
+  "assumptions": [
+    "Representative fixed repair pools and exact selective interface become available",
+    "Residual sharing after the identical charged K0 survives context construction/fallback",
+    "Candidate-slot acquisition improves over equally informed conventional lazy/VOI",
+    "Actual compute/data rights, thresholds and matching exact-task consents exist before execution"
+  ],
+  "calibration_plan": "EXP-106 locks meaningful economics/endpoint on separate calibration before EXP-103 census and EXP-105 arms; EXP-107 held-out. All physical magnitude/confidence fields remain null.",
+  "observations": "B4-R2 exact96-setting decision model and normalized work fixture are own analytical observations, not physical measurements or calibration."
+}

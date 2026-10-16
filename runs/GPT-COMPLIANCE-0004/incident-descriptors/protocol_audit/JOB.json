@@ -1,0 +1,37 @@
+{
+  "actor_id": "ChatGPT-B04-PROTOCOL-D04-QUARANTINED-R2",
+  "batch_round": 2,
+  "compliance_required": true,
+  "domain": "D04",
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "job_id": "0cc55c88-ab3a-49a4-bfb0-37bd865e1d16",
+  "models": {
+    "challenger": {
+      "effort": "low",
+      "model": "gpt-6-astra"
+    },
+    "proposer": {
+      "effort": "high",
+      "model": "gpt-6.1-sol"
+    },
+    "verifier": {
+      "effort": "low",
+      "model": "gpt-6.1-sol"
+    }
+  },
+  "packet_sha256": "f4e51c994dc01539746602e44993c41ec6361a6b1677f5e127a76398028e79f3",
+  "purpose": "protocol_audit",
+  "released_inputs": [
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/incident-audits/INCIDENT-014adc84-cd88-42e3-8cc5-b4fd6294d7ef/jobs/0cc55c88-ab3a-49a4-bfb0-37bd865e1d16/shared/SUB-0a2e35ef91c58e4b2996d388cfc700a70fdadcedbb429d5f020042aff979d525",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/incident-audits/INCIDENT-014adc84-cd88-42e3-8cc5-b4fd6294d7ef/jobs/0cc55c88-ab3a-49a4-bfb0-37bd865e1d16/shared/SUB-1995793c1627da4adba27cf9a355047e58ef3c0d8627137a33ff6fc81e76f89f",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/incident-audits/INCIDENT-014adc84-cd88-42e3-8cc5-b4fd6294d7ef/jobs/0cc55c88-ab3a-49a4-bfb0-37bd865e1d16/shared/SUB-8b5c3aae66c746da57dc5c31dc641ac85467ea5d2c20bff681b2b2c68773deb6"
+  ],
+  "reviewed_releases": {
+    "challenger": "SUB-0a2e35ef91c58e4b2996d388cfc700a70fdadcedbb429d5f020042aff979d525",
+    "proposer": "SUB-1995793c1627da4adba27cf9a355047e58ef3c0d8627137a33ff6fc81e76f89f",
+    "verifier": "SUB-8b5c3aae66c746da57dc5c31dc641ac85467ea5d2c20bff681b2b2c68773deb6"
+  },
+  "role": "verifier",
+  "session_id": "488f31cf-7b0c-40a6-a3c7-787ad698af67",
+  "topic": "EDA-0009"
+}
