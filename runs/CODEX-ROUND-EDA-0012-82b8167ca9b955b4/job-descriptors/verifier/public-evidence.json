@@ -1,0 +1,18 @@
+{
+  "purpose": "independent_scientific_followup",
+  "recorded_at_utc": "2026-10-16T06:09:01.904359+00:00",
+  "status": "unadjudicated_allegation_not_established_fact",
+  "intended_receiver": "D04 final-cycle scientific verifier only",
+  "pr": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/79",
+  "thread_id": "PRRT_kwDOVElOAM6tFKVN",
+  "comments": [
+    {
+      "id": "PRRC_kwDOVElOAM7_yQoY",
+      "body": "**<sub><sub>![P2 Badge](https://img.shields.io/badge/P2-yellow?style=flat)</sub></sub>  Replace the invalid OpenROAD line ranges**\n\nAnyone reopening C3-CLM-001 at this pinned URL cannot follow the recorded locator: [the referenced `TritonRoute.cpp`](https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/src/drt/src/TritonRoute.cpp) has only 1,388 lines, so the range ending at 1,450 and the challenge's claimed 1,447\u20131,448 file-open check do not exist; the relevant `getDRCMarkers` and `reportDRC` code is instead around lines 980\u20131064 and 1295\u20131385. Because the verifier repeats these offsets, correct the source locator and every downstream citation, or pin the revision whose bytes actually match the reported ranges.\n\nAGENTS.md reference: [AGENTS.md:L11-L11](https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/blob/5646b85f85d77abddd1b91db2272e5a71ec2fa5c/AGENTS.md#L11-L11)\n\nUseful? React with \ud83d\udc4d\u00a0/ \ud83d\udc4e.\n\n<!-- codex-code-review-finding:v1 -->",
+      "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/79#discussion_r4291365400",
+      "body_sha256": "dcd44e809704ae0e033c40f004b89724a9dc00fbfb7c11b151d8a0cff2a53bc8"
+    }
+  ],
+  "requested_check": "Independently compare the exact pinned raw bytes, hashes, raw one-based versus rendered line numbering, current predecessor C3-CLM-001 and its verifier treatment. Check locator validity and underlying entailment separately. Do not assume the reviewer is right or wrong. Record HIST-B04-R3-LOCATOR in historical_public_review_adjudications with verdict, source locator, limits and reversal conditions. Only the current challenger release belongs in adjudicated_challenger_releases.",
+  "boundary": "This released public allegation is evidence for the assigned verifier, not a coordinator scientific vote or permission to inspect private scratch/transcripts. Other scientific roles do not receive it before adjudication. Preserve all old frozen bytes."
+}

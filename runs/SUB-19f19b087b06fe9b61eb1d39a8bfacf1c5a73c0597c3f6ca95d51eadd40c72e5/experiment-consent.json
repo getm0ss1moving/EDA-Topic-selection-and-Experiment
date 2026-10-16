@@ -1,0 +1,7 @@
+{
+  "session_id": "09490ac3-66e9-4eb1-8036-f866865a6712",
+  "decision": "revision_requested",
+  "signed_revision": "SUB-4cff54ad61aa12a294a808f36ba47524b43e6642cf97d8d49571572141c2a45f",
+  "tasklist_sha256": "1786f88ab4f09bbded99d69ecc1b26c58338bba2b05e416bfe3ed5ffe13db817",
+  "rationale": "No agreeing consent. OBJ-1201 domain-causality controls, OBJ-1202 distinct model/control lock, and OBJ-1203 observer/dependency/consent bindings remain; actual allocation is absent. Final batch cycle: park, no fifth-cycle authorization."
+}

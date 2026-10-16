@@ -1,0 +1,257 @@
+[
+  {
+    "access_level": "full",
+    "id": "S01",
+    "limitations": "Full bytes retrieved; selected option only supports possible displacement/QoR connection, not prevalence, controlled gain, full implementation or license completeness.",
+    "locator": "Raw one-based README.md87; current rendered docs option table also inspected.",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T06:00:21.867286+00:00",
+    "sha256": "0b463c00fe7c3bbbcdf9534d6378cf67ba42ebe7a19139fc6094336eb6a3fc83",
+    "source_type": "pinned_official_documentation",
+    "supported_claim_ids": [
+      "CLM-1201"
+    ],
+    "title": "OpenROAD Clock Tree Synthesis documentation",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/src/cts/README.md",
+    "version": "b16bda7e82721d10566ff7e2b68f1ff0be9f9e38"
+  },
+  {
+    "access_level": "full",
+    "id": "S02",
+    "limitations": "Full file read into memory; selected ranges inspected. Raw2140 lines differ from web rendered2001; only raw locators asserted. No execution/build, complete call graph, detailed-placement review or proof of a stock defect.",
+    "locator": "Raw one-based184-244 preSinkClustering;1190-1203 construction/legalize call sequence.",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T06:00:21.867286+00:00",
+    "sha256": "2917f4b094da699f4ab83a278fb6659e74803e6a0090f1848969a6a7328bfcb4",
+    "source_type": "pinned_source_code",
+    "supported_claim_ids": [
+      "CLM-1202"
+    ],
+    "title": "OpenROAD HTreeBuilder.cpp",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/src/cts/src/HTreeBuilder.cpp",
+    "version": "b16bda7e82721d10566ff7e2b68f1ff0be9f9e38"
+  },
+  {
+    "access_level": "full",
+    "id": "S03",
+    "limitations": "Selected functions inspected; existing occupancy and blockage handling explicitly acknowledged. Other final placement behavior/footprint overlap not established by this narrow read. No defect/performance assertion.",
+    "locator": "Raw one-based157-225 legalizeOneBuffer;228-266 checkLegalityLoc;100-118 special legality.",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T06:00:21.867286+00:00",
+    "sha256": "52ab5e4f8f317ce9848d5795305c19bd776ec95f26a6b8165e1fd23363cbe6b4",
+    "source_type": "pinned_source_code",
+    "supported_claim_ids": [
+      "CLM-1202"
+    ],
+    "title": "OpenROAD TreeBuilder.cpp",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/src/cts/src/TreeBuilder.cpp",
+    "version": "b16bda7e82721d10566ff7e2b68f1ff0be9f9e38"
+  },
+  {
+    "access_level": "full",
+    "id": "S04",
+    "limitations": "Full6-page PDF accessible; selected formulation/partition pipeline inspected, not all proofs/results. No numerical performance reproduced; no assumption of public28nm data or complete source/license. Find(no legal) is search absence only.",
+    "locator": "Physical PDF p4 section3.1-3.2, rendered406-512; p1 bibliographic DOI10.1145/3649329.3658243.",
+    "publication_date": "2024-06-23",
+    "retrieved_utc": "2026-10-16T06:00:21.867286+00:00",
+    "source_type": "author_paper",
+    "supported_claim_ids": [
+      "CLM-1204"
+    ],
+    "title": "Toward Controllable Hierarchical Clock Tree Synthesis with Skew-Latency-Load Tree",
+    "url": "https://www.cse.cuhk.edu.hk/~byu/papers/C212-DAC2024-iCTS.pdf",
+    "version": "DAC2024 author PDF"
+  },
+  {
+    "access_level": "full",
+    "id": "S05",
+    "limitations": "Selected primary disclosure inspected; broad learned clustering/checker is prior. No product deployment, legal validity, claim-scope opinion, full source code or independent performance verification.",
+    "locator": "Rendered Definitions140-163; title/date35; model predicts cluster count followed by timing evaluations.",
+    "publication_date": "2023-05-09",
+    "retrieved_utc": "2026-10-16T06:00:21.867286+00:00",
+    "source_type": "published_patent",
+    "supported_claim_ids": [
+      "CLM-1204"
+    ],
+    "title": "Machine-learning based clustering for clock tree synthesis",
+    "url": "https://patents.google.com/patent/US11645441B1/en",
+    "version": "US11645441B1"
+  },
+  {
+    "access_level": "full",
+    "id": "S06",
+    "limitations": "Selected English machine-translated primary disclosure inspected. Translation/source-claim/legal limits; no code, reproduced gain or direct full-footprint feasibility assertion. Generic coordinated relocation/insertion is not new.",
+    "locator": "Rendered abstract122-123; description154-166 and170-173; priority/publication metadata.",
+    "publication_date": "2026-08-07",
+    "retrieved_utc": "2026-10-16T06:00:21.867286+00:00",
+    "source_type": "published_patent",
+    "supported_claim_ids": [
+      "CLM-1204"
+    ],
+    "title": "Clock tree synthesis method based on clustering and reinforcement learning collaborative optimization",
+    "url": "https://patents.google.com/patent/CN121351757B/en",
+    "version": "CN121351757B"
+  },
+  {
+    "access_level": "full",
+    "id": "S07",
+    "limitations": "Full9-page author paper accessible; selected generic decomposition formulation inspected. No optimization result transferred to CTS; no exact packing implementation executed.",
+    "locator": "Physical PDF p1 Introduction/Previous Work; rendered30-85; abstract11-29.",
+    "publication_date": "2015",
+    "retrieved_utc": "2026-10-16T06:00:21.867286+00:00",
+    "source_type": "author_paper",
+    "supported_claim_ids": [
+      "CLM-1204"
+    ],
+    "title": "Logic-based Benders Decomposition for Planning and Scheduling: A Computational Analysis",
+    "url": "https://johnhooker.tepper.cmu.edu/bendersCOPLAS.pdf",
+    "version": "AAAI2015 author version"
+  },
+  {
+    "access_level": "full",
+    "id": "S08",
+    "limitations": "Selected full HTML methods/results/limits inspected, not full dataset audit or reproduction. Architecture variants are not independent designs. Macro-dominated extension is future work. Reported numbers not adopted.",
+    "locator": "Sections2.1,3,4.3,5; rendered118-137,161-175; shared multi-target model and limitations.",
+    "publication_date": "2026-02-22",
+    "retrieved_utc": "2026-10-16T06:00:21.867286+00:00",
+    "source_type": "author_preprint",
+    "supported_claim_ids": [
+      "CLM-1204",
+      "CLM-1207"
+    ],
+    "title": "CTS-Bench: Benchmarking Graph Coarsening Trade-offs for GNNs in Clock Tree Synthesis",
+    "url": "https://arxiv.org/html/2602.19330v1",
+    "version": "2602.19330v1"
+  },
+  {
+    "access_level": "full",
+    "id": "S09",
+    "limitations": "README source bytes retrieved/hash; repository code, labels, licenses and claims not audited or executed. Headline speed/accuracy is author-reported only and not used as evidence of utility here.",
+    "locator": "README Overview and Repository Structure, current web page then API commit/main pin.",
+    "publication_date": "2026-08-02",
+    "retrieved_utc": "2026-10-16T06:00:21.867286+00:00",
+    "sha256": "92d3f409117280be224779be13f15cb59d485d3b90cc9ad7616b924a3492be14",
+    "source_type": "author_source_repository",
+    "supported_claim_ids": [
+      "CLM-1204"
+    ],
+    "title": "SwiftCTS: Fast Cross-Design Prediction and Pareto Optimization of Clock Tree Metrics via Few-Shot Calibration",
+    "url": "https://github.com/BarsatKhadka/SwiftCTS/tree/28831b9874b46d9ed0727ad72914e0548fb553cb",
+    "version": "28831b9874b46d9ed0727ad72914e0548fb553cb"
+  },
+  {
+    "access_level": "full",
+    "id": "S10",
+    "limitations": "Advertised capabilities only. No controlled comparison, closed internals, current license access or inference of missing footprint solver.",
+    "locator": "CCOpt paragraph (rendered article body): merges timing optimization and CTS, useful skew/debugger.",
+    "publication_date": "2023-05-23",
+    "retrieved_utc": "2026-10-16T06:00:21.867286+00:00",
+    "source_type": "official_vendor_description",
+    "supported_claim_ids": [
+      "CLM-1205"
+    ],
+    "title": "How Do You Solve a Problem Like Clock Tree Synthesis?",
+    "url": "https://community.cadence.com/cadence_blogs_8/b/di/posts/ccopt_5f00_clock_5f00_tree_5f00_synthesis",
+    "version": "2023 official post"
+  },
+  {
+    "access_level": "full",
+    "id": "S11",
+    "limitations": "Selected full page context/links inspected, no evaluation code executed. Page announcement date typos retained; benchmark rights and row/site model suitability not verified.",
+    "locator": "Introduction; Input/Output; Evaluation Script; results/solution links.",
+    "publication_date": "2010",
+    "retrieved_utc": "2026-10-16T06:00:21.867286+00:00",
+    "source_type": "official_contest",
+    "supported_claim_ids": [
+      "CLM-1206"
+    ],
+    "title": "ISPD2010 High Performance Clock Network Synthesis Contest",
+    "url": "https://www.ispd.cc/contests/10/ispd10cns.html",
+    "version": "2010 contest page"
+  },
+  {
+    "access_level": "full",
+    "id": "S12",
+    "limitations": "Selected slides text inspected and page images requested. Browser title wrongly says2008; diagram team-method association not inferred from flattened text. Historic results not reproduced or transferred.",
+    "locator": "Physical PDF p26 team/method diagram; p36 Final Results; p37 Conclusion; text rendered239-251,319-334.",
+    "publication_date": "2010-03-16",
+    "retrieved_utc": "2026-10-16T06:00:21.867286+00:00",
+    "source_type": "official_contest_results",
+    "supported_claim_ids": [
+      "CLM-1206"
+    ],
+    "title": "ISPD2010 High Performance Clock Network Synthesis Contest and Benchmark Suite result slides",
+    "url": "https://www.ispd.cc/contests/10/ISPD2010-cns-contest-v3.pdf",
+    "version": "official v3 slides"
+  },
+  {
+    "access_level": "full",
+    "id": "S13",
+    "limitations": "Official indexed page list inspected; exact2025/26 rule/code/winner full-method audit incomplete. Current archive listing does not certify exhaustive task originality.",
+    "locator": "Previous Contests list:2026 buffering/sizing;2025 performance-driven global routing;2017 clock-aware FPGA placement;2010/2009 clock networks.",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T06:00:21.867286+00:00",
+    "source_type": "official_contest_archive",
+    "supported_claim_ids": [
+      "CLM-1206"
+    ],
+    "title": "ISPD Previous Contests archive",
+    "url": "https://ispd.cc/ispd2027/index.php?page=contests",
+    "version": "current page retrieved2026-10-16"
+  },
+  {
+    "access_level": "full",
+    "id": "S14",
+    "limitations": "Selected README inspected, commit/date/hash via API/raw. Dataset rights, full row/site occupancy payload, generator implementation and reproduced measurements not established. README counts not independently validated.",
+    "locator": "README Dataset Overview; Primary Manifests; CSV Column Structure.",
+    "publication_date": "2026-03-06",
+    "retrieved_utc": "2026-10-16T06:00:21.867286+00:00",
+    "sha256": "7ac6d242569bcc1b4f2ada556d9564dbbf73d161eb2808e33d6dad494546f97c",
+    "source_type": "author_source_repository",
+    "supported_claim_ids": [
+      "CLM-1207"
+    ],
+    "title": "CTS-Bench public repository README",
+    "url": "https://github.com/BarsatKhadka/CTS-Bench/tree/1020be957ce3b12e86b9a8e7affa6499a50a5f40",
+    "version": "1020be957ce3b12e86b9a8e7affa6499a50a5f40"
+  },
+  {
+    "access_level": "metadata",
+    "id": "S-X01",
+    "limitations": "Search index showed title/paper text but browser full open failed. No full method access or winner correspondence claimed.",
+    "locator": "Direct browser open returned Internal Error.",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T06:00:21.867286+00:00",
+    "source_type": "unavailable_primary_lead",
+    "supported_claim_ids": [],
+    "title": "Contango author paper access attempt",
+    "url": "https://web.eecs.umich.edu/~imarkov/pubs/conf/iccad10-contgo.pdf",
+    "version": null
+  },
+  {
+    "access_level": "metadata",
+    "id": "S-X02",
+    "limitations": "Discovery lead only; not fully opened or used for decisive winner method claim. No full-code bridge.",
+    "locator": "Search-indexed title/introduction; DOI10.1109/ICCAD.2011.6105342 metadata.",
+    "publication_date": "2011",
+    "retrieved_utc": "2026-10-16T06:00:21.867286+00:00",
+    "source_type": "indexed_author_paper_lead",
+    "supported_claim_ids": [],
+    "title": "Algorithmic Tuning of Clock Trees and Derived Non-Tree Structures",
+    "url": "https://citeseerx.ist.psu.edu/document?doi=fc89db13659b83acfe5c1b7fea42e371d65f892a&repid=rep1&type=pdf",
+    "version": null
+  },
+  {
+    "access_level": "metadata",
+    "id": "S-X03",
+    "limitations": "Wrong guessed path did not establish a missing CTS document. No scientific claim supported.",
+    "locator": "Browser Internal Error; corrected to src/cts/README.md in S01.",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T06:00:21.867286+00:00",
+    "source_type": "unavailable_source_path",
+    "supported_claim_ids": [],
+    "title": "Incorrect OpenROAD README path attempt",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/src/cts/src/README.md",
+    "version": "b16bda7e82721d10566ff7e2b68f1ff0be9f9e38"
+  }
+]

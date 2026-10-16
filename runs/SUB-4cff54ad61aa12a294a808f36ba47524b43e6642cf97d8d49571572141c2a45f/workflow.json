@@ -1,0 +1,14 @@
+{
+  "batch_round": 4,
+  "batch_round_limit": 4,
+  "experiment_ready": false,
+  "independent_approval_inherited": false,
+  "new_experiment_allocation": null,
+  "next_science_cycle_authorized": false,
+  "predecessor_disposition": "parked",
+  "predecessor_topic": "EDA-0009",
+  "recommended_after_review": "park_unless_all_gates_actually_satisfied",
+  "research_position": "unresolved",
+  "role": "proposer",
+  "topic": "EDA-0012"
+}

@@ -1,0 +1,17 @@
+{
+  "assumptions": [
+    "Material shared-footprint contention survives stock CTS/legalization.",
+    "Finite adapter sound and physically representative.",
+    "Candidate beats same-information integrated/LBBD alternatives after all costs."
+  ],
+  "base": null,
+  "baseline_source": "S01-S04 are source context only, not reproduced baseline measurements.",
+  "calibration_plan": "EXP-1202/1205 before candidate results; actual allocation and complete oracle locks currently absent. No numerical interval or physical measurement claimed.",
+  "confidence": null,
+  "direction": "improve or fail; unknown",
+  "kind": "forecast_not_measurement",
+  "metric": "post-route worst setup slack at fixed constraints with closure/cost guards",
+  "optimistic": null,
+  "pessimistic": null,
+  "unit": "ns"
+}

@@ -1,0 +1,370 @@
+{
+  "decision": "park",
+  "verifier_session": "ed222334-59c0-412f-9f70-e37d1b2c7a46",
+  "actor_id": "ChatGPT-V04-PHYSICAL-B04-EDA-0012",
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "packet_sha256": "d4406e013aad36dd4d4a3e81419dd87ec84de9c16de40a9f187fea3b8ce08430",
+  "job_id": "7373a8d5-333c-4fc4-8bf1-83664a26a8cc",
+  "reviewed_proposer_release": "SUB-4cff54ad61aa12a294a808f36ba47524b43e6642cf97d8d49571572141c2a45f",
+  "adjudicated_challenger_releases": [
+    "SUB-19f19b087b06fe9b61eb1d39a8bfacf1c5a73c0597c3f6ca95d51eadd40c72e5"
+  ],
+  "dossier_digest": "e55a26413b707efb33304867c786f2951356ae989443f44b0c85edbd16d7b5b4",
+  "gates": {
+    "novelty": false,
+    "mechanism": false,
+    "utility": false,
+    "contest_originality": false,
+    "headroom": false,
+    "feasibility": false,
+    "direction_integrity": true,
+    "experiment_consensus": false
+  },
+  "direction_penalty_checked": true,
+  "experiment_consensus_checked": true,
+  "abandonment_process_checked": true,
+  "direction_penalties": {
+    "combination_drift": 0,
+    "demand_drift": 0,
+    "total": 0,
+    "reason": "New physical-construction successor anchor; no within-topic replacement. Zero drift is not novelty or utility approval."
+  },
+  "objections": [
+    {
+      "id": "OBJ-1201",
+      "source": "V4-S01/S02/S03; proposal representation/mechanism; challenger A2",
+      "verdict": "valid",
+      "blocking": true,
+      "reason": "Conditional common-domain identical-master geometry feasibility is invariant to grouping. This is not a theorem against electrically constrained regrouping. Distinguish sink-dependent admissibility from heuristic window truncation; compare equal-cost fixed-group domain expansion and joint reassignment. Narrow real demand remains unknown."
+    },
+    {
+      "id": "OBJ-1202",
+      "source": "V4-S04 section3; V4-S05 Introduction; V4-S06 I-III; V4-S07 Definitions",
+      "verdict": "valid",
+      "blocking": true,
+      "reason": "Known integration/decomposition and learning-with-checking are close prior, not a complete duplicate. H has no pinned distinct estimator. Cross estimator and planner experiments; merge identical controllers, without demanding that H beat its own clone. No universal novelty exhaustion established."
+    },
+    {
+      "id": "OBJ-1203",
+      "source": "tasklist EXP-1202/1203/1205/1206/1209; plan stopping; current consents; batch policy",
+      "verdict": "valid",
+      "blocking": true,
+      "reason": "Census requires a separately validated footprint observer and stage snapshot before use. Pin global enumeration/work bounds, upper-tree/downstream survival checks, generation procedures and calibration/model consent boundaries. Plan acknowledges missing resources and nonexecution; this confirms readiness limits rather than refuting hypothesis."
+    }
+  ],
+  "claims": [
+    {
+      "id": "CLM-1201",
+      "source": "V4-S01 raw87",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "Documentation states obstruction-aware buffering may reduce displacement and improve clock/timing QoR; neither incidence nor benefit size is measured."
+    },
+    {
+      "id": "CLM-1202",
+      "source": "V4-S02 raw184-244,1196-1203; V4-S03 raw157-266",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "Selected clustering-to-location and existing blockage/occupancy logic supported. No whole-flow defect or absence of other joint optimization established."
+    },
+    {
+      "id": "CLM-1203",
+      "source": "proposal search-log exact finite code/stdout",
+      "verdict": "partially_valid",
+      "blocking": false,
+      "reason": "Logical examples show nonempty domains and distinct origins are insufficient. No independent execution attestation; invented regrouped domains do not demonstrate a sink-derived physical repair."
+    },
+    {
+      "id": "CLM-1204",
+      "source": "V4-S04/05/06/07",
+      "verdict": "partially_valid",
+      "blocking": true,
+      "reason": "Selected integration, decomposition and ML-checking prior corroborated. Chinese patent, CTS-Bench and SwiftCTS not independently reopened here; broad attributed observations are not full system novelty verification."
+    },
+    {
+      "id": "CLM-1205",
+      "source": "V4-S08 article capability paragraph",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "Public advertised integrated timing/CTS only; no internals, deployment incidence or matched commercial gap inferred."
+    },
+    {
+      "id": "CLM-1206",
+      "source": "V4-S09 official2010; V4-S10 result slides; V4-S11 official2026 organizer paper",
+      "verdict": "partially_valid",
+      "blocking": true,
+      "reason": "Relevant contest identities and adjacent formulations checked. Exact winner implementation bridge and complete newer coverage remain unresolved; no contest-originality pass."
+    },
+    {
+      "id": "CLM-1207",
+      "source": "proposal data/split discussion and S08/S14 lead records",
+      "verdict": "unresolved",
+      "blocking": true,
+      "reason": "No independently verified rights-cleared placed footprint payload, representative narrow-demand dataset or reproduction pipeline. Metadata/CSV leads cannot establish suitability."
+    },
+    {
+      "id": "CLM-1208",
+      "source": "proposal H1/representation; current plan and V4-S04/05/06",
+      "verdict": "unresolved",
+      "blocking": true,
+      "reason": "Useful geometry-feedback/estimator tradeoff remains plausible and testable, but causal domains, material need and nonidentical strong-control delta are open. Finite feasibility is not routed-PPA optimality or a saturation bound."
+    },
+    {
+      "id": "CLM-1209",
+      "source": "JOB.json; common batch policy; EXP-1200; forecast.json",
+      "verdict": "valid",
+      "blocking": true,
+      "reason": "Actual allocation absent, consents nonagreeing, numerical physical forecasts null. No new EDA/training run is attested by this verifier. Missing readiness does not prove impossibility."
+    }
+  ],
+  "historical_public_review_adjudications": [
+    {
+      "id": "HIST-B04-R3-LOCATOR",
+      "verdict": "refuted",
+      "source_locator": "V4-H01 pinned TritonRoute.cpp raw one-based1023-1085,1356-1450, especially1447-1448; browser rendered979-1043,1294-1385, especially1382-1383",
+      "source_sha256": "1bb6bef08a426c311d6e1b8fae12db89bfb69be89ff7340f381a95b6ab37f335",
+      "raw_line_count": 1452,
+      "renderer_line_count": 1388,
+      "reason": "The public allegation confuses renderer numbering with raw bytes. Independently fetched bytes match the historical V3-S01 hash and contain the disputed raw lines. C3-CLM-001 raw locators are valid. Selected worker filtering/deduplication/export content is supported, so its previous narrow partial-valid treatment does not need reversal on this allegation.",
+      "limits": "Not an audit of all historical sources or conduct, arbitrary cancellation, report write success, persistent witness semantics or engine correctness. Browser extracts are normalized text, not a byte hash. No old frozen record modified.",
+      "reversal_conditions": "Produce independently fetched bytes at the exact pinned object with a different hash/content, or a specific semantic counterexample to the narrow observation; investigate transport/cache discrepancy before changing ruling."
+    }
+  ],
+  "source_checks": [
+    {
+      "id": "V4-S01",
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/src/cts/README.md",
+      "locator": "Raw87",
+      "access_level": "full",
+      "retrieved_utc": "2026-10-16T06:25:11.926749+00:00",
+      "limitations": "Selected documentation; possible connection only.",
+      "title": "OpenROAD CTS documentation",
+      "publication_date": "unknown",
+      "source_type": "pinned_source_code",
+      "version": "b16bda7e82721d10566ff7e2b68f1ff0be9f9e38",
+      "supported_claim_ids": [
+        "CLM-1201",
+        "OBJ-1201"
+      ]
+    },
+    {
+      "id": "V4-S02",
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/src/cts/src/HTreeBuilder.cpp",
+      "locator": "Raw184-244;1196-1203",
+      "access_level": "full",
+      "retrieved_utc": "2026-10-16T06:25:11.926926+00:00",
+      "limitations": "Full bytes, selected functions; no complete flow audit.",
+      "title": "OpenROAD HTreeBuilder.cpp",
+      "publication_date": "unknown",
+      "source_type": "pinned_source_code",
+      "version": "b16bda7e82721d10566ff7e2b68f1ff0be9f9e38",
+      "supported_claim_ids": [
+        "CLM-1202"
+      ]
+    },
+    {
+      "id": "V4-S03",
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/src/cts/src/TreeBuilder.cpp",
+      "locator": "Raw157-266",
+      "access_level": "full",
+      "retrieved_utc": "2026-10-16T06:25:11.926927+00:00",
+      "limitations": "Existing occupancy/blockage handling; no engine execution.",
+      "title": "OpenROAD TreeBuilder.cpp",
+      "publication_date": "unknown",
+      "source_type": "pinned_source_code",
+      "version": "b16bda7e82721d10566ff7e2b68f1ff0be9f9e38",
+      "supported_claim_ids": [
+        "CLM-1202"
+      ]
+    },
+    {
+      "id": "V4-S04",
+      "url": "https://www.cse.cuhk.edu.hk/~byu/papers/C212-DAC2024-iCTS.pdf",
+      "locator": "Physical PDF p4 section3.1-3.2, web406-565",
+      "access_level": "full",
+      "retrieved_utc": "2026-10-16T06:25:11.926928+00:00",
+      "limitations": "Selected formulation only; no replicated result.",
+      "title": "Toward Controllable Hierarchical Clock Tree Synthesis with Skew-Latency-Load Tree",
+      "publication_date": "2024-06-23",
+      "source_type": "primary_research_or_official_disclosure",
+      "version": "URL edition inspected",
+      "supported_claim_ids": [
+        "CLM-1204",
+        "CLM-1208",
+        "OBJ-1202"
+      ]
+    },
+    {
+      "id": "V4-S05",
+      "url": "https://johnhooker.tepper.cmu.edu/bendersCOPLAS.pdf",
+      "locator": "Physical p1 Introduction/Previous Work",
+      "access_level": "full",
+      "retrieved_utc": "2026-10-16T06:25:11.926929+00:00",
+      "limitations": "Generic LBBD prior, not physical CTS duplicate.",
+      "title": "Logic-based Benders Decomposition for Planning and Scheduling: A Computational Analysis",
+      "publication_date": "2015",
+      "source_type": "primary_research_or_official_disclosure",
+      "version": "URL edition inspected",
+      "supported_claim_ids": [
+        "OBJ-1202"
+      ]
+    },
+    {
+      "id": "V4-S06",
+      "url": "https://arxiv.org/html/2610.07600v1",
+      "locator": "Sections I-III; abstract; finite additive model",
+      "access_level": "full",
+      "retrieved_utc": "2026-10-16T06:25:11.926930+00:00",
+      "limitations": "October6 2026 v1; selected methods, not full proof/performance audit or footprint-model equivalence.",
+      "title": "Beyond No-Good Benders Cuts: Exact Realizability for Discretely Tunable Clock Trees",
+      "publication_date": "2026-10-06",
+      "source_type": "primary_research_or_official_disclosure",
+      "version": "2610.07600v1",
+      "supported_claim_ids": [
+        "OBJ-1202"
+      ]
+    },
+    {
+      "id": "V4-S07",
+      "url": "https://patents.google.com/patent/US11645441B1/en",
+      "locator": "Definitions140-163 (renderer)",
+      "access_level": "full",
+      "retrieved_utc": "2026-10-16T06:25:11.926931+00:00",
+      "limitations": "Published disclosure, not deployment/legal-validity or gain verification.",
+      "title": "Machine-learning based clustering for clock tree synthesis",
+      "publication_date": "2023-05-09",
+      "source_type": "primary_research_or_official_disclosure",
+      "version": "URL edition inspected",
+      "supported_claim_ids": [
+        "OBJ-1202"
+      ]
+    },
+    {
+      "id": "V4-S08",
+      "url": "https://community.cadence.com/cadence_blogs_8/b/di/posts/ccopt_5f00_clock_5f00_tree_5f00_synthesis",
+      "locator": "Article CCOpt capability paragraph",
+      "access_level": "full",
+      "retrieved_utc": "2026-10-16T06:25:11.926932+00:00",
+      "limitations": "Advertised capability only.",
+      "title": "How Do You Solve a Problem Like Clock Tree Synthesis?",
+      "publication_date": "2023-05-23",
+      "source_type": "primary_research_or_official_disclosure",
+      "version": "URL edition inspected",
+      "supported_claim_ids": [
+        "CLM-1205"
+      ]
+    },
+    {
+      "id": "V4-S09",
+      "url": "https://www.ispd.cc/contests/10/ispd10cns.html",
+      "locator": "Task/Input/Output/Evaluation headings",
+      "access_level": "full",
+      "retrieved_utc": "2026-10-16T06:25:11.926933+00:00",
+      "limitations": "Selected original; exact winner implementation bridge incomplete.",
+      "title": "ISPD 2010 High Performance Clock Network Synthesis Contest",
+      "publication_date": "unknown",
+      "source_type": "primary_research_or_official_disclosure",
+      "version": "URL edition inspected",
+      "supported_claim_ids": [
+        "CLM-1206"
+      ]
+    },
+    {
+      "id": "V4-S10",
+      "url": "https://www.ispd.cc/contests/10/ISPD2010-cns-contest-v3.pdf",
+      "locator": "Physical pages26,36,37 (opened PDF)",
+      "access_level": "full",
+      "retrieved_utc": "2026-10-16T06:25:11.926934+00:00",
+      "limitations": "PDF available; selected text only; no winner executable inspected.",
+      "title": "ISPD 2010 Clock Network Contest Results",
+      "publication_date": "unknown",
+      "source_type": "primary_research_or_official_disclosure",
+      "version": "URL edition inspected",
+      "supported_claim_ids": [
+        "CLM-1206"
+      ]
+    },
+    {
+      "id": "V4-S11",
+      "url": "https://vlsicad.ucsd.edu/Publications/Conferences/421/c421.pdf",
+      "locator": "Section2.1 task; timing constraint discussion",
+      "access_level": "full",
+      "retrieved_utc": "2026-10-16T06:25:11.926935+00:00",
+      "limitations": "Selected organizer paper; ideal-clock post-placement buffering/sizing, not same CTS task; no implementation audit.",
+      "title": "Invited: Post-Placement Buffering and Sizing Contest",
+      "publication_date": "2026-03-15",
+      "source_type": "primary_research_or_official_disclosure",
+      "version": "URL edition inspected",
+      "supported_claim_ids": [
+        "CLM-1206"
+      ]
+    },
+    {
+      "id": "V4-H01",
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/src/drt/src/TritonRoute.cpp",
+      "locator": "Raw1023-1085;1356-1450; web979-1043;1294-1385",
+      "access_level": "full",
+      "retrieved_utc": "2026-10-16T06:25:11.926935+00:00",
+      "limitations": "Raw hash matched historical record; rendering has different numbering; no runtime correctness proof.",
+      "title": "OpenROAD TritonRoute.cpp",
+      "publication_date": "unknown",
+      "source_type": "pinned_source_code",
+      "version": "b16bda7e82721d10566ff7e2b68f1ff0be9f9e38",
+      "supported_claim_ids": []
+    }
+  ],
+  "tasklist_review": {
+    "sha256": "1786f88ab4f09bbded99d69ecc1b26c58338bba2b05e416bfe3ed5ffe13db817",
+    "proposer_session": "de22ba11-269c-4f5c-8aae-f697dff1e2bc",
+    "challenger_session": "09490ac3-66e9-4eb1-8036-f866865a6712",
+    "proposer_vote": "pending",
+    "challenger_vote": "revision_requested",
+    "matching_agreement": false,
+    "requirements": "C12-T1 through T4 are justified repair requests, not changes made by verifier or role consent. Observer/spec before census; integrated baselines and distinct estimator lock; global caps; actual resources and renewed exact dependencies."
+  },
+  "limits": [
+    "Unblinded assigned releases only; no parent/sibling conversation or private material inspected. Logical session separation is observable in manifests, not proof of adversarial host isolation.",
+    "Some combined policy/source-output reads were truncated; decision-critical current proposal, all three objections, tasklist/plan/consents, historical C3-CLM-001 and V3 treatment reopened separately.",
+    "Selected primary-source method reading only; no exhaustive citation/winner-code audit. No theoretical saturation or physical gain established.",
+    "No third-party analytical code execution, EDA flow/build, training, remote experiments or paid API. Source bytes read, never executed.",
+    "Standalone project validate fails missing policy/config/roles.json; coordinator owns full-repository validation. Trusted freeze/verify checks structural integrity only."
+  ],
+  "reversal_conditions": [
+    "Derive group-dependent domains from the electrical/engineering contract and demonstrate material narrow demand against native and fixed-group expansion controls.",
+    "Specify distinct estimator/planner or explicit integration contribution; compare strong equally informed integrated/LBBD and equal-label expressive controls with full costs.",
+    "Validate observer/adapter/oracles, exact contest/source/data-rights locks, global bounds and real allocation; obtain independent matching exact-task P/C consents."
+  ],
+  "conclusion": "Final cycle: park conditional EDA-0012. No pilot, fifth cycle, performance claim, universal impossibility, rejection or joint abandonment is authorized.",
+  "search_record": {
+    "engine": "web search tool",
+    "date_utc": "2026-10-16",
+    "queries": [
+      "clock tree synthesis buffer legalization clustering conflict Benders footprint physical placement",
+      "\"clock\" \"realizability\" \"2026\" certificate feedback synthesis",
+      "site.ispd.cc 2026 contest ideal clock buffering gate sizing",
+      "clock tree synthesis legalization shared site conflict regrouping integrated placement 2025 2026"
+    ],
+    "outcome": "Independent expansions found adjacent finite realizability interface and official current contest paper. Secondary/tutorial/reddit hits excluded from scientific rulings. No exhaustive search/saturation claimed.",
+    "access_failures": [
+      "https://ispd.cc/contests/26/ direct open Internal Error; official organizer paper and archive used instead."
+    ]
+  },
+  "public_evidence_metadata": {
+    "file": "public-evidence.json",
+    "sha256": "746f508a2c8e86bff4b38dd24543a42e98e43313059663c4b08019b15a693346",
+    "status": "assigned allegation independently adjudicated; not a SUB ID"
+  },
+  "source_identity_check": {
+    "code": "import urllib.request, hashlib\nbase = 'https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/'\nfor path in ['src/drt/src/TritonRoute.cpp', 'src/cts/README.md', 'src/cts/src/HTreeBuilder.cpp', 'src/cts/src/TreeBuilder.cpp']:\n    body = urllib.request.urlopen(base + path, timeout=30).read()\n    lines = body.decode().splitlines()\n    print(path, len(lines), hashlib.sha256(body).hexdigest())\n    if path.endswith('TritonRoute.cpp'):\n        for n in [1023, 1065, 1066, 1071, 1076, 1080, 1356, 1362, 1372, 1376, 1447, 1448, 1450]:\n            print(n, lines[n-1].strip())\n",
+    "stdout": "src/drt/src/TritonRoute.cpp 1452 1bb6bef08a426c311d6e1b8fae12db89bfb69be89ff7340f381a95b6ab37f335\n1023 void TritonRoute::getDRCMarkers(frList<std::unique_ptr<frMarker>>& markers,\n1065 workers[i]->init(design_.get());\n1066 workers[i]->main();\n1071 if (!bbox.intersects(requiredDrcBox)) {\n1076 if (mapMarkers.find({bbox, layerNum, con, marker->getSrcs()})\n1080 markers.push_back(std::make_unique<frMarker>(*marker));\n1356 void TritonRoute::reportDRC(const std::string& file_name,\n1362 if (file_name == std::string(\"\")) {\n1372 if (drcRpt.is_open()) {\n1376 if (drcBox != Rect() && !drcBox.intersects(bbox)) {\n1447 } else {\n1448 std::cout << \"Error: Fail to open DRC report file\\n\";\n1450 }\nsrc/cts/README.md 167 0b463c00fe7c3bbbcdf9534d6378cf67ba42ebe7a19139fc6094336eb6a3fc83\nsrc/cts/src/HTreeBuilder.cpp 2140 2917f4b094da699f4ab83a278fb6659e74803e6a0090f1848969a6a7328bfcb4\nsrc/cts/src/TreeBuilder.cpp 311 52ab5e4f8f317ce9848d5795305c19bd776ec95f26a6b8165e1fd23363cbe6b4\n",
+    "code_sha256": "431a5b61a7272257c8b60a32579c7f37f82aefacf53e22b7d5979db818f0d44f",
+    "stdout_sha256": "18351fa420bf9cf12ae3c5a92d3ed50aa427b8b5f1434afd7f37d07869c12e6b",
+    "limitations": "Read-only byte retrieval and source locations only. Not downloaded-code execution, physical experiment, independent rerun of another role numerical fixture or full semantic audit."
+  },
+  "packet_integrity": {
+    "listed_file_hashes": "all matched",
+    "packet_json_sha256": "d4406e013aad36dd4d4a3e81419dd87ec84de9c16de40a9f187fea3b8ce08430",
+    "identity": "actor/role/topic/source_commit match JOB",
+    "limits": "No live registration service independently queried; session manifests checked locally."
+  }
+}

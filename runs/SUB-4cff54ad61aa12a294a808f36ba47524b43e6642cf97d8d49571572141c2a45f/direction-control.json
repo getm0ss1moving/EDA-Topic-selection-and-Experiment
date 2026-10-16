@@ -1,0 +1,76 @@
+{
+  "abandonment": {
+    "consents": {
+      "challenger": {
+        "decision": "pending",
+        "session_id": null,
+        "signed_dossier_digest": null,
+        "signed_revision": null
+      },
+      "proposer": {
+        "decision": "pending",
+        "session_id": "de22ba11-269c-4f5c-8aae-f697dff1e2bc",
+        "signed_dossier_digest": null,
+        "signed_revision": null
+      }
+    },
+    "decision_id": null,
+    "evidence_refs": [
+      "responses.md"
+    ],
+    "grounds": [],
+    "rationale": "No sufficient exhaustion evidence or matching independent signatures. Final-batch park is not joint abandonment.",
+    "resurrection_conditions": [
+      "Material shared-footprint demand and source-complete conventional distinction.",
+      "Actual rights/resource locks and independent exact-task consensus."
+    ],
+    "successor_topic_id": null
+  },
+  "anchor": {
+    "causal_mechanism": "Return scoped shared-footprint assignment conflicts to bounded sink repartition, optionally amortizing counterfactual exchange scoring with learning.",
+    "downstream_need": "Preserve final routed setup/hold closure while reducing relocation/regrouping and complete-flow cost.",
+    "engineering_user": "ASIC physical-design/clock implementation engineer",
+    "forbidden_pivots": [
+      "Generic cache/repair-validation scheduler or pure prediction accuracy as the contribution.",
+      "Agent count, a no-good cut or ordinary exact-cover solver labeled as novelty.",
+      "Moving data cells or increasing leaf-buffer count to rescue the frozen local mechanism without a new anchor.",
+      "Changing final closure endpoint to displacement/core counts alone."
+    ],
+    "mechanism_invariants": [
+      "Fixed data-cell placement, clock domain/master and physical/electrical constraints; explicit supported domain.",
+      "Full sink coverage and physical footprint conflicts retained across groups.",
+      "Restricted-domain infeasibility never means global physical impossibility; expansion/fallback shared by all arms.",
+      "Equal information, option sets, feedback and full cost for integrated/LBBD conventional alternatives.",
+      "Full final routed connectivity/DRC and fixed-corner timing oracle; prediction schedules/proposes only."
+    ],
+    "problem": "Joint leaf sink grouping and legal buffer footprint assignment at a fixed placed ASIC checkpoint."
+  },
+  "penalties": {
+    "combination_drift": {
+      "evidence_refs": [
+        "proposal.md",
+        "responses.md"
+      ],
+      "rationale": "Initial distinct successor anchor; no within-topic mechanism replacement. Novelty unresolved.",
+      "score": 0
+    },
+    "demand_drift": {
+      "evidence_refs": [
+        "industry-gap.md"
+      ],
+      "rationale": "Initial physical closure need; narrow joint-site demand remains unresolved, not silently substituted.",
+      "score": 0
+    },
+    "total": 0
+  },
+  "revision_assessment": {
+    "changes": [
+      "New topic ID separates CTS construction from parked EDA-0009 validation scheduling."
+    ],
+    "preserves_causal_mechanism": true,
+    "preserves_engineering_need": true,
+    "preserves_problem": true,
+    "reason": "Initial successor anchor; predecessor negatives preserved in responses.md."
+  },
+  "state": "continue"
+}

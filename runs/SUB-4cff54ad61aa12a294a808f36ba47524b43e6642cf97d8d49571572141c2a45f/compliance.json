@@ -1,0 +1,174 @@
+{
+  "activity": {
+    "agent_messages_sent": 0,
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "new_eda_runs": 0,
+    "new_paid_api_calls": 0,
+    "subagents_spawned": 0,
+    "training_runs": 0
+  },
+  "actor_id": "ChatGPT-P04-PHYSICAL-B04-EDA-0012",
+  "incidents": [],
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "job_id": "891974bc-ba36-4750-a1da-9191fe01ab74",
+  "observability": "Self-authored public activity ledger, not a complete tool trace or proof that absent undisclosed actions did not occur. No foreign private exposure or checkout access is disclosed; unobserved host behavior remains outside this report.",
+  "operations": [
+    {
+      "operation": "read_assigned_job_first",
+      "references": [
+        "JOB.json",
+        "prompt.txt"
+      ]
+    },
+    {
+      "operation": "read_policy_and_own_harness",
+      "references": [
+        "policy/docs/CHARTER.md",
+        "policy/docs/WORKFLOW.md",
+        "policy/docs/EVIDENCE.md",
+        "policy/docs/ISOLATION.md",
+        "policy/docs/CODEX-AUTOMATION.md",
+        "policy/docs/ROLE-COMPLIANCE.md",
+        "policy/docs/SELF-SUBMISSION.md",
+        "policy/docs/INNOVATION-BATCH-0004.md",
+        "policy/docs/INNOVATION-STRATEGY.md",
+        "policy/harness/PROPOSER.md",
+        "policy/domains/D04/brief.json",
+        "policy/config/research-brief.json",
+        "policy/templates/topic/"
+      ]
+    },
+    {
+      "operation": "read_released_handover",
+      "references": [
+        "SUB-2966cec6a631f48b998ddb78b67aba187e072ad1d9b4d3498aeebdb879a9f0cc",
+        "SUB-047b42329a35771ca6788e18cc97583dedaf36526c13f12defa839e36c8b1ed0",
+        "SUB-83d9a23ab90f7ca974796e8ed39617078e1ee76f0abcab0f0746f6bab6c2278f"
+      ]
+    },
+    {
+      "operation": "independent_public_search_and_selected_primary_read",
+      "references": [
+        "sources.json",
+        "search-log.md"
+      ]
+    },
+    {
+      "operation": "own_tiny_analytical_and_source_checks",
+      "references": [
+        "search-log.md: exact code, parameters, stdout and hashes"
+      ]
+    },
+    {
+      "operation": "write_own_role_artifacts",
+      "references": [
+        "release/",
+        "runs/EDA-0012-proposer.json",
+        "own-fixture-record.json",
+        "result.json"
+      ]
+    },
+    {
+      "operation": "structural_validation_self_freeze_verify",
+      "references": [
+        "search-log.md: validation record",
+        "submissions/SUB-<content hash>/SUBMISSION.json"
+      ]
+    },
+    {
+      "operation": "read_own_result_schema",
+      "references": [
+        "result.schema.json"
+      ]
+    }
+  ],
+  "packet_sha256": "025be4f115cdabc0030da2e8e184b952dc46349e6481b610dc0a58278bcdf1be",
+  "read_releases": [
+    "SUB-2966cec6a631f48b998ddb78b67aba187e072ad1d9b4d3498aeebdb879a9f0cc",
+    "SUB-047b42329a35771ca6788e18cc97583dedaf36526c13f12defa839e36c8b1ed0",
+    "SUB-83d9a23ab90f7ca974796e8ed39617078e1ee76f0abcab0f0746f6bab6c2278f"
+  ],
+  "role": "proposer",
+  "rules": {
+    "claims": {
+      "evidence": [
+        "proposal.md: Claim ledger",
+        "forecast.json",
+        "search-log.md: Analytical fixture"
+      ],
+      "limits": "Own toy and source metadata only; source-reported results not reproduced; no physical measurements or numerical forecast.",
+      "status": "no_violation_disclosed"
+    },
+    "consent": {
+      "evidence": [
+        "experiment-consent.json",
+        "proposal.md: Draft consensus metadata"
+      ],
+      "limits": "Pending own consent only; no earlier EDA-0012 revision signed, inherited signatures or joint abandonment.",
+      "status": "no_violation_disclosed"
+    },
+    "direction": {
+      "evidence": [
+        "direction-control.json",
+        "responses.md: Successor separation"
+      ],
+      "limits": "Initial new ID is distinct CTS construction; predecessor negatives retained. Zero drift is not merit confirmation.",
+      "status": "no_violation_disclosed"
+    },
+    "evidence": {
+      "evidence": [
+        "sources.json",
+        "prior-art.csv",
+        "search-log.md: Access and corrections"
+      ],
+      "limits": "Selected methods/locators only; unavailable/index-only leads honest. No full-callgraph, license, dataset or winner-code audit.",
+      "status": "no_violation_disclosed"
+    },
+    "inputs": {
+      "evidence": [
+        "JOB.json",
+        "prompt.txt",
+        "policy/PACKET.json",
+        "search-log.md: Identity, scope and stopping"
+      ],
+      "limits": "Self-reported reads; large combined outputs partly truncated and selected required portions re-read. No complete syscall trace.",
+      "status": "no_violation_disclosed"
+    },
+    "isolation": {
+      "evidence": [
+        "responses.md: Released predecessor outcomes",
+        "search-log.md: Identity, scope and stopping"
+      ],
+      "limits": "Only assigned explicit predecessor releases and public research originals; backend/OS isolation cannot be proven by this ledger. No parent/private role context inspected.",
+      "status": "no_violation_disclosed"
+    },
+    "publication": {
+      "evidence": [
+        "policy/docs/SELF-SUBMISSION.md",
+        "search-log.md: Public run manifest"
+      ],
+      "limits": "Self-freeze/verify only; coordinator publishes/validates repository and independent roles judge science. No self-approval/merge. Standalone project validation attempted and failed for missing policy/config/roles.json; no checkout discovery to fix it.",
+      "status": "no_violation_disclosed"
+    },
+    "resources": {
+      "evidence": [
+        "policy/docs/INNOVATION-BATCH-0004.md: Resources",
+        "tasklist.md: EXP-1200",
+        "search-log.md: Analytical fixture"
+      ],
+      "limits": "One tiny own finite enumeration and read-only source metadata checks; zero new EDA/build/training/remote/GPU/paid calls. No allocation.",
+      "status": "no_violation_disclosed"
+    },
+    "writes": {
+      "evidence": [
+        "search-log.md: Public run manifest",
+        "release/ role-owned files"
+      ],
+      "limits": "Writes confined to own external job release/runs/status and own fixture metadata. Shared OS does not enforce confinement.",
+      "status": "no_violation_disclosed"
+    }
+  },
+  "schema": 1,
+  "session_id": "de22ba11-269c-4f5c-8aae-f697dff1e2bc"
+}

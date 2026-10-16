@@ -1,0 +1,7 @@
+{
+  "decision": "pending",
+  "rationale": "Not experiment-ready; no earlier EDA-0012 frozen revision to sign and no allocation or independent task agreement.",
+  "session_id": "de22ba11-269c-4f5c-8aae-f697dff1e2bc",
+  "signed_revision": null,
+  "tasklist_sha256": null
+}
