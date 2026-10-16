@@ -1,0 +1,298 @@
+[
+  {
+    "access": "full",
+    "claims": [
+      "CLM-1102"
+    ],
+    "id": "R01",
+    "limitations": "Selected full-text method passages; no Java implementation execution; not an EDA adapter audit.",
+    "locator": "Section3.1 physical PDF pp3-4; rendered lines298-369.",
+    "published": "2016-09",
+    "retrieved_utc": "2026-10-16",
+    "title": "On Essential Configuration Complexity: Measuring Interactions in Highly-Configurable Systems",
+    "type": "primary paper",
+    "url": "https://www.cs.cmu.edu/~ckaestne/pdf/ase16.pdf",
+    "version": "ASE2016; DOI10.1145/2970276.2970322"
+  },
+  {
+    "access": "full",
+    "claims": [
+      "CLM-1102"
+    ],
+    "id": "R02",
+    "limitations": "30-page final author PDF; first web fetch internal error, retry succeeded. Selected sections, no reported performance reproduced.",
+    "locator": "Section2.1 physical pp4-5;3.1 pp8-9;3.2 pp9-10. Rendered260-303,445-508.",
+    "published": "2018-11",
+    "retrieved_utc": "2026-10-16",
+    "title": "Faster Variational Execution with Transparent Bytecode Transformation",
+    "type": "primary paper",
+    "url": "https://www.cs.cmu.edu/~ckaestne/pdf/oopsla18.pdf",
+    "version": "PACMPL2 OOPSLA article117; DOI10.1145/3276487"
+  },
+  {
+    "access": "full",
+    "claims": [
+      "CLM-1102",
+      "CLM-1106"
+    ],
+    "id": "R03",
+    "inspected_sha256": {
+      "vimpl.java": "09adbcae7253f7b40e046edf798ecb9969187068a89c9397408b8edf3678ccd6",
+      "vimpl.scala": "1e91889d83191f788cf5e852baf5aa3e22bf71fa9e020a3d5cdd1d067e0a3c82"
+    },
+    "limitations": "Selected source, not built; delegated MTBDD/BDD implementation and complete VCache semantics not audited. No assertion that flat Cartesian loops represent the strongest implementation. License not established for copying; source reading only.",
+    "locator": "Raw one-based src/main/java/edu/cmu/cs/varex/VImpl.java144-202 flatMap/addVToMap/put/createV; src/main/scala/edu/cmu/cs/varex/VImpl.scala106-135 flatMapWithContext/foreachWithContext.",
+    "published": "2020-11-20",
+    "retrieved_utc": "2026-10-16",
+    "title": "VarexC value-map and MTBDD implementations",
+    "type": "primary open implementation",
+    "url": "https://github.com/chupanw/vbc/tree/1221ef110e2b46951ab01319e97fa5d7dd84a724",
+    "version": "1221ef110e2b46951ab01319e97fa5d7dd84a724"
+  },
+  {
+    "access": "full",
+    "claims": [
+      "CLM-1101"
+    ],
+    "id": "R04",
+    "inspected_sha256": {
+      "candidate.cc": "16c99bf48dd4e6c23a5c886ef3608bfb95bd0bfbb688e35676a4bc301427cb08",
+      "policy.cc": "f81f24e419536210a344cd6fd32f9e2b43bdb2144a76bbc818de437dadf2d162"
+    },
+    "limitations": "Direct source retrieval, selected methods only. Experimental consumer returns score/legality, not a full endpoint vector. No workload statistics or flow run.",
+    "locator": "Raw one-based src/rsz/src/move/MeasuredVtSwapCandidate.cc44-66,109-132; src/rsz/src/policy/MeasuredVtSwapPolicy.cc260-301.",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-16",
+    "submodule_locator": "GitHub git/trees/<R04 commit>?recursive=1; mode160000 entries; truncated=false observed",
+    "submodules_observed": {
+      "src/sta": "80fbbb2945fee2702a84e711a95a0a3bb7050f22",
+      "third-party/abc": "d527cfab4ad731b767ea0a2be2021d920d3afece",
+      "third-party/slang-elab": "82effc8d9541be69e1ed3ec44759a4449f5d9247"
+    },
+    "title": "OpenROAD measured VT-swap candidate and policy",
+    "type": "primary open implementation",
+    "url": "https://github.com/The-OpenROAD-Project/OpenROAD/tree/3549d60529517dc82deb7f0ff769345e9a424911",
+    "version": "3549d60529517dc82deb7f0ff769345e9a424911"
+  },
+  {
+    "access": "full",
+    "claims": [
+      "CLM-1103",
+      "CLM-1109"
+    ],
+    "id": "R05",
+    "inspected_sha256": {
+      "graphdelay.cc": "86bab0f72ae44b81ff036674d5fac0651a234da0993b18b22e5a5a499684382d",
+      "opensta-readme.md": "78e22e3499b256421c7bf7a97d9c321f27c71a4d2e8948941e619e939dac791e",
+      "search.cc": "75d5185fed3bcf5db99c284e9319ab3685274e0f283e6707cf87de98682a09ab"
+    },
+    "limitations": "Selected delay passages are not a complete read-set proof. Search.cc full body downloaded but only targeted snippets/symbols inspected. Current standalone commit is NOT R04 submodule80fbbb; no binary/build compatibility implied. GPLv3/commercial dual licensing per README; no source copied into release.",
+    "locator": "Raw one-based dcalc/GraphDelayCalc.cc213-258 delaysInvalid/delayInvalid;346-374 findDelays;1072-1116 findDriverArcDelays;1423-1460 parasiticLoad. README.md1-76 capabilities/licensing; search/Search.cc1046/3288 method names only.",
+    "published": "2026-10-15",
+    "retrieved_utc": "2026-10-16",
+    "title": "OpenSTA delay dependencies and query-based incrementality",
+    "type": "primary open implementation",
+    "url": "https://github.com/The-OpenROAD-Project/OpenSTA/tree/536061898d5ba3af6e6d09cd99bb4baa88db70ab",
+    "version": "536061898d5ba3af6e6d09cd99bb4baa88db70ab"
+  },
+  {
+    "access": "full",
+    "claims": [
+      "CLM-1109"
+    ],
+    "id": "R06",
+    "limitations": "Lazy incremental engine/task lineage is prior; selected source sections, no author speedups adopted or execution.",
+    "locator": "Physical PDF pp3-4, Big idea2/3; rendered166-252.",
+    "published": "2021",
+    "retrieved_utc": "2026-10-16",
+    "title": "OpenTimer v2: A Parallel Incremental Timing Analysis Engine",
+    "type": "primary paper",
+    "url": "https://tsung-wei-huang.github.io/papers/dat21-ot2.pdf",
+    "version": "DOI10.1109/MDAT.2021.3049177"
+  },
+  {
+    "access": "full",
+    "claims": [
+      "CLM-1109"
+    ],
+    "id": "R07",
+    "limitations": "Partitions task graphs rather than exact alternative-world values; selected method sections, no reproduction.",
+    "locator": "Physical PDF p3 section3 Algorithm1/type1/type2 frontiers; rendered319-348.",
+    "published": "2025-01",
+    "retrieved_utc": "2026-10-16",
+    "title": "iTAP: An Incremental Task Graph Partitioner for Task-parallel Static Timing Analysis",
+    "type": "primary paper",
+    "url": "https://tsung-wei-huang.github.io/papers/2025-ASPDAC-iTAP.pdf",
+    "version": "ASP-DAC2025 author PDF,9 pages"
+  },
+  {
+    "access": "full",
+    "claims": [
+      "CLM-1109"
+    ],
+    "id": "R08",
+    "limitations": "Technical prior disclosure; no legal/status opinion, contemporary implementation or signoff validation.",
+    "locator": "Detailed Description FIG3 steps302-314/FIG4 steps404-412; rendered198-213.",
+    "published": "2008-11-11",
+    "retrieved_utc": "2026-10-16",
+    "title": "Speeding up timing analysis by reusing delays computed for isomorphic subcircuits",
+    "type": "primary patent text",
+    "url": "https://patents.google.com/patent/US7451412B2/en",
+    "version": "US7451412B2"
+  },
+  {
+    "access": "full",
+    "claims": [
+      "CLM-1107"
+    ],
+    "id": "R09",
+    "limitations": "Full organizer paper newly retrieved; selected sections. Contest runtime/electrical objectives do not establish full candidate-vector demand.2027 roadmap is proposed, not a released2027 contract. No benchmark downloaded.",
+    "locator": "Physical PDF p3 Fig1/section3;pp4-5 section4; p7 section5.3. Rendered210-242,296-328,348-368,577-606.",
+    "published": "2026-03",
+    "retrieved_utc": "2026-10-16",
+    "title": "Invited: Post-Placement Buffering and Sizing Contest",
+    "type": "primary paper",
+    "url": "https://vlsicad.ucsd.edu/Publications/Conferences/421/c421.pdf",
+    "version": "ISPD2026; DOI10.1145/3764386.3779616"
+  },
+  {
+    "access": "full",
+    "claims": [
+      "CLM-1107"
+    ],
+    "id": "R10",
+    "limitations": "Winner identities authenticated by official page, winner algorithms not authenticated. Fork titled Contest-Solution is not proof of winner provenance. Only README/source metadata read, no data/PDK execution.",
+    "locator": "Web-rendered lines3-10 Contest Winners. Organizer README raw one-based1-29 description/timeline, at f7b29d242fc7d441f3b4eadc556f40099ccca067.",
+    "published": "2026",
+    "readme_sha256": "29c95e3df2f051f14ebb45ee71be7c3d42d5302c8c12d7f2249a45901dc0ab50",
+    "repository_url": "https://github.com/ABKGroup/ISPD26-Contest",
+    "retrieved_utc": "2026-10-16",
+    "title": "ISPD26 official contest page and pinned organizer repository",
+    "type": "primary contest page",
+    "url": "https://www.ispd.cc/contests/26/index.html",
+    "version": "Official page retrieved2026-10-16; repo f7b29d242fc7d441f3b4eadc556f40099ccca067"
+  },
+  {
+    "access": "full",
+    "claims": [
+      "CLM-1107"
+    ],
+    "id": "R11",
+    "limitations": "Opened official linked ZIP Drive viewer; renderer exposed only metadata/no archive contents. No winner methods inspected, no access-control bypass.",
+    "locator": "Web-rendered58-70 Problem C, link38 ICCAD problem C top-3 result.",
+    "published": "2025",
+    "report_url": "https://drive.google.com/file/d/1yZstdjFc30xt9RYz583ecb8_jnDE1F9O/view?usp=sharing",
+    "retrieved_utc": "2026-10-16",
+    "title": "2025 CAD Contest at ICCAD problem and top-three report links",
+    "type": "primary contest page",
+    "url": "https://www.iccad-contest.org/2025/Problems.html",
+    "version": "Dynamic official page; retrieved2026-10-16"
+  },
+  {
+    "access": "full",
+    "claims": [
+      "CLM-1107"
+    ],
+    "id": "R12",
+    "limitations": "Current problem context only; no2026 winner method inferred. ISPD2027 program page remains mixed2027 chrome/2026 content; R09 roadmap is more precise evidence of proposed additions.",
+    "locator": "Contest Problems and tentative schedule sections.",
+    "published": "2026",
+    "retrieved_utc": "2026-10-16",
+    "title": "2026 CAD Contest at ICCAD",
+    "type": "primary contest page",
+    "url": "https://www.iccad-contest.org/2026/",
+    "version": "Dynamic official page; retrieved2026-10-16"
+  },
+  {
+    "access": "full",
+    "claims": [
+      "CLM-1110"
+    ],
+    "id": "R13",
+    "limitations": "Vendor advertised ECO/multi-scenario/multi-corner/ML capabilities only. No commercial internals, independent measurement, licensing allocation or exclusivity conclusion.",
+    "locator": "Core STA, Performance and Capacity and Advanced Timing Analysis; rendered108-139.",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-16",
+    "title": "PrimeTime Static Timing Analysis public capabilities",
+    "type": "vendor capability advertisement",
+    "url": "https://www.synopsys.com/implementation-and-signoff/signoff/primetime.html",
+    "version": "Dynamic official page; retrieved2026-10-16"
+  },
+  {
+    "access": "abstract",
+    "claims": [
+      "CLM-1110"
+    ],
+    "id": "R14",
+    "limitations": "Abstract and public documentation only, no full-method audit or speedup transfer. Site advertises academic/noncommercial licensing and downloadable dynamic library; no license requested, binary downloaded or account created.",
+    "locator": "Author abstract; https://heterosta.pkueda.org.cn/ Features/Download/Obtain a license; /documentation installation.",
+    "published": "2026-01",
+    "retrieved_utc": "2026-10-16",
+    "title": "HeteroSTA author paper and product documentation",
+    "type": "author abstract and product documentation",
+    "url": "https://guozz.cn/publication/heterostaaspdac-26/",
+    "version": "ASPDAC2026 author page; advertised release v1.3-20260712"
+  },
+  {
+    "access": "full",
+    "claims": [
+      "CLM-1102"
+    ],
+    "id": "R15",
+    "limitations": "Selected method/fallback passages only, not full empirical audit. Source is software repair, not STA; edit-sharing transfer is a mechanism comparison, not EDA performance evidence.",
+    "locator": "Physical PDF pp2-5 sections3,4.1,4.3; rendered127-134,271-275,344-388,413-473.",
+    "published": "2021-08",
+    "retrieved_utc": "2026-10-16",
+    "title": "VarFix: Balancing Edit Expressiveness and Search Effectiveness in Automated Program Repair",
+    "type": "primary paper",
+    "url": "https://clairelegoues.com/assets/papers/wong21varfix.pdf",
+    "version": "ESEC/FSE2021 final author PDF,13 pages"
+  },
+  {
+    "access": "abstract",
+    "claims": [
+      "CLM-1109"
+    ],
+    "id": "R16",
+    "limitations": "PDF retrievable, only abstract/intro scoped reading completed in this round. Dual-CSR/incremental-levelization prior lead; full mechanism comparison unresolved, no GPU access or reproduced gain.",
+    "locator": "Physical PDF p1 abstract and introduction; author page https://guozz.cn/publication/incregpustaiccad-25/.",
+    "published": "2025-11",
+    "retrieved_utc": "2026-10-16",
+    "title": "IncreGPUSTA: GPU-Accelerated Incremental Static Timing Analysis for Iterative Design Flows",
+    "type": "primary paper",
+    "url": "https://guozz.cn/publication/incregpustaiccad-25/incregpustaiccad-25.pdf",
+    "version": "ICCAD2025 author PDF,9 pages"
+  },
+  {
+    "access": "abstract",
+    "claims": [
+      "CLM-1109"
+    ],
+    "id": "R17",
+    "limitations": "Direct web open internal error; primary author abstract indexed in search. No full22-page method inspection, author speedup or saturation claim.",
+    "locator": "Indexed primary SSRN author abstract; Posted date and19-reference list.",
+    "published": "2026-07-23",
+    "retrieved_utc": "2026-10-16",
+    "title": "Incremental Task Graph Partitioning with Constrained Parallelism",
+    "type": "primary paper",
+    "url": "https://papers.ssrn.com/sol3/Delivery.cfm/753e400f-d897-41e7-a93c-03402a7c884b-MECA.pdf?abstractid=7168317&mirid=1",
+    "version": "SSRN7168317; DOI10.2139/ssrn.7168317"
+  },
+  {
+    "access": "full",
+    "claims": [
+      "CLM-1104",
+      "CLM-1105",
+      "CLM-1106"
+    ],
+    "id": "A02",
+    "limitations": "768 random finite integer cases plus5 named inputs. No engine, physical timing, wall-time, memory measurement, adaptive policy implementation or EDA proof.",
+    "locator": "Exact fenced Python and JSON stdout in experiment-plan.md; extraction/replay command immediately before code.",
+    "published": "2026-10-16",
+    "retrieved_utc": "2026-10-16",
+    "title": "Own support-join and dependency-order analytical replay",
+    "type": "own tiny analytical fixture",
+    "url": "experiment-plan.md#a02-public-analytical-replay",
+    "version": "script aabaa63e83e34e49939ea4b008afc84b75a394725e948acf0c043deb1f57d513"
+  }
+]

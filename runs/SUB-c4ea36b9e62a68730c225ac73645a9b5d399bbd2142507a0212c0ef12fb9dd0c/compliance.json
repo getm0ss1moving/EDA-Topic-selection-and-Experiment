@@ -1,0 +1,126 @@
+{
+  "schema": 1,
+  "role": "verifier",
+  "actor_id": "ChatGPT-V05-TIMING-B04-EDA-0010",
+  "session_id": "df362a1f-1d66-4a02-86a9-92e52de6fad7",
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "packet_sha256": "68a627d6437f4a4b696d1c878d6909033d8eecf7d7ae2a69e0cc24b055f74798",
+  "job_id": "64709e1f-591d-4dd1-845e-d3b35a7a6a07",
+  "read_releases": [
+    "SUB-b4a0830fd75dd9263101adcdda8a60e7ed86f687e08723fe63c0f3e83046ffae",
+    "SUB-1a4046d48852400f673bf14b891eeb70900fc985b29d11840149262bdfe13693",
+    "SUB-64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c",
+    "SUB-af311c9ae6b091db1fdb94a8bd262fe027a34d25a761c2e072c59c2d0497d01d"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0
+  },
+  "rules": {
+    "inputs": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md",
+        "workflow.json"
+      ],
+      "limits": "Self-report only; no proof of absent unseen actions. Standalone public released-file review and source reading; no scientific approval manufactured."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md",
+        "workflow.json"
+      ],
+      "limits": "Self-report only; no proof of absent unseen actions. Standalone public released-file review and source reading; no scientific approval manufactured."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md",
+        "workflow.json"
+      ],
+      "limits": "Self-report only; no proof of absent unseen actions. Standalone public released-file review and source reading; no scientific approval manufactured."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md",
+        "workflow.json"
+      ],
+      "limits": "Self-report only; no proof of absent unseen actions. Standalone public released-file review and source reading; no scientific approval manufactured."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md",
+        "workflow.json"
+      ],
+      "limits": "Self-report only; no proof of absent unseen actions. Standalone public released-file review and source reading; no scientific approval manufactured."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md",
+        "workflow.json"
+      ],
+      "limits": "Self-report only; no proof of absent unseen actions. Standalone public released-file review and source reading; no scientific approval manufactured."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md",
+        "workflow.json"
+      ],
+      "limits": "Self-report only; no proof of absent unseen actions. Standalone public released-file review and source reading; no scientific approval manufactured."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md",
+        "workflow.json"
+      ],
+      "limits": "Self-report only; no proof of absent unseen actions. Standalone public released-file review and source reading; no scientific approval manufactured."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md",
+        "workflow.json"
+      ],
+      "limits": "Self-report only; no proof of absent unseen actions. Standalone public released-file review and source reading; no scientific approval manufactured."
+    }
+  },
+  "operations": [
+    "First read exact JOB.json/prompt.txt in assigned workdir; read common policies/batch and only verifier harness. Initial guessed policy/harnesses path missing; found correct policy/harness/VERIFIER.md using policy-only inventory.",
+    "Read current P/C released material and explicitly supplied historical P source record/V public files and handover allegations; no old private scratch or predecessor challenger body read.",
+    "Independently retrieve pinned raw code via urllib as data; web-open V5-V8 and selected passages; record queries/access/limitations in verification.json. No downloaded code execution.",
+    "Trusted verify both current releases; trusted project digest current proposer. Recomputed task hash; no analytical numerical fixture executed.",
+    "Write own build_review.py at job root and four allowlisted release files; self-freeze using supplied command. Root helper is not scientific numerical evidence and not included in release.",
+    "No checkout/home/session/memory discovery; no cross-role messages/subagents; no build/EDA/training/remote/paid allocation. Full repository validation delegated to publication by exact prompt."
+  ],
+  "incidents": [],
+  "observability": "Self-authored public activity ledger, not a complete tool trace or evidence of absent undisclosed actions."
+}

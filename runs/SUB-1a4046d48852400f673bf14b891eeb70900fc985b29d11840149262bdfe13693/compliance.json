@@ -1,0 +1,174 @@
+{
+  "schema": 1,
+  "role": "challenger",
+  "actor_id": "ChatGPT-C05-TIMING-B04-EDA-0010",
+  "session_id": "d8091c5d-03ed-43c0-911f-86081135ec73",
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "packet_sha256": "995463cb4ddd44a2e9b6a97a44840d169e30ff0e77ef842f13e28d70176fd732",
+  "job_id": "1454fd63-14e7-4c7b-88a1-59dd0418080c",
+  "read_releases": [
+    "SUB-b4a0830fd75dd9263101adcdda8a60e7ed86f687e08723fe63c0f3e83046ffae"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0
+  },
+  "rules": {
+    "inputs": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "search-log.md",
+        "challenges.md",
+        "independent-estimate.md"
+      ],
+      "limits": "Exact JOB/prompt read first. Job-only policy discovery followed. Only current explicitly released proposer output read; prior released packets not opened."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "search-log.md",
+        "challenges.md",
+        "independent-estimate.md"
+      ],
+      "limits": "No checkout, foreign private notes, session tools, messages or subagents used; policy separation is not OS confinement. Review unblinded."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "search-log.md",
+        "challenges.md",
+        "independent-estimate.md"
+      ],
+      "limits": "Own release files, trusted submissions freeze and job result.json only."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "search-log.md",
+        "challenges.md",
+        "independent-estimate.md"
+      ],
+      "limits": "Selected sections and exact access limits in sources.json; inaccessible winner archive contents remain unresolved."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "search-log.md",
+        "challenges.md",
+        "independent-estimate.md"
+      ],
+      "limits": "Model replay counts are not STA measurements. Full-system novelty/demand/headroom remain unresolved."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "search-log.md",
+        "challenges.md",
+        "independent-estimate.md"
+      ],
+      "limits": "Only own pending vote; neither agreement nor signatures for another role."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "search-log.md",
+        "challenges.md",
+        "independent-estimate.md"
+      ],
+      "limits": "Only source reading and own finite integer fixture; no new EDA/build/training/remote/paid run. Historical resource file not treated as allocation."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "search-log.md",
+        "challenges.md",
+        "independent-estimate.md"
+      ],
+      "limits": "Both drift scores zero for anchor-preserving repair; no merit or approval inferred."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "search-log.md",
+        "challenges.md",
+        "independent-estimate.md"
+      ],
+      "limits": "Trusted local freeze then coordinator transport/PR/full validation; no self-approval or merge."
+    }
+  },
+  "operations": [
+    {
+      "action": "read",
+      "references": [
+        "JOB.json",
+        "prompt.txt",
+        "policy/docs/CHARTER.md",
+        "policy/docs/WORKFLOW.md",
+        "policy/docs/EVIDENCE.md",
+        "policy/docs/ISOLATION.md",
+        "policy/docs/CODEX-AUTOMATION.md",
+        "policy/docs/ROLE-COMPLIANCE.md",
+        "policy/docs/INNOVATION-BATCH-0004.md",
+        "policy/docs/INNOVATION-STRATEGY.md",
+        "policy/harness/CHALLENGER.md",
+        "policy/docs/SELF-SUBMISSION.md",
+        "policy/templates/topic/compliance.json",
+        "policy/domains/D05/brief.json",
+        "policy/config/research-brief.json",
+        "policy/scripts/role_submission.py",
+        "result.schema.json"
+      ]
+    },
+    {
+      "action": "released_input_read",
+      "references": [
+        "SUB-b4a0830fd75dd9263101adcdda8a60e7ed86f687e08723fe63c0f3e83046ffae/proposal.md",
+        "SUB-b4a0830fd75dd9263101adcdda8a60e7ed86f687e08723fe63c0f3e83046ffae/tasklist.md",
+        "SUB-b4a0830fd75dd9263101adcdda8a60e7ed86f687e08723fe63c0f3e83046ffae/experiment-plan.md",
+        "SUB-b4a0830fd75dd9263101adcdda8a60e7ed86f687e08723fe63c0f3e83046ffae/sources.json",
+        "SUB-b4a0830fd75dd9263101adcdda8a60e7ed86f687e08723fe63c0f3e83046ffae/prior-art.csv",
+        "SUB-b4a0830fd75dd9263101adcdda8a60e7ed86f687e08723fe63c0f3e83046ffae/contest-audit.md",
+        "SUB-b4a0830fd75dd9263101adcdda8a60e7ed86f687e08723fe63c0f3e83046ffae/industry-gap.md",
+        "SUB-b4a0830fd75dd9263101adcdda8a60e7ed86f687e08723fe63c0f3e83046ffae/direction-control.json"
+      ]
+    },
+    {
+      "action": "external_research",
+      "references": [
+        "search-log.md",
+        "sources.json"
+      ]
+    },
+    {
+      "action": "own_analytical_execution",
+      "references": [
+        "independent-estimate.md#c-a01-arbitrary-base-absent-complement-and-re-coalescence"
+      ]
+    },
+    {
+      "action": "write_and_self_freeze",
+      "references": [
+        "release/",
+        "submissions/",
+        "result.json"
+      ],
+      "note": "Trusted freeze result is separately recorded by SUBMISSION.json and result.json; no scientific approval claimed."
+    }
+  ],
+  "incidents": [],
+  "observability": "Self-authored public activity ledger, not a complete tool trace or evidence of absent undisclosed actions."
+}
