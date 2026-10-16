@@ -1,0 +1,116 @@
+{
+  "schema": 1,
+  "role": "verifier",
+  "actor_id": "ChatGPT-V04-PHYSICAL-B04-EDA-0009-REPLACEMENT-1-9833ceb3",
+  "session_id": "802c4f6c-18f4-4dc0-adf8-9deb15979b2c",
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "packet_sha256": "6b2ccb7eb7eb5483b6bbbea003e63bd977fdc0f37ba07f5d306a0516990323df",
+  "job_id": "adf4b394-4e6b-4df4-a060-d534c24380fb",
+  "read_releases": [
+    "SUB-988d5b734de75037f4ca472fe6c9799a673f9538cd7b4053da26a004347406f8",
+    "SUB-3090026e572d0cecae72323cca434d6748d78424acd61699d6ecfb2e8aad0f6b",
+    "SUB-2e1f236a3f9a0f3f0b1c30016dc8ad8f2b235c94f980b0989b1d3e287588d85c",
+    "SUB-7e97f68607ffccc8e48853bfd2247e683998c8b4353be4e36eca19d4f14fd154"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0
+  },
+  "rules": {
+    "inputs": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md"
+      ],
+      "limits": "Self-authored limited public ledger, not a complete trace or proof of unseen absence. Current packet and released science only."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md"
+      ],
+      "limits": "Self-authored limited public ledger, not a complete trace or proof of unseen absence. Current packet and released science only."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md"
+      ],
+      "limits": "Self-authored limited public ledger, not a complete trace or proof of unseen absence. Current packet and released science only."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md"
+      ],
+      "limits": "Self-authored limited public ledger, not a complete trace or proof of unseen absence. Current packet and released science only."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md"
+      ],
+      "limits": "Self-authored limited public ledger, not a complete trace or proof of unseen absence. Current packet and released science only."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md"
+      ],
+      "limits": "Self-authored limited public ledger, not a complete trace or proof of unseen absence. Current packet and released science only."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md"
+      ],
+      "limits": "Self-authored limited public ledger, not a complete trace or proof of unseen absence. Current packet and released science only."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md"
+      ],
+      "limits": "Self-authored limited public ledger, not a complete trace or proof of unseen absence. Current packet and released science only."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md"
+      ],
+      "limits": "Self-authored limited public ledger, not a complete trace or proof of unseen absence. Current packet and released science only."
+    }
+  },
+  "operations": [
+    "First filesystem call read only exact assigned JOB.json and prompt.txt; subsequent scoped policy/docs and own verifier harness, templates/scripts; missing policy/harnesses path failed listing, then correct own harness found within policy.",
+    "After policy reads, enumerated only policy/shared in assigned job; read current P/C, released prior P and protocol audit. Some combined outputs truncated; relevant current science reopened individually. No checkout/home/session discovery.",
+    "Public web/HTTPS source reading per verification.json search_log; AiDRC and pinned CPP raw fetched via urllib; installed pdftotext inspected selected pages in auto-cleaned temporary directory. No downloaded code executed.",
+    "Read current proposer analytical code as data, executed only own V-A01 code now embedded with stdout/hashes. Trusted manifest verify and digest run on released inputs.",
+    "Wrote own release verification.md/json workflow/compliance; self-freeze and verify via supplied trusted script; root result.json after success. Coordinator owns full validation/PR publication."
+  ],
+  "incidents": [],
+  "observability": "Self-authored public activity ledger, not a complete tool trace; cannot certify unseen filesystem/network/backend model/isolation. Assignment dispatch was task context, not scientific role correspondence; no agent tool messages or subagents used."
+}

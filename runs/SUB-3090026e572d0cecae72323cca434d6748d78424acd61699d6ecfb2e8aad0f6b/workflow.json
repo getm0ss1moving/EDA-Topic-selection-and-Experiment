@@ -1,0 +1,22 @@
+{
+  "role": "challenger",
+  "reviewed_proposer_release": "SUB-988d5b734de75037f4ca472fe6c9799a673f9538cd7b4053da26a004347406f8",
+  "assessment": "revise",
+  "coverage": {
+    "duplicate_prior_art": "unresolved",
+    "mechanism": "supported",
+    "composition": "unresolved",
+    "demand": "unresolved",
+    "industry_gap": "unresolved",
+    "headroom": "unresolved",
+    "contests": "supported",
+    "experiments": "supported",
+    "cost": "supported"
+  },
+  "combination_drift": 0,
+  "demand_drift": 0,
+  "current_objections": [
+    "OBJ-1101"
+  ],
+  "position": "Conditional hypothesis retained; repaired earlier issues acknowledged; no experiment agreement"
+}

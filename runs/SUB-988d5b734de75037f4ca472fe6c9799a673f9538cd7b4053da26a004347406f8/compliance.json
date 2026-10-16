@@ -1,0 +1,142 @@
+{
+  "schema": 1,
+  "role": "proposer",
+  "actor_id": "ChatGPT-P04-PHYSICAL-B04-EDA-0009-REPLACEMENT-1-5b0f12cd",
+  "session_id": "8492d4d4-8b51-4d76-9309-7af2622f4674",
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "packet_sha256": "3d29add2098d5982cd75816f9f6db2f417fa0e03703c69708f9ad91afe7c12b9",
+  "job_id": "ee7427d7-4dd1-428f-b8b4-58b83e8bad8f",
+  "read_releases": [
+    "SUB-2e1f236a3f9a0f3f0b1c30016dc8ad8f2b235c94f980b0989b1d3e287588d85c",
+    "SUB-8799913f1db1283e09646461628b8009a043423bf86ae40cb5a9c85eb7ec0042",
+    "SUB-f70b504c01235e69199f322b0bbd1ddec249af0289ea0e1883b1132758ddb6bf"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0
+  },
+  "rules": {
+    "inputs": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json; prompt.txt; search-log.md Exact assignment and exposure"
+      ],
+      "limits": "Initial absolute JOB/prompt read only; common policy/own harness and three actually opened released directories. User-supplied context visible. Combined-output truncations disclosed; not every supplied file is claimed read."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md Exact assignment and exposure"
+      ],
+      "limits": "No intended checkout/private/session/memory/foreign-harness access or role message. Self-report cannot attest unseen OS behavior, model backend or other jobs."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "release/ file manifest; search-log.md writes"
+      ],
+      "limits": "Own release and temporary area, trusted own submissions and result only. No upstream source or paper copy published."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "sources.json; search-log.md source operations and repairs"
+      ],
+      "limits": "Access enums full/abstract/metadata; selected-method limits, inherited records and source-binding repair explicit. No exhaustive code/source audit."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "proposal.md claim ledger; forecast.json; public replay"
+      ],
+      "limits": "Exact rational toy/operation-count observations separate from hypotheses and null physical forecasts; no measured physical gain or inherited numerical execution attestation."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "experiment-consent.json pending; workflow.json"
+      ],
+      "limits": "Only own pending record; changed tasklist does not gain agreement through an old revision. No C/V signature or scientific acceptance invented."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json; policy/docs/INNOVATION-BATCH-0004.md; tasklist.md EXP-100"
+      ],
+      "limits": "No allocated EDA/build/training/remote/GPU/paid run; source reading, installed PDF extraction and tiny own stdlib fixtures only. Algorithmic caps do not grant resources."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "direction-control.json; responses.md"
+      ],
+      "limits": "Original fixed sibling pool, charged context sharing and closure need preserved; zero drift is self-assessment, not independent merit proof."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md Local validation scope; own SUBMISSION.json after freeze"
+      ],
+      "limits": "Self-freeze/verify only; no PR merge/self-approval. Full-repository publication validation belongs to coordinator. Planned completion is evidenced by final result, not this ledger alone."
+    }
+  },
+  "operations": [
+    {
+      "kind": "input_read",
+      "references": [
+        "JOB.json",
+        "prompt.txt",
+        "policy/docs/",
+        "policy/harness/PROPOSER.md",
+        "search-log.md Exact assignment and exposure"
+      ]
+    },
+    {
+      "kind": "released_science_read",
+      "references": [
+        "SUB-2e1f236a3f9a0f3f0b1c30016dc8ad8f2b235c94f980b0989b1d3e287588d85c",
+        "SUB-8799913f1db1283e09646461628b8009a043423bf86ae40cb5a9c85eb7ec0042",
+        "SUB-f70b504c01235e69199f322b0bbd1ddec249af0289ea0e1883b1132758ddb6bf"
+      ]
+    },
+    {
+      "kind": "public_source_search_and_read",
+      "references": [
+        "search-log.md Bounded independent searches",
+        "sources.json"
+      ]
+    },
+    {
+      "kind": "tiny_own_analytical_and_source_checks",
+      "references": [
+        "search-log.md Own exact finite-state analytical check",
+        "search-log.md Own tiny public-source check"
+      ],
+      "code_sha256": "1b75696b6e20b668a2c02b73a858bd1c474046347c69d487e2b4419fb56d53e8",
+      "stdout_sha256": "afd338908c46ff02348f246fcf2ed236f0e52ec49ccfdb3479e3d495afb7fa0a"
+    },
+    {
+      "kind": "write_and_local_validate",
+      "references": [
+        "release/",
+        "tasklist.md",
+        "search-log.md Local validation scope"
+      ]
+    },
+    {
+      "kind": "self_freeze_and_verify",
+      "references": [
+        "submissions/SUB-<content-address>/SUBMISSION.json",
+        "result.json"
+      ],
+      "scope": "Trusted command completion is recorded by resulting manifest/result; this ledger does not independently attest it."
+    }
+  ],
+  "incidents": [],
+  "observability": "Self-authored public activity ledger, not a complete tool trace, OS confinement proof or evidence of absent undisclosed actions. No forbidden exposure/action is disclosed in this job; historical replacement context is not inspected or certified. Source/authoring assertion/import errors are disclosed in search-log and corrected without deleting scientific negatives."
+}

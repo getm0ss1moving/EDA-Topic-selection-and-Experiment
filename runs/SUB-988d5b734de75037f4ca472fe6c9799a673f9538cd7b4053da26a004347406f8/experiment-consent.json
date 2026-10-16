@@ -1,0 +1,7 @@
+{
+  "session_id": "8492d4d4-8b51-4d76-9309-7af2622f4674",
+  "decision": "pending",
+  "signed_revision": "SUB-2e1f236a3f9a0f3f0b1c30016dc8ad8f2b235c94f980b0989b1d3e287588d85c",
+  "tasklist_sha256": "f5116283fa0b920812461e51dd4ac8ff20280f3284c61fb65beef400050fb29b",
+  "rationale": "No agreement. Current tasklist differs from the referenced previous revision; this is a pending record, not a signature over altered bytes. Actual allocation, adapter, economics/endpoint thresholds, exact model specification and independent matching C consent are absent. A later agree must bind an earlier immutable release containing exactly this tasklist."
+}

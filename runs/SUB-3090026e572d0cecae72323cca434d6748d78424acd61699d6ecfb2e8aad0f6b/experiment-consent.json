@@ -1,0 +1,7 @@
+{
+  "session_id": "1f323593-6e87-4aef-b624-b0c134c28632",
+  "decision": "revision_requested",
+  "signed_revision": "SUB-988d5b734de75037f4ca472fe6c9799a673f9538cd7b4053da26a004347406f8",
+  "tasklist_sha256": "f5116283fa0b920812461e51dd4ac8ff20280f3284c61fb65beef400050fb29b",
+  "rationale": "Resolve endpoint-matched rejection baseline OBJ-1101 and preserve unresolved resources/adapter/data/threshold dependencies; no execution authorization or other-role signature."
+}

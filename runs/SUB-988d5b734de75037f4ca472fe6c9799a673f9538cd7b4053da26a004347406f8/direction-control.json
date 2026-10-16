@@ -1,0 +1,77 @@
+{
+  "state": "continue",
+  "anchor": {
+    "problem": "Choose which fixed local detailed-route repair alternatives to exactly validate before a deadline while retaining complete rule/connectivity outcomes.",
+    "engineering_user": "Digital physical-design route-closure engineer",
+    "downstream_need": "Reduce time to complete connected engine-DRC-clean route while preserving post-route timing at fixed design/technology conditions.",
+    "causal_mechanism": "Feed context-complete cross-candidate exact-obligation sharing and its discovery cost into bounded subset selection, rather than independently scoring immediate repair value and isolated checking cost.",
+    "mechanism_invariants": [
+      "Same canonical routed checkpoint and <=16 fixed same-net wire/via repair candidates",
+      "Complete predicate-context and negative-range dependencies; unsupported rules full fallback or UNKNOWN",
+      "Exact acceptance owned by pinned checker and connectivity oracle; predictor schedules only",
+      "Equal information/candidate/cache/fallback and full costs against strong conventional selection",
+      "Primary gain must survive full downstream closure/timing checks; cache hits alone insufficient"
+    ],
+    "forbidden_pivots": [
+      "Replacing subset-selection contribution with generic caching or a hash log",
+      "Claiming agent count or unified-model labels as novelty",
+      "Moving to placement/sizing or pure hotspot prediction under this ID",
+      "Replacing physical closure need with toy reward/cache-hit optimization"
+    ]
+  },
+  "penalties": {
+    "combination_drift": {
+      "score": 0,
+      "rationale": "Controller repair and fair task-specific baseline preserve original paid-incidence/selection anchor; bundling is explicitly conventional and not a new contribution.",
+      "evidence_refs": [
+        "proposal.md",
+        "responses.md"
+      ]
+    },
+    "demand_drift": {
+      "score": 0,
+      "rationale": "Same complete connected checked-route/timing endpoint; narrow demand remains unresolved, not replaced by parity or cache statistics.",
+      "evidence_refs": [
+        "proposal.md",
+        "industry-gap.md"
+      ]
+    },
+    "total": 0
+  },
+  "revision_assessment": {
+    "preserves_problem": true,
+    "preserves_engineering_need": true,
+    "preserves_causal_mechanism": true,
+    "changes": [
+      "Add AiDRC same-input comparator and acknowledge final exact checking already prior",
+      "Retain myopic heuristic; give conventional/proposed controllers identical bounded bundles and negative controls",
+      "Split economic lock before census and endpoint lock before pilot",
+      "Expose new own exact code/stdout/hashes and finite planning caps"
+    ],
+    "reason": "Respond to adjudicated OBJ-1001/1002/1003 without changing fixed sibling-pool, charged complete-context sharing or downstream route-closure need."
+  },
+  "abandonment": {
+    "decision_id": null,
+    "grounds": [],
+    "rationale": null,
+    "evidence_refs": [],
+    "consents": {
+      "proposer": {
+        "session_id": null,
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      },
+      "challenger": {
+        "session_id": null,
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      }
+    },
+    "successor_topic_id": null,
+    "resurrection_conditions": [
+      "Independent source equivalence resolution and narrow demand/physical-work evidence under future allocation"
+    ]
+  }
+}

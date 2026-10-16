@@ -1,0 +1,413 @@
+{
+  "decision": "revise",
+  "verifier_session": "802c4f6c-18f4-4dc0-adf8-9deb15979b2c",
+  "actor_id": "ChatGPT-V04-PHYSICAL-B04-EDA-0009-REPLACEMENT-1-9833ceb3",
+  "job_id": "adf4b394-4e6b-4df4-a060-d534c24380fb",
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "packet_sha256": "6b2ccb7eb7eb5483b6bbbea003e63bd977fdc0f37ba07f5d306a0516990323df",
+  "reviewed_proposer_release": "SUB-988d5b734de75037f4ca472fe6c9799a673f9538cd7b4053da26a004347406f8",
+  "adjudicated_challenger_releases": [
+    "SUB-3090026e572d0cecae72323cca434d6748d78424acd61699d6ecfb2e8aad0f6b"
+  ],
+  "dossier_digest": "dffad30952292f05e0aa479c5178b447e317966dd2cfc98386fdef3526dc2efb",
+  "digest_scope": "Trusted project.py digest over exact frozen proposer directory; verification excluded by supplied tool.",
+  "gates": {
+    "novelty": false,
+    "mechanism": false,
+    "utility": false,
+    "contest_originality": false,
+    "headroom": false,
+    "feasibility": false,
+    "direction_integrity": true,
+    "experiment_consensus": false
+  },
+  "gate_reasons": {
+    "novelty": "Residual representation delta versus equally informed C unresolved; EvoDRC neighborhood and exact winner bridge remain open.",
+    "mechanism": "Conditional lemma valid; complete selective interface, key/input-output separation and distinctive estimator unimplemented.",
+    "utility": "Broad demand supported, narrow sibling economics and meaningful threshold unknown; OBJ-1101 needs endpoint-matched control.",
+    "contest_originality": "Winner identity and task distinction checked, exact postcontest-to-winning implementation bridge not checked.",
+    "headroom": "No representative residual-sharing/net-cost distribution; no applicable impossibility theorem or saturation inferred.",
+    "feasibility": "EXP-100 closed: no actual allocation/data rights/runner/adapter/training lock.",
+    "direction_integrity": "Zero combination and demand drift: fixed immutable repair siblings, paid complete-context incidence and downstream checked route remain. Not novelty approval.",
+    "experiment_consensus": "Recomputed current tasklist hash matches challenger reference, but decisions are pending/revision_requested and signed revisions differ; no dual agree."
+  },
+  "direction_penalty_checked": true,
+  "direction_penalties": {
+    "combination_drift": 0,
+    "demand_drift": 0,
+    "total": 0
+  },
+  "experiment_consensus_checked": true,
+  "abandonment_process_checked": true,
+  "experiment_consensus": {
+    "tasklist_sha256": "f5116283fa0b920812461e51dd4ac8ff20280f3284c61fb65beef400050fb29b",
+    "proposer_decision": "pending",
+    "proposer_signed_revision": "SUB-2e1f236a3f9a0f3f0b1c30016dc8ad8f2b235c94f980b0989b1d3e287588d85c",
+    "challenger_decision": "revision_requested",
+    "challenger_signed_revision": "SUB-988d5b734de75037f4ca472fe6c9799a673f9538cd7b4053da26a004347406f8",
+    "matching_agree": false,
+    "readiness": "not_ready",
+    "actual_resources": null
+  },
+  "abandonment": "No matching consent or demonstrated dead end; continue bounded review, do not fabricate abandonment.",
+  "sources": [
+    {
+      "id": "V-S01",
+      "title": "AiDRC author manuscript",
+      "url": "https://ieda.oscc.cc/res/papers/25-TODAES-AiDRC.pdf",
+      "source_type": "author_manuscript",
+      "publication_date": "unknown",
+      "retrieved_utc": "2026-10-16T05:12:01.451285+00:00",
+      "locator": "Physical PDF pp9 section2.3,12 routed-wire/via features,25 Table4,26 section5.5 continuation",
+      "access_level": "full",
+      "supported_claim_ids": [
+        "CLM-R2-002",
+        "OBJ-1001"
+      ],
+      "limitations": "Web timeout; urllib and installed pdftotext succeeded. Selected pages, not full-method audit. Placeholder publication headers; publisher DOI opening failed. No performance reproduction.",
+      "sha256": "ac23635ae04e506a0e83637397b52d1fb65d90759d116b1f20159d9e4674f690"
+    },
+    {
+      "id": "V-S02",
+      "title": "OpenROAD FlexGC_main.cpp",
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/src/drt/src/gc/FlexGC_main.cpp",
+      "source_type": "pinned_source_code",
+      "publication_date": "unknown",
+      "retrieved_utc": "2026-10-16T05:12:01.451285+00:00",
+      "locator": "Raw one-based849-875 spacing queries;1516-1525 min-area guard;4021-4062 main dispatch/marker modification",
+      "access_level": "full",
+      "supported_claim_ids": [
+        "CLM-B4-004",
+        "CLM-B4-005",
+        "OBJ-1101"
+      ],
+      "limitations": "Exact raw bytes fetched; selected ranges only. Browser line count differs from raw; locators here use raw. No build, header audit, cancellation proof or whole-engine coverage claim.",
+      "version": "b16bda7e82721d10566ff7e2b68f1ff0be9f9e38",
+      "sha256": "4770ffdc8f1ac0fd13e69dac1a0b75c5dbb795bf7c043be5ed2b8294cb43a517"
+    },
+    {
+      "id": "V-S03",
+      "title": "TritonRoute-WXL",
+      "url": "https://vlsicad.ucsd.edu/Publications/Journals/j136.pdf",
+      "source_type": "author_paper",
+      "publication_date": "2021",
+      "retrieved_utc": "2026-10-16T05:12:01.451285+00:00",
+      "locator": "Physical p9 V-E/VI-B, rendered838-884",
+      "access_level": "full",
+      "supported_claim_ids": [
+        "CLM-B4-007"
+      ],
+      "limitations": "Selected passages establish incremental per-net workflow only. No sibling-sharing census or reported gain adopted."
+    },
+    {
+      "id": "V-S04",
+      "title": "OpenDRC",
+      "url": "https://zyh0911.github.io/assets/pdf/OpenDRC.pdf",
+      "source_type": "author_paper",
+      "publication_date": "2023",
+      "retrieved_utc": "2026-10-16T05:12:01.451285+00:00",
+      "locator": "Physical p3 IV-C rendered218-274",
+      "access_level": "full",
+      "supported_claim_ids": [
+        "CLM-B4-009"
+      ],
+      "limitations": "Selected hierarchy/invariant pruning method only; not alternative-state complete-context equivalence or GPU reproduction."
+    },
+    {
+      "id": "V-S05",
+      "title": "Dr. CU 2.0",
+      "url": "https://chengengjie.github.io/papers/C12-ICCAD19-DrCU2.pdf",
+      "source_type": "author_paper",
+      "publication_date": "2019",
+      "retrieved_utc": "2026-10-16T05:12:01.451285+00:00",
+      "locator": "Physical pp4-5 III-C.2 rendered323-367; IV comparison rendered418-424",
+      "access_level": "full",
+      "supported_claim_ids": [
+        "CLM-B4-009",
+        "CLM-B4-010"
+      ],
+      "limitations": "Pessimistic merged LUT followed by exact checking verified. Paper compares against contest scores; exact winner executable correspondence not established."
+    },
+    {
+      "id": "V-S06",
+      "title": "ISPD2019 official contest",
+      "url": "https://ispd.cc/contests/19/",
+      "source_type": "official_contest",
+      "publication_date": "2019",
+      "retrieved_utc": "2026-10-16T05:12:01.451285+00:00",
+      "locator": "Evaluation rendered103-117; Final Result154-159; FAQ12 rendered299-311",
+      "access_level": "full",
+      "supported_claim_ids": [
+        "CLM-R2-003",
+        "CLM-B4-010"
+      ],
+      "limitations": "Rule semantic example and winner identity only. No downloaded contest code/design or valid license inferred."
+    },
+    {
+      "id": "V-S07",
+      "title": "Context-sensitive trans-reflexive incremental DRC",
+      "url": "https://patents.google.com/patent/US20120180014A1/en",
+      "source_type": "published_patent",
+      "publication_date": "2012-07-12",
+      "retrieved_utc": "2026-10-16T05:12:01.451285+00:00",
+      "locator": "Background rendered236-237; Detailed Description FIG8 rendered312-317",
+      "access_level": "full",
+      "supported_claim_ids": [
+        "OBJ-1101"
+      ],
+      "limitations": "Published descriptive method expressly aborts/rolls back on first violation before another via trial. Not legal novelty advice, implementation proof or OpenROAD cost measurement."
+    },
+    {
+      "id": "V-S08",
+      "title": "ISPD2026 contest",
+      "url": "https://www.ispd.cc/contests/26/index.html",
+      "source_type": "official_contest",
+      "publication_date": "2026",
+      "retrieved_utc": "2026-10-16T05:12:01.451285+00:00",
+      "locator": "Page title Post-Placement Buffering and Sizing",
+      "access_level": "full",
+      "supported_claim_ids": [
+        "CLM-B4-010"
+      ],
+      "limitations": "Title-level task distinction; winner algorithms not audited."
+    },
+    {
+      "id": "V-S09",
+      "title": "ISPD2027 contest index",
+      "url": "https://ispd.cc/ispd2027/index.php?page=contests",
+      "source_type": "official_contest_index",
+      "publication_date": "unknown",
+      "retrieved_utc": "2026-10-16T05:12:01.451285+00:00",
+      "locator": "Contest2027 heading and archive links rendered15-17",
+      "access_level": "full",
+      "supported_claim_ids": [
+        "CLM-B4-010"
+      ],
+      "limitations": "Index existence only; no finalized2027 specification or winner inferred."
+    },
+    {
+      "id": "V-S10",
+      "title": "EvoDRC",
+      "url": "https://arxiv.org/abs/2607.20019v1",
+      "source_type": "author_preprint",
+      "publication_date": "2026-07-22",
+      "retrieved_utc": "2026-10-16T05:12:01.451285+00:00",
+      "locator": "Abstract, bounded repair regions/local DRC/connectivity/impact preview",
+      "access_level": "abstract",
+      "supported_claim_ids": [
+        "CLM-B4-009"
+      ],
+      "limitations": "New citation-neighborhood lead only. No full-method audit, benchmark reproduction or duplication verdict from abstract."
+    }
+  ],
+  "source_checks": [
+    {
+      "claim_id": "OBJ-1101",
+      "source_locator": "V-S07 FIG8 rendered312-317; V-S02 raw4021-4058; current tasklist EXP-104/105",
+      "verdict": "valid",
+      "blocking": true,
+      "reason": "Endpoint-matched stopping/continuation control is required. Static sound rejection differs from acceptance. Published first-violation rollback strengthens relevance; current safe witness/lifetime/cost remains unresolved. Add C201-203 source contract before adapter/economics lock; give C/F identical stop/continue actions. Not a physical speedup or topic refutation."
+    },
+    {
+      "claim_id": "OBJ-1001 (historical mention)",
+      "source_locator": "V-S01 physical26 section5.5; current D-A and D-A+acquisition arms",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "Historical comparator deficiency is repaired in specification. New accessible author text confirms final conventional DRC was already prior; source correction upheld. Publisher/code/data mapping and runnable comparator remain unresolved. This does not reissue the previous verifier vote."
+    },
+    {
+      "claim_id": "OBJ-1002 (historical mention)",
+      "source_locator": "Current proposal bounded planning; own V-A01 parity controls below",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "Historical one-step counterexample survives; revised C/F1 is expressly heuristic and C/F2 gets equal bundles. Three-bit limitation retained. Repair sufficient at specification level, not optimal planning or physical headroom."
+    },
+    {
+      "claim_id": "OBJ-1003 (historical mention)",
+      "source_locator": "Current tasklist Dependency graph, EXP-106a/106b",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "Read graph contains106a->103 and106b->105/107. Prior ordering defect repaired in prose. No runner implementation/previous execution attested."
+    },
+    {
+      "claim_id": "OBJ-901 (historical mention)",
+      "source_locator": "Current proposal Complete-context contract; tasklist EXP-100/103",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "Paid common K0, cold/partial regimes and certificate construction now explicit. Historical objection retained, current definitional repair acknowledged; real cost still unknown."
+    },
+    {
+      "claim_id": "OBJ-902 (historical mention)",
+      "source_locator": "Current proposal CLM-B4-003; EXP-104",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "Equal deterministic values/actions/costs/ties imply same kernel output. Current proposal merges policies and places hypothesized delta in paid incidence representation. No remaining optimizer novelty claim."
+    },
+    {
+      "claim_id": "CLM-B4-001",
+      "source_locator": "Current proposal complete-warm proof; V-S06 FAQ12",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "Conditional support argument is sound with complete K0, injective slots, conservative dependencies and valid cost bounds. Empty queries must be invalidated. u_h bounds repeated predicate work only. No engine coverage, general novelty or wall-time theorem."
+    },
+    {
+      "claim_id": "CLM-B4-002",
+      "source_locator": "Released prior proposal/search-log attribution",
+      "verdict": "unresolved",
+      "blocking": false,
+      "reason": "Historical model executions not independently rerun; no physical evidence inferred. Current author correctly labels historical observations. Do not carry numerical attestation forward."
+    },
+    {
+      "claim_id": "CLM-B4-003",
+      "source_locator": "Deterministic functional identity; EXP-104 equal-input controls",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "Same deterministic function/input implies same choice; identifying different system names does not create policy distinction."
+    },
+    {
+      "claim_id": "CLM-B4-004/005",
+      "source_locator": "V-S02 raw849-875,1516-1525,4021-4058",
+      "verdict": "valid",
+      "blocking": true,
+      "reason": "Selected query/guard/mutation observations correct. They do not establish arbitrary clean-obligation replay or sound interruption. Full transitive rule/marker/connectivity coverage remains required before102b."
+    },
+    {
+      "claim_id": "CLM-B4-006/011",
+      "source_locator": "JOB/prompt and current forecast.json",
+      "verdict": "valid",
+      "blocking": true,
+      "reason": "No new experiment allocation; numeric physical forecast fields null. Resource/readiness gate closed, without disproving hypothesis."
+    },
+    {
+      "claim_id": "CLM-B4-007",
+      "source_locator": "V-S03 p9 V-E; current industry-gap limitations",
+      "verdict": "partially_valid",
+      "blocking": true,
+      "reason": "Repeated validation demand supported. Fixed sibling pools, residual-sharing frequency, narrow practitioner materiality and full-report need remain unmeasured."
+    },
+    {
+      "claim_id": "CLM-B4-008",
+      "source_locator": "Current C/F equal-information null and tasklist EXP-103/104/107",
+      "verdict": "unresolved",
+      "blocking": true,
+      "reason": "Useful systems tradeoff is a falsifiable hypothesis, not demonstrated distinction. Require explicit estimator difference or merge; learned/key construction must not hide exact predicate work."
+    },
+    {
+      "claim_id": "CLM-B4-009/010",
+      "source_locator": "V-S04 IV-C; V-S05 III-C.2; V-S06 results; V-S08/09; V-S10 abstract",
+      "verdict": "partially_valid",
+      "blocking": true,
+      "reason": "Known reuse/coarse-exact components and contest task distinctions verified within selected scope. No whole-system duplication established; exhaustive novelty/winner bridge unresolved. Follow EvoDRC lead without treating abstract as equivalence."
+    },
+    {
+      "claim_id": "CLM-R2-001",
+      "source_locator": "Published proposer code inspected; own independent V-A01 below",
+      "verdict": "partially_valid",
+      "blocking": false,
+      "reason": "Independent calculation confirms key parity/control values; own test does not attest original execution or all nine logs. Decision toy and DAG are not physical utility or learned calibration. Planning-charge model is artificial."
+    },
+    {
+      "claim_id": "CLM-R2-002",
+      "source_locator": "V-S01 physical9,12,25,26",
+      "verdict": "partially_valid",
+      "blocking": true,
+      "reason": "Feature-stage/final-check source correction supported. Pinned model-subtree absence was not independently inspected here; code/data rights and publisher correspondence unresolved. No inference of code absence elsewhere."
+    },
+    {
+      "claim_id": "CLM-R2-003",
+      "source_locator": "V-S06 FAQ12 rendered299-311",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "Empty/nonempty parallel window changes applicability while base rule persists. Concrete negative dependency, not adapter validation."
+    },
+    {
+      "claim_id": "CLM-R2-004",
+      "source_locator": "Own V-A01 cap arithmetic below",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "36*64*136=313344 scores/step and eight-step2506752 verified for stated exhaustive form; excludes encoder/synopsis/checker and is not time allocation."
+    }
+  ],
+  "objections": [
+    {
+      "id": "OBJ-1101",
+      "verdict": "valid",
+      "blocking": true,
+      "scope": "current",
+      "reason": "Endpoint-matched stopping/continuation control is required. Static sound rejection differs from acceptance. Published first-violation rollback strengthens relevance; current safe witness/lifetime/cost remains unresolved. Add C201-203 source contract before adapter/economics lock; give C/F identical stop/continue actions. Not a physical speedup or topic refutation."
+    },
+    {
+      "id": "OBJ-1001",
+      "verdict": "valid",
+      "blocking": false,
+      "scope": "historical_mention_in_current_release",
+      "reason": "Historical comparator deficiency is repaired in specification. New accessible author text confirms final conventional DRC was already prior; source correction upheld. Publisher/code/data mapping and runnable comparator remain unresolved. This does not reissue the previous verifier vote."
+    },
+    {
+      "id": "OBJ-1002",
+      "verdict": "valid",
+      "blocking": false,
+      "scope": "historical_mention_in_current_release",
+      "reason": "Historical one-step counterexample survives; revised C/F1 is expressly heuristic and C/F2 gets equal bundles. Three-bit limitation retained. Repair sufficient at specification level, not optimal planning or physical headroom."
+    },
+    {
+      "id": "OBJ-1003",
+      "verdict": "valid",
+      "blocking": false,
+      "scope": "historical_mention_in_current_release",
+      "reason": "Read graph contains106a->103 and106b->105/107. Prior ordering defect repaired in prose. No runner implementation/previous execution attested."
+    },
+    {
+      "id": "OBJ-901",
+      "verdict": "valid",
+      "blocking": false,
+      "scope": "historical_mention_in_current_release",
+      "reason": "Paid common K0, cold/partial regimes and certificate construction now explicit. Historical objection retained, current definitional repair acknowledged; real cost still unknown."
+    },
+    {
+      "id": "OBJ-902",
+      "verdict": "valid",
+      "blocking": false,
+      "scope": "historical_mention_in_current_release",
+      "reason": "Equal deterministic values/actions/costs/ties imply same kernel output. Current proposal merges policies and places hypothesized delta in paid incidence representation. No remaining optimizer novelty claim."
+    }
+  ],
+  "analytical_check": {
+    "id": "V-A01",
+    "code_sha256": "d6816d17b13e6fda39d8ac0f6993236968face4e1a9b3accf724bfdabc2fa1a0",
+    "stdout_sha256": "64fae6a157e722108f801e06786cc74ec64515fbe6a4277c17999d42d99d8a45",
+    "location": "verification.md executable code block V-A01",
+    "limitations": "Own static Boolean/exact-rational model, not physical engine execution; proposer/challenger scripts not executed."
+  },
+  "search_log": {
+    "engine": "web.run",
+    "utc_date": "2026-10-16T05:12:01.451285+00:00",
+    "queries": [
+      "DRC exact early termination first violation incremental checking candidate routing",
+      "residual incidence acquisition design rule checking sharing alternative routing candidates"
+    ],
+    "expansions": [
+      "Endpoint-matched rejection -> published incremental-DRC patent FIG8",
+      "Residual incidence vocabulary -> EvoDRC block-level repair abstract and older methods"
+    ],
+    "stop": "Finite review budget; closer method context found, not two null expansions or exhaustive novelty.",
+    "exclusions": "Nonprimary pdVerse, unrelated networking/clinical/denial-constraint results excluded from scientific evidence.",
+    "failures": [
+      "Web AiDRC PDF timeout; HTTPS urllib succeeded",
+      "Publisher DOI3769306 open internal error; no final-version access claim"
+    ],
+    "unreviewed": "FAST full method, model README/tree, patent legal scope, complete forward/backward citations, winner executable, all engine paths remain unresolved."
+  },
+  "limitations": [
+    "Unblinded released inputs only; no historical independence/source access inherited.",
+    "Inspected prior proposal and released protocol audit only as authorized history; audit findings do not adjudicate new science.",
+    "No EDA build/run/training/remote/GPU/paid call or downloaded-code execution.",
+    "No complete checkout validation: standalone packet only. Trusted frozen-input verify passed; coordinator publication validates full repository.",
+    "Self-ledger cannot certify unseen host activity/model or adversarial isolation."
+  ],
+  "reversal_conditions": [
+    "Resolve OBJ-1101 source contract and equal stop/continue comparison or document inapplicability/full-report demand.",
+    "Specify distinct F estimator under equal-information C, sound narrow adapter and complete costs before census.",
+    "Provide real rights/resources, preregistered thresholds and matching independent exact-task agrees before pilot."
+  ]
+}

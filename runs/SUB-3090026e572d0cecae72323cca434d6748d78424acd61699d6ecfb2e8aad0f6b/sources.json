@@ -1,0 +1,277 @@
+[
+  {
+    "id": "C2-S01",
+    "title": "AiDRC: Accelerating Detailed Routing by AI-Driven Design Rule Violation Prediction and Checking",
+    "url": "https://ieda.oscc.cc/res/papers/25-TODAES-AiDRC.pdf",
+    "source_type": "author_manuscript",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T05:08:01.527579+00:00",
+    "locator": "Physical PDF pp9 \u00a72.3;12 routed-wire/via features;25 Table4;26 \u00a75.5 continuation",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-C2-SURVEY"
+    ],
+    "supported_claim": "Final conventional DRC is explicit; learned interim map is not exact.",
+    "limitations": "Selected extracted text; final-publisher identity unknown; browser timeout then urllib/pdftotext succeeded; no benchmark reproduced.",
+    "sha256": "ac23635ae04e506a0e83637397b52d1fb65d90759d116b1f20159d9e4674f690"
+  },
+  {
+    "id": "C2-S02",
+    "title": "AiEDA-models AiDRC README",
+    "url": "https://raw.githubusercontent.com/OSCC-Project/AiEDA-models/c6a5174c8c87b539e14c83c9254ff705f302c31d/AiDRC/README.md",
+    "source_type": "pinned_code_documentation",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T05:08:01.527579+00:00",
+    "locator": "Raw line1",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-C2-SURVEY"
+    ],
+    "supported_claim": "One-line placeholder in this file.",
+    "limitations": "Only README inspected, not recursive tree or all repository code availability.",
+    "sha256": "ddea2974e75de7c5e34ceeb935f09ebc27216824f7a6b5641054f4a43f914ded"
+  },
+  {
+    "id": "C2-S03",
+    "title": "TritonRoute-WXL",
+    "url": "https://vlsicad.ucsd.edu/Publications/Journals/j136.pdf",
+    "source_type": "author_paper",
+    "publication_date": "2021",
+    "retrieved_utc": "2026-10-16T05:08:01.527579+00:00",
+    "locator": "PDF p9 V-E/VI-B, rendered838-884",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-C2-SURVEY"
+    ],
+    "supported_claim": "Modified-net checking and queue feedback support broad demand.",
+    "limitations": "Accepted manuscript; selected sections only, no reproduction."
+  },
+  {
+    "id": "C2-S04",
+    "title": "OpenDRC",
+    "url": "https://zyh0911.github.io/assets/pdf/OpenDRC.pdf",
+    "source_type": "author_paper",
+    "publication_date": "2023",
+    "retrieved_utc": "2026-10-16T05:08:01.527579+00:00",
+    "locator": "PDF p3 IV-C rendered218-274",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-C2-SURVEY"
+    ],
+    "supported_claim": "Hierarchy/invariant memoization and enlarged bounds pruning are prior.",
+    "limitations": "No transfer to sibling-state complete contexts or GPU performance."
+  },
+  {
+    "id": "C2-S05",
+    "title": "OpenROAD FlexGC implementation and header",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/src/drt/src/gc/FlexGC_main.cpp",
+    "source_type": "pinned_source_code",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T05:08:01.527579+00:00",
+    "locator": "Raw849-875;1516-1525;4021-4062; companion FlexGC.h45-81",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "OBJ-1101"
+    ],
+    "supported_claim": "Queries precede predicates; dispatcher includes surgery/multiple rules.",
+    "limitations": "Selected functions only; no complete replay, cancellation, dependency audit or build.",
+    "sha256": "4770ffdc8f1ac0fd13e69dac1a0b75c5dbb795bf7c043be5ed2b8294cb43a517",
+    "companion_header_sha256": "293e895cf573ccba346d5bf35184dac066f00509e327a53e370256078a945e64",
+    "version": "b16bda7e82721d10566ff7e2b68f1ff0be9f9e38"
+  },
+  {
+    "id": "C2-S06",
+    "title": "Dr. CU 2.0",
+    "url": "https://chengengjie.github.io/papers/C12-ICCAD19-DrCU2.pdf",
+    "source_type": "author_paper",
+    "publication_date": "2019",
+    "retrieved_utc": "2026-10-16T05:08:01.527579+00:00",
+    "locator": "PDF pp4-5 III-C.2; rendered323-367",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-C2-SURVEY"
+    ],
+    "supported_claim": "Merged pessimistic query then exact via LUT checks.",
+    "limitations": "Postcontest method; not exact winning binary mapping; no performance claim transferred."
+  },
+  {
+    "id": "C2-S07",
+    "title": "Method of context-sensitive, trans-reflexive incremental design rule checking and its applications",
+    "url": "https://patents.google.com/patent/US20120180014A1/en",
+    "source_type": "published_patent",
+    "publication_date": "2012-07-12",
+    "retrieved_utc": "2026-10-16T05:08:01.527579+00:00",
+    "locator": "Detailed Description FIG1 rendered265-269; FIG5/6/8 discussions",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-C2-SURVEY"
+    ],
+    "supported_claim": "Active/environment transaction and alternative-via checking are descriptive prior.",
+    "limitations": "No legal novelty/opinion, empirical implementation or full-rule equivalence asserted."
+  },
+  {
+    "id": "C2-S08",
+    "title": "ISPD2019 Initial Detailed Routing Contest",
+    "url": "https://ispd.cc/contests/19/",
+    "source_type": "official_contest",
+    "publication_date": "2019",
+    "retrieved_utc": "2026-10-16T05:08:01.527579+00:00",
+    "locator": "Final Contest Result; FAQ12 rendered299-311",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-C2-SURVEY"
+    ],
+    "supported_claim": "Winner identity; empty parallel-edge window still retains base EOL rule.",
+    "limitations": "Contest oracle not transferred; result PDF fetch failed; no winner executable inspected."
+  },
+  {
+    "id": "C2-S09",
+    "title": "ISPD2026 organizer paper",
+    "url": "https://vlsicad.ucsd.edu/Publications/Conferences/421/c421.pdf",
+    "source_type": "organizer_paper",
+    "publication_date": "2026",
+    "retrieved_utc": "2026-10-16T05:08:01.527579+00:00",
+    "locator": "PDF p7 \u00a75.3 rendered577-606",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-C2-SURVEY"
+    ],
+    "supported_claim": "2027 roadmap proposes more constraints and iterative ECO-style buffering/sizing.",
+    "limitations": "Prospective options, not final2027 rules; different action space from same-net wire/via siblings."
+  },
+  {
+    "id": "C2-S10",
+    "title": "ISPD2027 contest index",
+    "url": "https://ispd.cc/ispd2027/index.php?page=contests",
+    "source_type": "official_contest_index",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T05:08:01.527579+00:00",
+    "locator": "Page Contest2027 and archive link list",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-C2-SURVEY"
+    ],
+    "supported_claim": "Newer event/index exists.",
+    "limitations": "Does not establish finalized task or winner; no claim no newer contest exists."
+  },
+  {
+    "id": "C2-S11",
+    "title": "FAST author repository",
+    "url": "https://github.com/leisihang/FAST",
+    "source_type": "author_repository_readme",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T05:08:01.527579+00:00",
+    "locator": "README Overview and two controls",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "OBJ-1101"
+    ],
+    "supported_claim": "Author describes feasibility gating and placement-stage proxy pruning before routing.",
+    "limitations": "Dynamic README only; no code execution or full-paper/performance audit; approximate flow pruning differs from sound DRC witness rejection."
+  },
+  {
+    "id": "C2-S12",
+    "title": "GLSVLSI2026 program",
+    "url": "https://www.glsvlsi.hosting.acm.org/program.html",
+    "source_type": "official_program",
+    "publication_date": "2026",
+    "retrieved_utc": "2026-10-16T05:08:01.527579+00:00",
+    "locator": "Technical Session1A June22 FAST entry",
+    "access_level": "metadata",
+    "supported_claim_ids": [
+      "CLM-C2-SURVEY"
+    ],
+    "supported_claim": "Conference identifies FAST title/authors.",
+    "limitations": "Program metadata does not establish method validity."
+  },
+  {
+    "id": "C2-S13",
+    "title": "AiEDA: An Open-Source AI-Aided Design Library for Design-to-Vector",
+    "url": "https://arxiv.org/abs/2511.05823",
+    "source_type": "author_preprint",
+    "publication_date": "2025-11-08",
+    "retrieved_utc": "2026-10-16T05:08:01.527579+00:00",
+    "locator": "Abstract",
+    "access_level": "abstract",
+    "supported_claim_ids": [
+      "CLM-C2-SURVEY"
+    ],
+    "supported_claim": "Broader design-to-vector pipeline is a citation-neighborhood lead.",
+    "limitations": "No source/dataset/license inspection or adoption of reported scale as available data."
+  },
+  {
+    "id": "C2-S14",
+    "title": "Dr.CU2 author slides",
+    "url": "https://chengengjie.github.io/papers/C12-ICCAD19-DrCU2-slides.pdf",
+    "source_type": "author_slides",
+    "publication_date": "2019",
+    "retrieved_utc": "2026-10-16T05:08:01.527579+00:00",
+    "locator": "Title/source link; document31 physical pages",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-C2-SURVEY"
+    ],
+    "supported_claim": "Accessible author-hosted presentation lead.",
+    "limitations": "Selected title only; search phrase returned no match; no exact winner bridge inferred."
+  },
+  {
+    "id": "C2-S15",
+    "title": "DRC-Aid",
+    "url": "https://arxiv.org/html/2607.22761v1",
+    "source_type": "author_preprint",
+    "publication_date": "2026-07-23",
+    "retrieved_utc": "2026-10-16T05:08:01.527579+00:00",
+    "locator": "\u00a7\u00a73.1,3.3.1 rendered107-118,182-196",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-C2-SURVEY"
+    ],
+    "supported_claim": "Budgeted repair search and final/health checks are prior context.",
+    "limitations": "Transistor layout/commercial tools; no gains or coverage transferred."
+  },
+  {
+    "id": "C2-S16",
+    "title": "ISPD2025 contest",
+    "url": "https://www.ispd.cc/contests/25/index.html",
+    "source_type": "official_contest",
+    "publication_date": "2025",
+    "retrieved_utc": "2026-10-16T05:08:01.527579+00:00",
+    "locator": "Title and winners",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-C2-SURVEY"
+    ],
+    "supported_claim": "Global-routing task.",
+    "limitations": "Title-level stage comparison; winner methods not independently audited."
+  },
+  {
+    "id": "C2-S17",
+    "title": "ISPD2026 contest",
+    "url": "https://www.ispd.cc/contests/26/index.html",
+    "source_type": "official_contest",
+    "publication_date": "2026",
+    "retrieved_utc": "2026-10-16T05:08:01.527579+00:00",
+    "locator": "Title and winners/resources",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-C2-SURVEY"
+    ],
+    "supported_claim": "Buffering/sizing task.",
+    "limitations": "No winner method audit or borrowed license/compute."
+  },
+  {
+    "id": "C2-S18",
+    "title": "Incremental analysis of large VLSI Layouts",
+    "url": "https://www.sciencedirect.com/science/article/abs/pii/S0167926008000369",
+    "source_type": "publisher_abstract",
+    "publication_date": "2009",
+    "retrieved_utc": "2026-10-16T05:08:01.527579+00:00",
+    "locator": "Indexed abstract and introduction",
+    "access_level": "abstract",
+    "supported_claim_ids": [
+      "CLM-C2-SURVEY"
+    ],
+    "supported_claim": "Recursive tiling/external-memory incremental analysis is an older neighboring formulation.",
+    "limitations": "Search-indexed publisher abstract only; no full method, bound or performance reliance."
+  }
+]

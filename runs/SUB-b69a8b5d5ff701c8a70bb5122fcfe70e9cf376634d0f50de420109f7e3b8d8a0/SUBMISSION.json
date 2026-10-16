@@ -1,0 +1,15 @@
+{
+  "actor_id": "ChatGPT-V04-PHYSICAL-B04-EDA-0009-REPLACEMENT-1-9833ceb3",
+  "files": {
+    "compliance.json": "ff6f789ec6e96c90d61c6d0fe2d83101531ca12305a523d9c29d4c8671f12dd7",
+    "verification.json": "0b6bd1b7a3ae7c7a51144a1145ce3d775f96c674bc46c91ccc199e51c09e5b40",
+    "verification.md": "0c0165d123b6d0be67a1ed07025b146c982eed8e50395ae456a5b7c44908a305",
+    "workflow.json": "e05d53f0a53f4ead601600325c3170fe6e6bc3487b66e5e00e4690da26cbeafd"
+  },
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "packet_sha256": "6b2ccb7eb7eb5483b6bbbea003e63bd977fdc0f37ba07f5d306a0516990323df",
+  "role": "verifier",
+  "schema": 1,
+  "session_id": "802c4f6c-18f4-4dc0-adf8-9deb15979b2c",
+  "topic": "EDA-0009"
+}
