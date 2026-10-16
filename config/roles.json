@@ -906,6 +906,20 @@
       "session_id": "7bf97a0f-9513-44b5-b772-d0d06bd62af2",
       "session_kind": "independent governance protocol audit; not scientific acceptance",
       "topic": "EDA-0009"
+    },
+    {
+      "actor_id": "ChatGPT-B04-PROTOCOL-D05-EDA-0010-R2",
+      "github_login": "getm0ss1moving (transport only)",
+      "independence_attestation": "Fresh input-only execution distinct from all three scientific authors; policy isolation.",
+      "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+      "model": "gpt-6.1-sol",
+      "operator": "getm0ss1moving",
+      "packet_sha256": "031ee5169cd56e42e1ac6b2123ff56bc32c3b80985597243089b8d21c7243d05",
+      "platform": "OpenAI Codex",
+      "role": "verifier",
+      "session_id": "d740a39b-a2e6-478b-be78-8cb5e60ac0d8",
+      "session_kind": "independent governance protocol audit; not scientific acceptance",
+      "topic": "EDA-0010"
     }
   ],
   "verifier_identity_corrections": [

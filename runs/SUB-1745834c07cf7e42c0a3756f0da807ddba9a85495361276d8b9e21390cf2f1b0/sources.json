@@ -1,0 +1,203 @@
+[
+  {
+    "id": "C01",
+    "title": "Variational Data Structures: Exploring Tradeoffs in Computing with Variability",
+    "url": "https://www.se.cs.uni-saarland.de/publications/docs/WKE%2B14.pdf",
+    "locator": "Physical pp4-5 sections3.2.1\u20133.2.3; rendered391\u2013454",
+    "access": "full",
+    "published": "2014",
+    "retrieved_utc": "2026-10-16",
+    "type": "primary source",
+    "version": "2014 author PDF",
+    "limitations": "Selected representation sections only; placeholder DOI in author manuscript. No EDA duplicate or transferred performance.",
+    "claims": [
+      "OBJ-1201"
+    ]
+  },
+  {
+    "id": "C02",
+    "title": "OpenROAD Estimate and measured candidate caller",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/3549d60529517dc82deb7f0ff769345e9a424911/src/rsz/src/policy/MeasuredVtSwapPolicy.cc",
+    "locator": "Raw policy260\u2013301; OptimizerTypes.hh350\u2013360; move/MeasuredVtSwapCandidate.cc44\u201366,109\u2013132",
+    "access": "full",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-16",
+    "type": "primary source",
+    "version": "3549d60529517dc82deb7f0ff769345e9a424911",
+    "limitations": "Selected source only, no global demand absence or executed engine.",
+    "claims": [
+      "OBJ-1202",
+      "CLM-1203"
+    ],
+    "related_files": [
+      {
+        "path": "src/rsz/src/OptimizerTypes.hh",
+        "sha256": "759efc4bbe3c9c8716a72dfc5fbe9cb4c2c2ddea93dbab83519c59f6c419883f"
+      },
+      {
+        "path": "src/rsz/src/policy/MeasuredVtSwapPolicy.cc",
+        "sha256": "f81f24e419536210a344cd6fd32f9e2b43bdb2144a76bbc818de437dadf2d162"
+      },
+      {
+        "path": "src/rsz/src/move/MeasuredVtSwapCandidate.cc",
+        "sha256": null,
+        "limit": "Selected source retrieved, hash not independently printed in this job."
+      }
+    ]
+  },
+  {
+    "id": "C03",
+    "title": "OpenSTA SDC annotation presence and capacitance context",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/80fbbb2945fee2702a84e711a95a0a3bb7050f22/sdc/Sdc.cc",
+    "locator": "Raw3124\u20133155,3253\u20133330",
+    "access": "full",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-16",
+    "type": "primary source",
+    "version": "80fbbb2945fee2702a84e711a95a0a3bb7050f22",
+    "limitations": "Selected functions only; not complete transitive read audit.",
+    "claims": [
+      "CLM-1204",
+      "C-A02"
+    ],
+    "sha256": "1f18309385f3932244039107d9c78f5c6f55da6a26fd694aa97a72d55f7feea5"
+  },
+  {
+    "id": "C04",
+    "title": "OpenSTA parasiticLoad",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/80fbbb2945fee2702a84e711a95a0a3bb7050f22/dcalc/GraphDelayCalc.cc",
+    "locator": "Raw1440\u20131473",
+    "access": "full",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-16",
+    "type": "primary source",
+    "version": "80fbbb2945fee2702a84e711a95a0a3bb7050f22",
+    "limitations": "Source branch inspection only; arithmetic witness is not full engine semantics.",
+    "claims": [
+      "CLM-1204",
+      "C-A02"
+    ],
+    "sha256": "86bab0f72ae44b81ff036674d5fac0651a234da0993b18b22e5a5a499684382d"
+  },
+  {
+    "id": "C05",
+    "title": "A Consistent Semantics of Self-Adjusting Computation",
+    "url": "https://arxiv.org/abs/1106.0478",
+    "locator": "Primary indexed abstract, 2011-06-02",
+    "access": "abstract",
+    "published": "2011-06-02",
+    "retrieved_utc": "2026-10-16",
+    "type": "primary source",
+    "version": "arXiv1106.0478",
+    "limitations": "Search-returned abstract only; no full proof or EDA equivalence verified.",
+    "claims": [
+      "prior-art expansion"
+    ]
+  },
+  {
+    "id": "C06",
+    "title": "Incremental Computing by Differential Execution",
+    "url": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol333-ecoop2025/LIPIcs.ECOOP.2025.20/LIPIcs.ECOOP.2025.20.pdf",
+    "locator": "Sections5.3,6.1\u20136.3 physical pp16\u201318, rendered953\u20131084; official metadata DOI10.4230/LIPIcs.ECOOP.2025.20",
+    "access": "full",
+    "published": "2025-06-25",
+    "retrieved_utc": "2026-10-16",
+    "type": "primary source",
+    "version": "ECOOP2025 published version",
+    "limitations": "Selected method passages only; table-index restriction stated at1072\u20131073; no proof audit, implementation execution or timing speedup transfer.",
+    "claims": [
+      "maintenance comparison"
+    ]
+  },
+  {
+    "id": "C07",
+    "title": "ISPD2026 official winners and organizer repository",
+    "url": "https://www.ispd.cc/contests/26/index.html",
+    "locator": "Contest Winners rendered3\u201310; linked https://github.com/ABKGroup/ISPD26-Contest README",
+    "access": "full",
+    "published": "2026",
+    "retrieved_utc": "2026-10-16",
+    "type": "primary source",
+    "version": "dynamic/see locator",
+    "limitations": "Winner names authenticated, algorithms not. Organizer page read only, no benchmarks downloaded.",
+    "claims": [
+      "contest context"
+    ]
+  },
+  {
+    "id": "C08",
+    "title": "ICCAD2026 official contest scope",
+    "url": "https://www.iccad-contest.org/2026/",
+    "locator": "Contest Problems rendered37\u201346 and schedule",
+    "access": "full",
+    "published": "2026",
+    "retrieved_utc": "2026-10-16",
+    "type": "primary source",
+    "version": "dynamic/see locator",
+    "limitations": "Scope only; no winner methods or full-output demand established.",
+    "claims": [
+      "contest context"
+    ]
+  },
+  {
+    "id": "C09",
+    "title": "ICCAD2025 Problem C official top-three report link",
+    "url": "https://www.iccad-contest.org/2025/Problems.html",
+    "locator": "Problem C rendered58\u201370; top-3 link38",
+    "access": "metadata",
+    "published": "2025",
+    "retrieved_utc": "2026-10-16",
+    "type": "primary source",
+    "version": "dynamic/see locator",
+    "limitations": "Official problem page read; linked Drive ZIP viewer exposes no methods. No authenticated report contents inspected.",
+    "claims": [
+      "contest access limit"
+    ],
+    "report_url": "https://drive.google.com/file/d/1yZstdjFc30xt9RYz583ecb8_jnDE1F9O/view?usp=sharing"
+  },
+  {
+    "id": "C10",
+    "title": "Warp-STAR: High-performance, Differentiable GPU-Accelerated Static Timing Analysis through Warp-oriented Parallel Orchestration",
+    "url": "https://arxiv.org/abs/2603.28381",
+    "locator": "Abstract and submission history",
+    "access": "abstract",
+    "published": "2026-03-30",
+    "retrieved_utc": "2026-10-16",
+    "type": "primary source",
+    "version": "v1",
+    "limitations": "No full method audit; not an exhaustive candidate-world equivalence or SOTA claim.",
+    "claims": [
+      "fresh search context"
+    ]
+  },
+  {
+    "id": "C11",
+    "title": "Climbing the Design Ladder: Sequential Knowledge Distillation for Early-Stage Circuit Timing Prediction",
+    "url": "https://arxiv.org/abs/2610.08457",
+    "locator": "Abstract and submission history",
+    "access": "abstract",
+    "published": "2026-10-05",
+    "retrieved_utc": "2026-10-16",
+    "type": "primary source",
+    "version": "v1",
+    "limitations": "Approximate early-stage prediction lead; no exact candidate-output guarantee or reproduced result.",
+    "claims": [
+      "fresh search context"
+    ]
+  },
+  {
+    "id": "C-A02",
+    "title": "Own dependency-provenance coalescence model",
+    "url": "independent-estimate.md",
+    "locator": "Exact Python fence, stdout, SHA256s and interpretation",
+    "access": "full",
+    "published": "2026-10-16",
+    "retrieved_utc": "2026-10-16",
+    "type": "primary source",
+    "version": "current own release",
+    "limitations": "18 finite arithmetic cases; no engine bug or runtime measurement.",
+    "claims": [
+      "task refinement"
+    ]
+  }
+]

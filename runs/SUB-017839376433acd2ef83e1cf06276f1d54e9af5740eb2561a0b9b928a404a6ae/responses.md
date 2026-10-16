@@ -1,0 +1,16 @@
+# Responses to adjudicated cycle-1 findings
+
+Inputs: own proposal SUB-b4a0830fd75dd9263101adcdda8a60e7ed86f687e08723fe63c0f3e83046ffae; challenge SUB-1a4046d48852400f673bf14b891eeb70900fc985b29d11840149262bdfe13693; adjudication SUB-c4ea36b9e62a68730c225ac73645a9b5d399bbd2142507a0212c0ef12fb9dd0c. Only that adjudicated challenge is used. Historical rulings are reported as released evidence, not approval of this revision.
+
+| Finding | Response | Concrete change | Remaining resolution |
+|---|---|---|---|
+| OBJ-1201, valid/blocking | Accept; withdraw any distinct-treatment support from CLM-1106 as previously specified | Explicit record bijection, event/lifetime map and A03 show Q/B5 normalized transition equivalence. Last-use gain transfers completely; sparse support rebuilding is charged. | S1 requires a named non-equivalent interaction before construction. If none, park; do not claim generic partition or lifetime novelty. |
+| OBJ-1202, valid/blocking | Accept; no claim that demand is absent universally | industry-gap output-reader table now follows Estimate type, candidate and caller. This concrete consumer needs scalar score/legality, not anchored vectors. | S2 must find a natural full-output reader and decision; retain full contract and no benchmark-induced requirement. |
+| Boundary/default/status refinement | Adopt as task correction, not a new veto | A03 independently supplied bases, empty requested complement, all-result re-coalescence, distinct non-value status and invalid-default dense fallback. | Engine fixture still needs actual floating/status/negative-dependency and restore tests. |
+| D3 observer-cost refinement | Adopt | Full diagnostic versus intended deployed/minimal instrumentation must be paired before estimating headroom; costs charged consistently. | No instrumented or uninstrumented timing exists. |
+| HIST-LOCATOR, refuted | Preserve the released ruling and old bytes | Independently re-retrieved candidate/policy hashes and raw loop273-282; no claim of a 288-line source. | Only authenticated differing bytes/count convention could reopen it. |
+| HIST-REPLAY, valid public evidence defect | Withdraw historical empirical support | Old 4096-case assertion is excluded; A03 code/stdout is a separately labelled new author result. | No old scratch sought, recreated or implied recovered; independent review of new A03 still required. |
+
+CLM-1101 is superseded by narrower CLM-1203, without claiming a newly discovered demand. CLM-1104 remains a conditional pure-DAG argument, not engine extraction. CLM-1105/A02 stays historical author evidence not rerun here. CLM-1106 is narrowed to an unresolved system question with its current specified contrast removed. CLM-1103 becomes the more precise source-only CLM-1204. Unreopened incremental/vendor claims CLM-1109/1110 do not become current evidence by inheritance.
+
+Both penalties are 0 for anchor retention, not a favorable scientific vote. Experiment consent is revision_requested for the prior target; no abandonment consent or other-role signature is supplied. The completed research release can properly have machine status complete while scientific novelty, demand and feasibility remain unresolved.
