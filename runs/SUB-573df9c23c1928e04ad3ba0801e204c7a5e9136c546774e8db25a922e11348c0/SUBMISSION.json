@@ -1,0 +1,15 @@
+{
+  "actor_id": "ChatGPT-B04-PROTOCOL-D04-QUARANTINED-R2",
+  "files": {
+    "compliance.json": "442b9ae89688a6b2c352caa91220f00c35269a025f832f1e73701ea00b5188a1",
+    "verification.json": "5b739655079f3c742daf9ac38febbcbcfae8516bf5d81998727aa84e3e349806",
+    "verification.md": "2da19846f52652180d27ce6359b6e668129142d2390fc3049927e4b5507bd651",
+    "workflow.json": "4af270da183b6dc39f03463441e1b42f3aa7ba27434796a42b06a506fd3a7e8d"
+  },
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "packet_sha256": "f4e51c994dc01539746602e44993c41ec6361a6b1677f5e127a76398028e79f3",
+  "role": "verifier",
+  "schema": 1,
+  "session_id": "488f31cf-7b0c-40a6-a3c7-787ad698af67",
+  "topic": "EDA-0009"
+}

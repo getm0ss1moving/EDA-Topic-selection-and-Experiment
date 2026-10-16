@@ -1,0 +1,7 @@
+{
+  "session_id": "24989b4f-9381-471f-a32f-a8d8f7f685a1",
+  "decision": "pending",
+  "signed_revision": null,
+  "tasklist_sha256": "e780e31a8face38718726abf0cdad94e0bb0fe36e6b507127bd2da23a8228d10",
+  "rationale": "New revision requires independent review. No actual allocation, validated adapter, representative rights pool, complete model/config lock or matching consent; do not sign unresolved execution prerequisites."
+}

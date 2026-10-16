@@ -1,0 +1,592 @@
+{
+  "decision": "revise",
+  "next_action": "revise",
+  "verifier_session": "528a3cf1-ef60-44dd-8bc2-a6c1c6d4d5ba",
+  "actor_id": "ChatGPT-V04-PHYSICAL-B04-EDA-0009",
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "packet_sha256": "7470c82b696d066e5875843a07235c477dae9fa93ac903e9ed83bd7a14644986",
+  "job_id": "8d16e5c3-3088-40a5-8d77-4f35c3277577",
+  "reviewed_proposer_release": "SUB-1995793c1627da4adba27cf9a355047e58ef3c0d8627137a33ff6fc81e76f89f",
+  "adjudicated_challenger_releases": [
+    "SUB-0a2e35ef91c58e4b2996d388cfc700a70fdadcedbb429d5f020042aff979d525"
+  ],
+  "dossier_digest": "051d5a728053b0a87b2a49128275300ea2135cc10718d31664f36667a7238cb0",
+  "gates": {
+    "novelty": false,
+    "mechanism": false,
+    "utility": false,
+    "contest_originality": false,
+    "headroom": false,
+    "feasibility": false,
+    "direction_integrity": true,
+    "experiment_consensus": false
+  },
+  "direction_penalty_checked": true,
+  "direction_penalties": {
+    "combination_drift": 0,
+    "demand_drift": 0,
+    "total": 0,
+    "reason": "Fixed sibling selection, complete engine/connectivity acceptance and route/timing endpoint preserved. Conventional lookahead is a repair, not substituted contribution."
+  },
+  "experiment_consensus_checked": true,
+  "abandonment_process_checked": true,
+  "source_checks": [
+    {
+      "id": "V2-S01",
+      "title": "Optimal Nonmyopic Value of Information in Graphical Models",
+      "url": "https://www.ijcai.org/Proceedings/05/Papers/1154.pdf",
+      "source_type": "conference_paper",
+      "publication_date": "2005",
+      "retrieved_utc": "2026-10-16T04:47:36.659904+00:00",
+      "locator": "PDF pp1-2 section2; pp3-4 section5; rendered62-131,293-318",
+      "access_level": "full",
+      "supported_claim_ids": [
+        "OBJ-1101",
+        "CLM-R2-002",
+        "OBJ-1002"
+      ],
+      "limitations": "Selected definitions and recursion read. No graphical-model optimality guarantee transferred.",
+      "version": "Retrieved 2026-10-16"
+    },
+    {
+      "id": "V2-S02",
+      "title": "AiDRC author manuscript",
+      "url": "https://ieda.oscc.cc/res/papers/25-TODAES-AiDRC.pdf",
+      "source_type": "author_manuscript",
+      "publication_date": "unknown",
+      "retrieved_utc": "2026-10-16T04:47:36.659904+00:00",
+      "locator": "PDF page13 Fig11 and checking-model paragraph; page26 section5.5 final-check paragraph",
+      "access_level": "full",
+      "supported_claim_ids": [
+        "CLM-R2-001",
+        "OBJ-1001"
+      ],
+      "limitations": "Browser open failed; urllib/pdftotext succeeded. SHA256 ac23635ae04e506a0e83637397b52d1fb65d90759d116b1f20159d9e4674f690. Selected pages only, no paper redistributed; final configuration/version not established.",
+      "version": "Retrieved 2026-10-16"
+    },
+    {
+      "id": "V2-S02m",
+      "title": "AiDRC publisher record",
+      "url": "https://doi.org/10.1145/3769306",
+      "source_type": "publisher_record",
+      "publication_date": "2026-06-12",
+      "retrieved_utc": "2026-10-16T04:47:36.659904+00:00",
+      "locator": "Primary indexed title/publication history and sections2.3/5.5",
+      "access_level": "metadata",
+      "supported_claim_ids": [
+        "CLM-R2-001"
+      ],
+      "limitations": "Search-return primary text inspected; no full publisher PDF or authoritative channel config obtained. Published metadata alone does not establish author/final byte correspondence.",
+      "version": "Retrieved 2026-10-16"
+    },
+    {
+      "id": "V2-S03",
+      "title": "OpenROAD FlexGC_main.cpp",
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/src/drt/src/gc/FlexGC_main.cpp",
+      "source_type": "source_code",
+      "publication_date": "unknown",
+      "retrieved_utc": "2026-10-16T04:47:36.659904+00:00",
+      "locator": "Raw one-based851-875,1516-1525,4021-4062",
+      "access_level": "full",
+      "supported_claim_ids": [
+        "CLM-B4-004",
+        "CLM-B4-005",
+        "CLM-B4-001"
+      ],
+      "limitations": "urllib selected source reading only, not compiled/executed. SHA2564770ffdc8f1ac0fd13e69dac1a0b75c5dbb795bf7c043be5ed2b8294cb43a517. No whole-engine replay/correctness certification.",
+      "version": "b16bda7e82721d10566ff7e2b68f1ff0be9f9e38"
+    },
+    {
+      "id": "V2-S04",
+      "title": "TritonRoute-WXL",
+      "url": "https://vlsicad.ucsd.edu/Publications/Journals/j136.pdf",
+      "source_type": "author_paper",
+      "publication_date": "2022",
+      "retrieved_utc": "2026-10-16T04:47:36.659904+00:00",
+      "locator": "PDFp9 sectionV-E; sectionVI-A/B; rendered838-874",
+      "access_level": "full",
+      "supported_claim_ids": [
+        "CLM-B4-007",
+        "CLM-B4-009"
+      ],
+      "limitations": "Selected text; incremental modified-net checks support broad demand, not fixed sibling incidence or measured savings.",
+      "version": "Retrieved 2026-10-16"
+    },
+    {
+      "id": "V2-S05",
+      "title": "OpenDRC",
+      "url": "https://zyh0911.github.io/assets/pdf/OpenDRC.pdf",
+      "source_type": "author_paper",
+      "publication_date": "2023",
+      "retrieved_utc": "2026-10-16T04:47:36.659904+00:00",
+      "locator": "PDFp3 sectionIV-C rendered218-264",
+      "access_level": "full",
+      "supported_claim_ids": [
+        "CLM-B4-009",
+        "OBJ-901"
+      ],
+      "limitations": "Selected invariance/memoization section only. Hierarchical reuse is prior; no identical fixed-sibling system proven.",
+      "version": "Retrieved 2026-10-16"
+    },
+    {
+      "id": "V2-S06",
+      "title": "Dr.CU2.0",
+      "url": "https://chengengjie.github.io/papers/C12-ICCAD19-DrCU2.pdf",
+      "source_type": "author_paper",
+      "publication_date": "2019",
+      "retrieved_utc": "2026-10-16T04:47:36.659904+00:00",
+      "locator": "PDFpp4-5 sectionIII-C.2 rendered323-360",
+      "access_level": "full",
+      "supported_claim_ids": [
+        "CLM-B4-009",
+        "CLM-B4-010"
+      ],
+      "limitations": "Pessimistic merged LUT then exact suspicious-neighbor lookup read. No winner executable identity or measured performance verified.",
+      "version": "Retrieved 2026-10-16"
+    },
+    {
+      "id": "V2-S07",
+      "title": "ISPD2019 contest",
+      "url": "https://ispd.cc/contests/19/",
+      "source_type": "official_contest",
+      "publication_date": "2019",
+      "retrieved_utc": "2026-10-16T04:47:36.659904+00:00",
+      "locator": "Evaluation Script; Final Contest Result; Final Solution Files; rendered111-117,154-191",
+      "access_level": "full",
+      "supported_claim_ids": [
+        "CLM-B4-010"
+      ],
+      "limitations": "Dr.CU winner and Innovus geometry/connectivity interface confirmed; no archive downloaded, license assumed or winner binary audited.",
+      "version": "Retrieved 2026-10-16"
+    },
+    {
+      "id": "V2-S08",
+      "title": "ISPD26 contest",
+      "url": "https://www.ispd.cc/contests/26/index.html",
+      "source_type": "official_contest",
+      "publication_date": "2026",
+      "retrieved_utc": "2026-10-16T04:47:36.659904+00:00",
+      "locator": "Title and Resources rendered1-19",
+      "access_level": "full",
+      "supported_claim_ids": [
+        "CLM-B4-010"
+      ],
+      "limitations": "Buffering/sizing task scope only; no exhaustive winner-method audit.",
+      "version": "Retrieved 2026-10-16"
+    },
+    {
+      "id": "V2-S09",
+      "title": "Shift left for more efficient block design and chip integration",
+      "url": "https://blogs.sw.siemens.com/calibre/2024/07/26/shift-left-for-more-efficient-block-design-and-chip-integration/",
+      "source_type": "vendor_primary",
+      "publication_date": "2024-07-26",
+      "retrieved_utc": "2026-10-16T04:47:36.659904+00:00",
+      "locator": "DRC error debugging; Optimize configuration sections, rendered38-52",
+      "access_level": "full",
+      "supported_claim_ids": [
+        "CLM-B4-007"
+      ],
+      "limitations": "Advertised regional checking and reusable HDB only. No marketed numeric savings adopted, no commercial internal algorithm inference.",
+      "version": "Retrieved 2026-10-16"
+    },
+    {
+      "id": "V2-S10",
+      "title": "EvoDRC",
+      "url": "https://arxiv.org/html/2607.20019v1",
+      "source_type": "author_preprint",
+      "publication_date": "2026-07-22",
+      "retrieved_utc": "2026-10-16T04:47:36.659904+00:00",
+      "locator": "section3.2 Table2 rendered127-137; section3.3",
+      "access_level": "full",
+      "supported_claim_ids": [
+        "CLM-B4-007",
+        "CLM-B4-009"
+      ],
+      "limitations": "Selected repair tools: local DRC and full-design connectivity. Adaptive KLayout repair differs from fixed same-net pool; no performance transfer or runtime inspection.",
+      "version": "arXiv2607.20019v1"
+    },
+    {
+      "id": "V2-S11",
+      "title": "DRC-Aid",
+      "url": "https://arxiv.org/html/2607.22761v1",
+      "source_type": "author_preprint",
+      "publication_date": "2026-07-23",
+      "retrieved_utc": "2026-10-16T04:47:36.659904+00:00",
+      "locator": "sections3.3.1-3.4 rendered182-196",
+      "access_level": "full",
+      "supported_claim_ids": [
+        "CLM-B4-009"
+      ],
+      "limitations": "Selected verification and state memory only; Calibre/Virtuoso context differs, no cost reproduction.",
+      "version": "arXiv2607.22761v1"
+    },
+    {
+      "id": "V2-S12",
+      "title": "DrCU README",
+      "url": "https://raw.githubusercontent.com/cuhk-eda/dr-cu/3d81988d741da36d2612f3443165970e0125bccc/README.md",
+      "source_type": "source_documentation",
+      "publication_date": "unknown",
+      "retrieved_utc": "2026-10-16T04:47:36.659904+00:00",
+      "locator": "README paper/support paragraphs, raw16-21 and dependency37-42 as cited; browser text reopened",
+      "access_level": "full",
+      "supported_claim_ids": [
+        "CLM-B4-010"
+      ],
+      "limitations": "Repository paper correspondence assertion only; raw line numbers not independently re-enumerated, no binary equivalence.",
+      "version": "3d81988d741da36d2612f3443165970e0125bccc"
+    },
+    {
+      "id": "V2-L01",
+      "title": "CN122839978A incremental DRC lead",
+      "url": "https://patents.google.com/patent/CN122839978A/en",
+      "source_type": "patent_lead",
+      "publication_date": "unknown",
+      "retrieved_utc": "2026-10-16T04:47:36.659904+00:00",
+      "locator": "Primary open returned Internal Error; Patsnap indexed result found by query",
+      "access_level": "metadata",
+      "supported_claim_ids": [
+        "CLM-B4-009"
+      ],
+      "limitations": "No primary claim inspected; unresolved novelty lead, no exclusion or patent/legal conclusion.",
+      "version": "Retrieved 2026-10-16"
+    }
+  ],
+  "objections": [
+    {
+      "id": "OBJ-1101",
+      "verdict": "valid",
+      "blocking": true,
+      "reason": "Current EXP-104 serializes scenario updates but gives no total physical-output projection/likelihood, normalization or support-miss handling. This is a prospective implementation gap, not an observed checker failure. Cost penalty versus elapsed budget units also need binding.",
+      "required_action": "Freeze a total normalized-or-charged-fallback update, identical semantics across C/E/F; isolate approximate planning from exact cache equality. Test unseen payload, empty range, cost-bin miss, ambiguous abstraction and zero mass.",
+      "evidence": [
+        "V2-S01 section2",
+        "proposal.md CLM-R2-002",
+        "tasklist.md EXP-104",
+        "V2-A01"
+      ],
+      "scope": "current claim",
+      "challenger_release": "SUB-0a2e35ef91c58e4b2996d388cfc700a70fdadcedbb429d5f020042aff979d525"
+    },
+    {
+      "id": "OBJ-1001",
+      "verdict": "partially_valid",
+      "blocking": false,
+      "reason": "Historical missing-comparator mapping is repaired in current experiment-plan; primary AiDRC already retains final DRC. Faithful author/final channel/code correspondence remains unresolved.",
+      "required_action": "Retain D mapping and resolve18/24 channels and code/version rights before consent.",
+      "evidence": [
+        "V2-S02",
+        "experiment-plan.md AiDRC bridge"
+      ],
+      "scope": "Historical ID referenced by current challenger; current response assessment only; original ruling unchanged",
+      "challenger_release": "SUB-0a2e35ef91c58e4b2996d388cfc700a70fdadcedbb429d5f020042aff979d525"
+    },
+    {
+      "id": "OBJ-1002",
+      "verdict": "partially_valid",
+      "blocking": false,
+      "reason": "Depth2 with equal C/F actions/caps repairs the two-observation counterexample. Own finite solver reproduces96 cases/27 gains, not physical frequency or general stopping optimality.",
+      "required_action": "Retain factorial and higher-order/truncation failure regimes.",
+      "evidence": [
+        "V2-S01",
+        "V2-A01",
+        "tasklist.md EXP-104"
+      ],
+      "scope": "Historical ID referenced by current challenger; current response assessment only; original ruling unchanged",
+      "challenger_release": "SUB-0a2e35ef91c58e4b2996d388cfc700a70fdadcedbb429d5f020042aff979d525"
+    },
+    {
+      "id": "OBJ-1003",
+      "verdict": "partially_valid",
+      "blocking": false,
+      "reason": "Authoritative DAG now places106 before103 and105; no experiment ran. Narrative sequence must not override these dependencies.",
+      "required_action": "Bind timestamped economics/output hashes before census and arms.",
+      "evidence": [
+        "tasklist.md authoritative DAG",
+        "V2-A01"
+      ],
+      "scope": "Historical ID referenced by current challenger; current response assessment only; original ruling unchanged",
+      "challenger_release": "SUB-0a2e35ef91c58e4b2996d388cfc700a70fdadcedbb429d5f020042aff979d525"
+    },
+    {
+      "id": "OBJ-901",
+      "verdict": "partially_valid",
+      "blocking": false,
+      "reason": "Historical raw-overlap accounting concern is repaired conditionally by paid complete/cold/partial K0. Actual residual economics remains unknown.",
+      "required_action": "Measure residual work and total extraction/fallback rather than raw overlap.",
+      "evidence": [
+        "proposal.md retained contract",
+        "V2-S04",
+        "V2-S05"
+      ],
+      "scope": "Historical ID referenced by current challenger; current response assessment only; original ruling unchanged",
+      "challenger_release": "SUB-0a2e35ef91c58e4b2996d388cfc700a70fdadcedbb429d5f020042aff979d525"
+    },
+    {
+      "id": "OBJ-902",
+      "verdict": "partially_valid",
+      "blocking": false,
+      "reason": "Historical identical-input pair-policy identity is explicitly retained and C/F merged under exact beliefs. Distinct learned representation remains a live hypothesis.",
+      "required_action": "Do not claim novelty for lookahead/common graph; test matched representation against strong C.",
+      "evidence": [
+        "proposal.md CLM-R2-003",
+        "experiment-plan.md factorial"
+      ],
+      "scope": "Historical ID referenced by current challenger; current response assessment only; original ruling unchanged",
+      "challenger_release": "SUB-0a2e35ef91c58e4b2996d388cfc700a70fdadcedbb429d5f020042aff979d525"
+    }
+  ],
+  "critical_claims": [
+    {
+      "id": "CLM-B4-001",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "Conditional complete-warm support lemma follows by contradiction: outside E implies the same complete record in Q0. One-record-per-slot and nonnegative bounds needed; partial/cold/global cases expressly guarded. No unconditional speedup or implemented completeness follows.",
+      "required_action": "Validate actual dependencies/empty queries or UNKNOWN/full fallback.",
+      "evidence": [
+        "proposal.md retained proof",
+        "V2-S03"
+      ],
+      "scope": "current claim"
+    },
+    {
+      "id": "CLM-B4-002",
+      "verdict": "unresolved",
+      "blocking": false,
+      "reason": "Historical model counts were not independently replayed this turn; no inherited verification. These retained historical counts are not a necessary premise of the present conditional hypothesis.",
+      "required_action": "Keep author-report/historical label; do not use as physical evidence.",
+      "evidence": [
+        "proposal.md claim ledger"
+      ],
+      "scope": "current claim"
+    },
+    {
+      "id": "CLM-B4-003",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "A shared deterministic selector with identical beliefs/inputs/actions/ties necessarily chooses identically. This limits attribution, not all learned architectures.",
+      "required_action": "Retain equal-input null.",
+      "evidence": [
+        "proposal.md",
+        "experiment-plan.md"
+      ],
+      "scope": "current claim"
+    },
+    {
+      "id": "CLM-B4-004",
+      "verdict": "partially_valid",
+      "blocking": true,
+      "reason": "Selected GC source supports range-query-before-predicate observation and multiple rule dispatches, not a selective arbitrary clean-obligation replay API.",
+      "required_action": "Complete102a/102b before selective exactness claims.",
+      "evidence": [
+        "V2-S03"
+      ],
+      "scope": "current claim"
+    },
+    {
+      "id": "CLM-B4-005",
+      "verdict": "partially_valid",
+      "blocking": true,
+      "reason": "Min-area target guard and surgical edits are visible; no whole-engine omission or all-rule soundness follows. Header/checkDRC locators not freshly rechecked.",
+      "required_action": "Audit entrypoints/derived/global dependencies, marker and connectivity semantics.",
+      "evidence": [
+        "V2-S03 raw1516-1525,4021-4062"
+      ],
+      "scope": "current claim"
+    },
+    {
+      "id": "CLM-B4-006",
+      "verdict": "valid",
+      "blocking": true,
+      "reason": "Owner batch grants reading/tiny own checks only; physical resource fields are null.",
+      "required_action": "Keep EXP-100 CLOSED until actual allocation/rights and exact consents.",
+      "evidence": [
+        "JOB.json",
+        "policy/docs/INNOVATION-BATCH-0004.md",
+        "tasklist.md EXP-100"
+      ],
+      "scope": "current claim"
+    },
+    {
+      "id": "CLM-B4-007",
+      "verdict": "partially_valid",
+      "blocking": true,
+      "reason": "Repeated repair/checking has primary support; fixed-sibling residual frequency, deployment consumer, practitioner threshold and useful net savings remain unmeasured.",
+      "required_action": "Source-only compatible-call-site map, then preregistered allocated census.",
+      "evidence": [
+        "V2-S04",
+        "V2-S09",
+        "V2-S10"
+      ],
+      "scope": "current claim"
+    },
+    {
+      "id": "CLM-B4-008",
+      "verdict": "unresolved",
+      "blocking": true,
+      "reason": "Useful slot-representation tradeoff is hypothesis H-R2; no learned/physical result distinguishes it from conventional factorized VOI.",
+      "required_action": "Freeze update contract and fair factorial; do not demand completed experiment merely to retain hypothesis.",
+      "evidence": [
+        "proposal.md H-R2",
+        "V2-S01",
+        "experiment-plan.md"
+      ],
+      "scope": "current claim"
+    },
+    {
+      "id": "CLM-B4-009",
+      "verdict": "partially_valid",
+      "blocking": true,
+      "reason": "Incremental checking, invariant reuse, coarse/exact queries and verified/stateful controllers are established selected priors. Exhaustive equivalence/novelty is unresolved.",
+      "required_action": "Complete closest-mechanism/config mapping and patent lead when accessible.",
+      "evidence": [
+        "V2-S01",
+        "V2-S02",
+        "V2-S04",
+        "V2-S05",
+        "V2-S06",
+        "V2-S11",
+        "V2-L01"
+      ],
+      "scope": "current claim"
+    },
+    {
+      "id": "CLM-B4-010",
+      "verdict": "partially_valid",
+      "blocking": true,
+      "reason": "Winner identity, paper method and current contest scope checked. Exact source/winner executable correspondence and complete originality remain unproved.",
+      "required_action": "Preserve method-level bridge and unresolved executable correspondence; no contest-hint novelty credit.",
+      "evidence": [
+        "V2-S06",
+        "V2-S07",
+        "V2-S08",
+        "V2-S12"
+      ],
+      "scope": "current claim"
+    },
+    {
+      "id": "CLM-B4-011",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "Forecast magnitudes/confidence remain null; model utility is not measured chip elapsed time.",
+      "required_action": "Preserve null physical forecast until calibrated evidence.",
+      "evidence": [
+        "forecast.json"
+      ],
+      "scope": "current claim"
+    },
+    {
+      "id": "CLM-R2-001",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "Author manuscriptp26 explicitly retains final DRC; p13 Fig11 says24 while prose says18 channels. Final-version/model-code parity remains unresolved.",
+      "required_action": "Treat exact final checking as prior and resolve faithful comparator.",
+      "evidence": [
+        "V2-S02",
+        "V2-S02m"
+      ],
+      "scope": "current claim"
+    },
+    {
+      "id": "CLM-R2-002",
+      "verdict": "partially_valid",
+      "blocking": true,
+      "reason": "Bounded depth2 is ordinary conditional VOI and repairs XOR. Caps specify algorithm limits, not physical elapsed costs or total update semantics.",
+      "required_action": "Apply OBJ-1101; charge support traversal/scenario inference/planning and conservative exact reserve.",
+      "evidence": [
+        "V2-S01",
+        "V2-A01",
+        "tasklist.md EXP-104"
+      ],
+      "scope": "current claim"
+    },
+    {
+      "id": "CLM-R2-003",
+      "verdict": "partially_valid",
+      "blocking": false,
+      "reason": "Independent own recursion reproduces XOR/single-bit and96-setting27-improvement values. C/F equality is intentional shared-kernel identity, not independent implementation performance evidence; proposer node counts not rerun.",
+      "required_action": "Retain model-only scope and equal-belief null.",
+      "evidence": [
+        "V2-A01",
+        "proposal.md"
+      ],
+      "scope": "current claim"
+    },
+    {
+      "id": "CLM-R2-004",
+      "verdict": "valid",
+      "blocking": false,
+      "reason": "Own accounting verifies5-admin predicate savings while retaining8 extraction units; work units do not establish elapsed improvement.",
+      "required_action": "Census all overheads and mandatory full reference pass.",
+      "evidence": [
+        "V2-A01",
+        "experiment-plan.md cost contract"
+      ],
+      "scope": "current claim"
+    }
+  ],
+  "historical_scope": {
+    "predecessor": "Released initial EDA-0009 triple aeaba/9354/2ff preserved: park, original901/902 valid; no signatures/counts inherited. Released B4-R1 protocol audit7e97 has nonblocking source-record-vocabulary findings; not a scientific approval of current revision.",
+    "current_literal_ids": [
+      "OBJ-1101",
+      "OBJ-1001",
+      "OBJ-1002",
+      "OBJ-1003",
+      "OBJ-901",
+      "OBJ-902"
+    ],
+    "historical_1000_scope": "Original B4-R1 releases2e1f/8799/f70b are referenced only through current released responses and protocol audit; original scientific files not supplied/reopened, not retrospectively re-adjudicated."
+  },
+  "consensus": {
+    "tasklist_sha256": "e780e31a8face38718726abf0cdad94e0bb0fe36e6b507127bd2da23a8228d10",
+    "proposer": "pending, signed_revision null",
+    "challenger": "revision_requested for current proposer release",
+    "matching_agree": false,
+    "actual_allocation": null,
+    "readiness": "CLOSED; no signature created; no abandonment consent"
+  },
+  "analytical_checks": {
+    "id": "V2-A01",
+    "code": "from fractions import Fraction as F\nfrom itertools import product\nstates = tuple(product((0,1), repeat=2))\ndef solve(pool, actions, depth, mode, costs, setup, first=True):\n    labels = [s[0]^s[1] if mode == \"xor\" else s[0] for s in pool]\n    best = F(max(sum(labels),len(labels)-sum(labels)),len(labels))\n    if depth:\n        for a in actions:\n            v = -costs[a] - (setup if first else 0)\n            for bit in (0,1):\n                g = tuple(s for s in pool if s[a] == bit)\n                if g:\n                    v += F(len(g),len(pool))*solve(g,tuple(i for i in actions if i!=a),depth-1,mode,costs,setup,False)\n            best = max(best,v)\n    return best\nfor mode in (\"xor\",\"single\"):\n    vals = [solve(states,(0,1),d,mode,(F(1,10),)*2,F(0)) for d in (1,2)]\n    print(mode, *map(str,vals))\n    assert vals == ([F(1,2),F(4,5)] if mode==\"xor\" else [F(9,10)]*2)\ncount=improved=0\nfor mode,a,b,s in product((\"xor\",\"single\"),(F(1,20),F(1,10),F(1,5),F(3,10)),(F(1,20),F(1,10),F(1,5),F(3,10)),(F(0),F(1,10),F(1,4))):\n    v1=solve(states,(0,1),1,mode,(a,b),s)\n    v2=solve(states,(0,1),2,mode,(a,b),s)\n    count+=1; improved+=v2>v1\nprint(\"grid\",count,\"depth2_improves\",improved)\nassert (count,improved)==(96,27)\nfor admin in (1,5,6):\n    saved=(4*2+4*5)-(4*2+3*5+admin)\n    print(\"admin\",admin,\"net_saved\",saved)\nparticles=((\"A\",F(1,2)),(\"B\",F(1,2)))\nmass=sum((w for payload,w in particles if payload==\"C\"),F(0))\nprint(\"off_support_mass\",mass,\"posterior_defined\",bool(mass))\nassert mass==0\n# Empty-query insertion changes context despite no old object membership.\nassert () != (\"inserted\",)\nprint(\"empty_query_insertion_changes_context\",True)\ndeps={\"100\":set(),\"101\":set(),\"102a\":set(),\"102b\":{\"100\",\"102a\"},\"106\":{\"100\",\"102a\"},\"103\":{\"100\",\"102b\",\"106\"},\"104\":{\"100\",\"102b\",\"103\",\"106\"},\"105\":{\"100\",\"102b\",\"103\",\"104\",\"106\"},\"107\":{\"100\",\"102b\",\"103\",\"104\",\"105\",\"106\"}}\ndone=[]\nwhile len(done)<len(deps):\n    ready=sorted(k for k,d in deps.items() if k not in done and d<=set(done))\n    assert ready\n    done.extend(ready)\nassert done.index(\"106\")<done.index(\"103\")<done.index(\"105\")\nprint(\"dag\",\",\".join(done))\n",
+    "stdout": "xor 1/2 4/5\nsingle 9/10 9/10\ngrid 96 depth2_improves 27\nadmin 1 net_saved 4\nadmin 5 net_saved 0\nadmin 6 net_saved -1\noff_support_mass 0 posterior_defined False\nempty_query_insertion_changes_context True\ndag 100,101,102a,102b,106,103,104,105,107\n",
+    "code_sha256": "eb968e308e7f576802eb1fda955c0abd757f6a1e55100f77a8a23c5eb63cd056",
+    "stdout_sha256": "ee44a52ff43f2c3f128fed6bdaf1877c619b77bafc36402bf2dc769349414974",
+    "command": "Copy exact code to verifier-own.py with final newline; python3 verifier-own.py",
+    "limits": "Tiny own finite model only; not downloaded-code execution, geometry/EDA/training, or chip timing. No count/node-time equivalence theorem."
+  },
+  "search_log": {
+    "date_utc": "2026-10-16T04:47:36.659904+00:00",
+    "engine": "web.run search/open/find; urllib/pdftotext for author PDF and pinned raw source",
+    "queries": [
+      "\"design rule checking\" \"candidate\" \"reuse\" incremental observation",
+      "\"AiDRC\" \"DRC\" model checking 18 24 channels",
+      "\"detailed routing\" \"value of information\" cache validation"
+    ],
+    "expansions": [
+      "Classical VOI and geometric/incremental reuse: IJCAI, OpenDRC, WXL, DrCU2.",
+      "Current repair workflow and winner/implementation: EvoDRC, DRC-Aid, Siemens,2019/2026 official pages, pinned DrCU README."
+    ],
+    "exclusions": "Off-topic internet routing/PCB/building-code/secondary summaries not used as claim evidence.",
+    "failures": [
+      "Author AiDRC browser Internal Error; urllib succeeds.",
+      "Primary CN122839978A Internal Error; indexed secondary lead only."
+    ],
+    "stop": "Bounded selected-source review; expansions found close prior, not no-closer-work certificate. Final-version/channel/code, full per-rule replay, winner executable and physical economics remain unresolved."
+  },
+  "limitations": [
+    "Explicitly unblinded; current proposal forecast read.",
+    "Self-ledger/manifests do not certify backend/model, hidden OS/network activity or adversarial isolation.",
+    "Selected sources only; no physical measurements, runtime implementation or exhaustive newest-paper/contest survey.",
+    "Old predecessor exposure/access limits and audit findings retained; no inherited approval."
+  ],
+  "validation": {
+    "input_manifests": "Trusted verify passed current proposer and challenger; distinct sessions and same input commit, different role packet hashes expected.",
+    "local_checks": "Own Fraction solver/accounting/DAG, SHA tasklist, supplied digest; trusted freeze and verify follow.",
+    "full_repository_validate": "Not run: prompt explicitly delegates complete-checkout validation to coordinator; no checkout accessed."
+  },
+  "reversal_conditions": [
+    "Define total planning observation update and exact-certificate separation.",
+    "Finish comparator/adapter/consumer mapping, pre-outcome thresholds and legal representative data.",
+    "Allocate actual compute/rights and obtain independently matching exact frozen-task P/C agreement before execution.",
+    "Demonstrate net downstream value beyond conventional same-information controller under registered failure/cost controls."
+  ]
+}

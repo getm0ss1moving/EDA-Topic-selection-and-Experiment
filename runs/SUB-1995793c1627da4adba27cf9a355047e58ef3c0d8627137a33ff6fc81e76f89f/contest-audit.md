@@ -1,0 +1,9 @@
+# Contest and winner correspondence: EDA-0009 B4-R2
+
+Cutoff:2026-10-16 UTC retrieval; public primary evidence only. R2-S07 official ISPD2019 archive names Dr.CU first and lists final DEF/report files by team ID15. Its evaluation interface takes Innovus geometry/connectivity reports. These facts do not provide current license rights or byte identity with any source build.
+
+R2-S10 pinned README raw16–21 associates Dr.CU2 with its ICCAD2019 paper and says the code is consistent with that paper and supports2018/2019 benchmarks. R2-S02 §III-C.2 pp4–5 explains pessimistic merged via-conflict LUT queries followed by exact suspicious-neighbor checks. This is already relevant coarse/exact prior; implementing it alone is no new contribution. The README/paper/official winner form a method-level bridge, not proof the contest executable implements exactly the audited code. No executable/DEF archive downloaded or run. Exact winner-binary correspondence remains an explicit source-only follow-up before a positive contest-originality claim.
+
+R2-S09 official2026 page is post-placement buffering/sizing, a different stage from this fixed detailed-route validation decision. Historical2025 global-routing title was reported in the previous release, not reopened here and not used for a new mechanism claim. No2027 task or exhaustive all-contest coverage is asserted.
+
+Required follow-up102a: lock original official winner material and code revision/patch relation, applicable rule/evaluator semantics and licensed benchmark/use rights; record any missing link as unresolved. Keep conventional pessimistic-query and task-specific learned checking baselines. Contest-provided coarse/exact patterns, candidate scheduling or continuing a known router do not supply novelty by themselves. New physical-system value must survive the equal-information counterfactual and checked downstream endpoint.
