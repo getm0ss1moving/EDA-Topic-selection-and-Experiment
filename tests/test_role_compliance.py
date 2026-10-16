@@ -173,6 +173,16 @@ class AuditedLoopTests(unittest.TestCase):
         l.save(work/'public-evidence.json',{'changed':'not the assigned metadata'})
         with self.assertRaisesRegex(ValueError,'public evidence hash/scope'):
             l.export_public_descriptors(record,public,Path('runs/OTHER'))
+        (work/'public-evidence.json').unlink()
+        with self.assertRaisesRegex(ValueError,'public evidence hash/scope'):
+            l.export_public_descriptors(record,public,Path('runs/MISSING'))
+        l.save(work/'public-evidence.json',note)
+        a.pop('public_evidence');l.save(work/'JOB.json',a)
+        with self.assertRaisesRegex(ValueError,'public evidence hash/scope'):
+            l.export_public_descriptors(record,public,Path('runs/UNASSIGNED'))
+        a['public_evidence']=None;l.save(work/'JOB.json',a)
+        with self.assertRaisesRegex(ValueError,'public evidence hash/scope'):
+            l.export_public_descriptors(record,public,Path('runs/NULL_METADATA'))
 
     def test_audit_cannot_omit_scientific_verifier_or_use_stale_inputs(self):
         for _ in range(3):self.science()
