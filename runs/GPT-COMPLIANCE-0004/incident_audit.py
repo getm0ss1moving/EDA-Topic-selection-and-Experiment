@@ -40,6 +40,9 @@ def main():
         record.update(status='independently_reviewed_quarantined_attempt',
                       audit_release=release.name, disposition=disposition)
         # Publish exact frozen bytes and public descriptors only, never scratch.
+        descriptors = {'purpose': 'Exact public descriptors for a quarantined attempt; no valid-cycle or scientific approval',
+            'roles': {}, 'locator_map': {'shared/job-descriptors/': 'runs/GPT-COMPLIANCE-0004/incident-descriptors/',
+                'shared/incident.json': 'runs/GPT-COMPLIANCE-0004/incident-descriptors/protocol-incident/incident.json'}}
         for role, path in {**record['releases'], 'protocol_audit': str(release)}.items():
             path = Path(path)
             m, files = loop.rs.verify(path)
@@ -55,6 +58,15 @@ def main():
             for name in ('JOB.json', 'prompt.txt'):
                 shutil.copyfile(path.parent.parent / name, dest / name)
             shutil.copyfile(path.parent.parent / 'policy/PACKET.json', dest / 'PACKET.json')
+            descriptors['roles'][role] = {'release_id': path.name,
+                'root': str(dest.relative_to(ROOT)),
+                'files': {name: loop.sha(dest / name) for name in ('JOB.json', 'prompt.txt', 'PACKET.json')}}
+        supplement = RUN / 'incident-descriptors/protocol-incident'
+        supplement.mkdir(exist_ok=True)
+        shutil.copyfile(work / 'shared/incident.json', supplement / 'incident.json')
+        descriptors['supplemental_inputs'] = {'root': str(supplement.relative_to(ROOT)),
+            'files': {'incident.json': loop.sha(supplement / 'incident.json')}}
+        loop.save(RUN / 'incident-descriptors/DESCRIPTORS.json', descriptors)
         loop.save(record_path, record)
         print(json.dumps(record, indent=2))
         return

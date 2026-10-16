@@ -1,0 +1,10 @@
+{
+  "failed_job": {
+    "attempt": 0,
+    "role": "verifier",
+    "work": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-V04-PHYSICAL-B04-EDA-0009/jobs/8d16e5c3-3088-40a5-8d77-4f35c3277577"
+  },
+  "incident_id": "INCIDENT-014adc84-cd88-42e3-8cc5-b4fd6294d7ef",
+  "reason": "Unreleased input disclosed; stop and preserve evidence, do not erase disclosure",
+  "scope": "Quarantine trigger is retained. Independently distinguish declared path spelling, actual authorization, and evidence of a forbidden read. No coordinator clearance, valid-cycle credit or scientific vote."
+}
