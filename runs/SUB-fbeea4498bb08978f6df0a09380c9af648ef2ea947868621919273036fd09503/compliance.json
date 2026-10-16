@@ -1,0 +1,132 @@
+{
+  "schema": 1,
+  "role": "verifier",
+  "actor_id": "ChatGPT-B04-PROTOCOL-D04-EDA-0012-R1",
+  "session_id": "630ac2a9-24a3-49db-a1fa-3ce7fa5b311a",
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "packet_sha256": "a9ac737489dbf291a0c93f65f8c1e9741eefb66f20e4d4bebef9b25ecc451507",
+  "job_id": "2f201acd-de32-4841-85bf-05baa16b5d41",
+  "read_releases": [
+    "SUB-19f19b087b06fe9b61eb1d39a8bfacf1c5a73c0597c3f6ca95d51eadd40c72e5",
+    "SUB-4cff54ad61aa12a294a808f36ba47524b43e6642cf97d8d49571572141c2a45f",
+    "SUB-82b8167ca9b955b4087f667585378f4e53893e95a14fffdff461b7b0937b1659"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0
+  },
+  "rules": {
+    "inputs": {
+      "status": "deviation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "prompt.txt",
+        "own job-local rg --files policy shared before completion of common-policy reading"
+      ],
+      "limits": "Own early filename inventory stayed within assigned job; no checkout/private content opened. Retain procedural order deviation."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json",
+        "release/verification.md"
+      ],
+      "limits": "Own public ledger only; no complete tool trace or claim about undisclosed host activity. Protocol audit, not scientific adjudication."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json",
+        "release/verification.md"
+      ],
+      "limits": "Own public ledger only; no complete tool trace or claim about undisclosed host activity. Protocol audit, not scientific adjudication."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json",
+        "release/verification.md"
+      ],
+      "limits": "Own public ledger only; no complete tool trace or claim about undisclosed host activity. Protocol audit, not scientific adjudication."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json",
+        "release/verification.md"
+      ],
+      "limits": "Own public ledger only; no complete tool trace or claim about undisclosed host activity. Protocol audit, not scientific adjudication."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json",
+        "release/verification.md"
+      ],
+      "limits": "Own public ledger only; no complete tool trace or claim about undisclosed host activity. Protocol audit, not scientific adjudication."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json",
+        "release/verification.md"
+      ],
+      "limits": "Own public ledger only; no complete tool trace or claim about undisclosed host activity. Protocol audit, not scientific adjudication."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json",
+        "release/verification.md"
+      ],
+      "limits": "Own public ledger only; no complete tool trace or claim about undisclosed host activity. Protocol audit, not scientific adjudication."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "release/verification.json",
+        "release/verification.md"
+      ],
+      "limits": "Own public ledger only; no complete tool trace or claim about undisclosed host activity. Protocol audit, not scientific adjudication."
+    }
+  },
+  "operations": [
+    {
+      "action": "read",
+      "scope": "JOB.json and prompt.txt first; assigned common policy and only VERIFIER harness; current three released outputs and public descriptors. Initial job-local filename inventory occurred before completing policy reading."
+    },
+    {
+      "action": "mechanical_review",
+      "scope": "All three trusted release verify commands; descriptor identity, released-file hashes, ledger allowed reads and proposer task hash. No predecessor descriptor paths followed."
+    },
+    {
+      "action": "validate",
+      "scope": "Standalone project.py validate exited 1: missing policy/config/roles.json. Own validate_review and validate_ledger before freeze."
+    },
+    {
+      "action": "write_and_freeze",
+      "scope": "Own write-audit.py, release/verification.md/json, workflow.json, compliance.json; own submissions and result.json after exact JOB freeze. No PR/merge/approval."
+    }
+  ],
+  "incidents": [
+    {
+      "id": "LOCAL-ORDER-001",
+      "classification": "procedural_order_deviation",
+      "detail": "After exact JOB/prompt, ran job-local rg --files policy shared before completing common-policy read. No external checkout/private content read."
+    }
+  ],
+  "observability": "Self-authored public activity ledger, not a complete tool trace or evidence of absent undisclosed actions."
+}

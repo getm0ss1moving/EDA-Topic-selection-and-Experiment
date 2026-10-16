@@ -1,0 +1,10 @@
+source_id,task_formulation,mechanism,data,evaluation,assumptions,overlap,proposed_distinction
+C12-S02/C12-S03,CTS grouping/location,cluster then blockage-aware location,selected source,no run,not complete row/site oracle,no whole-flow gap proved,same stock baseline
+C12-S04,hierarchical CTS,partition plus electrical/topology optimization,author designs,not reproduced,different finite abstraction,close coupled optimizer,explicit footprint conflicts still unproven delta
+C12-S05,generic planning/scheduling,LBBD assignment and subproblem cuts,non-CTS,not reproduced,generic decomposition,core loop conventional,physical representation/estimator must add useful value
+C12-S06,finite clock latency realizability,certificate and projection feedback,additive discrete models,author results only,not site packing,close feedback interface,site footprint coupling different; compare monolithic and cheap cores
+C12-S07/C12-S08,learned CTS,clustering/timing checks or coupled RL,patent disclosures,no run,different movement/count freedom,generic learned-checker combination prior,fixed count/placement and useful ranker delta needed
+C12-S10,clock network optimization,obstacle routing buffer insertion tuning,historic SoC,not reproduced,no row/site scarcity bridge,integrated workflow prior,winner code mapping unresolved
+C12-S09/C12-S14,CTS surrogates,multitarget GNN or specialized surrogates,public benchmark descriptions,no run,not verified legality payload,U/D prediction prior,conflict-to-regrouping decisions not established
+C12-S16,relative clock placement,group generation and legalization,patent disclosure,no run,moves cells,clustering/placement interaction prior,fixed-cell demand must be real
+C12-S12/C12-S17,2026 contest,post-placement data buffering/sizing,organizer benchmark,no run,ideal clock,adjacent legal-placement constraints,not direct CTS winner comparison
