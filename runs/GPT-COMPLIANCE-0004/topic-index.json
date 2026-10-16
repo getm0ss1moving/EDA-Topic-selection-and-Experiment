@@ -1,0 +1,122 @@
+[
+  {
+    "audit_release": "SUB-7f1fa5d72cb3dbe99558c18a4edc83e596e157506a358070f449d2777b8ebc3b",
+    "compliance_gate": "nonblocking_findings",
+    "decision": "revise",
+    "domain": "D05",
+    "domain_cycle": 1,
+    "pr": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/71",
+    "releases": {
+      "challenger": "SUB-1a4046d48852400f673bf14b891eeb70900fc985b29d11840149262bdfe13693",
+      "proposer": "SUB-b4a0830fd75dd9263101adcdda8a60e7ed86f687e08723fe63c0f3e83046ffae",
+      "verifier": "SUB-c4ea36b9e62a68730c225ac73645a9b5d399bbd2142507a0212c0ef12fb9dd0c"
+    },
+    "topic": "EDA-0010",
+    "topic_round": 1
+  },
+  {
+    "audit_release": "SUB-7e97f68607ffccc8e48853bfd2247e683998c8b4353be4e36eca19d4f14fd154",
+    "compliance_gate": "nonblocking_findings",
+    "decision": "revise",
+    "domain": "D04",
+    "domain_cycle": 1,
+    "pr": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/72",
+    "releases": {
+      "challenger": "SUB-8799913f1db1283e09646461628b8009a043423bf86ae40cb5a9c85eb7ec0042",
+      "proposer": "SUB-2e1f236a3f9a0f3f0b1c30016dc8ad8f2b235c94f980b0989b1d3e287588d85c",
+      "verifier": "SUB-f70b504c01235e69199f322b0bbd1ddec249af0289ea0e1883b1132758ddb6bf"
+    },
+    "topic": "EDA-0009",
+    "topic_round": 1
+  },
+  {
+    "audit_release": "SUB-b64d239e50bb39771d2c3f838b8b5874c19a640fe6e897f1c9e5b10b004dbc93",
+    "compliance_gate": "nonblocking_findings",
+    "decision": "revise",
+    "domain": "D05",
+    "domain_cycle": 2,
+    "pr": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/73",
+    "releases": {
+      "challenger": "SUB-1745834c07cf7e42c0a3756f0da807ddba9a85495361276d8b9e21390cf2f1b0",
+      "proposer": "SUB-017839376433acd2ef83e1cf06276f1d54e9af5740eb2561a0b9b928a404a6ae",
+      "verifier": "SUB-a8da4b6a1a7928ee94f15ee0ec17693629258c346fc2b559b406e2dca9fd3327"
+    },
+    "topic": "EDA-0010",
+    "topic_round": 2
+  },
+  {
+    "audit_release": "SUB-2872435ae5bc9d693c101e73fa71f0ba2a5c7c5381281741b4461cb9bd92ab17",
+    "compliance_gate": "nonblocking_findings",
+    "decision": "park",
+    "domain": "D05",
+    "domain_cycle": 3,
+    "pr": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/76",
+    "releases": {
+      "challenger": "SUB-d65e80f160a5b95d5338cbbede7dbefddeea23f506a1e7f2db70102f2d45167c",
+      "proposer": "SUB-e59222b261fdda904cd66c5a892de454e5dbcbabf4b3fa142896b356fd1ce075",
+      "verifier": "SUB-77d7bb685bc812bcb6e3e2a5a357478f7f2a743ad0dcba6a249962e0b163af95"
+    },
+    "topic": "EDA-0010",
+    "topic_round": 3
+  },
+  {
+    "audit_release": "SUB-55cc0847368e9b869318025e7199ab71f69c0a03de9933db4418a279696fd97c",
+    "compliance_gate": "clear_within_scope",
+    "decision": "revise",
+    "domain": "D04",
+    "domain_cycle": 2,
+    "pr": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/77",
+    "releases": {
+      "challenger": "SUB-3090026e572d0cecae72323cca434d6748d78424acd61699d6ecfb2e8aad0f6b",
+      "proposer": "SUB-988d5b734de75037f4ca472fe6c9799a673f9538cd7b4053da26a004347406f8",
+      "verifier": "SUB-b69a8b5d5ff701c8a70bb5122fcfe70e9cf376634d0f50de420109f7e3b8d8a0"
+    },
+    "topic": "EDA-0009",
+    "topic_round": 2
+  },
+  {
+    "audit_release": "SUB-798d896ad7a77ed584bf663fbed8b2cbc22d5127c3e4c9619a42cd49a69af124",
+    "compliance_gate": "nonblocking_findings",
+    "decision": "park",
+    "domain": "D05",
+    "domain_cycle": 4,
+    "pr": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/78",
+    "releases": {
+      "challenger": "SUB-d7573b7cfdc55db5c5f659765501be34d4e33ea88cac5eabe8a7d118fa61d1be",
+      "proposer": "SUB-2c26123b9b1c2d001f3615e1ad5087ac6444ac38a03cae6f9cfa57304e86de20",
+      "verifier": "SUB-6a2f437f43fd9ee63a3de84bc3fe096a5da49e6da3e6f7074f95b7c3140c386f"
+    },
+    "topic": "EDA-0011",
+    "topic_round": 1
+  },
+  {
+    "audit_release": "SUB-38bbccd6fbce4ef1bd73982cdbcd3a66c264f9e076fd93819cb97aaa51cb7f46",
+    "compliance_gate": "unresolved",
+    "decision": "park",
+    "domain": "D04",
+    "domain_cycle": 3,
+    "pr": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/79",
+    "releases": {
+      "challenger": "SUB-83d9a23ab90f7ca974796e8ed39617078e1ee76f0abcab0f0746f6bab6c2278f",
+      "proposer": "SUB-2966cec6a631f48b998ddb78b67aba187e072ad1d9b4d3498aeebdb879a9f0cc",
+      "verifier": "SUB-047b42329a35771ca6788e18cc97583dedaf36526c13f12defa839e36c8b1ed0"
+    },
+    "topic": "EDA-0009",
+    "topic_round": 3
+  },
+  {
+    "audit_release": "SUB-fbeea4498bb08978f6df0a09380c9af648ef2ea947868621919273036fd09503",
+    "compliance_gate": "unresolved",
+    "decision": "park",
+    "domain": "D04",
+    "domain_cycle": 4,
+    "pr": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/82",
+    "releases": {
+      "challenger": "SUB-19f19b087b06fe9b61eb1d39a8bfacf1c5a73c0597c3f6ca95d51eadd40c72e5",
+      "proposer": "SUB-4cff54ad61aa12a294a808f36ba47524b43e6642cf97d8d49571572141c2a45f",
+      "verifier": "SUB-82b8167ca9b955b4087f667585378f4e53893e95a14fffdff461b7b0937b1659"
+    },
+    "topic": "EDA-0012",
+    "topic_round": 1
+  }
+]

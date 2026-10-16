@@ -1,0 +1,44 @@
+{
+  "scope": "Exact public scientific followups, with assigned verifier rulings when available. No coordinator scientific clearance.",
+  "followups": [
+    {
+      "pr": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/79",
+      "thread_id": "PRRT_kwDOVElOAM6tFKVN",
+      "status": "independently_adjudicated_historical_followup",
+      "comments": [
+        {
+          "id": "PRRC_kwDOVElOAM7_yQoY",
+          "body": "**<sub><sub>![P2 Badge](https://img.shields.io/badge/P2-yellow?style=flat)</sub></sub>  Replace the invalid OpenROAD line ranges**\n\nAnyone reopening C3-CLM-001 at this pinned URL cannot follow the recorded locator: [the referenced `TritonRoute.cpp`](https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/src/drt/src/TritonRoute.cpp) has only 1,388 lines, so the range ending at 1,450 and the challenge's claimed 1,447\u20131,448 file-open check do not exist; the relevant `getDRCMarkers` and `reportDRC` code is instead around lines 980\u20131064 and 1295\u20131385. Because the verifier repeats these offsets, correct the source locator and every downstream citation, or pin the revision whose bytes actually match the reported ranges.\n\nAGENTS.md reference: [AGENTS.md:L11-L11](https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/blob/5646b85f85d77abddd1b91db2272e5a71ec2fa5c/AGENTS.md#L11-L11)\n\nUseful? React with \ud83d\udc4d\u00a0/ \ud83d\udc4e.\n\n<!-- codex-code-review-finding:v1 -->",
+          "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/79#discussion_r4291365400",
+          "body_sha256": "dcd44e809704ae0e033c40f004b89724a9dc00fbfb7c11b151d8a0cff2a53bc8"
+        }
+      ],
+      "delivery": "Assigned exclusively before D04 final verifier execution; independent frozen ruling refutes raw/rendered line-count allegation. UI thread remains open and original frozen records are unchanged.",
+      "scientific_ruling": "runs/SUB-82b8167ca9b955b4087f667585378f4e53893e95a14fffdff461b7b0937b1659/verification.json",
+      "ruling_id": "HIST-B04-R3-LOCATOR",
+      "verdict": "refuted",
+      "assigned_comment_representation": {
+        "body": "**<sub><sub>![P2 Badge](https://img.shields.io/badge/P2-yellow?style=flat)</sub></sub>  Replace the invalid OpenROAD line ranges**\n\nAnyone reopening C3-CLM-001 at this pinned URL cannot follow the recorded locator: [the referenced `TritonRoute.cpp`](https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/src/drt/src/TritonRoute.cpp) has only 1,388 lines, so the range ending at 1,450 and the challenge's claimed 1,447\u20131,448 file-open check do not exist; the relevant `getDRCMarkers` and `reportDRC` code is instead around lines 980\u20131064 and 1295\u20131385. Because the verifier repeats these offsets, correct the source locator and every downstream citation, or pin the revision whose bytes actually match the reported ranges.\n\nAGENTS.md reference: [AGENTS.md:L11-L11](https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/blob/5646b85f85d77abddd1b91db2272e5a71ec2fa5c/AGENTS.md#L11-L11)\n\nUseful? React with \ud83d\udc4d\u00a0/ \ud83d\udc4e.\n\n<!-- codex-code-review-finding:v1 -->",
+        "body_sha256": "dcd44e809704ae0e033c40f004b89724a9dc00fbfb7c11b151d8a0cff2a53bc8",
+        "note": "The original assigned note stored escaped display characters/newlines. It remains immutable. Exact programmatic decoding matches the live connector comment; the raw live UTF-8 body/hash below corrects transport provenance only, without a new scientific ruling."
+      }
+    },
+    {
+      "pr": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/75",
+      "thread_id": "PRRT_kwDOVElOAM6tEjru",
+      "status": "governance_fix_ready_for_report_publication",
+      "fix_paths": [
+        "runs/GPT-COMPLIANCE-0004/audit_publication.py",
+        "runs/GPT-COMPLIANCE-0004/public-review-followups.json"
+      ],
+      "scope": "Optional missing-manifest handling repaired locally and required manifest included in final report PR. Open UI thread retained at this pre-publication receipt time; not a scientific allegation or vote.",
+      "comments": [
+        {
+          "id": "PRRC_kwDOVElOAM7_xTMi",
+          "body": "**<sub><sub>![P2 Badge](https://img.shields.io/badge/P2-yellow?style=flat)</sub></sub>  Handle the absent review-followup manifest**\n\nIn a fresh checkout of this commit, `runs/GPT-COMPLIANCE-0004/public-review-followups.json` does not exist, and a repo-wide search finds no batch-0004 producer for it. Because `receipt()` reads it unconditionally for every one of the eight published PRs, the new publication audit raises `FileNotFoundError` before cloning and checking public bytes, even when there are simply no retained followups. Treat the missing file as an empty followup list, as the script already does for optional audit corrections, or publish the required manifest with this audit.\n\nUseful? React with \ud83d\udc4d\u00a0/ \ud83d\udc4e.\n\n<!-- codex-code-review-finding:v1 -->",
+          "body_sha256": "33f72b2219301029496bb7e47795ad60481e6c019228f84c4e5df7ed7648e4d5"
+        }
+      ]
+    }
+  ]
+}

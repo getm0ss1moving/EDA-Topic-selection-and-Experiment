@@ -1,0 +1,507 @@
+{
+  "checked_at_utc": "2026-10-16T06:42:29.820883+00:00",
+  "incident_descriptor_fix_pr": {
+    "commit_statuses": [
+      {
+        "context": "independent-verifier",
+        "state": "success",
+        "target_url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38854129170"
+      }
+    ],
+    "headRefOid": "42cd9519acb88fb1d46e210b6dbf5a4898904fb3",
+    "mergeCommit": {
+      "oid": "d6f70c1e7944566a8249320b0052652343a4d1c5"
+    },
+    "mergedAt": "2026-10-16T05:04:46Z",
+    "number": 75,
+    "receipt_recorded_at_utc": "2026-10-16T06:41:23.790830+00:00",
+    "receipt_scope": [
+      "Workflow tool returns the first page of pull-request-triggered runs only; the required Research structure workflow and independent-verifier commit status are explicitly checked at each exact head.",
+      "No private scientific traces or reviewer approvals are inferred.",
+      "Review-thread inventories are exactly the connector-returned nodes; no unexposed pagination or hidden reviews are certified."
+    ],
+    "receipt_transport": "Live GitHub connector reads after local api.github.com TLS failures",
+    "retained_scientific_followups": [
+      {
+        "comments": [
+          {
+            "body": "**<sub><sub>![P2 Badge](https://img.shields.io/badge/P2-yellow?style=flat)</sub></sub>  Handle the absent review-followup manifest**\n\nIn a fresh checkout of this commit, `runs/GPT-COMPLIANCE-0004/public-review-followups.json` does not exist, and a repo-wide search finds no batch-0004 producer for it. Because `receipt()` reads it unconditionally for every one of the eight published PRs, the new publication audit raises `FileNotFoundError` before cloning and checking public bytes, even when there are simply no retained followups. Treat the missing file as an empty followup list, as the script already does for optional audit corrections, or publish the required manifest with this audit.\n\nUseful? React with \ud83d\udc4d\u00a0/ \ud83d\udc4e.\n\n<!-- codex-code-review-finding:v1 -->",
+            "body_sha256": "33f72b2219301029496bb7e47795ad60481e6c019228f84c4e5df7ed7648e4d5",
+            "id": "PRRC_kwDOVElOAM7_xTMi"
+          }
+        ],
+        "fix_paths": [
+          "runs/GPT-COMPLIANCE-0004/audit_publication.py",
+          "runs/GPT-COMPLIANCE-0004/public-review-followups.json"
+        ],
+        "pr": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/75",
+        "scope": "Optional missing-manifest handling repaired locally and required manifest included in final report PR. Open UI thread retained at this pre-publication receipt time; not a scientific allegation or vote.",
+        "status": "governance_fix_ready_for_report_publication",
+        "thread_id": "PRRT_kwDOVElOAM6tEjru"
+      }
+    ],
+    "state": "MERGED",
+    "unresolved_review_threads": [
+      "PRRT_kwDOVElOAM6tEjru"
+    ],
+    "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/75",
+    "workflow_summaries": [
+      {
+        "conclusion": "success",
+        "id": 38853804232,
+        "jobs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38853804232/jobs",
+        "logs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38853804232/logs",
+        "name": "Research structure",
+        "run_number": 211,
+        "status": "completed",
+        "workflow_id": 381137339
+      }
+    ]
+  },
+  "incident_evidence_pr": {
+    "commit_statuses": [
+      {
+        "context": "independent-verifier",
+        "state": "success",
+        "target_url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38853949026"
+      }
+    ],
+    "headRefOid": "b9d290b09a7f8dfd7edf1ab26cf5b27853f7d82f",
+    "mergeCommit": {
+      "oid": "d3df455386180c482320b69d5652c89393f87abc"
+    },
+    "mergedAt": "2026-10-16T04:53:29Z",
+    "number": 74,
+    "receipt_recorded_at_utc": "2026-10-16T06:41:23.790830+00:00",
+    "receipt_scope": [
+      "Workflow tool returns the first page of pull-request-triggered runs only; the required Research structure workflow and independent-verifier commit status are explicitly checked at each exact head.",
+      "No private scientific traces or reviewer approvals are inferred.",
+      "Review-thread inventories are exactly the connector-returned nodes; no unexposed pagination or hidden reviews are certified."
+    ],
+    "receipt_transport": "Live GitHub connector reads after local api.github.com TLS failures",
+    "retained_scientific_followups": [],
+    "state": "MERGED",
+    "unresolved_review_threads": [],
+    "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/74",
+    "workflow_summaries": [
+      {
+        "conclusion": "success",
+        "id": 38852891659,
+        "jobs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38852891659/jobs",
+        "logs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38852891659/logs",
+        "name": "Research structure",
+        "run_number": 209,
+        "status": "completed",
+        "workflow_id": 381137339
+      }
+    ]
+  },
+  "public_evidence_presence_fix_pr": {
+    "commit_statuses": [
+      {
+        "context": "independent-verifier",
+        "state": "success",
+        "target_url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38861560323"
+      }
+    ],
+    "headRefOid": "81c373ebb5fe84e0515ac31744b20558abe06a6c",
+    "mergeCommit": {
+      "oid": "2b214aaeff4bc664258059f81493ad7b0402fa8f"
+    },
+    "mergedAt": "2026-10-16T06:32:25Z",
+    "number": 81,
+    "receipt_recorded_at_utc": "2026-10-16T06:41:23.790830+00:00",
+    "receipt_scope": [
+      "Workflow tool returns the first page of pull-request-triggered runs only; the required Research structure workflow and independent-verifier commit status are explicitly checked at each exact head.",
+      "No private scientific traces or reviewer approvals are inferred.",
+      "Review-thread inventories are exactly the connector-returned nodes; no unexposed pagination or hidden reviews are certified."
+    ],
+    "receipt_transport": "Live GitHub connector reads after local api.github.com TLS failures",
+    "retained_scientific_followups": [],
+    "state": "MERGED",
+    "unresolved_review_threads": [],
+    "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/81",
+    "workflow_summaries": [
+      {
+        "conclusion": "success",
+        "id": 38861560345,
+        "jobs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38861560345/jobs",
+        "logs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38861560345/logs",
+        "name": "Research structure",
+        "run_number": 223,
+        "status": "completed",
+        "workflow_id": 381137339
+      }
+    ]
+  },
+  "round_prs": [
+    {
+      "commit_statuses": [
+        {
+          "context": "independent-verifier",
+          "state": "success",
+          "target_url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38858301585"
+        }
+      ],
+      "headRefOid": "5646b85f85d77abddd1b91db2272e5a71ec2fa5c",
+      "mergeCommit": {
+        "oid": "5f5bd359e1db80e5ee0e35939f381d38d3c14594"
+      },
+      "mergedAt": "2026-10-16T05:51:27Z",
+      "number": 79,
+      "receipt_recorded_at_utc": "2026-10-16T06:41:23.790830+00:00",
+      "receipt_scope": [
+        "Workflow tool returns the first page of pull-request-triggered runs only; the required Research structure workflow and independent-verifier commit status are explicitly checked at each exact head.",
+        "No private scientific traces or reviewer approvals are inferred.",
+        "Review-thread inventories are exactly the connector-returned nodes; no unexposed pagination or hidden reviews are certified."
+      ],
+      "receipt_transport": "Live GitHub connector reads after local api.github.com TLS failures",
+      "retained_scientific_followups": [
+        {
+          "assigned_comment_representation": {
+            "body": "**<sub><sub>![P2 Badge](https://img.shields.io/badge/P2-yellow?style=flat)</sub></sub>  Replace the invalid OpenROAD line ranges**\n\nAnyone reopening C3-CLM-001 at this pinned URL cannot follow the recorded locator: [the referenced `TritonRoute.cpp`](https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/src/drt/src/TritonRoute.cpp) has only 1,388 lines, so the range ending at 1,450 and the challenge's claimed 1,447\u20131,448 file-open check do not exist; the relevant `getDRCMarkers` and `reportDRC` code is instead around lines 980\u20131064 and 1295\u20131385. Because the verifier repeats these offsets, correct the source locator and every downstream citation, or pin the revision whose bytes actually match the reported ranges.\n\nAGENTS.md reference: [AGENTS.md:L11-L11](https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/blob/5646b85f85d77abddd1b91db2272e5a71ec2fa5c/AGENTS.md#L11-L11)\n\nUseful? React with \ud83d\udc4d\u00a0/ \ud83d\udc4e.\n\n<!-- codex-code-review-finding:v1 -->",
+            "body_sha256": "dcd44e809704ae0e033c40f004b89724a9dc00fbfb7c11b151d8a0cff2a53bc8",
+            "note": "The original assigned note stored escaped display characters/newlines. It remains immutable. Exact programmatic decoding matches the live connector comment; the raw live UTF-8 body/hash below corrects transport provenance only, without a new scientific ruling."
+          },
+          "comments": [
+            {
+              "body": "**<sub><sub>![P2 Badge](https://img.shields.io/badge/P2-yellow?style=flat)</sub></sub>  Replace the invalid OpenROAD line ranges**\n\nAnyone reopening C3-CLM-001 at this pinned URL cannot follow the recorded locator: [the referenced `TritonRoute.cpp`](https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/src/drt/src/TritonRoute.cpp) has only 1,388 lines, so the range ending at 1,450 and the challenge's claimed 1,447\u20131,448 file-open check do not exist; the relevant `getDRCMarkers` and `reportDRC` code is instead around lines 980\u20131064 and 1295\u20131385. Because the verifier repeats these offsets, correct the source locator and every downstream citation, or pin the revision whose bytes actually match the reported ranges.\n\nAGENTS.md reference: [AGENTS.md:L11-L11](https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/blob/5646b85f85d77abddd1b91db2272e5a71ec2fa5c/AGENTS.md#L11-L11)\n\nUseful? React with \ud83d\udc4d\u00a0/ \ud83d\udc4e.\n\n<!-- codex-code-review-finding:v1 -->",
+              "body_sha256": "dcd44e809704ae0e033c40f004b89724a9dc00fbfb7c11b151d8a0cff2a53bc8",
+              "id": "PRRC_kwDOVElOAM7_yQoY",
+              "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/79#discussion_r4291365400"
+            }
+          ],
+          "delivery": "Assigned exclusively before D04 final verifier execution; independent frozen ruling refutes raw/rendered line-count allegation. UI thread remains open and original frozen records are unchanged.",
+          "pr": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/79",
+          "ruling_id": "HIST-B04-R3-LOCATOR",
+          "scientific_ruling": "runs/SUB-82b8167ca9b955b4087f667585378f4e53893e95a14fffdff461b7b0937b1659/verification.json",
+          "status": "independently_adjudicated_historical_followup",
+          "thread_id": "PRRT_kwDOVElOAM6tFKVN",
+          "verdict": "refuted"
+        }
+      ],
+      "state": "MERGED",
+      "unresolved_review_threads": [
+        "PRRT_kwDOVElOAM6tFKVN"
+      ],
+      "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/79",
+      "workflow_summaries": [
+        {
+          "conclusion": "success",
+          "id": 38857901842,
+          "jobs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38857901842/jobs",
+          "logs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38857901842/logs",
+          "name": "Research structure",
+          "run_number": 219,
+          "status": "completed",
+          "workflow_id": 381137339
+        }
+      ]
+    },
+    {
+      "commit_statuses": [
+        {
+          "context": "independent-verifier",
+          "state": "success",
+          "target_url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38859960342"
+        }
+      ],
+      "headRefOid": "4a76cec8fcfd808c7c9a12a34fa46349da382f00",
+      "mergeCommit": {
+        "oid": "fccdce16c2d65998597bfac5bbf5601f4165ef15"
+      },
+      "mergedAt": "2026-10-16T05:36:26Z",
+      "number": 78,
+      "receipt_recorded_at_utc": "2026-10-16T06:41:23.790830+00:00",
+      "receipt_scope": [
+        "Workflow tool returns the first page of pull-request-triggered runs only; the required Research structure workflow and independent-verifier commit status are explicitly checked at each exact head.",
+        "No private scientific traces or reviewer approvals are inferred.",
+        "Review-thread inventories are exactly the connector-returned nodes; no unexposed pagination or hidden reviews are certified."
+      ],
+      "receipt_transport": "Live GitHub connector reads after local api.github.com TLS failures",
+      "retained_scientific_followups": [],
+      "state": "MERGED",
+      "unresolved_review_threads": [],
+      "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/78",
+      "workflow_summaries": [
+        {
+          "conclusion": "success",
+          "id": 38856601668,
+          "jobs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38856601668/jobs",
+          "logs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38856601668/logs",
+          "name": "Research structure",
+          "run_number": 217,
+          "status": "completed",
+          "workflow_id": 381137339
+        }
+      ]
+    },
+    {
+      "commit_statuses": [
+        {
+          "context": "independent-verifier",
+          "state": "success",
+          "target_url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38854546554"
+        }
+      ],
+      "headRefOid": "1c989bd58e5be199dab4d9e65aac8721c9f221aa",
+      "mergeCommit": {
+        "oid": "28250d7381f1422906195ffc63e62a12371e8ad6"
+      },
+      "mergedAt": "2026-10-16T05:13:01Z",
+      "number": 76,
+      "receipt_recorded_at_utc": "2026-10-16T06:41:23.790830+00:00",
+      "receipt_scope": [
+        "Workflow tool returns the first page of pull-request-triggered runs only; the required Research structure workflow and independent-verifier commit status are explicitly checked at each exact head.",
+        "No private scientific traces or reviewer approvals are inferred.",
+        "Review-thread inventories are exactly the connector-returned nodes; no unexposed pagination or hidden reviews are certified."
+      ],
+      "receipt_transport": "Live GitHub connector reads after local api.github.com TLS failures",
+      "retained_scientific_followups": [],
+      "state": "MERGED",
+      "unresolved_review_threads": [],
+      "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/76",
+      "workflow_summaries": [
+        {
+          "conclusion": "success",
+          "id": 38854546509,
+          "jobs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38854546509/jobs",
+          "logs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38854546509/logs",
+          "name": "Research structure",
+          "run_number": 213,
+          "status": "completed",
+          "workflow_id": 381137339
+        }
+      ]
+    },
+    {
+      "commit_statuses": [
+        {
+          "context": "independent-verifier",
+          "state": "success",
+          "target_url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38862055315"
+        }
+      ],
+      "headRefOid": "68da69a93764224c6020dada0f4588e9f6a11cd4",
+      "mergeCommit": {
+        "oid": "a66794ad6ca85aebec84365f7ea90bb5c429d8ba"
+      },
+      "mergedAt": "2026-10-16T06:37:06Z",
+      "number": 82,
+      "receipt_recorded_at_utc": "2026-10-16T06:41:23.790830+00:00",
+      "receipt_scope": [
+        "Workflow tool returns the first page of pull-request-triggered runs only; the required Research structure workflow and independent-verifier commit status are explicitly checked at each exact head.",
+        "No private scientific traces or reviewer approvals are inferred.",
+        "Review-thread inventories are exactly the connector-returned nodes; no unexposed pagination or hidden reviews are certified."
+      ],
+      "receipt_transport": "Live GitHub connector reads after local api.github.com TLS failures",
+      "retained_scientific_followups": [],
+      "state": "MERGED",
+      "unresolved_review_threads": [],
+      "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/82",
+      "workflow_summaries": [
+        {
+          "conclusion": "success",
+          "id": 38862055209,
+          "jobs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38862055209/jobs",
+          "logs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38862055209/logs",
+          "name": "Research structure",
+          "run_number": 225,
+          "status": "completed",
+          "workflow_id": 381137339
+        }
+      ]
+    },
+    {
+      "commit_statuses": [
+        {
+          "context": "independent-verifier",
+          "state": "success",
+          "target_url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38852551406"
+        }
+      ],
+      "headRefOid": "a65445828dfa80f6ff57c4ab43d5c6c47bf7e189",
+      "mergeCommit": {
+        "oid": "aaa2d95e547e93a833ce3a0d2c0afdd5472d4f7f"
+      },
+      "mergedAt": "2026-10-16T04:50:20Z",
+      "number": 73,
+      "receipt_recorded_at_utc": "2026-10-16T06:41:23.790830+00:00",
+      "receipt_scope": [
+        "Workflow tool returns the first page of pull-request-triggered runs only; the required Research structure workflow and independent-verifier commit status are explicitly checked at each exact head.",
+        "No private scientific traces or reviewer approvals are inferred.",
+        "Review-thread inventories are exactly the connector-returned nodes; no unexposed pagination or hidden reviews are certified."
+      ],
+      "receipt_transport": "Live GitHub connector reads after local api.github.com TLS failures",
+      "retained_scientific_followups": [],
+      "state": "MERGED",
+      "unresolved_review_threads": [],
+      "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/73",
+      "workflow_summaries": [
+        {
+          "conclusion": "success",
+          "id": 38852551344,
+          "jobs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38852551344/jobs",
+          "logs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38852551344/logs",
+          "name": "Research structure",
+          "run_number": 207,
+          "status": "completed",
+          "workflow_id": 381137339
+        }
+      ]
+    },
+    {
+      "commit_statuses": [
+        {
+          "context": "independent-verifier",
+          "state": "success",
+          "target_url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38854853718"
+        }
+      ],
+      "headRefOid": "a86ca5dc8acd7fdf5db9fb6b4b9d652ffceacc23",
+      "mergeCommit": {
+        "oid": "ebe4276fb2d6eb2f8a3c45e060a78a365dfa67b2"
+      },
+      "mergedAt": "2026-10-16T05:17:11Z",
+      "number": 77,
+      "receipt_recorded_at_utc": "2026-10-16T06:41:23.790830+00:00",
+      "receipt_scope": [
+        "Workflow tool returns the first page of pull-request-triggered runs only; the required Research structure workflow and independent-verifier commit status are explicitly checked at each exact head.",
+        "No private scientific traces or reviewer approvals are inferred.",
+        "Review-thread inventories are exactly the connector-returned nodes; no unexposed pagination or hidden reviews are certified."
+      ],
+      "receipt_transport": "Live GitHub connector reads after local api.github.com TLS failures",
+      "retained_scientific_followups": [],
+      "state": "MERGED",
+      "unresolved_review_threads": [],
+      "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/77",
+      "workflow_summaries": [
+        {
+          "conclusion": "success",
+          "id": 38854853652,
+          "jobs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38854853652/jobs",
+          "logs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38854853652/logs",
+          "name": "Research structure",
+          "run_number": 215,
+          "status": "completed",
+          "workflow_id": 381137339
+        }
+      ]
+    },
+    {
+      "commit_statuses": [
+        {
+          "context": "independent-verifier",
+          "state": "success",
+          "target_url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38850371421"
+        }
+      ],
+      "headRefOid": "55f4833d948d361465d4afcc331fe2856572e93e",
+      "mergeCommit": {
+        "oid": "b5e69f7c90b6f3aa23d1399d83dbaa1bd8be8f99"
+      },
+      "mergedAt": "2026-10-16T04:24:45Z",
+      "number": 71,
+      "receipt_recorded_at_utc": "2026-10-16T06:41:23.790830+00:00",
+      "receipt_scope": [
+        "Workflow tool returns the first page of pull-request-triggered runs only; the required Research structure workflow and independent-verifier commit status are explicitly checked at each exact head.",
+        "No private scientific traces or reviewer approvals are inferred.",
+        "Review-thread inventories are exactly the connector-returned nodes; no unexposed pagination or hidden reviews are certified."
+      ],
+      "receipt_transport": "Live GitHub connector reads after local api.github.com TLS failures",
+      "retained_scientific_followups": [],
+      "state": "MERGED",
+      "unresolved_review_threads": [],
+      "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/71",
+      "workflow_summaries": [
+        {
+          "conclusion": "success",
+          "id": 38850371367,
+          "jobs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38850371367/jobs",
+          "logs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38850371367/logs",
+          "name": "Research structure",
+          "run_number": 202,
+          "status": "completed",
+          "workflow_id": 381137339
+        }
+      ]
+    },
+    {
+      "commit_statuses": [
+        {
+          "context": "independent-verifier",
+          "state": "success",
+          "target_url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38850821039"
+        }
+      ],
+      "headRefOid": "b8aeae9243e84a4339c55b1c79598377d2d442c9",
+      "mergeCommit": {
+        "oid": "b38c4fb6e9863038058bc77d5078682288eb1fce"
+      },
+      "mergedAt": "2026-10-16T04:30:42Z",
+      "number": 72,
+      "receipt_recorded_at_utc": "2026-10-16T06:41:23.790830+00:00",
+      "receipt_scope": [
+        "Workflow tool returns the first page of pull-request-triggered runs only; the required Research structure workflow and independent-verifier commit status are explicitly checked at each exact head.",
+        "No private scientific traces or reviewer approvals are inferred.",
+        "Review-thread inventories are exactly the connector-returned nodes; no unexposed pagination or hidden reviews are certified."
+      ],
+      "receipt_transport": "Live GitHub connector reads after local api.github.com TLS failures",
+      "retained_scientific_followups": [],
+      "state": "MERGED",
+      "unresolved_review_threads": [],
+      "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/72",
+      "workflow_summaries": [
+        {
+          "conclusion": "success",
+          "id": 38850822915,
+          "jobs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38850822915/jobs",
+          "logs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38850822915/logs",
+          "name": "Research structure",
+          "run_number": 205,
+          "status": "completed",
+          "workflow_id": 381137339
+        }
+      ]
+    }
+  ],
+  "scientific_authority_fix_pr": {
+    "commit_statuses": [
+      {
+        "context": "independent-verifier",
+        "state": "success",
+        "target_url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38861874111"
+      }
+    ],
+    "headRefOid": "6544a22add519911c0ca7cf1392946f5e8843137",
+    "mergeCommit": {
+      "oid": "e4287188e5b022f47a28c8ec4344443868e773db"
+    },
+    "mergedAt": "2026-10-16T06:11:02Z",
+    "number": 80,
+    "receipt_recorded_at_utc": "2026-10-16T06:41:23.790830+00:00",
+    "receipt_scope": [
+      "Workflow tool returns the first page of pull-request-triggered runs only; the required Research structure workflow and independent-verifier commit status are explicitly checked at each exact head.",
+      "No private scientific traces or reviewer approvals are inferred.",
+      "Review-thread inventories are exactly the connector-returned nodes; no unexposed pagination or hidden reviews are certified."
+    ],
+    "receipt_transport": "Live GitHub connector reads after local api.github.com TLS failures",
+    "retained_scientific_followups": [],
+    "state": "MERGED",
+    "unresolved_review_threads": [],
+    "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/80",
+    "workflow_summaries": [
+      {
+        "conclusion": "success",
+        "id": 38859719091,
+        "jobs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38859719091/jobs",
+        "logs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38859719091/logs",
+        "name": "Research structure",
+        "run_number": 221,
+        "status": "completed",
+        "workflow_id": 381137339
+      }
+    ]
+  },
+  "scope": "Actual merged PR heads, checks and review-thread inventory. Exact retained followups retain their recorded scientific status; an open UI thread is not silently dismissed and no coordinator scientific clearance is inferred."
+}

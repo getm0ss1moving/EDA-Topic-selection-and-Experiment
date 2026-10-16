@@ -1,0 +1,51 @@
+{
+  "recorded_at_utc": "2026-10-16T04:04:56.093806+00:00",
+  "source_pr": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/69",
+  "thread": "PRRT_kwDOVElOAM6tDzAP",
+  "issue": "audit construction copied verifier-only scientific handover prefixes into protocol policy",
+  "remedy": "Runtime packet exporter excludes released-handover/ and released-seed/ for protocol audits only",
+  "audits_dispatched_before_remedy": 0,
+  "scientific_packets_changed": false,
+  "frozen_scientific_input_preserved": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "tests_passed": 136,
+  "test_record": "validation.json",
+  "status": "merged_before_first_live_audit",
+  "scope": "Coordinator transport defect found before any live protocol audit; not an independent scientific/hidden-action verdict.",
+  "fix_pr": {
+    "mergeCommit": {
+      "oid": "5718a6fe5243edd672f8fa2071d24658f4d478ea"
+    },
+    "mergedAt": "2026-10-16T04:05:41Z",
+    "state": "MERGED",
+    "statusCheckRollup": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-16T04:04:49Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38848727457/job/116804986534",
+        "name": "verifier",
+        "startedAt": "2026-10-16T04:04:44Z",
+        "status": "COMPLETED",
+        "workflowName": "Independent verifier"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-16T04:05:07Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38848727424/job/116804984663",
+        "name": "research-structure",
+        "startedAt": "2026-10-16T04:04:44Z",
+        "status": "COMPLETED",
+        "workflowName": "Research structure"
+      },
+      {
+        "__typename": "StatusContext",
+        "context": "independent-verifier",
+        "startedAt": "2026-10-16T04:04:47Z",
+        "state": "SUCCESS",
+        "targetUrl": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38848727457"
+      }
+    ],
+    "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/70"
+  }
+}

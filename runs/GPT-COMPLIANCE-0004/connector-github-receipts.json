@@ -1,0 +1,1033 @@
+{
+  "retrieval_transport": "Live GitHub connector reads after local api.github.com TLS failures",
+  "records": {
+    "71": {
+      "info": {
+        "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/71",
+        "number": 71,
+        "state": "closed",
+        "merged": true,
+        "mergeable": false,
+        "draft": false,
+        "body": "Automatic three-role round for EDA-0010. Decision: `revise`.\n\nThe round includes the frozen proposer, challenger and verifier outputs, their exact logical registrations and provenance. Scientific verdicts belong to the verifier. Research selection does not allocate new compute.\n",
+        "title": "EDA-0010: revise (c4ea36b9e62a6873)",
+        "base": "main",
+        "base_sha": "5718a6fe5243edd672f8fa2071d24658f4d478ea",
+        "head": "codex/round-eda-0010-c4ea36b9e62a6873",
+        "head_sha": "55f4833d948d361465d4afcc331fe2856572e93e",
+        "head_repo_id": 1414090240,
+        "head_repo_full_name": "getm0ss1moving/EDA-Topic-selection-and-Experiment",
+        "merge_commit_sha": "b5e69f7c90b6f3aa23d1399d83dbaa1bd8be8f99",
+        "user": {
+          "login": "getm0ss1moving",
+          "name": "getm0ss1moving",
+          "email": null,
+          "avatar_url": "https://avatars.githubusercontent.com/u/192193363?v=4",
+          "id": 192193363
+        },
+        "requested_reviewers": null,
+        "requested_team_reviewers": null,
+        "diff": null,
+        "comments": null,
+        "created_at": "2026-10-16T04:23:26Z",
+        "updated_at": "2026-10-16T04:26:28Z",
+        "closed_at": "2026-10-16T04:24:46Z",
+        "merged_at": "2026-10-16T04:24:45Z",
+        "commits": 1,
+        "changed_files": 50,
+        "additions": 3275,
+        "deletions": 0,
+        "display_url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/71",
+        "display_title": "EDA-0010: revise (c4ea36b9e62a6873)"
+      },
+      "threads": {
+        "review_threads": []
+      },
+      "workflows": {
+        "workflow_runs": [
+          {
+            "id": 38850371367,
+            "name": "Research structure",
+            "status": "completed",
+            "conclusion": "success",
+            "run_number": 202,
+            "jobs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38850371367/jobs",
+            "logs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38850371367/logs",
+            "workflow_id": 381137339
+          }
+        ]
+      },
+      "checked_head": "55f4833d948d361465d4afcc331fe2856572e93e",
+      "status": {
+        "statuses": [
+          {
+            "context": "independent-verifier",
+            "state": "success",
+            "target_url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38850371421"
+          }
+        ]
+      }
+    },
+    "72": {
+      "info": {
+        "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/72",
+        "number": 72,
+        "state": "closed",
+        "merged": true,
+        "mergeable": false,
+        "draft": false,
+        "body": "Automatic three-role round for EDA-0009. Decision: `revise`.\n\nThe round includes the frozen proposer, challenger and verifier outputs, their exact logical registrations and provenance. Scientific verdicts belong to the verifier. Research selection does not allocate new compute.\n",
+        "title": "EDA-0009: revise (f70b504c01235e69)",
+        "base": "main",
+        "base_sha": "b5e69f7c90b6f3aa23d1399d83dbaa1bd8be8f99",
+        "head": "codex/round-eda-0009-f70b504c01235e69",
+        "head_sha": "b8aeae9243e84a4339c55b1c79598377d2d442c9",
+        "head_repo_id": 1414090240,
+        "head_repo_full_name": "getm0ss1moving/EDA-Topic-selection-and-Experiment",
+        "merge_commit_sha": "b38c4fb6e9863038058bc77d5078682288eb1fce",
+        "user": {
+          "login": "getm0ss1moving",
+          "name": "getm0ss1moving",
+          "email": null,
+          "avatar_url": "https://avatars.githubusercontent.com/u/192193363?v=4",
+          "id": 192193363
+        },
+        "requested_reviewers": null,
+        "requested_team_reviewers": null,
+        "diff": null,
+        "comments": null,
+        "created_at": "2026-10-16T04:24:40Z",
+        "updated_at": "2026-10-16T04:30:44Z",
+        "closed_at": "2026-10-16T04:30:42Z",
+        "merged_at": "2026-10-16T04:30:42Z",
+        "commits": 2,
+        "changed_files": 50,
+        "additions": 3098,
+        "deletions": 0,
+        "display_url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/72",
+        "display_title": "EDA-0009: revise (f70b504c01235e69)"
+      },
+      "threads": {
+        "review_threads": []
+      },
+      "workflows": {
+        "workflow_runs": [
+          {
+            "id": 38850822915,
+            "name": "Research structure",
+            "status": "completed",
+            "conclusion": "success",
+            "run_number": 205,
+            "jobs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38850822915/jobs",
+            "logs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38850822915/logs",
+            "workflow_id": 381137339
+          }
+        ]
+      },
+      "checked_head": "b8aeae9243e84a4339c55b1c79598377d2d442c9",
+      "status": {
+        "statuses": [
+          {
+            "context": "independent-verifier",
+            "state": "success",
+            "target_url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38850821039"
+          }
+        ]
+      }
+    },
+    "73": {
+      "info": {
+        "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/73",
+        "number": 73,
+        "state": "closed",
+        "merged": true,
+        "mergeable": false,
+        "draft": false,
+        "body": "Automatic three-role round for EDA-0010. Decision: `revise`.\n\nThe round includes the frozen proposer, challenger and verifier outputs, their exact logical registrations and provenance. Scientific verdicts belong to the verifier. Research selection does not allocate new compute.\n",
+        "title": "EDA-0010: revise (a8da4b6a1a7928ee)",
+        "base": "main",
+        "base_sha": "b38c4fb6e9863038058bc77d5078682288eb1fce",
+        "head": "codex/round-eda-0010-a8da4b6a1a7928ee",
+        "head_sha": "a65445828dfa80f6ff57c4ab43d5c6c47bf7e189",
+        "head_repo_id": 1414090240,
+        "head_repo_full_name": "getm0ss1moving/EDA-Topic-selection-and-Experiment",
+        "merge_commit_sha": "aaa2d95e547e93a833ce3a0d2c0afdd5472d4f7f",
+        "user": {
+          "login": "getm0ss1moving",
+          "name": "getm0ss1moving",
+          "email": null,
+          "avatar_url": "https://avatars.githubusercontent.com/u/192193363?v=4",
+          "id": 192193363
+        },
+        "requested_reviewers": null,
+        "requested_team_reviewers": null,
+        "diff": null,
+        "comments": null,
+        "created_at": "2026-10-16T04:48:57Z",
+        "updated_at": "2026-10-16T04:51:53Z",
+        "closed_at": "2026-10-16T04:50:21Z",
+        "merged_at": "2026-10-16T04:50:20Z",
+        "commits": 1,
+        "changed_files": 50,
+        "additions": 4128,
+        "deletions": 0,
+        "display_url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/73",
+        "display_title": "EDA-0010: revise (a8da4b6a1a7928ee)"
+      },
+      "threads": {
+        "review_threads": []
+      },
+      "workflows": {
+        "workflow_runs": [
+          {
+            "id": 38852551344,
+            "name": "Research structure",
+            "status": "completed",
+            "conclusion": "success",
+            "run_number": 207,
+            "jobs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38852551344/jobs",
+            "logs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38852551344/logs",
+            "workflow_id": 381137339
+          }
+        ]
+      },
+      "checked_head": "a65445828dfa80f6ff57c4ab43d5c6c47bf7e189",
+      "status": {
+        "statuses": [
+          {
+            "context": "independent-verifier",
+            "state": "success",
+            "target_url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38852551406"
+          }
+        ]
+      }
+    },
+    "74": {
+      "info": {
+        "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/74",
+        "number": 74,
+        "state": "closed",
+        "merged": true,
+        "mergeable": false,
+        "draft": false,
+        "body": "A D04 attempt was quarantined by the ledger input gate and excluded from all valid cycle counts. Preserve its exact frozen three outputs, public descriptors and fresh independent protocol review.\n\nThe review distinguishes an authorized-path/canonical-ID formatting deviation from forbidden content access. It remains overall unresolved because one own-previous ownership mapping was outside the supplied audit packet. No private trace, scientific clearance, quarantine reset or experiment approval is asserted. The replacement cycle uses three fresh logical seats from the clean released checkpoint; these quarantined outputs are not assigned to its scientific roles.\n",
+        "title": "Preserve D04 quarantined attempt and bounded independent conduct review",
+        "base": "main",
+        "base_sha": "aaa2d95e547e93a833ce3a0d2c0afdd5472d4f7f",
+        "head": "codex/b04-quarantined-d04-attempt",
+        "head_sha": "b9d290b09a7f8dfd7edf1ab26cf5b27853f7d82f",
+        "head_repo_id": 1414090240,
+        "head_repo_full_name": "getm0ss1moving/EDA-Topic-selection-and-Experiment",
+        "merge_commit_sha": "d3df455386180c482320b69d5652c89393f87abc",
+        "user": {
+          "login": "getm0ss1moving",
+          "name": "getm0ss1moving",
+          "email": null,
+          "avatar_url": "https://avatars.githubusercontent.com/u/192193363?v=4",
+          "id": 192193363
+        },
+        "requested_reviewers": null,
+        "requested_team_reviewers": null,
+        "diff": null,
+        "comments": null,
+        "created_at": "2026-10-16T04:52:58Z",
+        "updated_at": "2026-10-16T05:05:16Z",
+        "closed_at": "2026-10-16T04:53:29Z",
+        "merged_at": "2026-10-16T04:53:29Z",
+        "commits": 1,
+        "changed_files": 52,
+        "additions": 3448,
+        "deletions": 0,
+        "display_url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/74",
+        "display_title": "Preserve D04 quarantined attempt and bounded independent conduct review"
+      },
+      "threads": {
+        "review_threads": [
+          {
+            "id": "PRRT_kwDOVElOAM6tEbtq",
+            "is_resolved": true,
+            "is_outdated": false,
+            "path": "runs/GPT-COMPLIANCE-0004/incident_audit.py",
+            "line": 57,
+            "diff_side": "RIGHT",
+            "start_line": 53,
+            "start_diff_side": "RIGHT",
+            "original_line": 57,
+            "original_start_line": 53,
+            "resolved_by": {
+              "login": "getm0ss1moving",
+              "name": "getm0ss1moving",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/192193363?u=5e3eb141a136c967511a60e092a3914151e515a8&v=4",
+              "id": null
+            },
+            "comments": [
+              {
+                "id": "PRRC_kwDOVElOAM7_xGT5",
+                "database_id": 4291060985,
+                "body": "**<sub><sub>![P2 Badge](https://img.shields.io/badge/P2-yellow?style=flat)</sub></sub>  Publish a descriptor manifest for the incident audit**\n\nWhen this quarantined audit is published, these lines copy the four descriptor sets but never generate the required `DESCRIPTORS.json` and `locator_map`. The committed audit evidence refers to `shared/job-descriptors/...`, which does not exist in the checkout, so readers cannot reliably resolve those locators to `incident-descriptors/` or verify the role/release/hash bindings; `docs/ROLE-COMPLIANCE.md` lines 151\u2013158 requires this manifest for every audited round. Generate and publish the descriptor manifest alongside these copies.\n\nAGENTS.md reference: [AGENTS.md:L15-L15](https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/blob/b9d290b09a7f8dfd7edf1ab26cf5b27853f7d82f/AGENTS.md#L15-L15)\n\nUseful? React with \ud83d\udc4d\u00a0/ \ud83d\udc4e.\n\n<!-- codex-code-review-finding:v1 -->",
+                "created_at": "2026-10-16T04:56:29Z",
+                "updated_at": "2026-10-16T04:56:29Z",
+                "author": {
+                  "login": "chatgpt-codex-connector",
+                  "name": "chatgpt-codex-connector",
+                  "email": null,
+                  "avatar_url": "https://avatars.githubusercontent.com/in/1144995?v=4",
+                  "id": null
+                },
+                "viewer_did_author": false
+              },
+              {
+                "id": "PRRC_kwDOVElOAM7_xQsO",
+                "database_id": 4291103502,
+                "body": "Fixed in PR #75 (merged). The incident descriptor set now includes DESCRIPTORS.json with all four exact role/release bindings, JOB/prompt/PACKET SHA-256 values, shared/job-descriptors locator mapping and the exact hash-bound incident supplement. The public-clone audit checks these bindings. All frozen payloads remain byte-identical; descriptor/hash checks, project validation and required CI checks passed. No scientific clearance or quarantine reset is implied.",
+                "created_at": "2026-10-16T05:05:16Z",
+                "updated_at": "2026-10-16T05:05:16Z",
+                "author": {
+                  "login": "getm0ss1moving",
+                  "name": "getm0ss1moving",
+                  "email": null,
+                  "avatar_url": "https://avatars.githubusercontent.com/u/192193363?u=5e3eb141a136c967511a60e092a3914151e515a8&v=4",
+                  "id": null
+                },
+                "viewer_did_author": true
+              }
+            ]
+          }
+        ]
+      },
+      "workflows": {
+        "workflow_runs": [
+          {
+            "id": 38852891659,
+            "name": "Research structure",
+            "status": "completed",
+            "conclusion": "success",
+            "run_number": 209,
+            "jobs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38852891659/jobs",
+            "logs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38852891659/logs",
+            "workflow_id": 381137339
+          }
+        ]
+      },
+      "checked_head": "b9d290b09a7f8dfd7edf1ab26cf5b27853f7d82f",
+      "status": {
+        "statuses": [
+          {
+            "context": "independent-verifier",
+            "state": "success",
+            "target_url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38853949026"
+          }
+        ]
+      }
+    },
+    "75": {
+      "info": {
+        "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/75",
+        "number": 75,
+        "state": "closed",
+        "merged": true,
+        "mergeable": false,
+        "draft": false,
+        "body": "Publish DESCRIPTORS.json for all four retained incident roles, with exact release IDs, JOB/prompt/PACKET hashes and shared/job-descriptors locator mapping. Preserve the exact supplied incident metadata as a hash-bound supplemental input.\n\nThe public-clone audit now reopens these bindings. All four frozen payloads were byte-compared unchanged against public main; schema, source and diff checks pass. This fixes the transport finding on PR #74 and adds no scientific clearance or valid-cycle credit.\n",
+        "title": "Publish reopenable incident descriptor manifest and locator map",
+        "base": "main",
+        "base_sha": "d3df455386180c482320b69d5652c89393f87abc",
+        "head": "codex/b04-incident-descriptor-manifest",
+        "head_sha": "42cd9519acb88fb1d46e210b6dbf5a4898904fb3",
+        "head_repo_id": 1414090240,
+        "head_repo_full_name": "getm0ss1moving/EDA-Topic-selection-and-Experiment",
+        "merge_commit_sha": "d6f70c1e7944566a8249320b0052652343a4d1c5",
+        "user": {
+          "login": "getm0ss1moving",
+          "name": "getm0ss1moving",
+          "email": null,
+          "avatar_url": "https://avatars.githubusercontent.com/u/192193363?v=4",
+          "id": 192193363
+        },
+        "requested_reviewers": null,
+        "requested_team_reviewers": null,
+        "diff": null,
+        "comments": null,
+        "created_at": "2026-10-16T05:03:35Z",
+        "updated_at": "2026-10-16T05:07:22Z",
+        "closed_at": "2026-10-16T05:04:46Z",
+        "merged_at": "2026-10-16T05:04:46Z",
+        "commits": 1,
+        "changed_files": 4,
+        "additions": 251,
+        "deletions": 0,
+        "display_url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/75",
+        "display_title": "Publish reopenable incident descriptor manifest and locator map"
+      },
+      "threads": {
+        "review_threads": [
+          {
+            "id": "PRRT_kwDOVElOAM6tEjru",
+            "is_resolved": false,
+            "is_outdated": false,
+            "path": "runs/GPT-COMPLIANCE-0004/audit_publication.py",
+            "line": 42,
+            "diff_side": "RIGHT",
+            "start_line": 42,
+            "start_diff_side": null,
+            "original_line": 42,
+            "original_start_line": null,
+            "resolved_by": null,
+            "comments": [
+              {
+                "id": "PRRC_kwDOVElOAM7_xTMi",
+                "database_id": 4291113762,
+                "body": "**<sub><sub>![P2 Badge](https://img.shields.io/badge/P2-yellow?style=flat)</sub></sub>  Handle the absent review-followup manifest**\n\nIn a fresh checkout of this commit, `runs/GPT-COMPLIANCE-0004/public-review-followups.json` does not exist, and a repo-wide search finds no batch-0004 producer for it. Because `receipt()` reads it unconditionally for every one of the eight published PRs, the new publication audit raises `FileNotFoundError` before cloning and checking public bytes, even when there are simply no retained followups. Treat the missing file as an empty followup list, as the script already does for optional audit corrections, or publish the required manifest with this audit.\n\nUseful? React with \ud83d\udc4d\u00a0/ \ud83d\udc4e.\n\n<!-- codex-code-review-finding:v1 -->",
+                "created_at": "2026-10-16T05:07:19Z",
+                "updated_at": "2026-10-16T05:07:19Z",
+                "author": {
+                  "login": "chatgpt-codex-connector",
+                  "name": "chatgpt-codex-connector",
+                  "email": null,
+                  "avatar_url": "https://avatars.githubusercontent.com/in/1144995?v=4",
+                  "id": null
+                },
+                "viewer_did_author": false
+              }
+            ]
+          }
+        ]
+      },
+      "workflows": {
+        "workflow_runs": [
+          {
+            "id": 38853804232,
+            "name": "Research structure",
+            "status": "completed",
+            "conclusion": "success",
+            "run_number": 211,
+            "jobs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38853804232/jobs",
+            "logs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38853804232/logs",
+            "workflow_id": 381137339
+          }
+        ]
+      },
+      "checked_head": "42cd9519acb88fb1d46e210b6dbf5a4898904fb3",
+      "status": {
+        "statuses": [
+          {
+            "context": "independent-verifier",
+            "state": "success",
+            "target_url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38854129170"
+          }
+        ]
+      }
+    },
+    "76": {
+      "info": {
+        "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/76",
+        "number": 76,
+        "state": "closed",
+        "merged": true,
+        "mergeable": false,
+        "draft": false,
+        "body": "Automatic three-role round for EDA-0010. Decision: `park`.\n\nThe round includes the frozen proposer, challenger and verifier outputs, their exact logical registrations and provenance. Scientific verdicts belong to the verifier. Research selection does not allocate new compute.\n",
+        "title": "EDA-0010: park (77d7bb685bc812bc)",
+        "base": "main",
+        "base_sha": "d6f70c1e7944566a8249320b0052652343a4d1c5",
+        "head": "codex/round-eda-0010-77d7bb685bc812bc",
+        "head_sha": "1c989bd58e5be199dab4d9e65aac8721c9f221aa",
+        "head_repo_id": 1414090240,
+        "head_repo_full_name": "getm0ss1moving/EDA-Topic-selection-and-Experiment",
+        "merge_commit_sha": "28250d7381f1422906195ffc63e62a12371e8ad6",
+        "user": {
+          "login": "getm0ss1moving",
+          "name": "getm0ss1moving",
+          "email": null,
+          "avatar_url": "https://avatars.githubusercontent.com/u/192193363?v=4",
+          "id": 192193363
+        },
+        "requested_reviewers": null,
+        "requested_team_reviewers": null,
+        "diff": null,
+        "comments": null,
+        "created_at": "2026-10-16T05:12:11Z",
+        "updated_at": "2026-10-16T05:14:38Z",
+        "closed_at": "2026-10-16T05:13:01Z",
+        "merged_at": "2026-10-16T05:13:01Z",
+        "commits": 1,
+        "changed_files": 50,
+        "additions": 3586,
+        "deletions": 5,
+        "display_url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/76",
+        "display_title": "EDA-0010: park (77d7bb685bc812bc)"
+      },
+      "threads": {
+        "review_threads": []
+      },
+      "workflows": {
+        "workflow_runs": [
+          {
+            "id": 38854546509,
+            "name": "Research structure",
+            "status": "completed",
+            "conclusion": "success",
+            "run_number": 213,
+            "jobs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38854546509/jobs",
+            "logs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38854546509/logs",
+            "workflow_id": 381137339
+          }
+        ]
+      },
+      "checked_head": "1c989bd58e5be199dab4d9e65aac8721c9f221aa",
+      "status": {
+        "statuses": [
+          {
+            "context": "independent-verifier",
+            "state": "success",
+            "target_url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38854546554"
+          }
+        ]
+      }
+    },
+    "77": {
+      "info": {
+        "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/77",
+        "number": 77,
+        "state": "closed",
+        "merged": true,
+        "mergeable": false,
+        "draft": false,
+        "body": "Automatic three-role round for EDA-0009. Decision: `revise`.\n\nThe round includes the frozen proposer, challenger and verifier outputs, their exact logical registrations and provenance. Scientific verdicts belong to the verifier. Research selection does not allocate new compute.\n",
+        "title": "EDA-0009: revise (b69a8b5d5ff701c8)",
+        "base": "main",
+        "base_sha": "28250d7381f1422906195ffc63e62a12371e8ad6",
+        "head": "codex/round-eda-0009-b69a8b5d5ff701c8",
+        "head_sha": "a86ca5dc8acd7fdf5db9fb6b4b9d652ffceacc23",
+        "head_repo_id": 1414090240,
+        "head_repo_full_name": "getm0ss1moving/EDA-Topic-selection-and-Experiment",
+        "merge_commit_sha": "ebe4276fb2d6eb2f8a3c45e060a78a365dfa67b2",
+        "user": {
+          "login": "getm0ss1moving",
+          "name": "getm0ss1moving",
+          "email": null,
+          "avatar_url": "https://avatars.githubusercontent.com/u/192193363?v=4",
+          "id": 192193363
+        },
+        "requested_reviewers": null,
+        "requested_team_reviewers": null,
+        "diff": null,
+        "comments": null,
+        "created_at": "2026-10-16T05:15:43Z",
+        "updated_at": "2026-10-16T05:18:34Z",
+        "closed_at": "2026-10-16T05:17:11Z",
+        "merged_at": "2026-10-16T05:17:11Z",
+        "commits": 1,
+        "changed_files": 50,
+        "additions": 3591,
+        "deletions": 0,
+        "display_url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/77",
+        "display_title": "EDA-0009: revise (b69a8b5d5ff701c8)"
+      },
+      "threads": {
+        "review_threads": []
+      },
+      "workflows": {
+        "workflow_runs": [
+          {
+            "id": 38854853652,
+            "name": "Research structure",
+            "status": "completed",
+            "conclusion": "success",
+            "run_number": 215,
+            "jobs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38854853652/jobs",
+            "logs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38854853652/logs",
+            "workflow_id": 381137339
+          }
+        ]
+      },
+      "checked_head": "a86ca5dc8acd7fdf5db9fb6b4b9d652ffceacc23",
+      "status": {
+        "statuses": [
+          {
+            "context": "independent-verifier",
+            "state": "success",
+            "target_url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38854853718"
+          }
+        ]
+      }
+    },
+    "78": {
+      "info": {
+        "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/78",
+        "number": 78,
+        "state": "closed",
+        "merged": true,
+        "mergeable": false,
+        "draft": false,
+        "body": "Automatic three-role round for EDA-0011. Decision: `park`.\n\nThe round includes the frozen proposer, challenger and verifier outputs, their exact logical registrations and provenance. Scientific verdicts belong to the verifier. Research selection does not allocate new compute.\n",
+        "title": "EDA-0011: park (6a2f437f43fd9ee6)",
+        "base": "main",
+        "base_sha": "ebe4276fb2d6eb2f8a3c45e060a78a365dfa67b2",
+        "head": "codex/round-eda-0011-6a2f437f43fd9ee6",
+        "head_sha": "4a76cec8fcfd808c7c9a12a34fa46349da382f00",
+        "head_repo_id": 1414090240,
+        "head_repo_full_name": "getm0ss1moving/EDA-Topic-selection-and-Experiment",
+        "merge_commit_sha": "fccdce16c2d65998597bfac5bbf5601f4165ef15",
+        "user": {
+          "login": "getm0ss1moving",
+          "name": "getm0ss1moving",
+          "email": null,
+          "avatar_url": "https://avatars.githubusercontent.com/u/192193363?v=4",
+          "id": 192193363
+        },
+        "requested_reviewers": null,
+        "requested_team_reviewers": null,
+        "diff": null,
+        "comments": null,
+        "created_at": "2026-10-16T05:35:46Z",
+        "updated_at": "2026-10-16T06:13:04Z",
+        "closed_at": "2026-10-16T05:36:26Z",
+        "merged_at": "2026-10-16T05:36:26Z",
+        "commits": 1,
+        "changed_files": 50,
+        "additions": 3043,
+        "deletions": 0,
+        "display_url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/78",
+        "display_title": "EDA-0011: park (6a2f437f43fd9ee6)"
+      },
+      "threads": {
+        "review_threads": [
+          {
+            "id": "PRRT_kwDOVElOAM6tE9bb",
+            "is_resolved": true,
+            "is_outdated": false,
+            "path": "config/roles.json",
+            "line": 1059,
+            "diff_side": "RIGHT",
+            "start_line": 1059,
+            "start_diff_side": null,
+            "original_line": 1059,
+            "original_start_line": null,
+            "resolved_by": {
+              "login": "getm0ss1moving",
+              "name": "getm0ss1moving",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/192193363?u=5e3eb141a136c967511a60e092a3914151e515a8&v=4",
+              "id": null
+            },
+            "comments": [
+              {
+                "id": "PRRC_kwDOVElOAM7_x8HQ",
+                "database_id": 4291281360,
+                "body": "**<sub><sub>![P1 Badge](https://img.shields.io/badge/P1-orange?style=flat)</sub></sub>  Do not register protocol auditors as scientific verifiers**\n\nWhen a future EDA-0011 dossier is promoted or jointly abandoned, it can name this protocol-audit session as its verifier because `scripts/project.py` only checks the registry entry's `role` and `topic` (lines 125-127 and 209-211), ignoring `session_kind`. Consequently, validation can pass without the mandatory scientific verifier even though this entry explicitly says it is \u201cnot scientific acceptance\u201d; register auditors under a distinct role or make the validator reject protocol-audit sessions for scientific decisions.\n\nAGENTS.md reference: [AGENTS.md:L13-L13](https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/blob/4a76cec8fcfd808c7c9a12a34fa46349da382f00/AGENTS.md#L13-L13)\n\nUseful? React with \ud83d\udc4d\u00a0/ \ud83d\udc4e.\n\n<!-- codex-code-review-finding:v1 -->",
+                "created_at": "2026-10-16T05:39:34Z",
+                "updated_at": "2026-10-16T05:39:34Z",
+                "author": {
+                  "login": "chatgpt-codex-connector",
+                  "name": "chatgpt-codex-connector",
+                  "email": null,
+                  "avatar_url": "https://avatars.githubusercontent.com/in/1144995?v=4",
+                  "id": null
+                },
+                "viewer_did_author": false
+              },
+              {
+                "id": "PRRC_kwDOVElOAM7_ypf0",
+                "database_id": 4291467252,
+                "body": "Fixed in merged PR #80. Canonical acceptance and joint-abandonment validation now reject typed protocol-audit registrations, existing protocol/governance session-kind markers, protocol actor identities and protocol-purpose verdicts as scientific authority. New audit registrations have verification_purpose=protocol_audit; legacy scientific identities stay compatible. All 139 tests passed, including valid scientific controls and auditor/wrong-topic rejection for both decisions. Existing registrations and frozen scientific outputs were not rewritten.",
+                "created_at": "2026-10-16T06:13:04Z",
+                "updated_at": "2026-10-16T06:13:04Z",
+                "author": {
+                  "login": "getm0ss1moving",
+                  "name": "getm0ss1moving",
+                  "email": null,
+                  "avatar_url": "https://avatars.githubusercontent.com/u/192193363?u=5e3eb141a136c967511a60e092a3914151e515a8&v=4",
+                  "id": null
+                },
+                "viewer_did_author": true
+              }
+            ]
+          }
+        ]
+      },
+      "workflows": {
+        "workflow_runs": [
+          {
+            "id": 38856601668,
+            "name": "Research structure",
+            "status": "completed",
+            "conclusion": "success",
+            "run_number": 217,
+            "jobs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38856601668/jobs",
+            "logs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38856601668/logs",
+            "workflow_id": 381137339
+          }
+        ]
+      },
+      "checked_head": "4a76cec8fcfd808c7c9a12a34fa46349da382f00",
+      "status": {
+        "statuses": [
+          {
+            "context": "independent-verifier",
+            "state": "success",
+            "target_url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38859960342"
+          }
+        ]
+      }
+    },
+    "79": {
+      "info": {
+        "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/79",
+        "number": 79,
+        "state": "closed",
+        "merged": true,
+        "mergeable": false,
+        "draft": false,
+        "body": "Automatic three-role round for EDA-0009. Decision: `park`.\n\nThe round includes the frozen proposer, challenger and verifier outputs, their exact logical registrations and provenance. Scientific verdicts belong to the verifier. Research selection does not allocate new compute.\n",
+        "title": "EDA-0009: park (047b42329a35771c)",
+        "base": "main",
+        "base_sha": "fccdce16c2d65998597bfac5bbf5601f4165ef15",
+        "head": "codex/round-eda-0009-047b42329a35771c",
+        "head_sha": "5646b85f85d77abddd1b91db2272e5a71ec2fa5c",
+        "head_repo_id": 1414090240,
+        "head_repo_full_name": "getm0ss1moving/EDA-Topic-selection-and-Experiment",
+        "merge_commit_sha": "5f5bd359e1db80e5ee0e35939f381d38d3c14594",
+        "user": {
+          "login": "getm0ss1moving",
+          "name": "getm0ss1moving",
+          "email": null,
+          "avatar_url": "https://avatars.githubusercontent.com/u/192193363?v=4",
+          "id": 192193363
+        },
+        "requested_reviewers": null,
+        "requested_team_reviewers": null,
+        "diff": null,
+        "comments": null,
+        "created_at": "2026-10-16T05:50:38Z",
+        "updated_at": "2026-10-16T05:55:06Z",
+        "closed_at": "2026-10-16T05:51:27Z",
+        "merged_at": "2026-10-16T05:51:27Z",
+        "commits": 1,
+        "changed_files": 50,
+        "additions": 4183,
+        "deletions": 0,
+        "display_url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/79",
+        "display_title": "EDA-0009: park (047b42329a35771c)"
+      },
+      "threads": {
+        "review_threads": [
+          {
+            "id": "PRRT_kwDOVElOAM6tFKVN",
+            "is_resolved": false,
+            "is_outdated": false,
+            "path": "runs/SUB-83d9a23ab90f7ca974796e8ed39617078e1ee76f0abcab0f0746f6bab6c2278f/sources.json",
+            "line": 9,
+            "diff_side": "RIGHT",
+            "start_line": 9,
+            "start_diff_side": null,
+            "original_line": 9,
+            "original_start_line": null,
+            "resolved_by": null,
+            "comments": [
+              {
+                "id": "PRRC_kwDOVElOAM7_yQoY",
+                "database_id": 4291365400,
+                "body": "**<sub><sub>![P2 Badge](https://img.shields.io/badge/P2-yellow?style=flat)</sub></sub>  Replace the invalid OpenROAD line ranges**\n\nAnyone reopening C3-CLM-001 at this pinned URL cannot follow the recorded locator: [the referenced `TritonRoute.cpp`](https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/src/drt/src/TritonRoute.cpp) has only 1,388 lines, so the range ending at 1,450 and the challenge's claimed 1,447\u20131,448 file-open check do not exist; the relevant `getDRCMarkers` and `reportDRC` code is instead around lines 980\u20131064 and 1295\u20131385. Because the verifier repeats these offsets, correct the source locator and every downstream citation, or pin the revision whose bytes actually match the reported ranges.\n\nAGENTS.md reference: [AGENTS.md:L11-L11](https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/blob/5646b85f85d77abddd1b91db2272e5a71ec2fa5c/AGENTS.md#L11-L11)\n\nUseful? React with \ud83d\udc4d\u00a0/ \ud83d\udc4e.\n\n<!-- codex-code-review-finding:v1 -->",
+                "created_at": "2026-10-16T05:55:03Z",
+                "updated_at": "2026-10-16T05:55:03Z",
+                "author": {
+                  "login": "chatgpt-codex-connector",
+                  "name": "chatgpt-codex-connector",
+                  "email": null,
+                  "avatar_url": "https://avatars.githubusercontent.com/in/1144995?v=4",
+                  "id": null
+                },
+                "viewer_did_author": false
+              }
+            ]
+          }
+        ]
+      },
+      "workflows": {
+        "workflow_runs": [
+          {
+            "id": 38857901842,
+            "name": "Research structure",
+            "status": "completed",
+            "conclusion": "success",
+            "run_number": 219,
+            "jobs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38857901842/jobs",
+            "logs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38857901842/logs",
+            "workflow_id": 381137339
+          }
+        ]
+      },
+      "checked_head": "5646b85f85d77abddd1b91db2272e5a71ec2fa5c",
+      "status": {
+        "statuses": [
+          {
+            "context": "independent-verifier",
+            "state": "success",
+            "target_url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38858301585"
+          }
+        ]
+      }
+    },
+    "80": {
+      "info": {
+        "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/80",
+        "number": 80,
+        "state": "closed",
+        "merged": true,
+        "mergeable": false,
+        "draft": false,
+        "body": "Protocol auditors could previously be cited as scientific verifiers by a future canonical dossier because registry role/topic checks ignored their audit purpose. Acceptance and joint-abandonment validation now reject typed protocol-purpose registrations, legacy protocol/governance markers, protocol actor identities and protocol-purpose verdicts. Legacy scientific registrations remain valid; new auditors receive an explicit purpose field. This addresses the governance finding on PR #78.\n\nA separate still-unadjudicated public source-locator allegation from PR #79 is recorded for the final D04 scientific verifier only. Its assigned metadata file will be hash-bound before execution and exported with its public descriptors. No source allegation is accepted or dismissed by this transport PR, and no proposer/challenger is assigned that note.\n\nValidation: all 139 tests pass, including valid-science controls, auditor-attribution rejection for acceptance/abandonment, wrong-topic rejection and exact/tampered metadata transport; project validation and diff checks pass. Frozen research outputs and historical registrations are not rewritten.\n",
+        "title": "Require scientific verifier authority and traceable verifier-only followups",
+        "base": "main",
+        "base_sha": "5f5bd359e1db80e5ee0e35939f381d38d3c14594",
+        "head": "codex/scientific-verifier-authority",
+        "head_sha": "6544a22add519911c0ca7cf1392946f5e8843137",
+        "head_repo_id": 1414090240,
+        "head_repo_full_name": "getm0ss1moving/EDA-Topic-selection-and-Experiment",
+        "merge_commit_sha": "e4287188e5b022f47a28c8ec4344443868e773db",
+        "user": {
+          "login": "getm0ss1moving",
+          "name": "getm0ss1moving",
+          "email": null,
+          "avatar_url": "https://avatars.githubusercontent.com/u/192193363?v=4",
+          "id": 192193363
+        },
+        "requested_reviewers": null,
+        "requested_team_reviewers": null,
+        "diff": null,
+        "comments": null,
+        "created_at": "2026-10-16T06:10:26Z",
+        "updated_at": "2026-10-16T06:33:19Z",
+        "closed_at": "2026-10-16T06:11:02Z",
+        "merged_at": "2026-10-16T06:11:02Z",
+        "commits": 1,
+        "changed_files": 8,
+        "additions": 160,
+        "deletions": 0,
+        "display_url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/80",
+        "display_title": "Require scientific verifier authority and traceable verifier-only followups"
+      },
+      "threads": {
+        "review_threads": [
+          {
+            "id": "PRRT_kwDOVElOAM6tFZ1P",
+            "is_resolved": true,
+            "is_outdated": false,
+            "path": "scripts/codex_loop.py",
+            "line": 795,
+            "diff_side": "RIGHT",
+            "start_line": 795,
+            "start_diff_side": null,
+            "original_line": 795,
+            "original_start_line": null,
+            "resolved_by": {
+              "login": "getm0ss1moving",
+              "name": "getm0ss1moving",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/192193363?u=5e3eb141a136c967511a60e092a3914151e515a8&v=4",
+              "id": null
+            },
+            "comments": [
+              {
+                "id": "PRRC_kwDOVElOAM7_ypVw",
+                "database_id": 4291466608,
+                "body": "**<sub><sub>![P1 Badge](https://img.shields.io/badge/P1-orange?style=flat)</sub></sub>  Require assigned public evidence to exist before export**\n\nWhen a verifier's `JOB.json` contains `public_evidence` but `public-evidence.json` is deleted or otherwise missing before publication, this existence guard skips all validation and silently publishes descriptors without the evidence that influenced the verifier. The resulting round retains the claimed hash in `JOB.json` but cannot reproduce or inspect the assigned allegation; check the assignment metadata as well as file presence and fail closed when either side is missing.\n\nAGENTS.md reference: [AGENTS.md:L15-L15](https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/blob/6544a22add519911c0ca7cf1392946f5e8843137/AGENTS.md#L15-L15)\n\nUseful? React with \ud83d\udc4d\u00a0/ \ud83d\udc4e.\n\n<!-- codex-code-review-finding:v1 -->",
+                "created_at": "2026-10-16T06:12:57Z",
+                "updated_at": "2026-10-16T06:12:58Z",
+                "author": {
+                  "login": "chatgpt-codex-connector",
+                  "name": "chatgpt-codex-connector",
+                  "email": null,
+                  "avatar_url": "https://avatars.githubusercontent.com/in/1144995?v=4",
+                  "id": null
+                },
+                "viewer_did_author": false
+              },
+              {
+                "id": "PRRC_kwDOVElOAM7_zHZB",
+                "database_id": 4291589697,
+                "body": "Addressed in PR #81 (merge 2b214aaeff4bc664258059f81493ad7b0402fa8f). Descriptor export now checks assignment metadata as well as file presence and rejects missing, unassigned, null or hash-mismatched pairs. The existing positive export control and all 139 regression tests pass. No frozen science or role packets changed.",
+                "created_at": "2026-10-16T06:33:19Z",
+                "updated_at": "2026-10-16T06:33:19Z",
+                "author": {
+                  "login": "getm0ss1moving",
+                  "name": "getm0ss1moving",
+                  "email": null,
+                  "avatar_url": "https://avatars.githubusercontent.com/u/192193363?u=5e3eb141a136c967511a60e092a3914151e515a8&v=4",
+                  "id": null
+                },
+                "viewer_did_author": true
+              }
+            ]
+          }
+        ]
+      },
+      "workflows": {
+        "workflow_runs": [
+          {
+            "id": 38859719091,
+            "name": "Research structure",
+            "status": "completed",
+            "conclusion": "success",
+            "run_number": 221,
+            "jobs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38859719091/jobs",
+            "logs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38859719091/logs",
+            "workflow_id": 381137339
+          }
+        ]
+      },
+      "checked_head": "6544a22add519911c0ca7cf1392946f5e8843137",
+      "status": {
+        "statuses": [
+          {
+            "context": "independent-verifier",
+            "state": "success",
+            "target_url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38861874111"
+          }
+        ]
+      }
+    },
+    "81": {
+      "info": {
+        "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/81",
+        "number": 81,
+        "state": "closed",
+        "merged": true,
+        "mergeable": false,
+        "draft": false,
+        "body": "A scientific verifier descriptor could omit its assigned public-evidence file when that file was missing at export time. Require both metadata and bytes, reject missing/unassigned/null/tampered pairs, and retain the positive public export control.\n\nAddresses PR #80 review PRRT_kwDOVElOAM6tFZ1P. All 139 regression tests, structural validation and diff checks pass. No frozen scientific output, role packet or verdict is changed.\n",
+        "title": "Require assigned verifier evidence bytes before publication",
+        "base": "main",
+        "base_sha": "e4287188e5b022f47a28c8ec4344443868e773db",
+        "head": "codex/compliance-evidence-presence",
+        "head_sha": "81c373ebb5fe84e0515ac31744b20558abe06a6c",
+        "head_repo_id": 1414090240,
+        "head_repo_full_name": "getm0ss1moving/EDA-Topic-selection-and-Experiment",
+        "merge_commit_sha": "2b214aaeff4bc664258059f81493ad7b0402fa8f",
+        "user": {
+          "login": "getm0ss1moving",
+          "name": "getm0ss1moving",
+          "email": null,
+          "avatar_url": "https://avatars.githubusercontent.com/u/192193363?v=4",
+          "id": 192193363
+        },
+        "requested_reviewers": null,
+        "requested_team_reviewers": null,
+        "diff": null,
+        "comments": null,
+        "created_at": "2026-10-16T06:30:05Z",
+        "updated_at": "2026-10-16T06:32:48Z",
+        "closed_at": "2026-10-16T06:32:25Z",
+        "merged_at": "2026-10-16T06:32:25Z",
+        "commits": 1,
+        "changed_files": 3,
+        "additions": 26,
+        "deletions": 5,
+        "display_url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/81",
+        "display_title": "Require assigned verifier evidence bytes before publication"
+      },
+      "threads": {
+        "review_threads": []
+      },
+      "workflows": {
+        "workflow_runs": [
+          {
+            "id": 38861560345,
+            "name": "Research structure",
+            "status": "completed",
+            "conclusion": "success",
+            "run_number": 223,
+            "jobs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38861560345/jobs",
+            "logs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38861560345/logs",
+            "workflow_id": 381137339
+          }
+        ]
+      },
+      "checked_head": "81c373ebb5fe84e0515ac31744b20558abe06a6c",
+      "status": {
+        "statuses": [
+          {
+            "context": "independent-verifier",
+            "state": "success",
+            "target_url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38861560323"
+          }
+        ]
+      }
+    },
+    "82": {
+      "info": {
+        "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/82",
+        "number": 82,
+        "state": "closed",
+        "merged": true,
+        "mergeable": false,
+        "draft": false,
+        "body": "Automatic final D04 three-role round for EDA-0012. Scientific decision: park.\n\nThe branch contains the exact frozen proposer, challenger, scientific verifier and independent protocol-audit outputs, role registrations and publicly reopenable job/packet descriptors. The verifier separately adjudicates the hash-bound historical locator allegation. Research and protocol uncertainties are retained; no pilot, joint abandonment, resource allocation or fifth cycle is implied.\n\nThe branch was validated by the coordinator publisher. GitHub CLI creation encountered a TLS handshake timeout; an exact-head REST lookup found no existing PR before this connector retry. No scientific output was rewritten.",
+        "title": "EDA-0012: park (82b8167ca9b955b4)",
+        "base": "main",
+        "base_sha": "2b214aaeff4bc664258059f81493ad7b0402fa8f",
+        "head": "codex/round-eda-0012-82b8167ca9b955b4",
+        "head_sha": "68da69a93764224c6020dada0f4588e9f6a11cd4",
+        "head_repo_id": 1414090240,
+        "head_repo_full_name": "getm0ss1moving/EDA-Topic-selection-and-Experiment",
+        "merge_commit_sha": "a66794ad6ca85aebec84365f7ea90bb5c429d8ba",
+        "user": {
+          "login": "getm0ss1moving",
+          "name": "getm0ss1moving",
+          "email": null,
+          "avatar_url": "https://avatars.githubusercontent.com/u/192193363?v=4",
+          "id": 192193363
+        },
+        "requested_reviewers": null,
+        "requested_team_reviewers": null,
+        "diff": null,
+        "comments": null,
+        "created_at": "2026-10-16T06:35:11Z",
+        "updated_at": "2026-10-16T06:38:28Z",
+        "closed_at": "2026-10-16T06:37:06Z",
+        "merged_at": "2026-10-16T06:37:06Z",
+        "commits": 1,
+        "changed_files": 51,
+        "additions": 3445,
+        "deletions": 0,
+        "display_url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/82",
+        "display_title": "EDA-0012: park (82b8167ca9b955b4)"
+      },
+      "threads": {
+        "review_threads": []
+      },
+      "workflows": {
+        "workflow_runs": [
+          {
+            "id": 38862055209,
+            "name": "Research structure",
+            "status": "completed",
+            "conclusion": "success",
+            "run_number": 225,
+            "jobs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38862055209/jobs",
+            "logs_url": "https://api.github.com/repos/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38862055209/logs",
+            "workflow_id": 381137339
+          }
+        ]
+      },
+      "checked_head": "68da69a93764224c6020dada0f4588e9f6a11cd4",
+      "status": {
+        "statuses": [
+          {
+            "context": "independent-verifier",
+            "state": "success",
+            "target_url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/actions/runs/38862055315"
+          }
+        ]
+      }
+    }
+  },
+  "limits": [
+    "Workflow tool returns the first page of pull-request-triggered runs only; the required Research structure workflow and independent-verifier commit status are explicitly checked at each exact head.",
+    "No private scientific traces or reviewer approvals are inferred.",
+    "Review-thread inventories are exactly the connector-returned nodes; no unexposed pagination or hidden reviews are certified."
+  ],
+  "recorded_at_utc": "2026-10-16T06:41:23.790830+00:00"
+}

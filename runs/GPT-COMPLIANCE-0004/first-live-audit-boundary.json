@@ -1,0 +1,8 @@
+{
+  "checked_at_utc": "2026-10-16T04:19:43.046173+00:00",
+  "work": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/audits/SUB-c4ea36b9e62a68730c225ac73645a9b5d399bbd2142507a0212c0ef12fb9dd0c/jobs/669f8fea-9a6b-4958-b260-aff8f797e49b",
+  "job_id": "669f8fea-9a6b-4958-b260-aff8f797e49b",
+  "forbidden_scientific_handover_prefixes_absent": true,
+  "own_verifier_harness_present": true,
+  "scope": "Prepared protocol packet checked before model launch; no role private notes inspected."
+}

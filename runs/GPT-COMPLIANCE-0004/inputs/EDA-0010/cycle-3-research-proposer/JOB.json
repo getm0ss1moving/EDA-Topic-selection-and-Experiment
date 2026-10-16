@@ -1,0 +1,42 @@
+{
+  "actor_id": "ChatGPT-P05-TIMING-B04-EDA-0010",
+  "batch_brief": "docs/INNOVATION-BATCH-0004.md",
+  "batch_round": 3,
+  "batch_round_limit": 4,
+  "compliance_required": true,
+  "domain": "D05",
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "job_id": "f02dc953-9c3e-4d35-9ccc-3db9a81bba55",
+  "models": {
+    "challenger": {
+      "effort": "low",
+      "model": "gpt-6-astra"
+    },
+    "proposer": {
+      "effort": "high",
+      "model": "gpt-6.1-sol"
+    },
+    "verifier": {
+      "effort": "low",
+      "model": "gpt-6.1-sol"
+    }
+  },
+  "packet_sha256": "9b5b108fa82b7ce61156daf3d3223acd7d3fccaefaa90b40e805e10aa325067f",
+  "phase": "research",
+  "previous_proposal_release": "SUB-017839376433acd2ef83e1cf06276f1d54e9af5740eb2561a0b9b928a404a6ae",
+  "readiness": "logical seat registered; actual host model is recorded by the execution backend",
+  "released_inputs": [
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0010/ChatGPT-P05-TIMING-B04-EDA-0010/jobs/f02dc953-9c3e-4d35-9ccc-3db9a81bba55/shared/predecessor/SUB-64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0010/ChatGPT-P05-TIMING-B04-EDA-0010/jobs/f02dc953-9c3e-4d35-9ccc-3db9a81bba55/shared/predecessor/SUB-af311c9ae6b091db1fdb94a8bd262fe027a34d25a761c2e072c59c2d0497d01d",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0010/ChatGPT-P05-TIMING-B04-EDA-0010/jobs/f02dc953-9c3e-4d35-9ccc-3db9a81bba55/shared/predecessor/SUB-45b1311973778bf0f7a2a7a2466ef3c20389362d8faf02846afdf22bc4ffce3d",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0010/ChatGPT-P05-TIMING-B04-EDA-0010/jobs/f02dc953-9c3e-4d35-9ccc-3db9a81bba55/shared/predecessor.json",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0010/ChatGPT-P05-TIMING-B04-EDA-0010/jobs/f02dc953-9c3e-4d35-9ccc-3db9a81bba55/shared/SUB-a8da4b6a1a7928ee94f15ee0ec17693629258c346fc2b559b406e2dca9fd3327",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0010/ChatGPT-P05-TIMING-B04-EDA-0010/jobs/f02dc953-9c3e-4d35-9ccc-3db9a81bba55/shared/SUB-1745834c07cf7e42c0a3756f0da807ddba9a85495361276d8b9e21390cf2f1b0",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0010/ChatGPT-P05-TIMING-B04-EDA-0010/jobs/f02dc953-9c3e-4d35-9ccc-3db9a81bba55/shared/SUB-b4a0830fd75dd9263101adcdda8a60e7ed86f687e08723fe63c0f3e83046ffae",
+    "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0010/ChatGPT-P05-TIMING-B04-EDA-0010/jobs/f02dc953-9c3e-4d35-9ccc-3db9a81bba55/shared/SUB-017839376433acd2ef83e1cf06276f1d54e9af5740eb2561a0b9b928a404a6ae"
+  ],
+  "role": "proposer",
+  "round": 2,
+  "session_id": "94d6bb60-04c2-4b62-a5f8-682feba5fc5c",
+  "topic": "EDA-0010"
+}

@@ -1,0 +1,27 @@
+{
+  "scientific_role_rows": 24,
+  "rule_cells": 216,
+  "cell_status_counts": {
+    "no_violation_found_within_scope": 208,
+    "supported_deviation": 3,
+    "unresolved": 5
+  },
+  "overall_audit_statuses": {
+    "clear_within_scope": 1,
+    "nonblocking_findings": 5,
+    "unresolved": 2
+  },
+  "scope": "Evidence-bounded independent reviewer cells; not a hidden-action compliance rate or a new scientific vote.",
+  "quarantined_attempt": {
+    "role_rows": 3,
+    "rule_cells": 27,
+    "cell_status_counts": {
+      "no_violation_found_within_scope": 24,
+      "supported_deviation": 1,
+      "unresolved": 2
+    },
+    "audit_release": "SUB-573df9c23c1928e04ad3ba0801e204c7a5e9136c546774e8db25a922e11348c0",
+    "disposition": "unresolved",
+    "excluded_from_valid_cycle_counts": true
+  }
+}

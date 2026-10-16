@@ -1,0 +1,15 @@
+{
+  "pr": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/74",
+  "head": "b9d290b09a7f8dfd7edf1ab26cf5b27853f7d82f",
+  "included_release_ids": [
+    "SUB-0a2e35ef91c58e4b2996d388cfc700a70fdadcedbb429d5f020042aff979d525",
+    "SUB-1995793c1627da4adba27cf9a355047e58ef3c0d8627137a33ff6fc81e76f89f",
+    "SUB-8b5c3aae66c746da57dc5c31dc641ac85467ea5d2c20bff681b2b2c68773deb6",
+    "SUB-573df9c23c1928e04ad3ba0801e204c7a5e9136c546774e8db25a922e11348c0"
+  ],
+  "status": "merged_after_checks_without_self_approval",
+  "excluded_from_valid_cycles": true,
+  "merge_commit": "d3df455386180c482320b69d5652c89393f87abc",
+  "merged_at_utc": "2026-10-16T04:53:29Z",
+  "checked_at_utc": "2026-10-16T04:54:43.939666+00:00"
+}

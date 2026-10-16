@@ -1,0 +1,8 @@
+{
+  "checked_at_utc": "2026-10-16T03:58:04.868219+00:00",
+  "source_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "ancestor_of_public_main": true,
+  "ordinary_fresh_public_clone": true,
+  "refs": "d0eedf3130de673ea92e4be202a32d463a63f301\trefs/heads/codex/gpt-compliance-source-20261016\nd0eedf3130de673ea92e4be202a32d463a63f301\trefs/tags/codex/gpt-compliance-source-20261016",
+  "source_type": "commit"
+}

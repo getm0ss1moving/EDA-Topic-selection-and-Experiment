@@ -1,0 +1,15 @@
+{
+  "pr": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/75",
+  "head": "42cd9519acb88fb1d46e210b6dbf5a4898904fb3",
+  "addresses_thread": "PRRT_kwDOVElOAM6tEbtq",
+  "checks": [
+    "descriptor identities and hashes",
+    "four frozen payloads byte-identical",
+    "project validate",
+    "diff check"
+  ],
+  "science_bytes_changed": false,
+  "status": "merged_after_checks",
+  "merge_commit": "d6f70c1e7944566a8249320b0052652343a4d1c5",
+  "merged_at_utc": "2026-10-16T05:04:46Z"
+}

@@ -1,0 +1,11 @@
+{
+  "checked_at_utc": "2026-10-16T06:44:27.663592+00:00",
+  "public_base_commit": "a66794ad6ca85aebec84365f7ea90bb5c429d8ba",
+  "ordinary_fresh_clone": true,
+  "relative_links_checked": 81,
+  "project_validate": "passed",
+  "helper_py_compile": "passed",
+  "diff_check": "passed",
+  "missing_manifest_positive_and_absent_controls": "passed after resolving macOS scratch symlink path",
+  "scope": "Report links and coordinator metadata only; not scientific endorsement."
+}

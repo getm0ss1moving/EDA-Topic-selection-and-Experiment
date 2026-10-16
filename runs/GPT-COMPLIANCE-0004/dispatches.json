@@ -1,0 +1,614 @@
+[
+  {
+    "agent": "/root/b04_p04_r1",
+    "cycle": 1,
+    "domain": "D04",
+    "fork_turns": "none",
+    "logical_session": "24989b4f-9381-471f-a32f-a8d8f7f685a1",
+    "note": "Successful app dispatch recorded, not independent backend attestation.",
+    "purpose": "research",
+    "recorded_at_utc": "2026-10-16T03:58:38.911837+00:00",
+    "requested": {
+      "effort": "high",
+      "model": "gpt-6.1-sol"
+    },
+    "role": "proposer",
+    "topic": "EDA-0009",
+    "work": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-P04-PHYSICAL-B04-EDA-0009/jobs/b665751a-26ed-454d-aa29-9c830d0646db"
+  },
+  {
+    "agent": "/root/b04_p05_r1",
+    "cycle": 1,
+    "domain": "D05",
+    "fork_turns": "none",
+    "logical_session": "94d6bb60-04c2-4b62-a5f8-682feba5fc5c",
+    "note": "Successful app dispatch recorded, not independent backend attestation.",
+    "purpose": "research",
+    "recorded_at_utc": "2026-10-16T03:58:38.997669+00:00",
+    "requested": {
+      "effort": "high",
+      "model": "gpt-6.1-sol"
+    },
+    "role": "proposer",
+    "topic": "EDA-0010",
+    "work": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0010/ChatGPT-P05-TIMING-B04-EDA-0010/jobs/5c732c7b-9886-4c5b-a7fc-3d0fe0430d59"
+  },
+  {
+    "agent": "/root/b04_c05_r1",
+    "cycle": 1,
+    "domain": "D05",
+    "fork_turns": "none",
+    "logical_session": "d8091c5d-03ed-43c0-911f-86081135ec73",
+    "note": "Successful app dispatch recorded, not independent backend attestation.",
+    "purpose": "research",
+    "recorded_at_utc": "2026-10-16T04:09:41.403439+00:00",
+    "requested": {
+      "effort": "low",
+      "model": "gpt-6-astra"
+    },
+    "role": "challenger",
+    "topic": "EDA-0010",
+    "work": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0010/ChatGPT-C05-TIMING-B04-EDA-0010/jobs/1454fd63-14e7-4c7b-88a1-59dd0418080c"
+  },
+  {
+    "agent": "/root/b04_c04_r1",
+    "cycle": 1,
+    "domain": "D04",
+    "fork_turns": "none",
+    "logical_session": "ee82dfaa-9410-4c12-9e7b-cc1dde065bf4",
+    "note": "Successful app dispatch recorded, not independent backend attestation.",
+    "purpose": "research",
+    "recorded_at_utc": "2026-10-16T04:12:32.460288+00:00",
+    "requested": {
+      "effort": "low",
+      "model": "gpt-6-astra"
+    },
+    "role": "challenger",
+    "topic": "EDA-0009",
+    "work": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-C04-PHYSICAL-B04-EDA-0009/jobs/ff954ccd-dbf6-4fe4-b310-ccd97e1bd619"
+  },
+  {
+    "agent": "/root/b04_v05_r1",
+    "cycle": 1,
+    "domain": "D05",
+    "fork_turns": "none",
+    "logical_session": "df362a1f-1d66-4a02-86a9-92e52de6fad7",
+    "note": "Successful app dispatch recorded, not independent backend attestation.",
+    "purpose": "research",
+    "recorded_at_utc": "2026-10-16T04:16:32.529254+00:00",
+    "requested": {
+      "effort": "low",
+      "model": "gpt-6.1-sol"
+    },
+    "role": "verifier",
+    "topic": "EDA-0010",
+    "work": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0010/ChatGPT-V05-TIMING-B04-EDA-0010/jobs/64709e1f-591d-4dd1-845e-d3b35a7a6a07"
+  },
+  {
+    "agent": "/root/b04_v04_r1",
+    "cycle": 1,
+    "domain": "D04",
+    "fork_turns": "none",
+    "logical_session": "528a3cf1-ef60-44dd-8bc2-a6c1c6d4d5ba",
+    "note": "Successful app dispatch recorded, not independent backend attestation.",
+    "purpose": "research",
+    "recorded_at_utc": "2026-10-16T04:18:36.729161+00:00",
+    "requested": {
+      "effort": "low",
+      "model": "gpt-6.1-sol"
+    },
+    "role": "verifier",
+    "topic": "EDA-0009",
+    "work": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-V04-PHYSICAL-B04-EDA-0009/jobs/32fa1fec-2628-4de0-abbb-0084fbdd6a99"
+  },
+  {
+    "agent": "/root/b04_a05_r1",
+    "cycle": 1,
+    "domain": "D05",
+    "fork_turns": "none",
+    "logical_session": "3bf36b4d-d789-42dc-99b6-6174d5b56bf2",
+    "note": "Successful app dispatch recorded, not independent backend attestation.",
+    "purpose": "protocol_audit",
+    "recorded_at_utc": "2026-10-16T04:19:55.532951+00:00",
+    "requested": {
+      "effort": "low",
+      "model": "gpt-6.1-sol"
+    },
+    "role": "verifier",
+    "topic": "EDA-0010",
+    "work": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/audits/SUB-c4ea36b9e62a68730c225ac73645a9b5d399bbd2142507a0212c0ef12fb9dd0c/jobs/669f8fea-9a6b-4958-b260-aff8f797e49b"
+  },
+  {
+    "agent": "/root/b04_a04_r1",
+    "cycle": 1,
+    "domain": "D04",
+    "fork_turns": "none",
+    "logical_session": "7bf97a0f-9513-44b5-b772-d0d06bd62af2",
+    "note": "Successful app dispatch recorded, not independent backend attestation.",
+    "purpose": "protocol_audit",
+    "recorded_at_utc": "2026-10-16T04:21:49.977960+00:00",
+    "requested": {
+      "effort": "low",
+      "model": "gpt-6.1-sol"
+    },
+    "role": "verifier",
+    "topic": "EDA-0009",
+    "work": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/audits/SUB-f70b504c01235e69199f322b0bbd1ddec249af0289ea0e1883b1132758ddb6bf/jobs/544a6208-da54-4a4c-9aae-d224426126d4"
+  },
+  {
+    "agent": "/root/b04_p05_r2",
+    "cycle": 2,
+    "domain": "D05",
+    "fork_turns": "none",
+    "logical_session": "94d6bb60-04c2-4b62-a5f8-682feba5fc5c",
+    "note": "Successful app dispatch recorded, not independent backend attestation.",
+    "purpose": "research",
+    "recorded_at_utc": "2026-10-16T04:24:31.187471+00:00",
+    "requested": {
+      "effort": "high",
+      "model": "gpt-6.1-sol"
+    },
+    "role": "proposer",
+    "topic": "EDA-0010",
+    "work": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0010/ChatGPT-P05-TIMING-B04-EDA-0010/jobs/a6e3be0a-77a5-4dde-98d2-4edc00665644"
+  },
+  {
+    "agent": "/root/b04_p04_r2",
+    "cycle": 2,
+    "domain": "D04",
+    "fork_turns": "none",
+    "logical_session": "24989b4f-9381-471f-a32f-a8d8f7f685a1",
+    "note": "Successful app dispatch recorded, not independent backend attestation.",
+    "purpose": "research",
+    "recorded_at_utc": "2026-10-16T04:25:42.061552+00:00",
+    "requested": {
+      "effort": "high",
+      "model": "gpt-6.1-sol"
+    },
+    "role": "proposer",
+    "topic": "EDA-0009",
+    "work": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-P04-PHYSICAL-B04-EDA-0009/jobs/160d8ea6-72cf-42c6-8a4f-f503a8e08f88"
+  },
+  {
+    "agent": "/root/b04_c05_r2",
+    "cycle": 2,
+    "domain": "D05",
+    "fork_turns": "none",
+    "logical_session": "d8091c5d-03ed-43c0-911f-86081135ec73",
+    "note": "Successful app dispatch recorded, not independent backend attestation.",
+    "purpose": "research",
+    "recorded_at_utc": "2026-10-16T04:34:44.053421+00:00",
+    "requested": {
+      "effort": "low",
+      "model": "gpt-6-astra"
+    },
+    "role": "challenger",
+    "topic": "EDA-0010",
+    "work": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0010/ChatGPT-C05-TIMING-B04-EDA-0010/jobs/7a3f6640-00ad-4e8f-b4dc-7d81bdfd07b8"
+  },
+  {
+    "agent": "/root/b04_c04_r2",
+    "cycle": 2,
+    "domain": "D04",
+    "fork_turns": "none",
+    "logical_session": "ee82dfaa-9410-4c12-9e7b-cc1dde065bf4",
+    "note": "Successful app dispatch recorded, not independent backend attestation.",
+    "purpose": "research",
+    "recorded_at_utc": "2026-10-16T04:34:59.972200+00:00",
+    "requested": {
+      "effort": "low",
+      "model": "gpt-6-astra"
+    },
+    "role": "challenger",
+    "topic": "EDA-0009",
+    "work": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-C04-PHYSICAL-B04-EDA-0009/jobs/eb035039-7765-426a-9ccd-159a19e57851"
+  },
+  {
+    "agent": "/root/b04_v05_r2",
+    "cycle": 2,
+    "domain": "D05",
+    "fork_turns": "none",
+    "logical_session": "df362a1f-1d66-4a02-86a9-92e52de6fad7",
+    "note": "Successful app dispatch recorded, not independent backend attestation.",
+    "purpose": "research",
+    "recorded_at_utc": "2026-10-16T04:43:31.891206+00:00",
+    "requested": {
+      "effort": "low",
+      "model": "gpt-6.1-sol"
+    },
+    "role": "verifier",
+    "topic": "EDA-0010",
+    "work": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0010/ChatGPT-V05-TIMING-B04-EDA-0010/jobs/182b738d-34ee-4f20-9f36-4942e5874ff0"
+  },
+  {
+    "agent": "/root/b04_v04_r2",
+    "cycle": 2,
+    "domain": "D04",
+    "fork_turns": "none",
+    "logical_session": "528a3cf1-ef60-44dd-8bc2-a6c1c6d4d5ba",
+    "note": "Successful app dispatch recorded, not independent backend attestation.",
+    "purpose": "research",
+    "recorded_at_utc": "2026-10-16T04:43:43.894165+00:00",
+    "requested": {
+      "effort": "low",
+      "model": "gpt-6.1-sol"
+    },
+    "role": "verifier",
+    "topic": "EDA-0009",
+    "work": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-V04-PHYSICAL-B04-EDA-0009/jobs/8d16e5c3-3088-40a5-8d77-4f35c3277577"
+  },
+  {
+    "agent": "/root/b04_a05_r2",
+    "cycle": 2,
+    "domain": "D05",
+    "fork_turns": "none",
+    "logical_session": "d740a39b-a2e6-478b-be78-8cb5e60ac0d8",
+    "note": "Successful app dispatch recorded, not independent backend attestation.",
+    "purpose": "protocol_audit",
+    "recorded_at_utc": "2026-10-16T04:46:32.204954+00:00",
+    "requested": {
+      "effort": "low",
+      "model": "gpt-6.1-sol"
+    },
+    "role": "verifier",
+    "topic": "EDA-0010",
+    "work": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/audits/SUB-a8da4b6a1a7928ee94f15ee0ec17693629258c346fc2b559b406e2dca9fd3327/jobs/4b691df3-1b8f-4f8c-9db8-f8c72667c0f1"
+  },
+  {
+    "agent": "/root/b04_p04_r2_clean",
+    "cycle": 2,
+    "domain": "D04",
+    "fork_turns": "none",
+    "logical_session": "8492d4d4-8b51-4d76-9309-7af2622f4674",
+    "note": "Successful app dispatch recorded, not independent backend attestation.",
+    "purpose": "research",
+    "recorded_at_utc": "2026-10-16T04:50:01.712083+00:00",
+    "requested": {
+      "effort": "high",
+      "model": "gpt-6.1-sol"
+    },
+    "role": "proposer",
+    "topic": "EDA-0009",
+    "work": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-P04-PHYSICAL-B04-EDA-0009-REPLACEMENT-1-5b0f12cd/jobs/ee7427d7-4dd1-428f-b8b4-58b83e8bad8f"
+  },
+  {
+    "agent": "/root/b04_p05_r3",
+    "cycle": 3,
+    "domain": "D05",
+    "fork_turns": "none",
+    "logical_session": "94d6bb60-04c2-4b62-a5f8-682feba5fc5c",
+    "note": "Successful app dispatch recorded, not independent backend attestation.",
+    "purpose": "research",
+    "recorded_at_utc": "2026-10-16T04:50:02.034956+00:00",
+    "requested": {
+      "effort": "high",
+      "model": "gpt-6.1-sol"
+    },
+    "role": "proposer",
+    "topic": "EDA-0010",
+    "work": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0010/ChatGPT-P05-TIMING-B04-EDA-0010/jobs/f02dc953-9c3e-4d35-9ccc-3db9a81bba55"
+  },
+  {
+    "agent": "/root/b04_a04_r2_incident",
+    "cycle": 2,
+    "domain": "D04",
+    "fork_turns": "none",
+    "logical_session": "488f31cf-7b0c-40a6-a3c7-787ad698af67",
+    "note": "Successful app dispatch recorded, not independent backend attestation.",
+    "purpose": "protocol_audit",
+    "recorded_at_utc": "2026-10-16T04:50:16.521481+00:00",
+    "requested": {
+      "effort": "low",
+      "model": "gpt-6.1-sol"
+    },
+    "role": "verifier",
+    "topic": "EDA-0009",
+    "work": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/incident-audits/INCIDENT-014adc84-cd88-42e3-8cc5-b4fd6294d7ef/jobs/0cc55c88-ab3a-49a4-bfb0-37bd865e1d16"
+  },
+  {
+    "agent": "/root/b04_c05_r3",
+    "cycle": 3,
+    "domain": "D05",
+    "fork_turns": "none",
+    "logical_session": "d8091c5d-03ed-43c0-911f-86081135ec73",
+    "note": "Successful app dispatch recorded, not independent backend attestation.",
+    "purpose": "research",
+    "recorded_at_utc": "2026-10-16T04:58:39.369793+00:00",
+    "requested": {
+      "effort": "low",
+      "model": "gpt-6-astra"
+    },
+    "role": "challenger",
+    "topic": "EDA-0010",
+    "work": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0010/ChatGPT-C05-TIMING-B04-EDA-0010/jobs/108ffaf9-050b-4352-b9ad-d6ded203a030"
+  },
+  {
+    "agent": "/root/b04_c04_r2_clean",
+    "cycle": 2,
+    "domain": "D04",
+    "fork_turns": "none",
+    "logical_session": "1f323593-6e87-4aef-b624-b0c134c28632",
+    "note": "Successful app dispatch recorded, not independent backend attestation.",
+    "purpose": "research",
+    "recorded_at_utc": "2026-10-16T05:01:24.557571+00:00",
+    "requested": {
+      "effort": "low",
+      "model": "gpt-6-astra"
+    },
+    "role": "challenger",
+    "topic": "EDA-0009",
+    "work": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-C04-PHYSICAL-B04-EDA-0009-REPLACEMENT-1-ee3d1e1c/jobs/fb6fdd4f-5f49-4bb7-b2f5-e5477a7fb264"
+  },
+  {
+    "agent": "/root/b04_v05_r3",
+    "cycle": 3,
+    "domain": "D05",
+    "fork_turns": "none",
+    "logical_session": "df362a1f-1d66-4a02-86a9-92e52de6fad7",
+    "note": "Successful app dispatch recorded, not independent backend attestation.",
+    "purpose": "research",
+    "recorded_at_utc": "2026-10-16T05:05:34.414357+00:00",
+    "requested": {
+      "effort": "low",
+      "model": "gpt-6.1-sol"
+    },
+    "role": "verifier",
+    "topic": "EDA-0010",
+    "work": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0010/ChatGPT-V05-TIMING-B04-EDA-0010/jobs/e95a9088-9b0b-4aad-bd48-e5d5210b6755"
+  },
+  {
+    "agent": "/root/b04_v04_r2_clean",
+    "cycle": 2,
+    "domain": "D04",
+    "fork_turns": "none",
+    "logical_session": "802c4f6c-18f4-4dc0-adf8-9deb15979b2c",
+    "note": "Successful app dispatch recorded, not independent backend attestation.",
+    "purpose": "research",
+    "recorded_at_utc": "2026-10-16T05:08:39.588332+00:00",
+    "requested": {
+      "effort": "low",
+      "model": "gpt-6.1-sol"
+    },
+    "role": "verifier",
+    "topic": "EDA-0009",
+    "work": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-V04-PHYSICAL-B04-EDA-0009-REPLACEMENT-1-9833ceb3/jobs/adf4b394-4e6b-4df4-a060-d534c24380fb"
+  },
+  {
+    "agent": "/root/b04_a05_r3",
+    "cycle": 3,
+    "domain": "D05",
+    "fork_turns": "none",
+    "logical_session": "6110ac62-37bf-4990-883a-ec999206a78f",
+    "note": "Successful app dispatch recorded, not independent backend attestation.",
+    "purpose": "protocol_audit",
+    "recorded_at_utc": "2026-10-16T05:09:21.904612+00:00",
+    "requested": {
+      "effort": "low",
+      "model": "gpt-6.1-sol"
+    },
+    "role": "verifier",
+    "topic": "EDA-0010",
+    "work": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/audits/SUB-77d7bb685bc812bcb6e3e2a5a357478f7f2a743ad0dcba6a249962e0b163af95/jobs/a79eba69-02ab-4fbb-9617-b1772916e04e"
+  },
+  {
+    "agent": "/root/b04_p05_r4",
+    "cycle": 4,
+    "domain": "D05",
+    "fork_turns": "none",
+    "logical_session": "f41e4393-8228-42c4-9172-3fdec1a5d44b",
+    "note": "Successful app dispatch recorded, not independent backend attestation.",
+    "purpose": "research",
+    "recorded_at_utc": "2026-10-16T05:12:35.714462+00:00",
+    "requested": {
+      "effort": "high",
+      "model": "gpt-6.1-sol"
+    },
+    "role": "proposer",
+    "topic": "EDA-0011",
+    "work": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0011/ChatGPT-P05-TIMING-B04-EDA-0011/jobs/68ba7a86-343e-4c3e-bb71-cdd5885f875c"
+  },
+  {
+    "agent": "/root/b04_a04_r2_clean",
+    "cycle": 2,
+    "domain": "D04",
+    "fork_turns": "none",
+    "logical_session": "4d949ecf-ec0e-421a-b0de-42a5e6a3572b",
+    "note": "Successful app dispatch recorded, not independent backend attestation.",
+    "purpose": "protocol_audit",
+    "recorded_at_utc": "2026-10-16T05:12:57.233745+00:00",
+    "requested": {
+      "effort": "low",
+      "model": "gpt-6.1-sol"
+    },
+    "role": "verifier",
+    "topic": "EDA-0009",
+    "work": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/audits/SUB-b69a8b5d5ff701c8a70bb5122fcfe70e9cf376634d0f50de420109f7e3b8d8a0/jobs/747156e5-6c9f-42cc-8b3a-da02cc027b73"
+  },
+  {
+    "agent": "/root/b04_p04_r3",
+    "cycle": 3,
+    "domain": "D04",
+    "fork_turns": "none",
+    "logical_session": "8492d4d4-8b51-4d76-9309-7af2622f4674",
+    "note": "Successful app dispatch recorded, not independent backend attestation.",
+    "purpose": "research",
+    "recorded_at_utc": "2026-10-16T05:16:05.901240+00:00",
+    "requested": {
+      "effort": "high",
+      "model": "gpt-6.1-sol"
+    },
+    "role": "proposer",
+    "topic": "EDA-0009",
+    "work": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-P04-PHYSICAL-B04-EDA-0009-REPLACEMENT-1-5b0f12cd/jobs/ac5806f2-7cdf-4224-a4ab-fe157314716c"
+  },
+  {
+    "agent": "/root/b04_c05_r4",
+    "cycle": 4,
+    "domain": "D05",
+    "fork_turns": "none",
+    "logical_session": "8d6402ca-3caf-4ab2-9e5f-091275e620ff",
+    "note": "Successful app dispatch recorded, not independent backend attestation.",
+    "purpose": "research",
+    "recorded_at_utc": "2026-10-16T05:23:00.495906+00:00",
+    "requested": {
+      "effort": "low",
+      "model": "gpt-6-astra"
+    },
+    "role": "challenger",
+    "topic": "EDA-0011",
+    "work": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0011/ChatGPT-C05-TIMING-B04-EDA-0011/jobs/3d03e52d-c919-46a2-b83b-e21cec8a9cde"
+  },
+  {
+    "agent": "/root/b04_v05_r4",
+    "cycle": 4,
+    "domain": "D05",
+    "fork_turns": "none",
+    "logical_session": "593e0666-c4a5-4906-a13d-58f14e5ff4ae",
+    "note": "Successful app dispatch recorded, not independent backend attestation.",
+    "purpose": "research",
+    "recorded_at_utc": "2026-10-16T05:28:59.543524+00:00",
+    "requested": {
+      "effort": "low",
+      "model": "gpt-6.1-sol"
+    },
+    "role": "verifier",
+    "topic": "EDA-0011",
+    "work": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0011/ChatGPT-V05-TIMING-B04-EDA-0011/jobs/7e04cdb2-bbe1-40de-9ab8-01087aef8554"
+  },
+  {
+    "agent": "/root/b04_a05_r4",
+    "cycle": 4,
+    "domain": "D05",
+    "fork_turns": "none",
+    "logical_session": "2dc54ea4-0cbc-434c-943d-17b5f8c0a3be",
+    "note": "Successful app dispatch recorded, not independent backend attestation.",
+    "purpose": "protocol_audit",
+    "recorded_at_utc": "2026-10-16T05:33:06.682265+00:00",
+    "requested": {
+      "effort": "low",
+      "model": "gpt-6.1-sol"
+    },
+    "role": "verifier",
+    "topic": "EDA-0011",
+    "work": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/audits/SUB-6a2f437f43fd9ee63a3de84bc3fe096a5da49e6da3e6f7074f95b7c3140c386f/jobs/21dbc574-d5c5-4815-bfec-113026f5329c"
+  },
+  {
+    "agent": "/root/b04_c04_r3",
+    "cycle": 3,
+    "domain": "D04",
+    "fork_turns": "none",
+    "logical_session": "1f323593-6e87-4aef-b624-b0c134c28632",
+    "note": "Successful app dispatch recorded, not independent backend attestation.",
+    "purpose": "research",
+    "recorded_at_utc": "2026-10-16T05:34:34.118976+00:00",
+    "requested": {
+      "effort": "low",
+      "model": "gpt-6-astra"
+    },
+    "role": "challenger",
+    "topic": "EDA-0009",
+    "work": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-C04-PHYSICAL-B04-EDA-0009-REPLACEMENT-1-ee3d1e1c/jobs/54b0968a-4368-49c4-8730-51f21adda15a"
+  },
+  {
+    "agent": "/root/b04_v04_r3",
+    "cycle": 3,
+    "domain": "D04",
+    "fork_turns": "none",
+    "logical_session": "802c4f6c-18f4-4dc0-adf8-9deb15979b2c",
+    "note": "Successful app dispatch recorded, not independent backend attestation.",
+    "purpose": "research",
+    "recorded_at_utc": "2026-10-16T05:41:13.673616+00:00",
+    "requested": {
+      "effort": "low",
+      "model": "gpt-6.1-sol"
+    },
+    "role": "verifier",
+    "topic": "EDA-0009",
+    "work": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0009/ChatGPT-V04-PHYSICAL-B04-EDA-0009-REPLACEMENT-1-9833ceb3/jobs/b5b572dd-d079-4499-a8e8-231959a6c602"
+  },
+  {
+    "agent": "/root/b04_a04_r3",
+    "cycle": 3,
+    "domain": "D04",
+    "fork_turns": "none",
+    "logical_session": "54292b41-24b9-4994-b9e9-d603ca9c5ae2",
+    "note": "Successful app dispatch recorded, not independent backend attestation.",
+    "purpose": "protocol_audit",
+    "recorded_at_utc": "2026-10-16T05:46:10.038773+00:00",
+    "requested": {
+      "effort": "low",
+      "model": "gpt-6.1-sol"
+    },
+    "role": "verifier",
+    "topic": "EDA-0009",
+    "work": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/audits/SUB-047b42329a35771ca6788e18cc97583dedaf36526c13f12defa839e36c8b1ed0/jobs/10bdf9de-98b1-4210-ac89-f0d868ebb17f"
+  },
+  {
+    "agent": "/root/b04_p04_r4",
+    "cycle": 4,
+    "domain": "D04",
+    "fork_turns": "none",
+    "logical_session": "de22ba11-269c-4f5c-8aae-f697dff1e2bc",
+    "note": "Successful app dispatch recorded, not independent backend attestation.",
+    "purpose": "research",
+    "recorded_at_utc": "2026-10-16T05:50:59.119625+00:00",
+    "requested": {
+      "effort": "high",
+      "model": "gpt-6.1-sol"
+    },
+    "role": "proposer",
+    "topic": "EDA-0012",
+    "work": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0012/ChatGPT-P04-PHYSICAL-B04-EDA-0012/jobs/891974bc-ba36-4750-a1da-9191fe01ab74"
+  },
+  {
+    "agent": "/root/b04_c04_r4",
+    "cycle": 4,
+    "domain": "D04",
+    "fork_turns": "none",
+    "logical_session": "09490ac3-66e9-4eb1-8036-f866865a6712",
+    "note": "Successful app dispatch recorded, not independent backend attestation.",
+    "purpose": "research",
+    "recorded_at_utc": "2026-10-16T06:03:39.187793+00:00",
+    "requested": {
+      "effort": "low",
+      "model": "gpt-6-astra"
+    },
+    "role": "challenger",
+    "topic": "EDA-0012",
+    "work": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0012/ChatGPT-C04-PHYSICAL-B04-EDA-0012/jobs/e9edad86-2cbc-4350-8d16-66b4120273e4"
+  },
+  {
+    "agent": "/root/b04_v04_r4",
+    "cycle": 4,
+    "domain": "D04",
+    "fork_turns": "none",
+    "logical_session": "ed222334-59c0-412f-9f70-e37d1b2c7a46",
+    "note": "Successful app dispatch recorded, not independent backend attestation.",
+    "purpose": "research",
+    "recorded_at_utc": "2026-10-16T06:20:13.418267+00:00",
+    "requested": {
+      "effort": "low",
+      "model": "gpt-6.1-sol"
+    },
+    "role": "verifier",
+    "topic": "EDA-0012",
+    "work": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/EDA-0012/ChatGPT-V04-PHYSICAL-B04-EDA-0012/jobs/7373a8d5-333c-4fc4-8bf1-83664a26a8cc"
+  },
+  {
+    "agent": "/root/b04_a04_r4",
+    "cycle": 4,
+    "domain": "D04",
+    "fork_turns": "none",
+    "logical_session": "630ac2a9-24a3-49db-a1fa-3ce7fa5b311a",
+    "note": "Successful app dispatch recorded, not independent backend attestation.",
+    "purpose": "protocol_audit",
+    "recorded_at_utc": "2026-10-16T06:26:48.970377+00:00",
+    "requested": {
+      "effort": "low",
+      "model": "gpt-6.1-sol"
+    },
+    "role": "verifier",
+    "topic": "EDA-0012",
+    "work": "/Users/duanzeyu/Documents/ChatGPT/EDA-GPT-Compliance-Four-Rounds-20261016/audits/SUB-82b8167ca9b955b4087f667585378f4e53893e95a14fffdff461b7b0937b1659/jobs/2f201acd-de32-4841-85bf-05baa16b5d41"
+  }
+]
