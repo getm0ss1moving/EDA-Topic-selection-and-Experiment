@@ -792,13 +792,15 @@ def export_public_descriptors(record,repo,round_path):
             raise ValueError('Public packet descriptor hash mismatch')
         paths={'JOB.json':work/'JOB.json','prompt.txt':work/'prompt.txt',
                'PACKET.json':work/'policy/PACKET.json'}
-        if (work/'public-evidence.json').is_file():
-            evidence=assignment.get('public_evidence',{})
-            if (role!='verifier' or assignment.get('purpose')=='protocol_audit'
+        evidence_path=work/'public-evidence.json'
+        if 'public_evidence' in assignment or evidence_path.exists():
+            evidence=assignment.get('public_evidence')
+            if (not evidence_path.is_file() or not isinstance(evidence,dict)
+                    or role!='verifier' or assignment.get('purpose')=='protocol_audit'
                     or evidence.get('file')!='public-evidence.json'
-                    or evidence.get('sha256')!=sha(work/'public-evidence.json')):
+                    or evidence.get('sha256')!=sha(evidence_path)):
                 raise ValueError('Scientific-verifier public evidence hash/scope mismatch')
-            paths['public-evidence.json']=work/'public-evidence.json'
+            paths['public-evidence.json']=evidence_path
         if role in ROLES:
             supplied=audit_work/'shared/job-descriptors'/role
             for name in ('JOB.json','prompt.txt'):

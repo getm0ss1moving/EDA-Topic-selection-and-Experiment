@@ -1,0 +1,9 @@
+{
+  "status": "regression_passed_pending_pr_checks",
+  "addresses_pr": 80,
+  "addresses_thread": "PRRT_kwDOVElOAM6tFZ1P",
+  "scope": "Reject missing, unassigned, null or hash-mismatched verifier public-evidence metadata/file pairs before publishing descriptors. Existing frozen research and policy input source are unchanged.",
+  "frozen_scientific_outputs_changed": false,
+  "tests_run": 139,
+  "log_sha256": "6a34692485757f896ee9539b244b8dd4af99ae3878900b02bc8be16a3fc4f312"
+}
