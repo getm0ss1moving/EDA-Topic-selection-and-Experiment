@@ -1,0 +1,6 @@
+source_id,task_formulation,mechanism,data,evaluation,assumptions,limitation,overlap,proposed_distinction
+C01/C02/C03,Finite variants,conditional lifting and specialized representations,program configurations,selected paper/source reading,complete conditional semantics,no STA integration audited,world split/merge and specialized access,only an evidenced EDA systems interaction could remain
+C04,Alternative edits,guarded edits and shared execution,repair programs,selected paper reading,repair tests and pruning,different output endpoint,edit worlds/fallback,full output preserved but utility unproven
+C05,Sampled uncertain inputs,coalesced execution with propagation cost,general programs,selected primary paper,MC sampled input values,not a timing baseline,common/different input work and admin tradeoff,STA integration not established
+C06,Cell replacement scoring,journaled timing update and restore,OpenROAD source,read only,score interface,full vectors not returned by inspected method,concrete engineering consumer,stronger full-vector requirement unproven
+C08,Iterative GPU STA,dual CSR and incremental levelization,timing graphs,selected method reading,structural edits and GPU,not fixed-world execution,incremental representation/admin costs,no performance comparison possible here

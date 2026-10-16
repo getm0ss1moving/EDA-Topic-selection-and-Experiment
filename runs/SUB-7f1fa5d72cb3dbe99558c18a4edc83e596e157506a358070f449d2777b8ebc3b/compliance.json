@@ -1,0 +1,188 @@
+{
+  "schema": 1,
+  "role": "verifier",
+  "actor_id": "ChatGPT-B04-PROTOCOL-D05-EDA-0010-R1",
+  "session_id": "3bf36b4d-d789-42dc-99b6-6174d5b56bf2",
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "packet_sha256": "a89cd11899a0f21ec2f1237216b43e548d30f6a23385875f6c71fe63cf82e582",
+  "job_id": "669f8fea-9a6b-4958-b260-aff8f797e49b",
+  "read_releases": [
+    "SUB-1a4046d48852400f673bf14b891eeb70900fc985b29d11840149262bdfe13693",
+    "SUB-b4a0830fd75dd9263101adcdda8a60e7ed86f687e08723fe63c0f3e83046ffae",
+    "SUB-c4ea36b9e62a68730c225ac73645a9b5d399bbd2142507a0212c0ef12fb9dd0c"
+  ],
+  "activity": {
+    "checkout_access": "unknown",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0
+  },
+  "rules": {
+    "inputs": {
+      "status": "unknown",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md",
+        "compliance.json#/operations",
+        "compliance.json#/incidents"
+      ],
+      "limits": "Resumed execution used only assigned job/policy/shared outputs and own artifacts. Earlier reported platform interruption has unknown cause and preceding activity; current zero counters describe observed resumed execution only. No complete tool trace or hidden-history attestation."
+    },
+    "isolation": {
+      "status": "unknown",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md",
+        "compliance.json#/operations",
+        "compliance.json#/incidents"
+      ],
+      "limits": "Resumed execution used only assigned job/policy/shared outputs and own artifacts. Earlier reported platform interruption has unknown cause and preceding activity; current zero counters describe observed resumed execution only. No complete tool trace or hidden-history attestation."
+    },
+    "writes": {
+      "status": "unknown",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md",
+        "compliance.json#/operations",
+        "compliance.json#/incidents"
+      ],
+      "limits": "Resumed execution used only assigned job/policy/shared outputs and own artifacts. Earlier reported platform interruption has unknown cause and preceding activity; current zero counters describe observed resumed execution only. No complete tool trace or hidden-history attestation."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md",
+        "compliance.json#/operations",
+        "compliance.json#/incidents"
+      ],
+      "limits": "Resumed execution used only assigned job/policy/shared outputs and own artifacts. Earlier reported platform interruption has unknown cause and preceding activity; current zero counters describe observed resumed execution only. No complete tool trace or hidden-history attestation."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md",
+        "compliance.json#/operations",
+        "compliance.json#/incidents"
+      ],
+      "limits": "Resumed execution used only assigned job/policy/shared outputs and own artifacts. Earlier reported platform interruption has unknown cause and preceding activity; current zero counters describe observed resumed execution only. No complete tool trace or hidden-history attestation."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md",
+        "compliance.json#/operations",
+        "compliance.json#/incidents"
+      ],
+      "limits": "Resumed execution used only assigned job/policy/shared outputs and own artifacts. Earlier reported platform interruption has unknown cause and preceding activity; current zero counters describe observed resumed execution only. No complete tool trace or hidden-history attestation."
+    },
+    "resources": {
+      "status": "unknown",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md",
+        "compliance.json#/operations",
+        "compliance.json#/incidents"
+      ],
+      "limits": "Resumed execution used only assigned job/policy/shared outputs and own artifacts. Earlier reported platform interruption has unknown cause and preceding activity; current zero counters describe observed resumed execution only. No complete tool trace or hidden-history attestation."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md",
+        "compliance.json#/operations",
+        "compliance.json#/incidents"
+      ],
+      "limits": "Resumed execution used only assigned job/policy/shared outputs and own artifacts. Earlier reported platform interruption has unknown cause and preceding activity; current zero counters describe observed resumed execution only. No complete tool trace or hidden-history attestation."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md",
+        "compliance.json#/operations",
+        "compliance.json#/incidents"
+      ],
+      "limits": "Resumed execution used only assigned job/policy/shared outputs and own artifacts. Earlier reported platform interruption has unknown cause and preceding activity; current zero counters describe observed resumed execution only. No complete tool trace or hidden-history attestation."
+    }
+  },
+  "operations": [
+    {
+      "action": "initial_read",
+      "references": [
+        "JOB.json",
+        "prompt.txt"
+      ],
+      "note": "First resumed filesystem operation was exact cat of these files in assigned workdir."
+    },
+    {
+      "action": "policy_read",
+      "references": [
+        "policy/docs/CHARTER.md",
+        "policy/docs/WORKFLOW.md",
+        "policy/docs/EVIDENCE.md",
+        "policy/docs/ISOLATION.md",
+        "policy/docs/ROLE-COMPLIANCE.md",
+        "policy/docs/CODEX-AUTOMATION.md",
+        "policy/docs/SELF-SUBMISSION.md",
+        "policy/docs/INNOVATION-STRATEGY.md",
+        "policy/docs/INNOVATION-BATCH-0004.md",
+        "policy/harness/VERIFIER.md",
+        "policy/templates/topic/compliance.json"
+      ]
+    },
+    {
+      "action": "released_review",
+      "references": [
+        "shared/ three exact current releases",
+        "shared/job-descriptors/ P/C/V JOB.json and prompt.txt"
+      ],
+      "note": "No withheld history recovered; no rejection index in supplied shared inventory."
+    },
+    {
+      "action": "mechanical_checks",
+      "references": [
+        "result.schema.json",
+        "policy/scripts/role_submission.py",
+        "verification.json#/mechanical_checks"
+      ],
+      "note": "JSON reads, SHA-256 comparisons and trusted verify for all three releases; no experiments or external source reopening needed for any conduct allegation."
+    },
+    {
+      "action": "own_write_and_freeze",
+      "references": [
+        "audit_build.py",
+        "release/verification.md",
+        "release/verification.json",
+        "release/workflow.json",
+        "release/compliance.json",
+        "submissions/",
+        "result.json"
+      ],
+      "note": "Exact assigned trusted freeze to follow; successful manifest binds actual bytes. Full project validation unavailable in standalone packet; coordinator publication remains required."
+    }
+  ],
+  "incidents": [
+    {
+      "id": "AUD-INT-001",
+      "type": "reported platform interruption",
+      "detail": "Task retry instruction reports an earlier platform interruption. Cause, exact preceding operations and hidden activity are unknown; do not infer misconduct, successful work or zero activity. This resumed execution has no observed checkout/private reads, agent messages/subagents, EDA/training/paid runs."
+    }
+  ],
+  "observability": "Self-authored public activity ledger, not a complete tool trace or evidence of absent undisclosed actions."
+}

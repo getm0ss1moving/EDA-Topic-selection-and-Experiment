@@ -1,0 +1,23 @@
+# Independent source search and access log
+
+Cutoff/retrieval:2026-10-16 UTC. Researcher:ChatGPT-P05-TIMING-B04-EDA-0010; session94d6bb60-04c2-4b62-a5f8-682feba5fc5c. Unblinded current proposer continuation. All first filesystem reads were assigned JOB.json and prompt.txt. Then only frozen common policy and proposer harness; mistaken policy/harnesses/proposer.md path returned missing, resolved within policy. No checkout/home/session discovery or scientific role messaging.
+
+Workflow: bounded single-scenario exhaustive fixed-topology cell-alternative STA. Terminology expands operation-world partitions -> conditional values/variational execution -> sparse/default-value joins and guarded alternative edits -> incremental/task/GPU STA. This is not SSTA random-variable prediction or processor software worst-case timing.
+
+| Step | Query/index or direct retrieval | Inspected result / outcome |
+|---|---|---|
+| S1 | Web search: static timing analysis conditional values variational execution multi candidate timing sharing sparse partition | Generic STA/SSTA and unrelated processor results excluded from proof; R01/R02 reopened directly from released leads. |
+| S2 | Web search: "Incremental Task Graph Partitioning with Constrained Parallelism"; ISPD2026 contest winner buffering sizing report | R17 primary indexed abstract; direct open error. R09 newly accessible organizer full PDF; official winner R10 opened. |
+| S3 | Web search: variational execution sparse conditional values default value map efficient join; "VarexC" conditional value map performance sharing | R02 retry succeeds. R03 direct GitHub README/tree and pinned VImpl Java/Scala read; MTBDD is a closer implementation variant. Generic query-optimization pages only discovery, not evidence. |
+| S4 | Web search: "sparse" "conditional values" variational; "default" "variational execution" conditional values optimization | Many unrelated quantum/statistical results excluded. VarFix R15 found from guarded-edit discussion; original PDF opened, sections3/4 read. Closer alternative-edit mechanism found; no novelty clearance. |
+| S5 | Web search: "HeteroSTA" static timing analysis; "IncreGPUSTA" paper2026 | R14 public author/product/docs; R16 original PDF link opened. Read abstract/intro scope only, full implementation audit deferred. |
+| S6 | Web search: site.github.com ISPD26 winner poster sizing buffering | Fork named ISPD26-Contest-Solution found; registration/organizer README does not authenticate a winner method. Do not infer that it is winner code. |
+| S7 | Official current contest pages R10/R11/R12; R11 link38 | Current winner identities/context; top-three ZIP viewer renders only metadata. Archive contents not inspected. R09 section5.3 distinguishes proposed2027 conditions from issued rules. Mixed2027 program site remains nondecisive. |
+| S8 | Direct R06/R07/R08 and R13 official product page | Incremental STA/task classes/technical patent prior and advertised vendor capabilities; no measurements reproduced. |
+| S9 | Public GitHub REST commit/tree API for OpenSTA, VarexC, organizer repository; direct raw source | Pinned versions/hashes in sources.json. OpenROAD root tree reveals src/sta80fbbb; new OpenSTA536061 is distinct. No code executed. |
+
+Backward/forward coverage: R02 references/implements R01-style conditional sharing and has R03 source; R15 builds on VarexC, extending the edit-world neighborhood. R06 -> newer R07/R17 administration; R16 current GPU incrementality -> R14 integration. These are inspected primary citation/implementation neighborhoods, not a comprehensive citation-index crawl. No claim that every descendant/winner implementation was read. Search stopped with residual risk and new close mechanisms, not two unsuccessful expansions.
+
+Access incidents/limits: first R02 open internal error, second succeeded; R17 direct open failed, indexed primary abstract only; R11 Drive ZIP contents not rendered. No bypass, login or paid access attempted. R14 full paper not method-audited, no license requested. Downloaded public raw code is own source-reading scratch only; no full paper or source copy is released. Only citations, bounded descriptions, hashes and own replay code are published. Actual web tool renderings are distinct from raw one-based code lines.
+
+All numerical statements about A02 are analytical counts with released code/stdout. No EDA build/full-flow/training/GPU/remote/paid allocation was used. Limit: this self-report and selected reading do not attest unseen conduct or establish scientific independence beyond observable input restrictions. Current sources remain subject to independent challenger/verifier checking.

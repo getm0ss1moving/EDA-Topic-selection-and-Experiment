@@ -1,0 +1,212 @@
+[
+  {
+    "id": "C01",
+    "title": "Faster Variational Execution with Transparent Bytecode Transformation",
+    "url": "https://www.cs.cmu.edu/~ckaestne/pdf/oopsla18.pdf",
+    "type": "primary source",
+    "published": "2018-11",
+    "retrieved_utc": "2026-10-16",
+    "access": "full",
+    "locator": "Sections 2.1 and 5.2, physical pp5 and18; rendered lines264-303 and955-991",
+    "claims": [
+      "OBJ-1201"
+    ],
+    "limitations": "Selected sections only; no reproduced runtime; generic representation and specialization prior."
+  },
+  {
+    "id": "C02",
+    "title": "VarexC VImpl.java",
+    "url": "https://raw.githubusercontent.com/chupanw/vbc/1221ef110e2b46951ab01319e97fa5d7dd84a724/src/main/java/edu/cmu/cs/varex/VImpl.java",
+    "type": "primary source",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-16",
+    "access": "full",
+    "locator": "Pinned commit1221ef110e2b46951ab01319e97fa5d7dd84a724; raw lines144-202 flatMap/addVToMap/put/createV",
+    "claims": [
+      "OBJ-1201"
+    ],
+    "limitations": "Read selected source only; delegated BDD, exception and entire runtime semantics not audited."
+  },
+  {
+    "id": "C03",
+    "title": "Variational Data Structures: Exploring Tradeoffs in Computing with Variability",
+    "url": "https://www.se.cs.uni-saarland.de/publications/docs/WKE%2B14.pdf",
+    "type": "primary source",
+    "published": "2014",
+    "retrieved_utc": "2026-10-16",
+    "access": "full",
+    "locator": "Sections3\u20135; physical pp4-9; rendered277-310,369-447,680-747",
+    "claims": [
+      "OBJ-1201"
+    ],
+    "limitations": "Selected representations and mapping sections; no performance reproduction; not a complete STA implementation. DOI10.1145/2661136.2661143."
+  },
+  {
+    "id": "C04",
+    "title": "VarFix: Balancing Edit Expressiveness and Search Effectiveness in Automated Program Repair",
+    "url": "https://clairelegoues.com/assets/papers/wong21varfix.pdf",
+    "type": "primary source",
+    "published": "2021-08",
+    "retrieved_utc": "2026-10-16",
+    "access": "full",
+    "locator": "Sections3/4.1/4.3, physical pp4-5; rendered317-388,466-472",
+    "claims": [
+      "COVER-composition"
+    ],
+    "limitations": "Edit sharing and hybrid fallback only; pruning cannot preserve exhaustive timing output contract."
+  },
+  {
+    "id": "C05",
+    "title": "Coalescing Executions for Fast Uncertainty Analysis",
+    "url": "https://www.cs.purdue.edu/homes/xyzhang/Comp/icse11.pdf",
+    "type": "primary source",
+    "published": "2011-05",
+    "retrieved_utc": "2026-10-16",
+    "access": "full",
+    "locator": "Abstract physical p1; cost/evaluation discussion physical p7, rendered655-717; sample execution physical p6",
+    "claims": [
+      "COVER-cost"
+    ],
+    "limitations": "Selected sections only; MC sampling context, not exhaustive STA. No numerical speedup transferred. DOI10.1145/1985793.1985872."
+  },
+  {
+    "id": "C06",
+    "title": "OpenROAD MeasuredVtSwapCandidate.cc",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/3549d60529517dc82deb7f0ff769345e9a424911/src/rsz/src/move/MeasuredVtSwapCandidate.cc",
+    "type": "primary source",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-16",
+    "access": "full",
+    "locator": "Pinned commit3549d60529517dc82deb7f0ff769345e9a424911; raw lines44-66,109-132",
+    "claims": [
+      "OBJ-1202"
+    ],
+    "limitations": "Score/arrival and journal restoration observed; no whole call graph or representative demand census."
+  },
+  {
+    "id": "C07",
+    "title": "Invited: Post-Placement Buffering and Sizing Contest",
+    "url": "https://vlsicad.ucsd.edu/Publications/Conferences/421/c421.pdf",
+    "type": "primary source",
+    "published": "2026-03",
+    "retrieved_utc": "2026-10-16",
+    "access": "full",
+    "locator": "Section4 physical pp4-5 rendered296-368; section5.3 physical p7",
+    "claims": [
+      "OBJ-1202"
+    ],
+    "limitations": "Selected objective and roadmap sections; not winner algorithm evidence or full-candidate-vector demand. DOI10.1145/3764386.3779616."
+  },
+  {
+    "id": "C08",
+    "title": "IncreGPUSTA: GPU-Accelerated Incremental Static Timing Analysis for Iterative Design Flows",
+    "url": "https://guozz.cn/publication/incregpustaiccad-25/incregpustaiccad-25.pdf",
+    "type": "primary source",
+    "published": "2025-11",
+    "retrieved_utc": "2026-10-16",
+    "access": "full",
+    "locator": "SectionIII/A physical pp3-4, rendered225-357",
+    "claims": [
+      "COVER-mechanism"
+    ],
+    "limitations": "Selected method pages only. Structural-edit graph management differs from fixed-topology world-value representation; no GPU execution."
+  },
+  {
+    "id": "C09",
+    "title": "2025 ICCAD CAD Contest Problem C: Incremental Placement Optimization Beyond Detailed Placement",
+    "url": "https://ieeexplore.ieee.org/abstract/document/11240847",
+    "type": "primary source",
+    "published": "2025-11-20",
+    "retrieved_utc": "2026-10-16",
+    "access": "abstract",
+    "locator": "Publisher abstract, DOI10.1109/ICCAD66269.2025.11240847, indexed search result",
+    "claims": [
+      "OBJ-1202"
+    ],
+    "limitations": "Only publisher abstract retrieved; batching/guidance are organizer ideas, not this reviewers measurement or winner-method audit."
+  },
+  {
+    "id": "C10",
+    "title": "OpenSTA GraphDelayCalc.cc",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/536061898d5ba3af6e6d09cd99bb4baa88db70ab/dcalc/GraphDelayCalc.cc",
+    "type": "primary source",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-16",
+    "access": "full",
+    "locator": "Pinned536061898d5ba3af6e6d09cd99bb4baa88db70ab; raw346-374,1072-1116,1423-1460",
+    "claims": [
+      "COVER-mechanism"
+    ],
+    "limitations": "Source read only. Different revision from proposed OpenROAD submodule; incomplete transitive dependency inspection."
+  },
+  {
+    "id": "C11",
+    "title": "ISPD2026 official contest page",
+    "url": "https://www.ispd.cc/contests/26/index.html",
+    "type": "primary source",
+    "published": "2026",
+    "retrieved_utc": "2026-10-16",
+    "access": "full",
+    "locator": "Contest Winners heading, rendered page19 lines total",
+    "claims": [
+      "COVER-contests"
+    ],
+    "limitations": "Official winners identifiable; no authenticated winner algorithm inspected."
+  },
+  {
+    "id": "C12",
+    "title": "ICCAD2025 official problems and top-three result link",
+    "url": "https://www.iccad-contest.org/2025/Problems.html",
+    "type": "primary source",
+    "published": "2025",
+    "retrieved_utc": "2026-10-16",
+    "access": "full",
+    "locator": "Problem C rendered58-70, link38",
+    "claims": [
+      "COVER-contests"
+    ],
+    "limitations": "Linked https://drive.google.com/file/d/1yZstdjFc30xt9RYz583ecb8_jnDE1F9O/view?usp=sharing exposed archive title only, report contents unavailable in renderer."
+  },
+  {
+    "id": "C13",
+    "title": "ICCAD2026 official home/problem list",
+    "url": "https://www.iccad-contest.org/2026/",
+    "type": "primary source",
+    "published": "2026",
+    "retrieved_utc": "2026-10-16",
+    "access": "full",
+    "locator": "Contest Problems rendered37-46 and schedule47-53",
+    "claims": [
+      "COVER-contests"
+    ],
+    "limitations": "Current scope only; no winner method inferred."
+  },
+  {
+    "id": "C14",
+    "title": "ISPD2027 official contest/program index",
+    "url": "https://ispd.cc/ispd2027/index.php?page=contests",
+    "type": "primary source",
+    "published": "2027",
+    "retrieved_utc": "2026-10-16",
+    "access": "metadata",
+    "locator": "Search-index rendering of Previous Contests and program; queried2026-10-16",
+    "claims": [
+      "COVER-contests"
+    ],
+    "limitations": "Indexed2027 chrome lists2026 contest; no authenticated final2027 rules inspected."
+  },
+  {
+    "id": "C-A01",
+    "title": "Own arbitrary-base complement check",
+    "url": "independent-estimate.md",
+    "type": "own analytical fixture",
+    "published": "2026-10-16",
+    "retrieved_utc": "2026-10-16",
+    "access": "full",
+    "locator": "Python fence, exact stdout and hash statements",
+    "claims": [
+      "COVER-model-boundary"
+    ],
+    "limitations": "Finite integers only; 128 checks, no timing/byte/engine or speed evidence."
+  }
+]
