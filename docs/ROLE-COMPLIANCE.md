@@ -156,3 +156,17 @@ These are public transport inputs, not private tool logs, transcripts or scratch
 The role/packet identity bindings are rechecked before export, and audited
 descriptor bytes must match the supplied originals. Readers can reopen the
 allowlists without relying on an unpublished local runtime.
+
+Protocol-audit registrations use `verification_purpose: protocol_audit`.
+Canonical acceptance and joint-abandonment validation reject these registrations,
+legacy protocol/governance session markers and protocol-purpose verdicts as
+scientific authority. Existing scientific registrations without a purpose field
+retain their original meaning; this is attribution checking, not backend proof.
+
+A scientific verifier may receive an explicitly assigned `public-evidence.json`
+containing a public, still-unadjudicated review allegation. Its JOB binds the file
+hash and scope before execution; it is not sent to proposers/challengers. Export
+the exact file with that verifier's descriptors. A protocol auditor does not gain
+scientific-review authority or access to the underlying allegation merely by
+seeing the verifier's descriptor. Historical source allegations need separate
+scoped rulings and never silently rewrite frozen outputs.

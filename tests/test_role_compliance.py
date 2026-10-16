@@ -139,6 +139,7 @@ class AuditedLoopTests(unittest.TestCase):
         self.assertEqual(l.dispatch(self.c,self.home,'D05')['status'],'finished')
         record=l.read(self.home/'state.json')['publication_queue'][0]
         self.assertIn('compliance_audit',record)
+        self.assertEqual(record['registrations']['sessions'][-1]['verification_purpose'],'protocol_audit')
         # Real offline transport includes the fourth frozen output and its registration.
         real=l.subprocess.check_output
         def local_only(args, **kwargs):
@@ -151,6 +152,27 @@ class AuditedLoopTests(unittest.TestCase):
             published=l.publish_record(record,self.c,self.home,dry_run=True)
             self.assertTrue(published['dry_run'])
             self.assertEqual(set(published['descriptor_roles']),set(l.ROLES)|{'protocol_audit'})
+
+    def test_scientific_followup_metadata_is_hash_bound_and_publicly_reopenable(self):
+        for _ in range(2):self.science()
+        job=l.dispatch(self.c,self.home,'D05');work=Path(job['work']);a=l.read(work/'JOB.json')
+        note={'scope':'Synthetic verifier-only allegation; not a finding','source_pr':'https://example.org/review'}
+        l.save(work/'public-evidence.json',note)
+        a['released_inputs'].append(str(work/'public-evidence.json'))
+        a['public_evidence']={'file':'public-evidence.json','sha256':l.sha(work/'public-evidence.json')}
+        l.save(work/'JOB.json',a)
+        fixtures.LoopTests.fake(self,self.c,job)
+        l.save(work/'release/compliance.json',self.ledger(a));self.freeze(work);l.collect(self.c,self.home,'D05')
+        self.audit();l.audit_collect(self.c,self.home,'D05')
+        record=l.read(self.home/'state.json')['publication_queue'][0]
+        public=self.root/'public';public.mkdir()
+        manifest=l.export_public_descriptors(record,public,Path('runs/ROUND'))
+        entry=manifest['roles']['verifier']
+        self.assertEqual((public/entry['root']/'public-evidence.json').read_bytes(),(work/'public-evidence.json').read_bytes())
+        self.assertEqual(entry['files']['public-evidence.json'],a['public_evidence']['sha256'])
+        l.save(work/'public-evidence.json',{'changed':'not the assigned metadata'})
+        with self.assertRaisesRegex(ValueError,'public evidence hash/scope'):
+            l.export_public_descriptors(record,public,Path('runs/OTHER'))
 
     def test_audit_cannot_omit_scientific_verifier_or_use_stale_inputs(self):
         for _ in range(3):self.science()

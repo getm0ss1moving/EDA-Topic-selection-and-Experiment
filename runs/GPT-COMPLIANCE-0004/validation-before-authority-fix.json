@@ -1,0 +1,17 @@
+{
+  "checked_at_utc": "2026-10-16T04:04:11.395382+00:00",
+  "command": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "exit_code": 0,
+  "tests_run": 136,
+  "status": "passed",
+  "log_sha256": "0f44836b54c56487da8fbe62731bff135fa94e48d870a75a7e6d8cde2c851029",
+  "scope": "Coordinator regression suite; no scientific acceptance or live role-isolation certification."
+}
