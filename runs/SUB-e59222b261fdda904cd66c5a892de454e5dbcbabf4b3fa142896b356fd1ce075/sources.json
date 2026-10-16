@@ -1,0 +1,886 @@
+[
+  {
+    "access": "full",
+    "access_level": "full",
+    "claims": [
+      "CLM-1102"
+    ],
+    "current_job_access": "historical_released_record_only_not_reopened",
+    "id": "R01",
+    "limitations": "Selected full-text method passages; no Java implementation execution; not an EDA adapter audit. Current job retains this historical access report only; use new R18-R26/A03 for fresh accesses. Prior A02 was not rerun. Current cycle: original not reopened or executed; historical numerical checks not rerun.",
+    "locator": "Section3.1 physical PDF pp3-4; rendered lines298-369.",
+    "provenance": "Retained from own released source ledger SUB-017839376433acd2ef83e1cf06276f1d54e9af5740eb2561a0b9b928a404a6ae; prior access/locators/hashes are historical assertions, not a current independent reopening.",
+    "publication_date": "2016-09",
+    "published": "2016-09",
+    "retrieved_utc": "2026-10-16",
+    "source_type": "primary paper",
+    "supported_claim_ids": [
+      "CLM-1102"
+    ],
+    "title": "On Essential Configuration Complexity: Measuring Interactions in Highly-Configurable Systems",
+    "type": "primary paper",
+    "url": "https://www.cs.cmu.edu/~ckaestne/pdf/ase16.pdf",
+    "version": "ASE2016; DOI10.1145/2970276.2970322"
+  },
+  {
+    "access": "full",
+    "access_level": "full",
+    "claims": [
+      "CLM-1102"
+    ],
+    "current_job_access": "historical_released_record_only_not_reopened",
+    "id": "R02",
+    "limitations": "30-page final author PDF; first web fetch internal error, retry succeeded. Selected sections, no reported performance reproduced. Current job retains this historical access report only; use new R18-R26/A03 for fresh accesses. Prior A02 was not rerun. Current cycle: original not reopened or executed; historical numerical checks not rerun.",
+    "locator": "Section2.1 physical pp4-5;3.1 pp8-9;3.2 pp9-10. Rendered260-303,445-508.",
+    "provenance": "Retained from own released source ledger SUB-017839376433acd2ef83e1cf06276f1d54e9af5740eb2561a0b9b928a404a6ae; prior access/locators/hashes are historical assertions, not a current independent reopening.",
+    "publication_date": "2018-11",
+    "published": "2018-11",
+    "retrieved_utc": "2026-10-16",
+    "source_type": "primary paper",
+    "supported_claim_ids": [
+      "CLM-1102"
+    ],
+    "title": "Faster Variational Execution with Transparent Bytecode Transformation",
+    "type": "primary paper",
+    "url": "https://www.cs.cmu.edu/~ckaestne/pdf/oopsla18.pdf",
+    "version": "PACMPL2 OOPSLA article117; DOI10.1145/3276487"
+  },
+  {
+    "access": "full",
+    "access_level": "full",
+    "claims": [
+      "CLM-1102",
+      "CLM-1106"
+    ],
+    "current_job_access": "historical_released_record_only_not_reopened",
+    "id": "R03",
+    "inspected_sha256": {
+      "vimpl.java": "09adbcae7253f7b40e046edf798ecb9969187068a89c9397408b8edf3678ccd6",
+      "vimpl.scala": "1e91889d83191f788cf5e852baf5aa3e22bf71fa9e020a3d5cdd1d067e0a3c82"
+    },
+    "limitations": "Selected source, not built; delegated MTBDD/BDD implementation and complete VCache semantics not audited. No assertion that flat Cartesian loops represent the strongest implementation. License not established for copying; source reading only. Current job retains this historical access report only; use new R18-R26/A03 for fresh accesses. Prior A02 was not rerun. Current cycle: original not reopened or executed; historical numerical checks not rerun.",
+    "locator": "Raw one-based src/main/java/edu/cmu/cs/varex/VImpl.java144-202 flatMap/addVToMap/put/createV; src/main/scala/edu/cmu/cs/varex/VImpl.scala106-135 flatMapWithContext/foreachWithContext.",
+    "provenance": "Retained from own released source ledger SUB-017839376433acd2ef83e1cf06276f1d54e9af5740eb2561a0b9b928a404a6ae; prior access/locators/hashes are historical assertions, not a current independent reopening.",
+    "publication_date": "2020-11-20",
+    "published": "2020-11-20",
+    "retrieved_utc": "2026-10-16",
+    "source_type": "primary open implementation",
+    "supported_claim_ids": [
+      "CLM-1102",
+      "CLM-1106"
+    ],
+    "title": "VarexC value-map and MTBDD implementations",
+    "type": "primary open implementation",
+    "url": "https://github.com/chupanw/vbc/tree/1221ef110e2b46951ab01319e97fa5d7dd84a724",
+    "version": "1221ef110e2b46951ab01319e97fa5d7dd84a724"
+  },
+  {
+    "access": "full",
+    "access_level": "full",
+    "claims": [
+      "CLM-1101"
+    ],
+    "current_job_access": "historical_released_record_only_not_reopened",
+    "id": "R04",
+    "inspected_sha256": {
+      "candidate.cc": "16c99bf48dd4e6c23a5c886ef3608bfb95bd0bfbb688e35676a4bc301427cb08",
+      "policy.cc": "f81f24e419536210a344cd6fd32f9e2b43bdb2144a76bbc818de437dadf2d162"
+    },
+    "limitations": "Direct source retrieval, selected methods only. Experimental consumer returns score/legality, not a full endpoint vector. No workload statistics or flow run. Current job retains this historical access report only; use new R18-R26/A03 for fresh accesses. Prior A02 was not rerun. Current cycle: original not reopened or executed; historical numerical checks not rerun.",
+    "locator": "Raw one-based src/rsz/src/move/MeasuredVtSwapCandidate.cc44-66,109-132; src/rsz/src/policy/MeasuredVtSwapPolicy.cc260-301.",
+    "provenance": "Retained from own released source ledger SUB-017839376433acd2ef83e1cf06276f1d54e9af5740eb2561a0b9b928a404a6ae; prior access/locators/hashes are historical assertions, not a current independent reopening.",
+    "publication_date": "unknown",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-16",
+    "source_type": "primary open implementation",
+    "submodule_locator": "GitHub git/trees/<R04 commit>?recursive=1; mode160000 entries; truncated=false observed",
+    "submodules_observed": {
+      "src/sta": "80fbbb2945fee2702a84e711a95a0a3bb7050f22",
+      "third-party/abc": "d527cfab4ad731b767ea0a2be2021d920d3afece",
+      "third-party/slang-elab": "82effc8d9541be69e1ed3ec44759a4449f5d9247"
+    },
+    "supported_claim_ids": [
+      "CLM-1101"
+    ],
+    "title": "OpenROAD measured VT-swap candidate and policy",
+    "type": "primary open implementation",
+    "url": "https://github.com/The-OpenROAD-Project/OpenROAD/tree/3549d60529517dc82deb7f0ff769345e9a424911",
+    "version": "3549d60529517dc82deb7f0ff769345e9a424911"
+  },
+  {
+    "access": "full",
+    "access_level": "full",
+    "claims": [
+      "CLM-1103",
+      "CLM-1109"
+    ],
+    "current_job_access": "historical_released_record_only_not_reopened",
+    "id": "R05",
+    "inspected_sha256": {
+      "graphdelay.cc": "86bab0f72ae44b81ff036674d5fac0651a234da0993b18b22e5a5a499684382d",
+      "opensta-readme.md": "78e22e3499b256421c7bf7a97d9c321f27c71a4d2e8948941e619e939dac791e",
+      "search.cc": "75d5185fed3bcf5db99c284e9319ab3685274e0f283e6707cf87de98682a09ab"
+    },
+    "limitations": "Selected delay passages are not a complete read-set proof. Search.cc full body downloaded but only targeted snippets/symbols inspected. Current standalone commit is NOT R04 submodule80fbbb; no binary/build compatibility implied. GPLv3/commercial dual licensing per README; no source copied into release. Current job retains this historical access report only; use new R18-R26/A03 for fresh accesses. Prior A02 was not rerun. Current cycle: original not reopened or executed; historical numerical checks not rerun.",
+    "locator": "Raw one-based dcalc/GraphDelayCalc.cc213-258 delaysInvalid/delayInvalid;346-374 findDelays;1072-1116 findDriverArcDelays;1423-1460 parasiticLoad. README.md1-76 capabilities/licensing; search/Search.cc1046/3288 method names only.",
+    "provenance": "Retained from own released source ledger SUB-017839376433acd2ef83e1cf06276f1d54e9af5740eb2561a0b9b928a404a6ae; prior access/locators/hashes are historical assertions, not a current independent reopening.",
+    "publication_date": "2026-10-15",
+    "published": "2026-10-15",
+    "retrieved_utc": "2026-10-16",
+    "source_type": "primary open implementation",
+    "supported_claim_ids": [
+      "CLM-1103",
+      "CLM-1109"
+    ],
+    "title": "OpenSTA delay dependencies and query-based incrementality",
+    "type": "primary open implementation",
+    "url": "https://github.com/The-OpenROAD-Project/OpenSTA/tree/536061898d5ba3af6e6d09cd99bb4baa88db70ab",
+    "version": "536061898d5ba3af6e6d09cd99bb4baa88db70ab"
+  },
+  {
+    "access": "full",
+    "access_level": "full",
+    "claims": [
+      "CLM-1109"
+    ],
+    "current_job_access": "historical_released_record_only_not_reopened",
+    "id": "R06",
+    "limitations": "Lazy incremental engine/task lineage is prior; selected source sections, no author speedups adopted or execution. Current job retains this historical access report only; use new R18-R26/A03 for fresh accesses. Prior A02 was not rerun. Current cycle: original not reopened or executed; historical numerical checks not rerun.",
+    "locator": "Physical PDF pp3-4, Big idea2/3; rendered166-252.",
+    "provenance": "Retained from own released source ledger SUB-017839376433acd2ef83e1cf06276f1d54e9af5740eb2561a0b9b928a404a6ae; prior access/locators/hashes are historical assertions, not a current independent reopening.",
+    "publication_date": "2021",
+    "published": "2021",
+    "retrieved_utc": "2026-10-16",
+    "source_type": "primary paper",
+    "supported_claim_ids": [
+      "CLM-1109"
+    ],
+    "title": "OpenTimer v2: A Parallel Incremental Timing Analysis Engine",
+    "type": "primary paper",
+    "url": "https://tsung-wei-huang.github.io/papers/dat21-ot2.pdf",
+    "version": "DOI10.1109/MDAT.2021.3049177"
+  },
+  {
+    "access": "full",
+    "access_level": "full",
+    "claims": [
+      "CLM-1109"
+    ],
+    "current_job_access": "historical_released_record_only_not_reopened",
+    "id": "R07",
+    "limitations": "Partitions task graphs rather than exact alternative-world values; selected method sections, no reproduction. Current job retains this historical access report only; use new R18-R26/A03 for fresh accesses. Prior A02 was not rerun. Current cycle: original not reopened or executed; historical numerical checks not rerun.",
+    "locator": "Physical PDF p3 section3 Algorithm1/type1/type2 frontiers; rendered319-348.",
+    "provenance": "Retained from own released source ledger SUB-017839376433acd2ef83e1cf06276f1d54e9af5740eb2561a0b9b928a404a6ae; prior access/locators/hashes are historical assertions, not a current independent reopening.",
+    "publication_date": "2025-01",
+    "published": "2025-01",
+    "retrieved_utc": "2026-10-16",
+    "source_type": "primary paper",
+    "supported_claim_ids": [
+      "CLM-1109"
+    ],
+    "title": "iTAP: An Incremental Task Graph Partitioner for Task-parallel Static Timing Analysis",
+    "type": "primary paper",
+    "url": "https://tsung-wei-huang.github.io/papers/2025-ASPDAC-iTAP.pdf",
+    "version": "ASP-DAC2025 author PDF,9 pages"
+  },
+  {
+    "access": "full",
+    "access_level": "full",
+    "claims": [
+      "CLM-1109"
+    ],
+    "current_job_access": "historical_released_record_only_not_reopened",
+    "id": "R08",
+    "limitations": "Technical prior disclosure; no legal/status opinion, contemporary implementation or signoff validation. Current job retains this historical access report only; use new R18-R26/A03 for fresh accesses. Prior A02 was not rerun. Current cycle: original not reopened or executed; historical numerical checks not rerun.",
+    "locator": "Detailed Description FIG3 steps302-314/FIG4 steps404-412; rendered198-213.",
+    "provenance": "Retained from own released source ledger SUB-017839376433acd2ef83e1cf06276f1d54e9af5740eb2561a0b9b928a404a6ae; prior access/locators/hashes are historical assertions, not a current independent reopening.",
+    "publication_date": "2008-11-11",
+    "published": "2008-11-11",
+    "retrieved_utc": "2026-10-16",
+    "source_type": "primary patent text",
+    "supported_claim_ids": [
+      "CLM-1109"
+    ],
+    "title": "Speeding up timing analysis by reusing delays computed for isomorphic subcircuits",
+    "type": "primary patent text",
+    "url": "https://patents.google.com/patent/US7451412B2/en",
+    "version": "US7451412B2"
+  },
+  {
+    "access": "full",
+    "access_level": "full",
+    "claims": [
+      "CLM-1107"
+    ],
+    "current_job_access": "historical_released_record_only_not_reopened",
+    "id": "R09",
+    "limitations": "Full organizer paper newly retrieved; selected sections. Contest runtime/electrical objectives do not establish full candidate-vector demand.2027 roadmap is proposed, not a released2027 contract. No benchmark downloaded. Current job retains this historical access report only; use new R18-R26/A03 for fresh accesses. Prior A02 was not rerun. Current cycle: original not reopened or executed; historical numerical checks not rerun.",
+    "locator": "Physical PDF p3 Fig1/section3;pp4-5 section4; p7 section5.3. Rendered210-242,296-328,348-368,577-606.",
+    "provenance": "Retained from own released source ledger SUB-017839376433acd2ef83e1cf06276f1d54e9af5740eb2561a0b9b928a404a6ae; prior access/locators/hashes are historical assertions, not a current independent reopening.",
+    "publication_date": "2026-03",
+    "published": "2026-03",
+    "retrieved_utc": "2026-10-16",
+    "source_type": "primary paper",
+    "supported_claim_ids": [
+      "CLM-1107"
+    ],
+    "title": "Invited: Post-Placement Buffering and Sizing Contest",
+    "type": "primary paper",
+    "url": "https://vlsicad.ucsd.edu/Publications/Conferences/421/c421.pdf",
+    "version": "ISPD2026; DOI10.1145/3764386.3779616"
+  },
+  {
+    "access": "full",
+    "access_level": "full",
+    "claims": [
+      "CLM-1107"
+    ],
+    "current_job_access": "historical_released_record_only_not_reopened",
+    "id": "R10",
+    "limitations": "Winner identities authenticated by official page, winner algorithms not authenticated. Fork titled Contest-Solution is not proof of winner provenance. Only README/source metadata read, no data/PDK execution. Current job retains this historical access report only; use new R18-R26/A03 for fresh accesses. Prior A02 was not rerun. Current cycle: original not reopened or executed; historical numerical checks not rerun.",
+    "locator": "Web-rendered lines3-10 Contest Winners. Organizer README raw one-based1-29 description/timeline, at f7b29d242fc7d441f3b4eadc556f40099ccca067.",
+    "provenance": "Retained from own released source ledger SUB-017839376433acd2ef83e1cf06276f1d54e9af5740eb2561a0b9b928a404a6ae; prior access/locators/hashes are historical assertions, not a current independent reopening.",
+    "publication_date": "2026",
+    "published": "2026",
+    "readme_sha256": "29c95e3df2f051f14ebb45ee71be7c3d42d5302c8c12d7f2249a45901dc0ab50",
+    "repository_url": "https://github.com/ABKGroup/ISPD26-Contest",
+    "retrieved_utc": "2026-10-16",
+    "source_type": "primary contest page",
+    "supported_claim_ids": [
+      "CLM-1107"
+    ],
+    "title": "ISPD26 official contest page and pinned organizer repository",
+    "type": "primary contest page",
+    "url": "https://www.ispd.cc/contests/26/index.html",
+    "version": "Official page retrieved2026-10-16; repo f7b29d242fc7d441f3b4eadc556f40099ccca067"
+  },
+  {
+    "access": "full",
+    "access_level": "full",
+    "claims": [
+      "CLM-1107"
+    ],
+    "current_job_access": "historical_released_record_only_not_reopened",
+    "id": "R11",
+    "limitations": "Opened official linked ZIP Drive viewer; renderer exposed only metadata/no archive contents. No winner methods inspected, no access-control bypass. Current job retains this historical access report only; use new R18-R26/A03 for fresh accesses. Prior A02 was not rerun. Current cycle: original not reopened or executed; historical numerical checks not rerun.",
+    "locator": "Web-rendered58-70 Problem C, link38 ICCAD problem C top-3 result.",
+    "provenance": "Retained from own released source ledger SUB-017839376433acd2ef83e1cf06276f1d54e9af5740eb2561a0b9b928a404a6ae; prior access/locators/hashes are historical assertions, not a current independent reopening.",
+    "publication_date": "2025",
+    "published": "2025",
+    "report_url": "https://drive.google.com/file/d/1yZstdjFc30xt9RYz583ecb8_jnDE1F9O/view?usp=sharing",
+    "retrieved_utc": "2026-10-16",
+    "source_type": "primary contest page",
+    "supported_claim_ids": [
+      "CLM-1107"
+    ],
+    "title": "2025 CAD Contest at ICCAD problem and top-three report links",
+    "type": "primary contest page",
+    "url": "https://www.iccad-contest.org/2025/Problems.html",
+    "version": "Dynamic official page; retrieved2026-10-16"
+  },
+  {
+    "access": "full",
+    "access_level": "full",
+    "claims": [
+      "CLM-1107"
+    ],
+    "current_job_access": "historical_released_record_only_not_reopened",
+    "id": "R12",
+    "limitations": "Current problem context only; no2026 winner method inferred. ISPD2027 program page remains mixed2027 chrome/2026 content; R09 roadmap is more precise evidence of proposed additions. Current job retains this historical access report only; use new R18-R26/A03 for fresh accesses. Prior A02 was not rerun. Current cycle: original not reopened or executed; historical numerical checks not rerun.",
+    "locator": "Contest Problems and tentative schedule sections.",
+    "provenance": "Retained from own released source ledger SUB-017839376433acd2ef83e1cf06276f1d54e9af5740eb2561a0b9b928a404a6ae; prior access/locators/hashes are historical assertions, not a current independent reopening.",
+    "publication_date": "2026",
+    "published": "2026",
+    "retrieved_utc": "2026-10-16",
+    "source_type": "primary contest page",
+    "supported_claim_ids": [
+      "CLM-1107"
+    ],
+    "title": "2026 CAD Contest at ICCAD",
+    "type": "primary contest page",
+    "url": "https://www.iccad-contest.org/2026/",
+    "version": "Dynamic official page; retrieved2026-10-16"
+  },
+  {
+    "access": "full",
+    "access_level": "full",
+    "claims": [
+      "CLM-1110"
+    ],
+    "current_job_access": "historical_released_record_only_not_reopened",
+    "id": "R13",
+    "limitations": "Vendor advertised ECO/multi-scenario/multi-corner/ML capabilities only. No commercial internals, independent measurement, licensing allocation or exclusivity conclusion. Current job retains this historical access report only; use new R18-R26/A03 for fresh accesses. Prior A02 was not rerun. Current cycle: original not reopened or executed; historical numerical checks not rerun.",
+    "locator": "Core STA, Performance and Capacity and Advanced Timing Analysis; rendered108-139.",
+    "provenance": "Retained from own released source ledger SUB-017839376433acd2ef83e1cf06276f1d54e9af5740eb2561a0b9b928a404a6ae; prior access/locators/hashes are historical assertions, not a current independent reopening.",
+    "publication_date": "unknown",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-16",
+    "source_type": "vendor capability advertisement",
+    "supported_claim_ids": [
+      "CLM-1110"
+    ],
+    "title": "PrimeTime Static Timing Analysis public capabilities",
+    "type": "vendor capability advertisement",
+    "url": "https://www.synopsys.com/implementation-and-signoff/signoff/primetime.html",
+    "version": "Dynamic official page; retrieved2026-10-16"
+  },
+  {
+    "access": "abstract",
+    "access_level": "abstract",
+    "claims": [
+      "CLM-1110"
+    ],
+    "current_job_access": "historical_released_record_only_not_reopened",
+    "id": "R14",
+    "limitations": "Abstract and public documentation only, no full-method audit or speedup transfer. Site advertises academic/noncommercial licensing and downloadable dynamic library; no license requested, binary downloaded or account created. Current job retains this historical access report only; use new R18-R26/A03 for fresh accesses. Prior A02 was not rerun. Current cycle: original not reopened or executed; historical numerical checks not rerun.",
+    "locator": "Author abstract; https://heterosta.pkueda.org.cn/ Features/Download/Obtain a license; /documentation installation.",
+    "provenance": "Retained from own released source ledger SUB-017839376433acd2ef83e1cf06276f1d54e9af5740eb2561a0b9b928a404a6ae; prior access/locators/hashes are historical assertions, not a current independent reopening.",
+    "publication_date": "2026-01",
+    "published": "2026-01",
+    "retrieved_utc": "2026-10-16",
+    "source_type": "author abstract and product documentation",
+    "supported_claim_ids": [
+      "CLM-1110"
+    ],
+    "title": "HeteroSTA author paper and product documentation",
+    "type": "author abstract and product documentation",
+    "url": "https://guozz.cn/publication/heterostaaspdac-26/",
+    "version": "ASPDAC2026 author page; advertised release v1.3-20260712"
+  },
+  {
+    "access": "full",
+    "access_level": "full",
+    "claims": [
+      "CLM-1102"
+    ],
+    "current_job_access": "historical_released_record_only_not_reopened",
+    "id": "R15",
+    "limitations": "Selected method/fallback passages only, not full empirical audit. Source is software repair, not STA; edit-sharing transfer is a mechanism comparison, not EDA performance evidence. Current job retains this historical access report only; use new R18-R26/A03 for fresh accesses. Prior A02 was not rerun. Current cycle: original not reopened or executed; historical numerical checks not rerun.",
+    "locator": "Physical PDF pp2-5 sections3,4.1,4.3; rendered127-134,271-275,344-388,413-473.",
+    "provenance": "Retained from own released source ledger SUB-017839376433acd2ef83e1cf06276f1d54e9af5740eb2561a0b9b928a404a6ae; prior access/locators/hashes are historical assertions, not a current independent reopening.",
+    "publication_date": "2021-08",
+    "published": "2021-08",
+    "retrieved_utc": "2026-10-16",
+    "source_type": "primary paper",
+    "supported_claim_ids": [
+      "CLM-1102"
+    ],
+    "title": "VarFix: Balancing Edit Expressiveness and Search Effectiveness in Automated Program Repair",
+    "type": "primary paper",
+    "url": "https://clairelegoues.com/assets/papers/wong21varfix.pdf",
+    "version": "ESEC/FSE2021 final author PDF,13 pages"
+  },
+  {
+    "access": "abstract",
+    "access_level": "abstract",
+    "claims": [
+      "CLM-1109"
+    ],
+    "current_job_access": "historical_released_record_only_not_reopened",
+    "id": "R16",
+    "limitations": "PDF retrievable, only abstract/intro scoped reading completed in this round. Dual-CSR/incremental-levelization prior lead; full mechanism comparison unresolved, no GPU access or reproduced gain. Current job retains this historical access report only; use new R18-R26/A03 for fresh accesses. Prior A02 was not rerun. Current cycle: original not reopened or executed; historical numerical checks not rerun.",
+    "locator": "Physical PDF p1 abstract and introduction; author page https://guozz.cn/publication/incregpustaiccad-25/.",
+    "provenance": "Retained from own released source ledger SUB-017839376433acd2ef83e1cf06276f1d54e9af5740eb2561a0b9b928a404a6ae; prior access/locators/hashes are historical assertions, not a current independent reopening.",
+    "publication_date": "2025-11",
+    "published": "2025-11",
+    "retrieved_utc": "2026-10-16",
+    "source_type": "primary paper",
+    "supported_claim_ids": [
+      "CLM-1109"
+    ],
+    "title": "IncreGPUSTA: GPU-Accelerated Incremental Static Timing Analysis for Iterative Design Flows",
+    "type": "primary paper",
+    "url": "https://guozz.cn/publication/incregpustaiccad-25/incregpustaiccad-25.pdf",
+    "version": "ICCAD2025 author PDF,9 pages"
+  },
+  {
+    "access": "abstract",
+    "access_level": "abstract",
+    "claims": [
+      "CLM-1109"
+    ],
+    "current_job_access": "historical_released_record_only_not_reopened",
+    "id": "R17",
+    "limitations": "Direct web open internal error; primary author abstract indexed in search. No full22-page method inspection, author speedup or saturation claim. Current job retains this historical access report only; use new R18-R26/A03 for fresh accesses. Prior A02 was not rerun. Current cycle: original not reopened or executed; historical numerical checks not rerun.",
+    "locator": "Indexed primary SSRN author abstract; Posted date and19-reference list.",
+    "provenance": "Retained from own released source ledger SUB-017839376433acd2ef83e1cf06276f1d54e9af5740eb2561a0b9b928a404a6ae; prior access/locators/hashes are historical assertions, not a current independent reopening.",
+    "publication_date": "2026-07-23",
+    "published": "2026-07-23",
+    "retrieved_utc": "2026-10-16",
+    "source_type": "primary paper",
+    "supported_claim_ids": [
+      "CLM-1109"
+    ],
+    "title": "Incremental Task Graph Partitioning with Constrained Parallelism",
+    "type": "primary paper",
+    "url": "https://papers.ssrn.com/sol3/Delivery.cfm/753e400f-d897-41e7-a93c-03402a7c884b-MECA.pdf?abstractid=7168317&mirid=1",
+    "version": "SSRN7168317; DOI10.2139/ssrn.7168317"
+  },
+  {
+    "access": "full",
+    "access_level": "full",
+    "claims": [
+      "CLM-1104",
+      "CLM-1105",
+      "CLM-1106"
+    ],
+    "current_job_access": "historical_released_record_only_not_reopened",
+    "id": "A02",
+    "limitations": "768 random finite integer cases plus5 named inputs. No engine, physical timing, wall-time, memory measurement, adaptive policy implementation or EDA proof. Current job retains this historical access report only; use new R18-R26/A03 for fresh accesses. Prior A02 was not rerun. Current cycle: original not reopened or executed; historical numerical checks not rerun.",
+    "locator": "Exact fenced Python and JSON stdout in experiment-plan.md; extraction/replay command immediately before code.",
+    "provenance": "Retained from own released source ledger SUB-017839376433acd2ef83e1cf06276f1d54e9af5740eb2561a0b9b928a404a6ae; prior access/locators/hashes are historical assertions, not a current independent reopening.",
+    "publication_date": "2026-10-16",
+    "published": "2026-10-16",
+    "retrieved_utc": "2026-10-16",
+    "source_type": "own tiny analytical fixture",
+    "supported_claim_ids": [
+      "CLM-1104",
+      "CLM-1105",
+      "CLM-1106"
+    ],
+    "title": "Own support-join and dependency-order analytical replay",
+    "type": "own tiny analytical fixture",
+    "url": "experiment-plan.md#a02-public-analytical-replay",
+    "version": "script aabaa63e83e34e49939ea4b008afc84b75a394725e948acf0c043deb1f57d513"
+  },
+  {
+    "access": "full",
+    "access_level": "full",
+    "claims": [
+      "CLM-1203"
+    ],
+    "current_job_access": "historical_released_record_only_not_reopened",
+    "files": [
+      {
+        "sha256": "16c99bf48dd4e6c23a5c886ef3608bfb95bd0bfbb688e35676a4bc301427cb08",
+        "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/3549d60529517dc82deb7f0ff769345e9a424911/src/rsz/src/move/MeasuredVtSwapCandidate.cc"
+      },
+      {
+        "sha256": "ec9405459fea2de9a2d0bd2f6ca1aff2ae59c69eba1548b78a169b2a8b43ab9a",
+        "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/3549d60529517dc82deb7f0ff769345e9a424911/src/rsz/src/move/MeasuredVtSwapCandidate.hh"
+      },
+      {
+        "sha256": "f81f24e419536210a344cd6fd32f9e2b43bdb2144a76bbc818de437dadf2d162",
+        "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/3549d60529517dc82deb7f0ff769345e9a424911/src/rsz/src/policy/MeasuredVtSwapPolicy.cc"
+      },
+      {
+        "sha256": "759efc4bbe3c9c8716a72dfc5fbe9cb4c2c2ddea93dbab83519c59f6c419883f",
+        "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/3549d60529517dc82deb7f0ff769345e9a424911/src/rsz/src/OptimizerTypes.hh"
+      }
+    ],
+    "id": "R18",
+    "limitations": "Source read only; exact public consumer path, not all callers/workload statistics. SPDX BSD-3-Clause shown in retrieved files; no source copied to release. Current cycle: original not reopened or executed; historical numerical checks not rerun.",
+    "locator": "Raw candidate44-66,69-101,109-132; policy260-301; OptimizerTypes.hh356-360,391-399; candidate header16-24",
+    "provenance": "Retained from own released source ledger SUB-017839376433acd2ef83e1cf06276f1d54e9af5740eb2561a0b9b928a404a6ae; prior access/locators/hashes are historical assertions, not a current independent reopening.",
+    "publication_date": "unknown",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-16",
+    "source_type": "primary open implementation",
+    "supported_claim_ids": [
+      "CLM-1203"
+    ],
+    "title": "OpenROAD measured candidate, Estimate type and consuming policy",
+    "type": "primary open implementation",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/3549d60529517dc82deb7f0ff769345e9a424911/src/rsz/src/move/MeasuredVtSwapCandidate.cc",
+    "version": "3549d60529517dc82deb7f0ff769345e9a424911"
+  },
+  {
+    "access": "full",
+    "access_level": "full",
+    "claims": [
+      "CLM-1204"
+    ],
+    "current_job_access": "historical_released_record_only_not_reopened",
+    "files": [
+      {
+        "sha256": "86bab0f72ae44b81ff036674d5fac0651a234da0993b18b22e5a5a499684382d",
+        "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/80fbbb2945fee2702a84e711a95a0a3bb7050f22/dcalc/GraphDelayCalc.cc"
+      },
+      {
+        "sha256": "75d5185fed3bcf5db99c284e9319ab3685274e0f283e6707cf87de98682a09ab",
+        "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/80fbbb2945fee2702a84e711a95a0a3bb7050f22/search/Search.cc"
+      }
+    ],
+    "id": "R19",
+    "limitations": "Selected functions only, no full transitive/purity/restore audit or execution. The two retrieved file hashes equal old R05 hashes; no entire-tree equivalence. Historical GPLv3/commercial license record retained, not a new license grant. Current cycle: original not reopened or executed; historical numerical checks not rerun.",
+    "locator": "Raw GraphDelayCalc346-374,1072-1116,1440-1473,1497-1516; Search918-929,3288-3317",
+    "provenance": "Retained from own released source ledger SUB-017839376433acd2ef83e1cf06276f1d54e9af5740eb2561a0b9b928a404a6ae; prior access/locators/hashes are historical assertions, not a current independent reopening.",
+    "publication_date": "unknown",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-16",
+    "source_type": "primary open implementation",
+    "supported_claim_ids": [
+      "CLM-1204"
+    ],
+    "title": "OpenSTA integration-pinned GraphDelayCalc and Search",
+    "type": "primary open implementation",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/80fbbb2945fee2702a84e711a95a0a3bb7050f22/dcalc/GraphDelayCalc.cc",
+    "version": "80fbbb2945fee2702a84e711a95a0a3bb7050f22"
+  },
+  {
+    "access": "full",
+    "access_level": "full",
+    "claims": [
+      "CLM-1204"
+    ],
+    "current_job_access": "historical_released_record_only_not_reopened",
+    "id": "R20",
+    "limitations": "Selected source only; presence/absence and operating/library context direct observations. Test witness models a simple branch, not complete engine numeric behavior. Current cycle: original not reopened or executed; historical numerical checks not rerun.",
+    "locator": "Raw Sdc.cc3124-3140,3142-3155,3167-3185,3253-3269,3273-3330",
+    "provenance": "Retained from own released source ledger SUB-017839376433acd2ef83e1cf06276f1d54e9af5740eb2561a0b9b928a404a6ae; prior access/locators/hashes are historical assertions, not a current independent reopening.",
+    "publication_date": "unknown",
+    "published": "unknown",
+    "retrieved_utc": "2026-10-16",
+    "sha256": "1f18309385f3932244039107d9c78f5c6f55da6a26fd694aa97a72d55f7feea5",
+    "source_type": "primary open implementation",
+    "supported_claim_ids": [
+      "CLM-1204"
+    ],
+    "title": "OpenSTA SDC driver-wire-cap and connected-cap dependency chain",
+    "type": "primary open implementation",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/80fbbb2945fee2702a84e711a95a0a3bb7050f22/sdc/Sdc.cc",
+    "version": "80fbbb2945fee2702a84e711a95a0a3bb7050f22"
+  },
+  {
+    "access": "full",
+    "access_level": "full",
+    "claims": [
+      "CLM-1205"
+    ],
+    "current_job_access": "historical_released_record_only_not_reopened",
+    "id": "R21",
+    "limitations": "Selected representation/lift tradeoffs only. No performance transferred; not a complete EDA integration; no claim that generic cross-product lift is strongest. Current cycle: original not reopened or executed; historical numerical checks not rerun.",
+    "locator": "Physical PDF pp4-6 sections3.2/3.3; pp8-9 section5; web-rendered401-455,465-495,728-787",
+    "provenance": "Retained from own released source ledger SUB-017839376433acd2ef83e1cf06276f1d54e9af5740eb2561a0b9b928a404a6ae; prior access/locators/hashes are historical assertions, not a current independent reopening.",
+    "publication_date": "2014",
+    "published": "2014",
+    "retrieved_utc": "2026-10-16",
+    "source_type": "primary author manuscript",
+    "supported_claim_ids": [
+      "CLM-1205"
+    ],
+    "title": "Variational Data Structures: Exploring Tradeoffs in Computing with Variability",
+    "type": "primary author manuscript",
+    "url": "https://www.se.cs.uni-saarland.de/publications/docs/WKE%2B14.pdf",
+    "version": "14-page author PDF; first-page template has placeholder DOI"
+  },
+  {
+    "access": "full",
+    "access_level": "full",
+    "claims": [
+      "CLM-1205"
+    ],
+    "current_job_access": "historical_released_record_only_not_reopened",
+    "id": "R22",
+    "limitations": "Selected sections only. No Monte Carlo overhead/speedup or approximate merging imported into exact STA; no uncertainty-sampling workload substitution. Current cycle: original not reopened or executed; historical numerical checks not rerun.",
+    "locator": "Physical p5 section3 cost model, p7 section5 exact re-coalescence discussion; web-rendered459-523, section5 near574-619",
+    "provenance": "Retained from own released source ledger SUB-017839376433acd2ef83e1cf06276f1d54e9af5740eb2561a0b9b928a404a6ae; prior access/locators/hashes are historical assertions, not a current independent reopening.",
+    "publication_date": "2011-05",
+    "published": "2011-05",
+    "retrieved_utc": "2026-10-16",
+    "source_type": "primary paper",
+    "supported_claim_ids": [
+      "CLM-1205"
+    ],
+    "title": "Coalescing Executions for Fast Uncertainty Analysis",
+    "type": "primary paper",
+    "url": "https://www.cs.purdue.edu/homes/xyzhang/Comp/icse11.pdf",
+    "version": "ICSE2011 author PDF,10 pages"
+  },
+  {
+    "access": "full",
+    "access_level": "full",
+    "claims": [
+      "CLM-1205"
+    ],
+    "current_job_access": "historical_released_record_only_not_reopened",
+    "id": "R23",
+    "limitations": "Read selected dataflow/lifetime formulation. Tensor cost/memory assumptions do not validate STA extraction or grant universal lower bounds. No solver or downloaded code executed. Current cycle: original not reopened or executed; historical numerical checks not rerun.",
+    "locator": "Section4.1-4.4; rendered143-185;4.7 rendered238-241",
+    "provenance": "Retained from own released source ledger SUB-017839376433acd2ef83e1cf06276f1d54e9af5740eb2561a0b9b928a404a6ae; prior access/locators/hashes are historical assertions, not a current independent reopening.",
+    "publication_date": "2019-10-07",
+    "published": "2019-10-07",
+    "retrieved_utc": "2026-10-16",
+    "source_type": "primary paper",
+    "supported_claim_ids": [
+      "CLM-1205"
+    ],
+    "title": "Checkmate: Breaking the Memory Wall with Optimal Tensor Rematerialization",
+    "type": "primary paper",
+    "url": "https://arxiv.org/html/1910.02653v3",
+    "version": "arXiv1910.02653v3"
+  },
+  {
+    "access": "full",
+    "access_level": "full",
+    "claims": [
+      "CLM-1205"
+    ],
+    "current_job_access": "historical_released_record_only_not_reopened",
+    "id": "R24",
+    "limitations": "Selected online caching/pure-operator/lifetime/overhead passages only, not full proof audit. No claimed theorem or numerical gains transferred to timing. Current cycle: original not reopened or executed; historical numerical checks not rerun.",
+    "locator": "Section2 rendered95-102; appendixC.4 Eviction and banishing rendered595-610; D.3 rendered704",
+    "provenance": "Retained from own released source ledger SUB-017839376433acd2ef83e1cf06276f1d54e9af5740eb2561a0b9b928a404a6ae; prior access/locators/hashes are historical assertions, not a current independent reopening.",
+    "publication_date": "2020-06-17",
+    "published": "2020-06-17",
+    "retrieved_utc": "2026-10-16",
+    "source_type": "primary paper",
+    "supported_claim_ids": [
+      "CLM-1205"
+    ],
+    "title": "Dynamic Tensor Rematerialization",
+    "type": "primary paper",
+    "url": "https://arxiv.org/html/2006.09616v3",
+    "version": "arXiv2006.09616v3,2020-10-12"
+  },
+  {
+    "access": "full",
+    "access_level": "full",
+    "claims": [
+      "CLM-1206"
+    ],
+    "current_job_access": "historical_released_record_only_not_reopened",
+    "id": "R25",
+    "limitations": "Winner identities only; algorithm reports not inspected/authenticated. Current cycle: original not reopened or executed; historical numerical checks not rerun.",
+    "locator": "Contest Winners, web-rendered3-10",
+    "provenance": "Retained from own released source ledger SUB-017839376433acd2ef83e1cf06276f1d54e9af5740eb2561a0b9b928a404a6ae; prior access/locators/hashes are historical assertions, not a current independent reopening.",
+    "publication_date": "2026",
+    "published": "2026",
+    "retrieved_utc": "2026-10-16",
+    "source_type": "primary contest page",
+    "supported_claim_ids": [
+      "CLM-1206"
+    ],
+    "title": "ISPD2026 official contest results",
+    "type": "primary contest page",
+    "url": "https://www.ispd.cc/contests/26/index.html",
+    "version": "dynamic official page accessed2026-10-16"
+  },
+  {
+    "access": "full",
+    "access_level": "full",
+    "claims": [
+      "CLM-1206"
+    ],
+    "current_job_access": "historical_released_record_only_not_reopened",
+    "id": "R26",
+    "limitations": "Current scope/schedule only; no winner method, demand or timing-performance evidence. Current cycle: original not reopened or executed; historical numerical checks not rerun.",
+    "locator": "Contest Problems web-rendered37-46; Tentative Schedule47-53",
+    "provenance": "Retained from own released source ledger SUB-017839376433acd2ef83e1cf06276f1d54e9af5740eb2561a0b9b928a404a6ae; prior access/locators/hashes are historical assertions, not a current independent reopening.",
+    "publication_date": "2026",
+    "published": "2026",
+    "retrieved_utc": "2026-10-16",
+    "source_type": "primary contest page",
+    "supported_claim_ids": [
+      "CLM-1206"
+    ],
+    "title": "ICCAD2026 official contest page",
+    "type": "primary contest page",
+    "url": "https://www.iccad-contest.org/2026/",
+    "version": "dynamic official page accessed2026-10-16"
+  },
+  {
+    "access": "full",
+    "access_level": "full",
+    "claims": [
+      "CLM-1201",
+      "CLM-1202",
+      "CLM-1204"
+    ],
+    "code_sha256": "261f1837df618fab028bf0c21359daf65e49cbb1ff4585d8a69426f7ce0c7773",
+    "current_job_access": "historical_released_record_only_not_reopened",
+    "id": "A03",
+    "limitations": "Own finite model, 480 random operation cases plus named controls and fixed DAG; no real timing/byte or independent scientific verification. Current cycle: original not reopened or executed; historical numerical checks not rerun.",
+    "locator": "Exact Python fence/stdout fence plus hash statements and interpretation",
+    "provenance": "Retained from own released source ledger SUB-017839376433acd2ef83e1cf06276f1d54e9af5740eb2561a0b9b928a404a6ae; prior access/locators/hashes are historical assertions, not a current independent reopening.",
+    "publication_date": "2026-10-16",
+    "published": "2026-10-16",
+    "retrieved_utc": "2026-10-16",
+    "source_type": "own analytical fixture",
+    "stdout_sha256": "cfafe14f1fdb83656ff536d3114ab933d83126fdfe403342d4609abe31cb8be5",
+    "supported_claim_ids": [
+      "CLM-1201",
+      "CLM-1202",
+      "CLM-1204"
+    ],
+    "title": "Own treatment-equivalence, boundary and logical-lifetime replay",
+    "type": "own analytical fixture",
+    "url": "experiment-plan.md#a03-public-analytical-replay",
+    "version": "261f1837df618fab028bf0c21359daf65e49cbb1ff4585d8a69426f7ce0c7773"
+  },
+  {
+    "access_level": "full",
+    "current_job_access": "fresh_selected_read",
+    "id": "R27",
+    "inspected_sha256": {
+      "MTBDD.scala": "8376fe1819957176d4d794c5229ed588f63b636fc111fb5d11d5d0c2393bb846",
+      "MTBDDFactory.scala": "8faac52d6d9923365e4d825285e3798fd513cffb1163e01bd282f286abc9747a",
+      "VCache.java": "c2c9fb5cf4d1ac6152a997028d896eee8f30ec2b1cbb31518b8396baeada408b"
+    },
+    "limitations": "Selected source only, downloaded for reading, never executed. Generic equality/settings need exact STA adaptation; no complete delegated BDD proof, compiler audit or performance reproduction. No source copies published.",
+    "locator": "Raw one-based src/main/scala/edu/cmu/cs/varex/mtbdd/MTBDD.scala17\u201338; MTBDDFactory.scala15\u201318,413\u2013469,484\u2013507,551\u2013598; src/main/java/edu/cmu/cs/varex/VCache.java31\u201361",
+    "publication_date": "unknown",
+    "raw_url_prefix": "https://raw.githubusercontent.com/chupanw/vbc/1221ef110e2b46951ab01319e97fa5d7dd84a724/",
+    "retrieved_utc": "2026-10-16",
+    "source_type": "primary source code",
+    "supported_claim_ids": [
+      "CLM-1302"
+    ],
+    "title": "VarexC delegated MTBDD canonicalization and application",
+    "url": "https://github.com/chupanw/vbc/tree/1221ef110e2b46951ab01319e97fa5d7dd84a724",
+    "version": "1221ef110e2b46951ab01319e97fa5d7dd84a724"
+  },
+  {
+    "access_level": "full",
+    "current_job_access": "fresh_selected_read",
+    "id": "R28",
+    "inspected_sha256": {
+      "GlobalSizingPolicy.cc": "972210edf726ee8edc966dbef75e6513d313f07049e1caa0f6588f1893fd297a",
+      "LRSubproblem.cc": "cefdd8de81a05335e1d669c44c89908a2287a27bf235aad87c7b8fea596f7d3e",
+      "LRSubproblem.hh": "8a63c99622eee2ec2696673e214bb5a4da55b8aa9cdf903de21a3884bface9d6",
+      "OptimizerTypes.hh": "759efc4bbe3c9c8716a72dfc5fbe9cb4c2c2ddea93dbab83519c59f6c419883f",
+      "SizeUpCandidate.cc": "d1b78dc2ba651573624ea0dad9514bc71ce7f3daf307841d6bd879cd0188de72"
+    },
+    "limitations": "Bounded interface/caller read, no whole-program absence proof, worker-purity certificate, EDA execution, netlist/PDK access or controlled comparison. Local scoring is not exhaustive full-world exact analysis. SizeUpCandidate.cc read for context only.",
+    "locator": "Raw one-based src/rsz/src/LRSubproblem.hh30\u201350,114\u2013154; LRSubproblem.cc423\u2013469,563\u2013605; policy/GlobalSizingPolicy.cc683\u2013810,1029\u20131053; OptimizerTypes.hh216\u2013239,319\u2013360",
+    "publication_date": "unknown",
+    "raw_url_prefix": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/3549d60529517dc82deb7f0ff769345e9a424911/",
+    "retrieved_utc": "2026-10-16",
+    "source_type": "primary source code",
+    "supported_claim_ids": [
+      "CLM-1303"
+    ],
+    "title": "OpenROAD global sizing frozen snapshot, local cost and decision consumer",
+    "url": "https://github.com/The-OpenROAD-Project/OpenROAD/tree/3549d60529517dc82deb7f0ff769345e9a424911",
+    "version": "3549d60529517dc82deb7f0ff769345e9a424911"
+  },
+  {
+    "access_level": "full",
+    "current_job_access": "fresh_selected_read",
+    "id": "R29",
+    "limitations": "Selected method passages. Integer/table setting and fixed-index assumptions; no STA theorem, proof replay or performance transfer. Backward-reference neighborhood inspected from official metadata page, not all cited works reopened.",
+    "locator": "Physical pp16\u201318 sections5.3,6.1\u20136.3; web-rendered953\u20131084",
+    "publication_date": "2025-06-25",
+    "retrieved_utc": "2026-10-16",
+    "source_type": "primary paper",
+    "supported_claim_ids": [
+      "CLM-1304"
+    ],
+    "title": "Incremental Computing by Differential Execution",
+    "url": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol333-ecoop2025/LIPIcs.ECOOP.2025.20/LIPIcs.ECOOP.2025.20.pdf",
+    "version": "DOI10.4230/LIPIcs.ECOOP.2025.20"
+  },
+  {
+    "access_level": "full",
+    "current_job_access": "fresh_selected_read",
+    "id": "R30",
+    "limitations": "Selected full-text passages, no Lean proof/code execution or EDA mapping. DOI endpoint initially403; author arXiv full text used. No reported performance imported. Zenodo artifact metadata only; archives/images not downloaded.",
+    "locator": "Sections4.3/4.4 rendered341\u2013379; section5.3 rendered482\u2013525; static-shape context404\u2013408",
+    "publication_date": "2026-02-24",
+    "retrieved_utc": "2026-10-16",
+    "source_type": "primary author preprint",
+    "supported_claim_ids": [
+      "CLM-1304"
+    ],
+    "title": "DeCo: A Core Calculus for Incremental Functional Programming with Generic Data Types",
+    "url": "https://arxiv.org/html/2602.20866v1",
+    "version": "arXiv2602.20866v1; related DOI10.1145/3798264"
+  },
+  {
+    "access_level": "full",
+    "current_job_access": "fresh_selected_read",
+    "id": "R31",
+    "limitations": "Selected representation passages only; no EDA implementation or memory optimality theorem imported. Existing map/DAG tradeoffs reinforce baseline choice.",
+    "locator": "Physical pp4\u20135 sections3.2.1\u20133.3; rendered391\u2013495",
+    "publication_date": "2014",
+    "retrieved_utc": "2026-10-16",
+    "source_type": "primary author manuscript",
+    "supported_claim_ids": [
+      "CLM-1302"
+    ],
+    "title": "Variational Data Structures: Exploring Tradeoffs in Computing with Variability",
+    "url": "https://www.se.cs.uni-saarland.de/publications/docs/WKE%2B14.pdf",
+    "version": "2014 14-page author PDF"
+  },
+  {
+    "access_level": "full",
+    "current_job_access": "fresh_selected_read",
+    "id": "R32",
+    "limitations": "Winner identities/context only. Targeted method searches did not authenticate winner algorithms; no claim algorithms absent.",
+    "locator": "Contest Winners rendered3\u201310; resources13\u201318",
+    "publication_date": "2026",
+    "retrieved_utc": "2026-10-16",
+    "source_type": "primary contest page",
+    "supported_claim_ids": [
+      "CLM-1305"
+    ],
+    "title": "ISPD2026 official contest results",
+    "url": "https://www.ispd.cc/contests/26/index.html",
+    "version": "Dynamic page retrieved2026-10-16"
+  },
+  {
+    "access_level": "full",
+    "current_job_access": "fresh_selected_read",
+    "id": "R33",
+    "limitations": "Current context, not winner-method or full-output demand evidence.",
+    "locator": "Contest Problems rendered37\u201346; schedule47\u201353",
+    "publication_date": "2026",
+    "retrieved_utc": "2026-10-16",
+    "source_type": "primary contest page",
+    "supported_claim_ids": [
+      "CLM-1305"
+    ],
+    "title": "2026 CAD Contest at ICCAD official scope",
+    "url": "https://www.iccad-contest.org/2026/",
+    "version": "Dynamic page retrieved2026-10-16"
+  },
+  {
+    "access_level": "metadata",
+    "current_job_access": "fresh_selected_read",
+    "id": "R34",
+    "limitations": "Full source not accessed. No method or numerical claim supported by this record. Classical demand lead remains unresolved.",
+    "locator": "Search metadata/snippet only; direct PDF opens returned internal errors",
+    "publication_date": "2013",
+    "retrieved_utc": "2026-10-16",
+    "source_type": "primary paper lead",
+    "supported_claim_ids": [],
+    "title": "High-Performance Gate Sizing with a Signoff Timer",
+    "url": "https://web.eecs.umich.edu/~imarkov/pubs/conf/iccad13-gate.pdf",
+    "version": "ICCAD2013 author URL"
+  },
+  {
+    "access_level": "full",
+    "code_sha256": "d01f95746244e24b4cde2e168c4ea446f6bdadf25bfa64cdf45781ebb8405529",
+    "current_job_access": "fresh_selected_read",
+    "id": "A04",
+    "limitations": "Own finite integer world-record model only; indexed treatments intentionally share transplant. Not independent verification, primitive count saving, bytes, STA measurement or hidden-dependency certificate.",
+    "locator": "Exact Python/stdout fences and extraction command; parameters and limitation paragraphs",
+    "parameters": {
+      "events": [
+        "rc=3",
+        "toggle ann0 None/5",
+        "pin=4"
+      ],
+      "initial_pin": 3,
+      "initial_rc": 2,
+      "masks": "all n-bit masks",
+      "n_range": [
+        1,
+        6
+      ],
+      "named_mask": 240,
+      "named_worlds": 8,
+      "present_annotation": 5
+    },
+    "publication_date": "2026-10-16",
+    "retrieved_utc": "2026-10-16",
+    "source_type": "own analytical fixture",
+    "stdout_sha256": "17248346f6f06b0b0febaecad0d8d2a3557ac5f0069130e358db1f9c9f6171c3",
+    "supported_claim_ids": [
+      "CLM-1301"
+    ],
+    "title": "Own value/provenance partition and exact-invalidation transplant fixture",
+    "url": "experiment-plan.md#a04-public-analytical-replay",
+    "version": "d01f95746244e24b4cde2e168c4ea446f6bdadf25bfa64cdf45781ebb8405529"
+  }
+]

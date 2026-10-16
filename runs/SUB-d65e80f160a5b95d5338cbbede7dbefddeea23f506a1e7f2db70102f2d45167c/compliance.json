@@ -1,0 +1,107 @@
+{
+  "schema": 1,
+  "role": "challenger",
+  "actor_id": "ChatGPT-C05-TIMING-B04-EDA-0010",
+  "session_id": "d8091c5d-03ed-43c0-911f-86081135ec73",
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "packet_sha256": "995463cb4ddd44a2e9b6a97a44840d169e30ff0e77ef842f13e28d70176fd732",
+  "job_id": "108ffaf9-050b-4352-b9ad-d6ded203a030",
+  "read_releases": [
+    "SUB-e59222b261fdda904cd66c5a892de454e5dbcbabf4b3fa142896b356fd1ce075",
+    "SUB-017839376433acd2ef83e1cf06276f1d54e9af5740eb2561a0b9b928a404a6ae",
+    "SUB-a8da4b6a1a7928ee94f15ee0ec17693629258c346fc2b559b406e2dca9fd3327"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0
+  },
+  "rules": {
+    "inputs": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "search-log.md"
+      ],
+      "limits": "Released filename inventory is not content reading. Initial nonexistent own-harness path corrected inside policy only. Batched truncation targeted for critical current inputs."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md",
+        "JOB.json released_inputs"
+      ],
+      "limits": "Policy separation, not OS-enforced confinement or independently attested backend model. No parent transcript or scientific messages read."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "release/",
+        "submissions/",
+        "result.json"
+      ],
+      "limits": "Only own job output/release/submission/result files; no checkout changes."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "sources.json",
+        "search-log.md"
+      ],
+      "limits": "Selected passages, explicit abstract-only lexical tracing, incomplete winner methods and transitive source audit."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "challenges.md",
+        "independent-estimate.md"
+      ],
+      "limits": "No independent numerical replay; A04 figures remain author reports. No STA gain or universal impossibility."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "experiment-consent.json"
+      ],
+      "limits": "Pending is not agree; only own exact-target signature. No abandonment vote."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "workflow.json",
+        "policy/docs/INNOVATION-BATCH-0004.md"
+      ],
+      "limits": "Source reading/hash checks only; no analytical test or downloaded-code execution. No EDA/training/GPU/remote/paid experiments."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "challenges.md Direction, task position and disposition"
+      ],
+      "limits": "Both drift scores zero preserve anchor, not merit approval; MCMM source not adopted into this topic."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "policy/docs/SELF-SUBMISSION.md",
+        "workflow.json"
+      ],
+      "limits": "Trusted standalone freeze/verify; full-repository validation delegated by job contract to coordinator, no PR merge or self-approval."
+    }
+  },
+  "operations": [
+    "Read assigned JOB.json and prompt.txt first.",
+    "Read common policy and only challenger harness; corrected nonexistent harness filename through policy-only inventory.",
+    "Inventory released shared filenames; read only three named released content sets. Current null forecast explicitly exposed.",
+    "Independent source retrieval and searches as search-log.md; pinned selected raw source hashes in sources.json.",
+    "Static A04 review only; no foreign code execution or new numerical fixture.",
+    "Write own English release artifacts, parse JSON and validate own compliance against exact allowed SUB IDs.",
+    "Self-freeze and verify through trusted policy/scripts/role_submission.py; write result.json after success."
+  ],
+  "incidents": [],
+  "observability": "Self-authored public activity ledger, not a complete tool trace or evidence of absent undisclosed actions."
+}

@@ -1,0 +1,127 @@
+{
+  "schema": 1,
+  "role": "verifier",
+  "actor_id": "ChatGPT-V05-TIMING-B04-EDA-0010",
+  "session_id": "df362a1f-1d66-4a02-86a9-92e52de6fad7",
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "packet_sha256": "68a627d6437f4a4b696d1c878d6909033d8eecf7d7ae2a69e0cc24b055f74798",
+  "job_id": "e95a9088-9b0b-4aad-bd48-e5d5210b6755",
+  "read_releases": [
+    "SUB-e59222b261fdda904cd66c5a892de454e5dbcbabf4b3fa142896b356fd1ce075",
+    "SUB-d65e80f160a5b95d5338cbbede7dbefddeea23f506a1e7f2db70102f2d45167c",
+    "SUB-017839376433acd2ef83e1cf06276f1d54e9af5740eb2561a0b9b928a404a6ae",
+    "SUB-7f1fa5d72cb3dbe99558c18a4edc83e596e157506a358070f449d2777b8ebc3b",
+    "SUB-b64d239e50bb39771d2c3f838b8b5874c19a640fe6e897f1c9e5b10b004dbc93",
+    "SUB-64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c",
+    "SUB-af311c9ae6b091db1fdb94a8bd262fe027a34d25a761c2e072c59c2d0497d01d"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0
+  },
+  "rules": {
+    "inputs": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md",
+        "Own job-local build_release.py and trusted freeze/verify operations"
+      ],
+      "limits": "Self-authored ledger, not proof of absent unseen activity. No checkout/private material read, role messages sent or subagents spawned. Only own release writes; no actual execution votes or resources invented."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md",
+        "Own job-local build_release.py and trusted freeze/verify operations"
+      ],
+      "limits": "Self-authored ledger, not proof of absent unseen activity. No checkout/private material read, role messages sent or subagents spawned. Only own release writes; no actual execution votes or resources invented."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md",
+        "Own job-local build_release.py and trusted freeze/verify operations"
+      ],
+      "limits": "Self-authored ledger, not proof of absent unseen activity. No checkout/private material read, role messages sent or subagents spawned. Only own release writes; no actual execution votes or resources invented."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md",
+        "Own job-local build_release.py and trusted freeze/verify operations"
+      ],
+      "limits": "Self-authored ledger, not proof of absent unseen activity. No checkout/private material read, role messages sent or subagents spawned. Only own release writes; no actual execution votes or resources invented."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md",
+        "Own job-local build_release.py and trusted freeze/verify operations"
+      ],
+      "limits": "Self-authored ledger, not proof of absent unseen activity. No checkout/private material read, role messages sent or subagents spawned. Only own release writes; no actual execution votes or resources invented."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md",
+        "Own job-local build_release.py and trusted freeze/verify operations"
+      ],
+      "limits": "Self-authored ledger, not proof of absent unseen activity. No checkout/private material read, role messages sent or subagents spawned. Only own release writes; no actual execution votes or resources invented."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md",
+        "Own job-local build_release.py and trusted freeze/verify operations"
+      ],
+      "limits": "Self-authored ledger, not proof of absent unseen activity. No checkout/private material read, role messages sent or subagents spawned. Only own release writes; no actual execution votes or resources invented."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md",
+        "Own job-local build_release.py and trusted freeze/verify operations"
+      ],
+      "limits": "Self-authored ledger, not proof of absent unseen activity. No checkout/private material read, role messages sent or subagents spawned. Only own release writes; no actual execution votes or resources invented."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md",
+        "Own job-local build_release.py and trusted freeze/verify operations"
+      ],
+      "limits": "Self-authored ledger, not proof of absent unseen activity. No checkout/private material read, role messages sent or subagents spawned. Only own release writes; no actual execution votes or resources invented."
+    }
+  },
+  "operations": [
+    "First read exact JOB.json and prompt.txt; then supplied policy/common docs and verifier harness only. A lowercase harness path and plural directory lookup failed; correct VERIFIER.md read.",
+    "Read exact listed shared releases partially/targeted, current P/C substantive files and historical handed-over PR67 allegations/manifests. Long aggregate output truncations disclosed.",
+    "Independently reopen V01-V09 and official ISPD2026/ICCAD2026 pages; raw urllib reads are data-only. Raw hash/line/source checks and tasklist hash; trusted project.py digest.",
+    "Write only own job build_release.py, release/verification.md, verification.json, workflow.json and compliance.json. Self-freeze/verify then result.json. No own analytical numerical or EDA execution."
+  ],
+  "incidents": [],
+  "observability": "Self-authored public activity ledger, not a complete tool trace or evidence of absent undisclosed actions."
+}

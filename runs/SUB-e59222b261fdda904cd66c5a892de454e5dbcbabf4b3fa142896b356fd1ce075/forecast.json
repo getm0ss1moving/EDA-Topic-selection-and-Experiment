@@ -1,0 +1,21 @@
+{
+  "actual_resource_allocation": null,
+  "assumptions": [
+    "All requested worlds and complete outputs remain required",
+    "Same keys/information/cap/precision and full cost charged",
+    "Present intervention has no established useful residual delta",
+    "No numerical performance forecast follows from A04 world-record/index counts"
+  ],
+  "base": null,
+  "baseline_source": "Strongest fair complete-output B0-B5 after actual allocation; no measured baseline",
+  "calibration_plan": "Dormant while parked. Evidence S1/S2 then actual diagnostic grant, D1 recorder,D2 correctness,separate baseline-only D3 census and D4 practical threshold before Q outcomes.",
+  "confidence": null,
+  "direction": "lower",
+  "kind": "forecast_not_measurement",
+  "measurements": "No STA/EDA/training or model invocation measurements in this job.",
+  "metric": "Total elapsed time to identical complete candidate outputs, selection, restore and reference checking",
+  "optimistic": null,
+  "pessimistic": null,
+  "practical_effect_threshold": null,
+  "unit": "seconds and paired relative reduction"
+}

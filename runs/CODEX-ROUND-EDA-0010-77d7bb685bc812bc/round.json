@@ -1,0 +1,118 @@
+{
+  "compliance_audit": "runs/SUB-2872435ae5bc9d693c101e73fa71f0ba2a5c7c5381281741b4461cb9bd92ab17",
+  "compliance_gate": "nonblocking_findings",
+  "decision": "park",
+  "descriptor_manifest": "runs/CODEX-ROUND-EDA-0010-77d7bb685bc812bc/DESCRIPTORS.json",
+  "mechanical_releases": [],
+  "registrations": {
+    "sessions": [
+      {
+        "actor_id": "ChatGPT-C04-PHYSICAL-B04-EDA-0009-REPLACEMENT-1-ee3d1e1c",
+        "github_login": "getm0ss1moving (transport account only; not an independent reviewer)",
+        "independence_attestation": "Separate role inputs and own files only; shared OS account, policy isolation.",
+        "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+        "model": "gpt-6-astra",
+        "operator": "getm0ss1moving",
+        "packet_sha256": "7388ffba922f42c14f138e2e23ff1969b83be0f5a238f1f423abf1004bc6ebb4",
+        "platform": "OpenAI Codex",
+        "role": "challenger",
+        "session_id": "1f323593-6e87-4aef-b624-b0c134c28632",
+        "session_kind": "logical file-mediated seat; fresh isolated-input execution per job",
+        "topic": "EDA-0009"
+      },
+      {
+        "actor_id": "ChatGPT-P04-PHYSICAL-B04-EDA-0009-REPLACEMENT-1-5b0f12cd",
+        "github_login": "getm0ss1moving (transport account only; not an independent reviewer)",
+        "independence_attestation": "Separate role inputs and own files only; shared OS account, policy isolation.",
+        "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+        "model": "gpt-6.1-sol",
+        "operator": "getm0ss1moving",
+        "packet_sha256": "3d29add2098d5982cd75816f9f6db2f417fa0e03703c69708f9ad91afe7c12b9",
+        "platform": "OpenAI Codex",
+        "role": "proposer",
+        "session_id": "8492d4d4-8b51-4d76-9309-7af2622f4674",
+        "session_kind": "logical file-mediated seat; fresh isolated-input execution per job",
+        "topic": "EDA-0009"
+      },
+      {
+        "actor_id": "ChatGPT-V04-PHYSICAL-B04-EDA-0009-REPLACEMENT-1-9833ceb3",
+        "github_login": "getm0ss1moving (transport account only; not an independent reviewer)",
+        "independence_attestation": "Separate role inputs and own files only; shared OS account, policy isolation.",
+        "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+        "model": "gpt-6.1-sol",
+        "operator": "getm0ss1moving",
+        "packet_sha256": "6b2ccb7eb7eb5483b6bbbea003e63bd977fdc0f37ba07f5d306a0516990323df",
+        "platform": "OpenAI Codex",
+        "role": "verifier",
+        "session_id": "802c4f6c-18f4-4dc0-adf8-9deb15979b2c",
+        "session_kind": "logical file-mediated seat; fresh isolated-input execution per job",
+        "topic": "EDA-0009"
+      },
+      {
+        "actor_id": "ChatGPT-C05-TIMING-B04-EDA-0010",
+        "github_login": "getm0ss1moving (transport account only; not an independent reviewer)",
+        "independence_attestation": "Separate role inputs and own files only; shared OS account, policy isolation.",
+        "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+        "model": "gpt-6-astra",
+        "operator": "getm0ss1moving",
+        "packet_sha256": "995463cb4ddd44a2e9b6a97a44840d169e30ff0e77ef842f13e28d70176fd732",
+        "platform": "OpenAI Codex",
+        "role": "challenger",
+        "session_id": "d8091c5d-03ed-43c0-911f-86081135ec73",
+        "session_kind": "logical file-mediated seat; fresh isolated-input execution per job",
+        "topic": "EDA-0010"
+      },
+      {
+        "actor_id": "ChatGPT-P05-TIMING-B04-EDA-0010",
+        "github_login": "getm0ss1moving (transport account only; not an independent reviewer)",
+        "independence_attestation": "Separate role inputs and own files only; shared OS account, policy isolation.",
+        "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+        "model": "gpt-6.1-sol",
+        "operator": "getm0ss1moving",
+        "packet_sha256": "9b5b108fa82b7ce61156daf3d3223acd7d3fccaefaa90b40e805e10aa325067f",
+        "platform": "OpenAI Codex",
+        "role": "proposer",
+        "session_id": "94d6bb60-04c2-4b62-a5f8-682feba5fc5c",
+        "session_kind": "logical file-mediated seat; fresh isolated-input execution per job",
+        "topic": "EDA-0010"
+      },
+      {
+        "actor_id": "ChatGPT-V05-TIMING-B04-EDA-0010",
+        "github_login": "getm0ss1moving (transport account only; not an independent reviewer)",
+        "independence_attestation": "Separate role inputs and own files only; shared OS account, policy isolation.",
+        "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+        "model": "gpt-6.1-sol",
+        "operator": "getm0ss1moving",
+        "packet_sha256": "68a627d6437f4a4b696d1c878d6909033d8eecf7d7ae2a69e0cc24b055f74798",
+        "platform": "OpenAI Codex",
+        "role": "verifier",
+        "session_id": "df362a1f-1d66-4a02-86a9-92e52de6fad7",
+        "session_kind": "logical file-mediated seat; fresh isolated-input execution per job",
+        "topic": "EDA-0010"
+      },
+      {
+        "actor_id": "ChatGPT-B04-PROTOCOL-D05-EDA-0010-R3",
+        "github_login": "getm0ss1moving (transport only)",
+        "independence_attestation": "Fresh input-only execution distinct from all three scientific authors; policy isolation.",
+        "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+        "model": "gpt-6.1-sol",
+        "operator": "getm0ss1moving",
+        "packet_sha256": "dcab81e2d04c3b32ac320853c77bc52c0e927561540952ffea562d006c2e35ab",
+        "platform": "OpenAI Codex",
+        "role": "verifier",
+        "session_id": "6110ac62-37bf-4990-883a-ec999206a78f",
+        "session_kind": "independent governance protocol audit; not scientific acceptance",
+        "topic": "EDA-0010"
+      }
+    ]
+  },
+  "releases": {
+    "challenger": "runs/SUB-d65e80f160a5b95d5338cbbede7dbefddeea23f506a1e7f2db70102f2d45167c",
+    "proposer": "runs/SUB-e59222b261fdda904cd66c5a892de454e5dbcbabf4b3fa142896b356fd1ce075",
+    "verifier": "runs/SUB-77d7bb685bc812bcb6e3e2a5a357478f7f2a743ad0dcba6a249962e0b163af95"
+  },
+  "round": 3,
+  "source_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "topic": "EDA-0010",
+  "verification_release": "SUB-77d7bb685bc812bcb6e3e2a5a357478f7f2a743ad0dcba6a249962e0b163af95"
+}

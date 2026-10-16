@@ -1,0 +1,165 @@
+{
+  "activity": {
+    "agent_messages_sent": 0,
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "new_eda_runs": 0,
+    "new_paid_api_calls": 0,
+    "subagents_spawned": 0,
+    "training_runs": 0
+  },
+  "actor_id": "ChatGPT-P05-TIMING-B04-EDA-0010",
+  "incidents": [],
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "job_id": "f02dc953-9c3e-4d35-9ccc-3db9a81bba55",
+  "observability": "Self-authored public activity ledger, not a complete tool trace or evidence of absent undisclosed actions. Logical identity is supplied by JOB; backend model/isolation are not independently attested. No private reasoning, credentials or foreign scratch included.",
+  "operations": [
+    {
+      "action": "read_assignment_first",
+      "paths": [
+        "JOB.json",
+        "prompt.txt"
+      ]
+    },
+    {
+      "action": "read_common_policy_and_only_assigned_harness",
+      "note": "Scoped rg --files policy only after assignment/common-policy reads; no initial checkout/home discovery.",
+      "paths": [
+        "policy/docs/ROLE-COMPLIANCE.md",
+        "policy/docs/INNOVATION-BATCH-0004.md",
+        "policy/docs/CHARTER.md",
+        "policy/docs/WORKFLOW.md",
+        "policy/docs/EVIDENCE.md",
+        "policy/docs/ISOLATION.md",
+        "policy/docs/CODEX-AUTOMATION.md",
+        "policy/docs/INNOVATION-STRATEGY.md",
+        "policy/docs/SELF-SUBMISSION.md",
+        "policy/harness/PROPOSER.md",
+        "policy/domains/D05/brief.json",
+        "policy/config/research-brief.json"
+      ]
+    },
+    {
+      "action": "read_released_inputs",
+      "note": "Own previous dossier, released matched challenge/ruling, earlier own manifest. shared/predecessor.json mapping only; predecessor release contents not read.",
+      "release_ids": [
+        "SUB-017839376433acd2ef83e1cf06276f1d54e9af5740eb2561a0b9b928a404a6ae",
+        "SUB-a8da4b6a1a7928ee94f15ee0ec17693629258c346fc2b559b406e2dca9fd3327",
+        "SUB-1745834c07cf7e42c0a3756f0da807ddba9a85495361276d8b9e21390cf2f1b0",
+        "SUB-b4a0830fd75dd9263101adcdda8a60e7ed86f687e08723fe63c0f3e83046ffae"
+      ]
+    },
+    {
+      "action": "independent_external_research",
+      "note": "Public trees/raw source/PDF/HTML only. Downloaded source never executed. No private role material recovered through external search.",
+      "reference": "search-log.md; sources.json R27-R34"
+    },
+    {
+      "action": "tiny_own_analytical_check",
+      "note": "Own Python integer model only. Initial version rerun after unused import removal; public final bytes/stdout tested.",
+      "reference": "experiment-plan.md A04 exact code/parameters/stdout and hashes"
+    },
+    {
+      "action": "write_own_release",
+      "note": "Only own allowlisted research artifacts plus own source-reading/script scratch; no checkout mutations.",
+      "paths": [
+        "release/",
+        "/tmp/eda-d05-f02dc953-source/"
+      ]
+    },
+    {
+      "action": "local_validation_and_self_freeze",
+      "note": "Perform trusted standalone freeze/verify and ledger identity check; coordinator owns full repository validation/publication. result.json written after success.",
+      "reference": "workflow.json; role_submission.py freeze then verify"
+    }
+  ],
+  "packet_sha256": "9b5b108fa82b7ce61156daf3d3223acd7d3fccaefaa90b40e805e10aa325067f",
+  "read_releases": [
+    "SUB-017839376433acd2ef83e1cf06276f1d54e9af5740eb2561a0b9b928a404a6ae",
+    "SUB-a8da4b6a1a7928ee94f15ee0ec17693629258c346fc2b559b406e2dca9fd3327",
+    "SUB-1745834c07cf7e42c0a3756f0da807ddba9a85495361276d8b9e21390cf2f1b0",
+    "SUB-b4a0830fd75dd9263101adcdda8a60e7ed86f687e08723fe63c0f3e83046ffae"
+  ],
+  "role": "proposer",
+  "rules": {
+    "claims": {
+      "evidence": [
+        "proposal.md Current claims",
+        "experiment-plan.md A04 limitations",
+        "forecast.json"
+      ],
+      "limits": "Self-authored ledger only; no complete OS/network/backend audit and no proof of absent undisclosed activity. Current source/claim limits remain explicit in the cited records.",
+      "status": "no_violation_disclosed"
+    },
+    "consent": {
+      "evidence": [
+        "experiment-consent.json",
+        "tasklist.md Binding cycle3 amendments"
+      ],
+      "limits": "Self-authored ledger only; no complete OS/network/backend audit and no proof of absent undisclosed activity. Current source/claim limits remain explicit in the cited records.",
+      "status": "no_violation_disclosed"
+    },
+    "direction": {
+      "evidence": [
+        "direction-control.json anchor/penalties",
+        "proposal.md Frozen contract"
+      ],
+      "limits": "Self-authored ledger only; no complete OS/network/backend audit and no proof of absent undisclosed activity. Current source/claim limits remain explicit in the cited records.",
+      "status": "no_violation_disclosed"
+    },
+    "evidence": {
+      "evidence": [
+        "sources.json R27-R34,A04",
+        "search-log.md queries/access failures"
+      ],
+      "limits": "Self-authored ledger only; no complete OS/network/backend audit and no proof of absent undisclosed activity. Current source/claim limits remain explicit in the cited records.",
+      "status": "no_violation_disclosed"
+    },
+    "inputs": {
+      "evidence": [
+        "JOB.json",
+        "prompt.txt",
+        "search-log.md final historical-input paragraph"
+      ],
+      "limits": "Self-authored ledger only; no complete OS/network/backend audit and no proof of absent undisclosed activity. Current source/claim limits remain explicit in the cited records. Long batched reads truncated in places; targeted decision-critical rereads performed. No full historical source inspection claimed.",
+      "status": "no_violation_disclosed"
+    },
+    "isolation": {
+      "evidence": [
+        "search-log.md",
+        "workflow.json validation_scope"
+      ],
+      "limits": "Self-authored ledger only; no complete OS/network/backend audit and no proof of absent undisclosed activity. Current source/claim limits remain explicit in the cited records.",
+      "status": "no_violation_disclosed"
+    },
+    "publication": {
+      "evidence": [
+        "workflow.json validation_scope",
+        "policy/scripts/role_submission.py freeze/verify",
+        "result.json after successful freeze"
+      ],
+      "limits": "Self-authored ledger only; no complete OS/network/backend audit and no proof of absent undisclosed activity. Current source/claim limits remain explicit in the cited records.",
+      "status": "no_violation_disclosed"
+    },
+    "resources": {
+      "evidence": [
+        "JOB.json/prompt.txt",
+        "forecast.json actual_resource_allocation=null",
+        "experiment-plan.md A04 own standard-library scope"
+      ],
+      "limits": "Self-authored ledger only; no complete OS/network/backend audit and no proof of absent undisclosed activity. Current source/claim limits remain explicit in the cited records.",
+      "status": "no_violation_disclosed"
+    },
+    "writes": {
+      "evidence": [
+        "release/ role-owned allowlist",
+        "/tmp/eda-d05-f02dc953-source/ own source-reading copies and own scripts",
+        "result.json after freeze"
+      ],
+      "limits": "Self-authored ledger only; no complete OS/network/backend audit and no proof of absent undisclosed activity. Current source/claim limits remain explicit in the cited records.",
+      "status": "no_violation_disclosed"
+    }
+  },
+  "schema": 1,
+  "session_id": "94d6bb60-04c2-4b62-a5f8-682feba5fc5c"
+}

@@ -1,0 +1,20 @@
+{
+  "actor_id": "ChatGPT-C05-TIMING-B04-EDA-0010",
+  "files": {
+    "challenges.md": "b0839e91b929c685e9c4a02b144c2a81457324143b4ebad697655156bfd42166",
+    "compliance.json": "c24c2e342eac64bc4ccb2efd6926974c36e2e379077db66e19dd58e6b708295a",
+    "experiment-consent.json": "6f48534f3692b55b265f5c5f586cec2e51a77ba81eac61137d192718387a4c52",
+    "independent-estimate.md": "283b03a428d67f927b823551977d0bc3933e5ebb8cf14c0e0b9b0e2639bf72eb",
+    "prior-art.csv": "f1efa838fd81f2d2e26c3500eeda59a8010c61aef40a3d2ff913c8f5ab74e34a",
+    "search-log.md": "fdc25607954113ac8382bd8e4e9b80cf9e86efb8ced8ec8e4b512f1f41cae66a",
+    "sources.json": "8834b6f943e095041869f1dc1a1d22a7f4c3ba8ade0e7b0c7603f69dd1629df6",
+    "tasklist.md": "d2ecc6a0dcc647a381193e051ee42450cd6083c5448e72df861cc065e8484879",
+    "workflow.json": "018e9ac741e6f5aacdcf0cbe3cad7d53334e7a2b33dbab8025089abfe0c8790b"
+  },
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "packet_sha256": "995463cb4ddd44a2e9b6a97a44840d169e30ff0e77ef842f13e28d70176fd732",
+  "role": "challenger",
+  "schema": 1,
+  "session_id": "d8091c5d-03ed-43c0-911f-86081135ec73",
+  "topic": "EDA-0010"
+}

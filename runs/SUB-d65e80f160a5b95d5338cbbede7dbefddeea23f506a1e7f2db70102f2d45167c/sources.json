@@ -1,0 +1,175 @@
+[
+  {
+    "id": "C31",
+    "title": "VarexC MTBDDFactory",
+    "url": "https://raw.githubusercontent.com/chupanw/vbc/1221ef110e2b46951ab01319e97fa5d7dd84a724/src/main/scala/edu/cmu/cs/varex/mtbdd/MTBDDFactory.scala",
+    "source_type": "primary source code",
+    "publication_date": "unknown",
+    "version": "1221ef110e2b46951ab01319e97fa5d7dd84a724",
+    "access_level": "full",
+    "retrieved_utc": "2026-10-16",
+    "locator": "Raw one-based413-469,484-507,551-598",
+    "supported_claim_ids": [
+      "CLM-1302",
+      "OBJ-1301"
+    ],
+    "limitations": "Selected functions only; no build or execution; generic equality is not an exact STA adapter.",
+    "sha256": "8faac52d6d9923365e4d825285e3798fd513cffb1163e01bd282f286abc9747a"
+  },
+  {
+    "id": "C32",
+    "title": "OpenROAD sizing snapshot/decision and scalar cost consumer",
+    "url": "https://github.com/The-OpenROAD-Project/OpenROAD/tree/3549d60529517dc82deb7f0ff769345e9a424911/src/rsz/src",
+    "source_type": "primary source code",
+    "publication_date": "unknown",
+    "version": "3549d60529517dc82deb7f0ff769345e9a424911",
+    "access_level": "full",
+    "retrieved_utc": "2026-10-16",
+    "locator": "Raw LRSubproblem.hh114-154; LRSubproblem.cc423-469,563-605; policy/GlobalSizingPolicy.cc706-810,1029-1053",
+    "supported_claim_ids": [
+      "CLM-1303",
+      "OBJ-1302"
+    ],
+    "limitations": "Bounded interface/caller inspection, not whole-program demand absence, worker purity, global correctness or measured comparison.",
+    "files": {
+      "LRSubproblem.hh": "8a63c99622eee2ec2696673e214bb5a4da55b8aa9cdf903de21a3884bface9d6",
+      "LRSubproblem.cc": "cefdd8de81a05335e1d669c44c89908a2287a27bf235aad87c7b8fea596f7d3e",
+      "policy/GlobalSizingPolicy.cc": "972210edf726ee8edc966dbef75e6513d313f07049e1caa0f6588f1893fd297a"
+    },
+    "raw_url_prefix": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/3549d60529517dc82deb7f0ff769345e9a424911/src/rsz/src/"
+  },
+  {
+    "id": "C33",
+    "title": "Incremental Computing by Differential Execution",
+    "url": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol333-ecoop2025/LIPIcs.ECOOP.2025.20/LIPIcs.ECOOP.2025.20.pdf",
+    "source_type": "primary paper",
+    "publication_date": "2025-06-25",
+    "version": "10.4230/LIPIcs.ECOOP.2025.20",
+    "access_level": "full",
+    "retrieved_utc": "2026-10-16",
+    "locator": "Physical pp16-17 sections5.3/6.1; rendered953-1018; official metadata reference list",
+    "supported_claim_ids": [
+      "CLM-1304",
+      "OBJ-1301"
+    ],
+    "limitations": "Selected methods only, not all proofs or experiments; general integer imperative semantics not STA. No speedup transferred."
+  },
+  {
+    "id": "C34",
+    "title": "DeCo: A Core Calculus for Incremental Functional Programming with Generic Data Types",
+    "url": "https://arxiv.org/html/2602.20866v1",
+    "source_type": "primary author preprint",
+    "publication_date": "2026-02-24",
+    "version": "arXiv2602.20866v1",
+    "access_level": "full",
+    "retrieved_utc": "2026-10-16",
+    "locator": "Sections4.3 and5.3; rendered341-353,482-500, especially Definition5.2 Law3",
+    "supported_claim_ids": [
+      "CLM-1304",
+      "OBJ-1301",
+      "EXP-C33"
+    ],
+    "limitations": "Selected cache-consistency passages; no Lean proof execution, no EDA theorem."
+  },
+  {
+    "id": "C35",
+    "title": "Differential Execution with Lexical Tracing",
+    "url": "https://2026.splashcon.org/details/oopsla-2026/61/Differential-Execution-with-Lexical-Tracing",
+    "source_type": "official venue abstract",
+    "publication_date": "2026-10-06",
+    "version": "OOPSLA2026; DOI10.1145/3798261",
+    "access_level": "abstract",
+    "retrieved_utc": "2026-10-16",
+    "locator": "Official Abstract rendered202-206 and DOI209; scheduled talk201",
+    "supported_claim_ids": [
+      "EXP-C31",
+      "EXP-C33"
+    ],
+    "limitations": "Author PDF web open failed with internal error. Stable-identity claims are author abstract claims, not inspected proof or STA result.",
+    "attempted_full_text": "https://pl.ipd.kit.edu/papers/paper-lexicaltracing.pdf"
+  },
+  {
+    "id": "C36",
+    "title": "Invited: Post-Placement Buffering and Sizing Contest",
+    "url": "https://vlsicad.ucsd.edu/Publications/Conferences/421/c421.pdf",
+    "source_type": "primary organizer paper",
+    "publication_date": "2026-03",
+    "version": "DOI10.1145/3764386.3779616",
+    "access_level": "full",
+    "retrieved_utc": "2026-10-16",
+    "locator": "Physical p2 sections2.1-2.4; pp3-4 section4; rendered113-194,271-308,348-368",
+    "supported_claim_ids": [
+      "OBJ-1302",
+      "EXP-C34"
+    ],
+    "limitations": "Selected specification/evaluation, not all winner implementations. Weights described may change; no scores treated as bounds or project allocation."
+  },
+  {
+    "id": "C37",
+    "title": "ISPD2027 MCMM Post-CTS Buffering and Sizing and evaluator guide",
+    "url": "https://github.com/ABKGroup/ISPD27-Contest/tree/faef83cacf70fa7923be07816d804ca9c1cef68e",
+    "source_type": "official contest repository",
+    "publication_date": "unknown",
+    "version": "faef83cacf70fa7923be07816d804ca9c1cef68e",
+    "access_level": "full",
+    "retrieved_utc": "2026-10-16",
+    "locator": "Raw README1,17-23; evaluator/README3-8,58-81,131-144,147-176,178-190",
+    "supported_claim_ids": [
+      "OBJ-1302",
+      "EXP-C34"
+    ],
+    "limitations": "README/guide only; full description PDF and evaluator code not inspected or executed. Registration open date is not asserted publication date. Provisional weights. Setup/hold MCMM is outside present anchor.",
+    "files": {
+      "README.md": "c597ba839124d5540c070f902b34d3b471c5c1d65b25d5cc95e5c2df93390bd7",
+      "evaluator/README.md": "03f8ae138bf47ac5f51821f7156211de20ebdf757c728360d64915918958ad2d"
+    },
+    "raw_url_prefix": "https://raw.githubusercontent.com/ABKGroup/ISPD27-Contest/faef83cacf70fa7923be07816d804ca9c1cef68e/",
+    "discovery": "https://ispd.cc/ispd2027/index.php?page=contests official Contest2027 link"
+  },
+  {
+    "id": "C38",
+    "title": "ISPD2026 official contest repository final leaderboard",
+    "url": "https://github.com/ABKGroup/ISPD26-Contest",
+    "source_type": "official contest repository",
+    "publication_date": "2026",
+    "version": "dynamic main retrieved2026-10-16",
+    "access_level": "full",
+    "retrieved_utc": "2026-10-16",
+    "locator": "README Final Submission leaderboard rendered277-290; resource links214-220",
+    "supported_claim_ids": [
+      "EXP-C34"
+    ],
+    "limitations": "Leaderboard/context only; no authenticated winning algorithm inspection. Landing page https://www.ispd.cc/contests/26/index.html currently delegates here. No gain or saturation inferred."
+  },
+  {
+    "id": "C39",
+    "title": "2026 CAD Contest at ICCAD",
+    "url": "https://www.iccad-contest.org/2026/",
+    "source_type": "official contest page",
+    "publication_date": "2026",
+    "version": "dynamic page retrieved2026-10-16",
+    "access_level": "full",
+    "retrieved_utc": "2026-10-16",
+    "locator": "Contest Problems rendered37-46; schedule47-53",
+    "supported_claim_ids": [
+      "EXP-C34"
+    ],
+    "limitations": "Problem titles/schedule only, no full task or winner algorithm audit. Does not establish exact-world timing originality."
+  },
+  {
+    "id": "C40",
+    "title": "IncreGPUSTA: GPU-Accelerated Incremental Static Timing Analysis for Iterative Design Flows",
+    "url": "https://guozz.cn/publication/incregpustaiccad-25/incregpustaiccad-25.pdf",
+    "source_type": "primary author paper",
+    "publication_date": "2025-11",
+    "version": "ICCAD2025 author PDF; DOI10.1109/ICCAD66269.2025.11240636",
+    "access_level": "full",
+    "retrieved_utc": "2026-10-16",
+    "locator": "Physical p3 sectionII greedy buffer gain andIII.A; pp4-6 update/levelization; rendered203-238,286-311,373-451,544-636",
+    "supported_claim_ids": [
+      "OBJ-1301",
+      "EXP-C34"
+    ],
+    "limitations": "Selected methods, not reproduced performance; structural edits, Elmore and GPU cost differ from fixed-topology exact-world contract."
+  }
+]

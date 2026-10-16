@@ -1,0 +1,7 @@
+source_id,task_formulation,mechanism,data,evaluation,assumptions,limitation,overlap,proposed_distinction
+C31,Variational values,Canonical DAG apply and coalescing,Generic values,Source only,Generic equality and variable ordering,Not bit-safe STA by default,Q grouping and sharing,No current residual demonstrated
+C33,Imperative input changes,Differential branch updates and cached states,Integer programs,Selected method only,Typed changes,No STA transfer,Maintenance,Timing-specific extraction unresolved
+C34,Functional incrementalization,Explicit cache type and consistency laws,Generic datatypes,Selected laws only,Change structures,No engine proof,Future cache validity,No current residual demonstrated
+C35,Imperative differential execution,Lexical tracing stable step identity,Abstract only,Not reproduced,Stable lexical trace semantics,Full method inaccessible this turn,Identity stability,Mapping still required
+C32,Gate sizing,Frozen local snapshot and scalar selection,OpenROAD source,No execution,Local cost and guards,Not exhaustive world oracle,Real batching/optimization demand,Full-vector demand unestablished
+C40,Incremental GPU STA,Dual CSR and incremental levelization,Author paper,No reproduction,Structural changes and GPU,Different costs/task,Incremental administration,No equivalent exact-world claim

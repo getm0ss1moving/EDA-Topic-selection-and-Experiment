@@ -1,0 +1,292 @@
+{
+  "decision": "park",
+  "verifier_session": "df362a1f-1d66-4a02-86a9-92e52de6fad7",
+  "actor_id": "ChatGPT-V05-TIMING-B04-EDA-0010",
+  "job_id": "e95a9088-9b0b-4aad-bd48-e5d5210b6755",
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "packet_sha256": "68a627d6437f4a4b696d1c878d6909033d8eecf7d7ae2a69e0cc24b055f74798",
+  "reviewed_proposer_release": "SUB-e59222b261fdda904cd66c5a892de454e5dbcbabf4b3fa142896b356fd1ce075",
+  "adjudicated_challenger_releases": [
+    "SUB-d65e80f160a5b95d5338cbbede7dbefddeea23f506a1e7f2db70102f2d45167c"
+  ],
+  "dossier_digest": "df75074eb4dd6514c4b0084a1233ab08dc62c02777bc09d54cccbc478aaf55fd",
+  "gates": {
+    "novelty": false,
+    "mechanism": false,
+    "utility": false,
+    "contest_originality": false,
+    "headroom": false,
+    "feasibility": false,
+    "direction_integrity": true,
+    "experiment_consensus": false
+  },
+  "gate_reasons": {
+    "novelty": "Current specified intervention transfers; residual useful system delta unestablished. Broader prior-art space not exhausted.",
+    "mechanism": "Finite model correspondence is sound by inspection; real timing dependencies, state identity, phases, negative queries, restore and fallback remain unverified.",
+    "utility": "No natural complete-output reader demonstrated; scalar consumers support a different narrower need.",
+    "contest_originality": "Official2026 pages and2027 guide reopened; authenticated winner algorithms not audited.",
+    "headroom": "No primitive saving under equal pure keys/sufficient cache. Administration/memory net headroom remains unmeasured.",
+    "feasibility": "No actual allocation, owners, complete adapter or lawful representative input locks. Future plan is conditional.",
+    "direction_integrity": "Both drift0: anchor and negative evidence retained; no merit inference.",
+    "experiment_consensus": "P revision_requested targets earlier017 task hash d6ad2ae6fefc62542d9909af749f4317a83ef54bb40e494c948b0e0f854e544a; C pending targets current P with f94d0d1fa2a81a44afceb4acadd4f292429c1d3a9ff28bbc45a6690e661deba6. Distinct sessions but no matching agree pair."
+  },
+  "source_checks": [
+    {
+      "id": "V01",
+      "title": "VarexC MTBDDFactory",
+      "url": "https://raw.githubusercontent.com/chupanw/vbc/1221ef110e2b46951ab01319e97fa5d7dd84a724/src/main/scala/edu/cmu/cs/varex/mtbdd/MTBDDFactory.scala",
+      "locator": "Raw one-based413-469,484-507,551-598",
+      "source_type": "primary source code",
+      "access_level": "full",
+      "supported_claim_ids": [
+        "CLM-1302",
+        "OBJ-1301"
+      ],
+      "verdict": "valid",
+      "reason": "Memoized binary application, equal-child suppression, generic value equality and weak caching visible. Raw649 lines SHA256 8faac52d6d9923365e4d825285e3798fd513cffb1163e01bd282f286abc9747a.",
+      "version": "1221ef110e2b46951ab01319e97fa5d7dd84a724",
+      "publication_date": "unknown",
+      "retrieved_utc": "2026-10-16",
+      "limitations": "Selected passages only; no downloaded code execution, complete proof audit, EDA run or reproduced performance. Web rendered lines differ from raw lines; raw locators take precedence where stated."
+    },
+    {
+      "id": "V02",
+      "title": "OpenROAD LRSubproblem and GlobalSizingPolicy",
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/3549d60529517dc82deb7f0ff769345e9a424911/src/rsz/src/LRSubproblem.cc",
+      "locator": "Raw LRSubproblem.hh120-154; .cc563-605; policy/GlobalSizingPolicy.cc783-810",
+      "source_type": "primary source code",
+      "access_level": "full",
+      "supported_claim_ids": [
+        "CLM-1303",
+        "OBJ-1302"
+      ],
+      "verdict": "valid",
+      "reason": "Header GateDecision carries best cell/cost, evaluator guards candidates, caller batches snapshots then applies serial decisions. Raw hashes match P R28 for these three files. Upstream423-469 not independently reread; broader purity unresolved.",
+      "version": "3549d60529517dc82deb7f0ff769345e9a424911",
+      "publication_date": "unknown",
+      "retrieved_utc": "2026-10-16",
+      "limitations": "Selected passages only; no downloaded code execution, complete proof audit, EDA run or reproduced performance. Web rendered lines differ from raw lines; raw locators take precedence where stated."
+    },
+    {
+      "id": "V03",
+      "title": "Incremental Computing by Differential Execution",
+      "url": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol333-ecoop2025/LIPIcs.ECOOP.2025.20/LIPIcs.ECOOP.2025.20.pdf",
+      "locator": "Physical pp16-18 sections5.3/6.1; rendered953-1040",
+      "source_type": "primary paper",
+      "access_level": "full",
+      "supported_claim_ids": [
+        "CLM-1304",
+        "OBJ-1301"
+      ],
+      "verdict": "valid",
+      "reason": "Branch-local change and execution-state caching are explicit; workload/formalism is not STA.",
+      "version": "DOI10.4230/LIPIcs.ECOOP.2025.20",
+      "publication_date": "2025",
+      "retrieved_utc": "2026-10-16",
+      "limitations": "Selected passages only; no downloaded code execution, complete proof audit, EDA run or reproduced performance. Web rendered lines differ from raw lines; raw locators take precedence where stated."
+    },
+    {
+      "id": "V04",
+      "title": "DeCo",
+      "url": "https://arxiv.org/html/2602.20866v1",
+      "locator": "Section5.3 Definition5.2 laws1-3; rendered482-525",
+      "source_type": "primary author preprint",
+      "access_level": "full",
+      "supported_claim_ids": [
+        "CLM-1304",
+        "OBJ-1301"
+      ],
+      "verdict": "valid",
+      "reason": "Consistency requires both correct updated result and cache, hence a correct present value alone does not certify future changes.",
+      "version": "arXiv2602.20866v1",
+      "publication_date": "2026-02-24",
+      "retrieved_utc": "2026-10-16",
+      "limitations": "Selected passages only; no downloaded code execution, complete proof audit, EDA run or reproduced performance. Web rendered lines differ from raw lines; raw locators take precedence where stated."
+    },
+    {
+      "id": "V05",
+      "title": "Post-Placement Buffering and Sizing Contest",
+      "url": "https://vlsicad.ucsd.edu/Publications/Conferences/421/c421.pdf",
+      "locator": "Physical p2 sections2.3/2.4 and p4 Runtime; rendered182-194,348-364",
+      "source_type": "primary organizer paper",
+      "access_level": "full",
+      "supported_claim_ids": [
+        "OBJ-1302"
+      ],
+      "verdict": "valid",
+      "reason": "Single corner ideal-clock setup and final design flow; tool and total-flow runtimes both charged. Not exhaustive alternative-world reporting.",
+      "version": "DOI10.1145/3764386.3779616",
+      "publication_date": "2026",
+      "retrieved_utc": "2026-10-16",
+      "limitations": "Selected passages only; no downloaded code execution, complete proof audit, EDA run or reproduced performance. Web rendered lines differ from raw lines; raw locators take precedence where stated."
+    },
+    {
+      "id": "V06",
+      "title": "ISPD2027 evaluator guide",
+      "url": "https://raw.githubusercontent.com/ABKGroup/ISPD27-Contest/faef83cacf70fa7923be07816d804ca9c1cef68e/evaluator/README.md",
+      "locator": "Evaluator guide initial description and submitted DEF/Verilog/evaluation/report sections",
+      "source_type": "official contest guide",
+      "access_level": "full",
+      "supported_claim_ids": [
+        "OBJ-1302"
+      ],
+      "verdict": "valid",
+      "reason": "Guide retrieved as context, not implementation inspection or proof of exclusive demand. Its post-CTS multicorner scope cannot silently replace anchor.",
+      "version": "faef83cacf70fa7923be07816d804ca9c1cef68e",
+      "publication_date": "unknown",
+      "retrieved_utc": "2026-10-16",
+      "limitations": "Selected passages only; no downloaded code execution, complete proof audit, EDA run or reproduced performance. Web rendered lines differ from raw lines; raw locators take precedence where stated."
+    },
+    {
+      "id": "V07",
+      "title": "MeasuredVtSwapPolicy",
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/3549d60529517dc82deb7f0ff769345e9a424911/src/rsz/src/policy/MeasuredVtSwapPolicy.cc",
+      "locator": "Raw273-282 estimates;288-301 commit/refresh",
+      "source_type": "primary source code",
+      "access_level": "full",
+      "supported_claim_ids": [
+        "HIST-LOCATOR"
+      ],
+      "verdict": "valid",
+      "reason": "Raw309 lines SHA256 f81f24e419536210a344cd6fd32f9e2b43bdb2144a76bbc818de437dadf2d162 matches predecessor N10b. Alleged288-line source does not match pinned bytes.",
+      "version": "3549d60529517dc82deb7f0ff769345e9a424911",
+      "publication_date": "unknown",
+      "retrieved_utc": "2026-10-16",
+      "limitations": "Selected passages only; no downloaded code execution, complete proof audit, EDA run or reproduced performance. Web rendered lines differ from raw lines; raw locators take precedence where stated."
+    },
+    {
+      "id": "V08",
+      "title": "Differential Execution with Lexical Tracing",
+      "url": "https://2026.splashcon.org/details/oopsla-2026/61/Differential-Execution-with-Lexical-Tracing",
+      "locator": "Official Abstract",
+      "source_type": "official venue abstract",
+      "access_level": "abstract",
+      "supported_claim_ids": [
+        "EXP-C31"
+      ],
+      "verdict": "valid",
+      "reason": "Stable execution identity is a relevant lead. No proof or STA applicability established.",
+      "version": "OOPSLA2026 DOI10.1145/3798261",
+      "publication_date": "2026",
+      "retrieved_utc": "2026-10-16",
+      "limitations": "Selected passages only; no downloaded code execution, complete proof audit, EDA run or reproduced performance. Web rendered lines differ from raw lines; raw locators take precedence where stated."
+    },
+    {
+      "id": "V09",
+      "title": "IncreGPUSTA",
+      "url": "https://guozz.cn/publication/incregpustaiccad-25/incregpustaiccad-25.pdf",
+      "locator": "SectionII.D Greedy Buffer Insertion; opening incremental-levelization discussion",
+      "source_type": "primary author paper",
+      "access_level": "full",
+      "supported_claim_ids": [
+        "OBJ-1301"
+      ],
+      "verdict": "valid",
+      "reason": "Incremental GPU transfer/scheduling context; not exact exhaustive-world equivalence or a bound on fixed-topology experiment.",
+      "version": "ICCAD2025",
+      "publication_date": "2025",
+      "retrieved_utc": "2026-10-16",
+      "limitations": "Selected passages only; no downloaded code execution, complete proof audit, EDA run or reproduced performance. Web rendered lines differ from raw lines; raw locators take precedence where stated."
+    }
+  ],
+  "claim_checks": [
+    {
+      "id": "CLM-1301",
+      "verdict": "partially_valid",
+      "blocking": true,
+      "source_locator": "P experiment-plan.md A04 read_world/Indexed/update and S1 map",
+      "reason": "Code inspection supports separate value/provenance relations and exact transplant: Q and indexed B5 instantiate the same class. Numeric 126/378/360 results remain author-reported, not independently replayed here. No cost/STA superiority follows. Valid current value equality cannot justify deleting future dependencies."
+    },
+    {
+      "id": "CLM-1302",
+      "verdict": "valid",
+      "blocking": false,
+      "source_locator": "V01 raw factory413-469,484-507,551-598",
+      "reason": "Canonical application and coalescence are available conventional mechanisms. Weak references, generic equality and interaction-degree settings still need bit/status-safe adaptation; not an off-the-shelf exact STA engine."
+    },
+    {
+      "id": "CLM-1303",
+      "verdict": "valid",
+      "blocking": true,
+      "source_locator": "V02 raw header120-154; evaluator563-605; policy783-810",
+      "reason": "Frozen snapshots and worker-local calculators support genuine batching. Returned best-cell scalar costs do not establish every anchored candidate vector reader. Bounded interface conclusion only; demand elsewhere unresolved."
+    },
+    {
+      "id": "CLM-1304",
+      "verdict": "valid",
+      "blocking": false,
+      "source_locator": "V03 sections5.3/6.1; V04 section5.3",
+      "reason": "Localized branch changes and cache consistency are prior. Result preservation and cache-state maintenance are distinct obligations. Neither paper proves a duplicate STA system or equal runtime."
+    },
+    {
+      "id": "CLM-1305",
+      "verdict": "valid",
+      "blocking": true,
+      "source_locator": "P tasklist S1/S2/D0-D8; actual JOB/batch; consents",
+      "reason": "Park is warranted after three nonconvergent cycles with no residual useful treatment or natural complete-output reader demonstrated. This is not universal impossibility or joint abandonment."
+    }
+  ],
+  "objections": [
+    {
+      "id": "OBJ-1301",
+      "scope": "current formal objection; batch0004 cycle3",
+      "challenger_release": "SUB-d65e80f160a5b95d5338cbbede7dbefddeea23f506a1e7f2db70102f2d45167c",
+      "verdict": "valid",
+      "blocking": true,
+      "source_locator": "V01/V03/V04; P A04/S1 and experiment-plan cost table",
+      "reason": "Valid as an unresolved promotion gate expressly acknowledged by P, not a refutation of a claimed demonstrated innovation. The entire specified index intervention transfers to B5. No universal runtime-equivalence theorem. Reopen on a named useful maintenance/layout interaction surviving equally informed conventional transplantation and complete cost accounting."
+    },
+    {
+      "id": "OBJ-1302",
+      "scope": "current formal objection; batch0004 cycle3",
+      "challenger_release": "SUB-d65e80f160a5b95d5338cbbede7dbefddeea23f506a1e7f2db70102f2d45167c",
+      "verdict": "valid",
+      "blocking": true,
+      "source_locator": "V02; V05 sections2.3/2.4/4; V06 evaluator guide",
+      "reason": "Checked scalar consumer and final-design contest evaluation do not establish exhaustive full-vector demand. No proof that demand is absent universally. Reopen with an existing legitimate complete-field reader/decision chain, including rejected worlds and restoration semantics."
+    }
+  ],
+  "historical_public_review_adjudications": [
+    {
+      "id": "HIST-LOCATOR",
+      "verdict": "refuted",
+      "blocking": false,
+      "scope": "PR67 discussion_r4285404744 versus frozen predecessor N10b",
+      "reason": "Independent raw fetch matches released N10b hash,309 lines, loop273-282 and valid301. Web renderer strips lines; do not substitute its numbering for raw. Reopen only with authenticated different bytes or precisely declared counting convention."
+    },
+    {
+      "id": "HIST-REPLAY",
+      "verdict": "valid",
+      "blocking": false,
+      "scope": "PR67 discussion_r4285404766; predecessor af311 verification.json analytical_checks/claim CLM-1005 and SUBMISSION files",
+      "reason": "Old4096-case assertion names absent runs/analytical-check.json and manifest exposes only four files, with no exact runnable replay in inspected JSON. Public empirical support withdrawn; conditional unique-key reasoning is independently understandable. No inference of fabricated execution or deliberate misconduct. Reopen with legitimately released exact original code/parameters/stdout/hashes; new tests cannot retroactively certify old run."
+    }
+  ],
+  "direction_penalties": {
+    "combination_drift": 0,
+    "demand_drift": 0
+  },
+  "direction_penalty_checked": true,
+  "experiment_consensus_checked": true,
+  "abandonment_process_checked": true,
+  "abandonment_status": "No agreeing same-target abandonment signatures; park only.",
+  "tasklist_sha256": "f94d0d1fa2a81a44afceb4acadd4f292429c1d3a9ff28bbc45a6690e661deba6",
+  "tasklist_position": "Dormant conditional plan. S1/S2 precede D0 resources/consent, D1 recorder precedes D2 oracle and separately allocated D3 census, D4 thresholds precede D5/D6 confirmation. This removes prior recorder/census cycle; no actual execution readiness.",
+  "analytical_checks": {
+    "executed": false,
+    "A04": "Inspected public code/stdout only; numeric claims not independently replayed. No unpublished own numerical evidence."
+  },
+  "cost_assessment": "Charge support/key/value/provenance construction, full equality, index probe/remove/reinsert, retention/eviction/recompute, actual process bytes, complete outputs/reads, restored base, fallback/final checks and any model/controller/communication cost. Same kernels, inputs, information, memory cap and pure keys for B2/B4/B5. Logical record counts cannot yield STA speedups.",
+  "resurrection_conditions": [
+    "Named useful residual interaction survives strongest equal-information transplantation and full net cost.",
+    "Existing legitimate full-field reader/decision including rejected worlds and restore.",
+    "Complete engine dependency/oracle and actual scoped rights/resources/owners plus exact-target independent agreement."
+  ],
+  "limitations": [
+    "Explicitly unblinded released-file review, no inherited scientific approval. Shared OS is not enforced confinement or backend-model attestation.",
+    "Aggregate reads were truncated; current proposal, challenge, source records, A04, task sections and key original passages were targeted. Unreopened historical claims remain historical.",
+    "A04 numerical results not replayed; no code from another actor or external repository executed. No EDA/build/training/remote/GPU/paid experiment.",
+    "Search budget exhausted after two terminology expansions with mostly irrelevant/SSTA hits; no exhaustive novelty clearance or two empty close-neighbor expansions claimed. Winner methods and commercial internals unresolved.",
+    "Trusted standalone digest/freeze/verify only; full-repository validation and PR publication belong to coordinator."
+  ]
+}
