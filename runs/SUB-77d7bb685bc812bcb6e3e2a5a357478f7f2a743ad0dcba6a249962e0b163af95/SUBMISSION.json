@@ -1,0 +1,15 @@
+{
+  "actor_id": "ChatGPT-V05-TIMING-B04-EDA-0010",
+  "files": {
+    "compliance.json": "65bbe2791a2a37f198ce08f098bf180d0396631431e7ad1af892ff5198ae6195",
+    "verification.json": "98da9f5045565c6203b119afa1ca73f498d9f651b530868c4a5fe96ddb724dd6",
+    "verification.md": "c82a40bb6b854360d7271ebb66be99063c4654a8b94b9059b149d21caf4a7365",
+    "workflow.json": "a310caea7b50917468e1913eb9df68b1a7594134328919df27d0b703cd8e7955"
+  },
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "packet_sha256": "68a627d6437f4a4b696d1c878d6909033d8eecf7d7ae2a69e0cc24b055f74798",
+  "role": "verifier",
+  "schema": 1,
+  "session_id": "df362a1f-1d66-4a02-86a9-92e52de6fad7",
+  "topic": "EDA-0010"
+}

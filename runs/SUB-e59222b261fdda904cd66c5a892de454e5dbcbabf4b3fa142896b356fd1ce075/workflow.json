@@ -1,0 +1,26 @@
+{
+  "adjudicated_inputs": {
+    "challenger": "SUB-1745834c07cf7e42c0a3756f0da807ddba9a85495361276d8b9e21390cf2f1b0",
+    "verifier": "SUB-a8da4b6a1a7928ee94f15ee0ec17693629258c346fc2b559b406e2dca9fd3327"
+  },
+  "batch_round": 3,
+  "checks_completed_before_freeze": [
+    "A04 public extraction exact stdout and hashes",
+    "All release JSON parse",
+    "Trusted compliance identity/allowlist/nine-rule validation",
+    "Direction-state enum from supplied policy script"
+  ],
+  "independent_approval_claimed": false,
+  "job_id": "f02dc953-9c3e-4d35-9ccc-3db9a81bba55",
+  "new_eda_runs": 0,
+  "new_paid_api_calls": 0,
+  "phase": "research",
+  "position": "recommend_park",
+  "reviewed_proposer_release": "SUB-017839376433acd2ef83e1cf06276f1d54e9af5740eb2561a0b9b928a404a6ae",
+  "role": "proposer",
+  "scientific_status": "unresolved useful residual treatment and full-output demand",
+  "source_research_complete": true,
+  "tasklist_sha256": "f94d0d1fa2a81a44afceb4acadd4f292429c1d3a9ff28bbc45a6690e661deba6",
+  "training_runs": 0,
+  "validation_scope": "Trusted standalone role freeze and verify; full-repository project.py validation deferred to coordinator publication. No checkout discovery."
+}

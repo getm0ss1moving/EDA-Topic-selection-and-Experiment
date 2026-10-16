@@ -1,0 +1,21 @@
+{
+  "role": "challenger",
+  "reviewed_proposer_release": "SUB-e59222b261fdda904cd66c5a892de454e5dbcbabf4b3fa142896b356fd1ce075",
+  "assessment": "unresolved",
+  "recommendation": "park",
+  "batch_round": 3,
+  "coverage": {
+    "duplicate_prior_art": "supported",
+    "mechanism": "supported",
+    "composition": "supported",
+    "demand": "unresolved",
+    "industry_gap": "unresolved",
+    "headroom": "unresolved",
+    "contests": "unresolved",
+    "experiments": "supported",
+    "cost": "supported"
+  },
+  "new_eda_runs": 0,
+  "new_analytical_tests": 0,
+  "independent_numerical_replay": false
+}

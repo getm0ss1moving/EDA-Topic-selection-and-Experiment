@@ -1,0 +1,115 @@
+{
+  "role": "verifier",
+  "actor_id": "ChatGPT-B04-PROTOCOL-D05-EDA-0010-R3",
+  "session_id": "6110ac62-37bf-4990-883a-ec999206a78f",
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "packet_sha256": "dcab81e2d04c3b32ac320853c77bc52c0e927561540952ffea562d006c2e35ab",
+  "job_id": "a79eba69-02ab-4fbb-9617-b1772916e04e",
+  "schema": 1,
+  "read_releases": [
+    "SUB-d65e80f160a5b95d5338cbbede7dbefddeea23f506a1e7f2db70102f2d45167c",
+    "SUB-e59222b261fdda904cd66c5a892de454e5dbcbabf4b3fa142896b356fd1ce075",
+    "SUB-77d7bb685bc812bcb6e3e2a5a357478f7f2a743ad0dcba6a249962e0b163af95"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0
+  },
+  "rules": {
+    "inputs": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json#/roles",
+        "verification.json#/limitations"
+      ],
+      "limits": "Own self-authored ledger is not a complete trace. Only supplied role outputs/descriptors and assigned policy/verifier harness read; no scientific approval or unseen behavior certification."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json#/roles",
+        "verification.json#/limitations"
+      ],
+      "limits": "Own self-authored ledger is not a complete trace. Only supplied role outputs/descriptors and assigned policy/verifier harness read; no scientific approval or unseen behavior certification."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json#/roles",
+        "verification.json#/limitations"
+      ],
+      "limits": "Own self-authored ledger is not a complete trace. Only supplied role outputs/descriptors and assigned policy/verifier harness read; no scientific approval or unseen behavior certification."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json#/roles",
+        "verification.json#/limitations"
+      ],
+      "limits": "Own self-authored ledger is not a complete trace. Only supplied role outputs/descriptors and assigned policy/verifier harness read; no scientific approval or unseen behavior certification."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json#/roles",
+        "verification.json#/limitations"
+      ],
+      "limits": "Own self-authored ledger is not a complete trace. Only supplied role outputs/descriptors and assigned policy/verifier harness read; no scientific approval or unseen behavior certification."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json#/roles",
+        "verification.json#/limitations"
+      ],
+      "limits": "Own self-authored ledger is not a complete trace. Only supplied role outputs/descriptors and assigned policy/verifier harness read; no scientific approval or unseen behavior certification."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json#/roles",
+        "verification.json#/limitations"
+      ],
+      "limits": "Own self-authored ledger is not a complete trace. Only supplied role outputs/descriptors and assigned policy/verifier harness read; no scientific approval or unseen behavior certification."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json#/roles",
+        "verification.json#/limitations"
+      ],
+      "limits": "Own self-authored ledger is not a complete trace. Only supplied role outputs/descriptors and assigned policy/verifier harness read; no scientific approval or unseen behavior certification."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json#/roles",
+        "verification.json#/limitations"
+      ],
+      "limits": "Own self-authored ledger is not a complete trace. Only supplied role outputs/descriptors and assigned policy/verifier harness read; no scientific approval or unseen behavior certification."
+    }
+  },
+  "operations": [
+    "First exact JOB.json and prompt.txt read; common policies and only verifier harness next. Missing optional policy/templates/compliance.json read failed; schema read from trusted role_compliance.py.",
+    "Inventoried only supplied shared files. Read exact three releases/public descriptors; aggregate truncations handled by targeted core rereads, historical records not recertified.",
+    "Reopened official ISPD2026 landing page and pinned OpenROAD header using web open; sources are data only.",
+    "Ran trusted structural verify/ledger/identity checks; no numerical model, EDA, downloaded source or foreign analytical code execution.",
+    "Wrote own build_audit.py and four release artifacts, then schema validation and self-freeze/verify; result.json after success."
+  ],
+  "incidents": [],
+  "observability": "Public self-report only; not proof of absent unseen activity. Shared OS confinement and backend model identity are not attested."
+}
