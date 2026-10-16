@@ -85,6 +85,33 @@ class AuditedLoopTests(unittest.TestCase):
             self.assertNotIn('compliance.json',l.rs.REQUIRED[role])
             self.assertIn('compliance.json',l.rs.FILES[role])
 
+    def test_protocol_audit_excludes_scientific_verifier_handover(self):
+        state=l.read(self.home/'state.json')
+        seat=state['topics']['EDA-0002']['seats']['verifier']
+        packet=Path(seat['packet']);packet.chmod(0o755)
+        manifest=l.read(packet/'PACKET.json')
+        for prefix in ('released-handover','released-seed'):
+            name=prefix+'/scientific-input.json'
+            path=packet/name;path.parent.mkdir(exist_ok=True);path.parent.chmod(0o755)
+            l.save(path,{'scope':'scientific verifier only'})
+            manifest['files'][name]=l.sha(path)
+        l.save(packet/'PACKET.json',manifest);l.freeze_tree(packet)
+        seat['packet_sha256']=l.sha(packet/'PACKET.json')
+        l.save(self.home/'state.json',state)
+        for _ in range(3):self.science()
+        state=l.read(self.home/'state.json')
+        scientific=Path(state['topics']['EDA-0002']['latest']['verifier']).parent.parent
+        self.assertTrue((scientific/'policy/released-handover/scientific-input.json').is_file())
+        job=l.audit_dispatch(self.c,self.home,'D05');work=Path(job['work'])
+        self.assertFalse((work/'policy/released-handover').exists())
+        self.assertFalse((work/'policy/released-seed').exists())
+        self.assertTrue((work/'policy/harness/VERIFIER.md').is_file())
+        self.assertTrue((work/'policy/docs/ROLE-COMPLIANCE.md').is_file())
+        self.assertEqual(set(l.read(work/'JOB.json')['reviewed_releases']),set(l.ROLES))
+        audit=next(iter(l.read(self.home/'state.json')['audits'].values()))
+        l.verify_packet(audit['seat'])
+        l.verify_packet(l.read(self.home/'state.json')['topics']['EDA-0002']['seats']['verifier'])
+
     def test_missing_ledger_refused_before_scientific_advancement(self):
         job=l.dispatch(self.c,self.home,'D05');work=Path(job['work'])
         result=fixtures.LoopTests.fake(self,self.c,job);l.save(work/'result.json',result)

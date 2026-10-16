@@ -91,6 +91,12 @@ do not receive its unadjudicated scientific criticism. No acceptance/abandonment
 vote is created by this review. The auditor's own self-ledger is mechanically
 checked, not represented as an infinite chain of independent audit.
 
+Scientific verifier-only `released-handover/` and `released-seed/` inputs are
+excluded when constructing the protocol auditor's policy packet. Its review
+scope is the explicitly supplied current triple, descriptors and retained
+attempts, not every scientific input the verifier was permitted to inspect.
+The original scientific packet remains unchanged and hash-bound.
+
 ## Transport, consequences and limits
 
 The coordinator checks exact bindings, completeness and frozen bytes, then
