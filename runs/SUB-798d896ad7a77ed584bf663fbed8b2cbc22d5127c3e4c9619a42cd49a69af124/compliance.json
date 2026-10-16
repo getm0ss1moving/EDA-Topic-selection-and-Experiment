@@ -1,0 +1,146 @@
+{
+  "role": "verifier",
+  "actor_id": "ChatGPT-B04-PROTOCOL-D05-EDA-0011-R1",
+  "session_id": "2dc54ea4-0cbc-434c-943d-17b5f8c0a3be",
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "packet_sha256": "baffdf91597bba19663bc4a13ae8b79dd37bda0f68fb4c04a2c3d0bb29e12423",
+  "job_id": "21dbc574-d5c5-4815-bfec-113026f5329c",
+  "schema": 1,
+  "read_releases": [
+    "SUB-d7573b7cfdc55db5c5f659765501be34d4e33ea88cac5eabe8a7d118fa61d1be",
+    "SUB-2c26123b9b1c2d001f3615e1ad5087ac6444ac38a03cae6f9cfa57304e86de20",
+    "SUB-6a2f437f43fd9ee63a3de84bc3fe096a5da49e6da3e6f7074f95b7c3140c386f"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0
+  },
+  "rules": {
+    "inputs": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json#/roles",
+        "JOB.json",
+        "verification.md"
+      ],
+      "limits": "Own public ledger, not complete tool trace; no unseen-action certification."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json#/roles",
+        "JOB.json",
+        "verification.md"
+      ],
+      "limits": "Own public ledger, not complete tool trace; no unseen-action certification."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json#/roles",
+        "JOB.json",
+        "verification.md"
+      ],
+      "limits": "Own public ledger, not complete tool trace; no unseen-action certification."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json#/roles",
+        "JOB.json",
+        "verification.md"
+      ],
+      "limits": "Own public ledger, not complete tool trace; no unseen-action certification."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json#/roles",
+        "JOB.json",
+        "verification.md"
+      ],
+      "limits": "Own public ledger, not complete tool trace; no unseen-action certification."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json#/roles",
+        "JOB.json",
+        "verification.md"
+      ],
+      "limits": "Own public ledger, not complete tool trace; no unseen-action certification."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json#/roles",
+        "JOB.json",
+        "verification.md"
+      ],
+      "limits": "Own public ledger, not complete tool trace; no unseen-action certification."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json#/roles",
+        "JOB.json",
+        "verification.md"
+      ],
+      "limits": "Own public ledger, not complete tool trace; no unseen-action certification."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "verification.json#/roles",
+        "JOB.json",
+        "verification.md"
+      ],
+      "limits": "Own public ledger, not complete tool trace; no unseen-action certification."
+    }
+  },
+  "operations": [
+    {
+      "operation": "read",
+      "references": [
+        "JOB.json",
+        "prompt.txt",
+        "policy/docs/",
+        "policy/harness/VERIFIER.md"
+      ],
+      "detail": "First read exact JOB/prompt only; then assigned common policies and verifier harness. Missing guessed compliance template path failed; no foreign harness read."
+    },
+    {
+      "operation": "review",
+      "references": [
+        "SUB-d7573b7cfdc55db5c5f659765501be34d4e33ea88cac5eabe8a7d118fa61d1be",
+        "SUB-2c26123b9b1c2d001f3615e1ad5087ac6444ac38a03cae6f9cfa57304e86de20",
+        "SUB-6a2f437f43fd9ee63a3de84bc3fe096a5da49e6da3e6f7074f95b7c3140c386f",
+        "shared/job-descriptors/"
+      ],
+      "detail": "Read only assigned released bytes/descriptors. Aggregate truncation followed by targeted relevant reads; no external conduct allegation or original-source adjudication."
+    },
+    {
+      "operation": "mechanical_check",
+      "references": [
+        "verification.md"
+      ],
+      "detail": "Manifest identity/hash, declared allowlist, task hash/nonagreement and current OBJ coverage checks passed. No numerical scientific fixture."
+    },
+    {
+      "operation": "write_freeze_verify",
+      "references": [
+        "release/",
+        "submissions/",
+        "result.json"
+      ],
+      "detail": "Own protocol artifacts and trusted submission operations only."
+    }
+  ],
+  "incidents": [],
+  "observability": "Self-authored ledger, not a complete trace or evidence of absent undisclosed actions."
+}

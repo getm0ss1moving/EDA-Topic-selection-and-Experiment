@@ -1,0 +1,162 @@
+{
+  "schema": 1,
+  "role": "proposer",
+  "actor_id": "ChatGPT-P05-TIMING-B04-EDA-0011",
+  "session_id": "f41e4393-8228-42c4-9172-3fdec1a5d44b",
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "packet_sha256": "3074e950331e6f8b2da3892c18718e93ff75899a9d08236289e3bd2ef4db3b88",
+  "job_id": "68ba7a86-343e-4c3e-bb71-cdd5885f875c",
+  "read_releases": [
+    "SUB-e59222b261fdda904cd66c5a892de454e5dbcbabf4b3fa142896b356fd1ce075",
+    "SUB-77d7bb685bc812bcb6e3e2a5a357478f7f2a743ad0dcba6a249962e0b163af95",
+    "SUB-d65e80f160a5b95d5338cbbede7dbefddeea23f506a1e7f2db70102f2d45167c"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0
+  },
+  "rules": {
+    "inputs": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "prompt.txt",
+        "search-log.md Input sequence and policy",
+        "responses.md"
+      ],
+      "limits": "Only this assigned job/common policy/own harness and listed adjudicated predecessor releases; aggregate read truncation limits historical coverage."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md Input sequence and policy",
+        "compliance.json activity"
+      ],
+      "limits": "Self-authored ledger cannot certify unseen filesystem/network conduct or enforced adversarial confinement. No model backend attestation."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "release/*",
+        "own-check.py",
+        "own-check.stdout",
+        "write_release.py",
+        "finish_release.py"
+      ],
+      "limits": "Own assigned job outputs/scripts only; scratch is outside the project checkout. No foreign output or repository files changed."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "sources.json",
+        "search-log.md"
+      ],
+      "limits": "Selected full-source access is distinguished from metadata/failures; no exhaustive full-method/winner/commercial audit. Raw and rendered locators differ."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "proposal.md Claim ledger",
+        "forecast.json",
+        "experiment-plan.md A01"
+      ],
+      "limits": "A01 is own finite rational observation only. Conditional lemma is elementary reasoning; actual EDA exactness, usefulness and novelty unresolved. Historical replay not repaired."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "experiment-consent.json",
+        "direction-control.json abandonment"
+      ],
+      "limits": "Only own nonagreeing position; no independent signature, self-reference agreement, matching consensus or abandonment vote fabricated."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "experiment-plan.md A01",
+        "tasklist.md",
+        "JOB.json",
+        "policy/docs/INNOVATION-BATCH-0004.md"
+      ],
+      "limits": "No EDA/build/training/remote/GPU/paid work; source retrieval, own tiny arithmetic and trusted validation only. Future ceilings are requests, actual resources remain null."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "direction-control.json",
+        "proposal.md",
+        "responses.md"
+      ],
+      "limits": "New scalar-choice/certificate anchor uses new ID; predecessor negative outcomes retained. Zero drift does not establish merit or approval."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "workflow.json",
+        "search-log.md",
+        "policy/docs/SELF-SUBMISSION.md"
+      ],
+      "limits": "Self-freeze/verify is mechanical; coordinator performs full repository validation, PR transport and merges. No service/CI/publication success claimed here."
+    }
+  },
+  "operations": [
+    {
+      "operation": "input_read",
+      "references": [
+        "JOB.json",
+        "prompt.txt"
+      ],
+      "detail": "First tool command only exact assigned files; subsequent common-policy and own-harness reads are logged in search-log.md."
+    },
+    {
+      "operation": "released_evidence_read",
+      "references": [
+        "responses.md",
+        "sources.json H01"
+      ],
+      "detail": "Only manifest-listed predecessor P/V and matching adjudicated C; no inherited acceptance, full historical replay or signatures."
+    },
+    {
+      "operation": "external_source_search_read",
+      "references": [
+        "search-log.md",
+        "sources.json"
+      ],
+      "detail": "Web search/open/find and official raw/API source reads; corrected404 and failed DOI/API opens disclosed. No downloaded code execution."
+    },
+    {
+      "operation": "own_analytical_check",
+      "references": [
+        "experiment-plan.md A01"
+      ],
+      "detail": "Executed exact embedded standard-library rational-affine fixture and recorded source/stdout hashes; no EDA runtime or performance measurements."
+    },
+    {
+      "operation": "output_write",
+      "references": [
+        "release/",
+        "own-check.py",
+        "own-check.stdout",
+        "write_release.py",
+        "finish_release.py"
+      ],
+      "detail": "Own job artifacts/scripts only. Public check source is embedded in an allowlisted release file."
+    },
+    {
+      "operation": "mechanical_checks_and_self_freeze",
+      "references": [
+        "sources.json",
+        "compliance.json",
+        "experiment-plan.md Local verification"
+      ],
+      "detail": "JSON,embedded-code/hash and trusted compliance/freeze/verify checks; full-repository validation delegated to coordinator. Final result.json records actual frozen release; no scientific approval follows."
+    }
+  ],
+  "incidents": [],
+  "observability": "Self-authored public activity ledger, not a complete tool trace or evidence of absent undisclosed actions. Shared OS does not enforce adversarial confinement; no private logs or cross-session memory were inspected."
+}

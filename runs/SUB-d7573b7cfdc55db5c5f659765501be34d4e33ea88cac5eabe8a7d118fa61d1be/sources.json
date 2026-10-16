@@ -1,0 +1,191 @@
+[
+  {
+    "id": "C01",
+    "title": "Task-Based Parallel Programming for Gate Sizing",
+    "url": "https://gdimitrak.github.io/papers/taskflow-tcad22.pdf",
+    "type": "author_paper",
+    "published": "2022 online / 2023 journal",
+    "retrieved": "2026-10-16T05:28:26.829373+00:00",
+    "locator": "V-A Algorithm5 PDF pp5-6; abstract; rendered568-579 and9-22",
+    "access": "full",
+    "claims": [
+      "CLM-1401",
+      "OBJ-1403"
+    ],
+    "limitations": "Selected full PDF passages inspected; no performance reproduced; historical benchmark context."
+  },
+  {
+    "id": "C02",
+    "title": "OpenROAD LRSubproblem.cc",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/169af073e48dade2111547842c2749424dc4b4c9/src/rsz/src/LRSubproblem.cc",
+    "type": "source_code",
+    "published": "unknown; pinned commit",
+    "retrieved": "2026-10-16T05:28:26.829373+00:00",
+    "locator": "Raw one-based378-608, especially423-469/472-605",
+    "access": "full",
+    "claims": [
+      "CLM-1401",
+      "OBJ-1402",
+      "OBJ-1403"
+    ],
+    "limitations": "Complete raw file retrieved; listed range printed; not built/run. SHA256 cefdd8de81a05335e1d669c44c89908a2287a27bf235aad87c7b8fea596f7d3e; pin169af073e48dade2111547842c2749424dc4b4c9."
+  },
+  {
+    "id": "C03",
+    "title": "OpenROAD GlobalSizingPolicy.cc",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/169af073e48dade2111547842c2749424dc4b4c9/src/rsz/src/policy/GlobalSizingPolicy.cc",
+    "type": "source_code",
+    "published": "unknown; pinned commit",
+    "retrieved": "2026-10-16T05:28:26.829373+00:00",
+    "locator": "Raw one-based706-810 applyDecisions/singleSweep",
+    "access": "full",
+    "claims": [
+      "CLM-1401",
+      "OBJ-1403"
+    ],
+    "limitations": "Complete raw retrieved; only listed range inspected. SHA256 972210edf726ee8edc966dbef75e6513d313f07049e1caa0f6588f1893fd297a. No execution."
+  },
+  {
+    "id": "C04",
+    "title": "Statistical Timing Based Optimization using Gate Sizing",
+    "url": "https://arxiv.org/pdf/0710.4697",
+    "type": "paper",
+    "published": "2005 DATE / 2007 arXiv",
+    "retrieved": "2026-10-16T05:28:26.829373+00:00",
+    "locator": "Section3.3 Figure6 PDF p4; rendered455-496",
+    "access": "full",
+    "claims": [
+      "OBJ-1401"
+    ],
+    "limitations": "Selected full-method passage inspected; formula extraction imperfect; statistical sensitivity pruning does not prove deterministic NLDM equivalence. No reproduced performance."
+  },
+  {
+    "id": "C05",
+    "title": "Affine Arithmetic Project",
+    "url": "https://ic.unicamp.br/~stolfi/EXPORT/projects/affine-arith/Welcome.html",
+    "type": "author_project",
+    "published": "unknown",
+    "retrieved": "2026-10-16T05:28:26.829373+00:00",
+    "locator": "Description; rendered23-26 shared errors and branch-bound tradeoff",
+    "access": "full",
+    "claims": [
+      "OBJ-1401"
+    ],
+    "limitations": "Short author page; generic mechanism only; no timing-specific implementation or costs."
+  },
+  {
+    "id": "C06",
+    "title": "Toward Efficient Static Analysis of Finite-Precision Effects in DSP Applications via Affine Arithmetic Modeling",
+    "url": "https://users.ece.cmu.edu/~rutenbar/pdf/rutenbar-intervaldac03.pdf",
+    "type": "author_paper",
+    "published": "2003 DAC",
+    "retrieved": "2026-10-16T05:28:26.829373+00:00",
+    "locator": "Section2.2 PDF pp2-3/rendered139-183; section3.2 distinguished from hard guarantees",
+    "access": "full",
+    "claims": [
+      "OBJ-1401",
+      "OBJ-1402"
+    ],
+    "limitations": "New independent citation-neighborhood source; selected passages inspected; DSP context not exact STA proof. Later probabilistic refinements not adopted. No empirical replication."
+  },
+  {
+    "id": "C07",
+    "title": "Invited: Post-Placement Buffering and Sizing Contest",
+    "url": "https://vlsicad.ucsd.edu/Publications/Conferences/421/c421.pdf",
+    "type": "official_contest_paper",
+    "published": "2026 ISPD",
+    "retrieved": "2026-10-16T05:28:26.829373+00:00",
+    "locator": "Sections2.3/2.4 PDF p2 rendered182-194;5.3 PDF p7 rendered577-592",
+    "access": "full",
+    "claims": [
+      "OBJ-1403",
+      "contest"
+    ],
+    "limitations": "Selected full PDF sections; official workflow and roadmap only, not all winner methods or current commercial internals."
+  },
+  {
+    "id": "C08",
+    "title": "ISPD26 Contest README",
+    "url": "https://raw.githubusercontent.com/ABKGroup/ISPD26-Contest/f7b29d242fc7d441f3b4eadc556f40099ccca067/README.md",
+    "type": "official_contest",
+    "published": "2026; exact commit date not independently checked",
+    "retrieved": "2026-10-16T05:28:26.829373+00:00",
+    "locator": "Web-rendered90-112 final leaderboard, reference script link",
+    "access": "full",
+    "claims": [
+      "contest"
+    ],
+    "limitations": "Selected pinned README passages; web-rendered numbering not raw line numbering. Leaderboard does not authenticate winner mechanisms; no benchmark execution."
+  },
+  {
+    "id": "C09",
+    "title": "ISPD27 evaluator README",
+    "url": "https://raw.githubusercontent.com/ABKGroup/ISPD27-Contest/faef83cacf70fa7923be07816d804ca9c1cef68e/evaluator/README.md",
+    "type": "official_contest",
+    "published": "2026 public materials; exact commit date not independently checked",
+    "retrieved": "2026-10-16T05:28:26.829373+00:00",
+    "locator": "Web-rendered0-7,66-71,115-127",
+    "access": "full",
+    "claims": [
+      "contest",
+      "cost"
+    ],
+    "limitations": "Full displayed evaluator guide; MCMM/setup-hold and provisional weights. Beyond proposed single-scene contract. No code/container/design execution."
+  },
+  {
+    "id": "C10",
+    "title": "2026 CAD Contest at ICCAD",
+    "url": "https://www.iccad-contest.org/2026/",
+    "type": "official_contest",
+    "published": "2026",
+    "retrieved": "2026-10-16T05:28:26.829373+00:00",
+    "locator": "Landing page Contest Problems inventory",
+    "access": "full",
+    "claims": [
+      "contest"
+    ],
+    "limitations": "Landing page only; no detailed winner-method audit or novelty absence conclusion."
+  },
+  {
+    "id": "L01",
+    "title": "Improving Timing & Power Trade-off in Post-place Optimization Using Multi-agent Reinforcement Learning",
+    "url": "https://dl.acm.org/doi/10.1145/3676536.3676702",
+    "type": "paper_lead",
+    "published": "2024",
+    "retrieved": "2026-10-16T05:28:26.829373+00:00",
+    "locator": "DOI entry; independently discovered DBLP metadata https://dblp1.uni-trier.de/rec/conf/iccad/Seo0K24.html",
+    "access": "metadata",
+    "claims": [
+      "search_gap"
+    ],
+    "limitations": "Primary DOI open failed. DBLP metadata and secondary search abstract only; no internal algorithm or performance used as evidence."
+  },
+  {
+    "id": "L02",
+    "title": "Analog Circuit Sizing Based on Formal Methods Using Affine Arithmetic",
+    "url": "https://websrv.cecs.uci.edu/~papers/compendium94-03/papers/2002/iccad02/pdffiles/07c_1.pdf",
+    "type": "paper_lead",
+    "published": "2002",
+    "retrieved": "2026-10-16T05:28:26.829373+00:00",
+    "locator": "Search title/snippet; reference neighborhood of C06",
+    "access": "metadata",
+    "claims": [
+      "search_gap"
+    ],
+    "limitations": "Direct PDF open failed; no full-method duplicate finding. Analog context requires separate applicability check."
+  },
+  {
+    "id": "L03",
+    "title": "Statistical sizing bound lead at author PDF460",
+    "url": "https://blaauw.engin.umich.edu/wp-content/uploads/sites/342/2017/11/460.pdf",
+    "type": "paper_lead",
+    "published": "unknown",
+    "retrieved": "2026-10-16T05:28:26.829373+00:00",
+    "locator": "Search snippet around local delay-change bounds",
+    "access": "metadata",
+    "claims": [
+      "search_gap"
+    ],
+    "limitations": "Direct fetch403; title/version not established, no decision claim relies on this lead."
+  }
+]

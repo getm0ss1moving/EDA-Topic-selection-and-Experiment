@@ -1,0 +1,7 @@
+{
+  "session_id": "8d6402ca-3caf-4ab2-9e5f-091275e620ff",
+  "decision": "revision_requested",
+  "signed_revision": "SUB-2c26123b9b1c2d001f3615e1ad5087ac6444ac38a03cae6f9cfa57304e86de20",
+  "tasklist_sha256": "96f3b9c3896d97b1b86aefd70bbea77115beaaea4a1292b73ae2df98067c28d7",
+  "rationale": "No agreeing signature. CT02 resolves certificate implementation before correctness/census; utility, useful residual, actual resources and exact execution dependencies remain unresolved. Final fourth cycle hold/park; no fifth cycle or joint abandonment."
+}

@@ -1,0 +1,5 @@
+# Independent headroom position
+
+Unblinded: P forecast.json and proposal were read; all physical performance estimates are null. No independent performance percentage is supportable. Conditional accounting, not measurement: let total reference time be T, removable reference-refresh work A, and additional complete certificate/refinement/provenance/fallback work H. Holding other work fixed, net saving is A-H, bounded above by A, and is negative when H>A. Neither A/T nor H is measured. Exact winner/guard materialization and final checks remain unavoidable under the declared contract, but no numerical floor is proven.
+
+Already precise boundary state, cheap LUT scoring, few alternatives, weak correlation, highly nonlinear composed slews and frequent UNKNOWN are adverse regimes. Correlated uncertainty, costly refresh and reusable validated regions are favorable hypotheses, not observed workload facts. Finite affine cancellation does not predict EDA speed. No theoretical saturation or universal failure claim follows. See challenges OBJ-1401/1403 and sources C01-C06. No own numerical test was run; P A01 was read only.

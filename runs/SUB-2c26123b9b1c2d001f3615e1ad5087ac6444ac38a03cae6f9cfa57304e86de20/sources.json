@@ -1,0 +1,246 @@
+[
+  {
+    "id": "S01",
+    "title": "Task-Based Parallel Programming for Gate Sizing",
+    "url": "https://gdimitrak.github.io/papers/taskflow-tcad22.pdf",
+    "type": "author_paper",
+    "published": "2023 journal; DOI10.1109/TCAD.2022.3197490 online2022",
+    "retrieved": "2026-10-16T05:22:05.607868+00:00",
+    "locator": "PDF pages1-2 II/III; pages4-6 V-A Algorithm5 and local-update discussion; pages7-8 VI Algorithms7/8; page11 VII-C. Web-rendered lines568-613,732-857,1299-1304; not raw source lines.",
+    "access": "full",
+    "claims": [
+      "CLM-1401",
+      "CLM-1404"
+    ],
+    "limitations": "Full PDF retrieved; selected passages inspected, not all tables/references audited. Local-update heuristic and recovery safety are prior. No reported performance reproduced. Benchmark-era/tool differences limit transfer."
+  },
+  {
+    "id": "S02a",
+    "title": "OpenROAD LRSubproblem.cc",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/169af073e48dade2111547842c2749424dc4b4c9/src/rsz/src/LRSubproblem.cc",
+    "type": "source_code",
+    "published": "2026-10-16 commit",
+    "retrieved": "2026-10-16T05:22:05.607868+00:00",
+    "locator": "Raw one-based423-469 evaluateCellCost;472-560 guards;563-605 evaluateSnapshot;378-417 upstream/snapshot preparation.",
+    "access": "full",
+    "claims": [
+      "CLM-1401",
+      "CLM-1402"
+    ],
+    "limitations": "Complete raw608-line file retrieved; selected ranges inspected. Frozen local snapshot score is not full-neighborhood refreshed STA and its comments are not a signoff proof. Not built/executed. BSD licensing requires per-file/upstream notices to be retained on future reuse.",
+    "commit": "169af073e48dade2111547842c2749424dc4b4c9",
+    "sha256": "cefdd8de81a05335e1d669c44c89908a2287a27bf235aad87c7b8fea596f7d3e"
+  },
+  {
+    "id": "S02b",
+    "title": "OpenROAD LRSubproblem.hh",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/169af073e48dade2111547842c2749424dc4b4c9/src/rsz/src/LRSubproblem.hh",
+    "type": "source_code",
+    "published": "2026-10-16 commit",
+    "retrieved": "2026-10-16T05:22:05.607868+00:00",
+    "locator": "Raw one-based95-153: DriverCapCheck,InputMaxCapCtx,Candidate,GateSnapshot,GateDecision.",
+    "access": "full",
+    "claims": [
+      "CLM-1401"
+    ],
+    "limitations": "Complete248-line raw file retrieved; selected definitions inspected. Interface supports a scalar reader, not proof of all implementation invariants.",
+    "commit": "169af073e48dade2111547842c2749424dc4b4c9",
+    "sha256": "8a63c99622eee2ec2696673e214bb5a4da55b8aa9cdf903de21a3884bface9d6"
+  },
+  {
+    "id": "S02c",
+    "title": "OpenROAD policy/GlobalSizingPolicy.cc",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/169af073e48dade2111547842c2749424dc4b4c9/src/rsz/src/policy/GlobalSizingPolicy.cc",
+    "type": "source_code",
+    "published": "2026-10-16 commit",
+    "retrieved": "2026-10-16T05:22:05.607868+00:00",
+    "locator": "Raw one-based706-777 applyDecisions;780-810 singleSweep.",
+    "access": "full",
+    "claims": [
+      "CLM-1401"
+    ],
+    "limitations": "Complete1206-line raw file retrieved; only706-810 printed/inspected. First guessed src/rsz/src/GlobalSizingPolicy.cc returned404; corrected using official repository tree. Source-reading pin only; no runtime claim.",
+    "commit": "169af073e48dade2111547842c2749424dc4b4c9",
+    "sha256": "972210edf726ee8edc966dbef75e6513d313f07049e1caa0f6588f1893fd297a"
+  },
+  {
+    "id": "S03",
+    "title": "Statistical Timing Based Optimization using Gate Sizing",
+    "url": "https://arxiv.org/pdf/0710.4697",
+    "type": "paper",
+    "published": "2005 DATE paper; arXiv upload2007-10-25",
+    "retrieved": "2026-10-16T05:22:05.607868+00:00",
+    "locator": "PDF sections2/2.1,3.2 Theorems1-4 and3.3 Figure6/initialization; pages2-5; web-rendered166-176,219-288,455-568.",
+    "access": "full",
+    "claims": [
+      "CLM-1402",
+      "CLM-1404"
+    ],
+    "limitations": "Selected full-method passages inspected. SSTA model ignores specified correlations for its maximum bound; its perturbation pruning is close prior but no deterministic NLDM winner-equivalence theorem is imported. Formula rendering is imperfect; no numerical results reproduced.",
+    "version": "arXiv0710.4697v1"
+  },
+  {
+    "id": "S04",
+    "title": "Affine Arithmetic Project: A Correlation-Sensitive Variant of Interval Arithmetic",
+    "url": "https://ic.unicamp.br/~stolfi/EXPORT/projects/affine-arith/Welcome.html",
+    "type": "author_project",
+    "published": "unknown",
+    "retrieved": "2026-10-16T05:22:05.607868+00:00",
+    "locator": "Project description, affine polynomial representation, comparison to interval arithmetic and branch-and-bound cost discussion.",
+    "access": "full",
+    "claims": [
+      "CLM-1402",
+      "CLM-1403",
+      "CLM-1404"
+    ],
+    "limitations": "Full short author project page inspected. Establishes generic prior mechanism only; not a timing-specific adapter. Related2004 Springer abstract search result was visible, but direct open failed; no claim of full2004 article access."
+  },
+  {
+    "id": "S05",
+    "title": "Learning-driven Physically-aware Large-scale Circuit Gate Sizing",
+    "url": "https://arxiv.org/html/2403.08193v1",
+    "type": "paper",
+    "published": "2024-03-13",
+    "retrieved": "2026-10-16T05:22:05.607868+00:00",
+    "locator": "SectionsII-C/III/IV-A; rendered112-136: formulation, shared timing/physical model, gradients and deployable feature discussion.",
+    "access": "full",
+    "claims": [
+      "CLM-1404"
+    ],
+    "limitations": "Selected HTML method sections inspected, not complete implementation or experimental audit. Learned model predicts gate-wise timing objectives; not a correctness certificate or evidence of this proposal gain.",
+    "version": "v1"
+  },
+  {
+    "id": "S06",
+    "title": "IR-Aware ECO Timing Optimization Using Reinforcement Learning",
+    "url": "https://arxiv.org/html/2402.07781v1",
+    "type": "paper",
+    "published": "2024-02-12",
+    "retrieved": "2026-10-16T05:22:05.607868+00:00",
+    "locator": "Section3.2 reward/environment; rendered116-143,especially123 and135-138.",
+    "access": "full",
+    "claims": [
+      "CLM-1404"
+    ],
+    "limitations": "Selected method paragraphs inspected. Different IR-aware sequential setting; LR+learning+incremental timing already exists, not an exact difference-bound duplicate proof. No training or results reproduced.",
+    "version": "v1"
+  },
+  {
+    "id": "S07",
+    "title": "Improving Timing & Power Trade-off in Post-place Optimization Using Multi-agent Reinforcement Learning",
+    "url": "https://confcats-event-sessions.s3.amazonaws.com/iccad24/uploads/ICCAD_2024_Program_Final.pdf",
+    "type": "official_program",
+    "published": "2024-10-29 program session",
+    "retrieved": "2026-10-16T05:22:05.607868+00:00",
+    "locator": "Official program Tuesday15:15 paper796,Jaemin Seo/Sejin Park/Seokhyeong Kang; DOI10.1145/3676536.3676702 direct open failed.",
+    "access": "metadata",
+    "claims": [
+      "CLM-1404"
+    ],
+    "limitations": "Program search result inspected for identity and topic only. Full paper inaccessible in this turn. Secondary abstract discovery not used to infer internal agents, baseline details or mechanism equivalence. Blocking full-method novelty lead T01."
+  },
+  {
+    "id": "S08",
+    "title": "Accelerating Gate Sizing using GPU",
+    "url": "https://tsung-wei-huang.github.io/papers/2025-EuroPar-GateSizing.pdf",
+    "type": "author_paper",
+    "published": "2025",
+    "retrieved": "2026-10-16T05:22:05.607868+00:00",
+    "locator": "PDF sections1/2.1/2.2, pages1-4; rendered68-111: industrial routine scope and update_delay/select_best_libcell.",
+    "access": "full",
+    "claims": [
+      "CLM-1401",
+      "CLM-1404"
+    ],
+    "limitations": "Selected sections inspected. Paper explicitly withholds industrial sizer internals for IP reasons; public GPU kernels are context, not a reproducible full commercial optimizer or current CPU bottleneck measurement. No GPU run or claimed gains imported."
+  },
+  {
+    "id": "S09",
+    "title": "Differentiable Physical Optimization",
+    "url": "https://yibolin.com/publications/papers/OPT_ICCAD2025_Du.pdf",
+    "type": "author_paper",
+    "published": "2025 ICCAD",
+    "retrieved": "2026-10-16T05:22:05.607868+00:00",
+    "locator": "PDF II-C/III/III-A andIII-B introduction, pages2-4; rendered198-208,248-285,343-360.",
+    "access": "full",
+    "claims": [
+      "CLM-1404"
+    ],
+    "limitations": "Selected formulation/timing-context passages inspected. Joint sizing/buffering and bidirectional load/slew coupling are prior; different optimization/precision contract. No code reproduction or performance audit."
+  },
+  {
+    "id": "S10",
+    "title": "PrimeTime Static Timing Analysis",
+    "url": "https://www.synopsys.com/implementation-and-signoff/signoff/primetime.html",
+    "type": "vendor_capability",
+    "published": "unknown; current page",
+    "retrieved": "2026-10-16T05:22:05.607868+00:00",
+    "locator": "Features/Core Static Timing Analysis and Performance and Capacity.",
+    "access": "full",
+    "claims": [
+      "CLM-1401"
+    ],
+    "limitations": "Official page advertises physically-aware ECO, multicore/distributed analysis and ML power recovery/PBA. Marketing supports advertised capability only. Closed-source certificate mechanisms, controlled performance and license availability unknown."
+  },
+  {
+    "id": "S11",
+    "title": "ISPD26 Contest: Post-Placement Buffering and Sizing README",
+    "url": "https://raw.githubusercontent.com/ABKGroup/ISPD26-Contest/f7b29d242fc7d441f3b4eadc556f40099ccca067/README.md",
+    "type": "official_contest",
+    "published": "2026-05-03 latest inspected commit",
+    "retrieved": "2026-10-16T05:22:05.607868+00:00",
+    "locator": "Raw one-based1-19 resources;21-31 timeline;102-115 final leaderboard.",
+    "access": "full",
+    "claims": [
+      "CLM-1404"
+    ],
+    "limitations": "Entire199-line README retrieved; first33 and selected headings printed, GitHub-rendered leaderboard also inspected. Official ISPD26 landing page opened. Contest-description PDF and authenticated winner algorithms not fully inspected. No benchmark/evaluator execution.",
+    "commit": "f7b29d242fc7d441f3b4eadc556f40099ccca067",
+    "sha256": "29c95e3df2f051f14ebb45ee71be7c3d42d5302c8c12d7f2249a45901dc0ab50"
+  },
+  {
+    "id": "S12",
+    "title": "ISPD2027 MCMM Post-CTS Buffering and Sizing README and evaluator guide",
+    "url": "https://raw.githubusercontent.com/ABKGroup/ISPD27-Contest/faef83cacf70fa7923be07816d804ca9c1cef68e/evaluator/README.md",
+    "type": "official_contest",
+    "published": "2026-10-02 latest inspected commit",
+    "retrieved": "2026-10-16T05:22:05.607868+00:00",
+    "locator": "README raw1-23; evaluator raw1-8,58-81,99-104.",
+    "access": "full",
+    "claims": [
+      "CLM-1404"
+    ],
+    "limitations": "Entire README49 lines and evaluator203 lines retrieved; selected lines through130 inspected. Scores explicitly provisional. Not a single-scene equivalence or novelty finding; no container/design/code execution.",
+    "commit": "faef83cacf70fa7923be07816d804ca9c1cef68e",
+    "sha256": "03f8ae138bf47ac5f51821f7156211de20ebdf757c728360d64915918958ad2d",
+    "readme_sha256": "c597ba839124d5540c070f902b34d3b471c5c1d65b25d5cc95e5c2df93390bd7"
+  },
+  {
+    "id": "S13",
+    "title": "2026 CAD Contest at ICCAD",
+    "url": "https://www.iccad-contest.org/2026/",
+    "type": "official_contest",
+    "published": "2026",
+    "retrieved": "2026-10-16T05:22:05.607868+00:00",
+    "locator": "Rendered37-46 Contest Problems A/B/C.",
+    "access": "full",
+    "claims": [
+      "CLM-1404"
+    ],
+    "limitations": "Official landing-page current problem inventory only; detailed problem/winner implementations not audited. No claim that all related contests have been exhausted."
+  },
+  {
+    "id": "H01",
+    "title": "Released EDA-0010 final adjudicated predecessor triple",
+    "url": "SUB-e59222b261fdda904cd66c5a892de454e5dbcbabf4b3fa142896b356fd1ce075",
+    "type": "released_predecessor",
+    "published": "2026-10-16",
+    "retrieved": "2026-10-16T05:22:05.607868+00:00",
+    "locator": "P proposal.md/responses.md; V SUB-77d7bb685bc812bcb6e3e2a5a357478f7f2a743ad0dcba6a249962e0b163af95 verification.md/json CLM-1301..1305,OBJ-1301/1302,HIST-LOCATOR/HIST-REPLAY; C SUB-d65e80f160a5b95d5338cbbede7dbefddeea23f506a1e7f2db70102f2d45167c challenges.md matching objections.",
+    "access": "full",
+    "claims": [
+      "CLM-1405"
+    ],
+    "limitations": "Assigned released bytes, not external independent source. Aggregate read truncated; only visible target passages considered. No replay, old sources, signatures or scientific approval inherited. V ruling authorizes matching challenge exposure only in its stated scope."
+  }
+]
