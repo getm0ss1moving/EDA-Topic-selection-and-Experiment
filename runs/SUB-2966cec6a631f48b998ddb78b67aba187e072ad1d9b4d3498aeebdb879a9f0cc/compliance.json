@@ -1,0 +1,166 @@
+{
+  "schema": 1,
+  "role": "proposer",
+  "actor_id": "ChatGPT-P04-PHYSICAL-B04-EDA-0009-REPLACEMENT-1-5b0f12cd",
+  "session_id": "8492d4d4-8b51-4d76-9309-7af2622f4674",
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "packet_sha256": "3d29add2098d5982cd75816f9f6db2f417fa0e03703c69708f9ad91afe7c12b9",
+  "job_id": "ac5806f2-7cdf-4224-a4ab-fe157314716c",
+  "read_releases": [
+    "SUB-988d5b734de75037f4ca472fe6c9799a673f9538cd7b4053da26a004347406f8",
+    "SUB-3090026e572d0cecae72323cca434d6748d78424acd61699d6ecfb2e8aad0f6b",
+    "SUB-b69a8b5d5ff701c8a70bb5122fcfe70e9cf376634d0f50de420109f7e3b8d8a0"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0
+  },
+  "rules": {
+    "inputs": {
+      "status": "unknown",
+      "evidence": [
+        "JOB.json; prompt.txt",
+        "search-log.md Identity and observed exposure"
+      ],
+      "limits": "Observed continuation first reads exact JOB/prompt, then common policy and proposer harness, current adjudicated outputs/own previous only. Coordinator-reported prior interrupted-turn activity/exposure scope unknown; not inferred clean from empty output directories."
+    },
+    "isolation": {
+      "status": "unknown",
+      "evidence": [
+        "search-log.md Identity and observed exposure",
+        "compliance.json incidents"
+      ],
+      "limits": "No forbidden read/message/subagent disclosed in observed continuation. No private log reviewed. Unseen prior interruption/OS/backend behavior cannot be certified; this is not an independent clearance."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "release/ allowlisted files",
+        "search-log.md Output and validation scope"
+      ],
+      "limits": "Own job authoring scripts, release/submission/result only in observed continuation. Empty initial release/submissions is an observation, not evidence about unknown prior actions. No previous disclosure or frozen output deleted."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "sources.json",
+        "search-log.md Source reading and access corrections"
+      ],
+      "limits": "Selected primary source access, inherited records, abstract/full/metadata limits and wrong-ID exclusion explicit. No exhaustive source/rights or independent truth attestation."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "proposal.md Claim types",
+        "forecast.json",
+        "search-log.md R3-A01"
+      ],
+      "limits": "Own exact rational/source-locator checks separate from hypotheses, inherited observations and null physical forecasts; no physical result, consent, universal novelty or implementation proof asserted."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "experiment-consent.json",
+        "workflow.json"
+      ],
+      "limits": "Only own pending record; binds earlier frozen revision/old task hash and explicitly does not agree current changed tasks. No foreign consent or abandonment fabricated."
+    },
+    "resources": {
+      "status": "unknown",
+      "evidence": [
+        "JOB.json; policy/docs/INNOVATION-BATCH-0004.md",
+        "tasklist.md EXP-100",
+        "search-log.md observed exposure"
+      ],
+      "limits": "Observed continuation counts only: no new EDA/build/training/remote/GPU/paid execution, own stdlib/HTTPS source checks only. Prior screening interruption scope remains unknown; no experiment allocation inferred from provisional caps."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "direction-control.json",
+        "responses.md"
+      ],
+      "limits": "Fixed same-checkpoint sibling selection, paid complete context and complete route/timing need preserved; zero drift is proposer self-assessment only."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md Output and validation scope",
+        "own submissions/SUB-<content-address>/SUBMISSION.json and root result.json after completion"
+      ],
+      "limits": "Trusted freeze/verify only; coordinator publishes/validates full repository. No self-approval, merge or publication claim; actual success comes from manifest/result, not a prospective ledger."
+    }
+  },
+  "operations": [
+    {
+      "kind": "exact_input_and_policy_reads",
+      "references": [
+        "JOB.json",
+        "prompt.txt",
+        "policy/docs/",
+        "policy/harness/PROPOSER.md",
+        "policy/templates/topic/",
+        "policy/scripts/role_submission.py",
+        "policy/scripts/role_compliance.py"
+      ]
+    },
+    {
+      "kind": "authorized_released_read",
+      "references": [
+        "SUB-988d5b734de75037f4ca472fe6c9799a673f9538cd7b4053da26a004347406f8",
+        "SUB-3090026e572d0cecae72323cca434d6748d78424acd61699d6ecfb2e8aad0f6b",
+        "SUB-b69a8b5d5ff701c8a70bb5122fcfe70e9cf376634d0f50de420109f7e3b8d8a0",
+        "shared/predecessor.json metadata only"
+      ]
+    },
+    {
+      "kind": "public_source_research",
+      "references": [
+        "search-log.md Independent search ledger",
+        "sources.json"
+      ]
+    },
+    {
+      "kind": "own_tiny_model",
+      "references": [
+        "search-log.md R3-MODEL block"
+      ],
+      "code_sha256": "330ec8f762b60bee986f1a88ddf4378314e67ffd445d10dd6872c1d01d08cf85",
+      "stdout_sha256": "3170b1e923a5ee4a9ac7bc9dffeaa5c8aab00d7460191048ab256f7fca720565"
+    },
+    {
+      "kind": "pinned_source_text_only_check",
+      "references": [
+        "search-log.md R3-SOURCE block"
+      ],
+      "code_sha256": "d3741cd4602e09335b05db55c58821f1a0fbbb7eb0373c9fc02524433ca7715b",
+      "stdout_sha256": "95455ebe1d37978b6c6ac605bcc3d4aa1f77f940f9d4bdac990546e7738cc55a"
+    },
+    {
+      "kind": "author_write_local_check_freeze_verify",
+      "references": [
+        "release/",
+        "search-log.md Output and validation scope",
+        "result.json"
+      ],
+      "tasklist_sha256": "fdf7b942d287db89fcf5ca528942d64cc41b5f715abbd278466b33c44874ed5c"
+    }
+  ],
+  "incidents": [
+    {
+      "id": "OBS-R3-INTERRUPTION",
+      "classification": "unknown_interruption_scope",
+      "evidence": [
+        "Coordinator resumption instruction",
+        "search-log.md Identity and observed exposure"
+      ],
+      "description": "Coordinator reports preceding turn of same assigned job ended in platform screening error. At observed continuation release/ and submissions/ empty; no retry-note/result listed. This establishes no unseen pre-interruption scope; no private transcript or separate incident archive inspected. Preserve coordinator-retained record; no deletion or invented execution."
+    }
+  ],
+  "observability": "Self-authored observed-continuation ledger, not complete tool/OS trace or proof of absent undisclosed actions. Numeric activity counts describe observed continuation only. Exact prior platform interruption activity/exposure unknown, disclosed without classifying it as scientific misconduct or clean independence. No access to retained private logs was sought."
+}

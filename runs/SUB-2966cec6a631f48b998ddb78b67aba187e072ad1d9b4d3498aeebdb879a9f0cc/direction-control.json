@@ -1,0 +1,83 @@
+{
+  "state": "continue",
+  "anchor": {
+    "problem": "Choose which fixed local detailed-route repair alternatives to exactly validate before a deadline while retaining complete rule/connectivity outcomes.",
+    "engineering_user": "Digital physical-design route-closure engineer",
+    "downstream_need": "Reduce time to complete connected engine-DRC-clean route while preserving post-route timing at fixed design/technology conditions.",
+    "causal_mechanism": "Feed context-complete cross-candidate exact-obligation sharing and its discovery cost into bounded subset selection, rather than independently scoring immediate repair value and isolated checking cost.",
+    "mechanism_invariants": [
+      "Same canonical routed checkpoint and <=16 fixed same-net wire/via repair candidates",
+      "Complete predicate-context and negative-range dependencies; unsupported rules full fallback or UNKNOWN",
+      "Exact acceptance owned by pinned checker and connectivity oracle; predictor schedules only",
+      "Equal information/candidate/cache/fallback and full costs against strong conventional selection",
+      "Primary gain must survive full downstream closure/timing checks; cache hits alone insufficient"
+    ],
+    "forbidden_pivots": [
+      "Replacing subset-selection contribution with generic caching or a hash log",
+      "Claiming agent count or unified-model labels as novelty",
+      "Moving to placement/sizing or pure hotspot prediction under this ID",
+      "Replacing physical closure need with toy reward/cache-hit optimization"
+    ]
+  },
+  "penalties": {
+    "combination_drift": {
+      "score": 0,
+      "rationale": "Equal-action stopping and stronger conventional SBFE baseline preserve the paid complete-context incidence/selection anchor. No new optimizer or generic short-circuit novelty is claimed.",
+      "evidence_refs": [
+        "proposal.md",
+        "responses.md"
+      ]
+    },
+    "demand_drift": {
+      "score": 0,
+      "rationale": "Same fixed siblings and complete connected checked-route/timing endpoint; reports for rejected alternatives now matched to actual endpoint. Narrow utility remains unresolved.",
+      "evidence_refs": [
+        "proposal.md",
+        "industry-gap.md"
+      ]
+    },
+    "total": 0
+  },
+  "revision_assessment": {
+    "preserves_problem": true,
+    "preserves_engineering_need": true,
+    "preserves_causal_mechanism": true,
+    "changes": [
+      "Equal final-persistent witness-stop/continue/full-report actions and lifecycle source contract",
+      "C201/C203 before adapter and economic lock; C202 after endpoint lock before pilot",
+      "Restricted classical/new2026 shared-test reduction as stronger conventional null",
+      "Full selected EvoDRC method and pinned previews as adjacent prior",
+      "New own public four-bit exact model and source-locator checks; no physical experiments"
+    ],
+    "reason": "Address verified OBJ-1101 and every retained critical gate without pivoting the engineering user, immutable siblings, paid sharing or downstream endpoint."
+  },
+  "abandonment": {
+    "decision_id": null,
+    "grounds": [],
+    "rationale": null,
+    "evidence_refs": [],
+    "consents": {
+      "proposer": {
+        "session_id": null,
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      },
+      "challenger": {
+        "session_id": null,
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      }
+    },
+    "successor_topic_id": null,
+    "resurrection_conditions": [
+      "Independent source equivalence resolution and narrow demand/physical-work evidence under future allocation"
+    ]
+  },
+  "parking_recommendation": {
+    "condition": "After independent completion of this third new cycle, if still unconverged",
+    "reason": "Persistent witness/adapter; distinctive estimator beyond equal-information C; representative demand/residual cost; rights/resources; exact consent unresolved.",
+    "not_joint_abandonment": true
+  }
+}

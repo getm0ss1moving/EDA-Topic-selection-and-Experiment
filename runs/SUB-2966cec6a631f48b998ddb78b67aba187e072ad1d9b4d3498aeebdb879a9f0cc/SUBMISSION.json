@@ -1,0 +1,25 @@
+{
+  "actor_id": "ChatGPT-P04-PHYSICAL-B04-EDA-0009-REPLACEMENT-1-5b0f12cd",
+  "files": {
+    "compliance.json": "c93497149d641b92bc157960f2590e7ac20304abc31b5a0f53a5c614e1a8ef5a",
+    "contest-audit.md": "3493145b135fe17e9f24a565c391ba4b857a20eea707d0b300e442ba95e28564",
+    "direction-control.json": "cbcde6741897fc17afcc05671c01d241836955cec61fcdcff2f785651b7da182",
+    "experiment-consent.json": "56d23d8ed07af2472021c624f6769a405692b5eccdd5aaf18bf5993a7cec42f9",
+    "experiment-plan.md": "29f629406d98c08cda7cec88802bf460f00a87ced50af13b11b68631cf822e70",
+    "forecast.json": "2be390bba3223ff640c4766ff5b963907b7df6c5c3a38f79d190cbd0be246363",
+    "industry-gap.md": "dfa7777522b46ff8fea174b707b0d9cf0d045fcafd296bc7306d4daf38d9e9eb",
+    "prior-art.csv": "e4ee90dba9b431679effb59b7ce0e7e25a13b5281ec5f13c447daf1bac559221",
+    "proposal.md": "3731c96ff7c786b50a67877761dcf0b36ff7fe95ae9526a87c048d4723d441ee",
+    "responses.md": "23c634f5fa6542097d30ff26d240c1db125634508611e137ece565d847ae8a87",
+    "search-log.md": "5df8694175f8db11bc79d19bd1e61f1166d151d5c529ddd46af400f3564b2212",
+    "sources.json": "78a3c00ecd080e55892a34ca4317d289ac369bc361fb24577c3eaa0cc12bce78",
+    "tasklist.md": "fdf7b942d287db89fcf5ca528942d64cc41b5f715abbd278466b33c44874ed5c",
+    "workflow.json": "83257b58f1ffc6ce673b9e96627aa33cd20b2e581784db57534aa4b9d77bd3a2"
+  },
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "packet_sha256": "3d29add2098d5982cd75816f9f6db2f417fa0e03703c69708f9ad91afe7c12b9",
+  "role": "proposer",
+  "schema": 1,
+  "session_id": "8492d4d4-8b51-4d76-9309-7af2622f4674",
+  "topic": "EDA-0009"
+}

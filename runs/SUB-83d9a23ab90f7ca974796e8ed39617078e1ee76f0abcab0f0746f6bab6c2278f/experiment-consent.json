@@ -1,0 +1,7 @@
+{
+  "session_id": "1f323593-6e87-4aef-b624-b0c134c28632",
+  "decision": "revision_requested",
+  "signed_revision": "SUB-2966cec6a631f48b998ddb78b67aba187e072ad1d9b4d3498aeebdb879a9f0cc",
+  "tasklist_sha256": "fdf7b942d287db89fcf5ca528942d64cc41b5f715abbd278466b33c44874ed5c",
+  "rationale": "Specification repairs acknowledged. No agreement: actual allocation/input rights, persistent witness/selective interface, expanded controller bounds, distinctive F/C representation and economic/endpoint locks remain unresolved. See C301-C304 addendum. Park is not abandonment."
+}

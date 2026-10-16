@@ -1,0 +1,230 @@
+[
+  {
+    "id": "C3-S01",
+    "title": "OpenROAD TritonRoute caller and report exporter",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/src/drt/src/TritonRoute.cpp",
+    "source_type": "pinned_source_code",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T05:40:27.815708+00:00",
+    "locator": "raw one-based 1023-1108 and 1356-1450",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "C3-CLM-001"
+    ],
+    "limitations": "Selected source inspection only; no engine build, execution or complete transitive rule audit.",
+    "sha256": "1bb6bef08a426c311d6e1b8fae12db89bfb69be89ff7340f381a95b6ab37f335",
+    "version": "b16bda7e82721d10566ff7e2b68f1ff0be9f9e38"
+  },
+  {
+    "id": "C3-S02",
+    "title": "OpenROAD FlexGC dispatch and marker insertion",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/src/drt/src/gc/FlexGC_main.cpp",
+    "source_type": "pinned_source_code",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T05:40:27.815708+00:00",
+    "locator": "raw 3990-4059; companion FlexGC.cpp raw68-78",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "C3-CLM-001"
+    ],
+    "limitations": "Dispatch and selected insertion only, not all rule implementations.",
+    "sha256": "4770ffdc8f1ac0fd13e69dac1a0b75c5dbb795bf7c043be5ed2b8294cb43a517",
+    "version": "b16bda7e82721d10566ff7e2b68f1ff0be9f9e38"
+  },
+  {
+    "id": "C3-S03",
+    "title": "Evaluation of DNF Formulas",
+    "url": "https://www.cs.cmu.edu/afs/cs/user/srallen/www/papers/dnfdraft17.pdf",
+    "source_type": "author_paper",
+    "publication_date": "2017",
+    "retrieved_utc": "2026-10-16T05:40:27.815708+00:00",
+    "locator": "section2 SBFE definition; PDF pp1-2",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "C3-CLM-002"
+    ],
+    "limitations": "Selected definition; product-distribution assumptions; no physical costs or theorem transfer."
+  },
+  {
+    "id": "C3-S04",
+    "title": "Cost-Optimal Decision Diagrams for Stochastic Boolean Function Evaluation",
+    "url": "https://arxiv.org/html/2606.24672v1",
+    "source_type": "preprint",
+    "publication_date": "2026-06",
+    "retrieved_utc": "2026-10-16T05:40:27.815708+00:00",
+    "locator": "section3 Definition1 rendered83-90; section5",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "C3-CLM-002"
+    ],
+    "limitations": "Selected formulation, not proof/performance audit; joint distribution is supplied, not free learned physical knowledge."
+  },
+  {
+    "id": "C3-S05",
+    "title": "Stochastic Function Certification with Correlations",
+    "url": "https://arxiv.org/html/2604.02611v1",
+    "source_type": "preprint",
+    "publication_date": "2026-04-03",
+    "retrieved_utc": "2026-10-16T05:40:27.815708+00:00",
+    "locator": "section1 rendered111-139; Graph/Hypergraph Probing definitions135-137",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "C3-CLM-003"
+    ],
+    "limitations": "Selected definitions only; one-sided certification assumes feasible support; graph model probes observed edges, not latent vertices. No approximation bound transferred."
+  },
+  {
+    "id": "C3-S06",
+    "title": "A generic flow algorithm for shared filter ordering problems",
+    "url": "https://research.ibm.com/publications/a-generic-flow-algorithm-for-shared-filter-ordering-problems",
+    "source_type": "institution_publication_abstract",
+    "publication_date": "2008",
+    "retrieved_utc": "2026-10-16T05:40:27.815708+00:00",
+    "locator": "Abstract rendered9-14",
+    "access_level": "abstract",
+    "supported_claim_ids": [
+      "C3-CLM-002"
+    ],
+    "limitations": "Overlapping conjunctive filters/parallel throughput only; full paper not inspected; date displayed17Dec2008 may differ from conference date."
+  },
+  {
+    "id": "C3-S07",
+    "title": "TritonRoute-WXL: The Open Source Router with Integrated DRC Engine",
+    "url": "https://vlsicad.ucsd.edu/Publications/Journals/j136.pdf",
+    "source_type": "author_paper",
+    "publication_date": "2021",
+    "retrieved_utc": "2026-10-16T05:40:27.815708+00:00",
+    "locator": "physical PDF p9 V-E/VI-B rendered838-893",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "C3-CLM-004"
+    ],
+    "limitations": "Selected methods; no fresh reproduced speedup or fixed sibling incidence evidence."
+  },
+  {
+    "id": "C3-S08",
+    "title": "OpenDRC",
+    "url": "https://zyh0911.github.io/assets/pdf/OpenDRC.pdf",
+    "source_type": "author_paper",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T05:40:27.815708+00:00",
+    "locator": "physical PDF p3 IV-C rendered218-286",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "C3-CLM-002"
+    ],
+    "limitations": "Selected hierarchy pruning; not arbitrary cross-sibling dependency proof."
+  },
+  {
+    "id": "C3-S09",
+    "title": "Dr. CU 2.0: A Scalable Detailed Routing Framework with Correct-by-Construction Design Rule Satisfaction",
+    "url": "https://chengengjie.github.io/papers/C12-ICCAD19-DrCU2.pdf",
+    "source_type": "author_paper",
+    "publication_date": "2019",
+    "retrieved_utc": "2026-10-16T05:40:27.815708+00:00",
+    "locator": "physical PDF pp4-5 III-C.2 rendered323-367",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "C3-CLM-002"
+    ],
+    "limitations": "Selected pessimistic LUT and exact conflict verification; no winner executable correspondence or reproduced results."
+  },
+  {
+    "id": "C3-S10",
+    "title": "Method of context-sensitive, trans-reflexive incremental design rule checking and its applications",
+    "url": "https://patents.google.com/patent/US20120180014A1/en",
+    "source_type": "published_patent",
+    "publication_date": "2012",
+    "retrieved_utc": "2026-10-16T05:40:27.815708+00:00",
+    "locator": "Description FIG8A-D rendered312-317",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "C3-CLM-004"
+    ],
+    "limitations": "Published description of first-violation rollback; not proof of OpenROAD API or commercial availability."
+  },
+  {
+    "id": "C3-S11",
+    "title": "EvoDRC: A Self-Evolving Agentic Framework for Automated DRC Violation Repair",
+    "url": "https://arxiv.org/html/2607.20019v1",
+    "source_type": "preprint",
+    "publication_date": "2026-07",
+    "retrieved_utc": "2026-10-16T05:40:27.815708+00:00",
+    "locator": "sections3.2-3.3 Table2 and connectivity footnote rendered127-143",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "C3-CLM-004"
+    ],
+    "limitations": "Selected method: connectivity check explicitly not LVS; no reproduction, timing equivalence or fixed-pool novelty verdict."
+  },
+  {
+    "id": "C3-S12",
+    "title": "ISPD2019 initial detailed routing contest",
+    "url": "https://ispd.cc/contests/19/",
+    "source_type": "official_contest",
+    "publication_date": "2019",
+    "retrieved_utc": "2026-10-16T05:40:27.815708+00:00",
+    "locator": "Final Contest Result / Final Solution Files",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "C3-CLM-005"
+    ],
+    "limitations": "Winner identity and output availability; exact winning source/binary mapping unresolved."
+  },
+  {
+    "id": "C3-S13",
+    "title": "ISPD2025 contest",
+    "url": "https://www.ispd.cc/contests/25/index.html",
+    "source_type": "official_contest",
+    "publication_date": "2025",
+    "retrieved_utc": "2026-10-16T05:40:27.815708+00:00",
+    "locator": "page title and winner/resources index",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "C3-CLM-005"
+    ],
+    "limitations": "Index inspected; linked winning methods not inspected; no absence claim."
+  },
+  {
+    "id": "C3-S14",
+    "title": "ISPD2026 contest",
+    "url": "https://www.ispd.cc/contests/26/index.html",
+    "source_type": "official_contest",
+    "publication_date": "2026",
+    "retrieved_utc": "2026-10-16T05:40:27.815708+00:00",
+    "locator": "page title and winner/resources index",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "C3-CLM-005"
+    ],
+    "limitations": "Index inspected; linked winning methods not inspected; no absence claim."
+  },
+  {
+    "id": "C3-X01",
+    "title": "AiDRC author manuscript retrieval attempt",
+    "url": "https://ieda.oscc.cc/res/papers/25-TODAES-AiDRC.pdf",
+    "source_type": "author_paper",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T05:40:27.815708+00:00",
+    "locator": "web open returned Internal Error",
+    "access_level": "metadata",
+    "supported_claim_ids": [
+      "C3-LIMIT-001"
+    ],
+    "limitations": "Fresh full access failed; previous released source correction is attributed only."
+  },
+  {
+    "id": "C3-X02",
+    "title": "DATE2026 routing accelerator lead",
+    "url": "https://past.date-conference.com/proceedings-archive/2026/DATA/72.pdf",
+    "source_type": "conference_paper",
+    "publication_date": "2026",
+    "retrieved_utc": "2026-10-16T05:40:27.815708+00:00",
+    "locator": "indexed passage Experimental Setup / CoRA-TR; open Internal Error",
+    "access_level": "metadata",
+    "supported_claim_ids": [
+      "C3-LIMIT-002"
+    ],
+    "limitations": "Search excerpt only; hardware routing kernel differs from paid sibling validation. No numerical result used."
+  }
+]

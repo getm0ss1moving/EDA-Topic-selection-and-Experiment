@@ -1,0 +1,21 @@
+{
+  "kind": "forecast_not_measurement",
+  "metric": "time to complete named-engine-report-clean connected repair with extracted timing guards",
+  "unit": "seconds",
+  "baseline_source": "No measured physical baseline; arms specified in experiment-plan.md",
+  "direction": "lower elapsed time with preserved complete-result quality",
+  "pessimistic": null,
+  "base": null,
+  "optimistic": null,
+  "confidence": null,
+  "assumptions": [
+    "Representative fixed repair pools and exact selective interface become available",
+    "Residual sharing after the identical charged K0 survives context construction/fallback",
+    "Candidate-slot acquisition improves over equally informed conventional lazy/VOI",
+    "Actual compute/data rights, thresholds and matching exact-task consents exist before execution",
+    "All arms receive sound rejection/continuation/report choices with charged restart costs",
+    "No physical utility inferred from own conventional Boolean fixture"
+  ],
+  "calibration_plan": "C203 semantic lock before106a economics/sampling before103; separate106b downstream lock before C202/105/107. All actual resource and physical numerical fields remain null.",
+  "observations": "R3 own four-bit rational model and raw-source-locator checks only; exact code/stdout/hashes in search-log.md. Prior R2/model counts remain historical attributed records, not reexecuted or physical measurements."
+}

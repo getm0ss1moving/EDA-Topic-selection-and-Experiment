@@ -1,0 +1,923 @@
+[
+  {
+    "id": "B4-S01",
+    "title": "TritonRoute-WXL: The Open Source Router with Integrated DRC Engine",
+    "url": "https://vlsicad.ucsd.edu/Publications/Journals/j136.pdf",
+    "source_type": "author_paper",
+    "publication_date": "2022",
+    "retrieved_utc": "2026-10-16T04:08:26.844466+00:00",
+    "locator": "PDF p9 V-E and VI-B; browser rendered lines838-907",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-B4-007"
+    ],
+    "limitations": "Selected method sections reopened; paper results not reproduced; author accepted manuscript.",
+    "version": "DOI10.1109/TCAD.2021.3079268",
+    "record_origin": {
+      "release_id": "SUB-988d5b734de75037f4ca472fe6c9799a673f9538cd7b4053da26a004347406f8",
+      "kind": "own_previous_released_record"
+    },
+    "current_job_source_access": "not_reopened_under_this_id; retained as attributed historical evidence; any fresh access has R3 IDs",
+    "current_retrieved_utc": "2026-10-16T04:58:14.510149+00:00",
+    "current_locator": "PDF p9 V-E/VI-B; rendered838-907",
+    "prior_record_origin": {
+      "release_id": "SUB-2e1f236a3f9a0f3f0b1c30016dc8ad8f2b235c94f980b0989b1d3e287588d85c",
+      "kind": "own_previous_released_record"
+    }
+  },
+  {
+    "id": "B4-S02",
+    "title": "OpenDRC: An Efficient Open-Source Design Rule Checking Engine with Hierarchical GPU Acceleration",
+    "url": "https://zyh0911.github.io/assets/pdf/OpenDRC.pdf",
+    "source_type": "author_paper",
+    "publication_date": "2023",
+    "retrieved_utc": "2026-10-16T04:08:26.844466+00:00",
+    "locator": "PDF p3 IV-C, rendered lines218-286; p2 IV-B",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-B4-009"
+    ],
+    "limitations": "Selected pruning/reuse passages; not a code or full theorem audit. No GPU executed.",
+    "version": "DAC2023 author PDF",
+    "record_origin": {
+      "release_id": "SUB-988d5b734de75037f4ca472fe6c9799a673f9538cd7b4053da26a004347406f8",
+      "kind": "own_previous_released_record"
+    },
+    "current_job_source_access": "not_reopened_under_this_id; retained as attributed historical evidence; any fresh access has R3 IDs",
+    "current_retrieved_utc": "2026-10-16T04:58:14.510149+00:00",
+    "current_locator": "PDF p3 IV-C; rendered218-286",
+    "prior_record_origin": {
+      "release_id": "SUB-2e1f236a3f9a0f3f0b1c30016dc8ad8f2b235c94f980b0989b1d3e287588d85c",
+      "kind": "own_previous_released_record"
+    }
+  },
+  {
+    "id": "B4-S03",
+    "title": "DRC-Aid: Design-Rule Correction via Agentic Framework utilizing Inference-Time Large Language Models",
+    "url": "https://arxiv.org/html/2607.22761v1",
+    "source_type": "author_preprint",
+    "publication_date": "2026-07-23",
+    "retrieved_utc": "2026-10-16T04:08:26.844466+00:00",
+    "locator": "Sections3.1-3.4 and2.2; rendered lines103-196; bibliography Huang2025",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-B4-009"
+    ],
+    "limitations": "Selected methods, transistor layouts with commercial tools. No measured result transferred or code executed.",
+    "version": "arXiv2607.22761v1",
+    "record_origin": {
+      "release_id": "SUB-988d5b734de75037f4ca472fe6c9799a673f9538cd7b4053da26a004347406f8",
+      "kind": "own_previous_released_record"
+    },
+    "current_job_source_access": "not_reopened_under_this_id; retained as attributed historical evidence; any fresh access has R3 IDs",
+    "current_retrieved_utc": "2026-10-16T04:58:14.510149+00:00",
+    "current_locator": "arXiv HTML sections3.1-3.4; rendered103-196",
+    "prior_record_origin": {
+      "release_id": "SUB-2e1f236a3f9a0f3f0b1c30016dc8ad8f2b235c94f980b0989b1d3e287588d85c",
+      "kind": "own_previous_released_record"
+    }
+  },
+  {
+    "id": "B4-S04",
+    "title": "OpenROAD pinned TritonRoute.cpp checkDRC and getDRCMarkers",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/src/drt/src/TritonRoute.cpp",
+    "source_type": "pinned_source_code",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T04:08:26.844466+00:00",
+    "locator": "Raw one-based lines1028-1086 regional workers/marker deduplication;1089-1110 checkDRC",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-B4-004"
+    ],
+    "limitations": "Read selected functions only. No executable or complete semantic/coverage audit; marker reports do not expose all clean obligations.",
+    "version": "b16bda7e82721d10566ff7e2b68f1ff0be9f9e38",
+    "sha256": "1bb6bef08a426c311d6e1b8fae12db89bfb69be89ff7340f381a95b6ab37f335",
+    "record_origin": {
+      "release_id": "SUB-988d5b734de75037f4ca472fe6c9799a673f9538cd7b4053da26a004347406f8",
+      "kind": "own_previous_released_record"
+    },
+    "current_job_source_access": "not_reopened_under_this_id; retained as attributed historical evidence; any fresh access has R3 IDs",
+    "prior_record_origin": {
+      "release_id": "SUB-2e1f236a3f9a0f3f0b1c30016dc8ad8f2b235c94f980b0989b1d3e287588d85c",
+      "kind": "own_previous_released_record"
+    }
+  },
+  {
+    "id": "B4-S05",
+    "title": "OpenROAD pinned FlexGC worker implementation and interface",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/src/drt/src/gc/FlexGC_main.cpp",
+    "source_type": "pinned_source_code",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T04:08:26.844466+00:00",
+    "locator": "See per-file raw one-based locators",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-B4-004",
+      "CLM-B4-005"
+    ],
+    "limitations": "Selected functions and declarations only. No proof of complete dependency closure, clean-certificate API or all min-area coverage; no build/run.",
+    "version": "b16bda7e82721d10566ff7e2b68f1ff0be9f9e38",
+    "files": [
+      {
+        "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/src/drt/src/gc/FlexGC_main.cpp",
+        "raw_one_based_locator": "849-935 spacing queries/target branch;1516-1520 selected min-area guard;4021-4062 main dispatcher",
+        "sha256": "4770ffdc8f1ac0fd13e69dac1a0b75c5dbb795bf7c043be5ed2b8294cb43a517"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/src/drt/src/gc/FlexGC.cpp",
+        "raw_one_based_locator": "146-177 target setters;constructor initialization near57",
+        "sha256": "5f5476dd5992c25fb2423612c05cc770435fcd376df2f21e8a72af8f8e97154b"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/src/drt/src/gc/FlexGC.h",
+        "raw_one_based_locator": "45-81 selected public setters/getters",
+        "sha256": "293e895cf573ccba346d5bf35184dac066f00509e327a53e370256078a945e64"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/src/drt/src/gc/FlexGC_impl.h",
+        "raw_one_based_locator": "declarations of internal rule checks, selected references only",
+        "sha256": "71195b8fe24cc3af0088c376f1c0f4bee4907fd132f4d1ea592e3201472b6213"
+      }
+    ],
+    "record_origin": {
+      "release_id": "SUB-988d5b734de75037f4ca472fe6c9799a673f9538cd7b4053da26a004347406f8",
+      "kind": "own_previous_released_record"
+    },
+    "current_job_source_access": "not_reopened_under_this_id; retained as attributed historical evidence; any fresh access has R3 IDs",
+    "prior_record_origin": {
+      "release_id": "SUB-2e1f236a3f9a0f3f0b1c30016dc8ad8f2b235c94f980b0989b1d3e287588d85c",
+      "kind": "own_previous_released_record"
+    }
+  },
+  {
+    "id": "B4-S06",
+    "title": "Dr. CU public scheduler and README",
+    "url": "https://raw.githubusercontent.com/cuhk-eda/dr-cu/3d81988d741da36d2612f3443165970e0125bccc/src/multi_net/Scheduler.cpp",
+    "source_type": "pinned_source_code",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T04:08:26.844466+00:00",
+    "locator": "Scheduler.cpp raw lines17-20 size sort,32-59 batching,76-100 expanded guide conflicts; README12-19 paper list,145-186 license",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-B4-009"
+    ],
+    "limitations": "Scheduler and README only. Exact ISPD2019 winner-binary correspondence not proved; source reading not permission for unallocated execution.",
+    "version": "3d81988d741da36d2612f3443165970e0125bccc",
+    "files": [
+      {
+        "name": "Scheduler.cpp",
+        "sha256": "fa4d52a454562d0b570a0d44dca60f9bf0a17969467c841b53e481c6688146dc"
+      },
+      {
+        "name": "README.md",
+        "sha256": "46cbe915fdaa08ee61a568e9831e55ff9601a4c87a0808af50323864f4cf6327"
+      }
+    ],
+    "license_notes": "CU-SD license stated in README, attribution/conditions apply; no code redistributed.",
+    "record_origin": {
+      "release_id": "SUB-988d5b734de75037f4ca472fe6c9799a673f9538cd7b4053da26a004347406f8",
+      "kind": "own_previous_released_record"
+    },
+    "current_job_source_access": "not_reopened_under_this_id; retained as attributed historical evidence; any fresh access has R3 IDs",
+    "prior_record_origin": {
+      "release_id": "SUB-2e1f236a3f9a0f3f0b1c30016dc8ad8f2b235c94f980b0989b1d3e287588d85c",
+      "kind": "own_previous_released_record"
+    }
+  },
+  {
+    "id": "B4-S07",
+    "title": "Dr. CU 2.0: A Scalable Detailed Routing Framework with Correct-by-Construction Design Rule Satisfaction",
+    "url": "https://chengengjie.github.io/papers/C12-ICCAD19-DrCU2.pdf",
+    "source_type": "author_paper",
+    "publication_date": "2019-11",
+    "retrieved_utc": "2026-10-16T04:08:26.844466+00:00",
+    "locator": "PDF p4 III-C.2 and p5 continuation; rendered323-367",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-B4-009"
+    ],
+    "limitations": "Selected methods only, postcontest2.0; not proof of exact winner binary or audit of every query cache. No performance reproduction.",
+    "version": "ICCAD2019 DOI10.1109/ICCAD45719.2019.8942074",
+    "record_origin": {
+      "release_id": "SUB-988d5b734de75037f4ca472fe6c9799a673f9538cd7b4053da26a004347406f8",
+      "kind": "own_previous_released_record"
+    },
+    "current_job_source_access": "not_reopened_under_this_id; retained as attributed historical evidence; any fresh access has R3 IDs",
+    "current_retrieved_utc": "2026-10-16T04:58:14.510149+00:00",
+    "current_locator": "PDF p4 III-C.2 and p5 continuation; rendered323-367",
+    "correction": "Prior IV-C.2 label was wrong; current primary PDF and released verifier identify III-C.2.",
+    "prior_record_origin": {
+      "release_id": "SUB-2e1f236a3f9a0f3f0b1c30016dc8ad8f2b235c94f980b0989b1d3e287588d85c",
+      "kind": "own_previous_released_record"
+    }
+  },
+  {
+    "id": "B4-S07a",
+    "title": "Dr. CU 2.0 author presentation",
+    "url": "https://haocheng.li/assets/docs/c6-iccad19-drcu2-slides.pdf",
+    "source_type": "author_slides",
+    "publication_date": "2019",
+    "retrieved_utc": "2026-10-16T04:08:26.844466+00:00",
+    "locator": "PDF page17 (display slide14/26) Pessimistic Lookup Table; pages15-17 via selection; page1 source pointer",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-B4-009"
+    ],
+    "limitations": "Selected slides; PDF31 pages includes overlays versus26 display slides. Publication date from associated paper; upload date unknown.",
+    "version": "author hosted presentation; no binary executed",
+    "record_origin": {
+      "release_id": "SUB-988d5b734de75037f4ca472fe6c9799a673f9538cd7b4053da26a004347406f8",
+      "kind": "own_previous_released_record"
+    },
+    "current_job_source_access": "not_reopened_under_this_id; retained as attributed historical evidence; any fresh access has R3 IDs",
+    "prior_record_origin": {
+      "release_id": "SUB-2e1f236a3f9a0f3f0b1c30016dc8ad8f2b235c94f980b0989b1d3e287588d85c",
+      "kind": "own_previous_released_record"
+    }
+  },
+  {
+    "id": "B4-S08",
+    "title": "Submodular Function Maximization",
+    "url": "https://www.cs.cmu.edu/~dgolovin/papers/submodular_survey12.pdf",
+    "source_type": "author_chapter",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T04:08:26.844466+00:00",
+    "locator": "Section2, PDF p9, rendered405-436: bounds-based lazy evaluation; references Minoux1978",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-B4-009"
+    ],
+    "limitations": "Selected survey passage establishes general prior, not a DRC implementation or transferred guarantee.",
+    "version": "author hosted survey12 PDF; exact publication edition not independently fixed",
+    "record_origin": {
+      "release_id": "SUB-988d5b734de75037f4ca472fe6c9799a673f9538cd7b4053da26a004347406f8",
+      "kind": "own_previous_released_record"
+    },
+    "current_job_source_access": "not_reopened_under_this_id; retained as attributed historical evidence; any fresh access has R3 IDs",
+    "prior_record_origin": {
+      "release_id": "SUB-2e1f236a3f9a0f3f0b1c30016dc8ad8f2b235c94f980b0989b1d3e287588d85c",
+      "kind": "own_previous_released_record"
+    }
+  },
+  {
+    "id": "B4-S09",
+    "title": "Optimal Nonmyopic Value of Information in Graphical Models: Efficient Algorithms and Theoretical Limits",
+    "url": "https://www.ijcai.org/Proceedings/05/Papers/1154.pdf",
+    "source_type": "conference_paper",
+    "publication_date": "2005",
+    "retrieved_utc": "2026-10-16T04:08:26.844466+00:00",
+    "locator": "PDF p1 sections1-2 and p2 observation costs/conditional plans, rendered21-127",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-B4-009"
+    ],
+    "limitations": "General conditional observation/cost prior. Graphical-model complexity and optimality results not transferred to route repair.",
+    "version": "IJCAI2005 Krause and Guestrin",
+    "record_origin": {
+      "release_id": "SUB-988d5b734de75037f4ca472fe6c9799a673f9538cd7b4053da26a004347406f8",
+      "kind": "own_previous_released_record"
+    },
+    "current_job_source_access": "not_reopened_under_this_id; retained as attributed historical evidence; any fresh access has R3 IDs",
+    "prior_record_origin": {
+      "release_id": "SUB-2e1f236a3f9a0f3f0b1c30016dc8ad8f2b235c94f980b0989b1d3e287588d85c",
+      "kind": "own_previous_released_record"
+    }
+  },
+  {
+    "id": "B4-S10",
+    "title": "Submodular Optimization with Submodular Cover and Submodular Knapsack Constraints",
+    "url": "https://papers.nips.cc/paper/2013/file/a1d50185e7426cbb0acad1e6ca74b9aa-Paper.pdf",
+    "source_type": "conference_paper",
+    "publication_date": "2013",
+    "retrieved_utc": "2026-10-16T04:08:26.844466+00:00",
+    "locator": "Section1 Problem2, PDF p1, rendered36-47",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-B4-003"
+    ],
+    "limitations": "Formulation overlap with fixed weighted-coverage/independent-value toy only. Unknown physical/adaptive utility need not be submodular.",
+    "version": "NIPS2013 Iyer and Bilmes",
+    "record_origin": {
+      "release_id": "SUB-988d5b734de75037f4ca472fe6c9799a673f9538cd7b4053da26a004347406f8",
+      "kind": "own_previous_released_record"
+    },
+    "current_job_source_access": "not_reopened_under_this_id; retained as attributed historical evidence; any fresh access has R3 IDs",
+    "prior_record_origin": {
+      "release_id": "SUB-2e1f236a3f9a0f3f0b1c30016dc8ad8f2b235c94f980b0989b1d3e287588d85c",
+      "kind": "own_previous_released_record"
+    }
+  },
+  {
+    "id": "B4-S11",
+    "title": "Incremental Layout Analysis",
+    "url": "https://patents.google.com/patent/US20120047479A1/en",
+    "source_type": "published_patent",
+    "publication_date": "2012-02-23",
+    "retrieved_utc": "2026-10-16T04:08:26.844466+00:00",
+    "locator": "Description Detecting Differences, Halos at rendered553-562 and Selection of Analysis Criteria",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-B4-009"
+    ],
+    "limitations": "Selected public description; no legal novelty/validity opinion or measured implementation evidence.",
+    "version": "US20120047479A1",
+    "record_origin": {
+      "release_id": "SUB-988d5b734de75037f4ca472fe6c9799a673f9538cd7b4053da26a004347406f8",
+      "kind": "own_previous_released_record"
+    },
+    "current_job_source_access": "not_reopened_under_this_id; retained as attributed historical evidence; any fresh access has R3 IDs",
+    "prior_record_origin": {
+      "release_id": "SUB-2e1f236a3f9a0f3f0b1c30016dc8ad8f2b235c94f980b0989b1d3e287588d85c",
+      "kind": "own_previous_released_record"
+    }
+  },
+  {
+    "id": "B4-S12",
+    "title": "Shift left for more efficient block design and chip integration",
+    "url": "https://blogs.sw.siemens.com/calibre/2024/07/26/shift-left-for-more-efficient-block-design-and-chip-integration/",
+    "source_type": "official_vendor_description",
+    "publication_date": "2024-07-26",
+    "retrieved_utc": "2026-10-16T04:08:26.844466+00:00",
+    "locator": "DRC error debugging integrated in the design layout environment, rendered38-42",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-B4-007"
+    ],
+    "limitations": "Advertised regional checking only. Savings numbers not adopted; commercial internals/access/comparability unknown.",
+    "version": "retrieved 2026-10-16",
+    "record_origin": {
+      "release_id": "SUB-988d5b734de75037f4ca472fe6c9799a673f9538cd7b4053da26a004347406f8",
+      "kind": "own_previous_released_record"
+    },
+    "current_job_source_access": "not_reopened_under_this_id; retained as attributed historical evidence; any fresh access has R3 IDs",
+    "prior_record_origin": {
+      "release_id": "SUB-2e1f236a3f9a0f3f0b1c30016dc8ad8f2b235c94f980b0989b1d3e287588d85c",
+      "kind": "own_previous_released_record"
+    }
+  },
+  {
+    "id": "B4-S13",
+    "title": "ISPD2019 Initial Detailed Routing Contest",
+    "url": "https://ispd.cc/contests/19/",
+    "source_type": "official_contest",
+    "publication_date": "2019",
+    "retrieved_utc": "2026-10-16T04:08:26.844466+00:00",
+    "locator": "Evaluation100-140, Final Result154-191 and FAQ12 rendered299-311",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-B4-010",
+      "CLM-R2-003"
+    ],
+    "limitations": "Official first-place identity and DEF/report categories checked. No Innovus license or archive rights assumed; winner executable not inspected.",
+    "version": "retrieved 2026-10-16",
+    "record_origin": {
+      "release_id": "SUB-988d5b734de75037f4ca472fe6c9799a673f9538cd7b4053da26a004347406f8",
+      "kind": "own_previous_released_record"
+    },
+    "current_job_source_access": "not_reopened_under_this_id; retained as attributed historical evidence; any fresh access has R3 IDs",
+    "current_retrieved_utc": "2026-10-16T04:58:14.510149+00:00",
+    "current_locator": "Evaluation100-140, Final Result154-191 and FAQ12 rendered299-311",
+    "prior_record_origin": {
+      "release_id": "SUB-2e1f236a3f9a0f3f0b1c30016dc8ad8f2b235c94f980b0989b1d3e287588d85c",
+      "kind": "own_previous_released_record"
+    }
+  },
+  {
+    "id": "B4-S14",
+    "title": "ISPD25 Performance-Driven Large Scale Global Routing",
+    "url": "https://www.ispd.cc/contests/25/index.html",
+    "source_type": "official_contest",
+    "publication_date": "2025",
+    "retrieved_utc": "2026-10-16T04:08:26.844466+00:00",
+    "locator": "Title and Contest Winners list, rendered0-18",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-B4-010"
+    ],
+    "limitations": "Stage/title only; no winner-method audit. Bare-host tool open failed, www host succeeded.",
+    "version": "retrieved 2026-10-16",
+    "record_origin": {
+      "release_id": "SUB-988d5b734de75037f4ca472fe6c9799a673f9538cd7b4053da26a004347406f8",
+      "kind": "own_previous_released_record"
+    },
+    "current_job_source_access": "not_reopened_under_this_id; retained as attributed historical evidence; any fresh access has R3 IDs",
+    "current_retrieved_utc": "2026-10-16T04:58:14.510149+00:00",
+    "current_locator": "Official current page title;18 rendered lines",
+    "prior_record_origin": {
+      "release_id": "SUB-2e1f236a3f9a0f3f0b1c30016dc8ad8f2b235c94f980b0989b1d3e287588d85c",
+      "kind": "own_previous_released_record"
+    }
+  },
+  {
+    "id": "B4-S15",
+    "title": "ISPD26 Post-Placement Buffering and Sizing",
+    "url": "https://www.ispd.cc/contests/26/index.html",
+    "source_type": "official_contest",
+    "publication_date": "2026",
+    "retrieved_utc": "2026-10-16T04:08:26.844466+00:00",
+    "locator": "Title and Contest Winners/Resources, rendered0-19",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-B4-010"
+    ],
+    "limitations": "Stage/title only; no winner-method audit. Bare-host tool open failed, www host succeeded.",
+    "version": "retrieved 2026-10-16",
+    "record_origin": {
+      "release_id": "SUB-988d5b734de75037f4ca472fe6c9799a673f9538cd7b4053da26a004347406f8",
+      "kind": "own_previous_released_record"
+    },
+    "current_job_source_access": "not_reopened_under_this_id; retained as attributed historical evidence; any fresh access has R3 IDs",
+    "current_retrieved_utc": "2026-10-16T04:58:14.510149+00:00",
+    "current_locator": "Official current page title;19 rendered lines",
+    "prior_record_origin": {
+      "release_id": "SUB-2e1f236a3f9a0f3f0b1c30016dc8ad8f2b235c94f980b0989b1d3e287588d85c",
+      "kind": "own_previous_released_record"
+    }
+  },
+  {
+    "id": "B4-S16",
+    "title": "CN122839978A incremental design rule checking discovery lead",
+    "url": "https://eureka.patsnap.com/patent/CN122839978A",
+    "source_type": "secondary_patent_index",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T04:08:26.844466+00:00",
+    "locator": "Indexed title; description paragraphs[0024],[0046]-[0048] and abstract",
+    "access_level": "metadata",
+    "supported_claim_ids": [],
+    "limitations": "Google Patents English and Chinese primary opens failed. Secondary translation/index includes dependency/rule-cluster/window descriptions; exact original/date and applicability unresolved. Index-reported2026-09-29 not primary verified. No numerical gain used.",
+    "version": "primary unresolved; search-indexed secondary discovery only",
+    "record_origin": {
+      "release_id": "SUB-988d5b734de75037f4ca472fe6c9799a673f9538cd7b4053da26a004347406f8",
+      "kind": "own_previous_released_record"
+    },
+    "current_job_source_access": "not_reopened_under_this_id; retained as attributed historical evidence; any fresh access has R3 IDs",
+    "prior_record_origin": {
+      "release_id": "SUB-2e1f236a3f9a0f3f0b1c30016dc8ad8f2b235c94f980b0989b1d3e287588d85c",
+      "kind": "own_previous_released_record"
+    }
+  },
+  {
+    "id": "B4-S17",
+    "title": "Invited Paper: Heterogeneous Acceleration for Design Rule Checking",
+    "url": "https://www.cse.cuhk.edu.hk/~byu/papers/C188-ICCAD2023-HeteroDRC.pdf",
+    "source_type": "author_paper",
+    "publication_date": "2023",
+    "retrieved_utc": "2026-10-16T04:08:26.844466+00:00",
+    "locator": "SectionV, PDF pp5-6, rendered327 onward; selected context",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-B4-009"
+    ],
+    "limitations": "Selected CPU/GPU methodology context only; no hardware experiment or transferred performance.",
+    "version": "ICCAD2023 author PDF",
+    "record_origin": {
+      "release_id": "SUB-988d5b734de75037f4ca472fe6c9799a673f9538cd7b4053da26a004347406f8",
+      "kind": "own_previous_released_record"
+    },
+    "current_job_source_access": "not_reopened_under_this_id; retained as attributed historical evidence; any fresh access has R3 IDs",
+    "prior_record_origin": {
+      "release_id": "SUB-2e1f236a3f9a0f3f0b1c30016dc8ad8f2b235c94f980b0989b1d3e287588d85c",
+      "kind": "own_previous_released_record"
+    }
+  },
+  {
+    "id": "B4-S18",
+    "title": "Asynchronous Reinforcement Learning Framework for Net Order Exploration in Detailed Routing",
+    "url": "https://past.date-conference.com/proceedings-archive/2021/pdf/1334.pdf",
+    "source_type": "conference_paper",
+    "publication_date": "2021",
+    "retrieved_utc": "2026-10-16T04:08:26.844466+00:00",
+    "locator": "PDF p1 title/abstract and sectionII-B Dr.CU2.0 sequential framework indexed passage",
+    "access_level": "full",
+    "supported_claim_ids": [],
+    "limitations": "Adjacent ordering/RL lead, selected introductory passages only; no full RL-method/code audit or claimed superiority.",
+    "version": "DATE2021 official proceedings",
+    "record_origin": {
+      "release_id": "SUB-988d5b734de75037f4ca472fe6c9799a673f9538cd7b4053da26a004347406f8",
+      "kind": "own_previous_released_record"
+    },
+    "current_job_source_access": "not_reopened_under_this_id; retained as attributed historical evidence; any fresh access has R3 IDs",
+    "prior_record_origin": {
+      "release_id": "SUB-2e1f236a3f9a0f3f0b1c30016dc8ad8f2b235c94f980b0989b1d3e287588d85c",
+      "kind": "own_previous_released_record"
+    }
+  },
+  {
+    "id": "B4-S19",
+    "title": "A DRC Automatic Repair Strategy for Standard Cell Layout Based on Improved Simulated Annealing Algorithm",
+    "url": "https://www.mdpi.com/2079-9292/14/21/4267",
+    "source_type": "unavailable_primary_lead",
+    "publication_date": "2025",
+    "retrieved_utc": "2026-10-16T04:08:26.844466+00:00",
+    "locator": "Bibliographic lead in B4-S03 references; primary opening returned internal error",
+    "access_level": "metadata",
+    "supported_claim_ids": [],
+    "limitations": "Full primary unavailable in this job. Title/DOI are discovery metadata, not a verified method or novelty exclusion.",
+    "version": "DOI10.3390/electronics14214267",
+    "record_origin": {
+      "release_id": "SUB-988d5b734de75037f4ca472fe6c9799a673f9538cd7b4053da26a004347406f8",
+      "kind": "own_previous_released_record"
+    },
+    "current_job_source_access": "not_reopened_under_this_id; retained as attributed historical evidence; any fresh access has R3 IDs",
+    "prior_record_origin": {
+      "release_id": "SUB-2e1f236a3f9a0f3f0b1c30016dc8ad8f2b235c94f980b0989b1d3e287588d85c",
+      "kind": "own_previous_released_record"
+    }
+  },
+  {
+    "id": "R2-S01",
+    "title": "AiDRC: Accelerating Detailed Routing by AI-Driven Design Rule Violation Prediction and Checking",
+    "url": "https://ieda.oscc.cc/res/papers/25-TODAES-AiDRC.pdf",
+    "source_type": "author_paper",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T04:58:14.510149+00:00",
+    "locator": "Physical PDF pp9 section2.3;12 section3/4.1;25 Table4/5.5;26 section5.5 continuation; selected10/23 split passages",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-R2-002"
+    ],
+    "limitations": "Public author-hosted manuscript retrieved in full as bytes, selected methods inspected via pdftotext only. Placeholder volume/date headers do not establish final version identity. Publisher DOI open403; indexed primary metadata says online AM2025-09-25/published2026-06-12. Full final-publisher and code correspondence unresolved; no performance reproduction or data/PDK rights. Selected Table4 recall below one; no exactness inferred. Paper bytes not released.",
+    "version": "author-hosted 25-TODAES PDF, byte-locked; DOI10.1145/3769306 association from indexed primary title",
+    "sha256": "ac23635ae04e506a0e83637397b52d1fb65d90759d116b1f20159d9e4674f690",
+    "bytes": 8516533,
+    "prior_record_origin": null,
+    "record_origin": {
+      "release_id": "SUB-988d5b734de75037f4ca472fe6c9799a673f9538cd7b4053da26a004347406f8",
+      "kind": "own_previous_released_record"
+    },
+    "current_job_source_access": "not_reopened_under_this_id; retained as attributed historical evidence; any fresh access has R3 IDs"
+  },
+  {
+    "id": "R2-S02",
+    "title": "OSCC-Project/AiEDA-models named AiDRC subtree",
+    "url": "https://github.com/OSCC-Project/AiEDA-models/tree/c6a5174c8c87b539e14c83c9254ff705f302c31d/AiDRC",
+    "source_type": "pinned_source_code",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T04:58:14.510149+00:00",
+    "locator": "Pinned recursive tree e8bbf69e6a473c13031edfc8a9aaf5b2e650a7bd entries AiDRC and AiDRC/README.md; README raw one-based line1",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-R2-002"
+    ],
+    "limitations": "Complete returned tree nontruncated; inspected only named subtree/README. No source execution, repository-wide absence or other-repository audit. Initial dynamic-tree identity assertion failed; direct commit-declared tree retrieval repaired source binding, same named subtree observed. No inference of trained weights/license/data readiness.",
+    "version": "commit c6a5174c8c87b539e14c83c9254ff705f302c31d; root tree e8bbf69e6a473c13031edfc8a9aaf5b2e650a7bd",
+    "sha256": {
+      "pinned_tree_response": "2dea29573edb85c24ecf6b885ae7554ce8fc1845234042fdc2b98e6ee5bd548d",
+      "AiDRC_README": "ddea2974e75de7c5e34ceeb935f09ebc27216824f7a6b5641054f4a43f914ded"
+    },
+    "prior_record_origin": null,
+    "record_origin": {
+      "release_id": "SUB-988d5b734de75037f4ca472fe6c9799a673f9538cd7b4053da26a004347406f8",
+      "kind": "own_previous_released_record"
+    },
+    "current_job_source_access": "not_reopened_under_this_id; retained as attributed historical evidence; any fresh access has R3 IDs"
+  },
+  {
+    "id": "R2-S03",
+    "title": "Optimal Nonmyopic Value of Information in Graphical Models \u2014 Efficient Algorithms and Theoretical Limits",
+    "url": "https://www.cs.cmu.edu/~guestrin/Publications/IJCAI2005/ijcai2005.pdf",
+    "source_type": "author_paper",
+    "publication_date": "2005",
+    "retrieved_utc": "2026-10-16T04:58:14.510149+00:00",
+    "locator": "PDF pp1-2 sections1-2, rendered20-127",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-B4-009",
+      "CLM-R2-001"
+    ],
+    "limitations": "Selected expensive-observation/utility/budget and myopic/nonmyopic passages, not full theorem proof audit. No graphical-model complexity/optimality theorem transferred to EDA; own parity calculation independent.",
+    "version": "IJCAI2005 Krause/Guestrin author PDF",
+    "prior_record_origin": null,
+    "record_origin": {
+      "release_id": "SUB-988d5b734de75037f4ca472fe6c9799a673f9538cd7b4053da26a004347406f8",
+      "kind": "own_previous_released_record"
+    },
+    "current_job_source_access": "not_reopened_under_this_id; retained as attributed historical evidence; any fresh access has R3 IDs"
+  },
+  {
+    "id": "R2-S04",
+    "title": "Pinned OpenROAD selected FlexGC source/interface reinspection",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/src/drt/src/gc/FlexGC_main.cpp",
+    "source_type": "pinned_source_code",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T04:58:14.510149+00:00",
+    "locator": "FlexGC_main.cpp raw849-875,1516-1525,4021-4062; FlexGC.h raw45-81",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-B4-004",
+      "CLM-B4-005"
+    ],
+    "limitations": "Full bytes fetched; only selected ranges inspected. Not a complete dependency/rule/entrypoint audit or public clean-record replay proof; no build/run. Selected min-area guard is not a whole-engine omission.",
+    "version": "b16bda7e82721d10566ff7e2b68f1ff0be9f9e38",
+    "sha256": {
+      "FlexGC_main.cpp": "4770ffdc8f1ac0fd13e69dac1a0b75c5dbb795bf7c043be5ed2b8294cb43a517",
+      "FlexGC.h": "293e895cf573ccba346d5bf35184dac066f00509e327a53e370256078a945e64"
+    },
+    "prior_record_origin": null,
+    "record_origin": {
+      "release_id": "SUB-988d5b734de75037f4ca472fe6c9799a673f9538cd7b4053da26a004347406f8",
+      "kind": "own_previous_released_record"
+    },
+    "current_job_source_access": "not_reopened_under_this_id; retained as attributed historical evidence; any fresh access has R3 IDs"
+  },
+  {
+    "id": "R3-S01a",
+    "title": "OpenROAD FlexGC_main.cpp",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/src/drt/src/gc/FlexGC_main.cpp",
+    "source_type": "pinned_source_code",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T05:32:56.487349+00:00",
+    "locator": "Raw one-based429-455,520-566 PRL prerequisites/metadata;849-875 queries;3557-3565 patch marker clear;3990-4058 marker postprocess/dispatcher",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-R3-003",
+      "OBJ-1101",
+      "CLM-B4-004",
+      "CLM-B4-005"
+    ],
+    "limitations": "Full text bytes fetched; selected ranges inspected. No downloaded code executed, build, transitive dependency audit, final caller/export audit, safe interruption or complete witness proof. BSD-style header seen for selected files; no design rights inferred.",
+    "version": "b16bda7e82721d10566ff7e2b68f1ff0be9f9e38",
+    "sha256": "4770ffdc8f1ac0fd13e69dac1a0b75c5dbb795bf7c043be5ed2b8294cb43a517"
+  },
+  {
+    "id": "R3-S01b",
+    "title": "OpenROAD FlexGC.cpp",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/src/drt/src/gc/FlexGC.cpp",
+    "source_type": "pinned_source_code",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T05:32:56.487349+00:00",
+    "locator": "Raw68-78 addMarker;131-134 getter;159-162 surgical setter",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-R3-003",
+      "OBJ-1101",
+      "CLM-B4-004",
+      "CLM-B4-005"
+    ],
+    "limitations": "Full text bytes fetched; selected ranges inspected. No downloaded code executed, build, transitive dependency audit, final caller/export audit, safe interruption or complete witness proof. BSD-style header seen for selected files; no design rights inferred.",
+    "version": "b16bda7e82721d10566ff7e2b68f1ff0be9f9e38",
+    "sha256": "5f5476dd5992c25fb2423612c05cc770435fcd376df2f21e8a72af8f8e97154b"
+  },
+  {
+    "id": "R3-S01c",
+    "title": "OpenROAD FlexGC_impl.h",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/src/drt/src/gc/FlexGC_impl.h",
+    "source_type": "pinned_source_code",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T05:32:56.487349+00:00",
+    "locator": "Raw114-119 add/clear;148-169 state/flags",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-R3-003",
+      "OBJ-1101",
+      "CLM-B4-004",
+      "CLM-B4-005"
+    ],
+    "limitations": "Full text bytes fetched; selected ranges inspected. No downloaded code executed, build, transitive dependency audit, final caller/export audit, safe interruption or complete witness proof. BSD-style header seen for selected files; no design rights inferred.",
+    "version": "b16bda7e82721d10566ff7e2b68f1ff0be9f9e38",
+    "sha256": "71195b8fe24cc3af0088c376f1c0f4bee4907fd132f4d1ea592e3201472b6213"
+  },
+  {
+    "id": "R3-S01d",
+    "title": "OpenROAD FlexGC_end.cpp",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/src/drt/src/gc/FlexGC_end.cpp",
+    "source_type": "pinned_source_code",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T05:32:56.487349+00:00",
+    "locator": "Raw35-37 empty end",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-R3-003",
+      "OBJ-1101",
+      "CLM-B4-004",
+      "CLM-B4-005"
+    ],
+    "limitations": "Full text bytes fetched; selected ranges inspected. No downloaded code executed, build, transitive dependency audit, final caller/export audit, safe interruption or complete witness proof. BSD-style header seen for selected files; no design rights inferred.",
+    "version": "b16bda7e82721d10566ff7e2b68f1ff0be9f9e38",
+    "sha256": "1962e17622de0ece87836eed6ab9cb97f500872d18583eeee4bc69351f0f6ca9"
+  },
+  {
+    "id": "R3-S01e",
+    "title": "OpenROAD FlexGC.h",
+    "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/b16bda7e82721d10566ff7e2b68f1ff0be9f9e38/src/drt/src/gc/FlexGC.h",
+    "source_type": "pinned_source_code",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T05:32:56.487349+00:00",
+    "locator": "Raw45-81 public interface;87-98 MarkerId tuple",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-R3-003",
+      "OBJ-1101",
+      "CLM-B4-004",
+      "CLM-B4-005"
+    ],
+    "limitations": "Full text bytes fetched; selected ranges inspected. No downloaded code executed, build, transitive dependency audit, final caller/export audit, safe interruption or complete witness proof. BSD-style header seen for selected files; no design rights inferred.",
+    "version": "b16bda7e82721d10566ff7e2b68f1ff0be9f9e38",
+    "sha256": "293e895cf573ccba346d5bf35184dac066f00509e327a53e370256078a945e64"
+  },
+  {
+    "id": "R3-S02",
+    "title": "Method of context-sensitive, trans-reflexive incremental design rule checking and its applications",
+    "url": "https://patents.google.com/patent/US20120180014A1/en",
+    "source_type": "published_patent",
+    "publication_date": "2012-07-12",
+    "retrieved_utc": "2026-10-16T05:32:56.487349+00:00",
+    "locator": "Detailed description FIG8A-D, web rendered312-317; publication table401-403",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "OBJ-1101",
+      "CLM-B4-009"
+    ],
+    "limitations": "Published method description of first-violation via rollback. No legal novelty/validity, product deployment, OpenROAD interface or runtime inference. Selected description only.",
+    "version": "US20120180014A1"
+  },
+  {
+    "id": "R3-S03",
+    "title": "EvoDRC: A Self-Evolving Agentic Framework for Automated DRC Violation Repair",
+    "url": "https://arxiv.org/html/2607.20019v1",
+    "source_type": "author_preprint",
+    "publication_date": "2026-07-22",
+    "retrieved_utc": "2026-10-16T05:32:56.487349+00:00",
+    "locator": "Sections3.1-3.5 web rendered105-188;4.2 rendered224-241; selected setup context",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-R3-004",
+      "CLM-B4-009"
+    ],
+    "limitations": "Full HTML available; selected method/setup inspected. No reported gain reproduced or adopted; no full implementation/benchmark audit, timing result or rights transfer. arXiv nonexclusive display license.",
+    "version": "arXiv2607.20019v1"
+  },
+  {
+    "id": "R3-S04a",
+    "title": "EvoDRC README.md",
+    "url": "https://raw.githubusercontent.com/ASU-VDA-Lab/EvoDRC/69a138b081b007772a39e643342d520ca656ce4f/README.md",
+    "source_type": "pinned_source_code",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T05:32:56.487349+00:00",
+    "locator": "Raw1-15 description;26-35 ablations",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-R3-004"
+    ],
+    "limitations": "Full text fetched; selected header/method ranges only, no execution or whole-call-graph audit. Selected Python files carry BSD3 header; benchmark submodule/design/PDK rights not audited.",
+    "version": "69a138b081b007772a39e643342d520ca656ce4f",
+    "sha256": "5f9833158607acd03acc1371087796980788bc16be60b9a610a19cc2a364a672"
+  },
+  {
+    "id": "R3-S04b",
+    "title": "EvoDRC agent/src/drc_preview.py",
+    "url": "https://raw.githubusercontent.com/ASU-VDA-Lab/EvoDRC/69a138b081b007772a39e643342d520ca656ce4f/agent/src/drc_preview.py",
+    "source_type": "pinned_source_code",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T05:32:56.487349+00:00",
+    "locator": "Raw31-43 contract;61-102 decomposition call structure",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-R3-004"
+    ],
+    "limitations": "Full text fetched; selected header/method ranges only, no execution or whole-call-graph audit. Selected Python files carry BSD3 header; benchmark submodule/design/PDK rights not audited.",
+    "version": "69a138b081b007772a39e643342d520ca656ce4f",
+    "sha256": "ac6b939fa2b4d78c42a97035a5b86f1decbf601f53ee6dd8e18aa1e65532bfd2"
+  },
+  {
+    "id": "R3-S04c",
+    "title": "EvoDRC agent/src/conn_preview.py",
+    "url": "https://raw.githubusercontent.com/ASU-VDA-Lab/EvoDRC/69a138b081b007772a39e643342d520ca656ce4f/agent/src/conn_preview.py",
+    "source_type": "pinned_source_code",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T05:32:56.487349+00:00",
+    "locator": "Raw31-40 candidate-copy connectivity contract;56-65 verdict start",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-R3-004"
+    ],
+    "limitations": "Full text fetched; selected header/method ranges only, no execution or whole-call-graph audit. Selected Python files carry BSD3 header; benchmark submodule/design/PDK rights not audited.",
+    "version": "69a138b081b007772a39e643342d520ca656ce4f",
+    "sha256": "f46a94e79e7bbb8017add6b937ca26c51ebfa912f5791548af49b5c9debd9fd1"
+  },
+  {
+    "id": "R3-S05",
+    "title": "Evaluation of DNF Formulas",
+    "url": "https://www.cs.cmu.edu/afs/cs/user/srallen/www/papers/dnfdraft17.pdf",
+    "source_type": "author_manuscript",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T05:32:56.487349+00:00",
+    "locator": "Physical PDF pp1-2, sections1-2 and definitions3.1; web raw0-23,54-102",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-R3-002"
+    ],
+    "limitations": "Selected source definition uses product-distributed variable outcomes and paid tests until0/1 certificate. No complexity bound transferred to EDA. Filename/publication edition not pinned beyond current author URL; arXiv1310.3673 is discovery metadata only."
+  },
+  {
+    "id": "R3-S06",
+    "title": "A generic flow algorithm for shared filter ordering problems",
+    "url": "https://research.ibm.com/publications/a-generic-flow-algorithm-for-shared-filter-ordering-problems",
+    "source_type": "author_institution_publication_page",
+    "publication_date": "2008-12-17",
+    "retrieved_utc": "2026-10-16T05:32:56.487349+00:00",
+    "locator": "Abstract web rendered9-14; authors61-66; displayed date4/55",
+    "access_level": "abstract",
+    "supported_claim_ids": [
+      "CLM-R3-002"
+    ],
+    "limitations": "Author/institution abstract only; overlapping conjunctive filters and throughput objective, not complete method/EDA equivalence. Displayed date may be repository convention; final paper/code not inspected."
+  },
+  {
+    "id": "R3-S07",
+    "title": "Cost-Optimal Decision Diagrams for Stochastic Boolean Function Evaluation",
+    "url": "https://arxiv.org/html/2606.24672v1",
+    "source_type": "author_preprint",
+    "publication_date": "2026-06-23",
+    "retrieved_utc": "2026-10-16T05:32:56.487349+00:00",
+    "locator": "Section3 definition1 web80-90; section5 algorithm1 rendered168-205",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-R3-002"
+    ],
+    "limitations": "Full HTML available, selected formulation and algorithm inspected; joint-distribution/conditional-cost planning prior. No implementation execution, independent theorem proof, EDA scalability or full-workflow equivalence.",
+    "version": "arXiv2606.24672v1"
+  },
+  {
+    "id": "R3-S08a",
+    "title": "ISPD2019 initial detailed routing contest",
+    "url": "https://ispd.cc/contests/19/",
+    "source_type": "official_contest",
+    "publication_date": "2019",
+    "retrieved_utc": "2026-10-16T05:32:56.487349+00:00",
+    "locator": "Final Contest Result and Final Solution Files; web rendered154-191; current page title23/initial-routing scope55-62",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-B4-010"
+    ],
+    "limitations": "Selected public task/result/interface sections only; no winner method/binary/code audit, archive execution or license allocation. 2027 index is not a finalized specification."
+  },
+  {
+    "id": "R3-S08b",
+    "title": "ISPD2019 contest setup tutorial",
+    "url": "https://ispd.cc/contests/19/tutorial.htm",
+    "source_type": "official_contest",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T05:32:56.487349+00:00",
+    "locator": "Requirements for Executable web30-40; How to Evaluate the Solution48-56",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-B4-010"
+    ],
+    "limitations": "Selected public task/result/interface sections only; no winner method/binary/code audit, archive execution or license allocation. 2027 index is not a finalized specification."
+  },
+  {
+    "id": "R3-S08c",
+    "title": "ISPD2025 global routing contest",
+    "url": "https://www.ispd.cc/contests/25/index.html",
+    "source_type": "official_contest",
+    "publication_date": "2025",
+    "retrieved_utc": "2026-10-16T05:32:56.487349+00:00",
+    "locator": "Title and links; web0-18",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-B4-010"
+    ],
+    "limitations": "Selected public task/result/interface sections only; no winner method/binary/code audit, archive execution or license allocation. 2027 index is not a finalized specification."
+  },
+  {
+    "id": "R3-S08d",
+    "title": "ISPD2026 post-placement buffering/sizing contest",
+    "url": "https://www.ispd.cc/contests/26/index.html",
+    "source_type": "official_contest",
+    "publication_date": "2026",
+    "retrieved_utc": "2026-10-16T05:32:56.487349+00:00",
+    "locator": "Title and links; web0-19",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-B4-010"
+    ],
+    "limitations": "Selected public task/result/interface sections only; no winner method/binary/code audit, archive execution or license allocation. 2027 index is not a finalized specification."
+  },
+  {
+    "id": "R3-S08e",
+    "title": "ISPD2027 contest index",
+    "url": "https://ispd.cc/ispd2027/index.php?page=contests",
+    "source_type": "official_contest",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T05:32:56.487349+00:00",
+    "locator": "Contest2027 heading and archive links; web15-17",
+    "access_level": "full",
+    "supported_claim_ids": [
+      "CLM-B4-010"
+    ],
+    "limitations": "Selected public task/result/interface sections only; no winner method/binary/code audit, archive execution or license allocation. 2027 index is not a finalized specification."
+  },
+  {
+    "id": "R3-X01",
+    "title": "Excluded mistaken patent identifier: Software development",
+    "url": "https://patents.google.com/patent/US20090019420A1/en",
+    "source_type": "excluded_primary_page",
+    "publication_date": "unknown",
+    "retrieved_utc": "2026-10-16T05:32:56.487349+00:00",
+    "locator": "Page title only",
+    "access_level": "metadata",
+    "supported_claim_ids": [],
+    "limitations": "An initial guessed identifier was wrong; title showed software-development subject. Excluded from DRC evidence, corrected using authorized released verifier V-S07 URL. No claim rests on this page."
+  }
+]
