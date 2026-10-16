@@ -1,0 +1,125 @@
+{
+  "schema": 1,
+  "role": "challenger",
+  "actor_id": "ChatGPT-C05-TIMING-B04-EDA-0010",
+  "session_id": "d8091c5d-03ed-43c0-911f-86081135ec73",
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "packet_sha256": "995463cb4ddd44a2e9b6a97a44840d169e30ff0e77ef842f13e28d70176fd732",
+  "job_id": "7a3f6640-00ad-4e8f-b4dc-7d81bdfd07b8",
+  "read_releases": [
+    "SUB-017839376433acd2ef83e1cf06276f1d54e9af5740eb2561a0b9b928a404a6ae",
+    "SUB-c4ea36b9e62a68730c225ac73645a9b5d399bbd2142507a0212c0ef12fb9dd0c",
+    "SUB-1a4046d48852400f673bf14b891eeb70900fc985b29d11840149262bdfe13693"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0
+  },
+  "rules": {
+    "inputs": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md",
+        "challenges.md",
+        "sources.json",
+        "independent-estimate.md"
+      ],
+      "limits": "JOB/prompt first; own harness/common policy then exact released current proposal, ruling and own previous outputs; filenames listed do not mean contents read."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md",
+        "challenges.md",
+        "sources.json",
+        "independent-estimate.md"
+      ],
+      "limits": "No checkout/private/session/memory access, messages or subagents; shared OS is not confinement. Unblinded; proposer prose/A03 counts exposed, forecast.json unopened."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md",
+        "challenges.md",
+        "sources.json",
+        "independent-estimate.md"
+      ],
+      "limits": "Own release, trusted frozen submissions and job result only. No foreign file edited."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md",
+        "challenges.md",
+        "sources.json",
+        "independent-estimate.md"
+      ],
+      "limits": "Selected primary sections and raw functions with explicit limits; winner archive content unavailable; fresh abstracts not full methods."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md",
+        "challenges.md",
+        "sources.json",
+        "independent-estimate.md"
+      ],
+      "limits": "C-A02 own arithmetic code/stdout/hashes public; A03 not executed. No STA performance, general impossibility or universal novelty claim."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md",
+        "challenges.md",
+        "sources.json",
+        "independent-estimate.md"
+      ],
+      "limits": "Only own pending exact-target vote; no other signature or joint abandonment."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md",
+        "challenges.md",
+        "sources.json",
+        "independent-estimate.md"
+      ],
+      "limits": "Only reading and tiny own arithmetic; no EDA/build/training/downloaded-code/remote/paid allocation."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md",
+        "challenges.md",
+        "sources.json",
+        "independent-estimate.md"
+      ],
+      "limits": "Both penalties zero; existing anchor retained including its negative treatment result."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "search-log.md",
+        "challenges.md",
+        "sources.json",
+        "independent-estimate.md"
+      ],
+      "limits": "English research files, no paper/source copies or secrets; self-freeze local check, coordinator project validation/PR publication still required."
+    }
+  },
+  "operations": [
+    "Read exact JOB/prompt; assigned common policy and challenger harness.",
+    "Read three listed releases only in specified file scopes; no predecessor contents.",
+    "Independent web searches and selected paper/contest/raw code reading; see search-log/sources.",
+    "Author/run C-A02 via Python standard library; publish exact code/stdout/hashes.",
+    "Write own research/consent/compliance files; run trusted freeze; write result.json."
+  ],
+  "incidents": [],
+  "observability": "Self-authored public activity ledger, not a complete tool trace or evidence of absent undisclosed actions.",
+  "limitations": "Self-authored ledger, not a complete tool trace or proof of absence of unseen actions. Requested model from JOB is not backend attestation. No disclosed forbidden access; bounded source coverage remains."
+}

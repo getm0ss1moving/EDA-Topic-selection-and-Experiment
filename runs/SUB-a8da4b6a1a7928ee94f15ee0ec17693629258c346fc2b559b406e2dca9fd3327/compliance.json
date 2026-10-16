@@ -1,0 +1,116 @@
+{
+  "schema": 1,
+  "role": "verifier",
+  "actor_id": "ChatGPT-V05-TIMING-B04-EDA-0010",
+  "session_id": "df362a1f-1d66-4a02-86a9-92e52de6fad7",
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "packet_sha256": "68a627d6437f4a4b696d1c878d6909033d8eecf7d7ae2a69e0cc24b055f74798",
+  "job_id": "182b738d-34ee-4f20-9f36-4942e5874ff0",
+  "read_releases": [
+    "SUB-017839376433acd2ef83e1cf06276f1d54e9af5740eb2561a0b9b928a404a6ae",
+    "SUB-1745834c07cf7e42c0a3756f0da807ddba9a85495361276d8b9e21390cf2f1b0",
+    "SUB-b4a0830fd75dd9263101adcdda8a60e7ed86f687e08723fe63c0f3e83046ffae",
+    "SUB-7f1fa5d72cb3dbe99558c18a4edc83e596e157506a358070f449d2777b8ebc3b",
+    "SUB-af311c9ae6b091db1fdb94a8bd262fe027a34d25a761c2e072c59c2d0497d01d"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0
+  },
+  "rules": {
+    "inputs": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "release/compliance.json"
+      ],
+      "limits": "Self-authored ledger, not proof of unseen actions. No foreign private reads, messaging, subagents, experiments or inherited signatures. Scientific limits and actual access recorded."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "release/compliance.json"
+      ],
+      "limits": "Self-authored ledger, not proof of unseen actions. No foreign private reads, messaging, subagents, experiments or inherited signatures. Scientific limits and actual access recorded."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "release/compliance.json"
+      ],
+      "limits": "Self-authored ledger, not proof of unseen actions. No foreign private reads, messaging, subagents, experiments or inherited signatures. Scientific limits and actual access recorded."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "release/verification.json"
+      ],
+      "limits": "Self-authored ledger, not proof of unseen actions. No foreign private reads, messaging, subagents, experiments or inherited signatures. Scientific limits and actual access recorded."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "release/verification.json"
+      ],
+      "limits": "Self-authored ledger, not proof of unseen actions. No foreign private reads, messaging, subagents, experiments or inherited signatures. Scientific limits and actual access recorded."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "release/verification.json"
+      ],
+      "limits": "Self-authored ledger, not proof of unseen actions. No foreign private reads, messaging, subagents, experiments or inherited signatures. Scientific limits and actual access recorded."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "release/verification.json"
+      ],
+      "limits": "Self-authored ledger, not proof of unseen actions. No foreign private reads, messaging, subagents, experiments or inherited signatures. Scientific limits and actual access recorded."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "release/verification.json"
+      ],
+      "limits": "Self-authored ledger, not proof of unseen actions. No foreign private reads, messaging, subagents, experiments or inherited signatures. Scientific limits and actual access recorded."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "release/compliance.json"
+      ],
+      "limits": "Self-authored ledger, not proof of unseen actions. No foreign private reads, messaging, subagents, experiments or inherited signatures. Scientific limits and actual access recorded."
+    }
+  },
+  "operations": [
+    "Read exact JOB/prompt before job policy inventory; common policies and only verifier harness.",
+    "Read listed released files; broad aggregate reads sometimes truncated, targeted critical records reread.",
+    "Public web search and selected original PDFs/code; direct urllib retrieval for truthful raw one-based lines/hashes. No downloaded code executed.",
+    "Own JSON/hash/digest checks; write release verification/compliance/workflow and result.json; trusted self-freeze/verify."
+  ],
+  "incidents": [],
+  "observability": "Self-authored public activity ledger, not a complete tool trace or evidence of absent undisclosed actions. Initial inherited user instructions are provided task context, not independently retrieved parent/session material. No role messages were sent."
+}

@@ -1,0 +1,164 @@
+{
+  "activity": {
+    "agent_messages_sent": 0,
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "new_eda_runs": 0,
+    "new_paid_api_calls": 0,
+    "subagents_spawned": 0,
+    "training_runs": 0
+  },
+  "actor_id": "ChatGPT-P05-TIMING-B04-EDA-0010",
+  "incidents": [],
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "job_id": "a6e3be0a-77a5-4dde-98d2-4edc00665644",
+  "minor_operation_notes": [
+    "Attempted job-root PACKET.json read returned missing; no alternate checkout search followed.",
+    "Some batched outputs truncated; no claim of complete unseen text inspection.",
+    "retry-note.json existence check before freeze returned false; no mechanical correction note was supplied."
+  ],
+  "observability": "Self-authored public activity ledger, not a complete tool trace or evidence of absent undisclosed actions.",
+  "operations": [
+    {
+      "detail": "Read these exact assigned files before discovery.",
+      "operation": "initial_read",
+      "references": [
+        "JOB.json",
+        "prompt.txt"
+      ]
+    },
+    {
+      "detail": "Initial long outputs had truncation; material policy/current proposal/anchor/task/source and rulings targeted again. Discovery confined to assigned policy/shared/own output paths.",
+      "operation": "policy_and_assigned_inputs",
+      "references": [
+        "policy/docs/CHARTER.md",
+        "policy/docs/WORKFLOW.md",
+        "policy/docs/EVIDENCE.md",
+        "policy/docs/ISOLATION.md",
+        "policy/docs/CODEX-AUTOMATION.md",
+        "policy/docs/ROLE-COMPLIANCE.md",
+        "policy/docs/INNOVATION-BATCH-0004.md",
+        "policy/docs/INNOVATION-STRATEGY.md",
+        "policy/docs/SELF-SUBMISSION.md",
+        "policy/harness/PROPOSER.md",
+        "own-previous/SUB-b4a0830fd75dd9263101adcdda8a60e7ed86f687e08723fe63c0f3e83046ffae",
+        "shared/SUB-1a4046d48852400f673bf14b891eeb70900fc985b29d11840149262bdfe13693",
+        "shared/SUB-c4ea36b9e62a68730c225ac73645a9b5d399bbd2142507a0212c0ef12fb9dd0c"
+      ]
+    },
+    {
+      "detail": "Web/direct raw source retrieval for reading; selected passages and raw hashes. No source execution.",
+      "operation": "external_read",
+      "references": [
+        "search-log.md",
+        "sources.json R18-R26"
+      ]
+    },
+    {
+      "detail": "Final standard-library fixture and source-derived algebraic witness executed; exact code/stdout published; exploratory local variants superseded before release.",
+      "operation": "own_analytical_execution",
+      "references": [
+        "experiment-plan.md A03"
+      ]
+    },
+    {
+      "detail": "Generated own allowlisted dossier; replayed public extraction and checked JSON/anchor/task hash; trusted freeze and verify bind immutable output; full project checks deferred to coordinator.",
+      "operation": "own_output_and_validation",
+      "references": [
+        "release/",
+        "scratch/",
+        "submissions/",
+        "result.json"
+      ]
+    }
+  ],
+  "packet_sha256": "9b5b108fa82b7ce61156daf3d3223acd7d3fccaefaa90b40e805e10aa325067f",
+  "read_releases": [
+    "SUB-b4a0830fd75dd9263101adcdda8a60e7ed86f687e08723fe63c0f3e83046ffae",
+    "SUB-1a4046d48852400f673bf14b891eeb70900fc985b29d11840149262bdfe13693",
+    "SUB-c4ea36b9e62a68730c225ac73645a9b5d399bbd2142507a0212c0ef12fb9dd0c"
+  ],
+  "role": "proposer",
+  "rules": {
+    "claims": {
+      "evidence": [
+        "proposal.md CLM-1201..1207 labels",
+        "experiment-plan.md logical byte/count exclusions; no STA results",
+        "forecast.json numerical nulls; HIST-REPLAY empirical support withdrawn"
+      ],
+      "limits": "Self-authored activity ledger, not a full tool/OS audit; no claim about unseen actions. Finite own analytical model needs fresh independent scientific review.",
+      "status": "no_violation_disclosed"
+    },
+    "consent": {
+      "evidence": [
+        "experiment-consent.json only own revision_requested vote on prior target",
+        "workflow.json current task hash unsigned; no agreement or abandonment vote"
+      ],
+      "limits": "Self-authored activity ledger, not a full tool/OS audit; no claim about unseen actions. ",
+      "status": "no_violation_disclosed"
+    },
+    "direction": {
+      "evidence": [
+        "direction-control.json exact prior anchor retained",
+        "responses.md accepts two adjudicated findings; no score-only pivot",
+        "proposal.md current equivalence and zero drift are not scientific approval"
+      ],
+      "limits": "Self-authored activity ledger, not a full tool/OS audit; no claim about unseen actions. ",
+      "status": "no_violation_disclosed"
+    },
+    "evidence": {
+      "evidence": [
+        "sources.json R18-R26 fresh selected access and hashes",
+        "search-log.md actual queries/access limits",
+        "experiment-plan.md full A03 code/stdout and raw dependency locators"
+      ],
+      "limits": "Self-authored activity ledger, not a full tool/OS audit; no claim about unseen actions. Selected source excerpts only; historical entries explicitly not reopened.",
+      "status": "no_violation_disclosed"
+    },
+    "inputs": {
+      "evidence": [
+        "JOB.json; prompt.txt first read",
+        "policy common docs and policy/harness/PROPOSER.md",
+        "own-previous/SUB-b4a0830fd75dd9263101adcdda8a60e7ed86f687e08723fe63c0f3e83046ffae; shared/SUB-1a4046d48852400f673bf14b891eeb70900fc985b29d11840149262bdfe13693; shared/SUB-c4ea36b9e62a68730c225ac73645a9b5d399bbd2142507a0212c0ef12fb9dd0c"
+      ],
+      "limits": "Self-authored activity ledger, not a full tool/OS audit; no claim about unseen actions. ",
+      "status": "no_violation_disclosed"
+    },
+    "isolation": {
+      "evidence": [
+        "Only assigned job/policy/released directories and public primary sources read",
+        "No scientific messages/subagents/foreign sessions or checkout reads"
+      ],
+      "limits": "Self-authored activity ledger, not a full tool/OS audit; no claim about unseen actions. Shared OS is not adversarial confinement.",
+      "status": "no_violation_disclosed"
+    },
+    "publication": {
+      "evidence": [
+        "Trusted self-freeze command in prompt and submissions/SUB-* manifest",
+        "No project checkout/GitHub mutation or self-approval; coordinator owns full-project validation/publication"
+      ],
+      "limits": "Self-authored activity ledger, not a full tool/OS audit; no claim about unseen actions. Standalone trusted freeze/verify only; full project validate is coordinator responsibility.",
+      "status": "no_violation_disclosed"
+    },
+    "resources": {
+      "evidence": [
+        "JOB prompt and policy/docs/INNOVATION-BATCH-0004.md research-only scope",
+        "A03 own tiny standard-library arithmetic; source reading only",
+        "No downloaded-code execution, EDA build/flow, training, remote compute or paid API"
+      ],
+      "limits": "Self-authored activity ledger, not a full tool/OS audit; no claim about unseen actions. ",
+      "status": "no_violation_disclosed"
+    },
+    "writes": {
+      "evidence": [
+        "release/ own allowlisted files",
+        "scratch/source public source text; scratch/a03.py and a03-output.json; scratch/write_release.py",
+        "submissions/ trusted freeze; root result.json"
+      ],
+      "limits": "Self-authored activity ledger, not a full tool/OS audit; no claim about unseen actions. ",
+      "status": "no_violation_disclosed"
+    }
+  },
+  "schema": 1,
+  "session_id": "94d6bb60-04c2-4b62-a5f8-682feba5fc5c"
+}

@@ -1,0 +1,7 @@
+source_id,task_formulation,mechanism,data,evaluation,assumptions,limitation,overlap,distinction
+C01,multi-variant pure computation,formula maps and equal-value union,configurations,representation tradeoffs,exact identities,no STA system,Q value partitions,current normalized map admits B5 parity
+C05,incremental mutable computation,memoization plus change propagation,program states,abstract only this review,semantic preconditions,proof not read,maintenance reuse,not same exhaustive output endpoint
+C06,incremental imperative execution,localized branch changes and path-sensitive cached states,integer/table programs,method sections inspected,fixed table indices in implementation,no timing extraction,maintenance and retention,no exact-world system duplicate shown
+C02,timing ECO alternative scoring,journaled candidate evaluate and restore,driver arrival,source read only,specific pinned consumer,scalar interface,alternative timing worlds,anchored full vectors not consumed
+C10,GPU timing orchestration,warp-oriented orchestration,not inspected,abstract only,unverified here,no full audit,timing compute,not established world-partition equivalent
+C11,early timing prediction,progressive distillation,not inspected,abstract only,approximation,no exactness,possible predictor context,not anchored exact outputs

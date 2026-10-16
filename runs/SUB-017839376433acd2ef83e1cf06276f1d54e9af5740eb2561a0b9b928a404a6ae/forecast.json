@@ -1,0 +1,17 @@
+{
+  "assumptions": [
+    "Current specified Q/B5 normalized semantics equivalent; no distinct treatment forecast",
+    "Natural full-output demand and real costs unmeasured",
+    "No experiment allocation; A03 logical bytes are not forecast calibration"
+  ],
+  "base": null,
+  "baseline_source": null,
+  "calibration_plan": "S1/S2 source gates, then separately allocated D1-D3 baseline-only consumer/variance/observer-cost census before D4 practical threshold; new exact-target consent before candidate experiment.",
+  "confidence": null,
+  "direction": "lower elapsed time if supported",
+  "kind": "forecast_not_measurement",
+  "metric": "End-to-end elapsed time reduction versus strongest equally informed baseline at allocated byte cap",
+  "optimistic": null,
+  "pessimistic": null,
+  "unit": "fraction"
+}

@@ -1,0 +1,256 @@
+{
+  "decision": "revise",
+  "verifier_session": "df362a1f-1d66-4a02-86a9-92e52de6fad7",
+  "actor_id": "ChatGPT-V05-TIMING-B04-EDA-0010",
+  "job_id": "182b738d-34ee-4f20-9f36-4942e5874ff0",
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "packet_sha256": "68a627d6437f4a4b696d1c878d6909033d8eecf7d7ae2a69e0cc24b055f74798",
+  "reviewed_proposer_release": "SUB-017839376433acd2ef83e1cf06276f1d54e9af5740eb2561a0b9b928a404a6ae",
+  "adjudicated_challenger_releases": [
+    "SUB-1745834c07cf7e42c0a3756f0da807ddba9a85495361276d8b9e21390cf2f1b0"
+  ],
+  "dossier_digest": "2ca899df437e65c6d8af81ccf5198931a074859ba4006ada04d8bddb7f065db9",
+  "gates": {
+    "novelty": false,
+    "mechanism": false,
+    "utility": false,
+    "contest_originality": false,
+    "headroom": false,
+    "feasibility": false,
+    "direction_integrity": true,
+    "experiment_consensus": false
+  },
+  "gate_reasons": {
+    "novelty": "No useful distinct interaction established; VE and maintenance priors; search bounded, not exhaustive.",
+    "mechanism": "Conditional local semantics clear; complete exact STA extraction and useful treatment missing.",
+    "utility": "Natural full-vector reader absent from checked scalar interface; census unexecuted.",
+    "contest_originality": "Official context only; authenticated winner-method gap.",
+    "headroom": "Same-key primitive parity conditional; real administration/report/restore floor unmeasured.",
+    "feasibility": "S1/S2 gate construction; owners/rights/resources/adapter missing.",
+    "direction_integrity": "Same exhaustive full-output exact-partition anchor; both drift scores0, not merit approval.",
+    "experiment_consensus": "P revision_requested to prior target; C pending to current. Current hash d6ad2ae6fefc62542d9909af749f4317a83ef54bb40e494c948b0e0f854e544a recomputed. No matching agree votes."
+  },
+  "direction_penalty_checked": true,
+  "direction_penalties": {
+    "combination_drift": 0,
+    "demand_drift": 0
+  },
+  "experiment_consensus_checked": true,
+  "abandonment_process_checked": true,
+  "source_checks": [
+    {
+      "id": "V01",
+      "title": "OpenROAD scalar candidate interface",
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/3549d60529517dc82deb7f0ff769345e9a424911/src/rsz/src/policy/MeasuredVtSwapPolicy.cc",
+      "source_type": "primary source",
+      "publication_date": "unknown",
+      "retrieved_utc": "2026-10-16",
+      "locator": "Raw one-based260-301; sibling OptimizerTypes.hh356-360 and move/MeasuredVtSwapCandidate.cc44-66,109-132",
+      "access_level": "full",
+      "supported_claim_ids": [
+        "OBJ-1202",
+        "CLM-1203",
+        "HIST-LOCATOR"
+      ],
+      "version": "pinned as URL",
+      "limitations": "Selected source retrieved directly with urllib; raw309 lines, hash in historical row. Web rendering has288 lines; raw is authoritative. No engine execution."
+    },
+    {
+      "id": "V02",
+      "title": "OpenSTA annotation dependencies",
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenSTA/80fbbb2945fee2702a84e711a95a0a3bb7050f22/sdc/Sdc.cc",
+      "source_type": "primary source",
+      "publication_date": "unknown",
+      "retrieved_utc": "2026-10-16",
+      "locator": "Raw3124-3140,3253-3330; sibling dcalc/GraphDelayCalc.cc1440-1473",
+      "access_level": "full",
+      "supported_claim_ids": [
+        "CLM-1204",
+        "C-A02 refinement"
+      ],
+      "version": "pinned as URL",
+      "limitations": "Selected direct raw source only; no transitive audit. Sdc SHA2561f18309385f3932244039107d9c78f5c6f55da6a26fd694aa97a72d55f7feea5; delay86bab0f72ae44b81ff036674d5fac0651a234da0993b18b22e5a5a499684382d."
+    },
+    {
+      "id": "V03",
+      "title": "Variational Data Structures: Exploring Tradeoffs in Computing with Variability",
+      "url": "https://www.se.cs.uni-saarland.de/publications/docs/WKE%2B14.pdf",
+      "source_type": "primary source",
+      "publication_date": "unknown",
+      "retrieved_utc": "2026-10-16",
+      "locator": "Physical pp4-5 sections3.2.2-3.2.3; rendered401-454",
+      "access_level": "full",
+      "supported_claim_ids": [
+        "OBJ-1201",
+        "CLM-1205"
+      ],
+      "version": "2014 author PDF",
+      "limitations": "Selected representation text; no EDA performance transfer. Formula maps combine contexts and merge equal values; MTBDD alternative mentioned p4."
+    },
+    {
+      "id": "V04",
+      "title": "Dynamic Tensor Rematerialization",
+      "url": "https://arxiv.org/html/2006.09616v3",
+      "source_type": "primary source",
+      "publication_date": "unknown",
+      "retrieved_utc": "2026-10-16",
+      "locator": "Section2 rendered95-110",
+      "access_level": "full",
+      "supported_claim_ids": [
+        "CLM-1205"
+      ],
+      "version": "arXiv2006.09616v3",
+      "limitations": "Selected method passages; metadata/eviction/recomputation prior only, no timing result transfer."
+    },
+    {
+      "id": "V05",
+      "title": "Incremental Computing by Differential Execution",
+      "url": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol333-ecoop2025/LIPIcs.ECOOP.2025.20/LIPIcs.ECOOP.2025.20.pdf",
+      "source_type": "primary source",
+      "publication_date": "unknown",
+      "retrieved_utc": "2026-10-16",
+      "locator": "Physical pp16-17 sections5.3/6.1; rendered953-1034",
+      "access_level": "full",
+      "supported_claim_ids": [
+        "CLM-1205",
+        "C-A02 refinement"
+      ],
+      "version": "ECOOP2025 DOI10.4230/LIPIcs.ECOOP.2025.20",
+      "limitations": "Localized branch updates and prior-state caching comparator. Not EDA equivalence, no speed transfer."
+    },
+    {
+      "id": "V06",
+      "title": "ISPD2026 official results",
+      "url": "https://www.ispd.cc/contests/26/index.html",
+      "source_type": "primary source",
+      "publication_date": "unknown",
+      "retrieved_utc": "2026-10-16",
+      "locator": "Contest Winners",
+      "access_level": "full",
+      "supported_claim_ids": [
+        "CLM-1206"
+      ],
+      "version": "dynamic2026-10-16",
+      "limitations": "Winner names/context only, algorithms not inspected. ICCAD2026 official scope also opened; no authenticated winner methods."
+    }
+  ],
+  "objections": [
+    {
+      "id": "OBJ-1201",
+      "verdict": "valid",
+      "blocking": true,
+      "source_locator": "P experiment-plan state/action table; V03 sections3.2.2-3.2.3",
+      "reason": "Original specification remedy satisfied by explicit negative Q/B5 correspondence. Missing useful residual cost interaction still blocks promotion, not source research. Equal normalized transitions do not prove equal total representation costs."
+    },
+    {
+      "id": "OBJ-1202",
+      "verdict": "valid",
+      "blocking": true,
+      "source_locator": "V01 raw Estimate356-360; candidate44-66/109-132; policy260-301",
+      "reason": "Scalar consumer mapping repaired. Existing bounded interface does not entail exhaustive full-vector demand. Demand elsewhere remains unresolved, not refuted."
+    }
+  ],
+  "claim_checks": [
+    {
+      "id": "CLM-1201",
+      "verdict": "valid",
+      "blocking": false,
+      "source_locator": "P experiment-plan state mapping/evaluate/run_dag; V03 formula maps",
+      "reason": "Conditional correspondence follows matching keys, pure operations, memberships and consumer decrements; gathering intentionally excluded. No full STA or total-cost theorem."
+    },
+    {
+      "id": "CLM-1202",
+      "verdict": "partially_valid",
+      "blocking": false,
+      "source_locator": "P experiment-plan A03 Python and JSON fences",
+      "reason": "Code and published output inspected, not executed. Shared primitive/event model and explicit encoding support limited attribution; 480-case/688/1120 output remains author evidence, not independently reproduced numbers. No runtime or RSS inference."
+    },
+    {
+      "id": "CLM-1203",
+      "verdict": "valid",
+      "blocking": false,
+      "source_locator": "V01 selected raw type/candidate/policy",
+      "reason": "Legal/score, scalar arrival difference, journal restore and best legal score are visible. Complete endpoint demand remains unresolved."
+    },
+    {
+      "id": "CLM-1204",
+      "verdict": "partially_valid",
+      "blocking": true,
+      "source_locator": "V02 Sdc3124-3140,3253-3330; GraphDelayCalc1440-1473",
+      "reason": "Presence flag and annotation/parasitic branch verified. Retaining dependency provenance through output coalescence is necessary for selective invalidation. Complete phase/read-set/restore extraction remains unverified; no engine bug proven."
+    },
+    {
+      "id": "CLM-1205",
+      "verdict": "partially_valid",
+      "blocking": true,
+      "source_locator": "V03 sections3.2.2-3.2.3; V04 section2; V05 sections5.3/6.1",
+      "reason": "Representation/coalescing and retention/recomputation have close priors. No complete EDA implementation equivalence or theorem imported. Unopened R22/R23 specifics unresolved; useful residual system delta absent."
+    },
+    {
+      "id": "CLM-1206",
+      "verdict": "partially_valid",
+      "blocking": true,
+      "source_locator": "V06 official Contest Winners; ICCAD2026 Contest Problems",
+      "reason": "Official context accessible; no authenticated winner algorithm audit. Contest originality unresolved, not disproved."
+    },
+    {
+      "id": "CLM-1207",
+      "verdict": "valid",
+      "blocking": true,
+      "source_locator": "JOB/batch; P tasklist S1/S2,D0-D8; P/C consent",
+      "reason": "Research-only. Source-only S1/S2 can proceed; diagnostic implementation, recorder, census and confirmation have separate grants/consents. Owners, rights, caps and adapter absent. No agreeing votes."
+    }
+  ],
+  "additional_checks": [
+    {
+      "id": "C-A02 refinement",
+      "verdict": "partially_valid",
+      "blocking": false,
+      "source_locator": "C challenges Current mechanism; tasklist amendments; V02",
+      "reason": "Equal present numeric values may carry different future dependency validity. Adopt D2 coalescence-then-mutation oracle test and S1 metadata accounting. Challenger numerical fixture not replayed; no observed bug."
+    },
+    {
+      "id": "HIST-LOCATOR",
+      "verdict": "refuted",
+      "blocking": false,
+      "source_locator": "V01 direct raw retrieval versus web-rendered output; policy/released-handover/prior-public-review.json followup1",
+      "reason": "Direct raw file has309 lines and SHA256 f81f24e419536210a344cd6fd32f9e2b43bdb2144a76bbc818de437dadf2d162; loop273-282 is valid. Web renderer removes blank lines and shows288. No correction to raw273-301 required. Reverse only with different authenticated bytes or demonstrably incorrect locator convention."
+    },
+    {
+      "id": "HIST-REPLAY",
+      "verdict": "valid",
+      "blocking": false,
+      "source_locator": "predecessor SUB-af311... SUBMISSION files; verification.json claim_checks CLM-1005/analytical_checks",
+      "reason": "Manifest contains only compliance/verification/workflow; old4096 support references unpublished runs/analytical-check.json, without embedded exact code/stdout. Public reproducibility defect supported; no inference of fabrication or private nonexecution. Old numerical support remains unavailable. Reverse with immutable public original code/output/hashes or withdraw empirical support; new A03 cannot retroactively verify it."
+    }
+  ],
+  "tasklist_sha256": "d6ad2ae6fefc62542d9909af749f4317a83ef54bb40e494c948b0e0f854e544a",
+  "tasklist_position": "Source-only S1/S2 justified; incorporate C D2 provenance-after-coalescence and S1 metadata-cost amendments. D0-D8 conditional/unallocated. No experiment approval.",
+  "historical_scope": "Only the two explicitly supplied PR67 allegations independently scoped above; prior formal OBJ-001/002 and batch1 OBJ-1201/1202 are predecessor context, not newly adjudicated challenge releases.",
+  "search_log": [
+    {
+      "date": "2026-10-16",
+      "engine": "web search",
+      "query": "static timing analysis variational execution candidate worlds incremental timing exact alternatives 2026",
+      "outcome": "No authenticated closer full-system method established; irrelevant quantum/control/secondary hits excluded. Official contest pages included for context only; winner algorithms unresolved."
+    },
+    {
+      "date": "2026-10-16",
+      "engine": "web search",
+      "query": "ISPD 2026 IRISLab PTSD winner buffering sizing solution",
+      "outcome": "No authenticated closer full-system method established; irrelevant quantum/control/secondary hits excluded. Official contest pages included for context only; winner algorithms unresolved."
+    }
+  ],
+  "limitations": [
+    "Unblinded released-file review; logical identities not backend attestation or OS isolation.",
+    "Long batched reads truncated; current proposal, task, challenge, fixture and critical records targeted. Unopened historical/public sources remain unresolved.",
+    "No downloaded or proposer/challenger code executed. No numerical analytical test performed; source/hash/digest checks only. A03 numbers remain author observations.",
+    "No EDA build, training, GPU/remote or paid work; no resource allocation inferred.",
+    "Full project validation belongs to coordinator; trusted standalone freeze/verify used."
+  ],
+  "reversal_conditions": [
+    "Name and evidence useful residual maintenance/representation delta against strongest equal-information transplant; retain parity otherwise.",
+    "Natural field-reader-decision map for anchored full outputs; no manufactured benchmark-only consumer.",
+    "Complete dependency/oracle/restore tests under actual diagnostic grants; calibrated total cost and phase-specific exact consents."
+  ]
+}

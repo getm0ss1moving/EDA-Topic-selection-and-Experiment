@@ -1,0 +1,7 @@
+{
+  "decision": "revision_requested",
+  "rationale": "Prior target needs an identifiable useful treatment/cost contrast and natural full-vector demand; revised tasklist hash d6ad2ae6fefc62542d9909af749f4317a83ef54bb40e494c948b0e0f854e544a is unsigned and requires a later frozen target. No resources or independent agreement inferred.",
+  "session_id": "94d6bb60-04c2-4b62-a5f8-682feba5fc5c",
+  "signed_revision": "SUB-b4a0830fd75dd9263101adcdda8a60e7ed86f687e08723fe63c0f3e83046ffae",
+  "tasklist_sha256": "ce02d2f6fc0608adc49fac7027bb5a72ca638ba615c462289a02a646b2508875"
+}

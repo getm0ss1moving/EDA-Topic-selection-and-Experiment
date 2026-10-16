@@ -1,0 +1,15 @@
+{
+  "assessment": "revise",
+  "batch_round": 2,
+  "consent": "revision_requested",
+  "experiment_ready": false,
+  "own_analytical_checks": [
+    "A03"
+  ],
+  "previous_proposal_release": "SUB-b4a0830fd75dd9263101adcdda8a60e7ed86f687e08723fe63c0f3e83046ffae",
+  "responding_to_adjudicated_challenger_release": "SUB-1a4046d48852400f673bf14b891eeb70900fc985b29d11840149262bdfe13693",
+  "responding_to_verifier_release": "SUB-c4ea36b9e62a68730c225ac73645a9b5d399bbd2142507a0212c0ef12fb9dd0c",
+  "role": "proposer",
+  "scientific_position": "Current normalized Q/B5 treatment equivalent; natural full-output demand unresolved. Source-level refinement only; no experiment consent.",
+  "tasklist_sha256": "d6ad2ae6fefc62542d9909af749f4317a83ef54bb40e494c948b0e0f854e544a"
+}

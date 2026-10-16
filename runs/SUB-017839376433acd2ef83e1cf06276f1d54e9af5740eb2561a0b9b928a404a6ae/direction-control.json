@@ -1,0 +1,88 @@
+{
+  "abandonment": {
+    "consents": {
+      "challenger": {
+        "decision": "pending",
+        "session_id": null,
+        "signed_dossier_digest": null,
+        "signed_revision": null
+      },
+      "proposer": {
+        "decision": "pending",
+        "session_id": null,
+        "signed_dossier_digest": null,
+        "signed_revision": null
+      }
+    },
+    "decision_id": null,
+    "evidence_refs": [],
+    "grounds": [],
+    "rationale": null,
+    "resurrection_conditions": [
+      "Any post-batch research requires new finite authorization.",
+      "Resolve specific administration distinction, representative exact-key economics, engine dependency/restore locks and actual resources.",
+      "Fresh exact-target P/C consents and independent readiness verification; no inherited approval."
+    ],
+    "successor_topic_id": null
+  },
+  "anchor": {
+    "causal_mechanism": "Maintain operation-specific exact world partitions by dependency-class intersection, split and result re-coalescence; test administrative and bounded-memory dispatch cost beyond same-key memoization.",
+    "downstream_need": "Lower total time for identical full candidate timing/electrical outputs and reference selection, with complete charged reporting/restoration.",
+    "engineering_user": "Timing-engine and timing-optimization developer.",
+    "forbidden_pivots": [
+      "Claiming generic caching, transaction undo, task grouping or agent count as the research contribution.",
+      "Dropping full endpoint/candidate outputs, filtering low-n/no-reuse cases, or optimizing a cache-hit proxy without decision-time demand.",
+      "Escaping same-key memoization by giving the proposal extra features, future traces, memory or hidden reference work.",
+      "Changing to selective residual-covariance acquisition or MCMM/wider ECO scope merely to manufacture headroom."
+    ],
+    "mechanism_invariants": [
+      "Every requested world/candidate and complete output remains available; no mask/selected-subset output contract.",
+      "Complete exact operation context; hashes are indexes and full keys checked; upstream load and all phase dependencies included.",
+      "Prediction/algorithmic agents schedule or admit work only; no learned equality/correctness certificate.",
+      "Same-key memo parity and output materialization cost are mandatory negative controls.",
+      "Single base/epoch; unsupported impure/cyclic engine work uses isolated charged reference fallback.",
+      "No predecessor covariance, signatures, acceptance, exposure erasure or automatic resource transfer."
+    ],
+    "problem": "Repeated exhaustive timing evaluation of mutually exclusive fixed-topology cell-replacement worlds from one immutable base."
+  },
+  "penalties": {
+    "combination_drift": {
+      "evidence_refs": [
+        "proposal.md",
+        "experiment-plan.md",
+        "industry-gap.md",
+        "responses.md"
+      ],
+      "rationale": "Score 0: exact original anchor retained verbatim; current local treatment equivalence is disclosed, not disguised as a new component assembly or score-only task. This is not a novelty/utility clearance.",
+      "score": 0
+    },
+    "demand_drift": {
+      "evidence_refs": [
+        "proposal.md",
+        "experiment-plan.md",
+        "industry-gap.md",
+        "responses.md"
+      ],
+      "rationale": "Score 0: exact original anchor retained verbatim; current local treatment equivalence is disclosed, not disguised as a new component assembly or score-only task. This is not a novelty/utility clearance.",
+      "score": 0
+    },
+    "total": 0
+  },
+  "predecessor_status": "parked",
+  "predecessor_topic": "EDA-0007",
+  "revision_assessment": {
+    "changes": [
+      "Expose Q/B5 state-transition-lifetime correspondence and report present equivalence",
+      "Separate gathering from lifetime effects with A03 and explicitly charged dense support creation",
+      "Map actual output readers without shrinking full-output anchor",
+      "Audit pinned integration SDC presence and required-time dependencies",
+      "Gate construction on an identifiable contrast and natural reader; retain null forecasts"
+    ],
+    "preserves_causal_mechanism": true,
+    "preserves_engineering_need": true,
+    "preserves_problem": true,
+    "reason": "Negative evidence and a sharper causal test preserve the frozen anchor; no replacement mechanism or demand-free pivot."
+  },
+  "state": "continue",
+  "topic": "EDA-0010"
+}
