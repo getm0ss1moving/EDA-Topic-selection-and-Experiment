@@ -38,7 +38,13 @@ new coordinator and their signatures are not transferred to successor roles.
    or no viable anchor-preserving direction, proposer and challenger independently
    sign the same abandonment target and digest. Verifier checks the grounds.
    Archive the complete record and start a successor under a new ID automatically.
-9. After three substantive rounds without convergence, park with exact unresolved
+9. For new jobs with a bound retirement policy, verified fatal or persistent-risk
+   thresholds in docs/TOPIC-RETIREMENT.md produce retired_by_policy automatically,
+   without fake P/C agreement. Preserve the triple, policy, score, original
+   scientific decision and resurrection conditions in the round PR's
+   retirement.json. A successor starts after the required audit within all caps.
+   Persistent unknowns mean a portfolio stop, not scientific refutation.
+10. Below those thresholds, after three substantive rounds without convergence, park with exact unresolved
    questions and start a fresh successor. Human arbitration is optional. Never
    convert lack of consensus into acceptance or joint abandonment.
 
@@ -54,6 +60,10 @@ drift and matching experiment consents. Runtime `selected_for_pilot` is recorded
 with its evidence; it does not bypass canonical dossier validation or authorize
 unallocated experiments. Parked/rejected/abandoned dossiers live under `archive/`.
 A replacement has a new ID and repeats novelty search.
+
+Policy retirement retains run archives and a computed certificate; it does not
+synthesize canonical archive/EDA-* dossiers or signed joint-abandonment records.
+Governance updates never rescore completed or running frozen packets.
 
 Bind consent to an earlier immutable `SUB-<sha256>` proposal or a full Git commit.
 A consent file cannot reference the hash of its own containing release. Changes to

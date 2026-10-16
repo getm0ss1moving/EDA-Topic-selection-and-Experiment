@@ -8,6 +8,13 @@ Current research preference: [useful combinations and structural innovation](doc
 
 ## Start here
 
+New runs use [adversarial screening and automatic retirement](docs/TOPIC-RETIREMENT.md):
+one independently verified unrepairable fatal finding, or persistent weighted
+risk >=6 across two distinct scientific revisions with two shared risk axes,
+discontinues the topic and preserves its evidence before a fresh successor.
+The challenger recommends; the scientific verifier grades; the coordinator
+computes the policy transition. Unresolved portfolio stops are not refutations.
+
 1. Read [the charter](docs/CHARTER.md), [workflow](docs/WORKFLOW.md), and [isolation policy](docs/ISOLATION.md).
 2. The human owner fills [the research brief](config/research-brief.json), including domain, compute, tools, datasets, and publication constraints. Unknown constraints remain explicitly unknown.
 3. Follow [the active automation contract](docs/CODEX-AUTOMATION.md) for separate logical seats, fresh role jobs and released-file transport. A completed finite batch is not authorization for another batch; use a new bounded owner brief rather than resetting its counters.

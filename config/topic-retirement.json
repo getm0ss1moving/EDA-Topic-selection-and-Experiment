@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "policy_id": "evidence-first-retirement-v1",
+  "weights": {
+    "novelty": 2,
+    "utility": 2,
+    "mechanism": 2,
+    "headroom": 1,
+    "contest_originality": 1,
+    "experiments": 1,
+    "anchor": 2
+  },
+  "grade_points": {"clear": 0, "unresolved": 1, "major": 2, "fatal": 3},
+  "fatal_count": 1,
+  "persistent_score": 6,
+  "persistent_rounds": 2,
+  "minimum_common_axes": 2
+}

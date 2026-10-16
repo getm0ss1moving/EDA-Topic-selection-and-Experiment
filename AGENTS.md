@@ -15,3 +15,5 @@ Changes to proposals, challenges, responses, evidence, verification, accepted to
 Run `python3 scripts/project.py validate` before submission. Record the exact input commit, role/session identity, browsed sources and output paths in `runs/`. Keep private scratch outside the checkout. Do not publish secrets, proprietary designs, licensed PDKs or copyrighted paper copies.
 
 Current active platform: ChatGPT/Codex only. Follow docs/CODEX-AUTOMATION.md for the finite-job supervisor, logical seat registration, complete three-role cycles, automatic parking/succession and consent exchange. Historical platform launchers and manual round-wake instructions are inactive. Do not claim a service is running or a live loop has passed without evidence.
+
+For new jobs with a hash-bound retirement policy, follow docs/TOPIC-RETIREMENT.md. Challenger recommendations alone cannot retire a topic. Independent scientific grades may trigger retired_by_policy without fabricated dual consent; preserve unknowns, exact releases and resurrection conditions. No retroactive rescoring of frozen runs.

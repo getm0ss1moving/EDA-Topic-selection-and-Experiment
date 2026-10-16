@@ -1,0 +1,68 @@
+{
+  "recorded_at_utc": "2026-10-16T08:32:10.406594+00:00",
+  "base_commit": "75405489b3110bac0ecb8e692bcf80b5ac33a1ea",
+  "status": "implemented_and_locally_validated",
+  "kind": "governance_and_synthetic_runner_tests_not_scientific_verification",
+  "policy_sha256": "d6f9e8827b899b38b938c4ccbe5f835314be05c8840d5a0aa9d8f70e6f97c811",
+  "validation": {
+    "unittest_command": [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "tests_run": 158,
+    "tests_passed": 158,
+    "new_retirement_tests": 19,
+    "log_sha256": "f2caf8baf515e1edc58ff6b89c6bb1331a3449d239c9b007c67bd8efed32ae59",
+    "project_validate": "passed",
+    "diff_check": "passed"
+  },
+  "coverage": [
+    "fatal no-repair retirement with valid blocking evidence",
+    "persistent unresolved portfolio stop separated from refutation",
+    "low-score and axis-change reset controls",
+    "identical scientific-content/consent republication does not add attempts",
+    "stale pair/policy, protocol purpose, duplicated issue and inaccessible-source refusal",
+    "headroom requires locked metric and effect threshold",
+    "new prepare defaults policy on even from a copied old configuration",
+    "policy-definition and history-cache tamper refusal",
+    "required protocol audit before successor; new globally unused topic ID",
+    "finite round cap survives retirement; quarantine removes risk credit",
+    "actual offline publication contains exact retirement certificate"
+  ],
+  "existing_completed_runtime_unchanged": true,
+  "old_runtime_state_sha256": "0547e5e6e1e456fb2b62bea574c56ea5ecfb1a0f7b43a93f53e59d70c756da4d",
+  "real_scientific_model_jobs_started_by_this_request": 0,
+  "new_physical_experiments_by_this_request": 0,
+  "activation": "Newly prepared runs from a source containing this policy; existing state/policy packets are not retroactively rewritten.",
+  "source_files_sha256": {
+    "AGENTS.md": "4d2f9101e98f36347c3e5f15a8fbac78031585d8faf40914810e993a012c38bd",
+    "config/codex-research.json": "2c24e63e0ddf5dffc0c60c59502c993c91e63640027d44f71214dfec6527d305",
+    "config/topic-retirement.json": "d6f9e8827b899b38b938c4ccbe5f835314be05c8840d5a0aa9d8f70e6f97c811",
+    "docs/CHARTER.md": "6f35310bcd8f43439ee7731992c7bec8fef505129aecdaf471956dc6d9bda033",
+    "docs/WORKFLOW.md": "bc10ee66311a1c6dce57afa7596f791baad4e953d002889b5845c1da6d91819b",
+    "docs/CODEX-AUTOMATION.md": "be8b435b5296a528a0be50bcb7bd7423d06ad84b391ade19a0a8b76b17dbe1df",
+    "docs/INNOVATION-STRATEGY.md": "752c9770fb94467dda7d68f0a37916dbc23624270cc451dfc4b2f6d6628d16b3",
+    "docs/TOPIC-RETIREMENT.md": "1ef5c2d9ba4efa2520d3c159c97d992f4ff52fd3ff6e384d65aff458d08f7a30",
+    "harness/CHALLENGER.md": "ad4eab33dc71bbad6a43117ea7dc21ad322aa0e86eee94bdc048148cbfe4a511",
+    "harness/PROPOSER.md": "369dfca9d1ca0bc3df7be96fa2fdffea43e602afb6662a1a07f77a7c0ffb1faf",
+    "harness/VERIFIER.md": "7a369ddf553986851339a933571a9a2ad96380f75ea0ae34521a975426ac4789",
+    "scripts/codex_loop.py": "526ab56332a4cf6fd4cf3fb6324c599c300ab5701de44b160f2b0ad2e9ccbc70",
+    "scripts/topic_retirement.py": "91138c1b32ddc5f8b8aaf15eeb99414a782b2acab405b961f3d55d5706a6927d",
+    "templates/topic/challenges.md": "9d32405c2209047962839a306d2c1b5e31284ce702e3fc1c39826939404d4153",
+    "tests/test_codex_loop.py": "37c89d3d1473996d01209d304be82b427881d83cb1081af5b6303c4611b81cd7",
+    "tests/test_role_compliance.py": "166ee32790801059bbe8a2d93ff1b0243be1387f17063606013fafa05b61272d",
+    "tests/test_topic_retirement.py": "5e6a6d78094671ab2d0b5d6433e1506a46be3d03385d88d389a33cbeee83144a",
+    "README.md": "8c9da682de4c64e9a488ad416b01e425819a994ae931f838939f4533810b50ee"
+  },
+  "limits": [
+    "Synthetic tests do not verify scientific evidence, actual backend routing or unseen role conduct.",
+    "The owner supplied the preference for sharper review and automatic pruning; the concrete default weights/thresholds are coordinator implementation choices, not invented owner numeric answers.",
+    "Portfolio retirement does not forge P/C consents, assert universal novelty exhaustion or allocate experiments.",
+    "An unrelated local owner-report edit is excluded from this governance change."
+  ]
+}

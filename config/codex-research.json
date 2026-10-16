@@ -1,5 +1,6 @@
 {
   "schema": 1,
+  "retirement_policy": "config/topic-retirement.json",
   "platform": "OpenAI Codex",
   "runtime_root": "../EDA-GPT-Four-Rounds-20261015",
   "cli": "codex",

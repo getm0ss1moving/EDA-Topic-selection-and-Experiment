@@ -25,11 +25,25 @@ Penalties are lexicographic governance constraints: reported PPA, runtime, model
 
 A topic may be abandoned when evidence supports at least one of four grounds: no innovative mechanism remains after verified prior-art challenges; relevant headroom is close to a theoretical limit under applicable assumptions; the causal approach is a documented dead end; or the anchored direction cannot change without becoming a different or demand-free topic. The proposer and challenger must independently agree on the same existing frozen commit and dossier digest and sign the same decision record. A registered verifier independently checks the cited evidence and process before archive validation. Abandonment is not failure concealment: archive the full dossier, objections, evidence, penalties and resurrection conditions. A replacement starts under a new topic ID and repeats novelty search; it cannot silently inherit acceptance or erase negative evidence. The verifier cannot force either scientific role to consent.
 
+## Automatic portfolio retirement (owner update, 2026-10-16)
+
+For newly prepared jobs with a hash-bound policy, apply
+[TOPIC-RETIREMENT.md](TOPIC-RETIREMENT.md). One independently confirmed,
+anchor-unrepairable fatal finding, or risk score >=6 on two consecutive distinct
+scientific revisions with >=2 common risk axes, automatically stops investment.
+This owner-authorized decision needs no new P/C consent. It is retired_by_policy,
+not signed joint abandonment; preserve disagreement and resurrection evidence.
+Persistent unknowns may stop spending without being called refutations. An
+assertion, superficial similarity, inaccessible paper or missing budget alone
+cannot establish a fatal finding. The scientific verifier adjudicates it.
+Historical frozen policies and signed abandonment remain unchanged. Successors
+remain subject to protocol audits, domain budgets and finite round limits.
+
 ## Experiment task-list consensus
 
 Topic confirmation and experiment authorization require proposer/challenger agreement on a final `tasklist.md`. The proposer owns the causal-test and implementation sequence; the challenger must add or require decisive falsification tests, fairness controls and missing dependencies. Both independently sign the same frozen revision and exact task-list SHA-256 in `experiment-consensus.json`. Agreement asserts that dependencies, resources, baselines, metrics, correctness oracle, stop rules, owners and procedures are reasonable and executable; it does not assert that the hypothesis or forecast is true. The verifier checks the two consents and readiness fields but cannot substitute its own consent. Any later task-list change invalidates the agreement and requires both roles to sign again.
 
-Failure of an unsupported premise means revise or collect evidence, not automatic rejection. When the evidence instead establishes a dead end and both scientific roles agree, use joint abandonment. Acceptance authorizes a research plan; it does not establish novelty universally or promise publication.
+Failure of an unsupported premise means revise or collect evidence, not automatic scientific rejection; the distinct portfolio-retirement policy can still stop further spending. When the evidence instead establishes a dead end and both scientific roles agree, use joint abandonment. Acceptance authorizes a research plan; it does not establish novelty universally or promise publication.
 
 ## Decision rights
 

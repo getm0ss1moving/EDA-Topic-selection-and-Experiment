@@ -32,6 +32,7 @@ def module(name):
 rt = module('round_transmit'); rs = rt.rs
 project = module('project')
 compliance = module('role_compliance')
+retirement = module('topic_retirement')
 ROLES = ('proposer', 'challenger', 'verifier')
 COVERAGE = {'duplicate_prior_art','mechanism','composition','demand','industry_gap',
             'headroom','contests','experiments','cost'}
@@ -80,6 +81,9 @@ def add_topic(state,c,home,topic,entry,seed=True):
         names=['AGENTS.md',f'harness/{role.upper()}.md','config/research-brief.json',
                f'domains/{entry["domain"]}/brief.json','scripts/role_submission.py','scripts/project.py']
         names += [f'docs/{x}.md' for x in COMMON]
+        if state.get('retirement_policy'):
+            names += [state['retirement_policy']['file'], 'docs/TOPIC-RETIREMENT.md',
+                      'scripts/topic_retirement.py']
         if c.get('require_compliance'):
             names += ['docs/ROLE-COMPLIANCE.md', 'scripts/role_compliance.py']
         if c.get('batch_brief'):
@@ -130,6 +134,17 @@ def prepare(c,home,ref):
     if (home/'state.json').exists():raise ValueError('Already prepared; use status/watch rather than replacing state')
     home.mkdir(parents=True,exist_ok=True);home.chmod(0o700)
     state={'schema':1,'source_commit':ref,'topics':{},'publication_queue':[],'published':{},'events':[]}
+    if c.get('retirement_policy') is not False:
+        name=c.get('retirement_policy','config/topic-retirement.json')
+        if name != 'config/topic-retirement.json':
+            raise ValueError('Retirement policy must use the committed common policy path')
+        try:body=frozen(ref,name)
+        except subprocess.CalledProcessError:
+            if 'retirement_policy' in c:raise
+            body=None  # An explicitly older source snapshot has no new policy.
+        if body is not None:
+            definition=retirement.validate_policy(json.loads(body))
+            state['retirement_policy']={'file':name,'sha256':rs.sha(body),'definition':definition}
     save(home/'settings.json',c)
     for topic,entry in c['topics'].items():
         add_topic(state,c,home,topic,entry)
@@ -261,6 +276,13 @@ def job_for(state,t,c):
                 'job_id':work.name, 'compliance_required':bool(c.get('require_compliance')),
                 'models':c['models'],
                 'readiness': 'logical seat registered; actual host model is recorded by the execution backend'}
+    if state.get('retirement_policy'):
+        binding=state['retirement_policy']
+        if sha(work/'policy'/binding['file']) != binding['sha256'] or read(
+                work/'policy'/binding['file']) != binding['definition']:
+            raise ValueError('Frozen retirement policy does not match state binding')
+        assignment['retirement_policy']={k:binding[k] for k in ('file','sha256')}
+        assignment['retirement_progress']=retirement_history(state,t)
     save(work/'JOB.json',assignment)
     prompt=(f'Run only the {role} role for {t["topic"]}. All artifacts and replies English. '
         'Read JOB.json, policy/docs/CODEX-AUTOMATION.md, common policy, and only your own harness. '
@@ -290,6 +312,14 @@ def job_for(state,t,c):
                    'ledger covering all nine rules, exact identity/job and honest access/operation incidents. '
                    'Never erase a disclosed exposure to make a validator pass. Do not claim self-report '
                    'proves unseen actions did not occur. Each full round gets a separate independent protocol audit.\n')
+    if state.get('retirement_policy'):
+        prompt += ('Read policy/docs/TOPIC-RETIREMENT.md and the exact hash-bound policy before research. '
+                   'Challenger: perform the adversarial pressure tests and include workflow.json.elimination_screen. '
+                   'Scientific verifier: independently adjudicate it in verification.json.elimination_review. '
+                   'Proposer: answer every released decision-critical gap with a mechanism, evidence or cheapest '
+                   'falsifier; cosmetic rewrites do not reset risk. Verified fatal or persistent risk can automatically '
+                   'retire this topic without fabricated joint-abandonment consent. Unknown is not refuted; '
+                   'useful combinations remain eligible. Do not edit another role\'s output.\n')
     prompt += ('This owner-authorized batch has exactly four completed P/C/V cycles per domain. '
                'D04 and D05 run independently in parallel. Use this round to make concrete scientific progress; '
                'do not spend it merely asking for infrastructure permission. On rounds 1-3, refine or '
@@ -389,6 +419,41 @@ def proposal_digest(payload):
         return project.digest(Path(td))
 
 
+def retirement_point(state,t,payload,verifier_release):
+    binding=state.get('retirement_policy')
+    if not binding:return None
+    _,cp=rs.verify(t['latest']['challenger'])
+    _,pp=rs.verify(t['latest']['proposer'])
+    packet=Path(t['seats']['verifier']['packet'])
+    brief=read(packet/'config/research-brief.json')
+    domain=read(packet/f'domains/{t["domain"]}/brief.json')
+    contract={k:domain.get(k) if domain.get(k) is not None else brief.get(k)
+              for k in ('primary_metric','minimum_meaningful_effect')}
+    return retirement.validated_point(binding,
+        json.loads(cp['workflow.json']).get('elimination_screen'),
+        json.loads(payload['verification.json']),Path(t['latest']['proposer']).name,
+        Path(t['latest']['challenger']).name,verifier_release,proposal_digest(pp),contract)
+
+
+def retirement_history(state,t):
+    """Rebuild risk from immutable scientific releases, never mutable cached scores."""
+    if not state.get('retirement_policy'):return []
+    history=[]
+    for record in state['publication_queue']:
+        if record['topic']!=t['topic'] or not record.get('retirement_review'):continue
+        manifest,payload=rs.verify(record['releases']['verifier'])
+        if manifest['topic']!=t['topic'] or not project.is_scientific_verifier(
+                {'role':manifest['role'],'actor_id':manifest['actor_id']}):
+            raise ValueError('Retirement history must use scientific verifier releases')
+        point=retirement_point(state,{**t,'latest':record['releases']},payload,Path(record['releases']['verifier']).name)
+        if point!=record['retirement_review']:
+            raise ValueError('Retirement history differs from frozen scientific evidence')
+        history.append(point)
+    if history!=t.get('retirement_reviews',[]):
+        raise ValueError('Retirement cache differs from frozen scientific history')
+    return history
+
+
 def validate_result(state,t,job,result):
     role=job['role']
     if result.get('status')!='complete':raise ValueError(result.get('reason') or 'Role reports blocked')
@@ -401,6 +466,12 @@ def validate_result(state,t,job,result):
         raise ValueError('Frozen release does not match assigned role/input')
     flow=json.loads(p.get('workflow.json',b'{}'))
     assignment=read(Path(job['work'])/'JOB.json')
+    if state.get('retirement_policy'):
+        expected={k:state['retirement_policy'][k] for k in ('file','sha256')}
+        if assignment.get('retirement_policy') != expected or sha(
+                Path(job['work'])/'policy'/expected['file']) != expected['sha256'] or read(
+                Path(job['work'])/'policy'/expected['file']) != state['retirement_policy']['definition']:
+            raise ValueError('Role job retirement policy binding changed or is absent')
     if assignment.get('compliance_required'):
         allowed=[Path(x).name for x in assignment['released_inputs'] if Path(x).is_dir()]
         allowed += [x.name for x in (Path(job['work'])/'own-previous').glob('SUB-*')]
@@ -415,6 +486,9 @@ def validate_result(state,t,job,result):
         if set(flow.get('coverage',{}))!=COVERAGE or not all(
                 x in {'supported','unresolved','not_applicable'} for x in flow['coverage'].values()):
             raise ValueError('Missing or invalid challenger coverage ledger')
+        if state.get('retirement_policy'):
+            retirement.validate_screen(flow.get('elimination_screen'),
+                state['retirement_policy']['definition'],flow['reviewed_proposer_release'])
     if role=='verifier':
         v=json.loads(p['verification.json']);expected=Path(t['latest']['challenger']).name
         if v.get('reviewed_proposer_release')!=flow['reviewed_proposer_release'] or v.get('adjudicated_challenger_releases')!=[expected]:
@@ -429,6 +503,13 @@ def validate_result(state,t,job,result):
             raise ValueError('Invalid objection verdict')
         if flow.get('next_action') not in {'revise','consent_experiment','consent_abandonment','accept_for_pilot','abandon','park'}:
             raise ValueError('Invalid next action')
+        if state.get('retirement_policy'):
+            if flow.get('purpose','scientific')!='scientific' or not project.is_scientific_verifier(
+                    {'role':role,'actor_id':m['actor_id'],'verification_purpose':v.get('purpose','scientific')}):
+                raise ValueError('Only a scientific verifier may supply retirement grades')
+            point=retirement_point(state,t,p,sid)
+            if flow['next_action']=='accept_for_pilot' and point['active_axes']:
+                raise ValueError('Acceptance cannot contain unresolved retirement axes')
     return snapshot,p,flow
 
 
@@ -437,6 +518,9 @@ def accept_result(state,t,job,result,home):
     role=job['role']
     if role=='verifier':
         action=flow['next_action'];v=json.loads(p['verification.json'])
+        point=retirement_point(state,t,p,snapshot.name)
+        retired=retirement.evaluate(state['retirement_policy']['definition'],
+                    retirement_history(state,t),point) if point else None
         if action=='accept_for_pilot':
             if not consent_check(t,'experiment'):raise ValueError('Experiment dual consent absent or stale')
             _,pp=rs.verify(t['latest']['proposer'])
@@ -467,6 +551,15 @@ def accept_result(state,t,job,result,home):
         record={'topic':t['topic'],'round':t['round'],'decision':action,
                 'releases':dict(t['latest']),'registrations':registry(state),
                 'verification_release':snapshot.name,'source_commit':state['source_commit']}
+        if point:
+            t.setdefault('retirement_reviews',[]).append(point)
+            record['retirement_review']=point
+        if retired and action!='abandon':
+            retired.update(topic=t['topic'],policy=copy.deepcopy(state['retirement_policy']),
+                           source_commit=state['source_commit'],
+                           resurrection_conditions=point['resurrection_conditions'])
+            t['retirement']=retired;t['last_policy_decision']='retired_by_policy'
+            record.update(decision='retired_by_policy',scientific_decision=action,retirement=retired)
         state['publication_queue'].append(record)
         limit=read(home/'settings.json').get('stop_after_rounds')
         completed=sum(x['round'] for x in state['topics'].values() if x['domain']==t['domain'])
@@ -478,6 +571,9 @@ def accept_result(state,t,job,result,home):
         else:
             t['closure']={'consent_experiment':'experiment','consent_abandonment':'abandonment'}.get(action)
             t['phase']='proposer'
+        if retired and action!='abandon':
+            t['status']='retired_by_policy';t['closure']=None
+            record['decision']='retired_by_policy'
         if limit and completed>=limit:
             t['status']='stopped_after_round_limit'
         elif limit and action=='accept_for_pilot':
@@ -487,7 +583,8 @@ def accept_result(state,t,job,result,home):
 
 
 def successor(state,t,c,home):
-    if t['status'] not in ('abandoned','parked') or t.get('successor'):return
+    if t['status'] not in ('abandoned','parked','retired_by_policy') or t.get('successor'):return
+    if pending_audit(state,c,t['domain']):return
     if c.get('stop_after_rounds') and sum(x['round'] for x in state['topics'].values()
             if x['domain']==t['domain'])>=c['stop_after_rounds']:return
     cap=c.get('max_topics_per_domain')
@@ -496,6 +593,9 @@ def successor(state,t,c,home):
     # Include repository IDs; never reuse an archived or accepted ID.
     for area in ('candidates','topics','archive'):
         ids += [int(p.name[4:]) for p in (ROOT/area).glob('EDA-*') if project.ID.fullmatch(p.name)]
+    for manifest in (ROOT/'runs').glob('SUB-*/SUBMISSION.json'):
+        previous=read(manifest).get('topic','')
+        if isinstance(previous,str) and project.ID.fullmatch(previous):ids.append(int(previous[4:]))
     topic=f'EDA-{max(ids+[0])+1:04d}'
     entry={'domain':t['domain'],'actors':{r:t['seats'][r]['actor_id'].split('-EDA-')[0]+'-'+topic for r in ROLES}}
     add_topic(state,c,home,topic,entry,seed=False)
@@ -507,6 +607,7 @@ def successor(state,t,c,home):
         # Packet remains frozen; deliver a separate shared closure record instead.
         save(Path(new['seats'][r]['base'])/'predecessor.json',
              {'topic':t['topic'],'status':t['status'],'releases':dict(t['latest']),
+              **({'retirement':copy.deepcopy(t['retirement'])} if t.get('retirement') else {}),
               'note':'Historical released outputs; recheck sources; no inherited acceptance/signatures.'})
     transport_config(state,home)
 
@@ -521,7 +622,8 @@ def pending_audit(state, c, domain):
 
 def cycle_checkpoint(t):
     """Only clean, previously released inputs; never a private execution trace."""
-    fields=('phase','round','status','latest','history','closure','last_scientific_decision')
+    fields=('phase','round','status','latest','history','closure','last_scientific_decision',
+            'retirement_reviews','retirement','last_policy_decision')
     return {k:copy.deepcopy(t[k]) for k in fields if k in t}
 
 
@@ -569,6 +671,8 @@ def clean_checkpoint(state,t,job,record=None):
         latest={r:clean[-3+index] for index,r in enumerate(ROLES)} if clean else {}
         out={'phase':'proposer','round':expected_round,'status':'researching',
              'latest':latest,'history':clean,'closure':None}
+        if any(r.get('retirement_review') for r in prior):
+            out['retirement_reviews']=[copy.deepcopy(r['retirement_review']) for r in prior if r.get('retirement_review')]
         if clean:
             _,payload=rs.verify(latest['verifier'])
             action=json.loads(payload['workflow.json'])['next_action']
@@ -636,7 +740,8 @@ def recover(c,home,domain):
         if prior.is_file():shutil.copyfile(prior,base/'predecessor.json')
         new[role]={**seat,'actor_id':actor,'session_id':str(uuid.uuid4()),'base':str(base),
                    'packet':str(packet),'packet_sha256':sha(packet/'PACKET.json'),'inbox':str(inbox)}
-    for key in ('phase','round','status','latest','history','closure','last_scientific_decision'):
+    for key in ('phase','round','status','latest','history','closure','last_scientific_decision',
+                'retirement_reviews','retirement','last_policy_decision'):
         if key in checkpoint:t[key]=copy.deepcopy(checkpoint[key])
         else:t.pop(key,None)
     t.update(seats=new,job=None,not_before=0)
@@ -879,6 +984,8 @@ def publish_record(record,c,home,dry_run=False):
         descriptors=export_public_descriptors(record,repo,round_path) if c.get('require_compliance') else None
         if descriptors:public['descriptor_manifest']=str(round_path/'DESCRIPTORS.json')
         save(repo/round_path/'round.json',public)
+        if record.get('retirement'):
+            save(repo/round_path/'retirement.json',record['retirement'])
         # Registry travels atomically with this round; no registration PR has to merge first.
         registry_path=repo/'config/roles.json';registered=read(registry_path)
         by={s['session_id']:s for s in registered['sessions']}
@@ -893,7 +1000,9 @@ def publish_record(record,c,home,dry_run=False):
         cmd('git','add','runs','config/roles.json',cwd=repo)
         cmd('git','commit','--quiet','-m',f'Publish {record["topic"]} research round: {record["decision"]}',cwd=repo)
         if dry_run:return {'dry_run':True,'branch':branch,'commit':git('rev-parse','HEAD',cwd=repo),
-                          'descriptor_roles':list(descriptors['roles']) if descriptors else []}
+                          'descriptor_roles':list(descriptors['roles']) if descriptors else [],
+                          'retirement_certificate':read(repo/round_path/'retirement.json')
+                              if record.get('retirement') else None}
         if cmd('git','ls-remote','--heads','origin',branch,cwd=repo):
             # A network failure after push must not strand the durable publication.
             # Reuse only a branch whose complete patch and bytes match our record.

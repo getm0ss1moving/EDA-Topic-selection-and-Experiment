@@ -15,6 +15,7 @@ class LoopTests(unittest.TestCase):
     def setUp(self):
         self.tmp=tempfile.TemporaryDirectory();self.home=Path(self.tmp.name).resolve()/'runtime'
         self.c=l.read(ROOT/'config/codex-research.json')
+        self.c['retirement_policy']=False  # Explicit legacy-path regression fixture.
         self.c['topics']={'EDA-0002':dict(self.c['topics']['EDA-0002'],seed_prefix=None)}
         self.c['publication']={'enabled':False,'auto_merge':False}
         self.c.pop('stop_after_rounds',None)

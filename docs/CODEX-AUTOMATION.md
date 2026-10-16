@@ -4,6 +4,12 @@ Owner update: proposer uses `gpt-6.1-sol` high; verifier uses `gpt-6.1-sol` low;
 
 # ChatGPT-only automatic research contract
 
+Owner update, 2026-10-16: newly prepared default runs bind
+config/topic-retirement.json and docs/TOPIC-RETIREMENT.md. Sharper challenger
+pressure tests and independent scientific grades drive automatic portfolio
+retirement. Old frozen packets and completed runs remain unchanged; this update
+does not restart roles or extend a finite batch.
+
 Effective 2026-10-15. This is the current operational contract for all three roles.
 It supersedes the platform assignments and manual transport/wake-up steps in older
 Claude/DeepSeek launch packets. Historical artifacts are evidence, not active instructions.
@@ -107,6 +113,11 @@ with evidence, never a unilateral veto. `feasible` means no supported blocking
 issue was found in the checked plan, not proof of universal novelty or success.
 Supply falsification tasks and sign only your own consent.
 
+For JOB.json.retirement_policy the challenger MUST add the seven-axis
+workflow.json.elimination_screen; the scientific verifier MUST independently add
+verification.json.elimination_review. See TOPIC-RETIREMENT.md for exact schemas
+and refusal cases. A challenger retirement recommendation has no unilateral veto.
+
 ## Verifier turn
 
 Wait for the matching proposal and challenge pair; the scheduler does this.
@@ -155,6 +166,13 @@ a circular demand to run the full experiment before agreeing to its plan.
 
 An invalid or exhausted topic is archived after joint abandonment. A topic still
 unresolved after three substantive rounds is parked with its open questions.
+
+Enabled policy checks retirement before that fallback: one independently verified
+anchor-unrepairable fatal axis, or score >=6 on two consecutive distinct scientific
+revisions with >=2 shared risk axes. Record retired_by_policy separately from the
+actor's scientific decision and publish retirement.json with the exact releases.
+Unknowns remain unknown; no consent is invented. Quarantine removes that cycle's
+scores; finish required audits before successor creation. All budgets/caps remain.
 A successor receives a new ID and fresh logical seats. Consent-only turns do not
 consume substantive rounds. A successor receives only released predecessor
 outcomes, negative evidence and resurrection conditions, never private reasoning.

@@ -20,6 +20,7 @@ class AuditedLoopTests(unittest.TestCase):
         self.root = Path(self.tmp.name).resolve()
         self.home = self.root / 'runtime'
         self.c = l.read(ROOT / 'config/codex-research.json')
+        self.c['retirement_policy']=False  # Explicitly test pre-policy audit scenarios.
         self.c.update(backend='codex_app_agents', require_compliance=True,
                       batch_brief='docs/INNOVATION-BATCH-0003.md', stop_after_rounds=1)
         self.c['topics'] = {'EDA-0002': dict(self.c['topics']['EDA-0002'], seed_prefix=None)}
