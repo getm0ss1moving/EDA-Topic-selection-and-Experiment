@@ -303,6 +303,45 @@ class AcceptanceTests(DossierTests):
         sessions=self.make_valid()
         sessions['c']['topic']='EDA-9999'
         self.assertTrue(any('different topic' in e for e in p.validate_topic(self.d,'topics',sessions)))
+    def test_protocol_audit_cannot_authorize_scientific_acceptance(self):
+        sessions=self.make_valid()
+        sessions['v']['verification_purpose']='scientific'
+        self.assertEqual(p.validate_topic(self.d,'topics',sessions),[])
+        for extra in ({'verification_purpose':'protocol_audit'},
+                      {'session_kind':'independent governance protocol audit; not scientific acceptance'},
+                      {'actor_id':'ChatGPT-B04-PROTOCOL-D05-EDA-0001-R1'}):
+            with self.subTest(marker=extra):
+                sessions['v']={'role':'verifier',**extra}
+                self.assertTrue(any('scientific verifier required' in e for e in p.validate_topic(self.d,'topics',sessions)))
+        sessions['v']={'role':'verifier'}
+        self.update('verification.json',purpose='protocol_audit')
+        self.assertTrue(any('verdict cannot authorize' in e for e in p.validate_topic(self.d,'topics',sessions)))
+    def test_protocol_audit_cannot_authorize_scientific_abandonment(self):
+        sessions=self.make_valid()
+        self.update('verification.json',abandonment_process_checked=True)
+        frozen=self.freeze('candidate before audit-attribution fixture')
+        frozen_digest=p.revision_topic_digest(frozen,'EDA-0001')
+        self.update('dossier.json',status='abandoned')
+        direction=json.loads((self.d/'direction-control.json').read_text())
+        direction['state']='jointly_abandoned'
+        direction['abandonment'].update(decision_id='ABN-AUDIT',grounds=['dead_end'],
+            rationale='Synthetic only.',evidence_refs=['SRC-001'],resurrection_conditions=['New evidence'])
+        for role,sid in [('proposer','p'),('challenger','c')]:
+            direction['abandonment']['consents'][role]={'session_id':sid,'decision':'agree',
+                'signed_revision':frozen,'signed_dossier_digest':frozen_digest}
+        (self.d/'direction-control.json').write_text(json.dumps(direction))
+        self.assertEqual(p.validate_topic(self.d,'archive',sessions),[])
+        for extra in ({'verification_purpose':'protocol_audit'},
+                      {'session_kind':'independent governance protocol audit; not scientific acceptance'},
+                      {'actor_id':'ChatGPT-B04-PROTOCOL-D05-EDA-0001-R1'}):
+            with self.subTest(marker=extra):
+                sessions['v']={'role':'verifier',**extra}
+                self.assertTrue(any('scientific verifier required' in e for e in p.validate_topic(self.d,'archive',sessions)))
+        sessions['v']={'role':'verifier','topic':'EDA-9999'}
+        self.assertTrue(any('different topic' in e for e in p.validate_topic(self.d,'archive',sessions)))
+        sessions['v']={'role':'verifier'}
+        self.update('verification.json',purpose='protocol_audit')
+        self.assertTrue(any('verdict cannot authorize' in e for e in p.validate_topic(self.d,'archive',sessions)))
     def test_untouched_verification_template_blocks_acceptance(self):
         sessions=self.make_valid()
         shutil.copy(self.original_root/'templates/topic/verification.md',self.d/'verification.md')

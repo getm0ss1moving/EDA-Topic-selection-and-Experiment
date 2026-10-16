@@ -768,6 +768,7 @@ def audit_collect(c,home,domain):
                   'platform':'OpenAI Codex','model':c['models']['verifier']['model'],'operator':'getm0ss1moving',
                   'github_login':'getm0ss1moving (transport only)', 'input_commit':m['input_commit'],
                   'packet_sha256':m['packet_sha256'],'session_kind':'independent governance protocol audit; not scientific acceptance',
+                  'verification_purpose':'protocol_audit',
                   'independence_attestation':'Fresh input-only execution distinct from all three scientific authors; policy isolation.'}
     record['registrations']['sessions'].append(registration)
     save(home/'state.json',state)
@@ -791,6 +792,13 @@ def export_public_descriptors(record,repo,round_path):
             raise ValueError('Public packet descriptor hash mismatch')
         paths={'JOB.json':work/'JOB.json','prompt.txt':work/'prompt.txt',
                'PACKET.json':work/'policy/PACKET.json'}
+        if (work/'public-evidence.json').is_file():
+            evidence=assignment.get('public_evidence',{})
+            if (role!='verifier' or assignment.get('purpose')=='protocol_audit'
+                    or evidence.get('file')!='public-evidence.json'
+                    or evidence.get('sha256')!=sha(work/'public-evidence.json')):
+                raise ValueError('Scientific-verifier public evidence hash/scope mismatch')
+            paths['public-evidence.json']=work/'public-evidence.json'
         if role in ROLES:
             supplied=audit_work/'shared/job-descriptors'/role
             for name in ('JOB.json','prompt.txt'):

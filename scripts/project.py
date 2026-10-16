@@ -34,6 +34,21 @@ def file_sha256(path):
 def read_json_bytes(body):
     return json.loads(body.decode())
 
+def is_scientific_verifier(session):
+    """Protocol/governance review cannot authorize a scientific decision.
+
+    Legacy scientific registrations have no purpose field. Recognize the
+    existing explicit audit markers as well as the new machine-readable field.
+    This checks registry attribution, not unseen backend independence.
+    """
+    if session.get('role') != 'verifier':
+        return False
+    if session.get('verification_purpose', 'scientific') != 'scientific':
+        return False
+    kind = str(session.get('session_kind', '')).casefold()
+    actor = str(session.get('actor_id', '')).casefold()
+    return not any(marker in kind for marker in ('protocol audit', 'protocol_audit', 'governance')) and '-protocol' not in actor
+
 def digest(path):
     h = hashlib.sha256()
     for p in sorted(path.rglob('*')):
@@ -126,6 +141,10 @@ def validate_topic(path, area, sessions):
                 require(sid in sessions and sessions[sid].get('role') == role, f'{role} session not registered')
                 require(sessions.get(sid, {}).get('topic', d['id']) == d['id'],
                         f'{role} session is assigned to a different topic')
+            require(is_scientific_verifier(sessions.get(d.get('verifier_session'), {})),
+                    'scientific verifier required; protocol/governance auditor cannot authorize acceptance')
+            require(v.get('purpose', 'scientific') == 'scientific',
+                    'protocol/governance verdict cannot authorize scientific acceptance')
             require(v.get('decision') == 'accept_for_pilot', 'no independent acceptance decision')
             require(v.get('verifier_session') == d.get('verifier_session'), 'verifier identity mismatch')
             require(v.get('dossier_digest') == digest(path), 'stale dossier digest')
@@ -209,6 +228,12 @@ def validate_topic(path, area, sessions):
             verifier_sid = d.get('verifier_session')
             require(verifier_sid in sessions and sessions[verifier_sid].get('role') == 'verifier',
                     'abandonment verifier session not registered')
+            require(is_scientific_verifier(sessions.get(verifier_sid, {})),
+                    'scientific verifier required; protocol/governance auditor cannot authorize abandonment')
+            require(sessions.get(verifier_sid, {}).get('topic', d['id']) == d['id'],
+                    'abandonment verifier session is assigned to a different topic')
+            require(v.get('purpose', 'scientific') == 'scientific',
+                    'protocol/governance verdict cannot authorize scientific abandonment')
             require(v.get('verifier_session') == verifier_sid,
                     'abandonment verifier identity mismatch')
             require(v.get('abandonment_process_checked') is True,
