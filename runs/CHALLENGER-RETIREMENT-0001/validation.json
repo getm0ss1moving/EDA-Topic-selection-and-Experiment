@@ -17,9 +17,11 @@
     "tests_run": 158,
     "tests_passed": 158,
     "new_retirement_tests": 19,
-    "log_sha256": "f2caf8baf515e1edc58ff6b89c6bb1331a3449d239c9b007c67bd8efed32ae59",
+    "log_sha256": "45790a21fd747aee10e2add07890723cd69cead5c290bbfc6fc89c03f7a1b803",
     "project_validate": "passed",
-    "diff_check": "passed"
+    "diff_check": "passed",
+    "initial_local_log_sha256": "f2caf8baf515e1edc58ff6b89c6bb1331a3449d239c9b007c67bd8efed32ae59",
+    "checked_after_ci_fixture_fix_utc": "2026-10-16T08:41:13.367459+00:00"
   },
   "coverage": [
     "fatal no-repair retirement with valid blocking evidence",
@@ -56,7 +58,7 @@
     "templates/topic/challenges.md": "9d32405c2209047962839a306d2c1b5e31284ce702e3fc1c39826939404d4153",
     "tests/test_codex_loop.py": "37c89d3d1473996d01209d304be82b427881d83cb1081af5b6303c4611b81cd7",
     "tests/test_role_compliance.py": "166ee32790801059bbe8a2d93ff1b0243be1387f17063606013fafa05b61272d",
-    "tests/test_topic_retirement.py": "5e6a6d78094671ab2d0b5d6433e1506a46be3d03385d88d389a33cbeee83144a",
+    "tests/test_topic_retirement.py": "abb20bcc96781f4f3a0239b0b0669e3f500596e2e65f5149d11556de358f9f0b",
     "README.md": "8c9da682de4c64e9a488ad416b01e425819a994ae931f838939f4533810b50ee"
   },
   "limits": [
@@ -64,5 +66,6 @@
     "The owner supplied the preference for sharper review and automatic pruning; the concrete default weights/thresholds are coordinator implementation choices, not invented owner numeric answers.",
     "Portfolio retirement does not forge P/C consents, assert universal novelty exhaustion or allocate experiments.",
     "An unrelated local owner-report edit is excluded from this governance change."
-  ]
+  ],
+  "ci_failure_record": "runs/CHALLENGER-RETIREMENT-0001/ci-regression.json"
 }

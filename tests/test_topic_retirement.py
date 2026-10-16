@@ -2,6 +2,7 @@
 import copy
 import hashlib
 import json
+import os
 from pathlib import Path
 import tempfile
 import unittest
@@ -263,7 +264,10 @@ class LoopRetirementTests(unittest.TestCase):
     def test_retirement_certificate_is_in_real_offline_publication(self):
         self.cycle({'mechanism':'fatal'});self.audit();l.audit_collect(self.c,self.home,'D05')
         record=l.read(self.home/'state.json')['publication_queue'][0]
-        result=l.publish_record(record,self.c,self.home,dry_run=True)
+        identity={key:'retirement-test' for key in ('GIT_AUTHOR_NAME','GIT_COMMITTER_NAME')}
+        identity.update({key:'retirement-test@example.invalid' for key in ('GIT_AUTHOR_EMAIL','GIT_COMMITTER_EMAIL')})
+        with patch.dict(os.environ,identity):
+            result=l.publish_record(record,self.c,self.home,dry_run=True)
         self.assertEqual(result['retirement_certificate'],record['retirement'])
         self.assertEqual(set(result['descriptor_roles']),set(l.ROLES)|{'protocol_audit'})
 
