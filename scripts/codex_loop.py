@@ -659,6 +659,9 @@ def audit_dispatch(c, home, domain):
     packet=base/'packet';packet.mkdir()
     original=topic['seats']['verifier'];verify_packet(original)
     for name in read(Path(original['packet'])/'PACKET.json')['files']:
+        # Scientific history is not part of the protocol auditor's assignment.
+        if Path(name).parts[0] in ('released-handover', 'released-seed'):
+            continue
         dest=packet/name;dest.parent.mkdir(parents=True,exist_ok=True)
         dest.write_bytes(rs.regular(Path(original['packet'])/name))
     actor=f'{c.get("audit_actor_prefix","ChatGPT-PROTOCOL")}-{domain}-{topic["topic"]}-R{record["round"]}'
