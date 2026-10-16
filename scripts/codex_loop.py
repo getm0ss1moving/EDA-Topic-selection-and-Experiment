@@ -129,6 +129,8 @@ def transport_config(state,home):
 
 
 def prepare(c,home,ref):
+    if c.get('enabled') is False:
+        raise ValueError('AI proposer loop is disabled; use the human-led research workflow')
     if not re.fullmatch(r'[0-9a-f]{40}',ref) or git('cat-file','-t',ref)!='commit':
         raise ValueError('A frozen full commit is required')
     if (home/'state.json').exists():raise ValueError('Already prepared; use status/watch rather than replacing state')
@@ -1176,7 +1178,11 @@ def main():
     for name in ('dispatch','collect','audit-dispatch','audit-collect','recover'):
         q=sub.add_parser(name);q.add_argument('--domain',choices=['D04','D05'],required=True)
     sub.add_parser('publish-pending')
-    args=p.parse_args();c,home=config(args.config)
+    args=p.parse_args()
+    active=ROOT/'config/research-workflow.json'
+    if active.is_file() and read(active).get('ai_proposer_enabled') is False and args.command!='status':
+        p.error('Historical AI proposer execution is disabled. Follow docs/WORKFLOW.md; human ideas enter independent review.')
+    c,home=config(args.config)
     if args.command=='preflight':
         print(subprocess.check_output([c['cli'],'--version'],text=True).strip())
         subprocess.run([c['cli'],'login','status'],check=True)

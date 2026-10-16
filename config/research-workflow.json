@@ -1,0 +1,65 @@
+{
+  "schema": 1,
+  "mode": "human_led",
+  "human_author": "getm0ss1moving",
+  "ai_proposer_enabled": false,
+  "ai_roles": [
+    "searcher",
+    "challenger",
+    "verifier"
+  ],
+  "roles": {
+    "searcher": {
+      "actor_id": "ChatGPT-S-PHYSICAL",
+      "harness": "harness/SEARCHER.md",
+      "state": "configured_not_running"
+    },
+    "challenger": {
+      "actor_id": "ChatGPT-C-PHYSICAL",
+      "harness": "harness/CHALLENGER.md",
+      "model": "gpt-6-astra",
+      "effort": "low",
+      "state": "waiting_for_human_idea"
+    },
+    "verifier": {
+      "actor_id": "ChatGPT-V-PHYSICAL",
+      "harness": "harness/VERIFIER.md",
+      "model": "gpt-6.1-sol",
+      "effort": "low",
+      "state": "waiting_for_review_pair"
+    }
+  },
+  "survey": {
+    "scope": [
+      "floorplanning",
+      "placement",
+      "CTS",
+      "global_routing",
+      "detailed_routing",
+      "timing_signoff",
+      "power_integrity",
+      "physical_verification"
+    ],
+    "target_unique_papers": 100,
+    "current_batch_size": 10,
+    "catalog": "literature/catalog.json",
+    "frontier_first": true,
+    "translations": "Chinese titles and paraphrased abstract summaries; original English titles retained",
+    "contests_and_projects_count_as_papers": false
+  },
+  "review": {
+    "entry": "human-authored committed idea",
+    "raw_challenge_delivery": "verifier_first",
+    "return_to": "human_author",
+    "independent_verifier_required": true,
+    "automatic_successor_proposal": false,
+    "retirement_policy": "config/topic-retirement.json"
+  },
+  "publication": {
+    "use_pr": true,
+    "coordinator_may_merge_after_checks": true,
+    "human_github_approval_required": false
+  },
+  "experiment_authorization": false,
+  "legacy_runtime_enabled": false
+}

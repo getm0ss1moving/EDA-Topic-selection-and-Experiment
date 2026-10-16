@@ -1,0 +1,333 @@
+{
+  "schema": 1,
+  "target_unique_papers": 100,
+  "retrieved": "2026-10-16T09:16:41.486799+00:00",
+  "batch": "001",
+  "papers": [
+    {
+      "id": "LIT-001",
+      "kind": "paper",
+      "identity": "arxiv:2606.17253v7",
+      "title_en": "PDAGENT-BENCH: Characterizing, Grounding, and Architecting LLM/VLM Agents for VLSI Physical Design",
+      "title_zh": "PDAGENT-BENCH：刻画、落地与构建面向芯片物理设计的语言及视觉语言模型智能体",
+      "url": "https://arxiv.org/abs/2606.17253v7",
+      "published": "2026-06-15",
+      "updated": "2026-10-13",
+      "retrieved": "2026-10-16T09:16:41.486799+00:00",
+      "locator": "Title, Abstract and Submission history",
+      "access": "abstract",
+      "reading_status": "abstract_screened",
+      "stages": [
+        "floorplanning",
+        "placement",
+        "global_routing",
+        "timing_signoff"
+      ],
+      "methods": [
+        "agentic",
+        "benchmark"
+      ],
+      "priority": "priority",
+      "summary_zh": "论文建立面向物理设计的智能体基准，将知识理解、报告分析、脚本执行与完整流程放在一起评估。作者认为模型的概念能力和实际工具执行能力存在明显差距，并以技能辅助的闭环工作流改善执行。它适合先理解 agent 在后端设计中究竟被测了什么。",
+      "key_point_en": "Separate task-level benchmark performance from end-to-end physical-design execution; inspect skill-assisted workflow evaluation.",
+      "reading_focus_zh": "检查题目划分、执行成功判据、工具版本与许可；区分技能包贡献和底层模型贡献。仓库已由 v7 摘要链接，不能沿用早期版本“即将开源”的表述。",
+      "limits": "Author claims screened from primary-source abstracts; no independent reproduction, complete method review or novelty verdict. Suggested reading targets are not verified section/page locators."
+    },
+    {
+      "id": "LIT-002",
+      "kind": "paper",
+      "identity": "arxiv:2604.25191v2",
+      "title_en": "How Can Reinforcement Learning Achieve Expert-level Placement?",
+      "title_zh": "强化学习如何达到专家水平的芯片布局？",
+      "url": "https://arxiv.org/abs/2604.25191v2",
+      "published": "2026-04-28",
+      "updated": "2026-06-01",
+      "retrieved": "2026-10-16T09:16:41.486799+00:00",
+      "locator": "Title, Abstract and Submission history",
+      "access": "abstract",
+      "reading_status": "abstract_screened",
+      "stages": [
+        "floorplanning",
+        "placement"
+      ],
+      "methods": [
+        "reinforcement_learning",
+        "expert_preference"
+      ],
+      "priority": "priority",
+      "summary_zh": "论文把奖励设计视为强化学习布局与专家差距的重要来源，尝试从专家最终布局反推过程轨迹，再通过示范或偏好学习隐含奖励。重点是如何从已有高质量结果提取决策信号，而非只优化线长代理。",
+      "key_point_en": "Inspect reconstruction of expert trajectories and learned rewards, then design-level generalization.",
+      "reading_focus_zh": "重点核对专家样本的成本与可获得性、轨迹重建歧义、是否真正改善后续布线和时序；摘要不能证明已经达到所有工程条件下的专家水平。",
+      "limits": "Author claims screened from primary-source abstracts; no independent reproduction, complete method review or novelty verdict. Suggested reading targets are not verified section/page locators."
+    },
+    {
+      "id": "LIT-003",
+      "kind": "paper",
+      "identity": "arxiv:2606.11348v1",
+      "title_en": "SwiftCTS: Fast Cross-Design Prediction and Pareto Optimization of Clock Tree Metrics via Few-Shot Calibration",
+      "title_zh": "SwiftCTS：通过少样本校准实现跨设计时钟树指标快速预测与帕累托优化",
+      "url": "https://arxiv.org/abs/2606.11348v1",
+      "published": "2026-06-09",
+      "updated": "2026-06-09",
+      "retrieved": "2026-10-16T09:16:41.486799+00:00",
+      "locator": "Title, Abstract and Submission history",
+      "access": "abstract",
+      "reading_status": "abstract_screened",
+      "stages": [
+        "CTS"
+      ],
+      "methods": [
+        "surrogate",
+        "calibration",
+        "multi_objective"
+      ],
+      "priority": "priority",
+      "summary_zh": "论文使用带物理含义的特征和梯度提升模型预测时钟树指标，通过少量真实工具运行校准新设计，再以进化搜索寻找多目标折中。作者报告在 OpenROAD 内进行闭环检验。应特别关注预测筛选与真实计算如何分工。",
+      "key_point_en": "Inspect few-shot reference-run accounting, calibration transfer and physical validation of Pareto candidates.",
+      "reading_focus_zh": "把校准用 EDA 运行、搜索成本和最终验证全部计入；核对跨设计划分、偏斜约束和失败候选。摘要中的高精度属于作者报告，尚未复现。",
+      "limits": "Author claims screened from primary-source abstracts; no independent reproduction, complete method review or novelty verdict. Suggested reading targets are not verified section/page locators."
+    },
+    {
+      "id": "LIT-004",
+      "kind": "paper",
+      "identity": "arxiv:2605.06952v1",
+      "title_en": "EDA-Schema-V2: A Multimodal Schema, Open Datasets, and Benchmarks for Machine Learning in Digital Physical Design",
+      "title_zh": "EDA-Schema-V2：数字物理设计机器学习的多模态数据模式、开放数据集与基准",
+      "url": "https://arxiv.org/abs/2605.06952v1",
+      "published": "2026-05-07",
+      "updated": "2026-05-07",
+      "retrieved": "2026-10-16T09:16:41.486799+00:00",
+      "locator": "Title, Abstract and Submission history",
+      "access": "abstract",
+      "reading_status": "abstract_screened",
+      "stages": [
+        "floorplanning",
+        "placement",
+        "CTS",
+        "global_routing",
+        "detailed_routing",
+        "timing_signoff"
+      ],
+      "methods": [
+        "dataset",
+        "multimodal",
+        "cross_stage_prediction"
+      ],
+      "priority": "priority",
+      "summary_zh": "论文提出跨物理设计阶段的数据表示，并在多个公开工艺平台和 OpenROAD 流程中生成设计实例，覆盖时序、功耗、面积与布线等预测任务。它首先是数据和评测基础设施入口，适合用来梳理“统一预测”到底统一了哪些对象与阶段。",
+      "key_point_en": "Inspect schema alignment, design/PDK splits, stage-time feature availability and release/licensing details.",
+      "reading_focus_zh": "同一电路参数扫描产生的实例不能直接视作独立设计；核对训练测试是否按设计族隔离、后阶段信息是否泄漏。摘要宣称数据开放，本轮未检查实际下载包。",
+      "limits": "Author claims screened from primary-source abstracts; no independent reproduction, complete method review or novelty verdict. Suggested reading targets are not verified section/page locators."
+    },
+    {
+      "id": "LIT-005",
+      "kind": "paper",
+      "identity": "arxiv:2609.08232v1",
+      "title_en": "Routing Dense Layouts with History-Aware Offline Reinforcement Learning using LSTM",
+      "title_zh": "利用 LSTM 历史感知离线强化学习为高密度布局布线",
+      "url": "https://arxiv.org/abs/2609.08232v1",
+      "published": "2026-09-08",
+      "updated": "2026-09-08",
+      "retrieved": "2026-10-16T09:16:41.486799+00:00",
+      "locator": "Title, Abstract and Submission history",
+      "access": "abstract",
+      "reading_status": "abstract_screened",
+      "stages": [
+        "detailed_routing",
+        "physical_verification"
+      ],
+      "methods": [
+        "offline_reinforcement_learning",
+        "recurrent_policy"
+      ],
+      "priority": "priority",
+      "summary_zh": "论文针对高密度条件下顽固设计规则违例，学习随布线迭代历史调整成本的策略，同时保留底层搜索器。作者以未参与训练的密度和引导设置评测。重点是时序历史信息是否带来比固定或无记忆调参更有效的修复。",
+      "key_point_en": "Inspect temporal policy state, offline data collection and held-out density/guide settings.",
+      "reading_focus_zh": "核对路由器版本、离线采样成本、最终合法性和总运行时间。arXiv 注释称 ICCAD 2026 接收；本轮未另行核对会议正式论文集。",
+      "limits": "Author claims screened from primary-source abstracts; no independent reproduction, complete method review or novelty verdict. Suggested reading targets are not verified section/page locators."
+    },
+    {
+      "id": "LIT-006",
+      "kind": "paper",
+      "identity": "arxiv:2607.19768v1",
+      "title_en": "AlphaRoute: Large Language Models as Semantic Optimizers for Multi-Objective Routing",
+      "title_zh": "AlphaRoute：将大语言模型作为多目标布线的语义优化器",
+      "url": "https://arxiv.org/abs/2607.19768v1",
+      "published": "2026-07-22",
+      "updated": "2026-07-22",
+      "retrieved": "2026-10-16T09:16:41.486799+00:00",
+      "locator": "Title, Abstract and Submission history",
+      "access": "abstract",
+      "reading_status": "abstract_screened",
+      "stages": [
+        "global_routing"
+      ],
+      "methods": [
+        "LLM_controller",
+        "heuristic",
+        "multi_objective"
+      ],
+      "priority": "context",
+      "summary_zh": "论文将拆线重布线改为自适应优化循环，通过拥塞归因识别需要处理的网络，并让受规则约束的语言模型调整惩罚参数。它把传统搜索与语言模型控制放在同一流程中，适合比较模型调度和强启发式控制各自的作用。",
+      "key_point_en": "Inspect objective/score definitions, geometry changes and controller ablations before interpreting headline gains.",
+      "reading_focus_zh": "重点核对与官方赛题的评分方向、约束和基线是否一致；不能只从摘要的大幅改善推断 LLM 有效，也不能把新的搜索几何的收益全部归给模型。",
+      "limits": "Author claims screened from primary-source abstracts; no independent reproduction, complete method review or novelty verdict. Suggested reading targets are not verified section/page locators. v1 is the inspected version; later-version equivalence was not checked."
+    },
+    {
+      "id": "LIT-007",
+      "kind": "paper",
+      "identity": "arxiv:2608.17914v1",
+      "title_en": "Hybrid ML for Lightweight Pre-Route Delay Estimation in Open-Source IC Design",
+      "title_zh": "开源芯片设计中用于轻量布线前延迟估计的混合机器学习",
+      "url": "https://arxiv.org/abs/2608.17914v1",
+      "published": "2026-08-18",
+      "updated": "2026-08-18",
+      "retrieved": "2026-10-16T09:16:41.486799+00:00",
+      "locator": "Title, Abstract and Submission history",
+      "access": "abstract",
+      "reading_status": "abstract_screened",
+      "stages": [
+        "placement",
+        "timing_signoff"
+      ],
+      "methods": [
+        "model_tree",
+        "lightweight_prediction"
+      ],
+      "priority": "priority",
+      "summary_zh": "论文将决策树与线性回归结合，用较轻量模型改进 OpenLane 的布线前延迟估计，强调精度、模型体积、速度与可解释性的折中。它适合作为复杂神经预测系统必须认真比较的简单模型入口。",
+      "key_point_en": "Inspect available pre-route features, simple regressors, design splits and complete inference/storage cost.",
+      "reading_focus_zh": "核对时延究竟指网络、路径还是设计级指标；精度改善不自动等于签核可靠性。先确认特征在决策时可得，再比较神经模型与轻量方法。",
+      "limits": "Author claims screened from primary-source abstracts; no independent reproduction, complete method review or novelty verdict. Suggested reading targets are not verified section/page locators."
+    },
+    {
+      "id": "LIT-008",
+      "kind": "paper",
+      "identity": "doi:10.1049/ell2.70618",
+      "title_en": "ELBAGNN: Topology-Unrolled GNN for Pre-Routing Timing Prediction with Edge- and Level-Biased Attention",
+      "title_zh": "ELBAGNN：以边和层级偏置注意力展开电路拓扑的布线前时序预测图网络",
+      "url": "https://doi.org/10.1049/ell2.70618",
+      "published": "2026",
+      "updated": "2026",
+      "retrieved": "2026-10-16T09:16:41.486799+00:00",
+      "locator": "Publisher title/abstract; Section 2.4 opening paragraph",
+      "access": "abstract",
+      "reading_status": "abstract_screened",
+      "stages": [
+        "placement",
+        "timing_signoff"
+      ],
+      "methods": [
+        "GNN",
+        "causal_propagation",
+        "cell_delay_model"
+      ],
+      "priority": "priority",
+      "summary_zh": "论文针对布线前时序预测，强调沿电路拓扑展开传播，并处理输入转换时间与输出负载对单元延迟的连续影响。阅读重点是网络结构如何对应时序分析语义，以及预测近似是否保留了需要的因果依赖。",
+      "key_point_en": "Inspect topology unrolling, attention bias and explicit bilinear interpolation against STA semantics.",
+      "reading_focus_zh": "核对时序弧、重汇聚、时钟和工艺角覆盖；学习传播与精确 STA 不是同一保证。本轮阅读了摘要及出版页面可见的小段方法说明，尚未完成全文审查；精确首发日未核定。",
+      "limits": "Author claims screened from primary-source abstracts; no independent reproduction, complete method review or novelty verdict. Suggested reading targets are not verified section/page locators."
+    },
+    {
+      "id": "LIT-009",
+      "kind": "paper",
+      "identity": "arxiv:2511.12581v2",
+      "title_en": "LMM-IR: Large-Scale Netlist-Aware Multimodal Framework for Static IR-Drop Prediction",
+      "title_zh": "LMM-IR：面向静态压降预测的大规模网表感知多模态框架",
+      "url": "https://arxiv.org/abs/2511.12581v2",
+      "published": "2025-11-16",
+      "updated": "2026-06-03",
+      "retrieved": "2026-10-16T09:16:41.486799+00:00",
+      "locator": "Title, Abstract and Submission history",
+      "access": "abstract",
+      "reading_status": "abstract_screened",
+      "stages": [
+        "power_integrity"
+      ],
+      "methods": [
+        "multimodal",
+        "transformer",
+        "netlist"
+      ],
+      "priority": "context",
+      "summary_zh": "论文将网表拓扑与图像信息映射到共同特征空间进行静态 IR-drop 预测，并用大规模网表表示处理拓扑信息。它可帮助区分只看布局热图与显式利用电源网络连接关系的预测方法。",
+      "key_point_en": "Inspect netlist/point-cloud representation, modality ablation and ICCAD 2023 comparison conditions.",
+      "reading_focus_zh": "核对拓扑信息的实际增益、热点召回与绝对误差的关系、跨设计泛化。DAC 2025 接收信息来自作者 arXiv 注释，版本更新到 2026 不意味着新论文再计数。",
+      "limits": "Author claims screened from primary-source abstracts; no independent reproduction, complete method review or novelty verdict. Suggested reading targets are not verified section/page locators."
+    },
+    {
+      "id": "LIT-010",
+      "kind": "paper",
+      "identity": "arxiv:2601.22707v1",
+      "title_en": "Deep Learning-Based Early-Stage IR-Drop Estimation via CNN Surrogate Modeling",
+      "title_zh": "基于卷积神经网络代理模型的早期 IR-drop 估计",
+      "url": "https://arxiv.org/abs/2601.22707v1",
+      "published": "2026-01-30",
+      "updated": "2026-01-30",
+      "retrieved": "2026-10-16T09:16:41.486799+00:00",
+      "locator": "Title, Abstract and Submission history",
+      "access": "abstract",
+      "reading_status": "abstract_screened",
+      "stages": [
+        "power_integrity"
+      ],
+      "methods": [
+        "CNN",
+        "synthetic_data",
+        "surrogate"
+      ],
+      "priority": "context",
+      "summary_zh": "论文使用 U-Net 类代理模型把空间布局特征映射为压降热图，训练数据来自作者构建的物理启发合成流程。定位是为早期筛查提供反馈，作为昂贵签核分析的补充。阅读时应先辨别合成数据规律与真实电路求解的关系。",
+      "key_point_en": "Inspect synthetic label generation and physical solver validity before evaluating heatmap accuracy.",
+      "reading_focus_zh": "核对标签是否来自可信电路求解、真实 PDN 泛化和漏报风险；合成热图上的误差指标不能证明真实签核能力。开源链接来自摘要，本轮未运行。",
+      "limits": "Author claims screened from primary-source abstracts; no independent reproduction, complete method review or novelty verdict. Suggested reading targets are not verified section/page locators."
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "ART-001",
+      "kind": "contest",
+      "title": "ISPD 2026 Post-Placement Buffering and Sizing",
+      "url": "https://github.com/ABKGroup/ISPD26-Contest",
+      "locator": "README: Table of Contents; Leaderboard - Final Submission",
+      "access": "metadata",
+      "retrieved": "2026-10-16T09:16:41.486799+00:00",
+      "note_en": "Organizer README lists evaluation/equivalence resources and public/hidden cases; full rules and winner mechanisms not inspected. Supplied task/baseline is prior art, not a new research question. Repository BSD-3-Clause metadata does not settle all dataset/PDK rights."
+    },
+    {
+      "id": "ART-002",
+      "kind": "project",
+      "title": "OpenROAD",
+      "url": "https://github.com/The-OpenROAD-Project/OpenROAD",
+      "locator": "Repository About/README and documentation link",
+      "access": "metadata",
+      "retrieved": "2026-10-16T09:16:41.486799+00:00",
+      "note_en": "Maintainer entry for the physical-design toolchain; no build, benchmark or signoff-equivalence claim."
+    },
+    {
+      "id": "ART-003",
+      "kind": "project",
+      "title": "PDAGENT-BENCH",
+      "url": "https://github.com/fenggev56/PDAGENT-BENCH",
+      "locator": "Repository About/README; linked by arXiv v7 abstract",
+      "access": "metadata",
+      "retrieved": "2026-10-16T09:16:41.486799+00:00",
+      "note_en": "Current author-linked benchmark/leaderboard entry. License, executable environment and completeness not audited."
+    },
+    {
+      "id": "ART-004",
+      "kind": "project",
+      "title": "AlphaRoute",
+      "url": "https://github.com/Kcbir/AlphaRoute",
+      "locator": "README: Reproducing the ablations; What is where; License",
+      "access": "metadata",
+      "retrieved": "2026-10-16T09:16:41.486799+00:00",
+      "note_en": "Maintainer reports scripts and MIT license. Source-level claims, contest-score equivalence and actual reproduction not checked."
+    }
+  ],
+  "coverage_gaps": [
+    "No dedicated LVS, extraction or electromigration paper in this first batch. Detailed-route DRVs are not complete physical signoff.",
+    "No claim of exhaustive frontier coverage or equal representation. Next discovery should fill signoff and conventional-algorithm gaps."
+  ],
+  "counting": "Deduplicate arXiv versions, DOI/proceedings aliases and matching titles; contests/projects do not count as papers."
+}

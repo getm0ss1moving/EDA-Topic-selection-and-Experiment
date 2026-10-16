@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "coordinator": "Current project creation task; transport only",
-  "model_confirmation": "Owner 2026-10-15: proposer GPT-6.1-Sol high; verifier GPT-6.1-Sol low; challenger retains Astra low. D04/D05 parallel, four completed role cycles each then stop.",
-  "research_phase": "codex_only_automation_prepared",
+  "model_confirmation": "AI proposer retired. Active role settings are in config/research-workflow.json.",
+  "research_phase": "human_led_literature_and_review",
   "actors": [
     {
       "actor_id": "Codex-P01-ARCH",
@@ -583,8 +583,8 @@
       ],
       "model_requested": "gpt-6.1-sol",
       "reasoning_requested": "high",
-      "status": "ready_for_fresh_session",
-      "active_scope": true,
+      "status": "historical_seat_replaced_by_human_led_workflow",
+      "active_scope": false,
       "fresh_session_required": true,
       "session_id": null,
       "packet_sha256": null,
@@ -600,8 +600,8 @@
       ],
       "model_requested": "gpt-6-astra",
       "reasoning_requested": "low",
-      "status": "ready_for_fresh_session",
-      "active_scope": true,
+      "status": "historical_seat_replaced_by_human_led_workflow",
+      "active_scope": false,
       "fresh_session_required": true,
       "session_id": null,
       "packet_sha256": null,
@@ -617,8 +617,8 @@
       ],
       "model_requested": "gpt-6.1-sol",
       "reasoning_requested": "low",
-      "status": "ready_for_fresh_session",
-      "active_scope": true,
+      "status": "historical_seat_replaced_by_human_led_workflow",
+      "active_scope": false,
       "fresh_session_required": true,
       "session_id": null,
       "packet_sha256": null,
@@ -634,8 +634,8 @@
       ],
       "model_requested": "gpt-6.1-sol",
       "reasoning_requested": "high",
-      "status": "ready_for_fresh_session",
-      "active_scope": true,
+      "status": "historical_seat_replaced_by_human_led_workflow",
+      "active_scope": false,
       "fresh_session_required": true,
       "session_id": null,
       "packet_sha256": null,
@@ -651,8 +651,8 @@
       ],
       "model_requested": "gpt-6-astra",
       "reasoning_requested": "low",
-      "status": "ready_for_fresh_session",
-      "active_scope": true,
+      "status": "historical_seat_replaced_by_human_led_workflow",
+      "active_scope": false,
       "fresh_session_required": true,
       "session_id": null,
       "packet_sha256": null,
@@ -668,8 +668,8 @@
       ],
       "model_requested": "gpt-6.1-sol",
       "reasoning_requested": "low",
-      "status": "ready_for_fresh_session",
-      "active_scope": true,
+      "status": "historical_seat_replaced_by_human_led_workflow",
+      "active_scope": false,
       "fresh_session_required": true,
       "session_id": null,
       "packet_sha256": null,
@@ -677,25 +677,14 @@
     }
   ],
   "active_actor_count": 0,
-  "released_actor_count": 6,
-  "scope_policy": "D04/D05 only; six separate logical seats. Historical sessions are not resumed by the Codex-only runner.",
+  "released_actor_count": 0,
+  "scope_policy": "Literature from floorplanning to signoff; human-authored topics only.",
   "max_concurrent_test_roles": 1,
   "role_test_policy": "Synthetic infrastructure probes do not authorize science.",
   "platform_model_policy": {
     "active_platforms": [
       "OpenAI Codex"
     ],
-    "proposer": {
-      "model": "gpt-6.1-sol",
-      "effort": "high"
-    },
-    "challenger": {
-      "model": "gpt-6-astra",
-      "effort": "low"
-    },
-    "verifier": {
-      "model": "gpt-6.1-sol",
-      "effort": "low"
-    }
+    "active_workflow": "config/research-workflow.json"
   }
 }

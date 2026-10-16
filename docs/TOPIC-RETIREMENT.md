@@ -1,5 +1,13 @@
 # Adversarial screening and automatic topic retirement
 
+Current human-led scope: proposer/reviewed_proposer_release names the author input
+slot in the historical wire format, not an AI proposer. A new human-authored
+revision is needed for each distinct attempt. No replacement topic is generated
+automatically. The pure scoring code and legacy loop tests are available, but
+the historical P/C/V execution launcher is disabled; do not claim a live human-idea
+dispatcher from these tests. Apply a bound certificate to a frozen review pair
+before recording retirement. Preserve legacy schemas and evidence.
+
 Owner instruction, 2026-10-16: challenge proposals more sharply, especially their
 rationale and innovation, and automatically discontinue weak topics at explicit
 thresholds. This policy applies only when a NEW job has a hash-bound
@@ -124,6 +132,16 @@ unsupported objections never earn risk points. The same OBJ/claim cannot be
 counted on multiple axes. Major/fatal grades require reopened full-access
 source IDs and locators. Only `valid` references can support fatal. A protocol
 auditor cannot grade science or trigger retirement.
+
+Use the established source_checks.source_id field (legacy id is also accepted;
+conflicting aliases are rejected). For each source driving major/fatal, the
+verifier must record verdict:verified, access_level:full, url and locator on that
+source check. Basic source checks without these extra fields remain readable,
+but cannot establish a confirmed retirement failure.
+
+Every still-blocking valid/partially_valid/unresolved OBJ or claim must appear
+on a nonclear axis; a clear scorecard cannot hide the verifier's own blockers.
+Refuted/unsupported or explicitly resolved issues cannot drive retirement.
 
 A fatal row must set `no_anchor_preserving_repair:true` and the matching ground:
 

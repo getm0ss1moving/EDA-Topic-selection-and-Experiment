@@ -1,3 +1,5 @@
+> Historical operational reference. Current human-led workflow: [WORKFLOW.md](WORKFLOW.md). AI proposer launch and automatic AI succession instructions below are inactive.
+
 # Deployment status
 
 - Repository: `getm0ss1moving/EDA-Topic-selection-and-Experiment` (public).

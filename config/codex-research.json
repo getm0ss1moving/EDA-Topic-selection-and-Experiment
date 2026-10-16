@@ -1,67 +1,7 @@
 {
   "schema": 1,
-  "retirement_policy": "config/topic-retirement.json",
-  "platform": "OpenAI Codex",
-  "runtime_root": "../EDA-GPT-Four-Rounds-20261015",
-  "cli": "codex",
-  "models": {
-    "proposer": {
-      "model": "gpt-6.1-sol",
-      "effort": "high"
-    },
-    "challenger": {
-      "model": "gpt-6-astra",
-      "effort": "low"
-    },
-    "verifier": {
-      "model": "gpt-6.1-sol",
-      "effort": "low"
-    }
-  },
-  "topics": {
-    "EDA-0001": {
-      "domain": "D04",
-      "actors": {
-        "proposer": "ChatGPT-P04-PHYSICAL",
-        "challenger": "ChatGPT-C04-PHYSICAL",
-        "verifier": "ChatGPT-V04-PHYSICAL"
-      },
-      "seed_prefix": null,
-      "handover_prefixes": {
-        "proposer": [],
-        "verifier": []
-      }
-    },
-    "EDA-0002": {
-      "domain": "D05",
-      "actors": {
-        "proposer": "ChatGPT-P05-TIMING",
-        "challenger": "ChatGPT-C05-TIMING",
-        "verifier": "ChatGPT-V05-TIMING"
-      },
-      "seed_prefix": "runs/GPT-HANDOVER-0001/proposer-shared/candidates/EDA-0002/",
-      "handover_prefixes": {
-        "proposer": [
-          "runs/GPT-HANDOVER-0001/proposer-shared/"
-        ],
-        "verifier": [
-          "runs/GPT-HANDOVER-0001/verifier-shared/"
-        ]
-      }
-    }
-  },
-  "poll_seconds": 30,
-  "turn_timeout_seconds": 1800,
-  "failure_backoff_seconds": 1800,
-  "max_substantive_rounds": 4,
-  "max_topics_per_domain": null,
-  "publication": {
-    "enabled": true,
-    "auto_merge": true,
-    "require_human_final_reports": false
-  },
-  "execution_policy": "Research automation may read accessible external sources, write its own outputs, freeze and send. It may not inspect foreign private content, purchase resources, or exceed the existing experiment allocation.",
-  "backend": "codex_app_agents",
-  "stop_after_rounds": 4,
-  "max_parallel_domains": 2
+  "enabled": false,
+  "active_workflow": "config/research-workflow.json",
+  "historical_settings": "legacy/config/codex-research.json",
+  "reason": "AI proposer removed. Do not resume historical P/C/V loops."
 }

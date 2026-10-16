@@ -42,7 +42,7 @@ def documents(grades=None, binding=BINDING, proposer=P, challenger=C):
               'recommendation':'revise','axes':copy.deepcopy(axes)}
     verdict = {'decision':'revise','reviewed_proposer_release':proposer,
                'adjudicated_challenger_releases':[challenger],
-               'objections':objections,'source_checks':[{'id':'TEST-S01','access_level':'full',
+               'objections':objections,'source_checks':[{'id':'TEST-S01','access_level':'full','verdict':'verified',
                    'url':'https://example.invalid/primary-fixture','locator':'Synthetic assumption 1'}],
                'elimination_review':{'policy_id':POLICY['policy_id'],'policy_sha256':binding['sha256'],
                    'reviewed_proposer_release':proposer,'reviewed_challenger_release':challenger,
@@ -118,6 +118,27 @@ class ScoreTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'inflate'):
             r.validated_point(BINDING,screen,verdict,P,C,V,'1'*64)
 
+    def test_blocking_claim_cannot_be_hidden_by_clear_scorecard(self):
+        screen,verdict=documents({'novelty':'major'})
+        row=next(x for x in verdict['elimination_review']['axes'] if x['axis']=='novelty')
+        row.update(grade='clear',references=[],checked_source_ids=[])
+        with self.assertRaisesRegex(ValueError,'blocker omitted'):
+            r.validated_point(BINDING,screen,verdict,P,C,V,'1'*64)
+        verdict['objections'][0]['verdict']='refuted'
+        self.assertEqual(r.validated_point(BINDING,screen,verdict,P,C,V,'1'*64)['score'],0)
+
+    def test_canonical_source_id_and_legacy_id_are_supported_without_ambiguity(self):
+        screen,verdict=documents({'mechanism':'fatal'})
+        source=verdict['source_checks'][0];source['source_id']=source.pop('id')
+        self.assertEqual(r.validated_point(BINDING,screen,verdict,P,C,V,'1'*64)['fatal_axes'],['mechanism'])
+        source['id']='conflicting-legacy-id'
+        with self.assertRaisesRegex(ValueError,'conflicting source identity'):
+            r.validated_point(BINDING,screen,verdict,P,C,V,'1'*64)
+        screen,verdict=documents()
+        verdict['source_checks']=[{'source_id':'TEST-S01','locator':'Synthetic scope',
+            'verdict':'verified','checked_at':'2026-10-16','entailment':'No retirement claim.'}]
+        self.assertEqual(r.validated_point(BINDING,screen,verdict,P,C,V,'1'*64)['score'],0)
+
     def test_stale_pair_policy_and_protocol_reviewer_are_rejected(self):
         for damage in ('proposer','challenger','policy','protocol','missing','key'):
             screen, verdict = documents({'mechanism':'major'})
@@ -161,7 +182,7 @@ class LoopRetirementTests(unittest.TestCase):
 
     def setUp(self):
         self.tmp=tempfile.TemporaryDirectory();self.root=Path(self.tmp.name).resolve()
-        self.home=self.root/'runtime';self.c=l.read(ROOT/'config/codex-research.json')
+        self.home=self.root/'runtime';self.c=l.read(ROOT/'legacy/config/codex-research.json')
         self.c['topics']={'EDA-0002':dict(self.c['topics']['EDA-0002'],seed_prefix=None,handover_prefixes={})}
         self.c.update(require_compliance=True,max_substantive_rounds=10)
         self.c.pop('stop_after_rounds',None);self.c['publication']={'enabled':False,'auto_merge':False}

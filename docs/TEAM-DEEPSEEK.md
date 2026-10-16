@@ -1,3 +1,5 @@
+> Historical operational reference. Current human-led workflow: [WORKFLOW.md](WORKFLOW.md). AI proposer launch and automatic AI succession instructions below are inactive.
+
 # DeepSeek research team
 
 Platform allocation for the DeepSeek host. It covers the same nine `D01`-`D09` territories defined in `domains/` as the Codex allocation in `docs/TEAM.md`, with an independent proposer and challenger per territory and three shared verifiers: 21 tasks.

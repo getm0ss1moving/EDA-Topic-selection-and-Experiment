@@ -84,8 +84,14 @@ def validated_point(binding, screen, verdict, proposer_release, challenger_relea
             require(isinstance(ident, str) and ident and ident not in judged, 'duplicate/missing adjudicated claim ID')
             judged[ident] = claim
     checked = verdict.get('source_checks', [])
-    require(isinstance(checked, list) and all(isinstance(x, dict) and isinstance(x.get('id'), str) and x['id'] for x in checked), 'invalid source checks')
-    sources = {x['id']: x for x in checked}
+    require(isinstance(checked, list) and all(isinstance(x, dict) for x in checked), 'invalid source checks')
+    sources = {}
+    for source in checked:
+        ident = source.get('source_id', source.get('id'))
+        require(isinstance(ident, str) and ident, 'invalid source checks')
+        require('source_id' not in source or 'id' not in source or source['source_id'] == source['id'], 'conflicting source identity aliases')
+        require(ident not in sources, 'duplicate checked source IDs')
+        sources[ident] = source
     require(len(sources) == len(checked), 'duplicate checked source IDs')
     consumed = set()
     active, fatal, total = [], [], 0
@@ -104,6 +110,7 @@ def validated_point(binding, screen, verdict, proposer_release, challenger_relea
         require(not consumed.intersection(refs), 'one objection/claim cannot inflate multiple axes')
         consumed.update(refs)
         require(all(judged[x].get('blocking') is True for x in refs), 'nonblocking issue cannot drive retirement')
+        require(all(judged[x].get('resolution') != 'resolved' for x in refs), 'resolved issue cannot drive retirement')
         allowed = {'valid', 'partially_valid', 'unresolved'} if grade == 'unresolved' else {'valid', 'partially_valid'}
         if grade == 'fatal':
             allowed = {'valid'}
@@ -123,12 +130,17 @@ def validated_point(binding, screen, verdict, proposer_release, challenger_relea
         if grade in {'major', 'fatal'}:
             require(source_ids, 'confirmed failure needs reopened primary evidence')
             require(all(sources[x].get('access_level', sources[x].get('access')) == 'full'
+                        and sources[x].get('verdict') == 'verified'
                         and sources[x].get('locator') and sources[x].get('url') for x in source_ids),
                     'confirmed failure needs full-access source locators')
         active.append(axis)
         if grade == 'fatal':
             fatal.append(axis)
         total += policy['weights'][axis] * GRADES[grade]
+    required = {ident for ident, claim in judged.items() if claim.get('blocking') is True
+                and claim.get('resolution') != 'resolved'
+                and claim.get('verdict') in {'valid', 'partially_valid', 'unresolved'}}
+    require(required <= consumed, 'decision-critical blocker omitted from risk axes')
     return {'policy_id': policy['policy_id'], 'policy_sha256': binding['sha256'],
             'proposer_release': proposer_release, 'challenger_release': challenger_release,
             'verifier_release': verifier_release, 'proposal_digest': proposal_digest,

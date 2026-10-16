@@ -14,7 +14,7 @@ l=importlib.util.module_from_spec(spec);spec.loader.exec_module(l)
 class LoopTests(unittest.TestCase):
     def setUp(self):
         self.tmp=tempfile.TemporaryDirectory();self.home=Path(self.tmp.name).resolve()/'runtime'
-        self.c=l.read(ROOT/'config/codex-research.json')
+        self.c=l.read(ROOT/'legacy/config/codex-research.json')
         self.c['retirement_policy']=False  # Explicit legacy-path regression fixture.
         self.c['topics']={'EDA-0002':dict(self.c['topics']['EDA-0002'],seed_prefix=None)}
         self.c['publication']={'enabled':False,'auto_merge':False}
@@ -268,7 +268,7 @@ class LoopTests(unittest.TestCase):
             l.execute({'backend':'codex_app_agents'},{})
     def test_two_domain_jobs_can_be_dispatched_without_shared_workspaces(self):
         state=l.read(self.home/'state.json')
-        entry=l.read(ROOT/'config/codex-research.json')['topics']['EDA-0001']
+        entry=l.read(ROOT/'legacy/config/codex-research.json')['topics']['EDA-0001']
         with patch.object(l,'frozen',side_effect=lambda ref,name:(ROOT/name).read_bytes()):
             l.add_topic(state,self.c,self.home,'EDA-0001',entry)
         l.save(self.home/'state.json',state);l.transport_config(state,self.home)
@@ -282,7 +282,8 @@ class ReleaseBindings(unittest.TestCase):
         self.assertEqual(l.project.validate_launch_release(ROOT),[])
         c=l.read(ROOT/'config/launch-release.json')
         self.assertEqual(c['active_platforms'],['codex'])
-        self.assertEqual(len(c['released_actors']),6)
+        self.assertEqual(c['ai_roles'],['searcher','challenger','verifier'])
+        self.assertNotIn('proposer',c['assignments'])
     def test_live_gate_can_be_opted_into_without_pr_code_execution(self):
         text=(ROOT/'.github/workflows/independent-verifier.yml').read_text()
         self.assertIn('REQUIRE_HUMAN_FINAL_REPORTS',text)

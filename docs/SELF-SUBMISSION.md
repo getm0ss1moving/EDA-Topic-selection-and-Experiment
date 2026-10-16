@@ -1,3 +1,5 @@
+> Historical operational reference. Current human-led workflow: [WORKFLOW.md](WORKFLOW.md). AI proposer launch and automatic AI succession instructions below are inactive.
+
 # Current ChatGPT-only execution
 
 The role self-freezes, then the native coordinator automatically transports its validated release. Use `docs/CODEX-AUTOMATION.md`; do not wait for a registry merge, human freeze or manual wake-up. The coordinator includes exact logical registrations in each round PR. The standalone legacy publish command below retains its original main-registry precondition.

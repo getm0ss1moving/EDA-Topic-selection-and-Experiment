@@ -1,3 +1,5 @@
+> Historical operational reference. Current human-led workflow: [WORKFLOW.md](WORKFLOW.md). AI proposer launch and automatic AI succession instructions below are inactive.
+
 # Codex research team
 
 This allocation creates nine EDA survey territories, each with one proposer and one challenger, plus three shared verifiers: 21 independent tasks in total. Names use the stable platform prefix `Codex`, role letter `P`/`C`/`V`, numeric identity and domain suffix. These are identities, not credentials. Other AI platforms must use their own platform prefixes and must not reuse these IDs.

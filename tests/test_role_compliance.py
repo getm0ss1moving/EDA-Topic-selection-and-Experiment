@@ -19,7 +19,7 @@ class AuditedLoopTests(unittest.TestCase):
         self.tmp = tempfile.TemporaryDirectory()
         self.root = Path(self.tmp.name).resolve()
         self.home = self.root / 'runtime'
-        self.c = l.read(ROOT / 'config/codex-research.json')
+        self.c = l.read(ROOT / 'legacy/config/codex-research.json')
         self.c['retirement_policy']=False  # Explicitly test pre-policy audit scenarios.
         self.c.update(backend='codex_app_agents', require_compliance=True,
                       batch_brief='docs/INNOVATION-BATCH-0003.md', stop_after_rounds=1)
@@ -362,7 +362,7 @@ class AuditedLoopTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'dispatch/collect'):l.tick(self.c,self.home)
 
     def test_continuation_exports_only_public_adjudicated_files_with_fresh_seats(self):
-        c=l.read(ROOT/'config/codex-compliance-research.json')
+        c=l.read(ROOT/'legacy/config/codex-compliance-research.json')
         c['topics']={'EDA-0007':c['topics']['EDA-0007']}
         home=self.root/'continued'
         with patch.object(l,'frozen',side_effect=lambda ref,name:(ROOT/name).read_bytes()):

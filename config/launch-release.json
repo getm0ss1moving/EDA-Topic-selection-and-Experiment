@@ -1,62 +1,23 @@
 {
-  "schema_version": 2,
-  "release_id": "CHATGPT-ONLY-0001",
-  "state": "ready_for_role_creation",
-  "scope_domains": [
-    "D04",
-    "D05"
-  ],
-  "topic_containers": {
-    "D04": "EDA-0001",
-    "D05": "EDA-0002"
-  },
+  "schema_version": 3,
+  "release_id": "HUMAN-LED-SEARCH-0001",
+  "state": "configured_not_running",
   "active_platforms": [
     "codex"
   ],
+  "human_author": "getm0ss1moving",
+  "ai_roles": [
+    "searcher",
+    "challenger",
+    "verifier"
+  ],
   "assignments": {
-    "EDA-0001": {
-      "domain": "D04",
-      "proposer": "ChatGPT-P04-PHYSICAL",
-      "challenger": "ChatGPT-C04-PHYSICAL",
-      "verifier": "ChatGPT-V04-PHYSICAL"
-    },
-    "EDA-0002": {
-      "domain": "D05",
-      "proposer": "ChatGPT-P05-TIMING",
-      "challenger": "ChatGPT-C05-TIMING",
-      "verifier": "ChatGPT-V05-TIMING"
-    }
+    "searcher": "ChatGPT-S-PHYSICAL",
+    "challenger": "ChatGPT-C-PHYSICAL",
+    "verifier": "ChatGPT-V-PHYSICAL"
   },
-  "released_actors": [
-    "ChatGPT-P04-PHYSICAL",
-    "ChatGPT-C04-PHYSICAL",
-    "ChatGPT-V04-PHYSICAL",
-    "ChatGPT-P05-TIMING",
-    "ChatGPT-C05-TIMING",
-    "ChatGPT-V05-TIMING"
-  ],
-  "first_wave": [
-    "ChatGPT-P04-PHYSICAL",
-    "ChatGPT-P05-TIMING"
-  ],
-  "max_concurrent_scientific_sessions": 2,
   "fresh_sessions_required": true,
   "old_sessions_are_inputs": false,
-  "communication": "Files only. Separate role workspaces and fresh ephemeral Codex executions; no inherited conversations, shared memory or foreign private outputs.",
   "experiment_authorization": false,
-  "platform_readiness": {
-    "codex": {
-      "state": "configuration_prepared_live_loop_not_tested",
-      "models_verified": false
-    }
-  },
-  "supersedes_release": "PHYSICAL-ROLE-CREATION-0001",
-  "owner_authority": "Owner instructions 2026-10-15: adapt only ChatGPT proposer/challenger/verifier; autonomous complete research circuit, abandon invalid topics, select useful ones, publish each round; remove incidental manual gates.",
-  "batch_policy": {
-    "stop_after_completed_rounds_per_domain": 4,
-    "backend": "codex_app_agents",
-    "proposer_model": "gpt-6.1-sol high",
-    "verifier_model": "gpt-6.1-sol low",
-    "owner_summary_language": "Chinese"
-  }
+  "workflow": "config/research-workflow.json"
 }

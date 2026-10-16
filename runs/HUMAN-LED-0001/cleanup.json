@@ -1,0 +1,79 @@
+{
+  "schema": 1,
+  "recorded_at_utc": "2026-10-16T09:20:12.943192+00:00",
+  "kind": "coordinator_governance_and_literature_screening_not_independent_scientific_verification",
+  "input_commit": "c78d013a60de9cf575da266fe52b1552a2ffe5da",
+  "owner_changes": [
+    "Replace AI proposer with literature searcher",
+    "Human authors research ideas and revisions",
+    "Remove excess active proposer instructions and launch settings"
+  ],
+  "active_ai_roles": [
+    "searcher",
+    "challenger",
+    "verifier"
+  ],
+  "removed_active_behavior": [
+    "AI idea generation",
+    "AI proposer launch",
+    "automatic AI successor topic generation",
+    "repeated cross-platform wake-up instructions in active harnesses"
+  ],
+  "retained": "Historical source configurations and regression inputs in legacy/; immutable releases and old topic/report evidence remain. Legacy proposer machine fields are provenance/author-slot compatibility.",
+  "literature": {
+    "papers": 10,
+    "target": 100,
+    "reading_depth": "abstract_screened",
+    "contests_and_projects": 4,
+    "full_method_reviews": 0,
+    "compiled_by": "current coordinator session; no separate searcher scientific independence claimed",
+    "search_log": "literature/search-log.md"
+  },
+  "validation": {
+    "unittest_command": "python3 -m unittest discover -s tests -v",
+    "tests_run": 168,
+    "tests_passed": 168,
+    "log_sha256": "7c971876c4ae8490e0d086a64a0be99f15739011034b91c0ff4bae51e7e4684b",
+    "project_validate": "passed",
+    "literature_validate": "passed",
+    "diff_check": "passed",
+    "new_human_led_and_catalog_tests": 8,
+    "retirement_tests": 21,
+    "review_fix": "Canonical source_id accepted; legacy id retained, conflicting aliases refused; live blockers cannot hide in clear scorecards; major/fatal source checks need full access and locator."
+  },
+  "files_sha256": {
+    "AGENTS.md": "6edd59374464da45bc8519961e4f5e7d3628c0ff9091a2fa0adc6c6f2773d58f",
+    "README.md": "5245146027fcea180d4f763396e77c0d84df3ad5d161577bf8180a981c199ae3",
+    "config/research-workflow.json": "7df626c20618892075fd0131cdef2afc29a6983776b3df73a9f6f70442d0bbf3",
+    "config/launch-release.json": "c934860562b22d48a2d350beb717374148e84d4e92f2f34c8a0edfa18e871e1e",
+    "config/codex-research.json": "034cdd5272fb420ac18806b1b13ab20bf9bc9ade43df2769c10445cba2e6ccd8",
+    "docs/WORKFLOW.md": "e039159790dafe9358ce265b4b4f27019995f36401802dadc9b2a776eab8577c",
+    "docs/ISOLATION.md": "77297c0d969278390780094bff62fa52bbc5de1d72590104b11e798693ee3e3c",
+    "harness/SEARCHER.md": "1959af40ac087c0333e9d783aa2a072bd7d89846e399279eb26846c0266042b1",
+    "harness/CHALLENGER.md": "14e2296e888f676f3d51d47912c0c658b9c251797dfa612e99e4777ff63c3009",
+    "harness/VERIFIER.md": "3310833a7d82c78267d28b99b05c6fb42bd39e458d2337f7879a4cc5a879c724",
+    "scripts/literature.py": "95406dea092357f4a8b87b39c88299d624f6d90d0b7b27c0e264f261efb1c5ea",
+    "scripts/project.py": "44b4dc79932db618ca27528f7d8807f86a350cede5f13770064aa68eec64ea3e",
+    "scripts/codex_loop.py": "6ebbf48da6302623527bcbb0e374287a7abc3d0cb0b9fde2a266980c0cdea553",
+    "scripts/topic_retirement.py": "bd072536d5497a2a5221b9b02d3aaf11cec3cda53b7b78496cf266b1899cf0c5",
+    "literature/catalog.json": "7d1440492be8e64f60905860a40a6d2d980678a924c7d7e8bd986646d09f7f44",
+    "literature/batches/001.zh-CN.md": "3a7d1f13a1d303f6d3917e301e24c790a8ea59826d895769b84732566418c688",
+    "literature/search-log.md": "8c334f78f76143b04ddffb6931ea97e4772e2b3ad0d0f7568740909b61732c02",
+    "tests/test_human_led.py": "da4515456a6e144b1c970f903fa8408254a82964b0f668ab6e32117a7dc5c551"
+  },
+  "historical_frozen_releases_modified": false,
+  "completed_batch_state_sha256": "0547e5e6e1e456fb2b62bea574c56ea5ecfb1a0f7b43a93f53e59d70c756da4d",
+  "new_research_role_jobs_started": 0,
+  "new_eda_experiments": 0,
+  "service_status": "No live new dispatcher or unattended loop claimed. Historical P/C/V CLI execution blocked even with config override. Await human idea for review.",
+  "limitations": [
+    "Schema/count checks do not prove paper quality, novelty or independence.",
+    "First batch has no dedicated LVS/extraction/EM paper; not an exhaustive frontier survey.",
+    "No synthetic test claims real backend identity or OS-enforced role isolation."
+  ],
+  "excluded_local_changes": [
+    "reports/final/GPT-COMPLIANCE-0004.zh-CN.md",
+    "node_modules/",
+    "yarn.lock"
+  ]
+}

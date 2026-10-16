@@ -1,5 +1,10 @@
 # Research charter
 
+Current authorship: the human owner proposes and revises ideas; AI roles are searcher,
+challenger and verifier. References below to proposer mean the human author slot,
+including legacy machine-field names. No AI proposer or automatic successor is active.
+WORKFLOW.md supersedes older launch instructions.
+
 ## Objective
 
 Identify a concrete EDA bottleneck; map the closest prior solutions; locate a demonstrable limitation; propose a causal mechanism; define a falsifiable hypothesis and a feasible experiment. Cover Agentic EDA, AI for EDA, and traditional algorithmic EDA. High-quality combinations of agents, learned models and traditional/exact methods are eligible alongside structural innovations. Explore both fragmented-to-unified prediction and unified-to-specialized/hybrid analysis without assuming either architecture wins. Apply [the innovation strategy](INNOVATION-STRATEGY.md): prefer a useful, evidenced contribution over method labels.
@@ -36,8 +41,7 @@ not signed joint abandonment; preserve disagreement and resurrection evidence.
 Persistent unknowns may stop spending without being called refutations. An
 assertion, superficial similarity, inaccessible paper or missing budget alone
 cannot establish a fatal finding. The scientific verifier adjudicates it.
-Historical frozen policies and signed abandonment remain unchanged. Successors
-remain subject to protocol audits, domain budgets and finite round limits.
+Historical frozen policies and signed abandonment remain unchanged. After retirement, wait for a new human-authored idea; never auto-generate a successor.
 
 ## Experiment task-list consensus
 
@@ -47,7 +51,7 @@ Failure of an unsupported premise means revise or collect evidence, not automati
 
 ## Decision rights
 
-The human owns priorities, resources and exceptions. The proposer owns a hypothesis. The challenger owns independently researched objections. The verifier owns source checking and whether each objection is valid, overstated, unsupported, or unresolved. None may confirm their own output as independent evidence. A contested verifier conclusion is rechecked from written counter-evidence; if unresolved, park the topic and continue with a successor. A second verifier or human adjudicator is an optional escalation.
+The human owns priorities, resources and exceptions. The proposer owns a hypothesis. The challenger owns independently researched objections. The verifier owns source checking and whether each objection is valid, overstated, unsupported, or unresolved. None may confirm their own output as independent evidence. A contested verifier conclusion is rechecked from written counter-evidence; if unresolved, park the topic and wait for the human to submit another idea. A second verifier or human adjudicator is an optional escalation.
 
 ## Research incentives
 
