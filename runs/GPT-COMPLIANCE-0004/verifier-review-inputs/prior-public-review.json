@@ -1,0 +1,45 @@
+{
+  "recorded_at_utc": "2026-10-15T16:12:59.633546+00:00",
+  "scope": "Post-round public-review allegations; not independent scientific verdicts or established misconduct. Original immutable role releases and audit rulings remain unchanged. No raw allegation delivered to a proposer and no fifth cycle authorized.",
+  "disposition": "Both successor topics already park; no acceptance or experiment follows. Preserve these two source/analytical traceability questions for a separately authorized verifier.",
+  "followups": [
+    {
+      "pr": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/67",
+      "thread_id": "PRRT_kwDOVElOAM6s3Es6",
+      "status": "unadjudicated_scientific_followup",
+      "isResolved": false,
+      "comments": [
+        {
+          "id": "PRRC_kwDOVElOAM7_bhZI",
+          "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/67#discussion_r4285404744",
+          "body": "**<sub><sub>![P2 Badge](https://img.shields.io/badge/P2-yellow?style=flat)</sub></sub>  Correct the raw-code line locator**\n\nThe [pinned raw file](https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/3549d60529517dc82deb7f0ff769345e9a424911/src/rsz/src/policy/MeasuredVtSwapPolicy.cc) has only 288 lines, and its candidate-estimation loop is at one-based lines 254\u2013263; the published locator extends through nonexistent line 301 and labels lines 273\u2013282 as estimation even though they contain post-commit handling and `finishRun`. Since the proposal uses `N10b273-301` to support CLM-1001, readers cannot verify that observation from the stated location; update this record and the claim ledger to the actual lines.\n\nAGENTS.md reference: [AGENTS.md:L11-L11](https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/blob/f78dd202d2d9a122f3686a7b71f3440720847a5d/AGENTS.md#L11-L11)\n\nUseful? React with \ud83d\udc4d\u00a0/ \ud83d\udc4e.",
+          "path": "runs/SUB-64d765b46a89c6da9872a1ec9bacf4f138c7bd5ceec549baa6c89bf8ccf0667c/sources.json",
+          "line": 158,
+          "author": {
+            "login": "chatgpt-codex-connector"
+          },
+          "body_sha256": "417d20e78ffed9201bba9a69acbc8d48a2ea0d6421ec6559422a4557d63869c3"
+        }
+      ]
+    },
+    {
+      "pr": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/67",
+      "thread_id": "PRRT_kwDOVElOAM6s3EtI",
+      "status": "unadjudicated_scientific_followup",
+      "isResolved": false,
+      "comments": [
+        {
+          "id": "PRRC_kwDOVElOAM7_bhZe",
+          "url": "https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/pull/67#discussion_r4285404766",
+          "body": "**<sub><sub>![P2 Badge](https://img.shields.io/badge/P2-yellow?style=flat)</sub></sub>  Publish the verifier's analytical-check evidence**\n\nThe verifier relies on `runs/analytical-check.json` for the stated 4,096-case result, but that file is absent from this commit and from the verifier release manifest, which contains only the compliance, verification, and workflow files; unlike the proposer and challenger checks, no exact script or stdout is embedded elsewhere. Consequently the independent result supporting CLM-1005 cannot be traced or reproduced from the frozen release, so include the script/output with hashes or remove the unsupported check claim.\n\nAGENTS.md reference: [AGENTS.md:L11-L11](https://github.com/getm0ss1moving/EDA-Topic-selection-and-Experiment/blob/f78dd202d2d9a122f3686a7b71f3440720847a5d/AGENTS.md#L11-L11)\n\nUseful? React with \ud83d\udc4d\u00a0/ \ud83d\udc4e.",
+          "path": "runs/SUB-af311c9ae6b091db1fdb94a8bd262fe027a34d25a761c2e072c59c2d0497d01d/verification.json",
+          "line": 169,
+          "author": {
+            "login": "chatgpt-codex-connector"
+          },
+          "body_sha256": "e041661955e8fb8b4bcba0f1a89864c1729190126678bcbf450f522ee23617b2"
+        }
+      ]
+    }
+  ]
+}
