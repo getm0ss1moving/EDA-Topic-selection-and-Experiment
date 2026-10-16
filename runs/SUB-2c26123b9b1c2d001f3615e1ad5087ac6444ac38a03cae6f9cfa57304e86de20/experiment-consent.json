@@ -1,0 +1,7 @@
+{
+  "session_id": "f41e4393-8228-42c4-9172-3fdec1a5d44b",
+  "decision": "revision_requested",
+  "signed_revision": null,
+  "tasklist_sha256": "96f3b9c3896d97b1b86aefd70bbea77115beaaea4a1292b73ae2df98067c28d7",
+  "rationale": "Initial successor has no earlier frozen same-target scientific revision to agree to; novelty residual, oracle, owners, actual resources, threshold and exact executable dependencies are unresolved. This is not consent to execute or another research cycle."
+}

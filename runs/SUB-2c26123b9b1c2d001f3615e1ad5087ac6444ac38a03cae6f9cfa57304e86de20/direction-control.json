@@ -1,0 +1,75 @@
+{
+  "state": "park",
+  "anchor": {
+    "problem": "Reduce expensive local timing refresh in a fixed LR discrete cell-choice query while returning its reference-equivalent feasible winner and exact winning cost.",
+    "engineering_user": "Timing-optimizer developer serving timing-closure engineers.",
+    "downstream_need": "Same declared local decisions and closure semantics at lower complete cost; final timing/electrical and leakage outcomes remain checked.",
+    "causal_mechanism": "Candidate-relative shared-boundary difference enclosures direct safe dominance pruning and exact refinement/fallback; exploit correlation without treating predicted values as certificates.",
+    "mechanism_invariants": [
+      "Same candidate set, sweep order, LR weights, tie order, guards and acceptance semantics as the pinned reference.",
+      "Complete current dependencies and epoch/provenance; no free boundary-state construction or ignored upstream-load effect.",
+      "Return exact winner score and guards; unknown or unsound operations fall back.",
+      "Compare equally informed affine/branch-bound, cached exact, parallel and simple learned/exact compositions."
+    ],
+    "forbidden_pivots": [
+      "Return approximate choices under an exact-choice claim.",
+      "Replace scalar reader with complete counterfactual vectors without new evidence/topic.",
+      "Claim generic affine cancellation, agents or prediction-plus-checking as novelty.",
+      "Drop guard, fallback, invalidation or downstream costs to manufacture benefit."
+    ]
+  },
+  "penalties": {
+    "combination_drift": {
+      "score": 0,
+      "rationale": "Initial successor anchor; conventional-component reuse and the adverse affine transplant result are explicit, not a hidden rescue.",
+      "evidence_refs": [
+        "S03",
+        "S04"
+      ]
+    },
+    "demand_drift": {
+      "score": 0,
+      "rationale": "New scalar-choice demand is explicitly assigned a new ID; no EDA-0010 anchor is rewritten.",
+      "evidence_refs": [
+        "S01",
+        "S02a",
+        "S02b",
+        "S02c"
+      ]
+    },
+    "total": 0
+  },
+  "revision_assessment": {
+    "preserves_problem": true,
+    "preserves_engineering_need": true,
+    "preserves_causal_mechanism": true,
+    "changes": [],
+    "reason": "Initial EDA-0011 anchor. Zero is not a merit or acceptance finding."
+  },
+  "abandonment": {
+    "decision_id": null,
+    "grounds": [],
+    "rationale": "No independent same-target abandonment agreement; novelty and practical headroom are unresolved, not universally exhausted.",
+    "evidence_refs": [],
+    "consents": {
+      "proposer": {
+        "session_id": "f41e4393-8228-42c4-9172-3fdec1a5d44b",
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      },
+      "challenger": {
+        "session_id": null,
+        "decision": "pending",
+        "signed_revision": null,
+        "signed_dossier_digest": null
+      }
+    },
+    "successor_topic_id": null,
+    "resurrection_conditions": [
+      "Useful residual beyond fair affine/branch-bound transplant.",
+      "Sound and cheap full-dependency boundary/oracle adapter.",
+      "Measured legitimate workload leverage, resources and exact-target independent consent before any pilot."
+    ]
+  }
+}

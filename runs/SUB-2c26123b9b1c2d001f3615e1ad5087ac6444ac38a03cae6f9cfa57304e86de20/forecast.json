@@ -1,0 +1,17 @@
+{
+  "kind": "forecast_not_measurement",
+  "metric": "total wall time to reference-equivalent scalar cell choices and downstream closure",
+  "unit": "seconds",
+  "baseline_source": "prospective T02 pinned full-refresh local LR adapter; not executed",
+  "direction": "lower",
+  "pessimistic": null,
+  "base": null,
+  "optimistic": null,
+  "confidence": null,
+  "assumptions": [
+    "Sound affordable current-state enclosures and exact fallback exist.",
+    "A useful residual survives affine/branch-bound transplantation.",
+    "Representative lawful data, actual allocation, threshold and independent matching task-list consents are established."
+  ],
+  "calibration_plan": "T04 estimates baseline cost/variance under separate authorization; T05 preregisters threshold and interval plan before candidate outcomes. A01 counts are finite-model observations, not this forecast."
+}

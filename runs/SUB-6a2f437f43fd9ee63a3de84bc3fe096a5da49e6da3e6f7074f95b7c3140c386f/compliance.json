@@ -1,0 +1,117 @@
+{
+  "schema": 1,
+  "role": "verifier",
+  "actor_id": "ChatGPT-V05-TIMING-B04-EDA-0011",
+  "session_id": "593e0666-c4a5-4906-a13d-58f14e5ff4ae",
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "packet_sha256": "ccca305a9be466725ddf55ab18e870246640cc63a02e936149f84073ff3feab9",
+  "job_id": "7e04cdb2-bbe1-40de-9ab8-01087aef8554",
+  "read_releases": [
+    "SUB-2c26123b9b1c2d001f3615e1ad5087ac6444ac38a03cae6f9cfa57304e86de20",
+    "SUB-d7573b7cfdc55db5c5f659765501be34d4e33ea88cac5eabe8a7d118fa61d1be",
+    "SUB-e59222b261fdda904cd66c5a892de454e5dbcbabf4b3fa142896b356fd1ce075",
+    "SUB-77d7bb685bc812bcb6e3e2a5a357478f7f2a743ad0dcba6a249962e0b163af95"
+  ],
+  "activity": {
+    "checkout_access": "none",
+    "foreign_private_reads": [],
+    "agent_messages_sent": 0,
+    "subagents_spawned": 0,
+    "new_eda_runs": 0,
+    "training_runs": 0,
+    "new_paid_api_calls": 0
+  },
+  "rules": {
+    "inputs": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md"
+      ],
+      "limits": "Self-authored scoped ledger; not a complete tool trace or proof of unseen actions. No consent/measurement/resource or independent historical approval inferred."
+    },
+    "isolation": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md"
+      ],
+      "limits": "Self-authored scoped ledger; not a complete tool trace or proof of unseen actions. No consent/measurement/resource or independent historical approval inferred."
+    },
+    "writes": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md"
+      ],
+      "limits": "Self-authored scoped ledger; not a complete tool trace or proof of unseen actions. No consent/measurement/resource or independent historical approval inferred."
+    },
+    "evidence": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md"
+      ],
+      "limits": "Self-authored scoped ledger; not a complete tool trace or proof of unseen actions. No consent/measurement/resource or independent historical approval inferred."
+    },
+    "claims": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md"
+      ],
+      "limits": "Self-authored scoped ledger; not a complete tool trace or proof of unseen actions. No consent/measurement/resource or independent historical approval inferred."
+    },
+    "consent": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md"
+      ],
+      "limits": "Self-authored scoped ledger; not a complete tool trace or proof of unseen actions. No consent/measurement/resource or independent historical approval inferred."
+    },
+    "resources": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md"
+      ],
+      "limits": "Self-authored scoped ledger; not a complete tool trace or proof of unseen actions. No consent/measurement/resource or independent historical approval inferred."
+    },
+    "direction": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md"
+      ],
+      "limits": "Self-authored scoped ledger; not a complete tool trace or proof of unseen actions. No consent/measurement/resource or independent historical approval inferred."
+    },
+    "publication": {
+      "status": "no_violation_disclosed",
+      "evidence": [
+        "JOB.json",
+        "verification.json",
+        "verification.md"
+      ],
+      "limits": "Self-authored scoped ledger; not a complete tool trace or proof of unseen actions. No consent/measurement/resource or independent historical approval inferred."
+    }
+  },
+  "operations": [
+    "Read exact JOB.json/prompt first, then assigned policy docs; mistaken policy/harnesses/verifier.md path failed, corrected via policy-only inventory to policy/harness/VERIFIER.md. No other role harness read.",
+    "Listed only authorized shared release files; read current P/C materials and scoped predecessor P direction and V outcome. Historical C directory filenames enumerated but contents not read; not listed as read release.",
+    "External original retrieval and targeted source reads V01-V16; two search queries recorded in verification.json. Read raw pinned OpenROAD via urllib; no code executed.",
+    "Mechanical current P/C and policy file-hash checks: no mismatch; PACKET SHA matched JOB; digest and task SHA recomputed.",
+    "Wrote own release/verification.md, verification.json, workflow.json, compliance.json using own temporary generation script /tmp/write_v05_0011_release.py; no scientific numerical fixture executed.",
+    "Self-freeze and trusted verify requested using assigned policy scripts; result.json written after successful freeze. Full-repository validation deferred to coordinator per prompt."
+  ],
+  "incidents": [],
+  "observability": "Self-authored public activity ledger, not a complete tool trace or evidence of absent undisclosed actions."
+}

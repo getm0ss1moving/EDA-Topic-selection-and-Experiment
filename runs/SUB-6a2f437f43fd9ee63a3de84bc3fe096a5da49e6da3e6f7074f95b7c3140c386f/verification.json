@@ -1,0 +1,423 @@
+{
+  "decision": "park",
+  "verifier_session": "593e0666-c4a5-4906-a13d-58f14e5ff4ae",
+  "actor_id": "ChatGPT-V05-TIMING-B04-EDA-0011",
+  "job_id": "7e04cdb2-bbe1-40de-9ab8-01087aef8554",
+  "input_commit": "d0eedf3130de673ea92e4be202a32d463a63f301",
+  "packet_sha256": "ccca305a9be466725ddf55ab18e870246640cc63a02e936149f84073ff3feab9",
+  "reviewed_proposer_release": "SUB-2c26123b9b1c2d001f3615e1ad5087ac6444ac38a03cae6f9cfa57304e86de20",
+  "adjudicated_challenger_releases": [
+    "SUB-d7573b7cfdc55db5c5f659765501be34d4e33ea88cac5eabe8a7d118fa61d1be"
+  ],
+  "dossier_digest": "eaf6ab923e89f6d7e5ab3083b7d6f8c232b0b0fabef35eb5c40ca4c00d042485",
+  "gates": {
+    "novelty": false,
+    "mechanism": false,
+    "utility": false,
+    "contest_originality": false,
+    "headroom": false,
+    "feasibility": false,
+    "direction_integrity": true,
+    "experiment_consensus": false
+  },
+  "direction_penalty_checked": true,
+  "experiment_consensus_checked": true,
+  "abandonment_process_checked": true,
+  "source_checks": [
+    {
+      "id": "V01",
+      "title": "Task-Based Parallel Programming for Gate Sizing",
+      "url": "https://gdimitrak.github.io/papers/taskflow-tcad22.pdf",
+      "publication_date": "2022 online / 2023 journal",
+      "source_type": "author paper",
+      "access_level": "full",
+      "locator": "V-A Algorithm5 PDF pp5-6, rendered558-613; VII-C PDF p11 rendered1257-1319",
+      "supported_claim_ids": [
+        "CLM-1401",
+        "OBJ-1403"
+      ],
+      "reason": "Selective local updates and stale-cost quality tradeoff support workflow need; no target-adapter cost fraction or reproduced gain.",
+      "version": "DOI10.1109/TCAD.2022.3197490",
+      "retrieved_utc": "2026-10-16",
+      "limitations": "Selected passages only; no downloaded code execution, EDA run or performance replication. Full access does not mean every page/line audited."
+    },
+    {
+      "id": "V02",
+      "title": "OpenROAD LRSubproblem.cc",
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/169af073e48dade2111547842c2749424dc4b4c9/src/rsz/src/LRSubproblem.cc",
+      "publication_date": "unknown",
+      "source_type": "primary source code",
+      "access_level": "full",
+      "locator": "Raw one-based423-469 evaluateCellCost;563-605 evaluateSnapshot",
+      "supported_claim_ids": [
+        "CLM-1401",
+        "OBJ-1402",
+        "OBJ-1403"
+      ],
+      "reason": "Snapshot output loads and candidate-dependent upstream cap shift, feasibility filters and scalar best-cell return are visible. Not full-neighborhood refresh. SHA256 cefdd8de81a05335e1d669c44c89908a2287a27bf235aad87c7b8fea596f7d3e.",
+      "version": "169af073e48dade2111547842c2749424dc4b4c9",
+      "retrieved_utc": "2026-10-16",
+      "limitations": "Selected passages only; no downloaded code execution, EDA run or performance replication. Full access does not mean every page/line audited."
+    },
+    {
+      "id": "V03",
+      "title": "OpenROAD GlobalSizingPolicy.cc",
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD/169af073e48dade2111547842c2749424dc4b4c9/src/rsz/src/policy/GlobalSizingPolicy.cc",
+      "publication_date": "unknown",
+      "source_type": "primary source code",
+      "access_level": "full",
+      "locator": "Raw706-759 applyDecisions",
+      "supported_claim_ids": [
+        "CLM-1401",
+        "OBJ-1403"
+      ],
+      "reason": "Serial vector-order commit and cost hysteresis consumer confirmed. SHA256 972210edf726ee8edc966dbef75e6513d313f07049e1caa0f6588f1893fd297a. No build/run.",
+      "version": "169af073e48dade2111547842c2749424dc4b4c9",
+      "retrieved_utc": "2026-10-16",
+      "limitations": "Selected passages only; no downloaded code execution, EDA run or performance replication. Full access does not mean every page/line audited."
+    },
+    {
+      "id": "V04",
+      "title": "Statistical Timing Based Optimization using Gate Sizing",
+      "url": "https://arxiv.org/pdf/0710.4697",
+      "publication_date": "2005 DATE; 2007 arXiv",
+      "source_type": "primary paper",
+      "access_level": "full",
+      "locator": "Sections2/2.1 pp2;3.2 pp3-4;3.3 p4 rendered455-496",
+      "supported_claim_ids": [
+        "CLM-1402",
+        "CLM-1404",
+        "OBJ-1401"
+      ],
+      "reason": "Partial perturbation propagation with incumbent sensitivity pruning is prior; statistical percentile and CDF bound assumptions differ from deterministic NLDM local-choice contract. No gain replicated.",
+      "version": "arXiv0710.4697v1",
+      "retrieved_utc": "2026-10-16",
+      "limitations": "Selected passages only; no downloaded code execution, EDA run or performance replication. Full access does not mean every page/line audited."
+    },
+    {
+      "id": "V05",
+      "title": "Affine Arithmetic Project",
+      "url": "https://ic.unicamp.br/~stolfi/EXPORT/projects/affine-arith/Welcome.html",
+      "publication_date": "unknown",
+      "source_type": "author project",
+      "access_level": "full",
+      "locator": "Project description rendered13-26",
+      "supported_claim_ids": [
+        "CLM-1402",
+        "CLM-1403",
+        "CLM-1404",
+        "OBJ-1401"
+      ],
+      "reason": "Shared error symbols, cancellation, nonlinear remainder and branch-bound cost tradeoff are conventional. No timing-specific complete equivalence follows.",
+      "version": "current page",
+      "retrieved_utc": "2026-10-16",
+      "limitations": "Selected passages only; no downloaded code execution, EDA run or performance replication. Full access does not mean every page/line audited."
+    },
+    {
+      "id": "V06",
+      "title": "Toward Efficient Static Analysis of Finite-Precision Effects in DSP Applications via Affine Arithmetic Modeling",
+      "url": "https://users.ece.cmu.edu/~rutenbar/pdf/rutenbar-intervaldac03.pdf",
+      "publication_date": "2003",
+      "source_type": "primary paper",
+      "access_level": "full",
+      "locator": "Section2.2 PDF pp2-3 rendered139-181",
+      "supported_claim_ids": [
+        "OBJ-1401",
+        "OBJ-1402"
+      ],
+      "reason": "Affine correlations and new nonlinear error symbols confirmed; DSP context, not an exact STA implementation. Later probabilistic analysis not imported.",
+      "version": "DAC2003",
+      "retrieved_utc": "2026-10-16",
+      "limitations": "Selected passages only; no downloaded code execution, EDA run or performance replication. Full access does not mean every page/line audited."
+    },
+    {
+      "id": "V07",
+      "title": "Post-Placement Buffering and Sizing Contest",
+      "url": "https://vlsicad.ucsd.edu/Publications/Conferences/421/c421.pdf",
+      "publication_date": "2026",
+      "source_type": "official organizer paper",
+      "access_level": "full",
+      "locator": "Sections2.3/2.4 PDF p2 rendered170-194",
+      "supported_claim_ids": [
+        "OBJ-1403",
+        "CLM-1404"
+      ],
+      "reason": "Single-corner setup context and final legality/equivalence/route/extraction QoR workflow confirmed. Not evidence of local full-refresh cost leverage.",
+      "version": "DOI10.1145/3764386.3779616",
+      "retrieved_utc": "2026-10-16",
+      "limitations": "Selected passages only; no downloaded code execution, EDA run or performance replication. Full access does not mean every page/line audited."
+    },
+    {
+      "id": "V08",
+      "title": "ISPD27 evaluator guide",
+      "url": "https://raw.githubusercontent.com/ABKGroup/ISPD27-Contest/faef83cacf70fa7923be07816d804ca9c1cef68e/evaluator/README.md",
+      "publication_date": "unknown",
+      "source_type": "official contest guide",
+      "access_level": "full",
+      "locator": "Rendered0-7 and24-67",
+      "supported_claim_ids": [
+        "CLM-1404"
+      ],
+      "reason": "MCMM setup/hold and provisional weights; beyond this single-scene scope. No evaluator/container executed.",
+      "version": "faef83cacf70fa7923be07816d804ca9c1cef68e",
+      "retrieved_utc": "2026-10-16",
+      "limitations": "Selected passages only; no downloaded code execution, EDA run or performance replication. Full access does not mean every page/line audited."
+    },
+    {
+      "id": "V09",
+      "title": "Learning-driven Physically-aware Large-scale Circuit Gate Sizing",
+      "url": "https://arxiv.org/html/2403.08193v1",
+      "publication_date": "2024-03-13",
+      "source_type": "author preprint",
+      "access_level": "full",
+      "locator": "SectionsII-C/III/IV-A rendered112-137",
+      "supported_claim_ids": [
+        "CLM-1404"
+      ],
+      "reason": "Joint timing/physical features and gradient sizing are prior; does not establish exact certificates or this method cost.",
+      "version": "v1",
+      "retrieved_utc": "2026-10-16",
+      "limitations": "Selected passages only; no downloaded code execution, EDA run or performance replication. Full access does not mean every page/line audited."
+    },
+    {
+      "id": "V10",
+      "title": "IR-Aware ECO Timing Optimization Using Reinforcement Learning",
+      "url": "https://arxiv.org/html/2402.07781v1",
+      "publication_date": "2024-02-12",
+      "source_type": "author preprint",
+      "access_level": "full",
+      "locator": "Section3.2 rendered116-135",
+      "supported_claim_ids": [
+        "CLM-1404"
+      ],
+      "reason": "LR objective/reward and per-action incremental timing are explicit; different IR-aware action task.",
+      "version": "v1",
+      "retrieved_utc": "2026-10-16",
+      "limitations": "Selected passages only; no downloaded code execution, EDA run or performance replication. Full access does not mean every page/line audited."
+    },
+    {
+      "id": "V11",
+      "title": "Accelerating Gate Sizing using GPU",
+      "url": "https://tsung-wei-huang.github.io/papers/2025-EuroPar-GateSizing.pdf",
+      "publication_date": "2025",
+      "source_type": "author paper",
+      "access_level": "full",
+      "locator": "Sections1/2.1 PDF pp1-3 rendered68-111",
+      "supported_claim_ids": [
+        "CLM-1401",
+        "CLM-1404"
+      ],
+      "reason": "Libcell selection is an industrial inner routine. Undisclosed tool internals prevent complete reproducible comparator; CPU plateau cannot imply saturation here.",
+      "version": "EuroPar2025",
+      "retrieved_utc": "2026-10-16",
+      "limitations": "Selected passages only; no downloaded code execution, EDA run or performance replication. Full access does not mean every page/line audited."
+    },
+    {
+      "id": "V12",
+      "title": "Differentiable Physical Optimization",
+      "url": "https://yibolin.com/publications/papers/OPT_ICCAD2025_Du.pdf",
+      "publication_date": "2025",
+      "source_type": "author paper",
+      "access_level": "full",
+      "locator": "II-C/III/III-A PDF pp2-3 rendered198-285",
+      "supported_claim_ids": [
+        "CLM-1404"
+      ],
+      "reason": "Unified sizing/buffering optimization is existing; not same exact local certificate problem.",
+      "version": "ICCAD2025",
+      "retrieved_utc": "2026-10-16",
+      "limitations": "Selected passages only; no downloaded code execution, EDA run or performance replication. Full access does not mean every page/line audited."
+    },
+    {
+      "id": "V13",
+      "title": "Improving Timing & Power Trade-off in Post-place Optimization Using Multi-agent Reinforcement Learning",
+      "url": "https://dl.acm.org/doi/10.1145/3676536.3676702",
+      "publication_date": "2024",
+      "source_type": "paper lead",
+      "access_level": "metadata",
+      "locator": "DOI target open failed; identity only from released P S07/C L01",
+      "supported_claim_ids": [
+        "CLM-1404"
+      ],
+      "reason": "No independent full-method access. Agent architecture and exact overlap unresolved; no performance or duplicate finding.",
+      "version": "DOI10.1145/3676536.3676702",
+      "retrieved_utc": "2026-10-16",
+      "limitations": "Selected passages only; no downloaded code execution, EDA run or performance replication. Full-method access unavailable."
+    },
+    {
+      "id": "V14",
+      "title": "Analog Circuit Sizing Based on Formal Methods Using Affine Arithmetic",
+      "url": "https://websrv.cecs.uci.edu/~papers/compendium94-03/papers/2002/iccad02/pdffiles/07c_1.pdf",
+      "publication_date": "2002",
+      "source_type": "primary paper lead",
+      "access_level": "metadata",
+      "locator": "Search title/snippet; direct open failed",
+      "supported_claim_ids": [
+        "OBJ-1401"
+      ],
+      "reason": "Analog domain; no full-method duplication inference.",
+      "version": "ICCAD2002",
+      "retrieved_utc": "2026-10-16",
+      "limitations": "Selected passages only; no downloaded code execution, EDA run or performance replication. Full-method access unavailable."
+    },
+    {
+      "id": "V15",
+      "title": "ISPD26 contest README",
+      "url": "https://raw.githubusercontent.com/ABKGroup/ISPD26-Contest/f7b29d242fc7d441f3b4eadc556f40099ccca067/README.md",
+      "publication_date": "2026",
+      "source_type": "official contest",
+      "access_level": "full",
+      "locator": "README resource/leaderboard sections, rendered whole page",
+      "supported_claim_ids": [
+        "CLM-1404"
+      ],
+      "reason": "Identity/leaderboard context only; winner algorithms not audited.",
+      "version": "f7b29d242fc7d441f3b4eadc556f40099ccca067",
+      "retrieved_utc": "2026-10-16",
+      "limitations": "Selected passages only; no downloaded code execution, EDA run or performance replication. Full access does not mean every page/line audited."
+    },
+    {
+      "id": "V16",
+      "title": "2026 CAD Contest at ICCAD",
+      "url": "https://www.iccad-contest.org/2026/",
+      "publication_date": "2026",
+      "source_type": "official contest",
+      "access_level": "full",
+      "locator": "Landing-page problem inventory",
+      "supported_claim_ids": [
+        "CLM-1404"
+      ],
+      "reason": "Landing-page access does not exhaust contest hints or winner methods.",
+      "version": "current page",
+      "retrieved_utc": "2026-10-16",
+      "limitations": "Selected passages only; no downloaded code execution, EDA run or performance replication. Full access does not mean every page/line audited."
+    }
+  ],
+  "objections": [
+    {
+      "id": "OBJ-1401",
+      "challenger_release": "SUB-d7573b7cfdc55db5c5f659765501be34d4e33ea88cac5eabe8a7d118fa61d1be",
+      "verdict": "valid",
+      "blocking": true,
+      "source_locator": "V04 section3.3; V05 description; V06 section2.2; P A01/T01/T06",
+      "reason": "Valid as unresolved promotion gate, not proof of total duplication. Conventional correlation-aware incumbent pruning and current affine transplant overlap are real; a useful timing-specific residual remains possible.",
+      "reversal_condition": "Name and demonstrate a useful representation/refinement/validated-cost capability against same-DAG AA with identical data, kernels, keys, memory and scheduling information."
+    },
+    {
+      "id": "OBJ-1402",
+      "challenger_release": "SUB-d7573b7cfdc55db5c5f659765501be34d4e33ea88cac5eabe8a7d118fa61d1be",
+      "verdict": "valid",
+      "blocking": true,
+      "source_locator": "P tasklist T02/T03/T04/T06 and future proof requirements; C CT02/CT03",
+      "reason": "T02 explicitly supplies R/recorder/specification; T03 requires certified pruning tests and T04 enclosure costs; paired executor first explicitly built T06. Ambiguous implicit implementation cannot clear executable dependency readiness. Fixable ordering gap, not impossibility.",
+      "reversal_condition": "Split T02 into reference/recorder and minimal certificate plus AA implementation before T03/T04, or label early tests reference-only and insert mandatory certificate-correctness gate before performance comparisons."
+    },
+    {
+      "id": "OBJ-1403",
+      "challenger_release": "SUB-d7573b7cfdc55db5c5f659765501be34d4e33ea88cac5eabe8a7d118fa61d1be",
+      "verdict": "valid",
+      "blocking": true,
+      "source_locator": "V01 Algorithm5/VII-C; V02 raw423-469/563-605; V03 raw706-759; V07 section2.4",
+      "reason": "Scalar reader is supported, but snapshot scoring differs from a complete local refresh. Benefit over a deliberately expensive R alone would not establish practical utility. No finding that full-refresh demand is universally absent.",
+      "reversal_condition": "Map a legitimate stronger-semantic consumer or show useful quality/cost tradeoff against deployed heuristic plus cached same-contract R on lawful workloads under actual allocation."
+    }
+  ],
+  "claim_checks": [
+    {
+      "id": "CLM-1401",
+      "verdict": "partially_valid",
+      "blocking": true,
+      "source_locator": "V01 Algorithm5/VII-C; V02 raw423-469/563-605; V03 raw706-759; V11 sections1/2.1",
+      "reason": "Real scalar choice and local-update quality demand supported. Practical need and addressable cost for stronger full-refresh R remain unresolved."
+    },
+    {
+      "id": "CLM-1402",
+      "verdict": "valid",
+      "blocking": false,
+      "source_locator": "P proposal paired-difference lemma; V04 section3.3; V05 description",
+      "reason": "Conditional dominance elimination is sound: positive difference against a feasible incumbent cannot eliminate the minimum. Sound Z, arithmetic, feasibility and winner materialization remain obligations; no implemented exact engine or new theorem established."
+    },
+    {
+      "id": "CLM-1403",
+      "verdict": "partially_valid",
+      "blocking": true,
+      "source_locator": "P experiment-plan.md A01 code/stdout/hashes; V05 affine-operation description",
+      "reason": "Code inspection supports algebraic AA/paired parity and counterexample structure. Author-reported finite counts and execution hashes not independently replayed; no runtime/STA gain inferred. Negative transplant control leaves utility/novelty unestablished."
+    },
+    {
+      "id": "CLM-1404",
+      "verdict": "partially_valid",
+      "blocking": true,
+      "source_locator": "V04-V06,V09-V16",
+      "reason": "Generic pruning, AA, learned/shared and differentiable sizing overlaps checked. Complete deterministic timing-specific duplication, MARL methods, winner algorithms and industry internal gap remain unresolved; no universal novelty finding."
+    },
+    {
+      "id": "CLM-1405",
+      "verdict": "valid",
+      "blocking": true,
+      "source_locator": "Current tasklist T01-T08/consents; JOB/batch policy",
+      "reason": "Dormant hypothesis only: no actual resource allocation, adapter, workload rights lock, assigned owners, meaningful threshold or agreeing consent. Null forecast preserved."
+    }
+  ],
+  "direction_penalties": {
+    "combination_drift": 0,
+    "demand_drift": 0
+  },
+  "successor_assessment": "EDA-0011 changes EDA-0010 complete-world output contract to scalar feasible winner and candidate-relative pruning under a new ID. Historical direction-control and verifier outcome retained; no inherited signature or clearance. Zero drift relative to new initial anchor is not merit.",
+  "gate_reasons": {
+    "novelty": "Generic transplant overlap; useful residual unestablished, exact duplication unresolved.",
+    "mechanism": "Conditional lemma valid; sound cheap boundary, complete numerical/dependency adapter and implementation proof absent.",
+    "utility": "Scalar need sourced; stronger-reference practical cost/quality leverage unresolved.",
+    "contest_originality": "Current organizer sources checked; original2013 and authenticated winner-method audit incomplete.",
+    "headroom": "Addressable refresh unknown; no transferable lower bound, plateau or measured total-cost savings.",
+    "feasibility": "Actual CPU/time/memory/storage allocation, lawful pins, executables, named owners, thresholds and repaired dependencies missing.",
+    "direction_integrity": "New ID honestly carries materially distinct scalar-choice anchor and retains predecessor negatives; both drift0.",
+    "experiment_consensus": "Distinct sessions; both revision_requested, no matching same-target agree pair."
+  },
+  "tasklist_sha256": "96f3b9c3896d97b1b86aefd70bbea77115beaaea4a1292b73ae2df98067c28d7",
+  "tasklist_position": "Dormant plan only. Adopt challenger CT02 dependency correction, with reference plus minimal certificate/AA executables before correctness and construction-cost census. Recorder precedes census already. Rights/pins/owners/allocations then reference tests, separately scoped census, thresholds, implementation and consent-bound held-out confirmation/reproduction. Verifier does not rewrite proposer bytes or sign either role consent.",
+  "consent_details": {
+    "proposer_session": "f41e4393-8228-42c4-9172-3fdec1a5d44b",
+    "challenger_session": "8d6402ca-3caf-4ab2-9e5f-091275e620ff",
+    "proposer_decision": "revision_requested",
+    "proposer_signed_revision": null,
+    "challenger_decision": "revision_requested",
+    "challenger_signed_revision": "SUB-2c26123b9b1c2d001f3615e1ad5087ac6444ac38a03cae6f9cfa57304e86de20",
+    "task_hashes_match_current": true,
+    "matching_agreement": false
+  },
+  "abandonment_status": "No same-target dual abandonment agreement or verified exhaustion; park is not abandonment.",
+  "cost_assessment": "Charge setup, current sound boundary/dependency/negative-query capture, shifted candidate loads, LUT regions/affine conversion/nonlinear remainders, pair construction/refinement, guards, exact survivors and winner, baseline score/hysteresis, provenance/invalidation/restore, failed certificates and fallback double work, final timing, actual peak bytes/noise-symbol/region growth and epoch amortization. Optional labels/training/features/controller/model tokens and communication/queueing/duplicated state fully charged. Compare exact cache and precise-boundary baseline, same-information AA/branch-bound, independent bounds and conventional centralized/parallel controllers. Approximate FLTU has a separate quality point. No primitive-count or toy-case ratio yields speedup.",
+  "analytical_checks": {
+    "executed": false,
+    "scope": "Inspected A01 only; no other-actor or downloaded research code executed. Numerical A01 stdout remains author-reported. Hash/manifest/digest checks are mechanical, not scientific experiments."
+  },
+  "historical_scope": "Read predecessor P direction-control and V released adjudication, not private notes or original late-comment evidence. Preserve prior HIST-LOCATOR/HIST-REPLAY outcomes as historical only; not independently re-adjudicated or inherited proof for EDA-0011. No older challenge is in current adjudicated_challenger_releases.",
+  "search_log": [
+    {
+      "queries": [
+        "timing gate sizing \"affine arithmetic\" pruning candidate",
+        "gate sizing candidate bounds incremental timing exact pruning 2025 2026"
+      ],
+      "engine": "web search",
+      "date": "2026-10-16",
+      "inspected": "V01-V16 primary originals plus listed leads",
+      "outcome": "Generic overlap confirmed; analog-AA lead inaccessible; newer differentiable sizing/INSTA abstract leads not complete method audits. No exhaustive or two-empty-expansion claim.",
+      "residual": "MARL, original2013/winner methods, statistical alternatives and full commercial comparison unresolved."
+    }
+  ],
+  "reopening_conditions": [
+    "Useful EDA-specific capability/cost distinction survives equally informed conventional AA transplantation.",
+    "Real need for stronger R semantics and addressable work demonstrated against deployed quality point and cached exact baseline.",
+    "Minimal certificate/reference/AA implementation ordered before tests, sound full dependencies/rounding/guards/ties/restore verified without unsupported certifications.",
+    "Lawful representative data/tool pins, actual named owners/resources/caps, meaningful preregistered family-level effect test and independent exact-revision/task-hash agreeing P/C consent.",
+    "New owner authorization is required for work beyond fourth cycle; this ruling launches no fifth cycle or experiment."
+  ],
+  "limitations": [
+    "Unblinded fresh logical verifier; backend model and invisible OS behavior not independently attested. No cross-role private material or role messages accessed.",
+    "Initial common-policy aggregate and some source-list outputs truncated; critical current proposal, objections, task dependencies and original passages targeted. Not every bibliography entry independently verified.",
+    "Full access denotes available source; inspected ranges stated. MARL and analog-AA full methods inaccessible; winner-method and commercial-internal overlap unresolved.",
+    "A01 finite numerical results not replayed; no new numerical analytical check, EDA/build/training/remote/GPU/paid experiment or external-code execution.",
+    "Trusted standalone digest/freeze/verify replaces unavailable full-checkout validation per prompt. Coordinator owns full repository validate/publication; freeze is not scientific approval."
+  ]
+}

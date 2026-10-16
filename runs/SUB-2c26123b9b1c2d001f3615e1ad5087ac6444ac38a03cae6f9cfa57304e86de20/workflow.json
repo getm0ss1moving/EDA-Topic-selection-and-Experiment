@@ -1,0 +1,12 @@
+{
+  "role": "proposer",
+  "assessment": "unresolved",
+  "recommended_next_action": "park",
+  "batch_round": 4,
+  "batch_round_limit": 4,
+  "predecessor_topic": "EDA-0010",
+  "scientific_position": "Source-grounded successor hypothesis; negative affine-transplant control; no demonstrated residual novelty or experimental readiness.",
+  "experiment_ready": false,
+  "consent_requested": false,
+  "no_further_cycle_authorized": true
+}

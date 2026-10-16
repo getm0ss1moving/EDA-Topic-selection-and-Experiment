@@ -1,0 +1,6 @@
+source_id,task_formulation,mechanism,data,evaluation,assumptions,limitation,overlap,distinction
+C04,statistical gate sensitivity,perturbation-front incumbent pruning,paper benchmark context,not reproduced,SSTA model,not deterministic NLDM,avoid completing inferior candidates,reference objective and paired cost expression differ
+C05;C06,validated range/DSP error,shared affine symbols and nonlinear remainder,generic expressions,not reproduced,declared arithmetic/error model,not timing adapter,correlation cancellation and range refinement,timing-specific useful cost interaction unresolved
+C01,gate sizing,selective local timing update and task parallelism,ISPD13 context,not reproduced,heuristic accuracy tradeoff,not exact choice certification,reduce update work,exact reference choice requirement differs
+C02;C03,LR snapshot cell choice,frozen local scores upstream cap guards parallel evaluation,source only,not executed,snapshot semantics,not full refresh R,natural scalar reader and strong cheap baseline,demonstrate R demand and net leverage
+C07;C09,postplacement / postCTS optimization,whole-design contest evaluation,public benchmark descriptions,not executed,distinct scene contracts,winner methods uninspected,engineering workflow,no exact candidate certificate claim inferred
