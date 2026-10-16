@@ -1,0 +1,51 @@
+{
+  "locator_map": {
+    "shared/incident.json": "runs/GPT-COMPLIANCE-0004/incident-descriptors/protocol-incident/incident.json",
+    "shared/job-descriptors/": "runs/GPT-COMPLIANCE-0004/incident-descriptors/"
+  },
+  "purpose": "Exact public descriptors for a quarantined attempt; no valid-cycle or scientific approval",
+  "roles": {
+    "challenger": {
+      "files": {
+        "JOB.json": "56ce45da397a7d97a3f3a5451a6ea838b47d36f9abd7aa80009306772e53e5fa",
+        "PACKET.json": "0b3aeb2371a0f6f71666f79006f2941bb10035391bcffef4cc2f7a5906975005",
+        "prompt.txt": "b41a777d491ff76e364c8af123656f9ff8828d98452c8ab29fd083bc1e0aa33b"
+      },
+      "release_id": "SUB-0a2e35ef91c58e4b2996d388cfc700a70fdadcedbb429d5f020042aff979d525",
+      "root": "runs/GPT-COMPLIANCE-0004/incident-descriptors/challenger"
+    },
+    "proposer": {
+      "files": {
+        "JOB.json": "a0f217104f0bddd532fe6acfa2f2b38cc1f8d73e0444ee34eb1d0c5de3e87484",
+        "PACKET.json": "d1325387dd19dfe8d7766889b646835828c2ba6e6003bc803cb1c06d036f27de",
+        "prompt.txt": "c41d667a2d6556c94e8a7b8f1ec0f10593d0b127f16964993e307886068b6f4b"
+      },
+      "release_id": "SUB-1995793c1627da4adba27cf9a355047e58ef3c0d8627137a33ff6fc81e76f89f",
+      "root": "runs/GPT-COMPLIANCE-0004/incident-descriptors/proposer"
+    },
+    "protocol_audit": {
+      "files": {
+        "JOB.json": "a8d84fbadfd9345cadd522d2de422fe8eab312993e5ea48cb52764902c4b18ac",
+        "PACKET.json": "f4e51c994dc01539746602e44993c41ec6361a6b1677f5e127a76398028e79f3",
+        "prompt.txt": "e1cfd023df0118bfd45166890a51f90793eee3fcbe67f5a465e1315898a1a835"
+      },
+      "release_id": "SUB-573df9c23c1928e04ad3ba0801e204c7a5e9136c546774e8db25a922e11348c0",
+      "root": "runs/GPT-COMPLIANCE-0004/incident-descriptors/protocol_audit"
+    },
+    "verifier": {
+      "files": {
+        "JOB.json": "dea2464bfdaf159a1274b5e91ef46efe2f8987e70270f51fe321eccf328fc856",
+        "PACKET.json": "7470c82b696d066e5875843a07235c477dae9fa93ac903e9ed83bd7a14644986",
+        "prompt.txt": "ca0712d08d627f414df82ba5087b450ceacfce8590cecca6ab701ba36a85fabe"
+      },
+      "release_id": "SUB-8b5c3aae66c746da57dc5c31dc641ac85467ea5d2c20bff681b2b2c68773deb6",
+      "root": "runs/GPT-COMPLIANCE-0004/incident-descriptors/verifier"
+    }
+  },
+  "supplemental_inputs": {
+    "files": {
+      "incident.json": "8a01e5620c61ded97113afb6512ee66ae2b8f0c313f36d00262cc5de42c02fe7"
+    },
+    "root": "runs/GPT-COMPLIANCE-0004/incident-descriptors/protocol-incident"
+  }
+}
