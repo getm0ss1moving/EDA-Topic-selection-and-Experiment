@@ -1,0 +1,161 @@
+{
+  "retrieved": "2026-10-20T05:18:55.264297+00:00",
+  "scope": "primary public text; metadata, selected sections and hashes only; no code executed",
+  "repositories": {
+    "snu-mllab/Rule2DRC": {
+      "committed": "2026-10-08T09:13:37Z",
+      "sha": "8ad1cd5553b9876e9c0ee2a527450be4bf614a74"
+    },
+    "IntelLabs/FloorSet": {
+      "committed": "2026-10-15T16:30:35Z",
+      "sha": "62734a5c14fc50c963dfb994a02e6d4a67695aa1"
+    },
+    "Kohaku-Lab/Trinity": {
+      "committed": "2026-10-03T18:23:00Z",
+      "sha": "51334c5701945fd31f7b7f6797c85f2cb7098a6a"
+    },
+    "The-OpenROAD-Project/OpenSTA": {
+      "committed": "2026-10-19T20:53:21Z",
+      "sha": "a847ec7a1413dbdcbc8a4f44a50bcea50f2db82a"
+    },
+    "The-OpenROAD-Project/OpenROAD": {
+      "committed": "2026-10-20T05:03:22Z",
+      "sha": "4777769274e4dbab3256d4630d655b0be0816bb6"
+    },
+    "KLayout/klayout": {
+      "committed": "2026-10-18T16:19:59Z",
+      "sha": "7eb9a25b42242a97e61300ad3a1486e10937abf5"
+    },
+    "RTimothyEdwards/netgen": {
+      "committed": "2026-10-14T15:51:49Z",
+      "sha": "e5a185dcfa16ee6317883f02bfdc8cf10feabd0e"
+    },
+    "liangrj2014/ISPD25_contest": {
+      "committed": "2025-04-08T03:49:38Z",
+      "sha": "ced27e2991caaf1d2c4c3ccf497b205cdbea8374"
+    },
+    "parallaxsw/OpenSTA": {
+      "committed": "2026-10-19T17:04:03Z",
+      "sha": "b99a8e528de098e4e06dbb6a0bb5423d6ada2f51"
+    }
+  },
+  "files": [
+    {
+      "repo": "snu-mllab/Rule2DRC",
+      "file": "README.md",
+      "commit": "8ad1cd5553b9876e9c0ee2a527450be4bf614a74",
+      "sha256": "1c9fdd678708eb73755fb53be4ade1a76609c5e5a9ecf670046c4d28c22d3440",
+      "bytes": 7921,
+      "url": "https://github.com/snu-mllab/Rule2DRC/blob/8ad1cd5553b9876e9c0ee2a527450be4bf614a74/README.md"
+    },
+    {
+      "repo": "snu-mllab/Rule2DRC",
+      "file": "eval.py",
+      "commit": "8ad1cd5553b9876e9c0ee2a527450be4bf614a74",
+      "sha256": "5ea75cb2b985df47e57c1e51cc599d724afa4515d9ecc757e7c954949aba93e2",
+      "bytes": 8487,
+      "url": "https://github.com/snu-mllab/Rule2DRC/blob/8ad1cd5553b9876e9c0ee2a527450be4bf614a74/eval.py"
+    },
+    {
+      "repo": "snu-mllab/Rule2DRC",
+      "file": "LICENSE",
+      "commit": "8ad1cd5553b9876e9c0ee2a527450be4bf614a74",
+      "sha256": "157ce02b1c090913d60604e0a943157f83f8a2e94796a33fbcea2831b0bcb627",
+      "bytes": 1073,
+      "url": "https://github.com/snu-mllab/Rule2DRC/blob/8ad1cd5553b9876e9c0ee2a527450be4bf614a74/LICENSE"
+    },
+    {
+      "repo": "IntelLabs/FloorSet",
+      "file": "iccad2026contest/README.md",
+      "commit": "62734a5c14fc50c963dfb994a02e6d4a67695aa1",
+      "sha256": "66e56129a6a0311c05286abebe32c60dfc9406ac9cded3bca3e452a6175b57dc",
+      "bytes": 16964,
+      "url": "https://github.com/IntelLabs/FloorSet/blob/62734a5c14fc50c963dfb994a02e6d4a67695aa1/iccad2026contest/README.md"
+    },
+    {
+      "repo": "IntelLabs/FloorSet",
+      "file": "iccad2026contest/iccad2026_evaluate.py",
+      "commit": "62734a5c14fc50c963dfb994a02e6d4a67695aa1",
+      "sha256": "64db37865b42baf11add62bdbf035690dca086cd4be7b5b4e58db756f20d8498",
+      "bytes": 79842,
+      "url": "https://github.com/IntelLabs/FloorSet/blob/62734a5c14fc50c963dfb994a02e6d4a67695aa1/iccad2026contest/iccad2026_evaluate.py"
+    },
+    {
+      "repo": "IntelLabs/FloorSet",
+      "file": "LICENSE",
+      "commit": "62734a5c14fc50c963dfb994a02e6d4a67695aa1",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357,
+      "url": "https://github.com/IntelLabs/FloorSet/blob/62734a5c14fc50c963dfb994a02e6d4a67695aa1/LICENSE"
+    },
+    {
+      "repo": "Kohaku-Lab/Trinity",
+      "file": "README.md",
+      "commit": "51334c5701945fd31f7b7f6797c85f2cb7098a6a",
+      "sha256": "b79d6be84f9550a1cbfb0f3b01ef9973119c2660d4294710d1fee2c2f3f2ab93",
+      "bytes": 8041,
+      "url": "https://github.com/Kohaku-Lab/Trinity/blob/51334c5701945fd31f7b7f6797c85f2cb7098a6a/README.md"
+    },
+    {
+      "repo": "Kohaku-Lab/Trinity",
+      "file": "docs/evaluation.md",
+      "commit": "51334c5701945fd31f7b7f6797c85f2cb7098a6a",
+      "sha256": "51d8d6e40abd709eb3834a12b5e0f1146d66d6ba641cd4205d7f0b120cccd098",
+      "bytes": 4205,
+      "url": "https://github.com/Kohaku-Lab/Trinity/blob/51334c5701945fd31f7b7f6797c85f2cb7098a6a/docs/evaluation.md"
+    },
+    {
+      "repo": "parallaxsw/OpenSTA",
+      "file": "README.md",
+      "commit": "b99a8e528de098e4e06dbb6a0bb5423d6ada2f51",
+      "sha256": "78e22e3499b256421c7bf7a97d9c321f27c71a4d2e8948941e619e939dac791e",
+      "bytes": 10441,
+      "url": "https://github.com/parallaxsw/OpenSTA/blob/b99a8e528de098e4e06dbb6a0bb5423d6ada2f51/README.md"
+    },
+    {
+      "repo": "parallaxsw/OpenSTA",
+      "file": "LICENSE",
+      "commit": "b99a8e528de098e4e06dbb6a0bb5423d6ada2f51",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "bytes": 35149,
+      "url": "https://github.com/parallaxsw/OpenSTA/blob/b99a8e528de098e4e06dbb6a0bb5423d6ada2f51/LICENSE"
+    },
+    {
+      "repo": "The-OpenROAD-Project/OpenROAD",
+      "file": "src/rcx/README.md",
+      "commit": "4777769274e4dbab3256d4630d655b0be0816bb6",
+      "sha256": "967451bd59982038008a5554797f46c3dd61ba332ce55ebd8544c3641a8ddcfc",
+      "bytes": 17072,
+      "url": "https://github.com/The-OpenROAD-Project/OpenROAD/blob/4777769274e4dbab3256d4630d655b0be0816bb6/src/rcx/README.md"
+    },
+    {
+      "repo": "The-OpenROAD-Project/OpenROAD",
+      "file": "LICENSE",
+      "commit": "4777769274e4dbab3256d4630d655b0be0816bb6",
+      "sha256": "28cfc93cb2b552192bc316259d2c2a1aa5a980018cda1c5cd9b1143c9151aebb",
+      "bytes": 1542,
+      "url": "https://github.com/The-OpenROAD-Project/OpenROAD/blob/4777769274e4dbab3256d4630d655b0be0816bb6/LICENSE"
+    },
+    {
+      "repo": "KLayout/klayout",
+      "file": "LICENSE",
+      "commit": "7eb9a25b42242a97e61300ad3a1486e10937abf5",
+      "sha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2",
+      "bytes": 35141,
+      "url": "https://github.com/KLayout/klayout/blob/7eb9a25b42242a97e61300ad3a1486e10937abf5/LICENSE"
+    },
+    {
+      "repo": "RTimothyEdwards/netgen",
+      "file": "README.md",
+      "commit": "e5a185dcfa16ee6317883f02bfdc8cf10feabd0e",
+      "sha256": "e5bb101d3a3d519df9a4013137a8df8c729424fa11d036cc07e916f1f7fc2dc9",
+      "bytes": 8168,
+      "url": "https://github.com/RTimothyEdwards/netgen/blob/e5a185dcfa16ee6317883f02bfdc8cf10feabd0e/README.md"
+    },
+    {
+      "repo": "RTimothyEdwards/netgen",
+      "file": "COPYRIGHT",
+      "error": "gh: Not Found (HTTP 404)"
+    }
+  ]
+}

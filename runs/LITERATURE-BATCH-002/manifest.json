@@ -1,0 +1,77 @@
+{
+  "schema": 1,
+  "kind": "literature_selection_and_source_spot_checks_not_scientific_adjudication",
+  "input_commit": "c9db8b4ccf053ce9b9e275bc5bdc58cf58a27e73",
+  "recorded_at_utc": "2026-10-20T05:20:39.157711+00:00",
+  "client_date": "2026-10-20",
+  "actor": "current coordinator session /root; no independent searcher/verifier session claimed",
+  "request": "Continue selecting papers, contests and related open-source projects for the human-led EDA literature survey",
+  "batch": "002",
+  "new_papers": 10,
+  "total_papers": 20,
+  "target_papers": 100,
+  "paper_ids": [
+    "LIT-011",
+    "LIT-012",
+    "LIT-013",
+    "LIT-014",
+    "LIT-015",
+    "LIT-016",
+    "LIT-017",
+    "LIT-018",
+    "LIT-019",
+    "LIT-020"
+  ],
+  "new_artifacts": 9,
+  "total_artifacts": 13,
+  "artifact_types_added": {
+    "contest": 2,
+    "project_or_module": 7
+  },
+  "source_access": "Ten primary abstracts/metadata; pinned public implementation documents and selected source sections. Direct SSRN/IEEE page access was limited; primary indexed abstracts used. No full-method review or scientific novelty verdict.",
+  "source_inventory": "source-retrievals.json",
+  "source_facts_to_check_next": [
+    "Code/license availability of iRCX and source release of HeteroSTA",
+    "Tool/PDK/data access for multicorner timing, DRC-Aid and SCALE",
+    "LVS-method papers, dynamic IR and complete baseline coverage",
+    "Winner implementations and fixed official rules for contest reuse"
+  ],
+  "first_batch_preserved": true,
+  "frozen_scientific_releases_modified": false,
+  "configuration_or_role_changes": false,
+  "eda_or_model_experiments": 0,
+  "full_method_reviews_claimed": 0,
+  "validation": {
+    "project_command": "python3 scripts/project.py validate",
+    "project": "passed",
+    "literature_command": "python3 scripts/literature.py validate",
+    "literature": "passed",
+    "test_command": "python3 -m unittest discover -s tests -v",
+    "tests_run": 173,
+    "tests_passed": 173,
+    "test_log_sha256": "1ddad82e4580294a9625635bde1444212b98170b2c8f74a88682b9f0df9b24f4",
+    "new_regression_tests": 5,
+    "diff_check": "passed"
+  },
+  "output_files_sha256": {
+    "README.md": "61966fa0f6c4a47181148c2575592f449f8ce8c3d78ec5a30276dbc32227f03c",
+    "literature/README.md": "2baec6a78039893c84efe34dbb5b496e5c2eb6ba85478ed3e3ba1428e095cc65",
+    "literature/catalog.json": "58ea1746c50cc6b65822402a451a8d22a43d9eb439b4f2e4429c887acf1e7176",
+    "literature/search-log.md": "a9172c38457e613f29f3cbfbd7bdab853066506706c89fba8f62ac31ed05e655",
+    "literature/batches/002.zh-CN.md": "cfb3ba53ccaf52b1d54bbc37c0612799316146356b5b205de28c78ba8b933d0c",
+    "scripts/literature.py": "db9b98007941dcc6235d75b7849e983a059189ff805d781beec28020322d4326",
+    "tests/test_human_led.py": "10d6dda93b9ee01a1f75d95120eb73fb5aa785531a55f0da92b1bddf03b8e336",
+    "runs/LITERATURE-BATCH-002/source-retrievals.json": "e506c7ebac1266eb783c8410abf4795e891e5f0994a41efd5431d9b13228f588"
+  },
+  "limits": [
+    "Machine validation checks catalog provenance/counting structure, not correctness of paper claims.",
+    "Runtime, model and source claims remain author reports until independent review/reproduction.",
+    "OpenRCX artifact is part of already-registered OpenROAD, not another stand-alone repository.",
+    "Contest closure and CADathlon unpublished-problem status are as of client date; no registration, source contact or reminder created."
+  ],
+  "excluded_local_changes": [
+    "reports/final/GPT-COMPLIANCE-0004.zh-CN.md",
+    "node_modules/",
+    "yarn.lock"
+  ]
+}

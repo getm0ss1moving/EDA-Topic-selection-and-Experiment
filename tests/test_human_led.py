@@ -44,9 +44,11 @@ class HumanLedTests(unittest.TestCase):
 
 class LiteratureTests(unittest.TestCase):
     def setUp(self): self.data = json.loads((ROOT/'literature/catalog.json').read_text())
-    def test_real_catalog_has_ten_papers_separate_from_artifacts(self):
+    def test_real_catalog_has_ten_paper_batches_separate_from_artifacts(self):
         self.assertEqual(lit.validate_catalog(self.data), [])
-        self.assertEqual(len(self.data['papers']), 10)
+        batches = self.data['batches']
+        self.assertEqual(len(batches[0]['paper_ids']), 10)
+        self.assertEqual(len(self.data['papers']), sum(len(b['paper_ids']) for b in batches))
         self.assertTrue(self.data['artifacts'])
     def test_new_preprint_version_cannot_inflate_count(self):
         duplicate = copy.deepcopy(self.data['papers'][0]); duplicate['id'] = 'LIT-999'
@@ -64,3 +66,26 @@ class LiteratureTests(unittest.TestCase):
         duplicate = copy.deepcopy(self.data['papers'][0]); duplicate.update(id='LIT-999', identity='doi:10.1234/test')
         self.data['papers'].append(duplicate)
         self.assertTrue(any('duplicate title' in e for e in lit.validate_catalog(self.data)))
+
+    def test_conference_doi_alias_cannot_inflate_count(self):
+        paper = next(p for p in self.data['papers'] if p.get('aliases'))
+        duplicate = copy.deepcopy(paper)
+        duplicate.update(id='LIT-999', identity=paper['aliases'][0], title_en='Renamed conference version', aliases=[])
+        self.data['papers'].append(duplicate)
+        self.assertTrue(any('duplicate paper/version/alias' in e for e in lit.validate_catalog(self.data)))
+
+    def test_paper_cannot_be_credited_to_two_batches(self):
+        self.data['batches'].append({'id':'999','paper_ids':[self.data['papers'][0]['id']]})
+        self.assertTrue(any('multiple batch slots' in e for e in lit.validate_catalog(self.data)))
+
+    def test_unknown_paper_cannot_be_claimed_in_batch(self):
+        self.data['batches'][0]['paper_ids'][0] = 'LIT-999'
+        self.assertTrue(any('unknown paper' in e for e in lit.validate_catalog(self.data)))
+
+    def test_unassigned_paper_prevents_progress_claim(self):
+        self.data['batches'][0]['paper_ids'].pop()
+        self.assertTrue(any('does not cover' in e for e in lit.validate_catalog(self.data)))
+
+    def test_batch_cannot_exceed_released_size(self):
+        self.data['batches'][0]['paper_ids'].append(self.data['papers'][10]['id'])
+        self.assertTrue(any('1–10' in e for e in lit.validate_catalog(self.data)))

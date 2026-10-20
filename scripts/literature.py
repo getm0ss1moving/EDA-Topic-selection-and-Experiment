@@ -39,10 +39,13 @@ def validate_catalog(data):
         if not isinstance(entry, dict): continue
         eid = entry.get('id')
         check(entry.get('kind') == 'paper', f'{eid}: contest/project cannot count as a paper')
-        key = identity(str(entry.get('identity', '')))
-        check(bool(re.fullmatch(r'arxiv:\d{4}\.\d{4,5}|doi:10\.\d{4,9}/\S+', key)), f'{eid}: stable identity required')
-        check(key not in identities, f'{eid}: duplicate paper/version')
-        identities.add(key)
+        aliases = entry.get('aliases', [])
+        check(isinstance(aliases, list), f'{eid}: aliases must be an array')
+        keys = {identity(str(k)) for k in [entry.get('identity', ''), *(aliases if isinstance(aliases, list) else [])]}
+        for key in keys:
+            check(bool(re.fullmatch(r'arxiv:\d{4}\.\d{4,5}|doi:10\.\d{4,9}/\S+', key)), f'{eid}: stable identity required')
+            check(key not in identities, f'{eid}: duplicate paper/version/alias')
+        identities.update(keys)
         title = re.sub(r'\W+', '', str(entry.get('title_en', '')).casefold())
         check(bool(title) and title not in titles, f'{eid}: missing/duplicate title or conference alias')
         titles.add(title)
@@ -56,6 +59,30 @@ def validate_catalog(data):
         check(entry.get('priority') in {'priority', 'context'}, f'{eid}: invalid reading priority')
     for entry in artifacts:
         if isinstance(entry, dict): check(entry.get('kind') in {'contest', 'project'}, 'artifact must be contest/project')
+    batches = data.get('batches')
+    if batches is not None:
+        if not isinstance(batches, list):
+            return errors + ['literature: batches must be an array']
+        paper_ids = {p.get('id') for p in papers if isinstance(p, dict)}
+        artifact_ids = {a.get('id') for a in artifacts if isinstance(a, dict)}
+        batch_ids, assigned = set(), []
+        for batch in batches:
+            if not isinstance(batch, dict):
+                errors.append('literature: invalid batch'); continue
+            bid = batch.get('id')
+            check(isinstance(bid, str) and bid and bid not in batch_ids, 'missing/duplicate batch ID')
+            batch_ids.add(str(bid))
+            members = batch.get('paper_ids')
+            if not isinstance(members, list):
+                errors.append(f'literature: {bid}: paper_ids must be an array'); continue
+            check(0 < len(members) <= 10, f'{bid}: a released batch needs 1–10 papers')
+            check(all(isinstance(x, str) and x in paper_ids for x in members), f'{bid}: unknown paper in batch')
+            assigned.extend(str(x) for x in members)
+            artifacts_in_batch = batch.get('artifact_ids', [])
+            check(isinstance(artifacts_in_batch, list) and all(isinstance(x, str) and x in artifact_ids for x in artifacts_in_batch),
+                  f'{bid}: unknown artifact in batch')
+        check(len(assigned) == len(set(assigned)), 'paper counted in multiple batch slots')
+        check(set(assigned) == paper_ids, 'batch membership does not cover the catalog')
     return errors
 
 def main():

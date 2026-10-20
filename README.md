@@ -13,7 +13,7 @@ There is no AI proposer or automatic AI replacement-topic generator.
 ## Start here
 
 1. Read the [workflow](docs/WORKFLOW.md), [charter](docs/CHARTER.md), [evidence](docs/EVIDENCE.md) and [isolation](docs/ISOLATION.md) rules.
-2. Browse the [literature index](literature/README.md) and [first ten reading cards](literature/batches/001.zh-CN.md). The target is 100 distinct papers; contests and repositories are tracked separately.
+2. Browse the [literature index](literature/README.md) and [the latest ten reading cards](literature/batches/002.zh-CN.md). The target is 100 distinct papers; contests and repositories are tracked separately.
 3. Submit your idea using [the human idea template](templates/human-idea.md). The coordinator commits and freezes it before independent review; an incomplete idea can receive exploratory feedback without being called experiment-ready.
 4. Challenger submits evidence-backed criticism to verifier. Verifier returns adjudicated findings to you. You decide and author the next revision.
 5. A promising plan needs an explicit human/challenger task-list agreement, independent verification and allocated resources before experiments. [Retirement rules](docs/TOPIC-RETIREMENT.md) stop weak topics without erasing their history.
