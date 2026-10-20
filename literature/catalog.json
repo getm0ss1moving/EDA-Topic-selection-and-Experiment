@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "target_unique_papers": 100,
-  "retrieved": "2026-10-16T09:16:41.486799+00:00",
-  "batch": "001",
+  "retrieved": "2026-10-20T05:18:55.264297+00:00",
+  "batch": "002",
   "papers": [
     {
       "id": "LIT-001",
@@ -281,6 +281,288 @@
       "key_point_en": "Inspect synthetic label generation and physical solver validity before evaluating heatmap accuracy.",
       "reading_focus_zh": "核对标签是否来自可信电路求解、真实 PDN 泛化和漏报风险；合成热图上的误差指标不能证明真实签核能力。开源链接来自摘要，本轮未运行。",
       "limits": "Author claims screened from primary-source abstracts; no independent reproduction, complete method review or novelty verdict. Suggested reading targets are not verified section/page locators."
+    },
+    {
+      "id": "LIT-011",
+      "kind": "paper",
+      "identity": "arxiv:2511.11660v1",
+      "title_en": "HeteroSTA: A CPU-GPU Heterogeneous Static Timing Analysis Engine with Holistic Industrial Design Support",
+      "title_zh": "HeteroSTA：兼顾工业设计语义的 CPU–GPU 异构静态时序分析引擎",
+      "url": "https://arxiv.org/abs/2511.11660v1",
+      "published": "2025-11-11",
+      "updated": "2025-11-11",
+      "retrieved": "2026-10-20T05:18:55.264297+00:00",
+      "locator": "Title; Abstract; Comments; Submission history",
+      "access": "abstract",
+      "reading_status": "abstract_screened",
+      "stages": [
+        "timing_signoff",
+        "placement",
+        "global_routing"
+      ],
+      "methods": [
+        "heterogeneous_computing",
+        "STA",
+        "graph_and_path_analysis"
+      ],
+      "priority": "priority",
+      "summary_zh": "论文把 GPU 加速和完整工具语义放在一起讨论：包含多种延迟计算模型、SDC 时序例外、时钟域，以及图分析和路径查询。作者提供独立程序与可嵌入库，并展示布局、全局布线中的集成。它适合用来了解快速时序引擎需要处理哪些工程对象。",
+      "key_point_en": "Read timing semantics and end-to-end integration before treating kernel acceleration as a complete STA solution.",
+      "reading_focus_zh": "重点核对条件弧、例外路径、时钟与重汇聚处理，以及完整读入、数据搬运和增量更新时间。摘要所述程序或动态库公开不等于完整源码开放，本轮未确认其源码许可证。",
+      "limits": "Abstract and author comment (ASP-DAC 2026); conference publication was not separately checked. Binary availability does not establish open-source availability."
+    },
+    {
+      "id": "LIT-012",
+      "kind": "paper",
+      "identity": "arxiv:2603.28381v1",
+      "title_en": "Warp-STAR: High-performance, Differentiable GPU-Accelerated Static Timing Analysis through Warp-oriented Parallel Orchestration",
+      "title_zh": "Warp-STAR：通过 warp 级并行调度实现高性能、可微的 GPU 静态时序分析",
+      "url": "https://arxiv.org/abs/2603.28381v1",
+      "published": "2026-03-30",
+      "updated": "2026-03-30",
+      "retrieved": "2026-10-20T05:18:55.264297+00:00",
+      "locator": "Title; Abstract; Comments; Submission history",
+      "access": "abstract",
+      "reading_status": "abstract_screened",
+      "stages": [
+        "timing_signoff",
+        "placement"
+      ],
+      "methods": [
+        "GPU",
+        "load_balancing",
+        "differentiable_STA"
+      ],
+      "priority": "priority",
+      "summary_zh": "论文将不规则电路图导致的 GPU warp 内负载不均衡作为加速瓶颈，以 warp 级调度组织时序计算，并支持可微梯度分析。作者还把引擎接入时序驱动布局，讨论引擎加速如何传递到实际优化流程。",
+      "key_point_en": "Compare graph scheduling and gradient support with complete placement-loop costs, not isolated speedups.",
+      "reading_focus_zh": "重点读调度粒度、图结构分布、梯度与 STA 语义的对应关系；比较相同硬件、模型和容差下的总流程耗时。相关会议 DOI 已在 arXiv 页列出，不另计一篇。",
+      "limits": "arXiv links related DAC DOI 10.1145/3770743.3803891; count the paper once. Hardware/model comparability and source-code availability remain unchecked.",
+      "aliases": [
+        "doi:10.1145/3770743.3803891"
+      ]
+    },
+    {
+      "id": "LIT-013",
+      "kind": "paper",
+      "identity": "doi:10.2139/ssrn.7135149",
+      "title_en": "iRCX: Open-Source Full-Chip Parasitic Extraction with Shielding-Aware Pattern Modeling",
+      "title_zh": "iRCX：以屏蔽感知模式建模实现全芯片寄生参数提取",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7135149",
+      "published": "2026-07-17",
+      "updated": "2026-07-17",
+      "retrieved": "2026-10-20T05:18:55.264297+00:00",
+      "locator": "Primary SSRN indexed Abstract; Posted date; Suggested Citation",
+      "access": "abstract",
+      "reading_status": "abstract_screened",
+      "stages": [
+        "detailed_routing",
+        "timing_signoff"
+      ],
+      "methods": [
+        "parasitic_extraction",
+        "pattern_model",
+        "field_solver"
+      ],
+      "priority": "context",
+      "summary_zh": "论文从工艺数据和布线版图出发，连接电容表生成、局部环境构造、查表与寄生网表输出。作者针对早期版本遗漏上下层交叉线屏蔽、环境检索开销较高的问题，调整模式表和空间索引，并报告与 OpenRCX 等方法的比较。",
+      "key_point_en": "Inspect shielding assumptions, calibration targets and complete netlist extraction rather than local capacitance error alone.",
+      "reading_focus_zh": "重点核对不同电容分量的误差、校准求解器、线宽与工艺角覆盖、SPEF 拓扑和完整耗时。“Open-Source”来自原题，本轮未找到并核实配套代码与许可证，不能把它作为已可复现的开源工具推荐。",
+      "limits": "Primary SSRN indexed abstract/metadata accessed; direct page fetch failed. Code/license and conference-predecessor identity remain unverified; no journal acceptance is inferred.",
+      "release_status": "SSRN preprint; code release not verified"
+    },
+    {
+      "id": "LIT-014",
+      "kind": "paper",
+      "identity": "arxiv:2605.15669v1",
+      "title_en": "Rule2DRC: Benchmarking LLM Agents for DRC Script Synthesis with Execution-Guided Test Generation",
+      "title_zh": "Rule2DRC：以执行引导测试生成评测 DRC 脚本合成智能体",
+      "url": "https://arxiv.org/abs/2605.15669v1",
+      "published": "2026-05-15",
+      "updated": "2026-05-15",
+      "retrieved": "2026-10-20T05:18:55.264297+00:00",
+      "locator": "Title; Abstract; Comments; Submission history",
+      "access": "abstract",
+      "reading_status": "abstract_screened",
+      "stages": [
+        "physical_verification"
+      ],
+      "methods": [
+        "agentic",
+        "test_generation",
+        "execution_feedback"
+      ],
+      "priority": "priority",
+      "summary_zh": "论文研究从自然语言设计规则生成可执行检查脚本，用实际 DRC 输出而非代码相似度评分。其 SplitTester 测试智能体通过执行反馈构造有区分力的版图测试，从多个候选脚本中选择。重点是“生成—测试—选择”各环节如何提供可核对的反馈。",
+      "key_point_en": "Study execution-based candidate selection, independently generated tests and strict separation from evaluation layouts.",
+      "reading_focus_zh": "优先核对生成测试是否独立于评测布局、候选预算和工具调用成本。仓库 eval.py 将运行结果与分类标签比较，不能把通过有限测试解释为规则对所有版图正确。已检查 README 与部分评分源码，未运行。",
+      "limits": "Paper abstract screened. Separate maintainer README/license and eval_problem source spot checks are recorded under ART-008; no complete paper review or execution. ICML attribution is from author/maintainer records."
+    },
+    {
+      "id": "LIT-015",
+      "kind": "paper",
+      "identity": "arxiv:2607.22761v1",
+      "title_en": "DRC-Aid: Design-Rule Correction via Agentic Framework utilizing Inference-Time Large Language Models",
+      "title_zh": "DRC-Aid：利用推理阶段语言模型与验证反馈修复设计规则违例",
+      "url": "https://arxiv.org/abs/2607.22761v1",
+      "published": "2026-07-23",
+      "updated": "2026-07-23",
+      "retrieved": "2026-10-20T05:18:55.264297+00:00",
+      "locator": "Title; Abstract; Comments; Submission history",
+      "access": "abstract",
+      "reading_status": "abstract_screened",
+      "stages": [
+        "detailed_routing",
+        "physical_verification"
+      ],
+      "methods": [
+        "agentic",
+        "bounded_search",
+        "verification_in_loop"
+      ],
+      "priority": "priority",
+      "summary_zh": "论文把局部 DRC 修复写成带验证反馈的搜索：规则引擎先给出有限几何编辑，语言模型负责选择，搜索预算、回溯和状态记忆控制探索。DRC 与 LVS 工具反馈用于检查几何规则与电气拓扑，避免修好一个问题却破坏连接。",
+      "key_point_en": "Separate edit-space design, search/backtracking and LLM selection, then inspect DRC/LVS preservation.",
+      "reading_focus_zh": "重点检查规则引擎本身的贡献、相同编辑空间中的强启发式与随机对照、每次商业工具调用的成本。摘要涉及 Calibre nmDRC/nmLVS，公开论文和 FreePDK45 名称不能说明本机已有所需许可。",
+      "limits": "Abstract only; Calibre access and complete artifact release are not verified. Reported repair rates do not prove arbitrary-layout correctness or production-node coverage."
+    },
+    {
+      "id": "LIT-016",
+      "kind": "paper",
+      "identity": "arxiv:2607.21850v1",
+      "title_en": "SCALE: Self-Supervised Constraint-Aware Layout GEneration for Local P&R DRV Fixing at Advanced Nodes",
+      "title_zh": "SCALE：以自监督、约束感知版图生成辅助先进节点局部违例修复",
+      "url": "https://arxiv.org/abs/2607.21850v1",
+      "published": "2026-07-23",
+      "updated": "2026-07-23",
+      "retrieved": "2026-10-20T05:18:55.264297+00:00",
+      "locator": "Title; Abstract; Comments; Submission history",
+      "access": "abstract",
+      "reading_status": "abstract_screened",
+      "stages": [
+        "detailed_routing",
+        "physical_verification"
+      ],
+      "methods": [
+        "self_supervised",
+        "VLM",
+        "synthetic_layout_data"
+      ],
+      "priority": "context",
+      "summary_zh": "论文先学习从周围布线环境恢复被遮蔽多边形，再通过规则约束引导采样，由工业 DRC 工具标注生成版图。这些版图—违例样本用于适配视觉语言模型，为局部修复提供几何提示。核心阅读对象是数据构造与验证标签如何影响修复。",
+      "key_point_en": "Inspect synthetic-layout generation, checker-derived labels and the downstream VLM repair interface separately.",
+      "reading_focus_zh": "重点核对真实案例与生成数据是否隔离、规则覆盖、数据去重、模型训练和工业检查器调用成本。作者报告的 sub-2nm 案例不表示相关工艺数据或工具可公开取得，当前不能宣布复现可行。",
+      "limits": "Abstract only; access to advanced-node examples, industrial checker, training data and model weights remains unknown. No production signoff claim is adopted."
+    },
+    {
+      "id": "LIT-017",
+      "kind": "paper",
+      "identity": "arxiv:2610.06464v1",
+      "title_en": "A Physics-Guided Transformer Framework for Electromigration Analysis in Multi-Segment Interconnects",
+      "title_zh": "用于多段互连电迁移分析的物理引导 Transformer 框架",
+      "url": "https://arxiv.org/abs/2610.06464v1",
+      "published": "2026-10-05",
+      "updated": "2026-10-05",
+      "retrieved": "2026-10-20T05:18:55.264297+00:00",
+      "locator": "Title; Abstract; Comments; Submission history",
+      "access": "abstract",
+      "reading_status": "abstract_screened",
+      "stages": [
+        "power_integrity"
+      ],
+      "methods": [
+        "transformer",
+        "physics_guided",
+        "electromigration"
+      ],
+      "priority": "priority",
+      "summary_zh": "论文将线段几何和直流条件编码为 token，用 Transformer 建模整条多段互连，并在指定位置和时刻预测应力。训练目标结合监督误差与连续性、端点通量等物理约束；作者使用 IBM 电源网基准评测。适合与同问题的数值降阶方法并读。",
+      "key_point_en": "Inspect boundary/junction constraints, time/geometry generalization and amortized training cost against a strong reduced-order solver.",
+      "reading_focus_zh": "不要只看场分布平均误差：重点核对应力峰值、空洞成核时间和极端工况的偏差。与 LIT-018 配对，比较相同 PDE、边界条件、时间点和误差容差；本轮尚未证明二者设置可直接比较。",
+      "limits": "Abstract only; physics-guided losses do not establish exactness, certified error bounds or failure-time guarantees. Cross-paper equivalence and reproduction remain unchecked."
+    },
+    {
+      "id": "LIT-018",
+      "kind": "paper",
+      "identity": "arxiv:2602.00330v2",
+      "title_en": "Accelerating Physics-Based Electromigration Analysis via Rational Krylov Subspaces",
+      "title_zh": "利用有理 Krylov 子空间加速基于物理模型的电迁移分析",
+      "url": "https://arxiv.org/abs/2602.00330v2",
+      "published": "2026-01-30",
+      "updated": "2026-03-26",
+      "retrieved": "2026-10-20T05:18:55.264297+00:00",
+      "locator": "Title; Abstract; Comments; Submission history",
+      "access": "abstract",
+      "reading_status": "abstract_screened",
+      "stages": [
+        "power_integrity"
+      ],
+      "methods": [
+        "model_order_reduction",
+        "rational_Krylov",
+        "numerical_solver"
+      ],
+      "priority": "priority",
+      "summary_zh": "论文使用有理 Krylov 降阶加速互连应力演化计算，将展开时间常数与成核或稳态等关心的时刻关联，并优化降阶阶数与移位时间。它提供不依赖神经网络的现代数值比较对象，帮助判断学习预测是否仍有成本或能力上的差异。",
+      "key_point_en": "Read expansion-point/order selection and nucleation/post-void evaluation as a strong numerical baseline, not a theoretical saturation proof.",
+      "reading_focus_zh": "重点核对参数选择成本、不同互连拓扑和初始应力下的误差，以及成核前后是否使用不同模型。摘要中的高精度和加速比均为作者报告，不能据此认定整个电迁移问题已到理论上限。",
+      "limits": "v2 abstract and history screened; not a mathematical optimality bound. No shared protocol with LIT-017 or independent implementation validation is claimed."
+    },
+    {
+      "id": "LIT-019",
+      "kind": "paper",
+      "identity": "doi:10.1109/TCAD.2025.3646591",
+      "title_en": "Physical-Aware Multicorner Timing Prediction for Pre-Placement Optimization Using BiLSTM and GNN Networks",
+      "title_zh": "使用 BiLSTM 与 GNN 进行面向布局前优化的物理感知多工艺角时序预测",
+      "url": "https://doi.org/10.1109/TCAD.2025.3646591",
+      "published": "2025-12-19",
+      "updated": "2026-08",
+      "retrieved": "2026-10-20T05:18:55.264297+00:00",
+      "locator": "Publisher-indexed Abstract; Date of Publication; Volume/Issue metadata",
+      "access": "abstract",
+      "reading_status": "abstract_screened",
+      "stages": [
+        "placement",
+        "timing_signoff"
+      ],
+      "methods": [
+        "multi_corner_prediction",
+        "GNN",
+        "BiLSTM"
+      ],
+      "priority": "context",
+      "summary_zh": "论文结合综合阶段的序列和全局特征，以及图网络估计的物理特征，预测布局后的多工艺角路径延迟，并选择部分工艺角降低特征提取开销。它直接涉及跨阶段、跨工艺角的信息关联，适合补齐“统一预测”文献地图。",
+      "key_point_en": "Inspect what is available before placement, which corners are measured and how predictions affect downstream optimization.",
+      "reading_focus_zh": "重点核对未见设计与未见工艺角如何划分、最坏路径漏报，以及所需 TSMC 22nm 数据和许可。首发日期和正式卷期不同，按一篇计数；当前只取得出版方索引摘要和元数据，未取得完整方法。",
+      "limits": "Publisher-indexed abstract/metadata read; direct DOI fetch is limited. Online publication 2025-12-19; volume 45(8), 3626-3639, August 2026. Full text, source code and technology access remain unverified.",
+      "date_note": "published is online first-publication date; updated denotes the cited issue month, not a claimed manuscript revision"
+    },
+    {
+      "id": "LIT-020",
+      "kind": "paper",
+      "identity": "arxiv:2610.04957v1",
+      "title_en": "Trinity: One Differentiable Physics for Training, Refining and Scoring Generative Floorplanners",
+      "title_zh": "Trinity：用统一可微约束函数训练、细化并评价生成式芯片平面规划",
+      "url": "https://arxiv.org/abs/2610.04957v1",
+      "published": "2026-10-04",
+      "updated": "2026-10-04",
+      "retrieved": "2026-10-20T05:18:55.264297+00:00",
+      "locator": "Title; Abstract; Comments; Submission history",
+      "access": "abstract",
+      "reading_status": "abstract_screened",
+      "stages": [
+        "floorplanning"
+      ],
+      "methods": [
+        "flow_matching",
+        "constraint_model",
+        "shared_refinement"
+      ],
+      "priority": "priority",
+      "summary_zh": "论文在 FloorSet 上把生成、细化和合法化分开比较，并以同一组可微约束与目标函数连接训练、采样后细化和软评分。作者关注最终收益究竟来自生成器还是后处理，而非只报告整条流水线终点。它与已公开的 FloorSet 赛题和代码形成可追踪的阅读链。",
+      "key_point_en": "Read stage-by-stage attribution, refiner-only baselines and the relation between soft costs, hard feasibility and official scoring.",
+      "reading_focus_zh": "重点核对仅细化、不训练的对照，以及 soft cost、合法率、最终 hard cost 和总成本是否一致。代码快启和论文配置的 projections 不同，按实际配置比较；验证集结果不能当成隐藏测试排名或后续 PPA 改善。",
+      "limits": "Abstract screened; README and docs/evaluation.md inspected separately, not an 85-page method review. Preprint status; code Apache-2.0 with separate third-party notices. No pipeline run or hidden-test result checked."
     }
   ],
   "artifacts": [
@@ -323,11 +605,373 @@
       "access": "metadata",
       "retrieved": "2026-10-16T09:16:41.486799+00:00",
       "note_en": "Maintainer reports scripts and MIT license. Source-level claims, contest-score equivalence and actual reproduction not checked."
+    },
+    {
+      "id": "ART-005",
+      "kind": "contest",
+      "title": "ICCAD 2026 Problem C — The FloorSet Challenge",
+      "url": "https://www.iccad-contest.org/2026/Problems.html",
+      "stages": [
+        "floorplanning"
+      ],
+      "locator": "Problem C; official homepage schedule and News 2026-08-17; FloorSet contest README",
+      "access": "metadata",
+      "retrieved": "2026-10-20T05:18:55.264297+00:00",
+      "reading_focus_zh": "先读赛题版约束与评分变更；模板已提供 B*-tree SA 基线和可微训练示例。不能把实现这些起点本身当成新贡献。",
+      "note_en": "Final submission closed on 2026-08-28 17:00 GMT+8 per official homepage/news. Research reuse candidate, not an open registration opportunity. Inspect contest README, not only original dataset paper.",
+      "license_status": "Competition terms and code/data licenses are separate.",
+      "inspection_depth": "primary README/docs and linked metadata; no tool execution",
+      "status_as_of": "2026-10-20",
+      "status": "submission_closed",
+      "rules_url": "https://github.com/IntelLabs/FloorSet/tree/62734a5c14fc50c963dfb994a02e6d4a67695aa1/iccad2026contest"
+    },
+    {
+      "id": "ART-006",
+      "kind": "project",
+      "title": "FloorSet dataset and contest evaluator",
+      "url": "https://github.com/IntelLabs/FloorSet",
+      "stages": [
+        "floorplanning"
+      ],
+      "locator": "Top-level README ICCAD 2026 Contest/License; iccad2026contest/README.md:45-81,269-324; evaluator scoring definitions",
+      "access": "metadata",
+      "retrieved": "2026-10-20T05:18:55.264297+00:00",
+      "reading_focus_zh": "将原始 FloorSet 与 2026 contest 协议分开；本地 RuntimeFactor 固定为 1，正式分数使用各测试案例的跨提交耗时中位数。",
+      "note_en": "README/source spot-check: iccad2026contest/README.md Constraint Relaxations and Scoring, and selected compute_cost/evaluation definitions. Original fixed-outline formulation differs from contest relaxations. Hidden final cases were not accessed.",
+      "license_status": "Repository Apache-2.0; dataset CC BY 4.0 according to maintainer README.",
+      "inspection_depth": "primary README/docs and linked metadata; no tool execution",
+      "related_contest": "ART-005",
+      "repository": "IntelLabs/FloorSet",
+      "observed_commit": "62734a5c14fc50c963dfb994a02e6d4a67695aa1",
+      "observed_commit_date": "2026-10-15T16:30:35Z",
+      "source_records": [
+        {
+          "repo": "IntelLabs/FloorSet",
+          "file": "iccad2026contest/README.md",
+          "commit": "62734a5c14fc50c963dfb994a02e6d4a67695aa1",
+          "sha256": "66e56129a6a0311c05286abebe32c60dfc9406ac9cded3bca3e452a6175b57dc",
+          "bytes": 16964,
+          "url": "https://github.com/IntelLabs/FloorSet/blob/62734a5c14fc50c963dfb994a02e6d4a67695aa1/iccad2026contest/README.md"
+        },
+        {
+          "repo": "IntelLabs/FloorSet",
+          "file": "iccad2026contest/iccad2026_evaluate.py",
+          "commit": "62734a5c14fc50c963dfb994a02e6d4a67695aa1",
+          "sha256": "64db37865b42baf11add62bdbf035690dca086cd4be7b5b4e58db756f20d8498",
+          "bytes": 79842,
+          "url": "https://github.com/IntelLabs/FloorSet/blob/62734a5c14fc50c963dfb994a02e6d4a67695aa1/iccad2026contest/iccad2026_evaluate.py"
+        },
+        {
+          "repo": "IntelLabs/FloorSet",
+          "file": "LICENSE",
+          "commit": "62734a5c14fc50c963dfb994a02e6d4a67695aa1",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "bytes": 11357,
+          "url": "https://github.com/IntelLabs/FloorSet/blob/62734a5c14fc50c963dfb994a02e6d4a67695aa1/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "ART-007",
+      "kind": "contest",
+      "title": "ISPD 2025 — Performance-Driven Large Scale Global Routing",
+      "url": "https://www.ispd.cc/contests/25/index.html",
+      "stages": [
+        "global_routing",
+        "timing_signoff"
+      ],
+      "locator": "Official Contest Winners/Resources; organizer index.md: Problem Formulation, Input/Output and Evaluation",
+      "access": "metadata",
+      "retrieved": "2026-10-20T05:18:55.264297+00:00",
+      "reading_focus_zh": "从官方资源跳转实际赛题仓库，读取 OpenROAD 评测链、PPA 目标、约束和更新；不能只比较线长或拥塞单项。",
+      "note_en": "Official archive lists winners and links the organizer repository, correcting the failed guessed repository URL in batch001. Final submission date in organizer specification was 2025-03-07; an archived research benchmark, not a live contest.",
+      "license_status": "Inspect individual benchmark/technology and evaluator licenses before reuse.",
+      "inspection_depth": "primary README/docs and linked metadata; no tool execution",
+      "status_as_of": "2026-10-20",
+      "status": "completed",
+      "rules_url": "https://github.com/liangrj2014/ISPD25_contest/blob/ced27e2991caaf1d2c4c3ccf497b205cdbea8374/index.md",
+      "repository": "liangrj2014/ISPD25_contest",
+      "observed_commit": "ced27e2991caaf1d2c4c3ccf497b205cdbea8374",
+      "observed_commit_date": "2025-04-08T03:49:38Z",
+      "source_records": []
+    },
+    {
+      "id": "ART-008",
+      "kind": "project",
+      "title": "Rule2DRC / SplitTester",
+      "url": "https://github.com/snu-mllab/Rule2DRC",
+      "stages": [
+        "physical_verification"
+      ],
+      "locator": "README Overview/Dataset/Quick Start/Tester Agents; eval.py:30-111; LICENSE",
+      "access": "metadata",
+      "retrieved": "2026-10-20T05:18:55.264297+00:00",
+      "reading_focus_zh": "先检查 gold deck 和单题评测，再理解生成候选、生成测试与评测数据的边界。查看 eval_problem 的编译、分类标签与额外类别处理。",
+      "note_en": "README, MIT license and eval.py eval_problem inspected at pinned commit; source compares per-category outcomes and compiler completion, not mere text similarity. No model/tool run, dataset download or universal script-correctness proof.",
+      "license_status": "MIT for repository; dataset/distribution and dependencies still need their own review.",
+      "inspection_depth": "primary README/docs and linked metadata; no tool execution",
+      "related_paper": "LIT-014",
+      "repository": "snu-mllab/Rule2DRC",
+      "observed_commit": "8ad1cd5553b9876e9c0ee2a527450be4bf614a74",
+      "observed_commit_date": "2026-10-08T09:13:37Z",
+      "source_records": [
+        {
+          "repo": "snu-mllab/Rule2DRC",
+          "file": "README.md",
+          "commit": "8ad1cd5553b9876e9c0ee2a527450be4bf614a74",
+          "sha256": "1c9fdd678708eb73755fb53be4ade1a76609c5e5a9ecf670046c4d28c22d3440",
+          "bytes": 7921,
+          "url": "https://github.com/snu-mllab/Rule2DRC/blob/8ad1cd5553b9876e9c0ee2a527450be4bf614a74/README.md"
+        },
+        {
+          "repo": "snu-mllab/Rule2DRC",
+          "file": "eval.py",
+          "commit": "8ad1cd5553b9876e9c0ee2a527450be4bf614a74",
+          "sha256": "5ea75cb2b985df47e57c1e51cc599d724afa4515d9ecc757e7c954949aba93e2",
+          "bytes": 8487,
+          "url": "https://github.com/snu-mllab/Rule2DRC/blob/8ad1cd5553b9876e9c0ee2a527450be4bf614a74/eval.py"
+        },
+        {
+          "repo": "snu-mllab/Rule2DRC",
+          "file": "LICENSE",
+          "commit": "8ad1cd5553b9876e9c0ee2a527450be4bf614a74",
+          "sha256": "157ce02b1c090913d60604e0a943157f83f8a2e94796a33fbcea2831b0bcb627",
+          "bytes": 1073,
+          "url": "https://github.com/snu-mllab/Rule2DRC/blob/8ad1cd5553b9876e9c0ee2a527450be4bf614a74/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "ART-009",
+      "kind": "project",
+      "title": "OpenSTA — canonical Parallax repository",
+      "url": "https://github.com/parallaxsw/OpenSTA",
+      "stages": [
+        "timing_signoff"
+      ],
+      "locator": "README: input formats, Clocks, Exception paths, Delay calculation, Build from source, License; LICENSE",
+      "access": "metadata",
+      "retrieved": "2026-10-20T05:18:55.264297+00:00",
+      "reading_focus_zh": "读 Verilog/Liberty/SDC/SPEF 输入、时钟和例外路径语义；作为 STA 比较入口，不自动称为商业签核等价工具。",
+      "note_en": "OpenROAD fork README identifies parallaxsw/OpenSTA as canonical. Read pinned canonical README/license; no timing regression or cross-tool equivalence checked.",
+      "license_status": "GPL-3.0-or-later as stated in README; dependencies and data retain separate terms.",
+      "inspection_depth": "primary README/docs and linked metadata; no tool execution",
+      "repository": "parallaxsw/OpenSTA",
+      "observed_commit": "b99a8e528de098e4e06dbb6a0bb5423d6ada2f51",
+      "observed_commit_date": "2026-10-19T17:04:03Z",
+      "source_records": [
+        {
+          "repo": "parallaxsw/OpenSTA",
+          "file": "README.md",
+          "commit": "b99a8e528de098e4e06dbb6a0bb5423d6ada2f51",
+          "sha256": "78e22e3499b256421c7bf7a97d9c321f27c71a4d2e8948941e619e939dac791e",
+          "bytes": 10441,
+          "url": "https://github.com/parallaxsw/OpenSTA/blob/b99a8e528de098e4e06dbb6a0bb5423d6ada2f51/README.md"
+        },
+        {
+          "repo": "parallaxsw/OpenSTA",
+          "file": "LICENSE",
+          "commit": "b99a8e528de098e4e06dbb6a0bb5423d6ada2f51",
+          "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+          "bytes": 35149,
+          "url": "https://github.com/parallaxsw/OpenSTA/blob/b99a8e528de098e4e06dbb6a0bb5423d6ada2f51/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "ART-010",
+      "kind": "project",
+      "title": "OpenRCX — OpenROAD parasitic extraction module",
+      "url": "https://openroad.readthedocs.io/en/latest/main/src/rcx/README.html",
+      "stages": [
+        "detailed_routing",
+        "timing_signoff"
+      ],
+      "locator": "src/rcx/README.md:1-19,28-141,163-190,193 onward; root LICENSE",
+      "access": "metadata",
+      "retrieved": "2026-10-20T05:18:55.264297+00:00",
+      "reading_focus_zh": "从工艺角和校准文件开始，再读 extract_parasitics、write_spef 和 SPEF 比较；工具源码开放不等于工艺提取模型已经具备。",
+      "note_en": "OpenROAD submodule, not an independently counted stand-alone repository. Documentation describes per-process/per-corner extraction rules and OpenDB/LEF/DEF integration. Read selected command/calibration docs; no extraction or accuracy test.",
+      "license_status": "OpenROAD repository BSD-3-Clause; process/corner calibration files have separate rights.",
+      "inspection_depth": "primary README/docs and linked metadata; no tool execution",
+      "parent_artifact": "ART-002",
+      "subtype": "module",
+      "repository": "The-OpenROAD-Project/OpenROAD",
+      "observed_commit": "4777769274e4dbab3256d4630d655b0be0816bb6",
+      "observed_commit_date": "2026-10-20T05:03:22Z",
+      "source_records": [
+        {
+          "repo": "The-OpenROAD-Project/OpenROAD",
+          "file": "src/rcx/README.md",
+          "commit": "4777769274e4dbab3256d4630d655b0be0816bb6",
+          "sha256": "967451bd59982038008a5554797f46c3dd61ba332ce55ebd8544c3641a8ddcfc",
+          "bytes": 17072,
+          "url": "https://github.com/The-OpenROAD-Project/OpenROAD/blob/4777769274e4dbab3256d4630d655b0be0816bb6/src/rcx/README.md"
+        },
+        {
+          "repo": "The-OpenROAD-Project/OpenROAD",
+          "file": "LICENSE",
+          "commit": "4777769274e4dbab3256d4630d655b0be0816bb6",
+          "sha256": "28cfc93cb2b552192bc316259d2c2a1aa5a980018cda1c5cd9b1143c9151aebb",
+          "bytes": 1542,
+          "url": "https://github.com/The-OpenROAD-Project/OpenROAD/blob/4777769274e4dbab3256d4630d655b0be0816bb6/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "ART-011",
+      "kind": "project",
+      "title": "KLayout",
+      "url": "https://github.com/KLayout/klayout",
+      "stages": [
+        "physical_verification"
+      ],
+      "locator": "README Building requirements; LICENSE; Rule2DRC README Installation",
+      "access": "metadata",
+      "retrieved": "2026-10-20T05:18:55.264297+00:00",
+      "reading_focus_zh": "作为 Rule2DRC 所需的版图与 DRC 执行依赖阅读；还需要规则 deck，不能只装软件就宣布完成工艺签核。",
+      "note_en": "Maintainer repository/build requirements and pinned LICENSE checked. No DRC deck, foundry qualification or local installation validated.",
+      "license_status": "Repository GPL-3.0; plugins, PDK decks and examples require separate inspection.",
+      "inspection_depth": "primary README/docs and linked metadata; no tool execution",
+      "repository": "KLayout/klayout",
+      "observed_commit": "7eb9a25b42242a97e61300ad3a1486e10937abf5",
+      "observed_commit_date": "2026-10-18T16:19:59Z",
+      "source_records": [
+        {
+          "repo": "KLayout/klayout",
+          "file": "LICENSE",
+          "commit": "7eb9a25b42242a97e61300ad3a1486e10937abf5",
+          "sha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2",
+          "bytes": 35141,
+          "url": "https://github.com/KLayout/klayout/blob/7eb9a25b42242a97e61300ad3a1486e10937abf5/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "ART-012",
+      "kind": "project",
+      "title": "Netgen — netlist/LVS comparison",
+      "url": "https://github.com/RTimothyEdwards/netgen",
+      "stages": [
+        "physical_verification"
+      ],
+      "locator": "README NETGEN overview and version notes",
+      "access": "metadata",
+      "retrieved": "2026-10-20T05:18:55.264297+00:00",
+      "reading_focus_zh": "区分“DRC 几何检查”和“LVS 网表比较”；先读输入网表、器件属性与工艺 setup，作为电气连接保持的独立检查入口。",
+      "note_en": "Maintainer README describes hierarchy/device-aware netlist comparison. No GDS extraction frontend or foundry setup verified. Guessed COPYRIGHT path returned 404; do not infer a missing license or completed license audit.",
+      "license_status": "Exact license not resolved in this batch; repository README alone is insufficient.",
+      "inspection_depth": "primary README/docs and linked metadata; no tool execution",
+      "repository": "RTimothyEdwards/netgen",
+      "observed_commit": "e5a185dcfa16ee6317883f02bfdc8cf10feabd0e",
+      "observed_commit_date": "2026-10-14T15:51:49Z",
+      "source_records": [
+        {
+          "repo": "RTimothyEdwards/netgen",
+          "file": "README.md",
+          "commit": "e5a185dcfa16ee6317883f02bfdc8cf10feabd0e",
+          "sha256": "e5bb101d3a3d519df9a4013137a8df8c729424fa11d036cc07e916f1f7fc2dc9",
+          "bytes": 8168,
+          "url": "https://github.com/RTimothyEdwards/netgen/blob/e5a185dcfa16ee6317883f02bfdc8cf10feabd0e/README.md"
+        }
+      ]
+    },
+    {
+      "id": "ART-013",
+      "kind": "project",
+      "title": "Trinity",
+      "url": "https://github.com/Kohaku-Lab/Trinity",
+      "stages": [
+        "floorplanning"
+      ],
+      "locator": "README Installation/Quick start/Running experiments/License; docs/evaluation.md The steps/Metrics/Other configs",
+      "access": "metadata",
+      "retrieved": "2026-10-20T05:18:55.264297+00:00",
+      "reading_focus_zh": "先对照 raw/refined/legalized 阶段、refiner-only 基线、默认投影和论文 free 配置；保留 best-of-N 与总预算。",
+      "note_en": "Pinned README and docs/evaluation.md inspected. Maintainer provides checkpoints and scripts, but none downloaded/executed. Default fast-start projections differ from paper configs; legal public input constraints are not hidden-label access.",
+      "license_status": "Apache-2.0 for repository; NOTICE identifies separate third-party terms.",
+      "inspection_depth": "primary README/docs and linked metadata; no tool execution",
+      "related_paper": "LIT-020",
+      "repository": "Kohaku-Lab/Trinity",
+      "observed_commit": "51334c5701945fd31f7b7f6797c85f2cb7098a6a",
+      "observed_commit_date": "2026-10-03T18:23:00Z",
+      "source_records": [
+        {
+          "repo": "Kohaku-Lab/Trinity",
+          "file": "README.md",
+          "commit": "51334c5701945fd31f7b7f6797c85f2cb7098a6a",
+          "sha256": "b79d6be84f9550a1cbfb0f3b01ef9973119c2660d4294710d1fee2c2f3f2ab93",
+          "bytes": 8041,
+          "url": "https://github.com/Kohaku-Lab/Trinity/blob/51334c5701945fd31f7b7f6797c85f2cb7098a6a/README.md"
+        },
+        {
+          "repo": "Kohaku-Lab/Trinity",
+          "file": "docs/evaluation.md",
+          "commit": "51334c5701945fd31f7b7f6797c85f2cb7098a6a",
+          "sha256": "51d8d6e40abd709eb3834a12b5e0f1146d66d6ba641cd4205d7f0b120cccd098",
+          "bytes": 4205,
+          "url": "https://github.com/Kohaku-Lab/Trinity/blob/51334c5701945fd31f7b7f6797c85f2cb7098a6a/docs/evaluation.md"
+        }
+      ]
     }
   ],
   "coverage_gaps": [
-    "No dedicated LVS, extraction or electromigration paper in this first batch. Detailed-route DRVs are not complete physical signoff.",
-    "No claim of exhaustive frontier coverage or equal representation. Next discovery should fill signoff and conventional-algorithm gaps."
+    "Paper abstracts now cover extraction, multicorner timing, DRC repair/script synthesis and EM; complete method reviews and independent reproduction remain pending.",
+    "No dedicated LVS-method paper or dynamic-IR/transient power benchmark in these two batches; Netgen is an implementation entry, not paper coverage.",
+    "No claim of exhaustive frontier or contest-winner coverage; supplied baselines and older strong algorithms still require citation tracing."
   ],
-  "counting": "Deduplicate arXiv versions, DOI/proceedings aliases and matching titles; contests/projects do not count as papers."
+  "counting": "Deduplicate arXiv versions, DOI/proceedings aliases and matching titles; contests/projects do not count as papers.",
+  "batches": [
+    {
+      "id": "001",
+      "date": "2026-10-16",
+      "paper_ids": [
+        "LIT-001",
+        "LIT-002",
+        "LIT-003",
+        "LIT-004",
+        "LIT-005",
+        "LIT-006",
+        "LIT-007",
+        "LIT-008",
+        "LIT-009",
+        "LIT-010"
+      ],
+      "artifact_ids": [
+        "ART-001",
+        "ART-002",
+        "ART-003",
+        "ART-004"
+      ],
+      "report": "literature/batches/001.zh-CN.md"
+    },
+    {
+      "id": "002",
+      "date": "2026-10-20",
+      "paper_ids": [
+        "LIT-011",
+        "LIT-012",
+        "LIT-013",
+        "LIT-014",
+        "LIT-015",
+        "LIT-016",
+        "LIT-017",
+        "LIT-018",
+        "LIT-019",
+        "LIT-020"
+      ],
+      "artifact_ids": [
+        "ART-005",
+        "ART-006",
+        "ART-007",
+        "ART-008",
+        "ART-009",
+        "ART-010",
+        "ART-011",
+        "ART-012",
+        "ART-013"
+      ],
+      "report": "literature/batches/002.zh-CN.md"
+    }
+  ]
 }
